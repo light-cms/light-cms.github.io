@@ -1,8 +1,8 @@
 # The URL the site will be built for
-base_url = "https://light-cms.github.io"
+base_url = "https://blogs.lightcms.me"
 
-title = "Zola Blog"
-description = "A basic displayable Zola blog boilerplate."
+title = "Blogs by lightcms"
+description = "Blogs by lightcms team."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
