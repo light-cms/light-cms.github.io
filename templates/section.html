@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock title %}
+{% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+{% if section.description %}<p class="muted">{{ section.description }}</p>{% endif %}
+<ul class="post-list">
+  {% for post in section.pages %}
+  <li>
+    <a href="{{ post.permalink }}">{{ post.title }}</a>
+    <span class="muted"> — {{ post.date | date(format="%B %-d, %Y") }}</span>
+    {% if post.description %}<br /><span class="muted">{{ post.description }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

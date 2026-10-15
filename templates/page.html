@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock title %}
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  {% if page.date %}<p class="muted"><time>{{ page.date | date(format="%B %-d, %Y") }}</time></p>{% endif %}
+  {% if page.description %}<p class="muted">{{ page.description }}</p>{% endif %}
+  <hr />
+  {{ page.content | safe }}
+</article>
+{% endblock content %}

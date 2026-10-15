@@ -1,0 +1,7 @@
+[tools]
+zola = "latest"
+bun = "latest"
+[tasks]
+start = "zola server "
+build = "zola build"
+index = "bun x pagefind --site public"

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <h1>Hello, Zola.</h1>
+  <p>{{ config.description }}</p>
+  <p>
+    <a class="button" href="{{ get_url(path="@/blog/_index.md") }}">Read the blog</a>
+    <a class="button secondary" href="{{ get_url(path="@/about.md") }}">About</a>
+  </p>
+</section>
+
+<section>
+  <h2>Latest posts</h2>
+  {% set blog = get_section(path="blog/_index.md") %}
+  <ul class="post-list">
+    {% for post in blog.pages %}
+    <li>
+      <a href="{{ post.permalink }}">{{ post.title }}</a>
+      <span class="muted"> — {{ post.date | date(format="%B %-d, %Y") }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock content %}

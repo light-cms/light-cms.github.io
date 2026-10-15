@@ -1,0 +1,45 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/jdx/mise:2026.9.6
+    steps:
+      - name: checkout code
+        uses: actions/checkout@main
+      - name: cache mise dependencies
+        uses: actions/cache@main
+        with:
+          path: |
+            ~/.local/share/mise/installs
+            ~/.local/share/mise/cache
+          key: mise-${{ runner.os }}-${{ hashFiles('mise.toml') }}
+          restore-keys: |
+            mise-${{ runner.os }}-
+      - name: Build
+        run: |
+            mise trust
+            mise deps
+            mise install
+            mise run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@main
+        with:
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
