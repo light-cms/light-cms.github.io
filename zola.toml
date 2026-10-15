@@ -1,14 +1,21 @@
 # The URL the site will be built for
 base_url = "https://blogs.lightcms.me"
 
-title = "Blogs by lightcms"
-description = "Blogs by lightcms team."
+title = "LightCMS"
+description = "LightCMS is a Git-backed CMS for static sites: a visual Markdown editor with AI drafting, voice-to-text, and newsletters. Content stays in your repository."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+# Atom feed for crawlers and readers
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+[[taxonomies]]
+name = "tags"
 
 [markdown]
 

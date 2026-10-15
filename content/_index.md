@@ -1,4 +1,4 @@
 +++
 title = "Home"
-description = "A basic displayable Zola blog boilerplate."
+description = "The LightCMS blog: practical writing on static sites, Git-backed content, and Markdown publishing."
 +++

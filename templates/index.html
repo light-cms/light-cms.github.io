@@ -1,25 +1,127 @@
 {% extends "base.html" %}
 
+{% block title %}LightCMS Blog: Static Sites, Git-Backed CMS, and Markdown Publishing{% endblock title %}
+{% block description %}Practical writing on static sites, Git-backed content, and Markdown publishing, from the team behind LightCMS.{% endblock description %}
+
 {% block content %}
 <section class="hero">
-  <h1>Hello, Zola.</h1>
-  <p>{{ config.description }}</p>
+  <p class="eyebrow">Git-backed CMS for static sites</p>
+  <h1>Write in a real editor, publish to your own repository.</h1>
+  <p>LightCMS is a visual content workspace in front of a repository you own. Write Markdown in a real editor, publish with one click, and let your existing pipeline ship it — no database, no lock-in, no vendor.</p>
   <p>
-    <a class="button" href="{{ get_url(path="@/blog/_index.md") }}">Read the blog</a>
-    <a class="button secondary" href="{{ get_url(path="@/about.md") }}">About</a>
+    <a class="button" href="https://www.lightcms.me/">Get LightCMS</a>
+    <a class="button secondary" href="https://www.lightcms.me/docs">Read the docs</a>
+    <a class="button secondary" href="{{ get_url(path="@/blog/_index.md") }}">Read the blog</a>
   </p>
+
+  <svg class="hero-art" viewBox="0 0 560 300" role="img" aria-label="The LightCMS editor turning Markdown into a commit, then into a published static site">
+    <defs>
+      <linearGradient id="art-glow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="var(--accent)" stop-opacity="0.16"/>
+        <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+      </linearGradient>
+      <marker id="art-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/>
+      </marker>
+    </defs>
+
+    <rect x="0" y="0" width="560" height="300" rx="20" fill="url(#art-glow)"/>
+
+    <!-- editor window -->
+    <rect x="8" y="18" width="330" height="230" rx="16" fill="var(--surface)" stroke="var(--border)"/>
+    <circle cx="32" cy="44" r="5.5" fill="#ff5f57"/>
+    <circle cx="52" cy="44" r="5.5" fill="#febc2e"/>
+    <circle cx="72" cy="44" r="5.5" fill="#28c840"/>
+    <rect x="32" y="70" width="132" height="13" rx="6.5" fill="var(--accent)"/>
+    <rect x="32" y="98" width="278" height="8" rx="4" fill="var(--muted)" opacity="0.45"/>
+    <rect x="32" y="116" width="246" height="8" rx="4" fill="var(--muted)" opacity="0.45"/>
+    <rect x="32" y="134" width="196" height="8" rx="4" fill="var(--muted)" opacity="0.45"/>
+    <rect class="caret" x="232" y="132" width="3" height="12" rx="1.5" fill="var(--accent)"/>
+    <rect x="32" y="160" width="278" height="58" rx="10" fill="var(--bg)" stroke="var(--border)"/>
+    <rect x="46" y="176" width="60" height="7" rx="3.5" fill="var(--accent)" opacity="0.85"/>
+    <rect x="46" y="192" width="180" height="7" rx="3.5" fill="var(--muted)" opacity="0.5"/>
+
+    <!-- flow arrow -->
+    <path d="M346 96 H 392" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 7" stroke-linecap="round" marker-end="url(#art-arrow)"/>
+
+    <!-- commit card -->
+    <rect x="402" y="30" width="150" height="96" rx="16" fill="var(--bg)" stroke="var(--border)"/>
+    <path d="M424 54 v40" stroke="var(--border)" stroke-width="3"/>
+    <circle cx="424" cy="54" r="7" fill="var(--accent)"/>
+    <circle cx="424" cy="76" r="7" fill="var(--accent)" opacity="0.55"/>
+    <circle cx="424" cy="98" r="7" fill="var(--accent)" opacity="0.3"/>
+    <rect x="444" y="48" width="90" height="9" rx="4.5" fill="var(--muted)" opacity="0.6"/>
+    <rect x="444" y="70" width="66" height="9" rx="4.5" fill="var(--muted)" opacity="0.35"/>
+    <rect x="444" y="92" width="78" height="9" rx="4.5" fill="var(--muted)" opacity="0.35"/>
+
+    <!-- publish pill -->
+    <rect x="402" y="150" width="150" height="52" rx="26" fill="var(--accent)"/>
+    <text x="477" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="var(--accent-ink)">Publish</text>
+
+    <!-- output chips -->
+    <rect x="402" y="222" width="70" height="30" rx="15" fill="var(--surface)" stroke="var(--border)"/>
+    <text x="437" y="242" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" fill="var(--muted)">.md</text>
+    <rect x="482" y="222" width="70" height="30" rx="15" fill="var(--surface)" stroke="var(--border)"/>
+    <text x="517" y="242" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" fill="var(--muted)">CDN</text>
+
+    <!-- status line -->
+    <rect x="8" y="264" width="330" height="24" rx="12" fill="var(--surface)"/>
+    <circle cx="26" cy="276" r="5" fill="#28c840"/>
+    <text x="40" y="281" font-family="ui-monospace, monospace" font-size="12" fill="var(--muted)">committed to main · building…</text>
+  </svg>
+</section>
+
+<section class="feature-grid" aria-label="What LightCMS does">
+  <div class="feature-card">
+    <span class="feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="6" cy="5" r="2.4"/><circle cx="6" cy="19" r="2.4"/><circle cx="18" cy="9" r="2.4"/>
+        <path d="M6 7.4v9.2"/><path d="M8.4 5H15a3 3 0 0 1 3 3v0"/>
+      </svg>
+    </span>
+    <h2>Git-backed by default</h2>
+    <p>Every post is a Markdown file with front matter in your own repository — full history, review, and rollback, with zero vendor lock-in.</p>
+  </div>
+  <div class="feature-card">
+    <span class="feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M14.5 5.5l4 4"/>
+      </svg>
+    </span>
+    <h2>An editor writers love</h2>
+    <p>Tables, math, syntax-highlighted code, task lists and drag-and-drop media — serialized to clean Markdown as you type.</p>
+  </div>
+  <div class="feature-card">
+    <span class="feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21.5 3.5 2.5 10.2l7.2 2.6 2.6 7.2 9.2-16.5z"/><path d="M9.7 12.8 17 5.5"/>
+      </svg>
+    </span>
+    <h2>Publish and distribute</h2>
+    <p>AI copilot for drafting, Whisper voice-to-text, and newsletter dispatch through Newsy, with no email service involved. One workspace, end to end.</p>
+  </div>
 </section>
 
 <section>
-  <h2>Latest posts</h2>
+  <h2 class="section-title">Latest posts</h2>
   {% set blog = get_section(path="blog/_index.md") %}
   <ul class="post-list">
-    {% for post in blog.pages %}
+    {% for post in blog.pages %}{% if loop.index <= 8 %}
     <li>
-      <a href="{{ post.permalink }}">{{ post.title }}</a>
-      <span class="muted"> — {{ post.date | date(format="%B %-d, %Y") }}</span>
+      <time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>
+      <div>
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+        {% if post.description %}<p class="post-desc">{{ post.description }}</p>{% endif %}
+      </div>
     </li>
-    {% endfor %}
+    {% endif %}{% endfor %}
   </ul>
+  <p style="margin-top:1.25rem"><a href="{{ get_url(path="@/blog/_index.md") }}">All posts →</a></p>
+</section>
+
+<section class="cta-band">
+  <h2>Choosing a CMS?</h2>
+  <p>Honest, side-by-side comparisons of LightCMS against the platforms people actually evaluate.</p>
+  <p><a class="button" href="{{ get_url(path="@/comparison/_index.md") }}">See all comparisons</a></p>
 </section>
 {% endblock content %}

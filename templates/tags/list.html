@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Tags | {{ config.title }}{% endblock title %}
+{% block description %}Every topic on the LightCMS blog, from static site generators and Git-backed CMS tools to hosting, Markdown, and publishing.{% endblock description %}
+
+{% block content %}
+<h1>Tags</h1>
+<p class="muted">Everything on the blog, by subject.</p>
+<ul class="post-list">
+  {% for term in terms %}
+  <li>
+    <span class="post-date">{{ term.page_count }} post{% if term.page_count != 1 %}s{% endif %}</span>
+    <div><a href="{{ term.permalink }}">#{{ term.name }}</a></div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
