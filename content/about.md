@@ -1,37 +1,35 @@
 ---
 title: About
-description: "Who writes the LightCMS blog: practical writing on static sites, Git-backed content, Markdown workflows, and the CMS built around them."
-serial: 53
+description: >-
+  Who writes the LightCMS blog: practical writing on static sites, Git-backed
+  content, Markdown workflows, and the CMS built around them.
+date: '1111-11-11T11:11:00Z'
 draft: false
+weight: 0
 keywords:
   - about lightcms
   - lightcms blog
   - git backed cms blog
   - static site writing
-preview: /og-image.png
-taxonomies:
-  tags:
-    - lightcms
-    - cms
-    - about
+tags:
+  - about
+isCJKLanguage: false
+headless: false
 ---
+**This is the blog of the [LightCMS](https://www.lightcms.me/) dev team.**
 
-**This is the blog of the LightCMS team.**
-
-LightCMS is a Git-backed content workspace for editing and publishing Markdown. It puts a visual editor in front of a repository you own. The product lives at **[lightcms.me](https://www.lightcms.me/)**; the writing lives here.
-
-![The LightCMS workspace: a visual Markdown editor committing to a Git repository](/og-image.webp)
+[LightCMS](https://www.lightcms.me/) is a Git-backed content workspace for editing and publishing Markdown. It puts a visual editor in front of a repository you own. The product lives at [**lightcms.me**](https://www.lightcms.me/); the writing lives here.
 
 ---
 
 ## What We Write About
 
-We publish what we learn building LightCMS, plus the wider problems around it:
+We publish what we learn building [LightCMS](https://www.lightcms.me/), plus the wider problems around it:
 
 - **Static sites and generators.** Astro, Hugo, Eleventy, Zola, Jekyll: what each one does well and how to choose. Start with [best static site generators](/blog/best-static-site-generators/).
 - **Git-backed and headless content.** How file-based publishing differs from a database, and when each fits. See [what is a Git-backed CMS?](/blog/git-based-cms-explained/), [headless vs Git-backed](/blog/headless-vs-git-based-cms/), and [what is a headless CMS?](/blog/headless-cms-explained/).
 - **The writing workflow.** Markdown, front matter, drafts, review, and rollback. See [what is front matter?](/blog/what-is-front-matter/) and [version control for writers](/blog/lightcms-drafts-and-versioning/).
-- **Comparisons.** Side-by-side write-ups of LightCMS against the CMS platforms people evaluate: [Payload](/comparison/lightcms-vs-payload-cms), [Sanity](/comparison/lightcms-vs-sanity), [Contentful](/comparison/lightcms-vs-contentful), [WordPress](/comparison/lightcms-vs-wordpress), [Decap](/comparison/lightcms-vs-decap-cms), [TinaCMS](/comparison/lightcms-vs-tinacms), and [the full list](/comparison/).
+- **Comparisons.** Side-by-side write-ups of [LightCMS](https://www.lightcms.me/) against the CMS platforms people evaluate: [Payload](/comparison/lightcms-vs-payload-cms), [Sanity](/comparison/lightcms-vs-sanity), [Contentful](/comparison/lightcms-vs-contentful), [WordPress](/comparison/lightcms-vs-wordpress), [Decap](/comparison/lightcms-vs-decap-cms), [TinaCMS](/comparison/lightcms-vs-tinacms), and [the full list](/comparison/).
 - **Product deep-dives.** The [editor](/blog/lightcms-editor-tour/), the [AI copilot](/blog/lightcms-ai-copilot/), [voice dictation](/blog/lightcms-voice-to-text/), and [starter templates](/blog/start-with-a-lightcms-template/).
 
 New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exists](/blog/why-this).
@@ -40,7 +38,7 @@ New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exis
 
 ## Who We Are
 
-We build LightCMS. The team got tired of choosing between a comfortable writing experience and content we owned. Every post here comes from building the tool, running it on our own sites, and answering questions from people who want to publish without hiring a DevOps engineer.
+We build [LightCMS](https://www.lightcms.me/). The team got tired of choosing between a comfortable writing experience and content we owned. Every post here comes from building the tool, running it on our own sites, and answering questions from people who want to publish without hiring a DevOps engineer.
 
 We write from experience. When we compare other platforms, we say what each one does well and who it suits. Pick the architecture that fits your project.
 
