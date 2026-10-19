@@ -19,7 +19,7 @@ taxonomies:
 
 I’ve tried dozens of CMSs over the years, and most felt a little pale. They worked, but they often missed the mark on the human experience of writing and managing a publication.
 
-The closest thing I found to a pleasant developer workflow was Front Matter in VS Code. It makes managing content files much easier, but the fundamental barrier remains: opening an entire code editor, pulling remote Git branches, resolving formatting conflicts, and debugging local tools is a lot of friction just to publish a three-paragraph reflection.
+The closest thing I found to a pleasant developer workflow was Front Matter in VS Code. It makes managing content files easier, but the barrier remains: opening a whole code editor, pulling remote Git branches, resolving formatting conflicts, and debugging local tools is a lot of friction for a three-paragraph reflection.
 
 Writing should be the easy part.
 
@@ -31,7 +31,7 @@ There is real value in owning your publishing space on the web:
 
 1. **If you learned something over the years, share it.**
 2. **If you built something intriguing, write about it.**
-3. **If you solved a tricky bug that took you three days to understand, document it.** Someone across the world will inevitably search for that exact error six months from now and find your solution.
+3. **If you solved a tricky bug that took you three days to understand, document it.** Six months from now, someone will search for that exact error and find your solution.
 
 Everyone deserves their own little corner of the internet. Publishing essays and technical insights shouldn't depend on proprietary social platforms that manipulate reach or lock your content behind algorithmic walls.
 
@@ -51,17 +51,17 @@ There is no shortage of capable static site generators: [Astro](https://astro.bu
 
 **The paradox is that while running a static site is simple, managing it is not.**
 
-You shouldn't need to understand Git rebase flags, Markdown terminal linters, front matter YAML schema validators, or GitHub token scopes just to publish your thoughts. Asking a non-technical writer or a tired developer to navigate VS Code at midnight is simply too much friction.
+You shouldn't need to understand Git rebase flags, Markdown terminal linters, front matter YAML schema validators, or GitHub token scopes to publish your thoughts. Asking a non-technical writer or a tired developer to navigate VS Code at midnight is too much friction.
 
 ---
 
 ## A Greener Web Is a Static Web
 
-The environmental case for static publishing is not a footnote; it is structural. Dynamic sites burn electricity on every single request; static sites do the work once and serve the result from cache, close to the reader, at a tiny fraction of the energy. No always-on database, no per-view computation, no bloated runtime shipped to the visitor's battery.
+Static publishing wins on energy. A dynamic site burns electricity on every request; a static site does the work once and serves the result from cache, close to the reader, at a fraction of the energy. No always-on database, no per-view computation, no runtime shipped to the visitor's battery.
 
 Durable content is sustainable content, too: plain Markdown files in your own repository remain readable and rebuildable for decades, while platforms shut down and WordPress installs rot. Every blog that moves from database-driven hosting to a static architecture is a permanent, measurable reduction in its carbon footprint.
 
-Read more in [Static Sites and CO2: Building a Greener Web](/blog/greener-web-static-sites/).
+More: [Static Sites and CO2: Building a Greener Web](/blog/greener-web-static-sites/).
 
 ---
 
@@ -79,4 +79,4 @@ You get all the auditability, rollback safety, and ownership of a Git-backed rep
 
 ## TL;DR
 
-Writing a blog post should never feel like a high-stakes engineering task. Getting your ideas into words should be the easy part.
+Writing a blog post should not feel like a high-stakes engineering task. Getting your ideas into words should be the easy part.

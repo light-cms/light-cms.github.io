@@ -19,9 +19,9 @@ taxonomies:
     - deployment
 ---
 
-Want LightCMS fully under your control? Because LightCMS is built on [SvelteKit](https://svelte.dev), it can run on virtually any platform that supports Node.js or edge runtimes, including Vercel, Cloudflare Pages, Netlify, Docker containers, or your own Linux VPS.
+LightCMS is built on [SvelteKit](https://svelte.dev), so you can run it on any platform that supports Node.js or edge runtimes, including Vercel, Cloudflare Pages, Netlify, Docker containers, or your own Linux VPS.
 
-This guide walks you step-by-step through setting up your environment, creating your GitHub App credentials, provisioning your PostgreSQL database, and launching LightCMS.
+This guide covers the environment, the GitHub App credentials, the PostgreSQL database, and a production deploy.
 
 ---
 
@@ -44,7 +44,7 @@ Before you begin, ensure you have the following installed and configured:
 Clone the LightCMS repository to your local machine:
 
 ```bash
-git clone https://github.com/pratyay360/lightcms.git
+git clone https://github.com/light-cms/lightcms.git
 cd lightcms
 ```
 
@@ -206,7 +206,7 @@ bun run db:push
 
 ## 5. Configure Image Uploads (CDN)
 
-LightCMS supports any [Chevereto](https://chevereto.com)-compatible image upload API. When you paste or upload images in the editor, they are uploaded directly to your CDN.
+LightCMS supports any [Chevereto](https://www.chevereto.com)-compatible image upload API. When you paste or upload images in the editor, they are uploaded directly to your CDN.
 
 Free and hosted options include:
 - [FreeImage.host](https://freeimage.host)
@@ -231,7 +231,7 @@ Start the development server:
 bun run dev
 ```
 
-The application is now accessible at `http://localhost:5173`.
+Open `http://localhost:5173`.
 
 ### Testing Webhooks Locally
 

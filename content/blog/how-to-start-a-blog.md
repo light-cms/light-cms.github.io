@@ -1,6 +1,6 @@
 ---
 title: "How to Start a Blog in 2026: The Markdown & Static Site Guide"
-description: A step-by-step guide to starting a fast, cheap, durable blog with Markdown, a static site generator, and a Git-backed CMS — no hosting bills, no lock-in.
+description: How to start a fast, cheap, durable blog with Markdown, a static site generator, and a Git-backed CMS, with no hosting bills and no lock-in.
 serial: 12
 date: 2026-10-14T12:50:00Z
 draft: false
@@ -49,7 +49,7 @@ tags:
 Hello world. This is my first post.
 ```
 
-Markdown is plain text: it never breaks, never gets trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git-backed CMS bridges that gap — you write visually and it produces the Markdown for you.
+Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git-backed CMS bridges that gap — you write visually and it produces the Markdown for you.
 
 ## Step 3: Deploy for Free
 
@@ -67,11 +67,11 @@ This is the step most guides skip. If publishing requires opening a terminal, yo
 
 A **Git-backed CMS** like [LightCMS](/getting-started/) gives you a browser-based visual editor — images, formatting, front matter — and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
 
-## Step 5: Actually Grow
+## Step 5: Grow It
 
-The boring part that matters:
+The work that compounds:
 
-- Publish consistently — search rewards fresh, steady output.
+- Publish on a schedule. Search rewards steady output.
 - Write the posts you once searched for yourself; specific problems rank best.
 - Fast pages and good Core Web Vitals (built in with the static setup) are direct ranking factors.
 - Turn posts into a newsletter so readers can follow you without an algorithm in between — [automated newsletters with Newsy](/blog/newsletter-email-automation/) cover this.
@@ -97,7 +97,7 @@ There is a fourth column nobody lists: energy. A static blog served from cached 
 
 ### Is starting a blog still worth it in 2026?
 
-Yes — a blog you own is durable in a way social profiles are not. Static blogs in particular are fast, cheap to run, and decades away from "this platform shut down."
+Yes. A blog you own is durable in a way a social profile is not. Static blogs are fast, cheap to run, and decades away from "this platform shut down."
 
 ### Do I need to know how to code?
 
@@ -109,4 +109,4 @@ Yes. Generator, hosting, and a self-hosted CMS are all free. Only a custom domai
 
 ### WordPress or static for a new blog?
 
-Static, unless you specifically need plugins and membership features. You get better speed, security, and zero maintenance — and [LightCMS](/getting-started/) provides the friendly editing layer WordPress users expect.
+Static, unless you need plugins and membership features. You get better speed, security, and zero maintenance, and [LightCMS](/getting-started/) provides the friendly editing layer WordPress users expect.

@@ -19,9 +19,9 @@ taxonomies:
     - accessibility
 ---
 
-Typing is a bottleneck that nobody rates honestly. A comfortable talker delivers around 150 words per minute; a good typist manages 40 to 60. For the first 15 minutes of a post (the part where an idea is still slippery), speaking beats typing by a factor of three.
+Typing is a bottleneck nobody measures. A comfortable talker delivers around 150 words per minute; a good typist manages 40 to 60. For the first 15 minutes of a post, while the idea is still slippery, speaking beats typing by a factor of three.
 
-LightCMS puts dictation directly in the editor: press record, talk, and get structured text back in your draft.
+LightCMS puts dictation in the editor. Press record, talk, and the text lands in your draft.
 
 ---
 
@@ -38,10 +38,10 @@ The transcript is not a separate artifact or an attachment. It becomes part of t
 
 ## Why Whisper, Specifically
 
-Automatic speech recognition has improved sharply, but transcription quality still varies a lot between models. Whisper handles the things that sink weaker systems when applied to writing:
+Automatic speech recognition has improved, but transcription quality still varies between models. Whisper handles what sinks weaker systems on prose:
 
 - **Punctuation and casing**, so the output reads like prose rather than a caption file.
-- **Domain vocabulary** — library names, framework names, API terms — far better than older dictation engines.
+- **Domain vocabulary**: library names, framework names, and API terms come through far better than with older dictation engines.
 - **Disfluency tolerance**: you can restart a sentence mid-thought, and the transcript follows the final version instead of stitching every false start together.
 
 Running it on Groq's inference hardware keeps the round trip short enough that dictation feels like writing rather than like uploading.
@@ -52,8 +52,8 @@ Running it on Groq's inference hardware keeps the round trip short enough that d
 
 Dictation rewards a little structure. The pattern that produces the cleanest drafts:
 
-- **Talk first, structure second.** Speak the whole idea without worrying about sections — you are capturing, not composing.
-- **Stop and read it back.** Spoken text always contains repetition that felt necessary at the time. Delete it immediately, before it anchors you.
+- **Talk first, structure second.** Speak the whole idea without worrying about sections.
+- **Stop and read it back.** Spoken text carries repetition that felt necessary at the time. Delete it before it anchors the draft.
 - **Insert headings where the thought changed.** Speak a line like "now let's talk about deployment," then promote it to an `##` heading. The transcript has already told you where the sections are.
 - **Do the formatting pass at the end.** Lists, links, code, and code blocks are faster to add once the prose is settled.
 
@@ -63,13 +63,13 @@ Dictation rewards a little structure. The pattern that produces the cleanest dra
 
 ## Dictation as an Accessibility Feature
 
-Voice input is not only a speed trick. For writers with repetitive strain injuries, motor limitations, or simply tired hands at the end of a working day, it is the difference between publishing and not publishing. Because the output is plain Markdown in a visual editor, the whole pipeline (record, transcribe, edit, publish) happens without touching the keyboard.
+Voice input does more than save time. For writers with repetitive strain injuries, motor limitations, or tired hands at the end of a working day, it decides whether a post gets published at all. Because the output is plain Markdown in a visual editor, the whole pipeline (record, transcribe, edit, publish) happens without touching the keyboard.
 
 ---
 
 ## What Happens to the Audio?
 
-The recording is sent for transcription and used to produce your text. It is not attached to your repository: what lands in Git is the Markdown, exactly as with any other edit. Your content stays files in your own repository, which is the same promise the rest of LightCMS makes: [zero lock-in, zero database](/blog/what-is-lightcms/).
+LightCMS sends the recording for transcription and returns your text. The audio never reaches your repository: what lands in Git is the Markdown, as with any other edit. Your content stays files in your own repository, which is the same promise the rest of LightCMS makes: [zero lock-in, zero database](/blog/what-is-lightcms/).
 
 ---
 
@@ -83,7 +83,7 @@ Transcription is excellent and not infallible. Homophones, background noise, and
 
 ### Do I need a separate transcription subscription?
 
-No. Transcription runs through the Whisper endpoint configured for your LightCMS instance — the same bring-your-own-endpoint model as the [AI copilot](/blog/lightcms-ai-copilot/).
+No. Transcription runs through the Whisper endpoint configured for your LightCMS instance, the same bring-your-own-endpoint model as the [AI copilot](/blog/lightcms-ai-copilot/).
 
 ### Does it work in languages other than English?
 
@@ -91,7 +91,7 @@ Whisper is multilingual. Quality depends on the model and the endpoint you confi
 
 ### Can I dictate into an existing post?
 
-Yes. Place the cursor anywhere in the document and record — the transcript is inserted at the cursor rather than appended at the end.
+Yes. Place the cursor anywhere in the document and record. The transcript lands at the cursor.
 
 ### Will my microphone keep recording?
 

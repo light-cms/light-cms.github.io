@@ -27,7 +27,7 @@ No database. No proprietary export. No vendor lock-in. Sign in with GitHub, pick
 
 ## The Problem LightCMS Solves
 
-Static site generators made publishing fast, cheap, and secure. They also quietly moved the hard part onto the author: to publish a post you now need to know what front matter is, how the repository is laid out, which branch the build watches, and how to resolve a merge conflict at midnight.
+Static site generators made publishing fast, cheap, and secure. They also moved the hard part onto the author: to publish a post you need to know what front matter is, how the repository is laid out, which branch the build watches, and how to resolve a merge conflict at midnight.
 
 That arrangement works for the person who built the site. It does not work for:
 
@@ -42,9 +42,9 @@ LightCMS removes that friction without removing Git. The complexity stays where 
 ## How LightCMS Works
 
 1. **Sign in with GitHub.** OAuth, no separate account system to maintain.
-2. **Connect a repository.** Choose any repo containing Markdown content — Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js, or a plain folder of `.md` files.
+2. **Connect a repository.** Choose any repo containing Markdown content: Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js, or a plain folder of `.md` files.
 3. **Write visually.** A TipTap-powered WYSIWYG editor with headings, links, lists, tables, task lists, math, syntax-highlighted code, and drag-and-drop media. What you see is what the Markdown will be.
-4. **Publish.** LightCMS writes the file and front matter and commits it — directly, or as a pull request if you prefer review.
+4. **Publish.** LightCMS writes the file and front matter and commits it, directly or as a pull request if you want review.
 5. **Deploy.** GitHub Actions, Cloudflare Pages, Vercel, or Netlify rebuilds and ships. You never leave the browser as a writer; you never leave Git as a maintainer.
 
 The output of step 4 is a normal commit. If you delete LightCMS tomorrow, your site still builds, because nothing about your content lived outside the repository.
@@ -57,13 +57,13 @@ There are several capable Git-backed CMS options ([Decap CMS](/comparison/netlif
 
 | | LightCMS |
 | :--- | :--- |
-| **Storage** | Your GitHub repository — Markdown + YAML front matter |
+| **Storage** | Your GitHub repository (Markdown + YAML front matter) |
 | **Editor** | Full TipTap WYSIWYG: math (KaTeX), code highlighting, tables, task lists, media |
 | **AI** | Built-in copilot for outlines, rewrites, and grammar, on any OpenAI-compatible provider |
 | **Voice** | Whisper-powered dictation straight into the draft |
 | **Newsletters** | Publish Markdown → send via Newsy, running on GitHub instead of a newsletter platform |
 | **Hosting model** | Self-hosted, Apache 2.0 licensed, runs on any Node.js host |
-| **Lock-in** | None — the content is files you already own |
+| **Lock-in** | None: the content is files you already own |
 
 Most competitors do one of these well. LightCMS bundles the whole writing-to-distribution path: draft, edit, publish, and send, without ever introducing a database.
 
@@ -85,7 +85,7 @@ Being honest about the boundaries saves everyone time:
 - **Developer-adjacent teams** where engineers own the pipeline and non-engineers own the words.
 - **Static site projects** that have outgrown editing Markdown in a code editor but have not outgrown Git.
 
-If that sounds like you, the fastest path is to [copy a starter template](/blog/start-with-a-lightcms-template/) — a repository with the build, the content folder, and the deployment already wired, ready for your first post.
+If that sounds like you, the fastest path is to [copy a starter template](/blog/start-with-a-lightcms-template/): a repository with the build, the content folder, and the deployment already wired for your first post.
 
 ---
 
@@ -97,9 +97,9 @@ LightCMS is open source under the Apache 2.0 license and is designed to be self-
 
 ### Does LightCMS work with Hugo and Astro?
 
-Yes. Both read Markdown files with YAML front matter from your repository, which is exactly what LightCMS writes. The same is true of Zola, Eleventy, Jekyll, and SvelteKit.
+Yes. Both read Markdown files with YAML front matter from your repository, which is what LightCMS writes. The same is true of Zola, Eleventy, Jekyll, and SvelteKit.
 
-### Where does my content actually live?
+### Where does my content live?
 
 In your repository, as `.md` files with front matter. No separate database, no export step, no lock-in.
 
@@ -109,4 +109,4 @@ No. They see an editor and a publish button. Commits, branches, and pull request
 
 ### How is this different from WordPress?
 
-WordPress stores content in MySQL and renders it with PHP at request time. LightCMS writes static files that a CDN serves — faster, cheaper, and far harder to break. The trade-offs are covered in [static vs dynamic sites](/blog/static-vs-dynamic/) and [WordPress alternatives](/blog/wordpress-alternatives/).
+WordPress stores content in MySQL and renders it with PHP at request time. LightCMS writes static files that a CDN serves: faster, cheaper, and harder to break. The trade-offs are covered in [static vs dynamic sites](/blog/static-vs-dynamic/) and [WordPress alternatives](/blog/wordpress-alternatives/).

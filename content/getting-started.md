@@ -1,8 +1,8 @@
 ---
-title: Getting Started with Lightcms
+title: Getting Started with LightCMS
 description: >-
-  Discover how LightCMS makes publishing content to static websites effortless,
-  with a streamlined writing and publishing workflow.
+  Connect a GitHub repository, write Markdown in a visual editor, and publish
+  by committing to Git.
 date: '2026-09-01T16:44:00Z'
 draft: false
 weight: 0
@@ -15,62 +15,48 @@ keywords:
 isCJKLanguage: false
 headless: false
 ---
-**LightCMS** is a lightweight, Git based content workspace built for focused writing, It pairs the power of static site generators with a distraction free and gorgeous editor.
+**LightCMS** is a Git-backed writing workspace for static sites. You edit Markdown in a visual editor, and LightCMS commits the files to your own GitHub repository.
 
 ---
 
-## Core Pillars
+## What You Get
 
-LightCMS is built on one principle: **Nothing should stand between you and your craft.**
+**Your files, in your repository.** Every draft and post lives as Markdown with YAML front matter. Git provides the history, the diffs, and the rollback. You can clone the repository and keep working in any editor you like.
 
-The goal is to make your journey with sharing knowledge as smooth and rewarding as possible.
+**A visual editor that writes clean Markdown.** The editor runs on [TipTap](https://tiptap.dev). You format text visually and get semantic Markdown and YAML front matter as output. Math equations (KaTeX), syntax-highlighted code blocks, tables, task lists, and drag-and-drop images all work.
 
-### 1. Git Backed Storage (Zero Lock In)
+**An AI copilot.** Ask it to outline a post, rephrase a paragraph, expand an idea, or fix grammar. It talks to any OpenAI-compatible provider, including OpenAI, OpenRouter, Groq, and NVIDIA NIM.
 
-Your content belongs to you. Every draft, post, and revision is stored as Markdown and front matter files in your own GitHub repository. No proprietary database exports, no vendor lock in, and full version history through Git commits.
+**Voice dictation.** Speak and let Whisper (through Groq) or [Wit.ai](https://wit.ai) write the text for you.
 
-### 2. Frontmatter and Markdown
+**Light and dark themes.** Pick the one you find easier on the eyes.
 
-Built on top of [TipTap](https://tiptap.dev), the editor gives you real time visual formatting while generating clean, semantic Markdown and YAML front matter. It supports rich typography, math equations (KaTeX), syntax-highlighted code blocks, tables, task lists, and drag and drop media. 
-
-### 3. Integrated AI Copilot
-
-An integrated AI writing companion speeds up drafting and editing. Ask it to outline articles, rephrase paragraphs, expand ideas, or fix grammar. It works with any OpenAI-compatible provider (OpenAI, OpenRouter, Groq, NVIDIA NIM).
-
-### 4. Voice to Text Transcription
-
-Speak your thoughts freely aloud and let Whisper (powered by Groq) or [Wit.ai](http://Wit.ai) turn your words into text in seconds, making content creation faster and more effortless.
-
-### 5. First-Class Themes
-
-Choose from carefully curated light and dark themes designed to be easy on the eyes. Pick the style that suits you best and enjoy a comfortable writing experience.
-
-### 6. Automated Newsletter Dispatch
-
-Built in support for [Newsy](https://github.com/light-cms/newsy) turns newly published posts into newsletters and goes straight to your audience, with no monthly third party subscriptions. Or headaches with deliver ability .
+**Newsletters without a newsletter service.** [Newsy](https://github.com/light-cms/newsy) turns each newly published post into an announcement on GitHub. Your readers subscribe there. You pay nothing per subscriber and debug no deliverability.
 
 ---
 
-## How LightCMS Works ? 
+## How It Works
 
-The LightCMS workflow hides technical complexity while preserving control:
+1. **Sign in** with your GitHub account.
+2. **Choose a repository.** Point LightCMS at the repo that holds your site. It works with Astro, Hugo, SvelteKit, Jekyll, Next.js, and any generator that reads Markdown files.
+3. **Write.** The editor handles formatting and uploads images to your CDN as you add them.
+4. **Publish.** LightCMS commits the change. Your host builds and deploys as it always does.
 
-1. **Sign In**: Log into your LightCMS instance with your GitHub account.
-2. **Select Repository**: Pick the GitHub repository containing your static blog or website (Astro, Hugo, SvelteKit, Jekyll, Next.js, etc.).
-3. **Write &amp; Format**: Create new articles or edit existing posts with the excellent writing experience with Asset uploads.
-4. **Publish**: LightCMS manages all file versioning and commits, providing a seamless, abstract experience.
+You keep your hosting: GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh](https://surge.sh), or S3-compatible storage.
 
-Deploying: Use your own account to build, generate, and deploy your website to free or low cost hosting platforms like GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh.](http://Surge.sh) Additionally, static sites can be deployed directly to S3 compatible object storage. You stay in control of your projects, deployments, and hosting provider.
+---
 
-- [Why LightCMS?](/blog/why-this/): Read the design philosophy behind Git-backed publishing.
-- [Self-Hosting LightCMS](/blog/selfhost/): Deploy your own private instance of LightCMS.
-- [Newsletter Automation](/blog/newsletter-email-automation/): Distribute posts to subscribers automatically.
+## Read Next
+
+- [Why LightCMS?](/blog/why-this/): the design reasoning behind Git-backed publishing.
+- [Self-Hosting LightCMS](/blog/selfhost/): run your own instance.
+- [Newsletter Automation](/blog/newsletter-email-automation/): how Newsy delivers posts without an email vendor.
 
 ### Comparisons and Deep Dives
 
-- [Static Sites vs Dynamic Sites](/blog/static-vs-dynamic/): Why the static architecture wins for content sites.
-- [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): Picking a static site generator.
-- [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): Choosing where to host.
-- [Git-Backed CMS vs Traditional CMS](/blog/git-cms-vs-traditional-cms/): Why Git-backed editing beats the database route.
-- [Top Git-Backed CMS Platforms](/comparison/top-git-cms/): How LightCMS compares to Decap, TinaCMS, Keystatic, and more.
-- [How to Start a Blog](/blog/how-to-start-a-blog/): The complete Markdown blogging guide.
+- [Static Sites vs Dynamic Sites](/blog/static-vs-dynamic/): why static wins for content sites.
+- [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): choosing a static site generator.
+- [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): choosing where to host.
+- [Git-Backed CMS vs Traditional CMS](/blog/git-cms-vs-traditional-cms/): how the two models differ.
+- [Top Git-Backed CMS Platforms](/comparison/top-git-cms/): LightCMS next to Decap, TinaCMS, Keystatic, and others.
+- [How to Start a Blog](/blog/how-to-start-a-blog/): the full Markdown blogging guide.

@@ -1,6 +1,6 @@
 ---
 title: What Is Markdown? The Plain-Text Format Powering the Web
-description: Markdown explained — what it is, why it has lasted, the syntax you actually need, and how Git-backed CMS tools turn plain text into a publishing format.
+description: Markdown explained: what it is, why it has lasted, the syntax you need, and how Git-backed CMS tools turn plain text into a publishing format.
 serial: 25
 date: 2026-10-14T15:00:00Z
 draft: false
@@ -18,19 +18,19 @@ taxonomies:
     - content
 ---
 
-Markdown is plain text with a small set of formatting symbols. Created by John Gruber in 2004, it is the simplest possible way to write formatted documents. Two decades later it has quietly become the lingua franca of the web: documentation, README files, notes, newsletters, and the content layer of millions of sites run on Markdown.
+Markdown is plain text with a small set of formatting symbols. John Gruber created it in 2004 as the simplest way to write formatted documents. Two decades later it has become the lingua franca of the web: documentation, README files, notes, newsletters, and millions of sites keep their content in it.
 
 ---
 
 ## Why Markdown Won
 
-- **It never breaks**. A `.md` file from 2004 opens perfectly in any text editor, forever. Proprietary document formats rot; plain text does not.
+- **It does not rot**. A `.md` file from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
 - **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git-backed CMS stores content as Markdown.
 - **It is effortless to learn**. The core syntax is five minutes of symbols.
 - **It separates content from presentation**. Write structure; let the theme handle looks.
-- **It is everywhere**. GitHub, Notion exports, static site generators, AI tools — the whole modern toolchain speaks it.
+- **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
 
-## The Syntax You Actually Need
+## The Syntax You Need
 
 ```markdown
 # Heading 1
@@ -77,7 +77,7 @@ This YAML front matter is where the CMS lives: titles, dates, drafts, and taxono
 
 ## Writing Markdown Without the Syntax
 
-Here is the industry secret: **you do not have to write Markdown by hand anymore**. Modern Git-backed editors, [LightCMS](/getting-started/) among them, provide a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
+**You do not have to write Markdown by hand anymore.** Modern Git-backed editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
 
 That combination (visual editing on top of Markdown in Git) is what powers the whole [Git-backed CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
 

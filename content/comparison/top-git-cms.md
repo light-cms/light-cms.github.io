@@ -102,4 +102,4 @@ Yes. Because every platform commits the same Markdown and front matter files, sw
 
 ### Do Git-backed CMS platforms support media uploads?
 
-Yes. All of the platforms above upload images either to your repository or to a media CDN, with LightCMS supporting any Chevereto-compatible image endpoint.
+Yes. All of the platforms above upload images either to your repository or to a media CDN, with LightCMS supporting any Chevereto compatible image endpoint.

@@ -63,18 +63,18 @@ Either way, pair it with a static host ([Cloudflare Pages vs GitHub Pages](/blog
 
 ## Frequently Asked Questions
 
-### Is Hugo faster than Jekyll?
+### Is Hugo Faster than Jekyll?
 
 Significantly. Hugo's Go binary builds large sites in seconds; Jekyll's Ruby toolchain takes proportionally longer.
 
-### Should I migrate Jekyll to Hugo?
+### Should I Migrate Jekyll to Hugo?
 
-Only if build times or theme maintenance bother you. A working Jekyll site is not broken. Both produce identical-quality output.
+Only if build times or theme maintenance bother you. A working Jekyll site is not broken. Both produce identical quality output.
 
-### Is Jekyll still maintained?
+### Is Jekyll Still Maintained?
 
 Yes, but development is slower than Hugo's and Astro's. New projects increasingly start elsewhere.
 
-### Do both work with a Git-backed CMS?
+### Do Both Work with a Git-Backed CMS?
 
 Yes — both read Markdown with YAML front matter from your repository, so any Git-backed CMS publishes to either without issue.

@@ -93,7 +93,7 @@ For a straightforward publication, yes. You're adopting a framework to do a fold
 
 Not as a platform — LightCMS does not model relational content. It is an alternative for the publishing use case Drupal sometimes gets used for.
 
-### Can Drupal output static pages?
+### Can Drupal Output Static Pages?
 
 Drupal can pre-render or be paired with a static export, but the application and database remain part of the architecture.
 

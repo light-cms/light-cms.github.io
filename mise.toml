@@ -1,6 +1,7 @@
 [tools]
 zola = "latest"
 bun = "latest"
+biome = "latest"
 [tasks]
 start = "zola server "
 build = "zola build"

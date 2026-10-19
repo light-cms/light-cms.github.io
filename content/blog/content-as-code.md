@@ -1,6 +1,6 @@
 ---
 title: "Content as Code: Treating Writing Like Source"
-description: "Content as code means storing writing as plain text in a repository, reviewed and deployed like software — with the workflow benefits and the honest limitations."
+description: "Content as code means storing writing as plain text in a repository, reviewed and deployed like software, with the workflow benefits and the real limitations."
 serial: 47
 date: 2026-10-16T11:30:00Z
 draft: false
@@ -21,13 +21,13 @@ taxonomies:
 
 **Content as code** is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
 
-"Docs as code" is the older name. The idea began with technical documentation teams and has since spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
+"Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
 
 ---
 
 ## The Three Commitments
 
-Content as code is not just "use Markdown." It is three specific choices:
+Content as code comes down to three choices:
 
 1. **Plain text is the format.** Markdown or AsciiDoc, YAML or TOML front matter, UTF-8 files. Nothing proprietary, nothing that needs the original tool to open.
 2. **The repository is the system of record.** Not a database, not a wiki, not a shared drive. If it is not in Git, it does not exist.
@@ -40,7 +40,7 @@ Once those hold, most of the benefits follow automatically.
 ## What You Inherit From Software Practice
 
 ### Review that means something
-A pull request on a document gives line-level comments on the exact sentence, an explicit approve, and a merge. Editorial review stops being an email thread with attachments.
+A pull request on a document gives line-level comments on the exact sentence, an explicit approve, and a merge. Editorial review happens in the pull request instead of an email thread with attachments.
 
 ### History that answers questions
 `git log` on a file shows every change, author, and timestamp. "When did we change the pricing claim?" is a search, not an investigation.
@@ -60,7 +60,7 @@ Every clone is a complete copy. Moving platforms is a `git clone` away from succ
 
 The honest list, because this is not free:
 
-- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code in practice means pairing the repository with an editing tool that hides commits, which is exactly the gap Git-backed CMS tools fill.
+- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git-backed CMS tools fill.
 - **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
 - **Structure is limited.** Files do not join. When content becomes deeply relational, a database earns its complexity.
 - **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
@@ -95,11 +95,11 @@ The repository stays recognizable to a developer and invisible to a writer. That
 
 ## Why It Lasts
 
-The strongest argument for content as code is temporal. Databases need their schema, their server version, and their vendor. Wikis need their vendor. Proprietary documents need their vendor.
+Content as code wins on time. Databases need their schema, their server version, and their vendor. Wikis need their vendor. Proprietary documents need their vendor.
 
-A directory of Markdown files needs a text editor — and will still open in one in twenty years, regardless of what happens to any tool in the chain. For content intended to outlive the platform it was written on, that is not a nostalgia argument. It is risk management.
+A directory of Markdown files needs a text editor, and it will still open in one in twenty years, regardless of what happens to any tool in the chain. For content meant to outlive the platform it was written on, that is risk management rather than nostalgia.
 
-It is also the operating premise of every Git-backed CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
+The same premise runs through every Git-backed CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
 
 ---
 

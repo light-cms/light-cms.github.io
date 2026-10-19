@@ -5,15 +5,15 @@
 
 {% block jsonld_extra %}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": {{ section.title | json_encode() | safe }},
-  "description": {{ section.description | default(value=config.description) | json_encode() | safe }},
-  "url": {{ section.permalink | json_encode() | safe }},
-  "inLanguage": "en",
-  "isPartOf": { "@type": "WebSite", "name": {{ config.title | json_encode() | safe }}, "url": {{ config.base_url | json_encode() | safe }} }
-}
+	{
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		"name": {{ section.title | json_encode() | safe }},
+		"description": {{ section.description | default(value=config.description) | json_encode() | safe }},
+		"url": {{ section.permalink | json_encode() | safe }},
+		"inLanguage": "en",
+		"isPartOf": { "@type": "WebSite", "name": {{ config.title | json_encode() | safe }}, "url": {{ config.base_url | json_encode() | safe }} }
+	}
 </script>
 {% endblock jsonld_extra %}
 
@@ -21,15 +21,17 @@
 <h1>{{ section.title }}</h1>
 {% if section.description %}<p class="muted">{{ section.description }}</p>{% endif %}
 <div class="section-intro">{{ section.content | safe }}</div>
+{% if section.pages %}
 <ul class="post-list">
-  {% for post in section.pages %}
-  <li>
-    <time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>
-    <div>
-      <a href="{{ post.permalink }}">{{ post.title }}</a>
-      {% if post.description %}<p class="post-desc">{{ post.description }}</p>{% endif %}
-    </div>
-  </li>
-  {% endfor %}
+	{% for post in section.pages %}
+	<li>
+		<time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>
+		<div>
+			<a href="{{ post.permalink }}">{{ post.title }}</a>
+			{% if post.description %}<p class="post-desc">{{ post.description }}</p>{% endif %}
+		</div>
+	</li>
+	{% endfor %}
 </ul>
+{% endif %}
 {% endblock content %}

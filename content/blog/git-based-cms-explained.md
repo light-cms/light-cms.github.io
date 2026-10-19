@@ -1,6 +1,6 @@
 ---
 title: "What Is a Git-Based CMS? Architecture, Workflow, and Trade-Offs"
-description: "A Git-backed CMS stores content as files in a repository and commits edits like code. Here is the architecture, the workflow, and when it beats a database."
+description: "A Git-backed CMS stores content as files in a repository and commits edits like code: the architecture, the workflow, and when it beats a database."
 serial: 43
 date: 2026-10-16T10:50:00Z
 draft: false
@@ -48,7 +48,7 @@ Three properties define the category:
 2. **The build is the runtime.** Pages are assembled at build time and served as files. Nothing renders content per request.
 3. **The CMS is a client, not a host.** It writes to the repository and can be replaced without touching the content.
 
-Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. The comparison is worked out in detail in [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) works through the comparison.
 
 ---
 
@@ -103,9 +103,9 @@ Git-backed is not a universal win:
 - **Rebuild latency.** A change is live after a build, not after a save. Modern builds are fast, but "instant" is measured in seconds to minutes.
 - **Merge conflicts.** Two people editing the same file create a real conflict. Well-designed CMS tools scope this (one post per file), but it exists.
 - **Coarse access control.** Repository access is not per-field permissions. If you need granular role enforcement, a database-backed admin is the better tool.
-- **Non-technical onboarding.** Raw Git is hostile to writers, which is precisely the gap a Git-backed CMS fills: it hides the commits while keeping the benefits.
+- **Non-technical onboarding.** Raw Git is hostile to writers, which is the gap a Git-backed CMS fills: it hides the commits while keeping the benefits.
 
-That last point is where most evaluations actually land. The architecture is usually right for a publication; the question is which tool makes it usable for the people publishing.
+That last point is where most evaluations land. The architecture is usually right for a publication; the question is which tool makes it usable for the people publishing.
 
 ---
 
@@ -126,7 +126,7 @@ LightCMS is built around those criteria; see [what LightCMS is](/blog/what-is-li
 
 ### Is a Git-backed CMS the same as a headless CMS?
 
-No. Headless describes *how content is delivered* (via API to any frontend); Git-backed describes *where content is stored* (files in a repository). They overlap in practice but are independent ideas; see [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
+No. Headless describes *how content reaches a frontend* (through an API); Git-backed describes *where content lives* (files in a repository). The two ideas overlap in practice; see [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
 
 ### Do I need to know Git to use one?
 

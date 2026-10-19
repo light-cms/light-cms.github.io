@@ -24,7 +24,7 @@ taxonomies:
 - **Headless** answers: *how does content reach the frontend?* (Through an API, decoupled from presentation.)
 - **Git-backed** answers: *where does content live?* (As files in a repository.)
 
-A tool can be both, either, or neither. Sorting out the two ideas is the fastest way to stop comparing feature lists and start comparing architectures.
+A tool can be both, either, or neither. Sorting out the two ideas lets you compare architectures instead of feature lists.
 
 ---
 
@@ -100,7 +100,7 @@ This is the right shape when the consumer is a website, the content is prose, an
 - You want **zero runtime**: no server to patch, no database to bill, no per-request compute.
 - **Ownership and longevity** matter: plain files remain readable for decades, independent of any vendor.
 
-That last point deserves weight. Database content is portable only if someone writes the export and the importer survives; file content is portable by definition.
+That last point deserves weight. Database content is portable only if someone writes the export and the importer survives; file content is portable on its own terms.
 
 ---
 
@@ -138,11 +138,11 @@ Both can be easy. What matters is the editor itself — a document editor versus
 
 ### Can I switch between them later?
 
-Yes, but with different costs. Git to headless means importing files into a schema; headless to Git means exporting entries to Markdown. Plan the migration before the content model grows teeth.
+Yes, but with different costs. Git to headless means importing files into a schema; headless to Git means exporting entries to Markdown. Plan the migration before the content model gets complicated.
 
 ### Do I need a developer for a Git-backed CMS?
 
-Once — to connect the repository and confirm the build. After that, publishing is a browser activity.
+Once, to connect the repository and confirm the build. After that, publishing is a browser activity.
 
 ---
 

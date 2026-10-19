@@ -19,17 +19,17 @@ taxonomies:
     - collaboration
 ---
 
-Version control is the single best argument for a Git-backed CMS, and the one most badly explained. Writers do not want to hear about commits, fast-forwards, or trees. They want to know: **can I save this without publishing it, see what changed, and undo it if it was wrong?**
+Version control is the best argument for a Git-backed CMS, and the one most badly explained. Writers do not want to hear about commits, fast-forwards, or trees. They want to know three things: **can I save this without publishing it, see what changed, and undo it if I got it wrong?**
 
-Yes, yes, and yes. Here is how that maps onto Git without anyone having to learn Git.
+Git answers all three without a writer learning Git.
 
 ---
 
 ## The Draft Stays a Draft
 
-`draft: true` in the front matter is the whole mechanism. When you create or edit a post in LightCMS, the flag lives in the file's front matter, and your SSG skips it during build — the post exists in the repository, reviewable and safe, but never rendered on the live site.
+`draft: true` in the front matter is the whole mechanism. When you create or edit a post in LightCMS, the flag lives in the file's front matter, and your SSG skips it during build. The post sits in the repository, reviewable and safe, and never renders on the live site.
 
-Flip it to `false` on publish and the next build picks it up. There is no separate "drafts database" that can drift from what is actually in your repository, and no risk of a draft leaking because two systems disagree about its state.
+Flip it to `false` on publish and the next build picks it up. No separate "drafts database" can drift from what sits in your repository, and a draft cannot leak because two systems disagree about its state.
 
 Because a draft is just a file, everything else works on it too: it can sit on a branch, live behind a pull request, be edited by someone else, and be diffed line by line before it goes live.
 
@@ -37,11 +37,11 @@ Because a draft is just a file, everything else works on it too: it can sit on a
 
 ## Every Save Is a Commit
 
-Each publish in LightCMS creates a commit with a coherent message. That gives you, for free:
+Each publish in LightCMS creates a commit with a coherent message, which gives you:
 
 - **Complete history.** Who changed what, and when. No plugin required.
 - **True diffs.** Markdown diffs are readable, unlike rows in a `post_content` column.
-- **Blame that means something.** "When did this paragraph change?" is a one-second question.
+- **Blame that means something.** You can ask when a paragraph changed and get an answer.
 - **Free backups.** Every clone of the repository is a full copy of your content.
 
 For a solo writer this is invisible infrastructure. For a team, it is the audit trail that most commercial CMSs charge for.
@@ -57,7 +57,7 @@ LightCMS can publish in two modes, and choosing between them is choosing your ed
 | **Direct commit** | Publish → commit → CI builds → live | Solo writers, low-risk edits, quick fixes |
 | **Pull request** | Publish → PR → review → merge → CI builds | Teams, drafts with oversight, sensitive changes |
 
-The pull request mode is the one worth pausing on. It gives you a real editorial gate: a colleague reads the proposed Markdown, leaves line comments on the exact sentence they object to, and merges when it is right. That gate runs on GitHub's native review tools, not a bespoke approval system that locks your content into one vendor.
+The pull request mode deserves the attention. It gives you a real editorial gate: a colleague reads the proposed Markdown, leaves a comment on the exact sentence they object to, and merges when it is right. That gate runs on GitHub's native review tools rather than a bespoke approval system that locks your content to one vendor.
 
 Turn on branch protection and "publish" means "submit for review." Turn it off and "publish" means "publish."
 
@@ -65,7 +65,7 @@ Turn on branch protection and "publish" means "submit for review." Turn it off a
 
 ## Rollback: The Feature People Forget to Ask For
 
-Every CMS should answer one question quickly: **something wrong is live — how do I fix it?**
+Every CMS should answer one question fast: **something wrong is live, so how do I fix it?**
 
 With Git-backed content the answer is a revert:
 
@@ -73,13 +73,13 @@ With Git-backed content the answer is a revert:
 2. Choose the last good version.
 3. Revert.
 
-The correction commits like any other edit, your pipeline rebuilds, and the bad version is gone, usually within a minute on a modern host. Compare that with restoring a database backup at 2am, where the restore window also silently reverts every *other* change made in between. With per-file history, you roll back one post, not the whole site.
+The correction commits like any other edit, your pipeline rebuilds, and the bad version is gone, usually within a minute on a modern host. Restoring a database backup at 2am also reverts every *other* change made in between. With per-file history, you roll back one post, not the whole site.
 
 ---
 
 ## Why Not Just Use Word and Email?
 
-Because the round trip is where content dies. The version in the attachment is not the version on the site; nobody knows which file is canonical; and eventually someone publishes `final-v3-USE-THIS.md`. A shared repository with a visual editor collapses that loop: there is one file, one history, and one publish button.
+Because that round trip loses content. The version in the attachment is not the version on the site, nobody knows which file is canonical, and eventually someone publishes `final-v3-USE-THIS.md`. A shared repository with a visual editor collapses the loop: one file, one history, one publish button.
 
 ---
 
@@ -92,7 +92,7 @@ For a small team, the arrangement that tends to stick:
 - **Pull requests for anything editorially sensitive**, direct commits for typo fixes, because requiring review on a comma correction guarantees people will work around the process.
 - **Tag or milestone releases** if you publish on a schedule; a failed deploy can then be traced to a known set of changes.
 
-None of that is configured inside LightCMS. It is standard GitHub practice, which is exactly the point: the CMS inherits a workflow your repository already has.
+None of that is configured inside LightCMS. It is standard GitHub practice, which is the point: the CMS inherits a workflow your repository already has.
 
 ---
 
@@ -116,7 +116,7 @@ The second commit conflicts, and Git flags it explicitly rather than silently ov
 
 ### Does LightCMS keep its own copy of my content?
 
-No. The repository is the source of truth — the same [zero lock-in principle](/blog/what-is-lightcms/) that makes the whole approach worth choosing.
+No. The repository is the source of truth, the same [zero lock-in principle](/blog/what-is-lightcms/) that makes the approach worth choosing.
 
 ---
 

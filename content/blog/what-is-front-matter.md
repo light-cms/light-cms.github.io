@@ -1,6 +1,6 @@
 ---
 title: "What Is Front Matter? The Metadata Block at the Top of Your Content"
-description: "Front matter is the YAML or TOML block at the top of a Markdown file that tells your site its title, date, tags, and draft status — explained with examples."
+description: "Front matter is the YAML or TOML block at the top of a Markdown file that tells your site its title, date, tags, and draft status, with examples."
 serial: 45
 date: 2026-10-16T11:10:00Z
 draft: false
@@ -48,7 +48,7 @@ The article body starts here, after the closing `---`.
 Three things are worth noticing:
 
 1. **The fences.** A line of three dashes opens and closes the block. Everything between belongs to metadata; everything after belongs to the article.
-2. **The format.** That example is YAML — the default for most generators. TOML (`+++`) and JSON (`{...}`) are also used; Zola accepts all three, for instance.
+2. **The format.** That example is YAML, the default for most generators. TOML (`+++`) and JSON (`{...}`) are also used; Zola accepts all three, for instance.
 3. **The fields.** Standard keys like `title` and `date` are understood by generators; custom keys like `keywords` or `preview` are available to your templates.
 
 ---
@@ -74,7 +74,7 @@ This is why a typo in front matter can break a build: `date: 2026-13-45` or a st
 
 ## Why Front Matter Exists
 
-Static site generators cannot ask a database "what is this page?" — there is no database. They need metadata to live **with** the content, in a form both a machine and a human can read. Front matter solves that:
+Static site generators cannot ask a database "what is this page?" because there is no database. They need metadata to live **with** the content in a form both a machine and a human can read. Front matter solves that:
 
 - **Self-describing files.** A post carries everything needed to render it. Move the file, and its identity moves with it.
 - **Diffable metadata.** Changing a title is a one-line commit you can review and revert like any other change.
@@ -87,7 +87,7 @@ Static site generators cannot ask a database "what is this page?" — there is n
 
 Enough conventions exist that consistency is worth more than cleverness:
 
-- **Dates in ISO 8601** — `2026-10-16T09:00:00Z`. Unambiguous across locales, sorts correctly.
+- **Dates in ISO 8601**: `2026-10-16T09:00:00Z`. Unambiguous across locales, sorts correctly.
 - **Tags as a list**, not a comma-separated string, so a tag containing a space does not split in half.
 - **Slugs lowercase with hyphens.** Filenames become URLs, so `my-great-post` beats `My Great Post.md`.
 - **`draft: true` for unfinished work.** The safe way to save without publishing.
@@ -97,7 +97,7 @@ Enough conventions exist that consistency is worth more than cleverness:
 
 ## Where a CMS Fits
 
-Front matter is exactly the part of Markdown that non-technical writers should never have to see. It is syntax with sharp edges: indentation matters, quotes matter, date formats matter.
+Front matter is the part of Markdown that non-technical writers should not have to see. It is syntax with sharp edges: indentation matters, quotes matter, date formats matter.
 
 A Git-backed CMS handles it as a **form** (fill in the title, pick the date, click tags) and serializes valid YAML on save. Writers never think about the fence; the repository still receives what the generator expects. That single feature eliminates one of the most common failure modes in static-site publishing.
 
@@ -109,7 +109,7 @@ LightCMS, for example, validates front matter as you type and writes it on commi
 
 ### Is front matter required?
 
-For pages in a date-sorted section, effectively yes — generators expect at least a title and a date. The exact requirements depend on your generator's schema.
+For pages in a date-sorted section, yes: generators expect at least a title and a date. The exact requirements depend on your generator's schema.
 
 ### YAML vs TOML vs JSON — which should I use?
 

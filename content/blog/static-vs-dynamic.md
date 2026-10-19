@@ -1,6 +1,6 @@
 ---
 title: "Static Sites vs Dynamic Sites: Which Should You Choose in 2026?"
-description: A practical comparison of static and dynamic websites — performance, cost, security, and when a static site with a Git-backed CMS is the better choice.
+description: A practical comparison of static and dynamic websites: performance, cost, security, and when a static site with a Git-backed CMS is the better choice.
 serial: 7
 date: 2026-10-14T12:00:00Z
 draft: false
@@ -18,7 +18,7 @@ taxonomies:
     - jamstack
 ---
 
-Choosing between a static site and a dynamic site is one of the first architectural decisions you will make for a blog, documentation site, or company website. The short version: **for content-driven sites, static wins on nearly every axis that matters** — speed, cost, security, and durability. Dynamic rendering still has a place, but a much smaller one than it did ten years ago.
+Choosing between a static site and a dynamic site is one of the first architectural decisions you will make for a blog, documentation site, or company website. The short version: **static wins on speed, cost, security, and durability**. Dynamic rendering still has a place, a smaller one than it had ten years ago.
 
 ---
 
@@ -54,7 +54,7 @@ A dynamic site renders each request on the server (or in a function/edge worker)
 - **Security**: There is no production database, no login panel exposed to the internet, and far fewer attack surfaces.
 - **Cost**: A personal blog or documentation site fits comfortably inside free tiers of modern hosting platforms.
 - **Simplicity of operations**: Your "server" is a folder of files. If your host disappears, you can serve the same files anywhere.
-- **Lower emissions**: Serving a cached static file uses a fraction of the energy of rendering a page on demand — no always-on database, no per-request computation. See [Static Sites and CO2](/blog/greener-web-static-sites/) for the full picture.
+- **Lower emissions**: Serving a cached static file uses a fraction of the energy of rendering a page on demand, with no always-on database and no per-request computation. See [Static Sites and CO2](/blog/greener-web-static-sites/) for the full picture.
 
 ## Where Dynamic Sites Still Make Sense
 
@@ -68,9 +68,9 @@ Even then, the common modern pattern is a **static frontend with dynamic islands
 
 ## The Missing Piece: Editing Static Content
 
-The historical complaint about static sites was not performance — it was editing. Asking writers to pull Git branches and hand-edit Markdown files is friction most people will not accept.
+The historical complaint about static sites was editing, not performance. Asking writers to pull Git branches and hand-edit Markdown files is friction most people will not accept.
 
-That gap is exactly what a Git-backed CMS solves: authors write in a visual editor, and the CMS commits clean Markdown and front matter back to your repository. Your CI/CD pipeline rebuilds and redeploys the site automatically. You keep the static architecture; writers get a normal editing experience.
+A Git-backed CMS closes that gap: authors write in a visual editor, and the CMS commits clean Markdown and front matter back to your repository. Your CI/CD pipeline rebuilds and redeploys the site automatically. You keep the static architecture; writers get a normal editing experience.
 
 - [Why Git-backed publishing works](/blog/why-this/) explains the philosophy behind this model.
 - [Getting started with LightCMS](/getting-started/) walks through the workflow end to end.
@@ -86,7 +86,7 @@ Yes. Static sites typically load faster and have better Core Web Vitals than dyn
 
 ### Can a static site have a contact form or comments?
 
-Yes. Forms and interactivity are handled by client-side JavaScript, serverless functions, or third-party services — the page itself stays static.
+Yes. Client-side JavaScript, serverless functions, or third-party services handle forms and interactivity, and the page itself stays static.
 
 ### Is a static site cheaper to run?
 

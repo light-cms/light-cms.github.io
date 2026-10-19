@@ -37,13 +37,13 @@ This guide compares the **top static site hosting platforms in 2026** on perform
 | Provider | Free Bandwidth | Custom Domains & SSL | Git CI/CD Builds | Edge Network | Best For |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Cloudflare Pages** | **Unlimited** | Unlimited free SSL | 500 builds / mo | 330+ cities | Pure speed & high-traffic blogs |
-| **GitHub Pages** | unlimited | 5gb/page | Free Let's Encrypt | via GitHub Actions | Open-source & personal projects |
+| **GitHub Pages** | 100 GB / mo (soft) | Yes, free Let's Encrypt | via GitHub Actions | Open-source and personal projects |
 | **Wasmer Edge** | Generous tier | Free SSL certificates | CLI & Git hooks | Decentralized edge | WebAssembly & static hybrid sites |
 | **Vercel** | 100 GB / mo | Instant wildcard SSL | 6,000 build mins | Global Anycast | Next.js & SvelteKit ecosystems |
 | **Netlify** | 100 GB / mo | 1-click Let's Encrypt | 300 build mins | High-performance CDN | Jamstack forms & identity |
-| **Deno Deploy** | 100 GiB / mo | Free automated SSL | Built-in GitHub app | 35+ global regions | Lightweight V8 edge scripts & assets |
+| **Deno Deploy** | See current docs | Yes | Built-in GitHub app | Global | V8 edge scripts and assets |
 | **Surge.sh** | unlimited | Free SSL | Manual deployment | Global CDN | Simple static sites |
-| **Neocities** | 100 mb limit | Free SSL | Manual deployment | Global CDN | Creative and experimental sites (no custom domain support) |
+| **Neocities** | Free tier | Free SSL | Manual deployment | Global CDN | Creative and experimental sites; custom domains need the paid plan |
 | **Bitbucket Pages** | unlimited pages | Free | via Bitbucket Pipelines | Global CDN | Bitbucket-hosted projects |
 | **GitLab Pages** | unlimited | Free Let's Encrypt | via GitLab CI/CD | Fastly CDN | GitLab-hosted projects |
 | **Codeberg Pages** | unlimited | Free Let's Encrypt | via Codeberg CI/CD | Fastly CDN | Codeberg-hosted projects |
@@ -156,20 +156,20 @@ The best all-in-one platform if your static site needs contact forms, user authe
 
 ---
 
-## 6. Deno Deploy(sunset): Global V8 Edge Hosting
+## 6. Deno Deploy: Global V8 Edge Hosting
 
-[Deno Deploy](https://deno.com/deploy) is a distributed system that runs modern JavaScript, TypeScript, and static assets at 35+ edge locations worldwide.
+[Deno Deploy](https://deno.com/deploy) runs JavaScript, TypeScript, and static assets at the edge. Note that Deno Deploy Classic shut down on July 20, 2026; the current Deno Deploy is a newer platform, so check its documentation for current limits and pricing before you commit.
 
 ### Key Highlights
 
-- **Native TypeScript Execution**: Zero build-step requirement for TypeScript routing and static file handling.
-- **Modern Web Standards**: Built entirely on standard Request/Response Fetch APIs, Web Streams, and WebSocket APIs.
-- **Deno KV Integration**: Embedded global key-value database accessible directly from edge routes.
+- **Native TypeScript execution**: TypeScript routing and static file handling run without a build step.
+- **Modern web standards**: The runtime is built on the Fetch API, Web Streams, and WebSockets.
+- **Deno KV**: An embedded key-value database you can read from edge routes.
 
 ### Pros & Cons
 
-- **Pros**: Clean modern JavaScript/TypeScript ergonomics; generous 100 GiB monthly data transfer; fast deployment times.
-- **Cons**: Geared primarily toward developers comfortable with code-first deployment scripts rather than static GUI builders.
+- **Pros**: Clean JavaScript and TypeScript ergonomics; fast deploys.
+- **Cons**: Suited to developers who deploy from code rather than a GUI; the 2026 platform migration puts older tutorials out of date.
 
 ---
 
@@ -217,8 +217,8 @@ Yes. LightCMS manages your content only, not hosting, so it works with any host'
 
 LightCMS commits your published Markdown and front matter directly to your GitHub repository. Once pushed, your connected host (Cloudflare Pages, Vercel, Netlify, or GitHub Actions) automatically triggers a build and publishes your live site.
 
-### Is LightCMS always free?
+### Is LightCMS free?
 
-Yes. The app itself is licensed under the Apache License 2.0, so you can modify it for anything, and the source code is included.
+Yes. The app ships under the Apache License 2.0 with source code included, so you can modify and self-host it.
 
-AI inference, however, is not free, and there is currently a shared LLM quota for all users. That model may not scale indefinitely, so a pay-as-you-go or bring-your-own-key option may come later. The core services will always be free for everyone.
+AI inference costs money to run. LightCMS currently offers a shared LLM quota for all users. That model may not scale, and a pay-as-you-go or bring-your-own-key option may come later. The core features are free.

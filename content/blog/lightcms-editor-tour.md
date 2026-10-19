@@ -19,9 +19,9 @@ taxonomies:
     - writing
 ---
 
-Most "Markdown editors" are a text area with a preview pane stapled to the side. You write raw syntax, glance at the result, and hope the nesting is right. The LightCMS editor takes the opposite position: **you write, and Markdown happens underneath**.
+Most "Markdown editors" are a text area with a preview pane stapled to the side. You write raw syntax, glance at the result, and hope the nesting is right. The LightCMS editor works the other way. **You write, and the editor writes Markdown underneath.**
 
-This is a tour of that writing surface: what it does, why it is built the way it is, and what it deliberately does not do.
+This is a tour of that writing surface: what it does, why it works that way, and what it deliberately refuses to do.
 
 ---
 
@@ -48,13 +48,13 @@ Headings, blockquotes, ordered and unordered lists, horizontal rules, and task l
 Insert a fenced block, pick the language, and the editor keeps the fence and language tag intact. Your published post renders with the same syntax highlighting your SSG already applies.
 
 ### Math with KaTeX
-Write inline math or display equations and see them typeset live. For technical publishing — ML posts, physics notes, algorithm write-ups — this removes the usual "compile to check the formula" loop entirely.
+Write inline math or display equations and see them typeset live. For technical publishing such as ML posts, physics notes, and algorithm write-ups, this removes the "compile to check the formula" loop.
 
 ### Tables
 Insert rows and columns visually. Markdown tables are miserable to author by hand; here they are just cells.
 
 ### Media
-Drag images straight onto the page. LightCMS handles placement and generates the reference in your content, so screenshots from a debugging session go from clipboard to published without a trip through your file system.
+Drag images onto the page. LightCMS stores the file, generates the reference, and writes it into your content, so a screenshot goes from clipboard to published without a trip through your file system.
 
 ---
 
@@ -64,13 +64,13 @@ The other half of any static-site post is its front matter, and it is where hand
 
 In LightCMS, front matter is a form: title, description, date, tags, keywords, and whatever else your schema declares. The editor validates as you type and writes correctly formatted YAML on publish. Writers never see the syntax; the repository still receives exactly what the SSG expects.
 
-This matters more than it sounds. A large share of "my build is failing" support threads in static-site communities trace back to malformed front matter, and a visual form eliminates that entire class of error.
+A large share of "my build is failing" support threads in static-site communities trace back to malformed front matter, and a visual form removes that class of error.
 
 ---
 
 ## Themes Built for Long Sessions
 
-The editor ships with carefully tuned light and dark modes. That sounds cosmetic until you have written for three hours: a pure `#ffffff` background at 1am is hostile, and most admin dashboards do not care. LightCMS does: the palettes are chosen for sustained reading and writing, not for a screenshot on a landing page.
+The editor ships with light and dark modes. That sounds cosmetic until you have written for three hours: a pure `#ffffff` background at 1am is hostile, and most admin dashboards do not care. LightCMS picks its palettes for reading and writing over long sessions, not for a screenshot on a landing page.
 
 ---
 
@@ -85,9 +85,9 @@ Two boundaries are intentional:
 
 ## Why Not Just Use a Code Editor?
 
-You can, and developers often do. But as soon as a second person touches the repository, "just edit the Markdown" becomes a support burden: wrong front matter, mangled tables, accidental whitespace commits. Add the friction of asking someone to install an editor, clone a repo, and learn a branch workflow just to fix a typo.
+You can, and developers often do. But as soon as a second person touches the repository, "just edit the Markdown" becomes a support burden: wrong front matter, mangled tables, accidental whitespace commits. Fixing a typo then means installing an editor, cloning a repo, and learning a branch workflow.
 
-The LightCMS editor keeps the developer's workflow untouched while removing every one of those barriers for everyone else.
+The LightCMS editor leaves the developer's workflow untouched and removes those barriers for everyone else.
 
 ---
 
@@ -95,7 +95,7 @@ The LightCMS editor keeps the developer's workflow untouched while removing ever
 
 ### Does the editor produce messy Markdown?
 
-No. It serializes to standard Markdown with YAML front matter — the same output a careful human would write. You can open any published post in VS Code and it reads normally.
+No. It serializes to standard Markdown with YAML front matter, the same output a careful human would write. Open any published post in VS Code and it reads normally.
 
 ### Can I still edit the files by hand?
 

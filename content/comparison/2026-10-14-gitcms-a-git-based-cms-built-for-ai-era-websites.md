@@ -1,6 +1,6 @@
 ---
 title: "GitCMS: A Git-Based CMS Built for AI-Era Websites"
-description: What GitCMS is, how it keeps human and AI-agent edits reviewable in your repository, how it compares with Pages CMS and other Git-backed platforms, and when to choose it.
+description: What GitCMS is, how it keeps human and AI edits reviewable in your repository, how it compares with Pages CMS, and when to choose it.
 serial: 15
 date: 2026-10-14T13:20:00Z
 draft: false
@@ -19,7 +19,7 @@ taxonomies:
     - git
 ---
 
-[GitCMS](https://gitcms.dev) takes the Git-backed CMS model and aims it at a very 2026 problem: websites are increasingly **built by AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
+[GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built by AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
 
 ---
 
@@ -66,18 +66,18 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 
 ## Frequently Asked Questions
 
-### What is GitCMS?
+### What Is GitCMS?
 
 A Git-backed CMS positioned for code-first and AI-built websites: it gives teams, clients, and AI agents one reviewable place to edit and publish changes that stay in your repository.
 
-### Is GitCMS free?
+### Is GitCMS Free?
 
 There is a free tier for a single site, with paid plans for more. Fully free, open-source alternatives include Pages CMS, Decap CMS, and LightCMS.
 
-### How is GitCMS different from Pages CMS?
+### How Is GitCMS Different from Pages CMS?
 
 Pages CMS is a minimal, free form editor over GitHub. GitCMS adds a richer editor, editorial workflows, and AI-agent governance on the same Git-backed model.
 
-### Do I need AI agents to use GitCMS?
+### Do I Need AI Agents to Use GitCMS?
 
 No. But if AI agents regularly commit to your site's repository, the review layer is the main reason to choose it.

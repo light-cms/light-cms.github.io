@@ -19,7 +19,7 @@ taxonomies:
     - co2
 ---
 
-Every page view costs energy. Somewhere, a server wakes, a cache misses, a database query runs, and electricity — increasingly measured in grams of CO2 — is spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **static sites sit at the clean end**.
+Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **static sites sit at the clean end**.
 
 ---
 
@@ -38,7 +38,7 @@ Multiply that across every visitor, every month, for the life of the site, and t
 
 ## The Ripple Effect: Durability Is Sustainability
 
-Static sites also age gracefully. A Hugo or Astro site built in 2026 can still be rebuilt and served in 2036 — the content is plain Markdown, the toolchain is open source, and the output is a folder of files. Sites that get abandoned because their platform shut down or their WordPress install became unmaintainable force rebuilds: rewriting the same content on new infrastructure is its own kind of waste.
+Static sites also age well. A Hugo or Astro site built in 2026 can still be rebuilt and served in 2036: the content is plain Markdown, the toolchain is open source, and the output is a folder of files. Sites that get abandoned because their platform shut down or their WordPress install became unmaintainable force rebuilds: rewriting the same content on new infrastructure is its own kind of waste.
 
 Owning your content as Markdown in Git is the durable, low-waste option.
 
@@ -46,24 +46,24 @@ Owning your content as Markdown in Git is the durable, low-waste option.
 
 You cannot improve what you do not measure:
 
-- **[Website Carbon Calculator](https://www.websitecarbon.com/)** — estimates the grams of CO2 emitted per page view, and tells you how your site compares.
+- **[Website Carbon Calculator](https://www.websitecarbon.com/)**: estimates the grams of CO2 emitted per page view and compares your site to others.
 - **[Ecograder](https://ecograder.com/)** gives a comparable estimate, alongside performance and accessibility scoring.
 - Real-user metrics matter too: Largest Contentful Paint and total bytes transferred correlate directly with energy per view.
 
-The LightCMS site itself displays a live carbon rating in its footer — the same measurement philosophy this guide recommends.
+The LightCMS site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
 
 ## How to Build a Greener Web
 
-1. **Serve statically from a CDN** — the single biggest lever for content sites.
-2. **Choose green hosting** — providers powering data centers with renewable energy (several major providers now publish their energy sourcing).
-3. **Ship less JavaScript** — every kilobyte is parsed, executed, and maintained on the visitor's battery.
-4. **Compress and cache images** — media is usually the heaviest part of a page; serve modern formats and long cache lifetimes.
-5. **Keep content durable** — plain Markdown and open formats mean a site never needs a wasteful rebuild-from-scratch.
-6. **Publish deliberately** — a small, high-value site that people return to beats a sprawling one nobody reads, byte for byte.
+1. **Serve statically from a CDN**: the biggest lever for content sites.
+2. **Choose green hosting**: providers that power data centers with renewable energy (several major providers now publish their energy sourcing).
+3. **Ship less JavaScript**: every kilobyte is parsed, executed, and paid for on the visitor's battery.
+4. **Compress and cache images**: media is usually the heaviest part of a page, so serve modern formats with long cache lifetimes.
+5. **Keep content durable**: plain Markdown and open formats mean a site never needs a rebuild from scratch.
+6. **Publish deliberately**: a small, high-value site that people return to beats a sprawling one nobody reads.
 
 ## Where LightCMS Fits
 
-LightCMS is built on exactly these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS itself runs only while you are writing — there is no production database serving readers, because readers are served by a CDN.
+LightCMS follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS runs only while you write. No production database serves readers; the CDN does.
 
 - [Static sites vs dynamic sites](/blog/static-vs-dynamic/) covers the architecture in depth.
 - [Top static site hosting platforms](/misc/top-static-site-hosting/) compares where to host sustainably.
@@ -77,7 +77,7 @@ LightCMS is built on exactly these principles: it commits your content as Markdo
 
 Estimates vary by method, but a typical page view emits anywhere from a fraction of a gram to about a gram of CO2; heavy, poorly cached pages emit considerably more. Static, cached pages sit at the low end.
 
-### Does green hosting really matter?
+### Does green hosting matter?
 
 Yes. Data-center energy is the dominant factor in a site's footprint; hosting on renewable-powered infrastructure reduces it substantially.
 

@@ -64,7 +64,7 @@ Open both tools and write the same 1,200-word article.
 
 In Pages CMS, you are completing a structured entry: paste or type Markdown into the body field, fill the metadata fields above and below it, save. It works, and for a field editor, it is a good one.
 
-In LightCMS, you write. You pick a heading level from a menu, drag in a screenshot, insert a table, dictate a paragraph when your hands are tired, ask the copilot to tighten the intro, and watch the front matter stay valid because it is a form rather than a text file you can break.
+In LightCMS, you write. You pick a heading level from a menu, drag in a screenshot, and insert a table. You can dictate a paragraph when tired or ask the copilot to tighten the intro. All the while, front matter stays valid because it is a form rather than a fragile text file.
 
 The difference compounds. Publishing frequency is a function of how much friction each post costs, and writers respond to that friction more than to any other variable in the stack.
 

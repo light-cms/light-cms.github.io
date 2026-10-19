@@ -1,6 +1,6 @@
 ---
 title: "AI-Assisted Blogging: Where AI Helps in a Writing Workflow (and Where It Doesn't)"
-description: "A practical look at using AI in a blogging workflow — outlining, rewriting, transcription, and content transforms — plus the parts of writing that should stay human."
+description: "A practical look at using AI in a blogging workflow: outlining, rewriting, transcription, and content transforms, plus the parts of writing that should stay human."
 serial: 37
 date: 2026-10-16T10:10:00Z
 draft: false
@@ -19,9 +19,9 @@ taxonomies:
     - workflow
 ---
 
-Two years into "AI writing tools," most blogs learned the same lesson the hard way: generating a full article and pressing publish is a fast way to produce content nobody finishes reading. The interesting question is no longer whether AI belongs in a writing workflow — it is **where**.
+Two years into "AI writing tools," most blogs learned the same lesson: generating a full article and pressing publish produces content nobody finishes reading. The open question is **where** AI belongs in a writing workflow.
 
-Here is where AI reliably earns a place in a writing workflow, and where it does not.
+Some tasks suit a model and some do not.
 
 ---
 
@@ -37,7 +37,7 @@ Editing a finished paragraph is where models shine, because the meaning already 
 
 ### 3. Grammar and consistency passes
 
-The pre-publish check humans do badly at 11 p.m. Spelling, agreement, stray commas, inconsistent capitalization of a product name. Boring, mechanical, and exactly what a model is for.
+The pre-publish check humans do badly at 11 p.m. Spelling, agreement, stray commas, and inconsistent capitalization of a product name are mechanical work, and a model does mechanical work well.
 
 ### 4. Transcription
 
@@ -45,7 +45,7 @@ Speech-to-text is the quiet win. Dictating a first draft at 150 words per minute
 
 ### 5. Repetitive content transforms
 
-Turning one long post into a newsletter edition, a thread, a summary paragraph, or a set of metadata descriptions is genuinely tedious work with a clear input. Automate the transform; keep editorial control over what ships.
+Turning one long post into a newsletter edition, a thread, a summary paragraph, or a set of metadata descriptions is tedious work with a clear input. Automate the transform; keep editorial control over what ships.
 
 ---
 
@@ -61,7 +61,7 @@ Voice is the residue of specific experience: the bug you personally debugged, th
 
 ### Taste
 
-Knowing what to leave out, which of three framings is honest, and where the post should end — that is editorial judgment. Delegating it produces technically complete articles that say nothing.
+Knowing what to leave out, which framing is honest, and where the post should end is editorial judgment. Delegating it produces technically complete articles that say nothing.
 
 ### Relationship with readers
 
@@ -91,7 +91,7 @@ If AI is going to sit inside your workflow, it should sit inside your tooling �
 - **Bring your own provider.** Your key, your account, your choice of model — including a local endpoint. A tool that routes your unpublished drafts through its own proxy has made a decision about your content on your behalf.
 - **Nothing ships without you.** Generation lands as editable text in the document; publish remains a deliberate action you take.
 
-That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual actions inside the editor — outline, rephrase, expand, fix grammar — over any OpenAI-compatible endpoint, with commits you approve. The AI is one keystroke away and never one keystroke ahead of you.
+That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual actions inside the editor (outline, rephrase, expand, fix grammar) over any OpenAI-compatible endpoint, with commits you approve.
 
 ---
 

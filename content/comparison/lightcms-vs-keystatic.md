@@ -19,7 +19,7 @@ taxonomies:
     - comparison
 ---
 
-[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git-backed CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits naturally into Astro and Next.js projects and takes the local-first promise seriously.
+[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git-backed CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits Astro and Next.js projects and takes the local-first promise seriously.
 
 LightCMS shares the storage model (files in your repository) and inverts the audience. Keystatic is built so developers can define content well; LightCMS is built so writers can use it without developers at all.
 
