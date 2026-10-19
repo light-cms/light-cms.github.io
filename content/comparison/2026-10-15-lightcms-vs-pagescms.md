@@ -19,7 +19,7 @@ taxonomies:
     - comparison
 ---
 
-[Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well-designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was exactly enough.
+[Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well-designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
 
 LightCMS starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **what the person publishing actually experiences**.
 
@@ -53,7 +53,7 @@ LightCMS starts from the same goal and pushes further into the writing itself. T
 
 - **The article is a document.** Headings, blockquotes, tables, task lists, syntax-highlighted code, KaTeX math, and drag-and-drop media, edited in place and serialized to clean Markdown. A form with a small text area cannot match this for long-form writing.
 - **Metadata without YAML.** Front matter fields are configured in the app rather than declared in a config file, so adding a field never means editing configuration and redeploying.
-- **The extras are the point.** Drafting assistance, dictation, and a GitHub-backed newsletter turn a content tool into a publishing pipeline — no third-party subscriptions bolted on.
+- **The extras are the point.** Drafting assistance, dictation, and a GitHub-backed newsletter turn a content tool into a publishing pipeline, with no third-party subscriptions bolted on.
 - **Self-hosted end to end.** Apache 2.0, your infrastructure, your API key, your data.
 
 ---
@@ -102,7 +102,7 @@ It has an open source core with hosted options. Confirm current licensing and pr
 
 ### Can I self-host both?
 
-Yes — LightCMS runs on any Node.js host, and Pages CMS supports self-hosted deployment.
+Yes. LightCMS runs on any Node.js host, and Pages CMS supports self-hosted deployment.
 
 ### Which is better for a non-technical writer?
 

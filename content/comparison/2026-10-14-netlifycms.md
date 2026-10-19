@@ -97,7 +97,7 @@ For the longer treatment of each, see [Git CMS platforms compared](/comparison/t
 
 ### Is Netlify CMS dead?
 
-No — it lives on as Decap CMS, actively maintained. But its development pace and editing experience have led many teams to evaluate alternatives.
+No. It lives on as Decap CMS, actively maintained. But its development pace and editing experience have led many teams to evaluate alternatives.
 
 ### What is the best free Netlify CMS alternative?
 

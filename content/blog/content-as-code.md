@@ -62,7 +62,7 @@ The honest list, because this is not free:
 
 - **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git-backed CMS tools fill.
 - **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
-- **Structure is limited.** Files do not join. When content becomes deeply relational, a database earns its complexity.
+- **Structure is limited.** Files do not join. When content becomes relational, a database earns its complexity.
 - **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
 - **Search and preview need tooling.** A wiki gives you search instantly; a static site needs an index step.
 

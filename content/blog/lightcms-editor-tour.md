@@ -42,7 +42,7 @@ You get the immediacy of a word processor with the durability of plain text. The
 ## What You Can Drop Into a Post
 
 ### Structured text
-Headings, blockquotes, ordered and unordered lists, horizontal rules, and task lists — the full skeleton of a technical article, all keyboard-reachable.
+Headings, blockquotes, ordered and unordered lists, horizontal rules, and task lists: the full skeleton of a technical article, all keyboard-reachable.
 
 ### Code blocks with highlighting
 Insert a fenced block, pick the language, and the editor keeps the fence and language tag intact. Your published post renders with the same syntax highlighting your SSG already applies.
@@ -62,7 +62,7 @@ Drag images onto the page. LightCMS stores the file, generates the reference, an
 
 The other half of any static-site post is its front matter, and it is where hand-editing usually goes wrong: a stray tab, a date in the wrong format, an unclosed quote, and the build breaks.
 
-In LightCMS, front matter is a form: title, description, date, tags, keywords, and whatever else your schema declares. The editor validates as you type and writes correctly formatted YAML on publish. Writers never see the syntax; the repository still receives exactly what the SSG expects.
+In LightCMS, front matter is a form: title, description, date, tags, keywords, and whatever else your schema declares. The editor validates as you type and writes correctly formatted YAML on publish. Writers never see the syntax, and the repository still receives what the SSG expects.
 
 A large share of "my build is failing" support threads in static-site communities trace back to malformed front matter, and a visual form removes that class of error.
 

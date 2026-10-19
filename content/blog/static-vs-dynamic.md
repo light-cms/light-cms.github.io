@@ -1,6 +1,6 @@
 ---
 title: "Static Sites vs Dynamic Sites: Which Should You Choose in 2026?"
-description: A practical comparison of static and dynamic websites: performance, cost, security, and when a static site with a Git-backed CMS is the better choice.
+description: "A practical comparison of static and dynamic websites: performance, cost, security, and when a static site with a Git-backed CMS is the better choice."
 serial: 7
 date: 2026-10-14T12:00:00Z
 draft: false
@@ -24,7 +24,7 @@ Choosing between a static site and a dynamic site is one of the first architectu
 
 ## What Is a Static Site?
 
-A static site is a collection of pre-rendered HTML, CSS, JavaScript, and media files. The pages are generated once, at build time, and served exactly as they are. Every visitor receives the same bytes, typically from a global CDN edge node close to them.
+A static site is a collection of pre-rendered HTML, CSS, JavaScript, and media files. The pages are generated once, at build time, and served as they are. Every visitor receives the same bytes, typically from a global CDN edge node close to them.
 
 Popular static site generators include [Astro](https://astro.build), [Hugo](https://gohugo.io), [Eleventy](https://www.11ty.dev), [Jekyll](https://jekyllrb.com), and [SvelteKit](https://svelte.dev). [zine](https://zine-ssg.io) is a new static site generator that combines the speed of static sites with the editing experience of a CMS.
 

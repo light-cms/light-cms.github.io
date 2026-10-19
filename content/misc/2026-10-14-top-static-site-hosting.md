@@ -37,7 +37,7 @@ This guide compares the **top static site hosting platforms in 2026** on perform
 | Provider | Free Bandwidth | Custom Domains & SSL | Git CI/CD Builds | Edge Network | Best For |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Cloudflare Pages** | **Unlimited** | Unlimited free SSL | 500 builds / mo | 330+ cities | Pure speed & high-traffic blogs |
-| **GitHub Pages** | 100 GB / mo (soft) | Yes, free Let's Encrypt | via GitHub Actions | Open-source and personal projects |
+| **GitHub Pages** | 100 GB / mo (soft) | Yes, free Let's Encrypt | via GitHub Actions | Global CDN | Open-source and personal projects |
 | **Wasmer Edge** | Generous tier | Free SSL certificates | CLI & Git hooks | Decentralized edge | WebAssembly & static hybrid sites |
 | **Vercel** | 100 GB / mo | Instant wildcard SSL | 6,000 build mins | Global Anycast | Next.js & SvelteKit ecosystems |
 | **Netlify** | 100 GB / mo | 1-click Let's Encrypt | 300 build mins | High-performance CDN | Jamstack forms & identity |
@@ -84,7 +84,7 @@ The best platform for open-source project documentation, personal software portf
 
 ### Pros & Cons
 
-- **Pros**: Truly unlimited bandwidth; low Time-To-First-Byte (TTFB) from 330+ edge cities; integrated DDoS mitigation, DNS management, and Web Analytics.
+- **Pros**: Unlimited bandwidth; low Time-To-First-Byte (TTFB) from 330+ edge cities; integrated DDoS mitigation, DNS management, and Web Analytics.
 - **Cons**: Build minutes capped at 500 builds per month on the free tier (plenty for personal and small-business sites).
 
 ### Verdict

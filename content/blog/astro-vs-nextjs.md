@@ -63,7 +63,7 @@ For SSG-level context see [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-
 
 ### Can Astro replace Next.js?
 
-For content-heavy sites, yes — and it will outperform by default. For complex applications, Next.js's server-side model is the point.
+For content-heavy sites, yes, and it outperforms by default. For complex applications, Next.js's server-side model is the point.
 
 ### Is Astro built on Next.js?
 

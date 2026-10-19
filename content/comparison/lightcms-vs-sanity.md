@@ -37,7 +37,7 @@ LightCMS solves an adjacent but different problem: publishing documents to a sta
 | **Storage** | Your Git repository | Sanity Content Lake (hosted) |
 | **Delivery** | Pre-rendered static HTML | API at request time (GROQ) |
 | **Content model** | Documents + front matter | Custom schemas in code |
-| **Runtime** | None — build + CDN | Client app + API |
+| **Runtime** | None: build + CDN | Client app + API |
 | **Billing** | Free (Apache 2.0), self-hosted | Usage/seat based hosted service |
 | **Portability** | Clone the repository | Export and convert |
 | **Editor** | TipTap document editor | Customizable Studio |
@@ -47,7 +47,7 @@ LightCMS solves an adjacent but different problem: publishing documents to a sta
 
 ## Where Sanity Wins
 
-- **Multi-channel delivery.** One content source feeding a website, an app, and an integration — with real-time queries — is Sanity's home turf.
+- **Multi-channel delivery.** One content source feeding a website, an app, and an integration, with real-time queries, is Sanity's home turf.
 - **Custom content modeling.** Schemas defined in code give you validation, references, and conditional fields that file-based content cannot express.
 - **Real-time collaboration.** Multiple editors on the same document, live. Git gives you review, not simultaneity.
 - **Instant updates.** Content changes are live without waiting for a build.
@@ -56,16 +56,16 @@ LightCMS solves an adjacent but different problem: publishing documents to a sta
 ## Where LightCMS Wins
 
 - **No per-seat, per-API-call billing.** The tool is free and self-hosted; your only cost is the host you already have.
-- **No vendor in the content path.** Content sits in your repository — readable, forkable, and portable in ten years. Hosted content lives where the vendor says it does.
+- **No vendor in the content path.** Content sits in your repository, readable, forkable, and portable in ten years. Hosted content lives where the vendor says it does.
 - **Zero runtime.** No API to query per request, no rate limits, no outage on someone else's status page. See [static vs dynamic sites](/blog/static-vs-dynamic/).
-- **Built for writing.** A full document editor with [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) — Sanity's Studio is configured for content modeling, not long-form authoring.
+- **Built for writing.** A full document editor with [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/), where Sanity's Studio is configured for content modeling rather than long-form authoring.
 - **Setup measured in minutes.** Connect a repository and write; there is no schema design phase before your first post.
 
 ---
 
 ## The Cost Shape, Concretely
 
-Sanity's free tier is generous, and pricing scales with usage and seats — a good deal until traffic and team size grow. Static output from a Git repository costs the same at one reader and one million: build minutes (already paid for by your CI) and CDN bandwidth (near zero).
+Sanity's free tier is generous, and pricing scales with usage and seats, a good deal until traffic and team size grow. Static output from a Git repository costs the same at one reader and one million: build minutes (already paid for by your CI) and CDN bandwidth (near zero).
 
 For a publication, that is a structurally cheaper curve. For a funded product with multi-channel content needs, Sanity's spend buys genuine capability.
 

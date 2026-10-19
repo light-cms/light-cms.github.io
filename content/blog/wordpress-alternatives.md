@@ -19,13 +19,13 @@ taxonomies:
     - git
 ---
 
-Searching for WordPress alternatives in 2026 usually starts the same way: the site got slow, the plugins got sketchy, the hosting bill crept up, or someone mentioned that half the compromised sites on the internet run the same software stack you do. WordPress is still the biggest CMS on the web, but "biggest" and "best" stopped being the same word years ago. Here is what to use instead, and why the answer is increasingly **a static site with a Git-backed CMS**.
+Searching for WordPress alternatives in 2026 usually starts the same way: the site got slow, the plugins got sketchy, the hosting bill crept up, or someone mentioned that half the compromised sites on the internet run the same software stack you do. WordPress is still the biggest CMS on the web, but "biggest" and "best" stopped being the same word years ago. What to use instead, and why the answer is a **static site with a Git-backed CMS**.
 
 ---
 
 ## Why People Leave WordPress
 
-- **Maintenance treadmill**: Core updates, plugin updates, PHP upgrades, security patches — forever, whether or not you published anything this month.
+- **Maintenance treadmill**: Core updates, plugin updates, PHP upgrades, security patches, forever, whether or not you published anything this month.
 - **Attack surface**: A database, an admin panel, and a plugin ecosystem exposed to the public internet. WordPress sites are the most targeted sites on the web for a reason.
 - **Performance tax**: Every page view executes PHP and queries a database unless you layer caching on top of the default behavior.
 - **Cost creep**: Hosting that scales with database load, premium plugins, premium themes, security services.
@@ -85,7 +85,7 @@ WordPress core is maintained, but its exposure (admin panels, plugins, databases
 
 ### What is the closest WordPress replacement for a blogger?
 
-LightCMS with a static site generator: visual editing, one-click publishing, and no database — but keep reading if memberships or paid newsletters are your model, since Ghost handles those natively.
+LightCMS with a static site generator: visual editing, one-click publishing, and no database. Keep reading if memberships or paid newsletters are your model, since Ghost handles those natively.
 
 ### Do I lose SEO when leaving WordPress?
 

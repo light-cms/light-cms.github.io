@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Drupal: Enterprise Framework vs a Content Tool"
-description: "Drupal is a full-featured PHP CMS for complex, governed sites; LightCMS is a Git-backed editor that produces static output. Here's where each one belongs."
+description: "Drupal is a full-featured PHP CMS for complex, governed sites; LightCMS is a Git-backed editor that produces static output. Where each one belongs."
 serial: 55
 date: 2026-10-16T12:50:00Z
 draft: false
@@ -21,7 +21,7 @@ taxonomies:
 
 [Drupal](https://www.drupal.org) is the serious end of open-source content management: a PHP framework with a content model, permissions, views, and an ecosystem built for universities, governments, and large organizations with real governance requirements.
 
-Comparing it to LightCMS is almost unfair: they sit at opposite ends of the complexity spectrum. The comparison is still useful, because plenty of teams ask whether they need Drupal's weight for what is fundamentally a publishing site.
+Comparing it to LightCMS is almost unfair: they sit at opposite ends of the complexity spectrum. The comparison is still useful, because plenty of teams ask whether they need Drupal's weight for a publishing site.
 
 ---
 
@@ -50,12 +50,12 @@ Comparing it to LightCMS is almost unfair: they sit at opposite ends of the comp
 - **Governance.** Granular roles, editorial workflows, content moderation states, and audit requirements.
 - **Scale of organization.** Multisite, multilingual, and large-editorial-team features that are mature after two decades.
 - **A vast module ecosystem** and long-term enterprise support.
-- **Server-side personalization** and dynamic logic when the site genuinely needs it.
+- **Server-side personalization** and dynamic logic when the site needs it.
 
 ## Where LightCMS Wins
 
 - **Proportion.** For a blog, docs site, or marketing pages, Drupal is a factory buying assembly-line parts for a workshop.
-- **No maintenance treadmill.** Static output has no PHP to patch, no module advisories, no upgrade path to plan — see [static vs dynamic sites](/blog/static-vs-dynamic/).
+- **No maintenance treadmill.** Static output has no PHP to patch, no module advisories, and no upgrade path to plan. See [static vs dynamic sites](/blog/static-vs-dynamic/).
 - **Writers work alone.** No developer needed after setup; a browser is the entire toolchain.
 - **Speed by default.** Pre-rendered pages from a CDN beat server-rendered ones on Core Web Vitals with zero tuning.
 - **Portability.** Plain Markdown in Git, readable for decades.
@@ -64,7 +64,7 @@ Comparing it to LightCMS is almost unfair: they sit at opposite ends of the comp
 
 ## Who Actually Needs Drupal?
 
-Be honest: organizations with regulated content, complex permissions, multilingual requirements, and integration-heavy architectures. If you are a small team publishing articles, none of that applies — and the cost of Drupal is not the license (free) but the expertise it demands for the life of the site.
+Drupal fits organizations with regulated content, complex permissions, multilingual requirements, and integration-heavy architectures. If you are a small team publishing articles, none of that applies, and Drupal's real cost is the expertise it demands for the life of the site, since the license is free.
 
 If you are in that smaller group and want the ownership benefits, the file-based world gives you the same durability with none of the operations: [what is a Git-backed CMS?](/blog/git-based-cms-explained/) explains the model.
 
@@ -91,7 +91,7 @@ For a straightforward publication, yes. You're adopting a framework to do a fold
 
 ### Is LightCMS a Drupal alternative?
 
-Not as a platform — LightCMS does not model relational content. It is an alternative for the publishing use case Drupal sometimes gets used for.
+Not as a platform: LightCMS does not model relational content. It is an alternative for the publishing use case Drupal sometimes gets used for.
 
 ### Can Drupal Output Static Pages?
 
@@ -99,11 +99,11 @@ Drupal can pre-render or be paired with a static export, but the application and
 
 ### Which is more secure?
 
-Static output removes the runtime entirely; Drupal's security depends on keeping core and modules patched — a real, recurring obligation.
+Static output removes the runtime; Drupal's security depends on keeping core and modules patched, a recurring obligation.
 
 ### Is Drupal still maintained?
 
-Yes — it is a mature open-source project with an active community. Check current release schedules before standardizing.
+Yes. It is a mature open-source project with an active community. Check current release schedules before standardizing.
 
 ---
 

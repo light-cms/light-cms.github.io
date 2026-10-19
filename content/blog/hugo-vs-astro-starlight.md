@@ -1,6 +1,6 @@
 ---
 title: Hugo vs Astro Starlight for Documentation Sites
-description: Hugo vs Astro Starlight compared for building documentation — sidebars, search, MDX, versioning, and theming, with guidance on which fits your docs project.
+description: "Hugo vs Astro Starlight compared for building documentation: sidebars, search, MDX, versioning, and theming, with guidance on which fits your docs project."
 serial: 22
 date: 2026-10-14T14:30:00Z
 draft: false
@@ -72,7 +72,7 @@ Context for the wider field: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-si
 
 ### What is Astro Starlight?
 
-Astro's official, batteries-included template for documentation sites — navigation, search, i18n, and accessibility configured out of the box on top of the Astro framework.
+Astro's official, batteries-included template for documentation sites, with navigation, search, i18n, and accessibility configured out of the box on top of the Astro framework.
 
 ### Is Starlight faster than Hugo?
 
@@ -80,7 +80,7 @@ Hugo builds faster; visitors cannot tell the difference: both ship static HTML s
 
 ### Can Starlight use my existing Hugo Markdown?
 
-Mostly yes — both use Markdown with front matter. Shortcode-heavy Hugo content may need conversion when moving to MDX.
+Yes, mostly. Both use Markdown with front matter. Shortcode-heavy Hugo content may need conversion when moving to MDX.
 
 ### Do documentation sites need a CMS?
 

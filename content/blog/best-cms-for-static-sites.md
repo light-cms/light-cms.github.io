@@ -78,7 +78,7 @@ Local-first files with schema validation and React forms, from the Thinkmill tea
 
 ### Best familiar dashboard: Pages CMS
 
-A clean form-based view over GitHub that hides Git completely. Good floor, modest ceiling — compare it directly in [Pages CMS alternatives](/comparison/pagescms).
+A clean form-based view over GitHub that hides Git completely. Good floor, modest ceiling. Compare it in [Pages CMS alternatives](/comparison/pagescms).
 
 ### Best free lightweight option: Sveltia CMS
 
@@ -88,9 +88,9 @@ A browser-hosted editor committing through the GitHub API. Fast to adopt, easy t
 
 Paid, polished, agency-oriented. You are buying someone else's operations.
 
-### Best when you genuinely need a database: Payload CMS
+### Best when you need a database: Payload CMS
 
-A modern headless CMS with real relational content and a powerful admin panel — the right call for application-shaped projects, the wrong one for a static publication. See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
+A modern headless CMS with real relational content and a powerful admin panel: the right call for application-shaped projects and the wrong one for a static publication. See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
 
 ---
 
@@ -106,7 +106,7 @@ Every option in the file-based half of this table shares one advantage: **the bu
 
 Yes. That is what Git-backed CMS tools do. The CMS writes Markdown into your repository; your SSG builds it; your host serves it.
 
-### Is a free CMS really free?
+### What costs money in a free CMS?
 
 Self-hosted, open-source options like LightCMS, Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
 

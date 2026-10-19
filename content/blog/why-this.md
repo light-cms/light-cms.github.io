@@ -45,7 +45,7 @@ Static sites are the simplest, fastest, and most durable way to publish content 
 
 - **Fast**: Pre-rendered HTML and CSS served globally from edge CDNs.
 - **Secure**: No server-side runtime or vulnerable database listeners exposed to the public.
-- **Eco-Friendly**: Minimal computational overhead and zero database queries per page view dramatically reduce digital carbon emissions (tools like [Website Carbon](https://www.websitecarbon.com/) highlight just how impactful this is).
+- **Eco-Friendly**: Minimal computational overhead and zero database queries per page view reduce digital carbon emissions (tools like [Website Carbon](https://www.websitecarbon.com/) measure the difference).
 
 There is no shortage of capable static site generators: [Astro](https://astro.build), [Hugo](https://gohugo.io), [Jekyll](https://jekyllrb.com), [SvelteKit](https://svelte.dev), and [Eleventy](https://www.11ty.dev).
 
@@ -67,7 +67,7 @@ More: [Static Sites and CO2: Building a Greener Web](/blog/greener-web-static-si
 
 ## A CMS That Stays Out of Your Way
 
-The goal of LightCMS is to make writing and publishing effortless without sacrificing the benefits of modern developer tooling:
+LightCMS aims to make writing and publishing simple without sacrificing the benefits of modern developer tooling:
 
 - **Content Lives in Git**: Your articles remain pure Markdown in your own GitHub repository.
 - **Automated CI/CD**: Your existing build pipelines (GitHub Actions, Vercel, Cloudflare Pages) continue to build and deploy your site automatically.

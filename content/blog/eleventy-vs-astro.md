@@ -45,7 +45,7 @@ If a documentation site or publication might grow a search widget, a theme toggl
 
 ## Ecosystem Fit
 
-Eleventy is popular in the indie-web and small-publication world — minimal, stable, and endlessly composable. Astro has the momentum: more new templates, deeper component ecosystem, and the clearest trajectory for content teams. The wider context is in [best static site generators](/blog/best-static-site-generators/).
+Eleventy is popular in the indie-web and small-publication world: minimal, stable, and composable. Astro has the momentum, with more new templates, a deeper component ecosystem, and the clearest path for content teams. The wider context is in [best static site generators](/blog/best-static-site-generators/).
 
 ---
 

@@ -46,7 +46,7 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 ## Limitations
 
 - A younger product with a smaller ecosystem than Decap CMS.
-- Paid plans beyond the free tier — unlike the fully open-source options below.
+- Paid plans beyond the free tier, unlike the fully open-source options below.
 - Best suited to teams actually using AI agents; solo writers may not need the governance layer.
 
 ## How It Compares
@@ -55,7 +55,7 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 | :--- | :--- | :--- | :--- |
 | Focus | AI-safe publishing | Simple forms | Full writing workspace |
 | Editor | Rich, AI-assisted | Form-based | TipTap WYSIWYG |
-| Extras | Agent workflows | — | AI copilot, voice-to-text, newsletters |
+| Extras | Agent workflows | None | AI copilot, voice-to-text, newsletters |
 | License | Free tier + paid plans | Free (MIT) | Free (Apache 2.0) |
 
 - [Pages CMS vs alternatives](/comparison/pagescms/) covers the simple end of the category.

@@ -1,6 +1,6 @@
 ---
 title: What Is the Jamstack? Why It Still Matters in 2026
-description: The Jamstack explained: pre-rendered pages, decoupled APIs, and Git-driven deploys. Why the architecture outlived the hype, and how Git-backed CMS tools fit in.
+description: "The Jamstack explained: pre-rendered pages, decoupled APIs, and Git-driven deploys. Why the architecture outlived the hype, and how Git-backed CMS tools fit in."
 serial: 20
 date: 2026-10-14T14:10:00Z
 draft: false

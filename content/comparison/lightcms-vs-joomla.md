@@ -55,7 +55,7 @@ If you are evaluating it in 2026 for a publication, the interesting question is 
 
 - **No patch cycle.** No PHP version to upgrade, no extension advisories to monitor, no admin surface to brute-force.
 - **Performance without tuning.** Static files from a CDN win on speed by architecture, not by caching configuration.
-- **Cost shape.** Traffic spikes do not mean server upgrades — see [static site hosting compared](/misc/top-static-site-hosting/).
+- **Cost shape.** Traffic spikes do not mean server upgrades. See [static site hosting compared](/misc/top-static-site-hosting/).
 - **Content durability.** Files survive any tool; a Joomla database needs a compatible version to restore into.
 - **Writer-first editing.** A document editor with [AI assistance](/blog/lightcms-ai-copilot/) and [dictation](/blog/lightcms-voice-to-text/) rather than an article form in an admin panel.
 
@@ -63,7 +63,7 @@ If you are evaluating it in 2026 for a publication, the interesting question is 
 
 ## When Joomla Still Makes Sense
 
-If the project needs membership areas, dynamic queries, or extension-driven functionality, Joomla is a reasonable, battle-tested choice — particularly for organizations already invested in it. The migration cost of leaving is the main reason to stay, and that is legitimate.
+If the project needs membership areas, dynamic queries, or extension-driven functionality, Joomla is a reasonable, battle-tested choice, especially for organizations already invested in it. The migration cost of leaving is the main reason to stay, and that is legitimate.
 
 For a new publishing project, though, you would be adopting a runtime you do not need to publish text.
 
@@ -94,11 +94,11 @@ Different trade-offs: Joomla offers more configuration out of the box; WordPress
 
 ### Can LightCMS do what Joomla does?
 
-For publishing — yes. For dynamic applications — no, and it does not try to. See [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
+For publishing, yes. For dynamic applications, no, and it does not try to be. See [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
 
 ### How hard is it to move from Joomla to Markdown?
 
-Article content converts well; extensions and module layouts do not translate. Budget time for structure, not just text.
+Article content converts well; extensions and module layouts do not translate. Budget time for structure as well as text.
 
 ### Will a static site rank better than Joomla?
 

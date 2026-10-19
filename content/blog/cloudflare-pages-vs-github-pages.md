@@ -55,7 +55,7 @@ Both will host your static site for free, forever, straight from a Git repositor
 
 ## The Verdict
 
-For a project page or small demo, GitHub Pages does the job. **For a blog, documentation site, or anything you expect people to actually read, Cloudflare Pages is the better free host** — unlimited bandwidth alone decides it. The full field (including Vercel, Netlify, and Deno Deploy) is covered in [top static site hosting platforms](/misc/top-static-site-hosting/) and [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/).
+For a project page or small demo, GitHub Pages does the job. **For a blog, documentation site, or anything you expect people to read, Cloudflare Pages is the better free host.** Unlimited bandwidth alone decides it. The full field (including Vercel, Netlify, and Deno Deploy) is covered in [top static site hosting platforms](/misc/top-static-site-hosting/) and [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/).
 
 Both integrate with the same Git-backed workflow: [LightCMS](/getting-started/) commits Markdown, the host rebuilds, the site updates. Setup is covered in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
 

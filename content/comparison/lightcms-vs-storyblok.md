@@ -20,13 +20,13 @@ taxonomies:
     - headless
 ---
 
-[Storyblok](https://www.storyblok.com) built its reputation on one genuinely good idea: edit the page while looking at the page. Its visual editor, with drag-and-drop blocks and live preview, is a strong fit for component-driven marketing sites.
+[Storyblok](https://www.storyblok.com) built its reputation on one good idea: edit the page while looking at the page. Its visual editor, with drag-and-drop blocks and live preview, is a strong fit for component-driven marketing sites.
 
 LightCMS shares the "visual" ambition but applies it to a different object: the document. Where Storyblok edits composed pages, LightCMS edits prose.
 
 ---
 
-## What Each Tool Is Really About
+## What Each Tool Does
 
 **Storyblok** is a hosted headless CMS with a component (block) system. Content is modeled as nested stories made of blocks, edited in a visual editor with live preview, delivered through an API, and billed by plan and usage.
 
@@ -73,7 +73,7 @@ Take a real task: publish a 1,500-word article with a table, three screenshots, 
 Now take the opposite task: rebuild a landing page from a hero, feature grid, and testimonial carousel.
 
 - Storyblok does it visually, in minutes.
-- LightCMS does not attempt it — page composition belongs to your templates and components, not to your content tool.
+- LightCMS does not attempt it: page composition belongs to your templates and components, not to your content tool.
 
 The right answer is usually "both, for different jobs." Publications tend to need more of the second task's opposite than they admit.
 
@@ -100,7 +100,7 @@ Storyblok offers a free tier for small projects; production plans are subscripti
 
 ### Does LightCMS support page builders?
 
-No — and deliberately so. LightCMS manages content; layout lives in your templates and components.
+No, and deliberately so. LightCMS manages content; layout lives in your templates and components.
 
 ### Can Storyblok serve static pages?
 
@@ -112,7 +112,7 @@ Both work. Static pre-rendered output has the easier path on speed metrics; cont
 
 ### Can I self-host Storyblok?
 
-No — it's a hosted service. Self-hosting is a LightCMS (and Git-backed) advantage.
+No, it is a hosted service. Self-hosting is a LightCMS advantage, and a Git-backed one.
 
 ---
 

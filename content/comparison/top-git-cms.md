@@ -19,7 +19,7 @@ taxonomies:
     - jamstack
 ---
 
-The Git-backed CMS category has matured quickly. A decade ago the options were "edit Markdown in VS Code"; today there are half a dozen polished platforms that commit clean content files to your repository from a visual editor. This comparison covers the ones developers actually evaluate, and where LightCMS fits among them.
+The Git-backed CMS category has matured quickly. A decade ago the options were "edit Markdown in VS Code"; today there are half a dozen polished platforms that commit clean content files to your repository from a visual editor. This comparison covers the ones developers evaluate, and where LightCMS fits among them.
 
 ---
 
@@ -80,7 +80,7 @@ Self-hosted and Apache 2.0 licensed. LightCMS pairs a TipTap-based WYSIWYG edito
 Whatever you choose, the architectural promise is the same: your content stays as Markdown in your own repository.
 
 - [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) explains why the model matters.
-- Individual deep dives: [Decap CMS (Netlify CMS)](/comparison/netlifycms/), [Pages CMS](/comparison/pagescms/), and [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/).
+- Individual reviews: [Decap CMS (Netlify CMS)](/comparison/netlifycms/), [Pages CMS](/comparison/pagescms/), and [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/).
 - [Getting started with LightCMS](/getting-started/) covers the full workflow.
 - [Self-hosting LightCMS](/blog/selfhost/) walks through running your own instance.
 

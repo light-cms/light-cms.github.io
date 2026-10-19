@@ -134,7 +134,7 @@ Either works. Static Git-backed output tends to score better on Core Web Vitals 
 
 ### Which is easier for non-technical editors?
 
-Both can be easy. What matters is the editor itself — a document editor versus a field form matters more than the storage layer underneath.
+Both can be easy. What matters is the editor itself: a document editor versus a field form matters more than the storage layer underneath.
 
 ### Can I switch between them later?
 

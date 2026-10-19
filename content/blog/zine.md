@@ -19,7 +19,7 @@ taxonomies:
     - static-sites
 ---
 
-[Zine](https://zine-ssg.io) is what happens when a systems programmer looks at the static site generator landscape and decides to write one from scratch in [Zig](https://ziglang.org). Created by Loris Cro (kristoff-it), Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
+[Zine](https://zine-ssg.io) is what happens when a systems programmer looks at the static site generator field and decides to write one from scratch in [Zig](https://ziglang.org). Created by Loris Cro (kristoff-it), Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
 
 ---
 
@@ -41,7 +41,7 @@ For a personal website with a blog (the project's stated comfort zone), Zine is 
 
 Zine consumes Markdown content with front matter like every modern generator, which means the Git-backed CMS workflow applies directly: an editor like [LightCMS](/getting-started/) commits Markdown to your repository, your build pipeline runs Zine, and the static output deploys to your host. See [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/) for the pattern.
 
-## Where It Fits in the Landscape
+## Where It Fits
 
 - For speed-obsessed minimalists: Zine and [Eleventy](/blog/eleventy-vs-astro/) compete for the "tiny and fast" crown with very different toolchains.
 - For ecosystem safety: [Astro, Hugo, and friends](/blog/best-static-site-generators/) remain the conventional picks.
@@ -57,7 +57,7 @@ Zig, including its own Markdown renderer and the Super templating engine, which 
 
 ### Is Zine production-ready?
 
-For personal sites and blogs, yes — that is its stated target. For large complex sites, Hugo and Astro have more battle-tested feature sets today.
+For personal sites and blogs, yes. That is its stated target. For large complex sites, Hugo and Astro have more battle-tested feature sets.
 
 ### Can Zine deploy to GitHub Pages and Cloudflare Pages?
 

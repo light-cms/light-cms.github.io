@@ -56,7 +56,7 @@ Because delivery runs through GitHub's own notification system, there is no list
 
 ## Why This Fits a Static Site
 
-A static site already has a pipeline: content is committed, CI builds, the CDN serves. Newsy slots into exactly the same flow: the same commit that publishes the page also announces it. Nothing is duplicated into a proprietary editor, and nothing needs syncing back.
+A static site already has a pipeline: content is committed, CI builds, the CDN serves. Newsy slots into the same flow: the commit that publishes the page also announces it. Nothing is duplicated into a proprietary editor, and nothing needs syncing back.
 
 It is also free in the way static hosting is free: open source, self-hostable (Go plus a small Postgres table), and it runs happily on serverless platforms. There is no monthly plan that scales with your audience.
 
@@ -65,7 +65,7 @@ It is also free in the way static hosting is free: open source, self-hostable (G
 ## Getting Started
 
 1. Install the **Newsy GitHub App** on the repository you publish from: [github.com/apps/newsletter-newsy](https://github.com/apps/newsletter-newsy/installations/select_target).
-2. Push a new post — from LightCMS or from your terminal.
+2. Push a new post, from LightCMS or your terminal.
 3. Generate the Subscribe button at [newsy.lightcms.me](https://newsy.lightcms.me) and paste it into your site.
 
 Readers land on the announcement issue and subscribe there; every future post reaches them automatically.
@@ -75,6 +75,6 @@ Readers land on the announcement issue and subscribe there; every future post re
 ## Further Reading
 
 - [Newsy source and docs](https://github.com/light-cms/newsy)
-- [Self-hosting LightCMS](/blog/selfhost/) — the full environment reference
-- [Drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) — how publishing works under the hood
-- [Getting started with LightCMS](/getting-started/) — the wider workflow
+- [Self-hosting LightCMS](/blog/selfhost/): the full environment reference
+- [Drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/): how publishing works
+- [Getting started with LightCMS](/getting-started/): the wider workflow

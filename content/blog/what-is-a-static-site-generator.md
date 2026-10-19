@@ -1,6 +1,6 @@
 ---
 title: "What Is a Static Site Generator? How SSGs Turn Content Into HTML"
-description: "A static site generator builds pages ahead of time from templates and content files, producing plain HTML that a CDN serves — no server runtime, no database."
+description: "A static site generator builds pages ahead of time from templates and content files, producing plain HTML that a CDN serves, with no server runtime and no database."
 serial: 46
 date: 2026-10-16T11:20:00Z
 draft: false
@@ -19,7 +19,7 @@ taxonomies:
     - web
 ---
 
-A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files — before anyone visits.
+A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
 
 Instead of assembling a page per request, the work happens once, at build time. What ships to the reader is the finished artifact.
 
@@ -39,9 +39,9 @@ Run the build, and a `public/` directory appears containing every page of the si
 
 ## What the Build Actually Does
 
-1. **Reads content.** Markdown files with [front matter](/blog/what-is-front-matter/) — titles, dates, tags, draft flags.
+1. **Reads content.** Markdown files with [front matter](/blog/what-is-front-matter/): titles, dates, tags, draft flags.
 2. **Applies templates.** Each content type maps to a layout: post page, listing, tag index, home page.
-3. **Generates every page.** Article pages, paginated lists, tag archives, RSS feeds, sitemaps — all pre-rendered.
+3. **Generates every page.** Article pages, paginated lists, tag archives, RSS feeds, and sitemaps, all pre-rendered.
 4. **Copies assets.** Images, fonts, styles, scripts.
 5. **Emits `public/`.** A folder of files with no runtime attached.
 
@@ -65,13 +65,13 @@ There is also an environmental argument worth taking seriously: serving cached f
 
 ---
 
-## What SSGs Are Good At — and Not
+## What SSGs Are Good At, and Where They Struggle
 
 **Excellent for:** blogs, documentation, marketing sites, portfolios, changelogs, and any site where content changes occasionally and reading happens constantly.
 
-**Awkward for:** content that must update instantly without a rebuild, per-user personalization, complex search over frequently changing data, or anything requiring per-request logic. Those workloads want a server — see [static vs dynamic sites](/blog/static-vs-dynamic/) for the trade-off in full.
+**Awkward for:** content that must update without a rebuild, per-user personalization, complex search over frequently changing data, or anything requiring per-request logic. Those workloads want a server; see [static vs dynamic sites](/blog/static-vs-dynamic/) for the full trade-off.
 
-Interactivity is not off-limits, though. The modern pattern is to pre-render everything and attach small islands of JavaScript where needed — forms, search, dark-mode toggles — which is the core idea behind [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and similar tools.
+Interactivity is not off-limits. The modern pattern pre-renders everything and attaches small islands of JavaScript where needed (forms, search, dark-mode toggles), the idea behind [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and similar tools.
 
 ---
 
@@ -92,7 +92,7 @@ The full survey is in [best static site generators](/blog/best-static-site-gener
 
 ## Where the CMS Fits
 
-An SSG solves *rendering*; it says nothing about *authoring*. Left alone, publishing means editing files in a code editor and pushing commits — workable for developers, a barrier for everyone else.
+An SSG solves *rendering*; it says nothing about *authoring*. Left alone, publishing means editing files in a code editor and pushing commits: workable for developers, a barrier for everyone else.
 
 A Git-backed CMS fills that gap: it writes Markdown and front matter into the repository through a visual editor, and the SSG does what it always did. The generator never changes; the writer's experience does. That is the whole premise behind [LightCMS](/blog/what-is-lightcms/), and the fastest way to see it is to [copy a starter template](/blog/start-with-a-lightcms-template/) with the build already configured.
 
@@ -102,7 +102,7 @@ A Git-backed CMS fills that gap: it writes Markdown and front matter into the re
 
 ### Is an SSG the same as a framework?
 
-No. A framework handles requests at runtime; a generator runs at build time and produces files. Some tools blur the line — SvelteKit and Next.js can do both.
+No. A framework handles requests at runtime; a generator runs at build time and produces files. Some tools blur the line: SvelteKit and Next.js can do both.
 
 ### Do static sites support comments, forms, or search?
 
@@ -110,7 +110,7 @@ Yes, through third-party services or client-side JavaScript: form endpoints, com
 
 ### How often do I need to rebuild?
 
-Only when content or code changes. A typical blog builds on every publish — a process measured in seconds.
+Only when content or code changes. A typical blog builds on every publish, a process measured in seconds.
 
 ### Is a static site good for SEO?
 
@@ -118,7 +118,7 @@ Very. Fast load, strong Core Web Vitals, clean crawlable HTML, and no duplicate-
 
 ### Can a static site handle high traffic?
 
-Yes — traffic is served from cache, so spikes are cheap. That is the opposite of a dynamic site, where traffic spikes are expensive.
+Yes. Traffic is served from cache, so spikes are cheap. A dynamic site works the other way, where spikes cost money.
 
 ---
 

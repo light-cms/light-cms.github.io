@@ -108,7 +108,7 @@ Yes. Reverting to a previous commit restores that file's content, and the next b
 
 ### Are drafts visible to the public?
 
-No. A post with `draft: true` is excluded from the build, so it never reaches the deployed site. It is visible to anyone with repository access — which is the point.
+No. A post with `draft: true` is excluded from the build, so it never reaches the deployed site. It is visible to anyone with repository access, which is the point.
 
 ### What happens if two people edit the same post?
 

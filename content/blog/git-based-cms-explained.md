@@ -91,7 +91,7 @@ Revert one post without touching anything else. Restoring a database backup roll
 Write on a branch, submit a PR, take line-level comments on the exact paragraph, merge when approved. GitHub's native review tools become an editorial workflow.
 
 ### Portable content
-The content is plain text. Move generators, move hosts, move CMS tools — the archive walks out with you.
+The content is plain text. Move generators, move hosts, move CMS tools: the archive walks out with you.
 
 ---
 

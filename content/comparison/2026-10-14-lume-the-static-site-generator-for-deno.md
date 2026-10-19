@@ -67,7 +67,7 @@ Very little philosophically: both produce zero-JS static output with templating 
 
 ### Does Lume support JSX?
 
-Yes — Preact components can render to static HTML alongside Markdown pages, one of its most loved features.
+Yes. Preact components can render to static HTML alongside Markdown pages, one of its most loved features.
 
 ### Is Lume fast?
 

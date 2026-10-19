@@ -57,7 +57,7 @@ For a full comparison including GitHub Pages, Netlify, and Deno Deploy, see [top
 
 ## Frequently Asked Questions
 
-### Is Cloudflare Pages Really Unlimited?
+### Is Cloudflare Pages Unlimited?
 
 Yes. The free tier does not meter bandwidth, which makes it the safest default for sites that may go viral.
 
@@ -71,4 +71,4 @@ Both serve from global edge networks with excellent TTFB. Cloudflare's network i
 
 ### Can I move between them later?
 
-Yes. Both deploy from your Git repository with a build command and output directory — switching is a matter of configuration, not migration.
+Yes. Both deploy from your Git repository with a build command and output directory, so switching is a matter of configuration rather than migration.

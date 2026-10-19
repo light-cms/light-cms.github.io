@@ -75,9 +75,9 @@ This is the same reasoning behind [static vs dynamic sites](/blog/static-vs-dyna
 
 ## The Cost Difference Nobody Prices In
 
-Database-first architectures accumulate operational cost quietly: the hosting tier that keeps a Node process warm, the managed database, the backups, the security patches, the monitoring, the outage at 3am.
+Database-first architectures accumulate operational cost: the hosting tier that keeps a Node process warm, the managed database, the backups, the security patches, the monitoring, the outage at 3am.
 
-Static-plus-CDN output accumulates none of it. A build runs on push, the output is cacheable forever, and traffic spikes cost approximately nothing. For a publication — where traffic is spiky and the content is mostly written, not queried — that is a structurally cheaper shape. See [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) and the wider [hosting comparison](/misc/top-static-site-hosting/) for what that looks like in practice.
+Static-plus-CDN output accumulates none of it. A build runs on push, the output is cacheable forever, and traffic spikes cost approximately nothing. For a publication, where traffic is spiky and the content is mostly written rather than queried, that is a structurally cheaper shape. See [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) and the wider [hosting comparison](/misc/top-static-site-hosting/) for what that looks like in practice.
 
 ---
 

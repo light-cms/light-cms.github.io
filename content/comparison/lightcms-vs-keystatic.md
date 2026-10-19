@@ -49,7 +49,7 @@ If your evaluation starts and ends with "does it keep my content in Git," both p
 | **Non-developer usability** | Designed for it | Requires the project and tooling set up first |
 | **AI copilot** | Built in (any OpenAI-compatible endpoint) | Not bundled |
 | **Voice-to-text** | Built in (Whisper) | Not bundled |
-| **Newsletters** | Built in via Newsy — GitHub-backed, no email service | Not bundled |
+| **Newsletters** | Built in via Newsy: GitHub-backed, no email service | Not bundled |
 | **MDX / rich content** | Markdown pass-through | Strong MDX support |
 | **Licensing** | Apache 2.0 | Open source (MIT) |
 
@@ -57,10 +57,10 @@ If your evaluation starts and ends with "does it keep my content in Git," both p
 
 ## Where Keystatic Wins
 
-- **Schema as code.** Content structure lives in version control, reviewed in pull requests and typed at build time. For engineering teams this is exactly right.
-- **Local-first workflow.** Writing can happen offline against the working tree, with Git as the sync mechanism — a genuine advantage for developers who think in repositories.
+- **Schema as code.** Content structure lives in version control, reviewed in pull requests and typed at build time. For engineering teams this is the right call.
+- **Local-first workflow.** Writing can happen offline against the working tree, with Git as the sync mechanism, a real advantage for developers who think in repositories.
 - **Framework fit.** First-class positioning inside Astro and Next.js projects, with field types that map cleanly onto component props.
-- **MDX.** If your content carries components, not just prose, Keystatic handles that natively.
+- **MDX.** If your content carries components rather than plain prose, Keystatic handles that natively.
 
 ## Where LightCMS Wins
 
@@ -77,10 +77,10 @@ Almost every LightCMS-vs-Keystatic decision resolves to a single question about 
 
 **Is the person entering content a developer?**
 
-- **Yes, mostly** — Keystatic will feel like a natural extension of your stack. Schemas are typed, forms are derived, and everything happens where your code already is.
-- **No, or not only** — LightCMS removes the prerequisite. Contributors do not clone, install, or run anything; they open a browser. The repository stays the source of truth, but the entry point stops being a terminal.
+- **Yes, mostly.** Keystatic feels like a natural extension of your stack. Schemas are typed, forms are derived, and everything happens where your code already is.
+- **No, or not only.** LightCMS removes the prerequisite. Contributors do not clone, install, or run anything; they open a browser. The repository stays the source of truth, but the entry point stops being a terminal.
 
-Hybrid teams often land on LightCMS precisely because it lets engineers keep their conventions while non-engineers get a real editor, without either side operating inside the other's tooling.
+Hybrid teams often land on LightCMS because it lets engineers keep their conventions while non-engineers get a real editor, without either side operating inside the other's tooling.
 
 ---
 
@@ -94,7 +94,7 @@ Straightforward in both directions: the artifacts are identical Markdown files w
 
 ### Does LightCMS require a developer to set up?
 
-Someone has to connect the repository and confirm the build — minutes of work, not an integration project. After that, writers work entirely on their own.
+Someone has to connect the repository and confirm the build: minutes of work, not an integration project. After that, writers work entirely on their own.
 
 ### Can Keystatic run without local tooling?
 
@@ -106,7 +106,7 @@ Yes. Both write Markdown with YAML front matter into your repository.
 
 ### Which is better for MDX?
 
-Keystatic — it models component-bearing content deliberately. If your content is prose with occasional embedded media, LightCMS's Markdown output is simpler.
+Keystatic: it models component-bearing content deliberately. If your content is prose with occasional embedded media, LightCMS's Markdown output is simpler.
 
 ### Is either a hosted vendor that could hold my content hostage?
 
@@ -114,4 +114,4 @@ No. Content lives in your repository in both cases, which is the whole point of 
 
 ---
 
-More: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms), and the [Git-backed CMS landscape](/comparison/top-git-cms).
+More: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms), and the [Git-backed CMS overview](/comparison/top-git-cms).

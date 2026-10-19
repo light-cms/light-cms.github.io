@@ -19,7 +19,7 @@ taxonomies:
     - static-sites
 ---
 
-Hugo vs Jekyll is the oldest matchup in the static site world: Jekyll started the modern SSG era in 2008, and Hugo showed up in 2013 promising to do everything faster. A decade later the question is mostly settled for new projects, but Jekyll still has a loyal (and reasonable) camp. Here is how they compare.
+Hugo vs Jekyll is the oldest matchup in the static site world: Jekyll started the modern SSG era in 2008, and Hugo showed up in 2013 promising to do everything faster. A decade later the question is settled for new projects, but Jekyll still has a loyal (and reasonable) camp.
 
 ---
 
@@ -32,7 +32,7 @@ For a small blog, both are fine. For documentation or a large publication, Hugo'
 ## Templating and Themes
 
 - **Hugo** uses Go template syntax with shortcodes, partials, and a powerful (if quirky) configuration system. The theme marketplace is the largest in the category.
-- **Jekyll** uses Liquid templates, arguably gentler to learn, with a mature theme ecosystem and GitHub Pages heritage.
+- **Jekyll** uses Liquid templates, easier for many people to learn, with a mature theme ecosystem and GitHub Pages heritage.
 
 Developers coming from JavaScript often find neither templating language thrilling; both are more pleasant when paired with a good starter theme.
 
@@ -42,13 +42,13 @@ Jekyll historically leaned on its Ruby gem ecosystem for functionality. Hugo del
 
 ## GitHub Pages Native Support
 
-Jekyll runs natively on GitHub Pages — push Markdown, and it builds with zero configuration. Hugo works there too, but via GitHub Actions (which is what most people use; Actions gives you the full Hugo binary and any theme).
+Jekyll runs natively on GitHub Pages: push Markdown, and it builds with zero configuration. Hugo works there too via GitHub Actions, which gives you the full Hugo binary and any theme.
 
 ## Content and CMS Compatibility
 
 Both generators consume the standard content currency of the modern web: **Markdown files with YAML front matter**. Any Git-backed CMS ([LightCMS](/getting-started/), Decap CMS, Pages CMS) commits equally well to either. Neither has an advantage here.
 
-For the broader landscape, see [best static site generators](/blog/best-static-site-generators/) and the deeper [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) matchup.
+For the broader picture, see [best static site generators](/blog/best-static-site-generators/) and the detailed [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) matchup.
 
 ---
 
@@ -73,8 +73,8 @@ Only if build times or theme maintenance bother you. A working Jekyll site is no
 
 ### Is Jekyll Still Maintained?
 
-Yes, but development is slower than Hugo's and Astro's. New projects increasingly start elsewhere.
+Yes, but development is slower than Hugo's and Astro's. New projects usually start elsewhere.
 
 ### Do Both Work with a Git-Backed CMS?
 
-Yes — both read Markdown with YAML front matter from your repository, so any Git-backed CMS publishes to either without issue.
+Yes. Both read Markdown with YAML front matter from your repository, so any Git-backed CMS publishes to either.

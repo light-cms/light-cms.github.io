@@ -44,16 +44,16 @@ Headless solved WordPress's problems but introduced new ones:
 
 - **Content lock-in**: your articles live in a proprietary database behind an API. Leaving means exporting and reformatting everything.
 - **Per-seat pricing**: costs scale with editors, not value.
-- **A second infrastructure**: the CMS is now a SaaS dependency between your writers and your site — with outages, plan limits, and schema migrations of its own.
+- **A second infrastructure**: the CMS becomes a SaaS dependency between your writers and your site, with outages, plan limits, and schema migrations of its own.
 - **Build-time fetching complexity**: the frontend must model content as API data rather than files.
 
 ## The Git-backed Headless CMS
 
-A Git-backed CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers actually want it: **as Markdown files with YAML front matter in your own repository**.
+A Git-backed CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: **as Markdown files with YAML front matter in your own repository**.
 
 - No lock-in: the content is a folder of plain-text files you own.
 - No per-seat SaaS bill: self-hosted and open source options like [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/), and [Decap CMS](/comparison/netlifycms/).
-- Version history, review, and rollback — it is Git, after all.
+- Version history, review, and rollback, because it is Git.
 - The publishing pipeline is the same everywhere: commit → CI/CD → CDN.
 
 For the full field, see [Git-backed CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).

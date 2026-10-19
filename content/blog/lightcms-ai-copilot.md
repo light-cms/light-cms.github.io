@@ -29,10 +29,10 @@ It is not a chat window bolted onto a CMS. It is a set of contextual actions sit
 
 Select a paragraph, or nothing at all, and the copilot offers the four things writers repeatedly do:
 
-- **Outline** — turn a topic into a structured skeleton of sections and bullets you can accept, reorder, or delete.
-- **Rephrase** — same meaning, different register: tighten a rambling sentence, make a casual note more formal, or soften a blunt one.
-- **Expand** — take a compressed idea and pull it out into a full draft, useful when you know what you want to say but not how long to say it.
-- **Fix grammar** — punctuation, agreement, stray typos. The unglamorous pass that happens right before publish.
+- **Outline**: turn a topic into a structured skeleton of sections and bullets you can accept, reorder, or delete.
+- **Rephrase**: same meaning, different register. Tighten a rambling sentence, make a casual note more formal, or soften a blunt one.
+- **Expand**: take a compressed idea and pull it out into a full draft, useful when you know what you want to say but not how long to say it.
+- **Fix grammar**: punctuation, agreement, stray typos. The unglamorous pass that happens right before publish.
 
 Every result lands in the document as editable text. Accept it, tweak it, or undo it. Nothing is committed until you publish, and nothing is published that you did not read.
 
@@ -91,7 +91,7 @@ LightCMS commits whatever you finally approve. There is no silent background gen
 
 ### Do I need an API key?
 
-To use the copilot, yes — you configure a provider in your LightCMS instance. Everything else in the editor works without one.
+To use the copilot, yes: you configure a provider in your LightCMS instance. Everything else in the editor works without one.
 
 ### Is my content used to train models?
 

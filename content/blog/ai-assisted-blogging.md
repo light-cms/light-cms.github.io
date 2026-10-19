@@ -29,11 +29,11 @@ Some tasks suit a model and some do not.
 
 ### 1. Overcoming the blank page
 
-An outline is the highest-leverage AI output there is. Ask for a structure on your topic and you get something to argue with. Disagreement is far easier to write against than emptiness. You will keep four of the eight sections, rewrite two, and delete two. That is a productive ten minutes.
+An outline is the most useful AI output. Ask for a structure on your topic and you get something to argue with. Disagreement is far easier to write against than emptiness. You will keep four of the eight sections, rewrite two, and delete two. That is a productive ten minutes.
 
 ### 2. Rewriting what you already wrote
 
-Editing a finished paragraph is where models shine, because the meaning already exists and the task is bounded: tighten this, simplify that, make it more formal. The failure modes of generation — invented facts, hollow voice — barely apply when the content is yours and the model is only reshaping it.
+Editing a finished paragraph is where models shine, because the meaning already exists and the task is bounded: tighten this, simplify that, make it more formal. The failure modes of generation (invented facts, hollow voice) rarely apply when the content is yours and the model is only reshaping it.
 
 ### 3. Grammar and consistency passes
 
@@ -75,7 +75,7 @@ A practical division of labor, in order:
 
 1. **You** decide the topic and the claim. (Judgment)
 2. **AI** proposes an outline. You restructure it. (Structure)
-3. **You** write the body — from notes, experience, evidence. (Voice, facts)
+3. **You** write the body, from notes, experience, and evidence. (Voice, facts)
 4. **Dictate or paste** rough sections if typing is the bottleneck. (Throughput)
 5. **AI** tightens and fixes grammar on selection. (Mechanics)
 6. **You** verify every claim, then publish. (Accountability)
@@ -86,9 +86,9 @@ The pattern: AI touches structure and mechanics; humans hold facts, voice, and j
 
 ## The Practical Infrastructure Question
 
-If AI is going to sit inside your workflow, it should sit inside your tooling — not in a separate tab you copy between. Two things are worth demanding from any AI-enabled CMS:
+If AI is going to sit inside your workflow, it should sit inside your tooling rather than in a separate tab you copy between. Two things are worth demanding from any AI-enabled CMS:
 
-- **Bring your own provider.** Your key, your account, your choice of model — including a local endpoint. A tool that routes your unpublished drafts through its own proxy has made a decision about your content on your behalf.
+- **Bring your own provider.** Your key, your account, your choice of model, including a local endpoint. A tool that routes your unpublished drafts through its own proxy has made a decision about your content on your behalf.
 - **Nothing ships without you.** Generation lands as editable text in the document; publish remains a deliberate action you take.
 
 That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual actions inside the editor (outline, rephrase, expand, fix grammar) over any OpenAI-compatible endpoint, with commits you approve.
@@ -99,7 +99,7 @@ That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual ac
 
 ### Will AI-written content hurt SEO?
 
-Search engines evaluate helpfulness, not authorship. Mass-generated, unedited content tends to fail because it is generic — the risk is publishing without editing, not using assistance.
+Search engines evaluate helpfulness, not authorship. Mass-generated, unedited content fails because it is generic. The risk is publishing without editing, not using assistance.
 
 ### Should I disclose AI use?
 

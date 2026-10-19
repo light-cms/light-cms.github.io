@@ -26,9 +26,9 @@ It's also a paid platform with a substantial bill, built for organizations whose
 
 ---
 
-## Two Business Models, Not Just Two Tools
+## Two Business Models
 
-**Contentful** is a vendor relationship. Content lives in their cloud, is edited in their web app, and is served through their APIs under a subscription that scales with usage, seats, and environments. You get SLAs, support, and enterprise features — and a monthly cost that grows with success.
+**Contentful** is a vendor relationship. Content lives in their cloud, is edited in their web app, and is served through their APIs under a subscription that scales with usage, seats, and environments. You get SLAs, support, and enterprise features, along with a monthly cost that grows with your success.
 
 **LightCMS** is software you run. Content lives in your repository, is edited in a self-hosted app, and is served as static files by your host. You get portability and a cost line near zero, with no vendor to negotiate with when priorities change.
 
@@ -73,7 +73,7 @@ The comparison is sharp when the project is a **publication**: a blog, docs site
 
 ## Migration
 
-Contentful exports entries as JSON via its API or CLI. Converting entries to Markdown files is mechanical for article-shaped content and harder for deeply nested component trees. Plan for a script plus a cleanup pass; the direction is well-trodden because many teams have moved editorial content *off* SaaS platforms for cost reasons.
+Contentful exports entries as JSON via its API or CLI. Converting entries to Markdown files is mechanical for article-shaped content and harder for component trees nested several levels deep. Plan for a script plus a cleanup pass; the direction is well-trodden because many teams have moved editorial content *off* SaaS platforms for cost reasons.
 
 ---
 
@@ -92,7 +92,7 @@ There is a free tier with limits; production use is a paid plan. LightCMS has no
 
 ### Does LightCMS have an API?
 
-Not as a content API — the output is static HTML from your build. LightCMS's interface is the writing surface plus Git itself.
+Not as a content API: the output is static HTML from your build. LightCMS's interface is the writing surface plus Git itself.
 
 ### Can Contentful serve a static site?
 
@@ -100,11 +100,11 @@ Yes, by fetching at build time or client-side. Either way the runtime dependency
 
 ### Which is better for a small blog?
 
-A free, self-hosted, Git-backed editor — you get a better writing experience with no bill and no lock-in.
+A free, self-hosted, Git-backed editor. You get a better writing experience with no bill and no lock-in.
 
 ### Can I move off Contentful later?
 
-Yes, with an export and a conversion script. The cost of leaving is exactly why platforms charge less at the start and more later.
+Yes, with an export and a conversion script. The cost of leaving is why platforms charge less at the start and more later.
 
 ---
 

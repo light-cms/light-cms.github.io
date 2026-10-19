@@ -29,9 +29,9 @@ Both commit clean Markdown to your repository. They disagree about where your ha
 
 ## Two Philosophies of "Visual"
 
-**TinaCMS — contextual editing.** You interact with content on the live page. What you edit is what you see rendered, which is the right fit for copy that sits inside a design: headlines, hero text, card titles, metadata next to its visual consequence.
+**TinaCMS: contextual editing.** You interact with content on the live page. What you edit is what you see rendered, which is the right fit for copy that sits inside a design: headlines, hero text, card titles, metadata next to its visual consequence.
 
-**LightCMS — document editing.** You interact with the article itself in a focused workspace. There is no layout to distract from structure, and no scrolling past the header image to reach paragraph fourteen.
+**LightCMS: document editing.** You interact with the article itself in a focused workspace. There is no layout to distract from structure, and no scrolling past the header image to reach paragraph fourteen.
 
 The distinction maps onto content type:
 
@@ -49,10 +49,10 @@ Tina is optimized for the first case; LightCMS for the second.
 | **Editing model** | Standalone document workspace | On-page, in-context editing |
 | **Content store** | Your GitHub repository | GitHub (or Git-backed storage) |
 | **Content schema** | Configured in the app; front matter as a form | Schema defined in code with Tina's content SDK |
-| **Editor** | TipTap WYSIWYG — tables, math, code, task lists | Inline rich text tuned for page copy |
+| **Editor** | TipTap WYSIWYG: tables, math, code, task lists | Inline rich text tuned for page copy |
 | **AI copilot** | Built in (any OpenAI-compatible endpoint) | Not bundled |
 | **Voice-to-text** | Built in (Whisper) | Not bundled |
-| **Newsletters** | Built in via Newsy — GitHub-backed, no email service | Not bundled |
+| **Newsletters** | Built in via Newsy: GitHub-backed, no email service | Not bundled |
 | **Deployment** | Self-hosted Node.js service | Local workflow, hosted cloud option, or self-hosted |
 | **Licensing** | Apache 2.0 | Open source core, with hosted services available |
 
@@ -68,7 +68,7 @@ Tina is optimized for the first case; LightCMS for the second.
 
 ## Where LightCMS Wins
 
-- **Writing focus.** A blank, beautiful page with headings, lists, code, and math — not a page you must scroll to reach your prose inside.
+- **Writing focus.** A blank page with headings, lists, code, and math, rather than a page you scroll to reach your prose.
 - **No schema-in-code step.** Adding a field does not require editing a TypeScript config, opening a pull request, and redeploying the site. Writers can manage front matter themselves.
 - **Distribution.** Drafting assistance, transcription, and newsletter dispatch are part of the product, not integrations you assemble.
 - **Full self-hosting.** Run the whole thing on infrastructure you control, with your own model endpoint.
@@ -81,7 +81,7 @@ This is the difference teams underestimate:
 
 With a code-defined schema, **content structure is a developer concern**. That is a feature for engineering teams who want strict typing and review, and a blocker for everyone else: a writer who needs one new field must file a request.
 
-LightCMS treats structure as configuration — front matter fields are managed in the tool. The trade-off is less compile-time type safety; the gain is that metadata evolves at the speed of the editorial calendar.
+LightCMS treats structure as configuration: front matter fields are managed in the tool. The trade-off is less compile-time type safety; the gain is that metadata evolves at the speed of the editorial calendar.
 
 Choose based on who is allowed to change the content model.
 
@@ -112,7 +112,7 @@ Tina has an open source core with hosted services around it. Check current prici
 
 ### Can both be used on the same repository?
 
-Practically, no — two editing tools would compete over the same files and conventions. Pick one owner for the content workflow.
+Practically, no: two editing tools would compete over the same files and conventions. Pick one owner for the content workflow.
 
 ### Which produces cleaner Markdown?
 

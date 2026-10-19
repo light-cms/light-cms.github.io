@@ -1,6 +1,6 @@
 ---
 title: Best Static Site Generators in 2026
-description: The best static site generators of 2026: Astro, Hugo, Eleventy, SvelteKit, Jekyll, Lume, and Zine, compared on speed, templating, and ideal use cases.
+description: "The best static site generators of 2026: Astro, Hugo, Eleventy, SvelteKit, Jekyll, Lume, and Zine, compared on speed, templating, and ideal use cases."
 serial: 18
 date: 2026-10-14T13:50:00Z
 draft: false
@@ -37,7 +37,7 @@ Static site generators had their renaissance and never gave it back. In 2026, th
 
 ## 1. Astro
 
-The default recommendation for new content sites. Astro ships zero JavaScript by default, validates your front matter with typed content collections, and lets you drop React/Svelte/Vue components in as islands when you need interactivity. Deep dive: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/).
+The default recommendation for new content sites. Astro ships zero JavaScript by default, validates your front matter with typed content collections, and lets you drop React/Svelte/Vue components in as islands when you need interactivity. More: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/).
 
 ## 2. Hugo
 

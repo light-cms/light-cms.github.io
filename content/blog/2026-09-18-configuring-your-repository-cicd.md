@@ -164,5 +164,5 @@ Once your repository is configured and CI/CD is in place:
 
 1. Open your LightCMS editor and create a new post.
 2. Add your content and click **Publish**.
-3. Check the **Actions** tab on your GitHub repository — you will see your CI/CD workflow triggered by the LightCMS commit.
+3. Check the **Actions** tab on your GitHub repository. Your CI/CD workflow runs on the LightCMS commit.
 4. Within a minute or two, your new post is live on your website.

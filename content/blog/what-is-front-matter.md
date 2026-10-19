@@ -111,7 +111,7 @@ LightCMS, for example, validates front matter as you type and writes it on commi
 
 For pages in a date-sorted section, yes: generators expect at least a title and a date. The exact requirements depend on your generator's schema.
 
-### YAML vs TOML vs JSON — which should I use?
+### YAML vs TOML vs JSON: which should I use?
 
 Whichever your generator defaults to. Consistency inside a repository matters more than the format itself.
 
@@ -125,7 +125,7 @@ Aim for roughly 140–160 characters: long enough to make sense in search result
 
 ### Does front matter affect SEO?
 
-Directly: it is where the title and meta description come from, so it is one of the highest-leverage small things in a static site.
+Directly: it is where the title and meta description come from, so it is one of the most valuable small things in a static site.
 
 ---
 

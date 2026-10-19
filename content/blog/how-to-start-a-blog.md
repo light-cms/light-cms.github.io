@@ -27,9 +27,9 @@ Starting a blog in 2026 is considerably easier and cheaper than it used to be. Y
 
 Your generator turns Markdown files into a fast static website. The three most popular choices for blogs:
 
-- **[Astro](https://astro.build)** — component-driven, type-safe content collections, and the lowest-friction on-ramp for new bloggers.
-- **[Hugo](https://gohugo.io)** — thousands of pages built in seconds, ideal for large publications.
-- **[Eleventy](https://www.11ty.dev)** — minimal, flexible, framework-optional.
+- **[Astro](https://astro.build)**: component-driven, type-safe content collections, and the lowest-friction on-ramp for new bloggers.
+- **[Hugo](https://gohugo.io)**: thousands of pages built in seconds, ideal for large publications.
+- **[Eleventy](https://www.11ty.dev)**: minimal, flexible, framework-optional.
 
 Read the full comparison in [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/), or start from [static sites vs dynamic sites](/blog/static-vs-dynamic/) if you want to understand why this architecture wins.
 
@@ -49,15 +49,15 @@ tags:
 Hello world. This is my first post.
 ```
 
-Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git-backed CMS bridges that gap — you write visually and it produces the Markdown for you.
+Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git-backed CMS bridges that gap: you write visually and it produces the Markdown for you.
 
 ## Step 3: Deploy for Free
 
 Push your repository to GitHub and connect it to a static host:
 
-- **[Cloudflare Pages](https://pages.cloudflare.com)** — unlimited free bandwidth.
-- **[Vercel](https://vercel.com)** — the smoothest dashboard and preview deployments.
-- **[GitHub Pages](https://pages.github.com)** — zero additional accounts required.
+- **[Cloudflare Pages](https://pages.cloudflare.com)**: unlimited free bandwidth.
+- **[Vercel](https://vercel.com)**: the smoothest dashboard and preview deployments.
+- **[GitHub Pages](https://pages.github.com)**: zero additional accounts required.
 
 Every push rebuilds and republishes your blog in under a minute. Compare your options in [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) and [the full hosting roundup](/misc/top-static-site-hosting/).
 
@@ -65,7 +65,7 @@ Every push rebuilds and republishes your blog in under a minute. Compare your op
 
 This is the step most guides skip. If publishing requires opening a terminal, you will stop writing.
 
-A **Git-backed CMS** like [LightCMS](/getting-started/) gives you a browser-based visual editor — images, formatting, front matter — and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
+A **Git-backed CMS** like [LightCMS](/getting-started/) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
 
 ## Step 5: Grow It
 
@@ -74,7 +74,7 @@ The work that compounds:
 - Publish on a schedule. Search rewards steady output.
 - Write the posts you once searched for yourself; specific problems rank best.
 - Fast pages and good Core Web Vitals (built in with the static setup) are direct ranking factors.
-- Turn posts into a newsletter so readers can follow you without an algorithm in between — [automated newsletters with Newsy](/blog/newsletter-email-automation/) cover this.
+- Turn posts into a newsletter so readers can follow you without an algorithm in between, which [automated newsletters with Newsy](/blog/newsletter-email-automation/) covers.
 
 ---
 
@@ -89,7 +89,7 @@ The work that compounds:
 
 You can run a serious publication for the price of a domain name.
 
-There is a fourth column nobody lists: energy. A static blog served from cached edge nodes emits a fraction of the CO2 of a database-driven site — publishing on a shoestring and publishing sustainably turn out to be the same decision. More in [Static Sites and CO2](/blog/greener-web-static-sites/).
+There is a fourth column nobody lists: energy. A static blog served from cached edge nodes emits a fraction of the CO2 of a database-driven site, so publishing on a shoestring and publishing sustainably turn out to be the same decision. More in [Static Sites and CO2](/blog/greener-web-static-sites/).
 
 ---
 

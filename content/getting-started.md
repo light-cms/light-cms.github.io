@@ -52,7 +52,7 @@ You keep your hosting: GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.s
 - [Self-Hosting LightCMS](/blog/selfhost/): run your own instance.
 - [Newsletter Automation](/blog/newsletter-email-automation/): how Newsy delivers posts without an email vendor.
 
-### Comparisons and Deep Dives
+### Comparisons and Explainers
 
 - [Static Sites vs Dynamic Sites](/blog/static-vs-dynamic/): why static wins for content sites.
 - [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): choosing a static site generator.

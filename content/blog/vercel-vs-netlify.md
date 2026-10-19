@@ -47,13 +47,13 @@ If your stack is **Next.js**, Vercel is home turf: its creators optimize the two
 
 ## Edge and Dynamic Features
 
-- **Netlify** brings Forms and Identity as products, genuinely useful for static sites that need contact forms or auth without third-party services.
+- **Netlify** brings Forms and Identity as products, useful for static sites that need contact forms or auth without third-party services.
 - **Vercel** brings Middleware, Edge Functions, and tighter full-stack framework integration.
 
 ## The Honest Verdict
 
 - **Next.js application on Vercel**: the path of least resistance.
-- **Static content site or Astro/SvelteKit project**: flip a coin — or take the third option.
+- **Static content site or Astro/SvelteKit project**: flip a coin, or take the third option.
 - **Side project that might make money on a free tier**: check Netlify's terms first.
 
 That third option is worth naming: for pure static content sites, [Cloudflare Pages](/blog/cloudflare-pages-vs-vercel/) offers unlimited free bandwidth that neither platform matches. See the [full hosting roundup](/misc/top-static-site-hosting/).

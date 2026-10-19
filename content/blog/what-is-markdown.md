@@ -1,6 +1,6 @@
 ---
 title: What Is Markdown? The Plain-Text Format Powering the Web
-description: Markdown explained: what it is, why it has lasted, the syntax you need, and how Git-backed CMS tools turn plain text into a publishing format.
+description: "Markdown explained: what it is, why it has lasted, the syntax you need, and how Git-backed CMS tools turn plain text into a publishing format."
 serial: 25
 date: 2026-10-14T15:00:00Z
 draft: false
@@ -26,7 +26,7 @@ Markdown is plain text with a small set of formatting symbols. John Gruber creat
 
 - **It does not rot**. A `.md` file from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
 - **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git-backed CMS stores content as Markdown.
-- **It is effortless to learn**. The core syntax is five minutes of symbols.
+- **It is easy to learn**. The core syntax takes five minutes.
 - **It separates content from presentation**. Write structure; let the theme handle looks.
 - **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
 

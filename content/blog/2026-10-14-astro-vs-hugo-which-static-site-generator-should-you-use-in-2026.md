@@ -77,7 +77,7 @@ Yes. Both read Markdown files with YAML front matter, so the same content direct
 
 ### Which is better for blogs in 2026?
 
-Astro is the more common recommendation for new blogs thanks to its content collections and component model, but Hugo remains excellent — especially for very large publications.
+Astro is the more common recommendation for new blogs thanks to its content collections and component model, but Hugo remains excellent for very large publications.
 
 ### Do both work with a Git-backed CMS?
 

@@ -12,4 +12,4 @@ Honest, side-by-side write-ups of LightCMS against the field. Each one starts fr
 
 **Versus traditional CMS and builders**: [WordPress](/comparison/lightcms-vs-wordpress), [Drupal](/comparison/lightcms-vs-drupal), [Joomla](/comparison/lightcms-vs-joomla), [Ghost](/comparison/lightcms-vs-ghost), [Webflow](/comparison/lightcms-vs-webflow).
 
-**Landscape guides**: [top Git-backed CMS platforms](/comparison/top-git-cms), [Decap alternatives](/comparison/netlifycms), [Pages CMS alternatives](/comparison/pagescms), [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites).
+**Overview guides**: [top Git-backed CMS platforms](/comparison/top-git-cms), [Decap alternatives](/comparison/netlifycms), [Pages CMS alternatives](/comparison/pagescms), [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites).
