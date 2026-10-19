@@ -1,25 +1,21 @@
 ---
-title: Getting Started with LightCMS
-description: Learn how LightCMS pairs a modern WYSIWYG editor with Git-backed storage so publishing to static sites is simple.
-serial: 1
-date: 2026-09-01T16:44:00Z
+title: Getting Started with Lightcms
+description: >-
+  Discover how LightCMS makes publishing content to static websites effortless,
+  with a streamlined writing and publishing workflow.
+date: '2026-09-01T16:44:00Z'
 draft: false
+weight: 0
 keywords:
   - lightcms
   - getting started
   - wysiwyg
   - markdown
   - git-backed
-preview: /og-image.png
-taxonomies:
-  tags:
-    - lightcms
-    - cms
-    - git
-    - ssg
+isCJKLanguage: false
+headless: false
 ---
-
-**LightCMS** is a lightweight, Git-backed content workspace built for focused writing on the modern web. It pairs the power of static site generators with a distraction-free visual WYSIWYG editor.
+**LightCMS** is a lightweight, Git based content workspace built for focused writing, It pairs the power of static site generators with a distraction free and gorgeous editor.
 
 ---
 
@@ -27,49 +23,45 @@ taxonomies:
 
 LightCMS is built on one principle: **Nothing should stand between you and your craft.**
 
-### 1. Git-Backed Storage (Zero Lock-In)
+The goal is to make your journey with sharing knowledge as smooth and rewarding as possible.
 
-Your content belongs to you. Every draft, post, and revision is stored as Markdown and front matter files in your own GitHub repository. No proprietary database exports, no vendor lock-in, and full version history through Git branches, commits, and pull requests.
+### 1. Git Backed Storage (Zero Lock In)
 
-### 2. Modern WYSIWYG and Markdown
+Your content belongs to you. Every draft, post, and revision is stored as Markdown and front matter files in your own GitHub repository. No proprietary database exports, no vendor lock in, and full version history through Git commits.
 
-Built on [TipTap](https://tiptap.dev), the editor gives you real-time visual formatting while generating clean, semantic Markdown and YAML front matter. It supports rich typography, math equations (KaTeX), syntax-highlighted code blocks, tables, task lists, and drag-and-drop media.
+### 2. Frontmatter and Markdown
+
+Built on top of [TipTap](https://tiptap.dev), the editor gives you real time visual formatting while generating clean, semantic Markdown and YAML front matter. It supports rich typography, math equations (KaTeX), syntax-highlighted code blocks, tables, task lists, and drag and drop media. 
 
 ### 3. Integrated AI Copilot
 
 An integrated AI writing companion speeds up drafting and editing. Ask it to outline articles, rephrase paragraphs, expand ideas, or fix grammar. It works with any OpenAI-compatible provider (OpenAI, OpenRouter, Groq, NVIDIA NIM).
 
-### 4. Voice-to-Text Transcription
+### 4. Voice to Text Transcription
 
-Record your thoughts in the editor and let Whisper (powered by Groq) transcribe them into structured text in seconds.
+Speak your thoughts freely aloud and let Whisper (powered by Groq) or [Wit.ai](http://Wit.ai) turn your words into text in seconds, making content creation faster and more effortless.
 
 ### 5. First-Class Themes
 
-Curated light and dark modes that are easy on the eyes during late-night sessions or bright daytime writing.
+Choose from carefully curated light and dark themes designed to be easy on the eyes. Pick the style that suits you best and enjoy a comfortable writing experience.
 
 ### 6. Automated Newsletter Dispatch
 
-Built-in support for [Newsy](https://github.com/light-cms/newsy) turns newly published Markdown files into email newsletters sent straight to your audience, with no monthly third-party subscriptions.
+Built in support for [Newsy](https://github.com/light-cms/newsy) turns newly published posts into newsletters and goes straight to your audience, with no monthly third party subscriptions. Or headaches with deliver ability .
 
 ---
 
-## How LightCMS Works
+## How LightCMS Works ? 
 
-The LightCMS workflow hides technical complexity while preserving developer control:
+The LightCMS workflow hides technical complexity while preserving control:
 
 1. **Sign In**: Log into your LightCMS instance with your GitHub account.
 2. **Select Repository**: Pick the GitHub repository containing your static blog or website (Astro, Hugo, SvelteKit, Jekyll, Next.js, etc.).
-3. **Write & Format**: Create new articles or edit existing posts with real-time visual feedback, asset uploads, and front matter management.
-4. **Publish**: LightCMS creates a commit or pull request to your chosen branch.
-5. **Automated Deployment**: Your existing CI/CD pipeline (e.g. GitHub Actions) builds and deploys your static site to Vercel, Cloudflare Pages, Netlify, or your host.
+3. **Write &amp; Format**: Create new articles or edit existing posts with the excellent writing experience with Asset uploads.
+4. **Publish**: LightCMS manages all file versioning and commits, providing a seamless, abstract experience.
 
----
+Deploying: Use your own account to build, generate, and deploy your website to free or low cost hosting platforms like GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh.](http://Surge.sh) Additionally, static sites can be deployed directly to S3 compatible object storage. You stay in control of your projects, deployments, and hosting provider.
 
-## Next Steps
-
-Follow these guides to tailor LightCMS to your stack:
-
-- [Configuring Your Repository](/blog/configuring-your-repository-cicd/): Connect your SSG and set up automated deployments.
 - [Why LightCMS?](/blog/why-this/): Read the design philosophy behind Git-backed publishing.
 - [Self-Hosting LightCMS](/blog/selfhost/): Deploy your own private instance of LightCMS.
 - [Newsletter Automation](/blog/newsletter-email-automation/): Distribute posts to subscribers automatically.
