@@ -127,7 +127,10 @@ li {
 .logo-mark {
 	display: block;
 	flex: none;
+	width: 22px;
+	height: 22px;
 	border-radius: 5px;
+	object-fit: contain;
 }
 
 /* Hero */

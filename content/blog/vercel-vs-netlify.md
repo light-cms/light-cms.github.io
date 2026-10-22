@@ -19,7 +19,7 @@ taxonomies:
     - jamstack
 ---
 
-Vercel vs Netlify is the longest-running debate in Jamstack hosting: the two platforms defined the category together, and in 2026 they remain the default shortlist for anyone deploying frontend code. Both deploy from Git, both have generous free tiers, and both have passionate advocates. The differences are real but narrower than the discourse suggests.
+Vercel vs Netlify is the longest running debate in Jamstack hosting: the two platforms defined the category together, and in 2026 they remain the default shortlist for anyone deploying frontend code. Both deploy from Git, both have generous free tiers, and both have passionate advocates. The differences are real but narrower than the discourse suggests.
 
 ---
 
@@ -64,7 +64,7 @@ Whichever you pick, the Git-backed workflow is identical: [LightCMS](/getting-st
 
 ## Frequently Asked Questions
 
-### Is Vercel or Netlify faster?
+### Is Vercel or Netlify Faster?
 
 Both serve from global edge networks with comparable performance for static assets. Differences appear only in specific dynamic/region-bound workloads.
 

@@ -11,8 +11,8 @@
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
   <link rel="canonical" href="{{ config.base_url }}{{ current_path }}" />
-  <link rel="icon" href="{{ get_url(path="favicon.svg") }}" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="{{ get_url(path="og-image.png") }}" />
+  <link rel="icon" href="{{ get_url(path="favicon.ico") }}" />
+  <link rel="apple-touch-icon" href="{{ get_url(path="icon.png") }}" />
   <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml") }}" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ get_url(path="sitemap.xml") }}" />
   <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}" />
@@ -62,12 +62,7 @@
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="{{ get_url(path="@/_index.md") }}">
-        <svg class="logo-mark" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true" focusable="false">
-          <defs><linearGradient id="lgm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#5b21b6"/></linearGradient></defs>
-          <rect width="64" height="64" rx="15" fill="url(#lgm)"/>
-          <path d="M21 16 v24 a7 7 0 0 0 7 7 h13" fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="44" cy="21" r="5.5" fill="#fff" fill-opacity=".92"/>
-        </svg>
+        <img class="logo-mark" src="{{ get_url(path="icon.png") }}" width="22" height="22" alt="" aria-hidden="true" />
         <span>{{ config.title }}</span>
       </a>
       <span class="links">
