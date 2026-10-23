@@ -169,26 +169,6 @@ li {
 	font-size: 1.08rem;
 	margin-top: 0;
 }
-.hero-art {
-	display: block;
-	width: 100%;
-	max-width: 40rem;
-	height: auto;
-	margin-top: 1.9rem;
-}
-.caret {
-	animation: caret-blink 1.1s steps(1, end) infinite;
-}
-@keyframes caret-blink {
-	0%,
-	55% {
-		opacity: 1;
-	}
-	56%,
-	100% {
-		opacity: 0;
-	}
-}
 
 /* Eyebrow */
 .eyebrow {

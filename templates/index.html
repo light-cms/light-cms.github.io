@@ -13,57 +13,6 @@
     <a class="button secondary" href="https://www.lightcms.me/docs">Read the docs</a>
     <a class="button secondary" href="{{ get_url(path="@/blog/_index.md") }}">Read the blog</a>
   </p>
-
-  <svg class="hero-art" viewBox="0 0 560 300" role="img" aria-label="The LightCMS editor turning Markdown into a commit, then into a published static site">
-    <defs>
-      <linearGradient id="art-glow" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="var(--accent)" stop-opacity="0.16"/>
-        <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
-      </linearGradient>
-      <marker id="art-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/>
-      </marker>
-    </defs>
-    <rect x="0" y="0" width="560" height="300" rx="20" fill="url(#art-glow)"/>
-    <rect x="8" y="18" width="330" height="230" rx="16" fill="var(--surface)" stroke="var(--border)"/>
-    <circle cx="32" cy="44" r="5.5" fill="#ff5f57"/>
-    <circle cx="52" cy="44" r="5.5" fill="#febc2e"/>
-    <circle cx="72" cy="44" r="5.5" fill="#28c840"/>
-    <rect x="32" y="70" width="132" height="13" rx="6.5" fill="var(--accent)"/>
-    <rect x="32" y="98" width="278" height="8" rx="4" fill="var(--muted)" opacity="0.45"/>
-    <rect x="32" y="116" width="246" height="8" rx="4" fill="var(--muted)" opacity="0.45"/>
-    <rect x="32" y="134" width="196" height="8" rx="4" fill="var(--muted)" opacity="0.45"/>
-    <rect class="caret" x="232" y="132" width="3" height="12" rx="1.5" fill="var(--accent)"/>
-    <rect x="32" y="160" width="278" height="58" rx="10" fill="var(--bg)" stroke="var(--border)"/>
-    <rect x="46" y="176" width="60" height="7" rx="3.5" fill="var(--accent)" opacity="0.85"/>
-    <rect x="46" y="192" width="180" height="7" rx="3.5" fill="var(--muted)" opacity="0.5"/>
-    <path d="M346 96 H 392" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 7" stroke-linecap="round" marker-end="url(#art-arrow)"/>
-
-    <!-- commit card -->
-    <rect x="402" y="30" width="150" height="96" rx="16" fill="var(--bg)" stroke="var(--border)"/>
-    <path d="M424 54 v40" stroke="var(--border)" stroke-width="3"/>
-    <circle cx="424" cy="54" r="7" fill="var(--accent)"/>
-    <circle cx="424" cy="76" r="7" fill="var(--accent)" opacity="0.55"/>
-    <circle cx="424" cy="98" r="7" fill="var(--accent)" opacity="0.3"/>
-    <rect x="444" y="48" width="90" height="9" rx="4.5" fill="var(--muted)" opacity="0.6"/>
-    <rect x="444" y="70" width="66" height="9" rx="4.5" fill="var(--muted)" opacity="0.35"/>
-    <rect x="444" y="92" width="78" height="9" rx="4.5" fill="var(--muted)" opacity="0.35"/>
-
-    <!-- publish pill -->
-    <rect x="402" y="150" width="150" height="52" rx="26" fill="var(--accent)"/>
-    <text x="477" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="var(--accent-ink)">Publish</text>
-
-    <!-- output chips -->
-    <rect x="402" y="222" width="70" height="30" rx="15" fill="var(--surface)" stroke="var(--border)"/>
-    <text x="437" y="242" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" fill="var(--muted)">.md</text>
-    <rect x="482" y="222" width="70" height="30" rx="15" fill="var(--surface)" stroke="var(--border)"/>
-    <text x="517" y="242" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" fill="var(--muted)">CDN</text>
-
-    <!-- status line -->
-    <rect x="8" y="264" width="330" height="24" rx="12" fill="var(--surface)"/>
-    <circle cx="26" cy="276" r="5" fill="#28c840"/>
-    <text x="40" y="281" font-family="ui-monospace, monospace" font-size="12" fill="var(--muted)">committed to main · building.</text>
-  </svg>
 </section>
 
 <section class="feature-grid" aria-label="What LightCMS does">
