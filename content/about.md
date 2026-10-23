@@ -3,7 +3,6 @@ title: About
 description: >-
   Who writes the LightCMS blog: practical writing on static sites, Git-backed
   content, Markdown workflows, and the CMS built around them.
-date: '1111-11-11T11:11:00Z'
 draft: false
 weight: 0
 keywords:

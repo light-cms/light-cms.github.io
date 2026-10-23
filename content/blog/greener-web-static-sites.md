@@ -23,7 +23,7 @@ Every page view costs energy. Somewhere a server wakes, a cache misses, a databa
 
 ---
 
-## Why Static Sites Emit Less Carbon
+### Why Static Sites Emit Less Carbon
 
 A dynamic site does work on every request: execute code, query a database, assemble HTML. That work happens on servers that must stay powered around the clock, even when nobody is visiting.
 
@@ -42,7 +42,7 @@ Static sites also age well. A Hugo or Astro site built in 2026 can still be rebu
 
 Owning your content as Markdown in Git is the durable, low-waste option.
 
-## How to Measure Your Website's Carbon
+### How to Measure Your Website's Carbon
 
 You cannot improve what you do not measure:
 

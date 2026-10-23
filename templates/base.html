@@ -16,6 +16,8 @@
   <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml") }}" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ get_url(path="sitemap.xml") }}" />
   <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}" />
+  <link rel="stylesheet" href="{{ get_url(path="pagefind/pagefind-component-ui.css") }}" />
+  <script src="{{ get_url(path="pagefind/pagefind-component-ui.js") }}" type="module"></script>
 
   <meta property="og:site_name" content="{{ config.title }}" />
   <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
@@ -59,7 +61,7 @@
   {% block head_extra %}{% endblock head_extra %}
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" data-pagefind-ignore>
     <nav class="nav">
       <a class="brand" href="{{ get_url(path="@/_index.md") }}">
         <img class="logo-mark" src="{{ get_url(path="icon.png") }}" width="22" height="22" alt="" aria-hidden="true" />
@@ -70,16 +72,20 @@
         <a href="{{ get_url(path="@/blog/_index.md") }}" {% if "/blog" in current_path %}aria-current="page"{% endif %}>Blog</a>
         <a href="{{ get_url(path="@/comparison/_index.md") }}" {% if "/comparison" in current_path %}aria-current="page"{% endif %}>Comparisons</a>
         <a href="{{ get_url(path="@/about.md") }}" {% if current_path == "/about/" %}aria-current="page"{% endif %}>About</a>
+        <pagefind-modal-trigger placeholder="Search..."></pagefind-modal-trigger>
         <a class="nav-cta" href="https://www.lightcms.me/" rel="noopener">Get LightCMS</a>
       </span>
     </nav>
   </header>
 
-  <main class="container">
+  <pagefind-config bundle-path="{{ get_url(path="pagefind/") }}"></pagefind-config>
+  <pagefind-modal reset-on-close="true"></pagefind-modal>
+
+  <main class="container" data-pagefind-body>
     {% block content %}{% endblock content %}
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-pagefind-ignore>
     <p>Written with <a href="https://www.lightcms.me/">LightCMS</a>, a Git-backed CMS for static sites. <a href="https://www.lightcms.me/docs">Docs</a> · <a href="https://github.com/light-cms">GitHub</a> · <a href="{{ get_url(path="atom.xml") }}">RSS</a></p>
     <p>Built with <a href="https://www.getzola.org/">Zola</a></p>
   </footer>

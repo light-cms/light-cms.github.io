@@ -19,7 +19,7 @@ taxonomies:
     - writing
 ---
 
-Most "Markdown editors" are a text area with a preview pane stapled to the side. You write raw syntax, glance at the result, and hope the nesting is right. The LightCMS editor works the other way. **You write, and the editor writes Markdown underneath.**
+Most "Markdown editors" are a text area with a preview pane stapled to the side. You write raw syntax, glance at the result, and hope the nesting is right. The lightCMS editor works the other way. **You write, and the editor writes Markdown underneath.**
 
 This is a tour of that writing surface: what it does, why it works that way, and what it deliberately refuses to do.
 

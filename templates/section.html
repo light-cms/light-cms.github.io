@@ -18,11 +18,11 @@
 {% endblock jsonld_extra %}
 
 {% block content %}
-<h1>{{ section.title }}</h1>
-{% if section.description %}<p class="muted">{{ section.description }}</p>{% endif %}
+<h1 data-pagefind-meta="title">{{ section.title }}</h1>
+{% if section.description %}<p class="muted" data-pagefind-meta="description">{{ section.description }}</p>{% endif %}
 <div class="section-intro">{{ section.content | safe }}</div>
 {% if section.pages %}
-<ul class="post-list">
+<ul class="post-list" data-pagefind-ignore>
 	{% for post in section.pages %}
 	<li>
 		<time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>

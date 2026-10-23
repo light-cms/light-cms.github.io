@@ -2,7 +2,7 @@
 title: "LightCMS vs Pages CMS: Rich Writing vs a Clean Form Over GitHub"
 description: "Pages CMS gives you a tidy form over a GitHub repository; LightCMS gives writers a full visual editor with AI, dictation, and newsletters. A side-by-side comparison."
 serial: 41
-date: 2026-10-15T20:09:55.836Z
+date: 2026-10-15T20:09:55Z
 draft: false
 keywords:
   - lightcms vs pages cms

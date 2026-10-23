@@ -2,7 +2,7 @@
 title: "LightCMS vs Payload CMS: Files in Git vs a Database-First Headless CMS"
 description: "Payload CMS is a powerful headless CMS built on a database; LightCMS writes static Markdown into your repository. Two content architectures, two very different use cases."
 serial: 42
-date: 2026-10-15T20:10:16.452Z
+date: 2026-10-15T20:10:16Z
 draft: false
 keywords:
   - lightcms vs payload

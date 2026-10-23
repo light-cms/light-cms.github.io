@@ -30,7 +30,7 @@ A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and re
 3. Your CI/CD pipeline (GitHub Actions, Cloudflare Pages, Vercel) rebuilds the site.
 4. The updated static site deploys globally within minutes.
 
-The repository is the single source of truth: every edit is a commit, every revision is inspectable, and rollback is a Git operation.
+The repository is the single source of truth: every edit is a commit, every revision is inspectables, and rollback is a Git operation.
 
 ## Security
 

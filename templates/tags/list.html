@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block title %}Tags | {{ config.title }}{% endblock title %}
-{% block description %}Every topic on the LightCMS blog, from static site generators and Git-backed CMS tools to hosting, Markdown, and publishing.{% endblock description %}
+{% block description %}Blogs by light-cms team, LightCMS a cms for managing contents for static site generators.{% endblock description %}
 
 {% block content %}
-<h1>Tags</h1>
+<h1 data-pagefind-meta="title">Tags</h1>
 <p class="muted">Everything on the blog, by subject.</p>
 <ul class="post-list">
   {% for term in terms %}

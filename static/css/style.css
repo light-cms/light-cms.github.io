@@ -29,6 +29,24 @@
 		"Iowan Old Style", "Palatino Linotype", Charter, "Bitstream Charter",
 		Georgia, serif;
 	--mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	/* Pagefind search variables */
+	--pf-text: var(--text);
+	--pf-text-secondary: var(--muted);
+	--pf-text-muted: var(--muted);
+	--pf-background: var(--bg);
+	--pf-border: var(--border);
+	--pf-border-focus: var(--accent);
+	--pf-skeleton: var(--surface);
+	--pf-skeleton-shine: var(--border);
+	--pf-hover: var(--surface);
+	--pf-mark: var(--accent);
+	--pf-outline-focus: var(--accent);
+	--pf-font: var(--font);
+	--pf-border-radius: var(--radius);
+	--pf-input-height: 34px;
+	--pf-modal-backdrop: light-dark(rgba(20, 20, 26, 0.45), rgba(0, 0, 0, 0.72));
+	--pf-modal-max-width: 580px;
 }
 
 * {
@@ -263,6 +281,98 @@ li {
 }
 .links a.nav-cta::after {
 	display: none;
+}
+
+/* Pagefind search trigger and modal styling */
+pagefind-modal-trigger {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 0.15rem;
+}
+
+:is(*, #\#):is(*, #\#) .pf-trigger-btn {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	height: 32px;
+	padding: 0 0.65rem;
+	font-family: var(--font);
+	font-size: 0.88rem;
+	color: var(--muted);
+	cursor: pointer;
+	gap: 0.45rem;
+	display: inline-flex;
+	align-items: center;
+	transition:
+		background-color 0.15s ease,
+		border-color 0.15s ease,
+		color 0.15s ease;
+}
+
+:is(*, #\#):is(*, #\#) .pf-trigger-btn:hover {
+	background: var(--bg);
+	border-color: var(--muted);
+	color: var(--text);
+}
+
+:is(*, #\#):is(*, #\#) .pf-trigger-icon {
+	width: 14px;
+	height: 14px;
+	background: currentColor;
+	flex-shrink: 0;
+}
+
+:is(*, #\#):is(*, #\#) .pf-trigger-text {
+	font-size: 0.88rem;
+	color: inherit;
+	line-height: 1;
+}
+
+:is(*, #\#):is(*, #\#) .pf-trigger-shortcut {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	margin-left: 0.25rem;
+}
+
+:is(*, #\#):is(*, #\#) .pf-trigger-key {
+	font-family: var(--mono);
+	font-size: 0.7rem;
+	height: 18px;
+	min-width: 18px;
+	padding: 0 4px;
+	border-radius: 4px;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	color: var(--muted);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+:is(*, #\#):is(*, #\#) dialog.pf-modal {
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-lift);
+	background: var(--bg);
+	color: var(--text);
+}
+
+:is(*, #\#):is(*, #\#) .pf-result-excerpt mark,
+:is(*, #\#):is(*, #\#) .pf-heading-excerpt mark {
+	background-color: var(--accent-soft);
+	color: var(--accent);
+	font-weight: 600;
+	padding: 0.05em 0.25em;
+	border-radius: 3px;
+}
+
+:is(*, #\#):is(*, #\#) .pf-result-card:hover {
+	border-color: var(--accent);
+}
+
+:is(*, #\#):is(*, #\#) .pf-modal-header .pf-input:focus-visible {
+	outline: none;
 }
 
 /* Section titles */
@@ -511,6 +621,17 @@ code {
 	margin-bottom: 0;
 }
 
+/* Comments */
+.comments {
+	margin-top: 3.5rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border);
+}
+
+.comments .giscus {
+	min-height: 150px;
+}
+
 .related {
 	margin-top: 3.25rem;
 }
@@ -549,6 +670,12 @@ code {
 }
 
 /* Responsive */
+@media (max-width: 680px) {
+	:is(*, #\#):is(*, #\#) .pf-trigger-shortcut {
+		display: none;
+	}
+}
+
 @media (max-width: 640px) {
 	.post table {
 		display: block;
@@ -563,6 +690,17 @@ code {
 	}
 	.site-footer {
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 520px) {
+	:is(*, #\#):is(*, #\#) .pf-trigger-text {
+		display: none;
+	}
+	:is(*, #\#):is(*, #\#) .pf-trigger-btn {
+		padding: 0 0.5rem;
+		min-width: 32px;
+		justify-content: center;
 	}
 }
 

@@ -4,7 +4,7 @@
 {% block description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git-backed CMS, and Markdown publishing.{% endblock description %}
 
 {% block content %}
-<h1>#{{ term.name }}</h1>
+<h1 data-pagefind-meta="title">#{{ term.name }}</h1>
 <p class="muted">{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %}</p>
 <ul class="post-list">
   {% for post in term.pages %}

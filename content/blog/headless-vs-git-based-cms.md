@@ -140,7 +140,7 @@ Both can be easy. What matters is the editor itself: a document editor versus a 
 
 Yes, but with different costs. Git to headless means importing files into a schema; headless to Git means exporting entries to Markdown. Plan the migration before the content model gets complicated.
 
-### Do I need a developer for a Git-backed CMS?
+#### Do I need a developer for a Git-backed CMS?
 
 Once, to connect the repository and confirm the build. After that, publishing is a browser activity.
 

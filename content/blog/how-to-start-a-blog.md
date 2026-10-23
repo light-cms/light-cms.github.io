@@ -27,7 +27,7 @@ Starting a blog in 2026 is considerably easier and cheaper than it used to be. Y
 
 Your generator turns Markdown files into a fast static website. The three most popular choices for blogs:
 
-- **[Astro](https://astro.build)**: component-driven, type-safe content collections, and the lowest-friction on-ramp for new bloggers.
+- **[Astro](https://astro.build)**: component-driven, typesafe content collections, and the lowest friction on-ramp for new bloggers.
 - **[Hugo](https://gohugo.io)**: thousands of pages built in seconds, ideal for large publications.
 - **[Eleventy](https://www.11ty.dev)**: minimal, flexible, framework-optional.
 
