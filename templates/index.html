@@ -49,8 +49,14 @@
 <section>
   <h2 class="section-title">Latest posts</h2>
   {% set blog = get_section(path="blog/_index.md") %}
+  {% set_global latest = blog.pages %}
+  {% for extra_section_path in blog.extra.include_sections | default(value=[]) %}
+    {% set extra_section = get_section(path=extra_section_path) %}
+    {% set_global latest = [...latest, ...extra_section.pages] %}
+  {% endfor %}
+  {% set latest = latest | sort(attribute="date") | reverse %}
   <ul class="post-list" data-pagefind-ignore>
-    {% for post in blog.pages %}{% if loop.index <= 8 %}
+    {% for post in latest %}{% if loop.index <= 8 %}
     <li>
       <time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>
       <div>

@@ -21,9 +21,15 @@
 <h1 data-pagefind-meta="title">{{ section.title }}</h1>
 {% if section.description %}<p class="muted" data-pagefind-meta="description">{{ section.description }}</p>{% endif %}
 <div class="section-intro">{{ section.content | safe }}</div>
-{% if section.pages %}
+{% set_global all_pages = section.pages %}
+{% for extra_section_path in section.extra.include_sections | default(value=[]) %}
+	{% set extra_section = get_section(path=extra_section_path) %}
+	{% set_global all_pages = [...all_pages, ...extra_section.pages] %}
+{% endfor %}
+{% set all_pages = all_pages | sort(attribute="date") | reverse %}
+{% if all_pages %}
 <ul class="post-list" data-pagefind-ignore>
-	{% for post in section.pages %}
+	{% for post in all_pages %}
 	<li>
 		<time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>
 		<div>

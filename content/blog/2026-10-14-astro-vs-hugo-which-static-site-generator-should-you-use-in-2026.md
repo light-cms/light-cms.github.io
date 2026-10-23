@@ -15,7 +15,8 @@ taxonomies:
   tags:
     - astro
     - hugo
-    - static-sites
+    - static
+    - sites
     - ssg
 ---
 

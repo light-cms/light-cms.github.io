@@ -1,5 +1,5 @@
 ---
-title: "AI-Assisted Blogging: Where AI Helps in a Writing Workflow (and Where It Doesn't)"
+title: "AI Assisted Blogging: Where AI Helps in a Writing Workflow (and Where It Doesn't)"
 description: "A practical look at using AI in a blogging workflow: outlining, rewriting, transcription, and content transforms, plus the parts of writing that should stay human."
 serial: 37
 date: 2026-10-16T10:10:00Z
