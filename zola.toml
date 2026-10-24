@@ -14,6 +14,7 @@ feed_filenames = ["atom.xml"]
 [[taxonomies]]
 name = "tags"
 
+
 [markdown]
 
 [markdown.highlighting]
@@ -21,3 +22,6 @@ theme = "catppuccin-mocha"
 
 [extra]
 # Put all your custom variables here
+twitter_username = "LightCms5"
+bluesky_username = "lightcms.bsky.social"
+source_repo = "https://github.com/light-cms/lightcms"

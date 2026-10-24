@@ -6,6 +6,7 @@
   <meta name="msvalidate.01" content="C348576BB92261CC55029F04F308DB94" />
   <meta name="robots" content="{% block robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock robots %}" />
   <meta name="author" content="LightCMS" />
+
   <meta name="theme-color" content="#fdfcfa" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#14141a" media="(prefers-color-scheme: dark)" />
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
@@ -18,7 +19,13 @@
   <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}" />
   <link rel="stylesheet" href="{{ get_url(path="pagefind/pagefind-component-ui.css") }}" />
   <script src="{{ get_url(path="pagefind/pagefind-component-ui.js") }}" type="module"></script>
-
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQ3CNDNM');</script>
+  <!-- End Google Tag Manager -->
   <meta property="og:site_name" content="{{ config.title }}" />
   <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
   <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}" />
@@ -46,7 +53,7 @@
       "@type": "Organization",
       "name": "LightCMS",
       "url": "https://www.lightcms.me/",
-      "sameAs": ["https://www.lightcms.me/", "https://github.com/light-cms", "https://www.lightcms.me/docs"]
+      "sameAs": ["https://www.lightcms.me/", "https://github.com/light-cms", {{ config.extra.source_repo | json_encode() | safe }}, "https://x.com/{{ config.extra.twitter_username }}", "https://bsky.app/profile/{{ config.extra.bluesky_username }}", "https://www.lightcms.me/docs"]
     }
   }{% endblock jsonld %}
   </script>
@@ -86,7 +93,7 @@
   </main>
 
   <footer class="site-footer" data-pagefind-ignore>
-    <p>Written with <a href="https://www.lightcms.me/">LightCMS</a>, a Git-backed CMS for static sites. <a href="https://www.lightcms.me/docs">Docs</a> · <a href="https://github.com/light-cms">GitHub</a> · <a href="{{ get_url(path="atom.xml") }}">RSS</a></p>
+    <p>Written with <a href="https://www.lightcms.me/">LightCMS</a>, a Git-backed CMS for static sites. <a href="https://www.lightcms.me/docs">Docs</a> · <a href="{{ config.extra.source_repo }}">Source code</a> · <a href="https://github.com/light-cms">GitHub</a> · <a href="https://x.com/{{ config.extra.twitter_username }}" rel="me noopener">X</a> · <a href="https://bsky.app/profile/{{ config.extra.bluesky_username }}" rel="me noopener">Bluesky</a> · <a href="{{ get_url(path="atom.xml") }}">RSS</a></p>
     <p>Built with <a href="https://www.getzola.org/">Zola</a></p>
   </footer>
 

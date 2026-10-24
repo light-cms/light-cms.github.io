@@ -35,7 +35,7 @@
     "@type": "Organization",
     "name": "LightCMS",
     "url": "https://www.lightcms.me/",
-    "sameAs": ["https://www.lightcms.me/", "https://github.com/light-cms", "https://www.lightcms.me/docs"]
+    "sameAs": ["https://www.lightcms.me/", "https://github.com/light-cms", {{ config.extra.source_repo | json_encode() | safe }}, "https://x.com/{{ config.extra.twitter_username }}", "https://bsky.app/profile/{{ config.extra.bluesky_username }}", "https://www.lightcms.me/docs"]
   }{% if page.date %},
   "datePublished": "{{ page.date }}",
   "dateModified": "{% if page.updated %}{{ page.updated }}{% else %}{{ page.date }}{% endif %}"{% endif %},
