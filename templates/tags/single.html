@@ -2,6 +2,8 @@
 
 {% block title %}#{{ term.name }} | {{ config.title }}{% endblock title %}
 {% block description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git-backed CMS, and Markdown publishing.{% endblock description %}
+{% block og_title %}#{{ term.name }} | {{ config.title }}{% endblock og_title %}
+{% block og_description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git-backed CMS, and Markdown publishing.{% endblock og_description %}
 
 {% block content %}
 <h1 data-pagefind-meta="title">#{{ term.name }}</h1>

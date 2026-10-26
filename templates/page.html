@@ -5,12 +5,13 @@
 {% block og_type %}{% if page.date %}article{% else %}website{% endif %}{% endblock og_type %}
 {% block og_title %}{{ page.title }}{% endblock og_title %}
 {% block og_description %}{{ page.description | default(value=config.description) }}{% endblock og_description %}
-{% block og_image %}{% if page.preview %}{{ config.base_url }}{{ page.preview }}{% else %}{{ get_url(path="og-image.png") }}{% endif %}{% endblock og_image %}
+{% block og_image %}{{ get_url(path="og-image.webp") }}{% endblock og_image %}
 {% block tw_title %}{{ page.title }}{% endblock tw_title %}
 {% block tw_description %}{{ page.description | default(value=config.description) }}{% endblock tw_description %}
-{% block tw_image %}{% if page.preview %}{{ config.base_url }}{{ page.preview }}{% else %}{{ get_url(path="og-image.png") }}{% endif %}{% endblock tw_image %}
+{% block tw_image %}{{ get_url(path="og-image.webp") }}{% endblock tw_image %}
 
 {% block head_extra %}{% if page.date %}
+  <meta property="article:author" content="LightCMS" />
   <meta property="article:published_time" content="{{ page.date }}" />
   <meta property="article:modified_time" content="{% if page.updated %}{{ page.updated }}{% else %}{{ page.date }}{% endif %}" />
   {% if page.taxonomies.tags %}
@@ -26,7 +27,7 @@
   "headline": {{ page.title | json_encode() | safe }},
   "description": {{ page.description | default(value=config.description) | json_encode() | safe }},
   "url": {{ page.permalink | json_encode() | safe }},
-  "image": "{{ config.base_url }}{% if page.preview %}{{ page.preview }}{% else %}/og-image.png{% endif %}",
+  "image": "{{ config.base_url }}/og-image.webp",
   "mainEntityOfPage": {{ page.permalink | json_encode() | safe }},
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": {{ config.title | json_encode() | safe }}, "url": {{ config.base_url | json_encode() | safe }} },
@@ -40,7 +41,7 @@
   "datePublished": "{{ page.date }}",
   "dateModified": "{% if page.updated %}{{ page.updated }}{% else %}{{ page.date }}{% endif %}"{% endif %},
   "articleSection": {{ page.taxonomies.tags | default(value=[]) | first | default(value="") | json_encode() | safe }},
-  "keywords": {{ page.extra.keywords | default(value=[]) | join(sep=", ") | json_encode() | safe }},
+  "keywords": {{ page.taxonomies.tags | default(value=[]) | join(sep=", ") | json_encode() | safe }},
   "wordCount": {{ page.word_count | default(value=0) }}
 }
 {% endblock jsonld %}
