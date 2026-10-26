@@ -1,9 +1,8 @@
 ---
-
 id: IXGd7-xioQc
 title: Required Permissions
 description: The list of permissions the Newsy bot requests.
-author: Pratyay360
+author: light-cms
 created: 2026-08-22T07:28:38+00:00
 visibility: "public"
 ---

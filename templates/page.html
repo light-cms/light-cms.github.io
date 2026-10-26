@@ -51,9 +51,9 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ get_url(path="@/_index.md") | json_encode() | safe }} }{% for component in page.components %}{% if not loop.last %}{% set sec = get_section(path=component ~ "/_index.md") %},
-    { "@type": "ListItem", "position": {{ loop.index + 1 }}, "name": {{ sec.title | json_encode() | safe }}, "item": {{ sec.permalink | json_encode() | safe }} }{% endif %}{% endfor %},
-    { "@type": "ListItem", "position": {{ page.components | length + 1 }}, "name": {{ page.title | json_encode() | safe }} }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ get_url(path="@/_index.md") | json_encode() | safe }} }{% for ancestor in page.ancestors %}{% if not loop.first %}{% set sec = get_section(path=ancestor) %},
+    { "@type": "ListItem", "position": {{ loop.index }}, "name": {{ sec.title | json_encode() | safe }}, "item": {{ sec.permalink | json_encode() | safe }} }{% endif %}{% endfor %},
+    { "@type": "ListItem", "position": {{ page.ancestors | length + 1 }}, "name": {{ page.title | json_encode() | safe }} }
   ]
 }
 </script>
