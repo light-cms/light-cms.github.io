@@ -10,7 +10,7 @@ keywords:
   - decap cms alternatives
   - tinacms vs keystatic
   - file based cms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

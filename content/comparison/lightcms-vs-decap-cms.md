@@ -10,7 +10,7 @@ keywords:
   - netlify cms alternative
   - decap cms editor
   - git cms comparison
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

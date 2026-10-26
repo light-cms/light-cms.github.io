@@ -10,7 +10,7 @@ keywords:
   - visual editor cms
   - storyblok pricing alternative
   - component based cms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

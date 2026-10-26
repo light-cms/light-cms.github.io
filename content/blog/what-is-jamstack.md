@@ -10,7 +10,7 @@ keywords:
   - jamstack vs traditional
   - jamstack 2026
   - headless architecture
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - jamstack

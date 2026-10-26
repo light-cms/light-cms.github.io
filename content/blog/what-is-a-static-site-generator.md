@@ -10,7 +10,7 @@ keywords:
   - ssg explained
   - how static sites work
   - pre rendered html
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - static-sites

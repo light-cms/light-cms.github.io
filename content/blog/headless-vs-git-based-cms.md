@@ -10,7 +10,7 @@ keywords:
   - git based cms
   - file based cms vs headless
   - cms architecture
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

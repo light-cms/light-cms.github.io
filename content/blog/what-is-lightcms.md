@@ -10,7 +10,7 @@ keywords:
   - git-backed cms
   - markdown cms
   - visual editor for markdown
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

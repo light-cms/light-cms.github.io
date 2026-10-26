@@ -10,7 +10,7 @@ keywords:
   - keystatic cms
   - file based cms comparison
   - local first cms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

@@ -10,7 +10,7 @@ keywords:
   - content in git
   - markdown workflow
   - version controlled content
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - git

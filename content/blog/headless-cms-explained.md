@@ -10,7 +10,7 @@ keywords:
   - headless cms vs traditional
   - git based headless cms
   - headless cms examples
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

@@ -10,7 +10,7 @@ keywords:
   - newsy
   - static site newsletter
   - lightcms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - newsletter

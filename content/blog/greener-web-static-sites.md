@@ -10,7 +10,7 @@ keywords:
   - greener web
   - sustainable web design
   - website carbon footprint
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - sustainability

@@ -10,7 +10,7 @@ keywords:
   - sanity cms pricing alternatives
   - git based cms vs sanity
   - sanity for blogs
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

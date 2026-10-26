@@ -10,7 +10,7 @@ keywords:
   - markdown syntax guide
   - why use markdown
   - markdown for writers
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - markdown

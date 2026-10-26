@@ -10,7 +10,7 @@ keywords:
   - lume vs eleventy
   - lume deno cms
   - lume land
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - ssg

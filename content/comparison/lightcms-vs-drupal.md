@@ -10,7 +10,7 @@ keywords:
   - drupal vs static site
   - drupal for small sites
   - modern cms alternatives
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

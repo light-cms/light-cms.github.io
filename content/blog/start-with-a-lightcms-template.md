@@ -10,7 +10,7 @@ keywords:
   - blog starter astro hugo
   - github template repository
   - start a blog from template
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

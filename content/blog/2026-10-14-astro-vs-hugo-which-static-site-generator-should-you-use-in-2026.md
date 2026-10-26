@@ -10,7 +10,7 @@ keywords:
   - best static site generator
   - astro or hugo for blog
   - static site generator comparison
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - astro

@@ -10,7 +10,7 @@ keywords:
   - zig static site generator
   - zine ssg vs hugo
   - fastest ssg zig
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - ssg

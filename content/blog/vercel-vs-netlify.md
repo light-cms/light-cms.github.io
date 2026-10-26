@@ -10,7 +10,7 @@ keywords:
   - vercel or netlify for react
   - jamstack hosting comparison
   - vercel pricing vs netlify
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - hosting

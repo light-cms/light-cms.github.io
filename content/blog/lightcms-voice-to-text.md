@@ -10,7 +10,7 @@ keywords:
   - whisper transcription cms
   - speech to text writing
   - lightcms voice
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

@@ -10,7 +10,7 @@ keywords:
   - docker
   - vercel
   - sveltekit
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - selfhost

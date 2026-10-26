@@ -10,7 +10,7 @@ keywords:
   - cms for static site generator
   - git based cms comparison
   - cms without database
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

@@ -10,7 +10,7 @@ keywords:
   - static site generator
   - astro
   - hugo
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - configuration

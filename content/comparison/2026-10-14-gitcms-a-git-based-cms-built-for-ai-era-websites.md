@@ -10,7 +10,7 @@ keywords:
   - ai cms for websites
   - git based cms
   - cms for ai built sites
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms
