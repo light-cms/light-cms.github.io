@@ -10,7 +10,7 @@ keywords:
   - 11ty vs astro
   - zero javascript static site
   - best minimal ssg
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - eleventy

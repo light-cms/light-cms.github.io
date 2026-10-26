@@ -1,5 +1,5 @@
 ---
-title: What Is a Headless CMS? (And Why Git-Based Ones Matter)
+title: What Is a Headless CMS? (And Why Git Based Ones Matter)
 description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git-backed CMS tools."
 serial: 26
 date: 2026-10-14T15:10:00Z
@@ -10,7 +10,7 @@ keywords:
   - headless cms vs traditional
   - git based headless cms
   - headless cms examples
-preview: /og-image.png
+preview: ./
 taxonomies:
   tags:
     - cms

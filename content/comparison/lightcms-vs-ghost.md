@@ -10,7 +10,7 @@ keywords:
   - ghost vs static site
   - self hosted blogging platform
   - ghost pricing alternative
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

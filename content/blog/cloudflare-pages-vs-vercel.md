@@ -10,7 +10,7 @@ keywords:
   - best free static site hosting
   - cloudflare pages pricing
   - vercel free tier
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - hosting

@@ -10,7 +10,7 @@ keywords:
   - tinacms self hosted
   - on-page editing vs dashboard
   - markdown cms comparison
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

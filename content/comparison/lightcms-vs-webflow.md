@@ -10,7 +10,7 @@ keywords:
   - webflow cms limitations
   - webflow vs static site generator
   - webflow pricing alternatives
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

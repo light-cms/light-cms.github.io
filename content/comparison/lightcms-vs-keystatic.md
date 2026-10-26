@@ -1,5 +1,5 @@
 ---
-title: "LightCMS vs Keystatic: Code-First Schema vs a Writer-First Workspace"
+title: "LightCMS vs Keystatic: Code First Schema vs a Writer First Workspace"
 description: "Keystatic keeps content as files with schemas defined in code; LightCMS keeps content as files with an editor anyone can use. Which one fits your team."
 serial: 40
 date: 2026-10-16T10:40:00Z
@@ -10,7 +10,7 @@ keywords:
   - keystatic cms
   - file based cms comparison
   - local first cms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

@@ -10,7 +10,7 @@ keywords:
   - joomla vs static site
   - joomla migration
   - modern cms for blogs
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

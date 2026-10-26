@@ -10,7 +10,7 @@ keywords:
   - markdown blog
   - static site blog
   - best way to start a blog 2026
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - blogging

@@ -10,7 +10,7 @@ keywords:
   - static site advantages
   - jamstack vs dynamic
   - static site cms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - static-sites

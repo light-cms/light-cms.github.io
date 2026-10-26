@@ -10,7 +10,7 @@ keywords:
   - astro or next for blog
   - astro vs nextjs for content site
   - which react framework 2026
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - astro

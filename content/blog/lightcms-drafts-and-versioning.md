@@ -10,7 +10,7 @@ keywords:
   - content rollback
   - markdown version history
   - lightcms drafts
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

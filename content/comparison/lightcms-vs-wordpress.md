@@ -10,7 +10,7 @@ keywords:
   - wordpress without database
   - static site vs wordpress
   - switch from wordpress
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

@@ -10,7 +10,7 @@ keywords:
   - visual editor for markdown
   - tiptap editor
   - markdown wysiwyg
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

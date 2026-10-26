@@ -10,7 +10,7 @@ keywords:
   - zig static site generator
   - zine ssg vs hugo
   - fastest ssg zig
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - ssg
@@ -19,9 +19,7 @@ taxonomies:
     - static-sites
 ---
 
-[Zine](https://zine-ssg.io) is what happens when a systems programmer looks at the static site generator field and decides to write one from scratch in [Zig](https://ziglang.org). Created by Loris Cro (kristoff-it), Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
-
----
+[Zine](https://zine-ssg.io) is a new static site generator Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
 
 ## What Makes Zine Different
 

@@ -1,5 +1,5 @@
 ---
-title: "Dictate Your Drafts: Voice-to-Text in LightCMS"
+title: "Dictate Your Drafts: Voice to Text in LightCMS"
 description: "How LightCMS turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
 serial: 33
 date: 2026-10-16T09:30:00Z
@@ -10,7 +10,7 @@ keywords:
   - whisper transcription cms
   - speech to text writing
   - lightcms voice
-preview: /og-image.png
+preview: null
 taxonomies:
   tags:
     - lightcms

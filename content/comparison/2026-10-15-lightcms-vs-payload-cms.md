@@ -10,7 +10,7 @@ keywords:
   - headless cms vs git based cms
   - cms without database
   - static site cms
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

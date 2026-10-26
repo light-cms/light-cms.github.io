@@ -10,7 +10,7 @@ keywords:
   - wordpress vs static site
   - cms without database
   - open source cms 2026
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

@@ -10,7 +10,7 @@ keywords:
   - ai for content creation
   - writing with ai
   - ai blog tool
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - ai

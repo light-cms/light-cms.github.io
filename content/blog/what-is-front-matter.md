@@ -10,7 +10,7 @@ keywords:
   - yaml front matter
   - static site metadata
   - markdown metadata
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - markdown
@@ -39,7 +39,7 @@ tags:
 keywords:
   - static site generators
   - ssg comparison
-preview: /og-image.png
+preview: /og-image.webp
 ---
 
 The article body starts here, after the closing `---`.

@@ -10,7 +10,7 @@ keywords:
   - best docs site generator
   - starlight documentation
   - documentation site framework
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - hugo

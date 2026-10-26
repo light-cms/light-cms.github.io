@@ -10,7 +10,7 @@ keywords:
   - git cms
   - file based cms
   - cms with version control
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

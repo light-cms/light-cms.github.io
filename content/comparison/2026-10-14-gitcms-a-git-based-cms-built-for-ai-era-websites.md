@@ -1,5 +1,5 @@
 ---
-title: "GitCMS: A Git-Based CMS Built for AI-Era Websites"
+title: "GitCMS: A Git Based CMS Built for AI-Era Websites"
 description: What GitCMS is, how it keeps human and AI edits reviewable in your repository, how it compares with Pages CMS, and when to choose it.
 serial: 15
 date: 2026-10-14T13:20:00Z
@@ -10,7 +10,7 @@ keywords:
   - ai cms for websites
   - git based cms
   - cms for ai built sites
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

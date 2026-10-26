@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": {
+    "lightcms-skills": {
+      "source": "skills.sh",
+      "sourceUrl": "https://skills.sh/p/3ne3U2loG4hacxr6",
+      "sourceType": "well-known",
+      "computedHash": "40795c86f8884eedf6fc9f6ccf9f6440b16ceb19c4b8350560833c6fb3e1a715",
+      "wellKnownDigest": "sha256:74b1cadddc4636c8b25919f309829c435bf756dde87a350ea6d39c39100b890b"
+    }
+  }
+}

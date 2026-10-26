@@ -10,7 +10,7 @@ keywords:
   - strapi vs git cms
   - open source cms comparison
   - strapi for blog
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

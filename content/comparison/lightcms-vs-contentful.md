@@ -10,7 +10,7 @@ keywords:
   - contentful pricing alternative
   - headless cms for blogs
   - cms without vendor lock in
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms

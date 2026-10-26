@@ -15,7 +15,7 @@ keywords:
   - wasmer edge
   - vercel
   - netlify
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - hosting

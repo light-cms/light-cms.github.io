@@ -10,7 +10,7 @@ keywords:
   - netlify cms vs
   - best git cms 2026
   - decap cms replacement
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

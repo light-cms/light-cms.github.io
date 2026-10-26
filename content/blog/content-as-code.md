@@ -101,7 +101,7 @@ A directory of Markdown files needs a text editor, and it will still open in one
 
 The same premise runs through every Git-backed CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
 
----
+#### Frequently Asked Questions
 
 ## Frequently Asked Questions
 

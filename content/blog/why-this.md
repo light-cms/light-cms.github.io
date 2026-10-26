@@ -9,7 +9,7 @@ keywords:
   - gitbacked cms
   - static sites
   - carbon footprint
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - cms

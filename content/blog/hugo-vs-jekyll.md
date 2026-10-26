@@ -10,7 +10,7 @@ keywords:
   - hugo or jekyll for blog
   - static site generator comparison
   - fastest ssg
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - hugo

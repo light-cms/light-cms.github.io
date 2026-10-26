@@ -10,7 +10,7 @@ keywords:
   - astro vs hugo vs eleventy
   - ssg comparison
   - fastest static site generator
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - ssg

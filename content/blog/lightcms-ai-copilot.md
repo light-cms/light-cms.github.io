@@ -10,7 +10,7 @@ keywords:
   - lightcms ai copilot
   - openai compatible cms
   - ai content workflow
-preview: /og-image.png
+preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms
