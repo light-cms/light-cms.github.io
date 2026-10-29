@@ -1,8 +1,8 @@
 ---
 title: Getting Started with LightCMS
 description: >-
-  Connect a GitHub repository, write Markdown in a visual editor, and publish
-  by committing to Git.
+  Connect a GitHub repository, write Markdown in a visual editor, and publish by
+  committing to Git.
 date: '2026-09-01T16:44:00Z'
 draft: false
 weight: 0
@@ -12,6 +12,12 @@ keywords:
   - wysiwyg
   - markdown
   - git-backed
+tags:
+  - Light
+  - Cms
+  - Lightcms
+  - Git
+  - Based
 isCJKLanguage: false
 headless: false
 ---
@@ -42,7 +48,7 @@ headless: false
 3. **Write.** The editor handles formatting and uploads images to your CDN as you add them.
 4. **Publish.** LightCMS commits the change. Your host builds and deploys as it always does.
 
-You keep your hosting: GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh](https://surge.sh), or S3-compatible storage.
+You keep your hosting: GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh](https://surge.sh), or S3 compatible storage.
 
 ---
 
@@ -58,5 +64,5 @@ You keep your hosting: GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.s
 - [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): choosing a static site generator.
 - [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): choosing where to host.
 - [Git-Backed CMS vs Traditional CMS](/blog/git-cms-vs-traditional-cms/): how the two models differ.
-- [Top Git-Backed CMS Platforms](/comparison/top-git-cms/): LightCMS next to Decap, TinaCMS, Keystatic, and others.
+- [Top Git Backed CMS Platforms](/comparison/top-git-cms/): LightCMS next to Decap, TinaCMS, Keystatic, and others.
 - [How to Start a Blog](/blog/how-to-start-a-blog/): the full Markdown blogging guide.
