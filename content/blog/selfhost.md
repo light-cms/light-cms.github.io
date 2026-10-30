@@ -3,7 +3,7 @@ title: Self Hosting LightCMS
 description: >-
   A complete guide to self-hosting LightCMS, covering environment variables,
   GitHub App credentials, PostgreSQL, AI endpoints, and a production deploy.
-date: '2026-09-18T01:45:00Z'
+date: '1111-11-11T11:11:00Z'
 draft: false
 keywords:
   - lightcms
