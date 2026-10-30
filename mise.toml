@@ -4,4 +4,4 @@ bun = "latest"
 biome = "latest"
 [tasks]
 start = "zola serve"
-build = "zola build && bunx pagefind --site public"
+build = "zola build"
