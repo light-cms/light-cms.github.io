@@ -1,8 +1,9 @@
 ---
-title: Self-Hosting LightCMS
-description: A complete guide to self-hosting LightCMS, covering environment variables, GitHub App credentials, PostgreSQL, AI endpoints, and a production deploy.
-serial: 4
-date: 2026-09-18T01:45:00Z
+title: Self Hosting LightCMS
+description: >-
+  A complete guide to self-hosting LightCMS, covering environment variables,
+  GitHub App credentials, PostgreSQL, AI endpoints, and a production deploy.
+date: '2026-09-18T01:45:00Z'
 draft: false
 keywords:
   - lightcms
@@ -10,6 +11,9 @@ keywords:
   - docker
   - vercel
   - sveltekit
+isCJKLanguage: false
+headless: false
+serial: 4
 preview: /og-image.webp
 taxonomies:
   tags:
@@ -18,7 +22,6 @@ taxonomies:
     - postgresql
     - deployment
 ---
-
 LightCMS is built on [SvelteKit](https://svelte.dev), so you can run it on any platform that supports Node.js or edge runtimes, including Vercel, Cloudflare Pages, Netlify, Docker containers, or your own Linux VPS.
 
 This guide covers the environment, the GitHub App credentials, the PostgreSQL database, and a production deploy.
@@ -39,7 +42,7 @@ Before you begin, ensure you have the following installed and configured:
 
 ---
 
-## 1. Clone the Repository & Install Dependencies
+## 1. Clone the Repository &amp; Install Dependencies
 
 Clone the LightCMS repository to your local machine:
 
@@ -172,14 +175,14 @@ python3 -c "import secrets; print(secrets.token_hex(32))"
 
 The AI Copilot uses standard OpenAI-compatible completions, which allows you to use any provider offering an OpenAI API format:
 
-- **[Groq](https://groq.com)**: Fast Llama models and Whisper voice transcription (`GROQ_API_KEY`).
-- **[OpenRouter](https://openrouter.ai)**: Access Claude, GPT, Mistral, and open-source models with a single unified key (`OPEN_AI_ENDPOINT="https://openrouter.ai/api/v1"`).
-- **[NVIDIA NIM](https://build.nvidia.com)**: High-performance inference endpoints for open models.
-- **[OpenAI](https://platform.openai.com)**: Official OpenAI endpoint and GPT models.
+- [**Groq**](https://groq.com): Fast Llama models and Whisper voice transcription (`GROQ_API_KEY`).
+- [**OpenRouter**](https://openrouter.ai): Access Claude, GPT, Mistral, and open-source models with a single unified key (`OPEN_AI_ENDPOINT="https://openrouter.ai/api/v1"`).
+- [**NVIDIA NIM**](https://build.nvidia.com): High-performance inference endpoints for open models.
+- [**OpenAI**](https://platform.openai.com): Official OpenAI endpoint and GPT models.
 
 ---
 
-## 4. Set Up the Database & Run Migrations
+## 4. Set Up the Database &amp; Run Migrations
 
 LightCMS uses [Drizzle ORM](https://orm.drizzle.team) to manage its PostgreSQL schema. Once your `DATABASE_URL` is set in `.env`, apply the database migrations:
 
@@ -209,6 +212,7 @@ bun run db:push
 LightCMS supports any [Chevereto](https://www.chevereto.com)-compatible image upload API. When you paste or upload images in the editor, they are uploaded directly to your CDN.
 
 Free and hosted options include:
+
 - [FreeImage.host](https://freeimage.host)
 - [ImgBB](https://imgbb.com)
 - [ImgCDN](https://imgcdn.dev)
@@ -242,7 +246,7 @@ GitHub cannot send webhooks to `localhost` directly. To receive GitHub webhook e
 3. Set the Webhook URL in your GitHub App settings to the same Smee URL.
 4. Run the GitHub bot in a separate terminal:
    ```bash
-   bun run bot:start
+    bun run bot:start
    ```
 
 ---
