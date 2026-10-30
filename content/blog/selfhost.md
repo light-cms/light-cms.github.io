@@ -11,6 +11,10 @@ keywords:
   - docker
   - vercel
   - sveltekit
+tags:
+  - self
+  - host
+  - lightcms
 isCJKLanguage: false
 headless: false
 serial: 4
