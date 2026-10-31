@@ -1,6 +1,6 @@
 ---
 title: What Is a Headless CMS? (And Why Git Based Ones Matter)
-description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git-backed CMS tools."
+description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git based CMS tools."
 serial: 26
 date: 2026-10-14T15:10:00Z
 draft: false
@@ -47,16 +47,16 @@ Headless solved WordPress's problems but introduced new ones:
 - **A second infrastructure**: the CMS becomes a SaaS dependency between your writers and your site, with outages, plan limits, and schema migrations of its own.
 - **Build-time fetching complexity**: the frontend must model content as API data rather than files.
 
-### The Git-backed Headless CMS
+### The Git based Headless CMS
 
-A Git-backed CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: as Markdown files with YAML front matter in your own repository.
+A Git based CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: as Markdown files with YAML front matter in your own repository.
 
 - No lock-in: the content is a folder of plain-text files you own.
 - No per-seat SaaS bill: self-hosted and open source options like [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/), and [Decap CMS](/comparison/netlifycms/).
 - The publishing pipeline is the same everywhere: commit → CI/CD → CDN.
 - Version history, review, and rollback, because it is Git.
 
-For the full field, see [Git-backed CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).
+For the full field, see [Git based CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).
 
 ---
 
@@ -68,12 +68,12 @@ For new projects, usually. Decoupled delivery is faster, safer, and more flexibl
 
 #### What is the best headless CMS for developers?
 
-Depends on the trade-off you want: hosted API platforms (Contentful, Sanity) for multi-channel SaaS; Git-backed CMSs (LightCMS, Pages CMS, TinaCMS) for ownership and zero lock-in.
+Depends on the trade-off you want: hosted API platforms (Contentful, Sanity) for multi-channel SaaS; Git based CMSs (LightCMS, Pages CMS, TinaCMS) for ownership and zero lock-in.
 
 #### Does a headless CMS need an API?
 
-A hosted headless CMS serves content via API. A Git-backed one serves content as static files from your CDN, often the fastest "API" there is, since it's just a cached HTTP request.
+A hosted headless CMS serves content via API. A Git based one serves content as static files from your CDN, often the fastest "API" there is, since it's just a cached HTTP request.
 
-#### Can I move from a hosted headless CMS to a Git-backed one?
+#### Can I move from a hosted headless CMS to a Git based one?
 
 Yes. Export to Markdown, commit to a repository, and point your generator at the files. The migration typically removes a monthly bill.

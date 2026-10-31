@@ -100,7 +100,7 @@ Yes, by fetching at build time or client-side. Either way the runtime dependency
 
 ### Which is better for a small blog?
 
-A free, self-hosted, Git-backed editor. You get a better writing experience with no bill and no lock-in.
+A free, self-hosted, Git based editor. You get a better writing experience with no bill and no lock-in.
 
 ### Can I move off Contentful later?
 

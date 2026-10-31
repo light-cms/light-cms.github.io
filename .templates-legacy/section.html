@@ -25,8 +25,8 @@
 <div class="section-intro">{{ section.content | safe }}</div>
 {% set_global all_pages = section.pages %}
 {% for extra_section_path in section.extra.include_sections | default(value=[]) %}
-	{% set extra_section = get_section(path=extra_section_path) %}
-	{% set_global all_pages = [...all_pages, ...extra_section.pages] %}
+{% set extra_section = get_section(path=extra_section_path) %}
+{% set_global all_pages = [...all_pages, ...extra_section.pages] %}
 {% endfor %}
 {% set all_pages = all_pages | sort(attribute="date") | reverse %}
 {% if all_pages %}

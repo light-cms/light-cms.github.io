@@ -37,7 +37,7 @@ For documentation sites in 2026, two names keep appearing: **Hugo** (the speed-o
 | Full-text search | Add a service or theme feature | Pagefind, built in |
 | Versioned docs | Manual (multiple branches/sections) | Patterns via content collections |
 | MDX support | No (shortcodes instead) | Yes |
-| i18n | Theme-dependent | Built-in scaffolding |
+| i18n | Theme-dependent | built in scaffolding |
 | Build speed | Sub-second (Go) | Fast (Vite-based) |
 | Custom UI components | Go templates | Any UI framework via islands |
 
@@ -55,7 +55,7 @@ For documentation sites in 2026, two names keep appearing: **Hugo** (the speed-o
 
 ## The CMS Angle
 
-Both read the same content currency: **Markdown with YAML front matter** in your Git repository. A Git-backed CMS like [LightCMS](/getting-started/) publishes to either stack identically: writers edit visually, the CMS commits Markdown, CI rebuilds the docs. Setup patterns are in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
+Both read the same content currency: **Markdown with YAML front matter** in your Git repository. A Git based CMS like [LightCMS](/getting-started/) publishes to either stack identically: writers edit visually, the CMS commits Markdown, CI rebuilds the docs. Setup patterns are in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
 
 ---
 
@@ -84,4 +84,4 @@ Yes, mostly. Both use Markdown with front matter. Shortcode-heavy Hugo content m
 
 ### Do documentation sites need a CMS?
 
-If more than one person writes docs (or you want PR-free publishing), a Git-backed CMS gives writers a visual editor while keeping Markdown in the repository.
+If more than one person writes docs (or you want PR-free publishing), a Git based CMS gives writers a visual editor while keeping Markdown in the repository.

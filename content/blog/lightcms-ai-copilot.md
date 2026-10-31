@@ -1,6 +1,6 @@
 ---
 title: "The LightCMS AI Copilot: Drafting Help That Stays in Your Repository"
-description: "The built-in AI copilot drafts outlines, rewrites paragraphs, and fixes grammar inside LightCMS, running on any OpenAI-compatible provider you choose."
+description: "The built in AI copilot drafts outlines, rewrites paragraphs, and fixes grammar inside LightCMS, running on any OpenAI-compatible provider you choose."
 serial: 32
 date: 2026-10-16T09:20:00Z
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Storyblok: Visual Page-Editing vs Document Writing"
-description: "Storyblok's visual, component-based editor is built for marketing pages; LightCMS is a Git-backed document editor. Where each one fits, and how they store content."
+description: "Storyblok's visual, component-based editor is built for marketing pages; LightCMS is a Git based document editor. Where each one fits, and how they store content."
 serial: 51
 date: 2026-10-16T12:10:00Z
 draft: false
@@ -30,7 +30,7 @@ LightCMS shares the "visual" ambition but applies it to a different object: the 
 
 **Storyblok** is a hosted headless CMS with a component (block) system. Content is modeled as nested stories made of blocks, edited in a visual editor with live preview, delivered through an API, and billed by plan and usage.
 
-**LightCMS** is a self-hosted, Git-backed workspace. Content is Markdown files with front matter in your repository, edited in a WYSIWYG document editor, delivered as static HTML by your build.
+**LightCMS** is a self-hosted, Git based workspace. Content is Markdown files with front matter in your repository, edited in a WYSIWYG document editor, delivered as static HTML by your build.
 
 | | LightCMS | Storyblok |
 | :--- | :--- | :--- |
@@ -112,8 +112,8 @@ Both work. Static pre-rendered output has the easier path on speed metrics; cont
 
 ### Can I self-host Storyblok?
 
-No, it is a hosted service. Self-hosting is a LightCMS advantage, and a Git-backed one.
+No, it is a hosted service. Self-hosting is a LightCMS advantage, and a Git based one.
 
 ---
 
-More: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Sanity](/comparison/lightcms-vs-sanity), [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
+More: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Sanity](/comparison/lightcms-vs-sanity), [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).

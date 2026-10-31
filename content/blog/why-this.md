@@ -1,6 +1,6 @@
 ---
 title: Why LightCMS?
-description: "The philosophy behind LightCMS: why writing should be frictionless, why Git-backed content matters, and why complexity stays away from the writer."
+description: "The philosophy behind LightCMS: why writing should be frictionless, why Git based content matters, and why complexity stays away from the writer."
 serial: 2
 date: 2026-09-18T00:41:00Z
 draft: false
@@ -73,7 +73,7 @@ LightCMS aims to make writing and publishing simple without sacrificing the bene
 - **Automated CI/CD**: Your existing build pipelines (GitHub Actions, Vercel, Cloudflare Pages) continue to build and deploy your site automatically.
 - **Frictionless Writing**: The author opens a distraction-free visual editor in their browser, writes, formats, and hits publish.
 
-You get all the auditability, rollback safety, and ownership of a Git-backed repository, while the author gets a distraction-free environment built for writing.
+You get all the auditability, rollback safety, and ownership of a Git based repository, while the author gets a distraction-free environment built for writing.
 
 ---
 

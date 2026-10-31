@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}#{{ term.name }} | {{ config.title }}{% endblock title %}
-{% block description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git-backed CMS, and Markdown publishing.{% endblock description %}
+{% block description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git based CMS, and Markdown
+publishing.{% endblock description %}
 {% block og_title %}#{{ term.name }} | {{ config.title }}{% endblock og_title %}
-{% block og_description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git-backed CMS, and Markdown publishing.{% endblock og_description %}
+{% block og_description %}Articles on the LightCMS blog tagged #{{ term.name }}: static sites, Git based CMS, and
+Markdown publishing.{% endblock og_description %}
 
 {% block content %}
 <h1 data-pagefind-meta="title">#{{ term.name }}</h1>
@@ -11,7 +13,8 @@
 <ul class="post-list">
   {% for post in term.pages %}
   <li>
-    {% if post.date %}<time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>{% else %}<span class="post-date">Page</span>{% endif %}
+    {% if post.date %}<time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y")
+      }}</time>{% else %}<span class="post-date">Page</span>{% endif %}
     <div>
       <a href="{{ post.permalink }}">{{ post.title }}</a>
       {% if post.description %}<p class="post-desc">{{ post.description }}</p>{% endif %}

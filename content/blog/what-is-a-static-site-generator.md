@@ -1,6 +1,6 @@
 ---
-title: "What Is a Static Site Generator? How SSGs Turn Content Into HTML"
-description: "A static site generator builds pages ahead of time from templates and content files, producing plain HTML that a CDN serves, with no server runtime and no database."
+title: "What Is a Static Site Generator?"
+description: "A static site generator builds pages ahead of time from templates and content files."
 serial: 46
 date: 2026-10-16T11:20:00Z
 draft: false
@@ -51,7 +51,7 @@ Some generators do this in milliseconds; some in seconds. None of it happens whi
 
 ## Why the Difference Matters
 
-A dynamic site (WordPress, Rails, most server-rendered frameworks) does work on every request: run code, query a database, assemble HTML, respond. A static site did that work already.
+A dynamic site (WordPress, Rails, most server rendered frameworks) does work on every request: run code, query a database, assemble HTML, respond. A static site did that work already.
 
 The consequences are structural:
 
@@ -67,9 +67,9 @@ There is also an environmental argument worth taking seriously: serving cached f
 
 ## What SSGs Are Good At, and Where They Struggle
 
-**Excellent for:** blogs, documentation, marketing sites, portfolios, changelogs, and any site where content changes occasionally and reading happens constantly.
+**Excellent for:** blogs, documentation, landing pages, portfolios, and any site where content changes occasionally and reading happens constantly.
 
-**Awkward for:** content that must update without a rebuild, per-user personalization, complex search over frequently changing data, or anything requiring per-request logic. Those workloads want a server; see [static vs dynamic sites](/blog/static-vs-dynamic/) for the full trade-off.
+**Awkward for:** content that must update on data change. (can be done with partial hydration)
 
 Interactivity is not off-limits. The modern pattern pre-renders everything and attaches small islands of JavaScript where needed (forms, search, dark-mode toggles), the idea behind [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and similar tools.
 
@@ -94,7 +94,7 @@ The full survey is in [best static site generators](/blog/best-static-site-gener
 
 An SSG solves *rendering*; it says nothing about *authoring*. Left alone, publishing means editing files in a code editor and pushing commits: workable for developers, a barrier for everyone else.
 
-A Git-backed CMS fills that gap: it writes Markdown and front matter into the repository through a visual editor, and the SSG does what it always did. The generator never changes; the writer's experience does. That is the whole premise behind [LightCMS](/blog/what-is-lightcms/), and the fastest way to see it is to [copy a starter template](/blog/start-with-a-lightcms-template/) with the build already configured.
+A Git backed CMS fills that gap: it writes Markdown and front matter into the repository through a visual editor, and the SSG does what it always did. The generator never changes; the writer's experience does. That is the whole premise behind [LightCMS](/blog/what-is-lightcms/), and the fastest way to see it is to [copy a starter template](/blog/start-with-a-lightcms-template/) with the build already configured.
 
 ---
 

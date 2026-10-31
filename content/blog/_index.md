@@ -1,8 +1,10 @@
 +++
 title = "Blog"
-description = "Every post: static site generators, Git-backed CMS workflows, and hosting comparisons."
+description = "Every post: static site generators, Git based CMS workflows, and hosting comparisons."
 sort_by = "date"
 
-[extra]
-include_sections = ["misc/_index.md", "misc/newsy/_index.md"]
+template = "article_list.html"
+page_template = "article.html"
 +++
+
+Every post: static site generators, Git based CMS workflows, and hosting comparisons.

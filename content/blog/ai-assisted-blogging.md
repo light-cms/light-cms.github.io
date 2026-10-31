@@ -1,6 +1,9 @@
 ---
-title: "AI Assisted Blogging: Where AI Helps in a Writing Workflow (and Where It Doesn't)"
-description: "A practical look at using AI in a blogging workflow: outlining, rewriting, transcription, and content transforms, plus the parts of writing that should stay human."
+title: "AI Assisted Blogging: Where AI Helps in a Writing Workflow (and Where It
+  Doesn't)"
+description: "A practical look at using AI in a blogging workflow: outlining,
+  rewriting, transcription, and content transforms, plus the parts of writing
+  that should stay human."
 serial: 37
 date: 2026-10-16T10:10:00Z
 draft: false
@@ -18,7 +21,6 @@ taxonomies:
     - blogging
     - workflow
 ---
-
 Two years into "AI writing tools," most blogs learned the same lesson: generating a full article and pressing publish produces content nobody finishes reading. The open question is **where** AI belongs in a writing workflow.
 
 Some tasks suit a model and some do not.
@@ -27,23 +29,23 @@ Some tasks suit a model and some do not.
 
 ## Where AI Helps
 
-### 1. Overcoming the blank page
+### 1\. Overcoming the Blank Page
 
 An outline is the most useful AI output. Ask for a structure on your topic and you get something to argue with. Disagreement is far easier to write against than emptiness. You will keep four of the eight sections, rewrite two, and delete two. That is a productive ten minutes.
 
-### 2. Rewriting what you already wrote
+### 2\. Rewriting What You Already Wrote
 
 Editing a finished paragraph is where models shine, because the meaning already exists and the task is bounded: tighten this, simplify that, make it more formal. The failure modes of generation (invented facts, hollow voice) rarely apply when the content is yours and the model is only reshaping it.
 
-### 3. Grammar and consistency passes
+### 3\. Grammar and Consistency Passes
 
-The pre-publish check humans do badly at 11 p.m. Spelling, agreement, stray commas, and inconsistent capitalization of a product name are mechanical work, and a model does mechanical work well.
+The pre-publish check humans do badly at 11 p.m. Spelling, agreement, stray commas, and inconsistent capitalization of a product name are mechanical work, and model does mechanical work well.
 
-### 4. Transcription
+### 4\. Transcription
 
 Speech-to-text is the quiet win. Dictating a first draft at 150 words per minute, then editing, outproduces typing for most people, particularly for spoken-thought content like interviews, field notes, and retrospectives. Whisper-quality transcription is good enough that [dictation](/blog/lightcms-voice-to-text/) is now a real writing mode rather than a novelty.
 
-### 5. Repetitive content transforms
+### 5\. Repetitive Content Transforms
 
 Turning one long post into a newsletter edition, a thread, a summary paragraph, or a set of metadata descriptions is tedious work with a clear input. Automate the transform; keep editorial control over what ships.
 
@@ -57,15 +59,15 @@ Models compress what they have seen; they do not check what is true. Statistics,
 
 ### Voice
 
-Voice is the residue of specific experience: the bug you personally debugged, the client call that changed your mind, the thing you tried that failed. It is the one part of a post that cannot be prompted into existence, and also the only part a reader remembers.
+Voice is the residue of specific experience: the bug you personally debugged, the client call that changed your mind, the thing you tried that failed. It is the one part of a post that cannot be prompted into existence, and the only part a reader remembers.
 
 ### Taste
 
 Knowing what to leave out, which framing is honest, and where the post should end is editorial judgment. Delegating it produces technically complete articles that say nothing.
 
-### Relationship with readers
+### Relationship with Readers
 
-People read a person or a team. A publication that outsources its thinking forfeits the only durable advantage small blogs have over large ones.
+People read a person or a team. A publication that outsources its thinking forfeits the only durable advantage small blogs have overlarge ones.
 
 ---
 
@@ -97,22 +99,22 @@ That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual ac
 
 ## Frequently Asked Questions
 
-### Will AI-written content hurt SEO?
+### Will AI Written Content Hurt SEO?
 
-Search engines evaluate helpfulness, not authorship. Mass-generated, unedited content fails because it is generic. The risk is publishing without editing, not using assistance.
+Search engines evaluate helpfulness, not authorship. Mass generated, unedited content fails because it is generic. The risk is publishing without editing, not using assistance.
 
-### Should I disclose AI use?
+### Should I Disclose AI Use?
 
 If a piece is substantially machine-drafted, disclosure is honest and increasingly expected. Using AI to fix grammar in something you wrote is not the same act.
 
-### Can AI write in my voice?
+### Can AI Write in My Voice?
 
 It can approximate style from samples you provide. It cannot invent the experiences that produce the style.
 
-### Is a transcription endpoint safe for private drafts?
+### Is a Transcription Endpoint Safe for Private Drafts?
 
 Treat any external endpoint as a third party: send what you intend to send, to a provider you have chosen. Prefer self-hosted or bring-your-own-key configurations for sensitive material.
 
 ---
 
-Further reading: [the LightCMS AI copilot](/blog/lightcms-ai-copilot/), [voice-to-text dictation](/blog/lightcms-voice-to-text/), and [how to start a blog](/blog/how-to-start-a-blog/) if you are setting the whole thing up from scratch.
+Further reading: [the Lightcms copilot](/blog/lightcms-ai-copilot/), [voice-to-text dictation](/blog/lightcms-voice-to-text/), and [how to start a blog](/blog/how-to-start-a-blog/) if you are setting the whole thing up from scratch.

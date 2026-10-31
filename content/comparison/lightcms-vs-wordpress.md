@@ -72,7 +72,7 @@ WordPress's block editor is good, and LightCMS's TipTap-based editor is built on
 
 ## Migration
 
-Export your posts (WordPress has built-in export, or tooling like `exitwp` converts to Markdown), map categories and tags to front matter, and move images into your asset directory. For a typical blog the content migration is an afternoon; the design work is the real project, since you are choosing a static theme rather than keeping a PHP one.
+Export your posts (WordPress has built in export, or tooling like `exitwp` converts to Markdown), map categories and tags to front matter, and move images into your asset directory. For a typical blog the content migration is an afternoon; the design work is the real project, since you are choosing a static theme rather than keeping a PHP one.
 
 ---
 
@@ -103,7 +103,7 @@ Static output removes the attack surface rather than hardening it: no logins, no
 
 ### Can I keep my existing WordPress content?
 
-Yes. Export to Markdown and commit it; the archive comes with you. See [Git-backed vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+Yes. Export to Markdown and commit it; the archive comes with you. See [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
 
 ---
 

@@ -46,7 +46,7 @@ Jekyll runs natively on GitHub Pages: push Markdown, and it builds with zero con
 
 ## Content and CMS Compatibility
 
-Both generators consume the standard content currency of the modern web: **Markdown files with YAML front matter**. Any Git-backed CMS ([LightCMS](/getting-started/), Decap CMS, Pages CMS) commits equally well to either. Neither has an advantage here.
+Both generators consume the standard content currency of the modern web: **Markdown files with YAML front matter**. Any Git based CMS ([LightCMS](/getting-started/), Decap CMS, Pages CMS) commits equally well to either. Neither has an advantage here.
 
 For the broader picture, see [best static site generators](/blog/best-static-site-generators/) and the detailed [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) matchup.
 
@@ -57,7 +57,7 @@ For the broader picture, see [best static site generators](/blog/best-static-sit
 - **Choose Hugo** for speed, large sites, and active development. It is the default recommendation for new projects in 2026.
 - **Choose Jekyll** if you already have a Jekyll site that works, you prefer Liquid templates, or you want the classic GitHub Pages zero-config experience.
 
-Either way, pair it with a static host ([Cloudflare Pages vs GitHub Pages](/blog/cloudflare-pages-vs-github-pages/)) and a Git-backed CMS for editing, and you have the full modern publishing stack.
+Either way, pair it with a static host ([Cloudflare Pages vs GitHub Pages](/blog/cloudflare-pages-vs-github-pages/)) and a Git based CMS for editing, and you have the full modern publishing stack.
 
 ---
 
@@ -75,6 +75,6 @@ Only if build times or theme maintenance bother you. A working Jekyll site is no
 
 Yes, but development is slower than Hugo's and Astro's. New projects usually start elsewhere.
 
-### Do Both Work with a Git-Backed CMS?
+### Do Both Work with a Git based CMS?
 
-Yes. Both read Markdown with YAML front matter from your repository, so any Git-backed CMS publishes to either.
+Yes. Both read Markdown with YAML front matter from your repository, so any Git based CMS publishes to either.

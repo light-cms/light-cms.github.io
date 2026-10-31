@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Strapi: Open Source, Two Architectures"
-description: "Strapi is an open-source, database-backed headless CMS; LightCMS is an open-source, Git-backed writing workspace. Same license philosophy, very different storage."
+description: "Strapi is an open-source, database-backed headless CMS; LightCMS is an open-source, Git based writing workspace. Same license philosophy, very different storage."
 serial: 50
 date: 2026-10-16T12:00:00Z
 draft: false
@@ -70,7 +70,7 @@ Ask what your content *is*:
 - **Documents** (posts, docs, release notes, pages) → LightCMS's file model is simpler, cheaper, and more durable.
 - **Records with relationships** (products, courses, catalog entries, anything an app queries) → Strapi's database is the correct tool, and no amount of Markdown elegance changes that.
 
-A common hybrid: publications run Git-backed, product surfaces run on an API-backed CMS. The two do not have to compete for the same project.
+A common hybrid: publications run Git based, product surfaces run on an API-backed CMS. The two do not have to compete for the same project.
 
 ---
 
@@ -111,4 +111,4 @@ Yes. That is a shared strength and a good reason either beats a hosted vendor fo
 
 ---
 
-More: [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [Git-backed CMS explained](/blog/git-based-cms-explained/).
+More: [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [Git based CMS explained](/blog/git-based-cms-explained/).

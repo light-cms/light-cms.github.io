@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Ghost: Publishing Platforms Compared"
-description: "Ghost is a Node.js publishing platform with memberships and email built in; LightCMS is a Git-backed editor for static sites. Compare storage, cost, and writing workflow."
+description: "Ghost is a Node.js publishing platform with memberships and email built in; LightCMS is a Git based editor for static sites. Compare storage, cost, and writing workflow."
 serial: 54
 date: 2026-10-16T12:40:00Z
 draft: false

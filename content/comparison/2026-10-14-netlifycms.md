@@ -19,7 +19,7 @@ taxonomies:
     - git
 ---
 
-[Netlify CMS](https://decapcms.org) still powers many Jamstack sites, and since its rename to **Decap CMS** many teams have taken the opportunity to weigh alternatives. The reasons vary: an aging editing UI, YAML-first configuration, or editors who want a real writing experience. But the Git-backed CMS category is stronger than it has ever been. Here are the best Netlify CMS alternatives in 2026.
+[Netlify CMS](https://decapcms.org) still powers many Jamstack sites, and since its rename to **Decap CMS** many teams have taken the opportunity to weigh alternatives. The reasons vary: an aging editing UI, YAML-first configuration, or editors who want a real writing experience. But the Git based CMS category is stronger than it has ever been. Here are the best Netlify CMS alternatives in 2026.
 
 ---
 
@@ -44,13 +44,13 @@ Every alternative below keeps the core promise (**content as Markdown in your ow
 
 ## 1. LightCMS
 
-[LightCMS](/getting-started/) is a self-hosted, Apache 2.0 licensed Git-backed workspace built around a TipTap WYSIWYG editor: math, syntax-highlighted code, tables, task lists, and drag-and-drop media, all serialized to clean Markdown. What sets it apart from Decap is everything bundled around the editor: an AI copilot for drafting, Whisper voice-to-text transcription, and newsletter dispatch through [Newsy](/blog/newsletter-email-automation/), which uses GitHub itself as the backend with no email service involved. You can [self-host it](/blog/selfhost/) on any Node.js host in minutes.
+[LightCMS](/getting-started/) is a self-hosted, Apache 2.0 licensed Git based workspace built around a TipTap WYSIWYG editor: math, syntax-highlighted code, tables, task lists, and drag-and-drop media, all serialized to clean Markdown. What sets it apart from Decap is everything bundled around the editor: an AI copilot for drafting, Whisper voice-to-text transcription, and newsletter dispatch through [Newsy](/blog/newsletter-email-automation/), which uses GitHub itself as the backend with no email service involved. You can [self-host it](/blog/selfhost/) on any Node.js host in minutes.
 
 **Choose it if** you want the "WordPress feeling" without a database: one-click publishing, rich formatting, and extras Decap never shipped.
 
 ## 2. Pages CMS
 
-[Pages CMS](/comparison/pagescms/) offers a polished, form-based dashboard over your GitHub repository, hosted at app.pagescms.org or self-hosted. It is MIT licensed and completely free, with built-in media management and far less configuration than Decap's YAML-first setup.
+[Pages CMS](/comparison/pagescms/) offers a polished, form-based dashboard over your GitHub repository, hosted at app.pagescms.org or self-hosted. It is MIT licensed and completely free, with built in media management and far less configuration than Decap's YAML-first setup.
 
 **Choose it if** your priority is the simplest possible editor for non-technical teammates.
 
@@ -89,7 +89,7 @@ A free, open source admin UI that runs entirely in the browser and commits throu
 - Want the lightest possible setup? **Sveltia CMS**
 - Want AI-agent-safe publishing? **GitCMS**
 
-For the longer treatment of each, see [Git CMS platforms compared](/comparison/top-git-cms/) and [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+For the longer treatment of each, see [Git CMS platforms compared](/comparison/top-git-cms/) and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
 
 ---
 

@@ -1,1 +1,27 @@
-{"taxonomy":{"tags":["about","blogging","cloudflare","free newsletter","github","golang","lightcms","modern solution","netlify","newsletter","newsy","opensource","static site","svelte","sveltekit","vercel","video","webassembly","youtube","zola"],"categories":[]}}
+{
+  "taxonomy": {
+    "categories": [],
+    "tags": [
+      "about",
+      "blogging",
+      "cloudflare",
+      "free newsletter",
+      "github",
+      "golang",
+      "lightcms",
+      "modern solution",
+      "netlify",
+      "newsletter",
+      "newsy",
+      "opensource",
+      "static site",
+      "svelte",
+      "sveltekit",
+      "vercel",
+      "video",
+      "webassembly",
+      "youtube",
+      "zola"
+    ]
+  }
+}

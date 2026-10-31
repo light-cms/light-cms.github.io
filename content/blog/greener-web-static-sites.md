@@ -23,7 +23,7 @@ Every page view costs energy. Somewhere a server wakes, a cache misses, a databa
 
 ---
 
-### Why Static Sites Emit Less Carbon
+### Why Static Sites Emit less Carbon
 
 A dynamic site does work on every request: execute code, query a database, assemble HTML. That work happens on servers that must stay powered around the clock, even when nobody is visiting.
 
@@ -81,7 +81,7 @@ Estimates vary by method, but a typical page view emits anywhere from a fraction
 
 Yes. Data-center energy is the dominant factor in a site's footprint; hosting on renewable-powered infrastructure reduces it substantially.
 
-### Is a static blog eco-friendly?
+### Is a static blog eco friendly?
 
 Among the greenest options available: cached files served from an edge network, no always-on database, and content that remains readable and rebuildable for decades.
 

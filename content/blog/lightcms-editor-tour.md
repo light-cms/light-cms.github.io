@@ -42,9 +42,9 @@ You get the immediacy of a word processor with the durability of plain text. The
 ## What You Can Drop Into a Post
 
 ### Structured text
-Headings, blockquotes, ordered and unordered lists, horizontal rules, and task lists: the full skeleton of a technical article, all keyboard-reachable.
+Headings, block quotes, ordered and unordered lists, horizontal rules, and task lists: the full skeleton of a technical article, all keyboard-reachable.
 
-### Code blocks with highlighting
+### Code Blocks with Highlighting
 Insert a fenced block, pick the language, and the editor keeps the fence and language tag intact. Your published post renders with the same syntax highlighting your SSG already applies.
 
 ### Math with KaTeX
@@ -97,15 +97,15 @@ The LightCMS editor leaves the developer's workflow untouched and removes those 
 
 No. It serializes to standard Markdown with YAML front matter, the same output a careful human would write. Open any published post in VS Code and it reads normally.
 
-### Can I still edit the files by hand?
+### Can I Still Edit the Files by Hand?
 
 Always. LightCMS commits to your repository like anyone else would. Hand edits, editor edits, and AI edits all land as the same `.md` files.
 
-### Does it support Markdown shortcodes?
+### Does It Support Markdown Short-Codes?
 
 Your SSG's shortcodes live in the content as plain text and are passed through untouched; the editor does not attempt to interpret or reformat them.
 
-### What about images?
+### What About Images?
 
 Drag and drop. LightCMS places the asset and writes the reference so the path matches what your build expects.
 

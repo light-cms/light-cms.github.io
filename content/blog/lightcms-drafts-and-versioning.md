@@ -19,7 +19,7 @@ taxonomies:
     - collaboration
 ---
 
-Version control is the best argument for a Git-backed CMS, and the one most badly explained. Writers do not want to hear about commits, fast-forwards, or trees. They want to know three things: **can I save this without publishing it, see what changed, and undo it if I got it wrong?**
+Version control is the best argument for a Git based CMS, and the one most badly explained. Writers do not want to hear about commits, fast-forwards, or trees. They want to know three things: **can I save this without publishing it, see what changed, and undo it if I got it wrong?**
 
 Git answers all three without a writer learning Git.
 
@@ -67,7 +67,7 @@ Turn on branch protection and "publish" means "submit for review." Turn it off a
 
 Every CMS should answer one question fast: **something wrong is live, so how do I fix it?**
 
-With Git-backed content the answer is a revert:
+With Git based content the answer is a revert:
 
 1. Open the file's history in GitHub (or LightCMS).
 2. Choose the last good version.

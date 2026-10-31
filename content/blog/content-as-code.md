@@ -60,7 +60,7 @@ Every clone is a complete copy. Moving platforms is a `git clone` away from succ
 
 The honest list, because this is not free:
 
-- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git-backed CMS tools fill.
+- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git based CMS tools fill.
 - **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
 - **Structure is limited.** Files do not join. When content becomes relational, a database earns its complexity.
 - **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
@@ -99,15 +99,15 @@ Content as code wins on time. Databases need their schema, their server version,
 
 A directory of Markdown files needs a text editor, and it will still open in one in twenty years, regardless of what happens to any tool in the chain. For content meant to outlive the platform it was written on, that is risk management rather than nostalgia.
 
-The same premise runs through every Git-backed CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
+The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
 
 #### Frequently Asked Questions
 
 ## Frequently Asked Questions
 
-### Is content as code the same as a Git-backed CMS?
+### Is content as code the same as a Git based CMS?
 
-It is the philosophy; a Git-backed CMS is one implementation. You can practice content as code with nothing but an editor, and a Git-backed CMS gives non-developers a way in.
+It is the philosophy; a Git based CMS is one implementation. You can practice content as code with nothing but an editor, and a Git based CMS gives non-developers a way in.
 
 ### Do writers need to learn Git?
 
@@ -127,4 +127,4 @@ Yes. Start with one content directory and one pipeline. The format does not requ
 
 ---
 
-Related: [what is a Git-backed CMS?](/blog/git-based-cms-explained/), [front matter explained](/blog/what-is-front-matter/), and [version control for writers](/blog/lightcms-drafts-and-versioning/).
+Related: [what is a Git based CMS?](/blog/git-based-cms-explained/), [front matter explained](/blog/what-is-front-matter/), and [version control for writers](/blog/lightcms-drafts-and-versioning/).

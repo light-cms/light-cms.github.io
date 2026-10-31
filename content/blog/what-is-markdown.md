@@ -1,6 +1,6 @@
 ---
 title: What Is Markdown? The Plain-Text Format Powering the Web
-description: "Markdown explained: what it is, why it has lasted, the syntax you need, and how Git-backed CMS tools turn plain text into a publishing format."
+description: "Markdown explained: what it is, why it has lasted, the syntax you need, and how Git based CMS tools turn plain text into a publishing format."
 serial: 25
 date: 2026-10-14T15:00:00Z
 draft: false
@@ -25,7 +25,7 @@ Markdown is plain text with a small set of formatting symbols. John Gruber creat
 ## Why Markdown Won
 
 - **It does not rot**. A `.md` file from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
-- **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git-backed CMS stores content as Markdown.
+- **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git based CMS stores content as Markdown.
 - **It is easy to learn**. The core syntax takes five minutes.
 - **It separates content from presentation**. Write structure; let the theme handle looks.
 - **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
@@ -77,9 +77,9 @@ This YAML front matter is where the CMS lives: titles, dates, drafts, and taxono
 
 ## Writing Markdown Without the Syntax
 
-**You do not have to write Markdown by hand anymore.** Modern Git-backed editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
+**You do not have to write Markdown by hand anymore.** Modern Git based editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
 
-That combination (visual editing on top of Markdown in Git) is what powers the whole [Git-backed CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
+That combination (visual editing on top of Markdown in Git) is what powers the whole [Git based CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
 
 ---
 
@@ -95,7 +95,7 @@ Markdown is the authoring format (plain text, human-writable); HTML is the rende
 
 ### Do I need to learn Markdown to blog?
 
-Not with a visual Git-backed CMS: you write normally, and the tool produces Markdown for you. Learning the basics still helps for quick edits.
+Not with a visual Git based CMS: you write normally, and the tool produces Markdown for you. Learning the basics still helps for quick edits.
 
 ### Where is Markdown stored?
 

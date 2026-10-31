@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="msvalidate.01" content="C348576BB92261CC55029F04F308DB94" />
-  <meta name="robots" content="{% block robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock robots %}" />
+  <meta name="robots"
+    content="{% block robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock robots %}" />
   <meta name="author" content="LightCMS" />
 
   <meta name="theme-color" content="#fdfcfa" media="(prefers-color-scheme: light)" />
@@ -12,26 +14,30 @@
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
   <link rel="canonical" href="{{ config.base_url }}{{ current_path }}" />
-  <link rel="icon" href="{{ get_url(path="favicon.ico") }}" />
-  <link rel="apple-touch-icon" href="{{ get_url(path="icon.png") }}" />
-  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml") }}" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ get_url(path="sitemap.xml") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="pagefind/pagefind-component-ui.css") }}" />
-  <script src="{{ get_url(path="pagefind/pagefind-component-ui.js") }}" type="module"></script>
+  <link rel="icon" href="{{ get_url(path=" favicon.ico") }}" />
+  <link rel="apple-touch-icon" href="{{ get_url(path=" icon.png") }}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path=" atom.xml") }}" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ get_url(path=" sitemap.xml") }}" />
+  <link rel="stylesheet" href="{{ get_url(path=" css/style.css") }}" />
+  <link rel="stylesheet" href="{{ get_url(path=" pagefind/pagefind-component-ui.css") }}" />
+  <script src="{{ get_url(path=" pagefind/pagefind-component-ui.js") }}" type="module"></script>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NQ3CNDNM');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NQ3CNDNM');</script>
   <!-- End Google Tag Manager -->
   <meta property="og:site_name" content="{{ config.title }}" />
   <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
   <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}" />
-  <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}" />
+  <meta property="og:description"
+    content="{% block og_description %}{{ config.description }}{% endblock og_description %}" />
   <meta property="og:url" content="{{ config.base_url }}{{ current_path }}" />
-  <meta property="og:image" content="{% block og_image %}{{ get_url(path="og-image.webp") }}{% endblock og_image %}" />
+  <meta property="og:image" content="{% block og_image %}{{ get_url(path=" og-image.webp") }}{% endblock og_image %}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="675" />
   <meta property="og:image:type" content="image/webp" />
@@ -41,8 +47,10 @@
   <meta name="twitter:site" content="@{{ config.extra.twitter_username }}" />
   <meta name="twitter:creator" content="@{{ config.extra.twitter_username }}" />
   <meta name="twitter:title" content="{% block tw_title %}{{ config.title }}{% endblock tw_title %}" />
-  <meta name="twitter:description" content="{% block tw_description %}{{ config.description }}{% endblock tw_description %}" />
-  <meta name="twitter:image" content="{% block tw_image %}{{ get_url(path="og-image.webp") }}{% endblock tw_image %}" />
+  <meta name="twitter:description"
+    content="{% block tw_description %}{{ config.description }}{% endblock tw_description %}" />
+  <meta name="twitter:image" content="{% block tw_image %}{{ get_url(path=" og-image.webp") }}{% endblock tw_image
+    %}" />
 
   <script type="application/ld+json">
   {% block jsonld %}{
@@ -61,34 +69,38 @@
   }{% endblock jsonld %}
   </script>
   <script type="text/javascript">
-      ((c,l,a,r,i,t,y)=> {
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "z03gl17xi6");
+    ((c, l, a, r, i, t, y) => {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "z03gl17xi6");
   </script>
   {% block jsonld_extra %}{% endblock jsonld_extra %}
   {% block head_extra %}{% endblock head_extra %}
 </head>
+
 <body>
   <header class="site-header" data-pagefind-ignore>
     <nav class="nav">
-      <a class="brand" href="{{ get_url(path="@/_index.md") }}">
-        <img class="logo-mark" src="{{ get_url(path="icon.png") }}" width="22" height="22" alt="" aria-hidden="true" />
+      <a class="brand" href="{{ get_url(path=" @/_index.md") }}">
+        <img class="logo-mark" src="{{ get_url(path=" icon.png") }}" width="22" height="22" alt="" aria-hidden="true" />
         <span>{{ config.title }}</span>
       </a>
       <span class="links">
-        <a href="{{ get_url(path="@/_index.md") }}" {% if current_path == "/" %}aria-current="page"{% endif %}>Home</a>
-        <a href="{{ get_url(path="@/blog/_index.md") }}" {% if "/blog" in current_path %}aria-current="page"{% endif %}>Blog</a>
-        <a href="{{ get_url(path="@/comparison/_index.md") }}" {% if "/comparison" in current_path %}aria-current="page"{% endif %}>Comparisons</a>
-        <a href="{{ get_url(path="@/about.md") }}" {% if current_path == "/about/" %}aria-current="page"{% endif %}>About</a>
+        <a href="{{ get_url(path=" @/_index.md") }}" {% if current_path=="/" %}aria-current="page" {% endif %}>Home</a>
+        <a href="{{ get_url(path=" @/blog/_index.md") }}" {% if "/blog" in current_path %}aria-current="page" {% endif
+          %}>Blog</a>
+        <a href="{{ get_url(path=" @/comparison/_index.md") }}" {% if "/comparison" in current_path
+          %}aria-current="page" {% endif %}>Comparisons</a>
+        <a href="{{ get_url(path=" @/about.md") }}" {% if current_path=="/about/" %}aria-current="page" {% endif
+          %}>About</a>
         <pagefind-modal-trigger placeholder="Search..."></pagefind-modal-trigger>
         <a class="nav-cta" href="https://www.lightcms.me/" rel="noopener">Get LightCMS</a>
       </span>
     </nav>
   </header>
 
-  <pagefind-config bundle-path="{{ get_url(path="pagefind") }}/"></pagefind-config>
+  <pagefind-config bundle-path="{{ get_url(path=" pagefind") }}/"></pagefind-config>
   <pagefind-modal reset-on-close="true"></pagefind-modal>
 
   <main class="container" data-pagefind-body>
@@ -96,9 +108,14 @@
   </main>
 
   <footer class="site-footer" data-pagefind-ignore>
-    <p>Written with <a href="https://www.lightcms.me/">LightCMS</a>, a Git-backed CMS for static sites. <a href="https://www.lightcms.me/docs">Docs</a> · <a href="{{ config.extra.source_repo }}">Source code</a> · <a href="https://github.com/light-cms">GitHub</a> · <a href="https://x.com/{{ config.extra.twitter_username }}" rel="me noopener">X</a> · <a href="https://bsky.app/profile/{{ config.extra.bluesky_username }}" rel="me noopener">Bluesky</a> · <a href="{{ get_url(path="atom.xml") }}">RSS</a></p>
+    <p>Written with <a href="https://www.lightcms.me/">LightCMS</a>, a Git based CMS for static sites. <a
+        href="https://www.lightcms.me/docs">Docs</a> · <a href="{{ config.extra.source_repo }}">Source code</a> · <a
+        href="https://github.com/light-cms">GitHub</a> · <a href="https://x.com/{{ config.extra.twitter_username }}"
+        rel="me noopener">X</a> · <a href="https://bsky.app/profile/{{ config.extra.bluesky_username }}"
+        rel="me noopener">Bluesky</a> · <a href="{{ get_url(path=" atom.xml") }}">RSS</a></p>
     <p>Built with <a href="https://www.getzola.org/">Zola</a></p>
   </footer>
 
 </body>
+
 </html>

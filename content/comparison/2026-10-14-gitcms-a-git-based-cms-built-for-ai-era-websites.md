@@ -41,7 +41,7 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 
 - Designed around **AI-agent workflows**, a problem the older Git CMS tools do not address.
 - Richer editing experience and editorial structure compared with form-only tools.
-- Keeps the core Git-backed promise: your repository remains the source of truth.
+- Keeps the core Git based promise: your repository remains the source of truth.
 
 ## Limitations
 
@@ -59,7 +59,7 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 | License | Free tier + paid plans | Free (MIT) | Free (Apache 2.0) |
 
 - [Pages CMS vs alternatives](/comparison/pagescms/) covers the simple end of the category.
-- [Top Git-backed CMS platforms](/comparison/top-git-cms/) is the full survey.
+- [Top Git based CMS platforms](/comparison/top-git-cms/) is the full survey.
 - [LightCMS](/getting-started/) bundles AI drafting and [newsletter distribution](/blog/newsletter-email-automation/) for solo publishers and teams.
 
 ---
@@ -68,7 +68,7 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 
 ### What Is GitCMS?
 
-A Git-backed CMS positioned for code-first and AI-built websites: it gives teams, clients, and AI agents one reviewable place to edit and publish changes that stay in your repository.
+A Git based CMS positioned for code-first and AI-built websites: it gives teams, clients, and AI agents one reviewable place to edit and publish changes that stay in your repository.
 
 ### Is GitCMS Free?
 
@@ -76,7 +76,7 @@ There is a free tier for a single site, with paid plans for more. Fully free, op
 
 ### How Is GitCMS Different from Pages CMS?
 
-Pages CMS is a minimal, free form editor over GitHub. GitCMS adds a richer editor, editorial workflows, and AI-agent governance on the same Git-backed model.
+Pages CMS is a minimal, free form editor over GitHub. GitCMS adds a richer editor, editorial workflows, and AI-agent governance on the same Git based model.
 
 ### Do I Need AI Agents to Use GitCMS?
 

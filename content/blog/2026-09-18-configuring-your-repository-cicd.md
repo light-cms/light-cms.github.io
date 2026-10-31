@@ -79,7 +79,7 @@ To allow LightCMS to read your files and commit newly written articles:
 
 Every time you hit **Publish** or **Save** in LightCMS, the app commits your updated Markdown file directly to your specified Git branch. To turn those commits into live website updates, configure a GitHub Actions workflow.
 
-### Example A: Astro Deployment (GitHub Pages / Static Host)
+### Example a: Astro Deployment (GitHub Pages / Static Host)
 
 Create `.github/workflows/deploy.yml` in your repository:
 
@@ -153,7 +153,7 @@ Several reliable platforms offer generous free tiers for hosting static sites:
 - **[Vercel](https://vercel.com)**: Zero-config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
 - **[Cloudflare Pages](https://pages.cloudflare.com)**: Global edge network in 300+ cities, unlimited bandwidth on the free tier.
 - **[Netlify](https://www.netlify.com)**: Pioneer of Jamstack hosting with rich form and asset handling.
-- **[GitHub Pages](https://pages.github.com)**: Direct built-in hosting for open-source and personal repositories.
+- **[GitHub Pages](https://pages.github.com)**: Direct built in hosting for open source and personal repositories.
 - **[Deno Deploy](https://deno.com/deploy)**: Lightweight edge hosting for JavaScript and static web assets.
 
 ---

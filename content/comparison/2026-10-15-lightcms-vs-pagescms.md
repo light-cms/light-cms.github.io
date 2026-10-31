@@ -29,7 +29,7 @@ LightCMS starts from the same goal and pushes further into the writing itself. T
 
 | | LightCMS | Pages CMS |
 | :--- | :--- | :--- |
-| **Model** | Self-hosted writing workspace | Git-backed dashboard |
+| **Model** | Self-hosted writing workspace | Git based dashboard |
 | **Content store** | Your GitHub repository | Your GitHub repository |
 | **Editing** | Full TipTap WYSIWYG document editor | Form-based fields per content type |
 | **Front matter** | Managed as a validated form | Defined in a YAML config in the repo |
@@ -114,4 +114,4 @@ No. Both produce static files that your SSG builds; performance is decided by yo
 
 ---
 
-Related: [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic), and [top Git-backed CMS platforms](/comparison/top-git-cms).
+Related: [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic), and [top Git based CMS platforms](/comparison/top-git-cms).

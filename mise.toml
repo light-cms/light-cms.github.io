@@ -2,6 +2,9 @@
 zola = "latest"
 bun = "latest"
 biome = "latest"
+"npm:pagefind" = "latest"
+
+
 [tasks]
 start = "zola serve"
-build = "zola build"
+build = "zola build && bunx -y pagefind --site public"

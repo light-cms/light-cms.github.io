@@ -20,7 +20,7 @@ taxonomies:
     - headless
 ---
 
-This comparison starts with an admission: **[Payload CMS](https://payloadcms.com) and LightCMS are not competing for the same job.** Payload is a serious, TypeScript-native headless CMS with a database, an admin panel, access control, and API endpoints. LightCMS is a Git-backed writing workspace that commits Markdown to your repository.
+This comparison starts with an admission: **[Payload CMS](https://payloadcms.com) and LightCMS are not competing for the same job.** Payload is a serious, TypeScript-native headless CMS with a database, an admin panel, access control, and API endpoints. LightCMS is a Git based writing workspace that commits Markdown to your repository.
 
 Knowing which architecture your project actually needs is more useful than a feature matrix, so that is where this starts.
 
@@ -113,4 +113,4 @@ Yes, via Git. Drafts are `draft: true` in front matter, history is commit histor
 
 ---
 
-More comparisons: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [headless CMS explained](/blog/headless-cms-explained/), and [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+More comparisons: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [headless CMS explained](/blog/headless-cms-explained/), and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).

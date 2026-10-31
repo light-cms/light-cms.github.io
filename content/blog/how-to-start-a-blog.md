@@ -1,6 +1,6 @@
 ---
 title: "How to Start a Blog in 2026: The Markdown & Static Site Guide"
-description: How to start a fast, cheap, durable blog with Markdown, a static site generator, and a Git-backed CMS, with no hosting bills and no lock-in.
+description: How to start a fast, cheap, durable blog with Markdown, a static site generator, and a Git based CMS, with no hosting bills and no lock-in.
 serial: 12
 date: 2026-10-14T12:50:00Z
 draft: false
@@ -19,7 +19,7 @@ taxonomies:
     - getting-started
 ---
 
-Starting a blog in 2026 is considerably easier and cheaper than it used to be. You do not need WordPress hosting, a page builder, or a monthly platform fee. The modern recipe is **Markdown files, a static site generator, free hosting, and a Git-backed CMS for editing**. Total cost: zero dollars. Every page is served from CDN cache, so it loads in milliseconds.
+Starting a blog in 2026 is considerably easier and cheaper than it used to be. You do not need WordPress hosting, a page builder, or a monthly platform fee. The modern recipe is **Markdown files, a static site generator, free hosting, and a Git based CMS for editing**. Total cost: zero dollars. Every page is served from CDN cache, so it loads in milliseconds.
 
 ---
 
@@ -49,7 +49,7 @@ tags:
 Hello world. This is my first post.
 ```
 
-Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git-backed CMS bridges that gap: you write visually and it produces the Markdown for you.
+Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git based CMS bridges that gap: you write visually and it produces the Markdown for you.
 
 ## Step 3: Deploy for Free
 
@@ -65,7 +65,7 @@ Every push rebuilds and republishes your blog in under a minute. Compare your op
 
 This is the step most guides skip. If publishing requires opening a terminal, you will stop writing.
 
-A **Git-backed CMS** like [LightCMS](/getting-started/) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git-backed CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
+A **Git based CMS** like [LightCMS](/getting-started/) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
 
 ## Step 5: Grow It
 
@@ -84,7 +84,7 @@ The work that compounds:
 | :--- | :--- |
 | Static site generator | Free (open source) |
 | Hosting (Cloudflare Pages, GitHub Pages) | Free tier |
-| Git-backed CMS (LightCMS, self-hosted) | Free (Apache 2.0) |
+| Git based CMS (LightCMS, self-hosted) | Free (Apache 2.0) |
 | Custom domain | ~$10–15 / year (optional) |
 
 You can run a serious publication for the price of a domain name.

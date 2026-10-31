@@ -47,4 +47,4 @@ This site's content is itself managed with [LightCMS](https://www.lightcms.me/).
 
 ## Get in Touch
 
-Have a correction, a comparison we have not written, or a workflow you would like covered? Open an issue or send  a pr, we are very open for contributions.
+Have a correction, a comparison we have not written, or a workflow you would like covered? Open an issue or send a pr, we are very open for contributions.

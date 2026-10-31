@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Drupal: Enterprise Framework vs a Content Tool"
-description: "Drupal is a full-featured PHP CMS for complex, governed sites; LightCMS is a Git-backed editor that produces static output. Where each one belongs."
+description: "Drupal is a full-featured PHP CMS for complex, governed sites; LightCMS is a Git based editor that produces static output. Where each one belongs."
 serial: 55
 date: 2026-10-16T12:50:00Z
 draft: false
@@ -66,7 +66,7 @@ Comparing it to LightCMS is almost unfair: they sit at opposite ends of the comp
 
 Drupal fits organizations with regulated content, complex permissions, multilingual requirements, and integration-heavy architectures. If you are a small team publishing articles, none of that applies, and Drupal's real cost is the expertise it demands for the life of the site, since the license is free.
 
-If you are in that smaller group and want the ownership benefits, the file-based world gives you the same durability with none of the operations: [what is a Git-backed CMS?](/blog/git-based-cms-explained/) explains the model.
+If you are in that smaller group and want the ownership benefits, the file-based world gives you the same durability with none of the operations: [what is a Git based CMS?](/blog/git-based-cms-explained/) explains the model.
 
 ---
 

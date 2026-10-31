@@ -99,7 +99,7 @@ Enough conventions exist that consistency is worth more than cleverness:
 
 Front matter is the part of Markdown that non-technical writers should not have to see. It is syntax with sharp edges: indentation matters, quotes matter, date formats matter.
 
-A Git-backed CMS handles it as a **form** (fill in the title, pick the date, click tags) and serializes valid YAML on save. Writers never think about the fence; the repository still receives what the generator expects. That single feature eliminates one of the most common failure modes in static-site publishing.
+A Git based CMS handles it as a **form** (fill in the title, pick the date, click tags) and serializes valid YAML on save. Writers never think about the fence; the repository still receives what the generator expects. That single feature eliminates one of the most common failure modes in static-site publishing.
 
 LightCMS, for example, validates front matter as you type and writes it on commit (see [the editor tour](/blog/lightcms-editor-tour/)), so metadata stays correct no matter who is publishing.
 

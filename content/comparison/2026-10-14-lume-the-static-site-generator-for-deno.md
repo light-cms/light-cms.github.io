@@ -42,7 +42,7 @@ That last point matters: a Lume site can mix Markdown articles with JSX componen
 ## Ecosystem
 
 - **Plugins** cover everything from syntax highlighting (Prism, Shiki) to image transformation, sitemaps, and feeds: the Eleventy-style "assemble your own pipeline" model, with Deno-native ergonomics.
-- **Deno toolchain**: built-in TypeScript, secure-by-default execution, and reproducible environments without a package manager ritual.
+- **Deno toolchain**: built in TypeScript, secure-by-default execution, and reproducible environments without a package manager ritual.
 - **Backed by Deno**: used in official tutorials, it is the de-facto answer to "what do I use to make a static site on Deno?"
 
 ## Where It Fits
@@ -51,7 +51,7 @@ Lume occupies the same niche as [Eleventy](/blog/eleventy-vs-astro/): minimal ou
 
 ## Content and CMS Workflow
 
-Lume reads Markdown with front matter from your repository like every generator in this category. Pair it with a Git-backed CMS ([LightCMS](/getting-started/) or the [wider field](/comparison/top-git-cms/)) and writers publish visually while Lume compiles the commits into HTML. Deployment targets are the usual free static hosts ([comparison](/blog/cloudflare-pages-vs-github-pages/)).
+Lume reads Markdown with front matter from your repository like every generator in this category. Pair it with a Git based CMS ([LightCMS](/getting-started/) or the [wider field](/comparison/top-git-cms/)) and writers publish visually while Lume compiles the commits into HTML. Deployment targets are the usual free static hosts ([comparison](/blog/cloudflare-pages-vs-github-pages/)).
 
 ---
 
@@ -59,7 +59,7 @@ Lume reads Markdown with front matter from your repository like every generator 
 
 ### Is Lume a CMS or a static site generator?
 
-A static site generator. For the editing layer, pair it with a Git-backed CMS that commits Markdown into its source directory.
+A static site generator. For the editing layer, pair it with a Git based CMS that commits Markdown into its source directory.
 
 ### What is the difference between Lume and Eleventy?
 

@@ -1,13 +1,13 @@
 ---
-title: "What Is LightCMS? The Git-Backed CMS for Static Sites"
-description: "LightCMS is a self-hosted, Git-backed CMS with a visual WYSIWYG editor. It commits plain Markdown to your repository and lets your existing CI/CD deploy it."
+title: "What Is LightCMS? The Git based CMS for Static Sites"
+description: "LightCMS is a self-hosted, Git based CMS with a visual WYSIWYG editor. It commits plain Markdown to your repository and lets your existing CI/CD deploy it."
 serial: 30
 date: 2026-10-16T09:00:00Z
 draft: false
 keywords:
   - what is lightcms
   - lightcms
-  - git-backed cms
+  - Git based cms
   - markdown cms
   - visual editor for markdown
 preview: /og-image.webp
@@ -19,23 +19,19 @@ taxonomies:
     - markdown
 ---
 
-**LightCMS** is a content management system that keeps your content where a developer wants it (plain Markdown files in your own GitHub repository) while giving writers the thing developers rarely provide: a visual editor to work in.
+**LightCMS** is a content management system that keeps your content where your site is lives and stores them as plain Markdown files in your repo.
 
-No database. No proprietary export. No vendor lock-in. Sign in with GitHub, pick a repository, write, hit publish, and LightCMS commits the Markdown and front matter for you. Your existing pipeline does the rest.
-
----
+No database. No lock ins.
+just,
+ Sign in with GitHub, pick a repository, write, hit publish, and LightCMS will be handling the rest.
 
 ## The Problem LightCMS Solves
 
-Static site generators made publishing fast, cheap, and secure. They also moved the hard part onto the author: to publish a post you need to know what front matter is, how the repository is laid out, which branch the build watches, and how to resolve a merge conflict at midnight.
+Static site generators made publishing fast, cheap, and secure. But to write a post opening a code editor is not that friendly towards some one who isn't techy.  
 
-That arrangement works for the person who built the site. It does not work for:
+That works for the person who is a developer. Not for some one who is not used to with code editors,
 
-- The **co-founder** who wants to publish an announcement.
-- The **writer** you hired who has never opened a terminal.
-- **You**, six months in, at 11pm, wanting to fix a paragraph without opening an IDE and pulling branches.
-
-LightCMS removes that friction without removing Git. The complexity stays where developers want it (in the repository and the pipeline) and the writer gets a distraction-free page that looks and feels like a modern editor.
+LightCMS removes that friction without removing Git. The content stays where developers want it the repository  and the writer gets a distraction free page that looks and feels like a modern editor.
 
 ---
 
@@ -53,13 +49,13 @@ The output of step 4 is a normal commit. If you delete LightCMS tomorrow, your s
 
 ## What Makes It Different
 
-There are several capable Git-backed CMS options ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, Pages CMS), and LightCMS competes with all of them. The differences are deliberate:
+There are several capable Git based CMS options ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, Pages CMS), and LightCMS competes with all of them. The differences are deliberate:
 
 | | LightCMS |
 | :--- | :--- |
 | **Storage** | Your GitHub repository (Markdown + YAML front matter) |
 | **Editor** | Full TipTap WYSIWYG: math (KaTeX), code highlighting, tables, task lists, media |
-| **AI** | Built-in copilot for outlines, rewrites, and grammar, on any OpenAI-compatible provider |
+| **AI** | built in copilot for outlines, rewrites, and grammar, on any OpenAI-compatible provider |
 | **Voice** | Whisper-powered dictation straight into the draft |
 | **Newsletters** | Publish Markdown → send via Newsy, running on GitHub instead of a newsletter platform |
 | **Hosting model** | Self-hosted, Apache 2.0 licensed, runs on any Node.js host |

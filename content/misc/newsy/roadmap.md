@@ -31,4 +31,4 @@ number of function invocations per month so can't afford uptime for everyone.
 
 Kindly support my work if any of my work has helped you in any way (at least you can star the repo).
 
-[![UPI Pay](https://github.com/inulute/upi/raw/main/assets/upi.svg)](https://pratyayupi.surge.sh)
+[![UPI Pay](https://github.com/inulute/upi/raw/main/assets/upi.svg)](https://upi.pratyay.online)

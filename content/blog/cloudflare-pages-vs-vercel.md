@@ -23,13 +23,15 @@ taxonomies:
 
 ---
 
-## The Core Difference
+## What Is Cloudflare Pages?
 
-**Cloudflare Pages** is infrastructure-first: unlimited bandwidth on the free tier, builds backed by Cloudflare's 300+-city network, and easy escape hatches into Cloudflare Workers when you need server-side logic.
+Cloudflare Pages is a static site hosting platform that deploys from your Git repository to a global edge network. The free tier includes unlimited bandwidth, making it attractive for blogs and documentation sites that may go viral. Beyond static hosting, it offers Pages Functions (serverless functions), KV (key-value storage), and R2 (object storage) — all within the same Cloudflare ecosystem.
 
-**Vercel** is framework-first: zero-config deployments for Next.js, SvelteKit, Astro, Nuxt, and Vite, with polished preview deployments, split testing, and a dashboard many developers rate highly.
+## What Is Vercel?
 
-## Bandwidth and Limits
+Vercel is the company behind Next.js and offers hosting optimized for its framework. It provides zero-configuration deployments for Next.js, SvelteKit, Astro, Nuxt, and Vite projects. The platform is known for polished preview deployments for every pull request, inline comments on deployments, and a developer-friendly dashboard.
+
+## Bandwidth: Unlimited vs Metered
 
 - **Cloudflare Pages**: unlimited bandwidth on the free tier, the single biggest differentiator for content-heavy or unexpectedly viral sites.
 - **Vercel**: the hobby tier includes generous but metered bandwidth, with overages a real consideration for high-traffic sites.
@@ -61,14 +63,14 @@ For a full comparison including GitHub Pages, Netlify, and Deno Deploy, see [top
 
 Yes. The free tier does not meter bandwidth, which makes it the safest default for sites that may go viral.
 
-### Is Vercel free for static sites?
+### Is Vercel Free for Static Sites?
 
 Yes, the hobby tier covers personal static sites generously, though bandwidth and build minutes are metered.
 
-### Which is faster?
+### Which Is Faster?
 
-Both serve from global edge networks with excellent TTFB. Cloudflare's network is larger; Vercel's framework-aware builds can produce more optimized output for its supported frameworks.
+Both serve from global edge networks with excellent performance. Cloudflare's network is larger; Vercel's framework-aware builds can produce more optimized output for its supported frameworks.
 
-### Can I move between them later?
+### Can I Move Between Them Later?
 
 Yes. Both deploy from your Git repository with a build command and output directory, so switching is a matter of configuration rather than migration.

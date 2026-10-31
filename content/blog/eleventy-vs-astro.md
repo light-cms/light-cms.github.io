@@ -32,7 +32,7 @@ Eleventy and Astro agree on the most important principle in modern web developme
 
 Eleventy's flexibility is its signature: mix template languages per project, structure data with global data files, and keep configuration minimal. Astro's content collections add what Eleventy leaves to convention: **schema-validated front matter** that fails the build on malformed data.
 
-Both consume Markdown with YAML front matter from your repository, which makes both first-class citizens for [Git-backed CMS publishing](/blog/git-cms-vs-traditional-cms/).
+Both consume Markdown with YAML front matter from your repository, which makes both first-class citizens for [Git based CMS publishing](/blog/git-cms-vs-traditional-cms/).
 
 ## When You Need Interactivity
 
@@ -72,6 +72,6 @@ Not as a framework concept; it is template-based. Interactive components require
 
 Both are excellent. Eleventy for the minimalist purist; Astro for writers who may want interactive elements or shared UI components later.
 
-### Can a Git-backed CMS publish to both?
+### Can a Git based CMS publish to both?
 
-Yes, both read Markdown with front matter straight from your repository, so any Git-backed CMS works identically with either.
+Yes, both read Markdown with front matter straight from your repository, so any Git based CMS works identically with either.

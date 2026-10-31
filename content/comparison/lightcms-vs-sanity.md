@@ -92,7 +92,7 @@ Sanity offers a free tier with limits, then usage-based pricing. LightCMS is Apa
 
 ### Can LightCMS do real-time collaboration?
 
-No. LightCMS optimizes for focused single-writer sessions plus Git-backed review. Concurrent live co-editing is a Sanity strength.
+No. LightCMS optimizes for focused single-writer sessions plus Git based review. Concurrent live co-editing is a Sanity strength.
 
 ### Does Sanity generate static sites?
 
@@ -108,4 +108,4 @@ Both can rank equally well; static output tends to help Core Web Vitals. See [be
 
 ---
 
-More: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
+More: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).

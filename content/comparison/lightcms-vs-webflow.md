@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Webflow: Visual Building vs Markdown in Git"
-description: "Webflow is a visual site builder with a hosted CMS; LightCMS is a Git-backed editor for developer-owned sites. Where each approach wins for content teams."
+description: "Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based editor for developer-owned sites. Where each approach wins for content teams."
 serial: 57
 date: 2026-10-16T13:10:00Z
 draft: false
@@ -69,7 +69,7 @@ Ask who owns the front end:
 - **Designers and marketers own it, and there is no developer** → Webflow is likely the right call. Do not adopt a build pipeline you will not maintain.
 - **Developers own it, writers fill it** → LightCMS fits: engineers keep the repository and the pipeline, writers get an editor, and neither side works in the other's tool.
 
-A hybrid is common: Webflow for the marketing site, a Git-backed static blog or docs site where content volume and technical writing make code ownership worthwhile.
+A hybrid is common: Webflow for the marketing site, a Git based static blog or docs site where content volume and technical writing make code ownership worthwhile.
 
 ---
 

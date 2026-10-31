@@ -14,36 +14,33 @@ tags:
 isCJKLanguage: false
 ---
 
-Introducing [**Newsy**](https://newsy.lightcms.me), an open-source newsletter platform powered entirely by GitHub.
+Introducing [**Newsy**](https://newsy.lightcms.me), an open source newsletter platform powered entirely by GitHub.
 
-Newsy is heavily inspired by tools like [Utterances](https://utteranc.es), [Giscus](https://giscus.app), and [Gitalk](https://gitalk.github.io), which reimagined commenting for static sites using GitHub Issues. Newsy takes the same GitHub-driven approach and brings it to newsletters: instead of relying on external services or maintaining a separate mailing list, your newsletter lives right alongside your code in your GitHub repository.
+Newsy is heavily inspired by tools like [Utterances](https://utteranc.es), [Giscus](https://giscus.app), and [Gitalk](https://gitalk.github.io), which reimagined commenting for static sites using GitHub Issues. Newsy takes the same GitHub driven approach and brings it to newsletters: instead of relying on external services or maintaining a separate mailing list, your newsletter lives right alongside your code in your GitHub repository.
 
 ---
 
 ## Why GitHub?
 
 1. **No mailing list management** — Subscribers and updates are tracked via GitHub.
-2. **No expensive email APIs** — Eliminate costly third-party newsletter subscriptions.
-3. **No deliverability headaches** — Avoid complex SMTP setups and spam filters.
-4. **No database security concerns** — Leverage GitHub's authentication and security.
-5. **No rigid template builders** — Write purely in Markdown or HTML.
+2. **No expensive email APIs** — Eliminate costly third party subscriptions.
+3. **No deliverability headaches** — Avoid complex SMTP setups, spam filters and domain reputation.
+4. **No database security concerns** — No need to manage a db just for managing subscription unsubscriptions.
 
-**You just write. GitHub handles the rest.**
+**You just focus on writing. GitHub and newsy handles the rest.**
 
-Publishing should be accessible to everyone. You shouldn't need to pay for a SaaS platform or spend hours wrestling with email infrastructure just to share updates with your readers.
-
----
+Publishing should be accessible to everyone. There is no need to pay a heavy fee to  a SaaS platform or spend hours wrestling with email infrastructure just to share updates with your readers.
 
 ## Technical Specifications
 
-Written in **Go**, Newsy is lightweight, simple to deploy, and designed to run virtually for free using **serverless functions / Lambda-compatible runtimes**. Deploy it once, configure it, and let it run.
-- **Runs locally** for development and testing.
+Written in **Go**, Newsy is lightweight, easy to deploy, and designed to run virtually for free using **serverless functions / Lambda compatible runtimes**. Deploy it once, configure it, and let it run.
+
 - **Deploys serverless** (e.g., Vercel, AWS Lambda) for production.
-- **WebAssembly support**: Host on any serverless runtime even on JavaScript/TypeScript-only platforms by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
 
-A video walkthrough of the local setup is available in the [video guide](/guides/newsy/video/).
+- **WebAssembly support**: Host on any serverless runtime even on JavaScript/TypeScript only platforms by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
 
----
+A video walkthrough of the local setup is available in the [video guide](/content/misc/newsy/video.md).
+
 
 ## Self Host Your Bot
 
@@ -52,7 +49,7 @@ Follow these steps to run Newsy and connect it to your GitHub repositories.
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:pratyay360/newsy.git
+git clone git@github.com:light-cms/newsy.git
 cd newsy
 ```
 
@@ -94,7 +91,7 @@ _(If you run into issues, refer to the [video guide](/guides/newsy/video/) or tr
 
 The generated `.env` should look like this:
 
-```dotenv
+```bash
 APP_ID=""
 WEBHOOK_SECRET=""
 PRIVATE_KEY=""
@@ -151,12 +148,12 @@ Subscribe to see Newsy in action:
 
 ## Generate Your Subscription Button
 
-Generate an embedded subscription button for your account at [**newsy.surge.sh**](https://newsy.surge.sh/).
+Generate an embedded subscription button for your account at [**newsy.surge.sh**](https://newsy.lightcms.me/).
 
 You can customize and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
 
 > \[!TIP\]
-> **Security tip:** After the bot publishes its first newsletter issue, lock the issue conversation to prevent unauthorized comments from triggering unintended behavior.
+> **Security tip:** After the bot publishes its first newsletter message, lock the conversation to prevent any unintended behavior.
 
 ![Locking the conversation](https://s6.imgcdn.dev/YgXhaN.png)
 

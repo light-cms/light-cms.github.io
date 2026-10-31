@@ -1,279 +1,379 @@
 ---
 title: Self Hosting LightCMS
-description: >-
-  A complete guide to self-hosting LightCMS, covering environment variables,
-  GitHub App credentials, PostgreSQL, AI endpoints, and a production deploy.
-date: '1111-11-11T11:11:00Z'
+description: Guide to self host LightCMS, covering the GitHub App, PostgreSQL, environment variables, optional AI, CDN and email, and deploying to edge.
+serial: 4
+section: Get Started
+badge: Deploy
+date: 2026-09-18T01:45:00Z
 draft: false
+tags:
+  - selfhost
+  - lightcms
+  - postgresql
+  - deployment
 keywords:
   - lightcms
+  - probot
   - self-hosting
-  - docker
+  - github_app
   - vercel
   - sveltekit
-tags:
-  - self
-  - host
-  - lightcms
-isCJKLanguage: false
-headless: false
-serial: 4
-preview: /og-image.webp
-taxonomies:
-  tags:
-    - selfhost
-    - lightcms
-    - postgresql
-    - deployment
+preview: /og-image.png
+canonical: https://www.lightcms.me/docs
 ---
-LightCMS is built on [SvelteKit](https://svelte.dev), so you can run it on any platform that supports Node.js or edge runtimes, including Vercel, Cloudflare Pages, Netlify, Docker containers, or your own Linux VPS.
 
-This guide covers the environment, the GitHub App credentials, the PostgreSQL database, and a production deploy.
+Want LightCMS fully under your control? LightCMS is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
 
----
+This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
+PostgreSQL, configuring environment variables, and deploying.
+
+## How the Pieces Fit Together
+
+| Component             | Purpose                                                                       | Required                     |
+| --------------------- | ----------------------------------------------------------------------------- | ---------------------------- |
+| PostgreSQL            | Stores users, sessions, passkeys and GitHub installations                     | Yes                          |
+| GitHub App            | Reads and writes content in your repositories, and signs users in with GitHub | Yes                          |
+| SMTP provider         | Sends magic-link sign-in emails                                               | Yes, for magic-link sign-in  |
+| OpenAI-compatible API | Powers the AI Copilot                                                         | Optional                     |
+| Speech-to-text API    | Powers voice dictation                                                        | Optional                     |
+| Image CDN             | Hosts images uploaded in the editor                                           | Optional                     |
+| PostHog               | Product analytics and AI observability                                        | Required in development only |
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed and configured:
+- **[mise](https://mise.jdx.dev)**: installs and managing tasks dependencies. I will be assuming you have it installed.
+- **PostgreSQL**: a database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
+  [Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
+  [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
+- **GitHub account**: needed to register the GitHub App.
+- **SMTP provider** (for magic links): If you have a domain then [Resend](https://resend.com) will be having an awesome experience,
+  if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
 
-- **Runtime**: [Bun](https://bun.sh) (v1.2+ recommended) or [Node.js](https://nodejs.org) (v20+ or v24).
-- **Environment Manager (Optional)**: [Mise](https://mise.jdx.dev) is configured in the repository (`mise.toml`) for managing tool versions.
-- **Database**: A PostgreSQL instance (v14+). You can use cloud providers like [Neon](https://neon.tech), [Supabase](https://supabase.com), [Nile](https://thenile.dev), or run PostgreSQL locally.
-- **GitHub Account**: Required to register the GitHub App that manages repository access.
-- **Image Storage (Optional)**: Any Chevereto-compatible image upload endpoint (e.g., [Freeimage.host](https://freeimage.host), [ImgBB](https://imgbb.com), or a self-hosted Chevereto instance).
-- **SMTP Provider (Optional)**: Only needed if you want LightCMS itself to send email notifications (e.g., [Resend](https://resend.com), [Zoho Mail](https://www.zoho.com/mail), or Amazon SES). Newsletters never require it: [Newsy](/blog/newsletter-email-automation/) uses GitHub as its backend.
-- **AI Services (Optional)**: An OpenAI-compatible API key for content generation and a [Groq](https://groq.com) API key for speech-to-text audio transcription.
+> **TLS is mandatory.** The application connects to PostgreSQL with `ssl: "require"`. A local PostgreSQL instance
+> without TLS enabled will be rejected, so use a hosted database or configure TLS on your own server.
 
----
+## 1. Fork the repository and install dependencies
 
-## 1. Clone the Repository &amp; Install Dependencies
-
-Clone the LightCMS repository to your local machine:
+Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/light-cms/lightcms.git
 cd lightcms
-```
-
-Install the dependencies using Bun or Mise:
-
-```bash
-# Using Bun directly
-bun install
-
-# Or using Mise
+mise trust
+mise deps
 mise run install
 ```
 
----
-
-## 2. Run the GitHub Bot Setup
-
-LightCMS integrates with GitHub using a GitHub App. You can automatically create and configure this app via the built-in Probot CLI:
+Install the toolchain and the project dependencies:
 
 ```bash
-# Using Bun
-bun run bot:start
+mise trust
+mise deps
+mise run install
+```
 
-# Or using Mise
+## 2. Create the GitHub App
+
+LightCMS uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
+through installations. You can create it with the built in Probot setup wizard, or by hand.
+
+### Option A: Probot setup wizard
+
+start the bot with:
+
+```bash
 mise run bot
 ```
 
-When started without existing credentials, Probot launches a local setup server (typically at `http://localhost:3000`). Open this URL in your browser:
+With no credentials in `.env`, Probot starts a setup server at `http://localhost:3000`:
 
-1. Click **Register a GitHub App**.
-2. Choose your personal GitHub account or organization.
-3. Probot automatically configures the required permissions and generates an RSA private key.
-4. Upon completion, Probot writes the generated credentials into your local `.env` file.
+1. Open `http://localhost:3000` and click **Register GitHub App**.
+2. Choose your personal account or an organization.
+3. Confirm. Probot creates the app and writes its credentials to your `.env` file.
 
-### Required GitHub App Permissions
+The wizard sets the app's webhook URL to a Smee channel (or `http://localhost:3000/`), not to LightCMS's webhook
+endpoint. Update it in the GitHub App settings before going live (see [Production deployment](#6-production-deployment)).
 
-If you prefer to configure your GitHub App manually via **GitHub Developer Settings**:
+### Option B: Manual setup
 
-- **Repository Permissions**:
-  - `Contents`: **Read and write** (to read repository files and commit updates)
-  - `Pull requests`: **Read and write** (to create and review pull requests)
-  - `Issues`: **Read and write** (for issue comments and editorial discussions)
-  - `Metadata`: **Read-only** (mandatory for all GitHub Apps)
-- **Subscribe to Events**:
-  - `Push`
-  - `Pull request`
-  - `Installation`
+Create the app in **GitHub Settings → Developer settings → GitHub Apps → New GitHub App** with these values:
 
----
+| Setting        | Value                                                           |
+| -------------- | --------------------------------------------------------------- |
+| Homepage URL   | `https://<your-domain>`                                         |
+| Callback URL   | `https://<your-domain>/api/auth/callback/github`                |
+| Setup URL      | `https://<your-domain>/github/setup`                            |
+| Webhook URL    | `https://<your-domain>/api/github/webhook`                      |
+| Webhook secret | A random secret (see [Generating secrets](#generating-secrets)) |
 
-## 3. Configure Environment Variables
+**Repository permissions**
 
-Open or create your `.env` file in the project root. Below is a complete reference of all supported variables:
+| Permission        | Access         | Used for                                    |
+| ----------------- | -------------- | ------------------------------------------- |
+| `Contents`        | Read and write | Reading and committing content files        |
+| `Issues`          | Read and write | Review comments and labels on pull requests |
+| `Pull requests`   | Read-only      | Listing the files changed in a pull request |
+| `Commit statuses` | Read and write | Reporting content validation on pushes      |
+| `Metadata`        | Read-only      | Mandatory for every GitHub App              |
+
+**Subscribe to events:** `Push` and `Pull request`. Installation events are delivered to GitHub Apps automatically.
+
+After creating the app, note the **App ID**, generate a **client secret**, and generate and download a **private key**
+(`.pem`).
+
+## 3. Configure environment variables
+
+Create a `.env` file in the project root. The repository does not ship a usable example file, so use the reference below.
+
+### Required
 
 ```bash
 # ---------------------------------------------------------------------------
-# Core Authentication (Better Auth)
+# Authentication (Better Auth)
 # ---------------------------------------------------------------------------
-# Generate with: openssl rand -hex 32
-BETTER_AUTH_SECRET="your-32-byte-hex-secret"
-# Canonical URL of your running LightCMS instance (must match public URL)
+BETTER_AUTH_SECRET="<output of: openssl rand -hex 32>"
+# Public URL of this instance. Must match the URL users visit.
 BETTER_AUTH_URL="http://localhost:5173"
 
 # ---------------------------------------------------------------------------
-# Database Configuration (PostgreSQL)
+# Database (PostgreSQL, TLS required)
 # ---------------------------------------------------------------------------
-DATABASE_URL="postgresql://user:password@localhost:5432/lightcms?sslmode=prefer"
+DATABASE_URL="postgresql://user:password@host:5432/lightcms?sslmode=require"
 
 # ---------------------------------------------------------------------------
-# GitHub App Credentials (Generated by Setup Bot or GitHub Settings)
+# GitHub App
 # ---------------------------------------------------------------------------
 GITHUB_APP_ID="123456"
-GITHUB_APP_NAME="lightcms-bot"
 GITHUB_CLIENT_ID="Iv1.xxxxxxxxxxxx"
-GITHUB_CLIENT_SECRET="your-github-client-secret"
-# Private key with RSA formatting. In single-line env files, replace newlines with \n
-GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----\n...\n-----END RSA PRIVATE KEY-----"
-GITHUB_WEBHOOK="https://your-domain.example/github/setup"
-GITHUB_WEBHOOK_SECRET="your-webhook-secret"
-
-# Local Webhook Tunneling (Optional, for development)
-WEBHOOK_PROXY_URL="https://smee.io/your-smee-channel"
-
-# ---------------------------------------------------------------------------
-# Image CDN Configuration (Chevereto-compatible)
-# ---------------------------------------------------------------------------
-CDN_URL="https://freeimage.host/api/1/upload"
-CDN_KEY="your-cdn-api-key"
-
-# ---------------------------------------------------------------------------
-# Email / SMTP Configuration (Nodemailer)
-# ---------------------------------------------------------------------------
-MAIL_HOST="smtp.resend.com"
-MAIL_PORT="465"
-MAIL_SECURE="1"
-MAIL_USER="resend"
-MAIL_PASS="re_your_api_key"
-MAIL_FROM="noreply@yourdomain.com"
-
-# ---------------------------------------------------------------------------
-# AI Copilot & Speech Transcription (Optional)
-# ---------------------------------------------------------------------------
-# OpenAI-compatible API endpoint for AI content generation
-OPEN_AI_ENDPOINT="https://api.openai.com/v1"
-OPEN_AI_APIKEY="sk-your-openai-key"
-OPEN_AI_MODEL="gpt-4o-mini"
-
-# Groq API Key for Whisper speech-to-text transcription
-GROQ_API_KEY="gsk_your-groq-key"
+GITHUB_CLIENT_SECRET="<github-app-client-secret>"
+GITHUB_WEBHOOK_SECRET="<webhook-secret>"
+GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
+...
+-----END RSA PRIVATE KEY-----"
 ```
 
-### Secret Generation Helper
+`GITHUB_PRIVATE_KEY` is the full PEM contents. Keep the line breaks and wrap the value in double quotes, which is how
+the Probot wizard writes it.
 
-Generate secure random secrets locally without third-party websites:
+### Required for development
+
+LightCMS reports analytics and errors to [PostHog](https://posthog.com). When the keys are missing, the app **throws in development** to stop events being silently dropped. In production they are optional, and telemetry is skipped when they are unset.
+
+```bash
+PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxx"
+PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
+```
+
+### Email: required for magic-link sign-in
+
+Magic links are sent over SMTP with [Nodemailer](https://nodemailer.com). Sending fails with a configuration error when
+`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` or `MAIL_FROM` is missing.
+
+```bash
+MAIL_HOST="smtp.resend.com"
+# Defaults to 587 when omitted
+MAIL_PORT="465"
+# "true", "1", "yes" or "on" enables implicit TLS. When omitted, TLS is enabled only for port 465.
+MAIL_SECURE="1"
+MAIL_USER="resend"
+MAIL_PASS="<smtp-password-or-api-key>"
+MAIL_FROM="LightCMS <noreply@yourdomain.com>"
+```
+
+### Optional: AI Copilot
+
+The Copilot uses any OpenAI-compatible chat completions API. All three variables are needed for it to work.
+
+```bash
+OPEN_AI_ENDPOINT="https://api.openai.com/v1"
+OPEN_AI_APIKEY="sk-..."
+OPEN_AI_MODEL="gpt-4o-mini"
+```
+
+Any provider that exposes an OpenAI-compatible API works, for example [OpenAI](https://platform.openai.com),
+[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) or [NVIDIA NIM](https://build.nvidia.com).
+
+### Optional: speech-to-text dictation
+
+LightCMS supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
+
+**OpenAI-compatible transcription.** It is selected when `SPEECH_API_KEY` is set, and also needs `SPEECH_MODEL`:
+
+```bash
+SPEECH_API_KEY="<api-key>"
+SPEECH_MODEL="whisper-1"
+# Base URL of the provider. Omit it to use the OpenAI default.
+SPEECH_ENDPOINT="https://api.openai.com/v1"
+```
+
+Point `SPEECH_ENDPOINT` at any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` to a
+model that provider offers. A trailing `/audio/transcriptions` in the endpoint is stripped automatically.
+
+**[Wit.ai](https://wit.ai)** is used when `SPEECH_API_KEY` is not set:
+
+```bash
+WIT_AI_TOKEN="<wit-ai-server-access-token>"
+```
+
+If neither is configured, dictation is unavailable.
+
+### Optional: image uploads (CDN)
+
+Images pasted or uploaded in the editor are sent to a [Chevereto](https://chevereto.com)-compatible upload API.
+Hosted options include [FreeImage.host](https://freeimage.host) and [ImgBB](https://imgbb.com), or you can run
+your own Chevereto instance.
+
+```bash
+CDN_URL="https://freeimage.host/api/1/upload"
+CDN_KEY="<cdn-api-key>"
+```
+
+`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the
+variables are unset, LightCMS falls back to embedding the image in the document as a base64 `data:` URL. This works,
+but it makes your Markdown files much larger, so configure a CDN for real use.
+
+### Local webhook forwarding (development only)
+
+```bash
+WEBHOOK_PROXY_URL="https://smee.io/<your-channel>"
+```
+
+This is read by Probot, not by the SvelteKit app. See [Testing webhooks locally](#testing-webhooks-locally).
+
+### Generating secrets
+
+Use any of these to generate `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET`:
 
 ```bash
 openssl rand -hex 32
 # or
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
-# or
-python3 -c "import secrets; print(secrets.token_hex(32))"
 ```
 
-### Recommended AI Providers
+## 4. Set up the database
 
-The AI Copilot uses standard OpenAI-compatible completions, which allows you to use any provider offering an OpenAI API format:
-
-- [**Groq**](https://groq.com): Fast Llama models and Whisper voice transcription (`GROQ_API_KEY`).
-- [**OpenRouter**](https://openrouter.ai): Access Claude, GPT, Mistral, and open-source models with a single unified key (`OPEN_AI_ENDPOINT="https://openrouter.ai/api/v1"`).
-- [**NVIDIA NIM**](https://build.nvidia.com): High-performance inference endpoints for open models.
-- [**OpenAI**](https://platform.openai.com): Official OpenAI endpoint and GPT models.
-
----
-
-## 4. Set Up the Database &amp; Run Migrations
-
-LightCMS uses [Drizzle ORM](https://orm.drizzle.team) to manage its PostgreSQL schema. Once your `DATABASE_URL` is set in `.env`, apply the database migrations:
+LightCMS uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
+are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
 
 ```bash
-# Apply pending migrations to the database
 bun run db:migrate
+```
 
-# Or push schema changes directly during local development
+During local development you can instead push the schema straight to the database, without migration files:
+
+```bash
 bun run db:push
 ```
 
-### Handy Database Utilities
+Other database scripts:
 
-- **Drizzle Studio**: Inspect and manipulate your database rows visually in your browser:
-  ```bash
-  bun run db:studio
-  ```
-- **Generate Migrations**: When updating schema definitions in `src/lib/server/db/`:
-  ```bash
-  bun run db:generate
-  ```
+| Command               | Description                                   |
+| --------------------- | --------------------------------------------- |
+| `bun run db:generate` | Generate a migration after editing the schema |
+| `bun run db:studio`   | Browse and edit your data in Drizzle Studio   |
 
----
-
-## 5. Configure Image Uploads (CDN)
-
-LightCMS supports any [Chevereto](https://www.chevereto.com)-compatible image upload API. When you paste or upload images in the editor, they are uploaded directly to your CDN.
-
-Free and hosted options include:
-
-- [FreeImage.host](https://freeimage.host)
-- [ImgBB](https://imgbb.com)
-- [ImgCDN](https://imgcdn.dev)
-- [ShareImg](https://shareimg.eu)
-
-Set the endpoint and API key in your `.env`:
-
-```bash
-CDN_URL="https://freeimage.host/api/1/upload"
-CDN_KEY="your-api-key"
-```
-
----
-
-## 6. Local Development Workflow
-
-Start the development server:
+## 5. Run locally
 
 ```bash
 bun run dev
 ```
 
-Open `http://localhost:5173`.
+![imagebot](https://i.ibb.co/Jw1bjLrr/image.png)
 
-### Testing Webhooks Locally
+![permissions detailed](https://i.ibb.co/0p7tk88V/image.png)
 
-GitHub cannot send webhooks to `localhost` directly. To receive GitHub webhook events during local development:
+LightCMS is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
 
-1. Create a free forwarding channel at [smee.io](https://smee.io).
-2. Set `WEBHOOK_PROXY_URL` in your `.env` to your Smee channel URL.
-3. Set the Webhook URL in your GitHub App settings to the same Smee URL.
-4. Run the GitHub bot in a separate terminal:
+### Testing webhooks locally
+
+GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io](https://smee.io):
+
+1. Create a channel at [smee.io](https://smee.io) and copy its URL.
+2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL.
+3. Set the **Webhook URL** in your GitHub App settings to the same URL.
+4. Run the bot in a second terminal:
+
    ```bash
-    bun run bot:start
+   bun run bot:start
    ```
 
----
+The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
+labels on `pull_request`, and `installation` logging.
 
-## 7. Production Deployment
+## 6. Production deployment
 
-When deploying to production, choose the SvelteKit adapter suitable for your target infrastructure:
+The project is configured with sveltekit which is very vendor agnostic, so
+[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) all are supported deployment targets out of the box.
 
-- **Vercel**: Pre-configured with `@sveltejs/adapter-vercel`. Connect your Git repository to Vercel, set your environment variables in the project settings, and deploy.
-- **Cloudflare Pages**: Use `@sveltejs/adapter-cloudflare` for global edge hosting.
-- **Node.js / Docker**: Use `@sveltejs/adapter-node` to generate a standalone Node server that can be packaged into a Docker container or run directly behind Nginx/Caddy.
+1. Import your Git repository into deployment platform.
+2. Add every environment variable from [step 3](#3-configure-environment-variables) in **Project Settings → Environment
+   Variables**. Set `BETTER_AUTH_URL` to your production URL.
+3. Deploy.
+
+To verify the production build locally:
 
 ```bash
-# Build the production bundle
 bun run build
-
-# Preview the built application
 bun run preview
 ```
 
-### Production Checklist
+## Troubleshooting
 
-1. Ensure `BETTER_AUTH_URL` matches your live HTTPS domain (e.g. `https://cms.yourdomain.com`).
-2. Keep `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET` private and rotated.
-3. In your GitHub App settings, set the Webhook URL to your public endpoint: `https://your-domain.com/github/setup`.
-4. Ensure your PostgreSQL connection uses SSL (`sslmode=require`) when communicating with cloud database providers.
+Make a account with [Wit.ai](https://wit.ai/) it's a free service by meta |
+And any openai compatible API for transcription. |
+One can use [groq](https://groq.com/) or [assemblyai](https://assemblyai.com/) or |
+[elevenlabs](https://elevenlabs.io/) or [deepgram](https://deepgram.com/) or [sarvam](https://sarvam.ai/). |
+
+## For development purpose you can use the following credentials for posthog
+
+PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
+PUBLIC_POSTHOG_URL = "https://us.i.posthog.com"
+
+```bash
+PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
+PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+```
+
+https://wit.ai
+
+![wit.ai](https://i.ibb.co/MySskPTt/image.png)
+
+```bash
+WIT_AI_TOKEN="Server access token"
+WIT_AI_CLIENT_TOKEN="Client access token"
+```
+
+```bash
+APP_ID=
+BETTER_AUTH_SECRET=
+BETTER_AUTH_URL=
+CDN_KEY=
+CDN_URL=
+DATABASE_URL=
+GITHUB_APP_ID=
+GITHUB_APP_NAME=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+GITHUB_PRIVATE_KEY=
+GITHUB_WEBHOOK_SECRET=
+MAIL_FROM=
+MAIL_HOST=
+MAIL_PASS=
+MAIL_PORT=
+MAIL_SECURE=
+MAIL_USER=
+OPEN_AI_ENDPOINT=
+OPEN_AI_MODEL=
+OPEN_AI_APIKEY=
+ORIGIN=
+PRIVATE_KEY=
+PUBLIC_POSTHOG_HOST=
+PUBLIC_POSTHOG_KEY=
+SPEECH_API_KEY=
+SPEECH_ENDPOINT=
+SPEECH_MODEL=
+WEBHOOK_SECRET=
+WIT_AI_CLIENT_TOKEN=
+WIT_AI_TOKEN=
+```
+
+![configuration for the bot](https://i.ibb.co/jP5tgcJH/image.png)

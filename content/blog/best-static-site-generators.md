@@ -65,7 +65,7 @@ A young, Zig-powered generator with its own Super templating language and near-i
 
 ## What All of Them Share
 
-Every generator on this list reads **Markdown files with YAML front matter** from your repository. That common denominator is why the CMS layer is swappable: a Git-backed editor like [LightCMS](/getting-started/) commits content to any of them, and your [hosting choice](/blog/cloudflare-pages-vs-vercel/) is independent too.
+Every generator on this list reads **Markdown files with YAML front matter** from your repository. That common denominator is why the CMS layer is swappable: a Git based editor like [LightCMS](/getting-started/) commits content to any of them, and your [hosting choice](/blog/cloudflare-pages-vs-vercel/) is independent too.
 
 And because the output is plain cached files, every generator here plugs directly into the green publishing stack described in [Static Sites and CO2](/blog/greener-web-static-sites/).
 
@@ -81,9 +81,9 @@ Hugo, by a wide margin at build time. Both Hugo and Astro produce equally fast p
 
 Astro, for most people: content collections, type-safe front matter, and an easy authoring story. Hugo wins for very large publications.
 
-### Do static site generators work with a Git-backed CMS?
+### Do static site generators work with a Git based CMS?
 
-Yes. Markdown is their native content model. Any Git-backed CMS commits Markdown into the generator's content directory and triggers the build.
+Yes. Markdown is their native content model. Any Git based CMS commits Markdown into the generator's content directory and triggers the build.
 
 ### Are static site generators free?
 

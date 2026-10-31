@@ -1,5 +1,5 @@
 ---
-title: "LightCMS vs Joomla: Traditional CMS vs Git-Backed Publishing"
+title: "LightCMS vs Joomla: Traditional CMS vs Git based Publishing"
 description: "Joomla is a classic self-hosted CMS with an admin panel and database; LightCMS stores content as Markdown in Git and ships static pages. A clear-eyed comparison."
 serial: 56
 date: 2026-10-16T13:00:00Z
@@ -94,7 +94,7 @@ Different trade-offs: Joomla offers more configuration out of the box; WordPress
 
 ### Can LightCMS do what Joomla does?
 
-For publishing, yes. For dynamic applications, no, and it does not try to be. See [headless vs Git-backed CMS](/blog/headless-vs-git-based-cms/).
+For publishing, yes. For dynamic applications, no, and it does not try to be. See [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
 
 ### How hard is it to move from Joomla to Markdown?
 
@@ -106,4 +106,4 @@ Both can rank. Static pages typically load faster with less tuning, which helps 
 
 ---
 
-More: [LightCMS vs Drupal](/comparison/lightcms-vs-drupal), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [Git-backed CMS explained](/blog/git-based-cms-explained/).
+More: [LightCMS vs Drupal](/comparison/lightcms-vs-drupal), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [Git based CMS explained](/blog/git-based-cms-explained/).

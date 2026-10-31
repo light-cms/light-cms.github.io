@@ -19,7 +19,7 @@ taxonomies:
     - comparison
 ---
 
-[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git-backed CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits Astro and Next.js projects and takes the local-first promise seriously.
+[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git based CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits Astro and Next.js projects and takes the local-first promise seriously.
 
 LightCMS shares the storage model (files in your repository) and inverts the audience. Keystatic is built so developers can define content well; LightCMS is built so writers can use it without developers at all.
 
@@ -114,4 +114,4 @@ No. Content lives in your repository in both cases, which is the whole point of 
 
 ---
 
-More: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms), and the [Git-backed CMS overview](/comparison/top-git-cms).
+More: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms), and the [Git based CMS overview](/comparison/top-git-cms).

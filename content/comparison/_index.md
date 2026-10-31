@@ -8,8 +8,8 @@ Honest, side by side write ups of LightCMS against the field. Each one starts fr
 
 **Versus headless platforms**: [Sanity](/comparison/lightcms-vs-sanity), [Contentful](/comparison/lightcms-vs-contentful), [Storyblok](/comparison/lightcms-vs-storyblok), [Strapi](/comparison/lightcms-vs-strapi), [Payload](/comparison/lightcms-vs-payload-cms).
 
-**Versus Git-backed editors**: [Decap CMS](/comparison/lightcms-vs-decap-cms), [TinaCMS](/comparison/lightcms-vs-tinacms), [Keystatic](/comparison/lightcms-vs-keystatic), [Pages CMS](/comparison/lightcms-vs-pagescms).
+**Versus Git based editors**: [Decap CMS](/comparison/lightcms-vs-decap-cms), [TinaCMS](/comparison/lightcms-vs-tinacms), [Keystatic](/comparison/lightcms-vs-keystatic), [Pages CMS](/comparison/lightcms-vs-pagescms).
 
 **Versus traditional CMS and builders**: [WordPress](/comparison/lightcms-vs-wordpress), [Drupal](/comparison/lightcms-vs-drupal), [Joomla](/comparison/lightcms-vs-joomla), [Ghost](/comparison/lightcms-vs-ghost), [Webflow](/comparison/lightcms-vs-webflow).
 
-**Overview guides**: [top Git-backed CMS platforms](/comparison/top-git-cms), [Decap alternatives](/comparison/netlifycms), [Pages CMS alternatives](/comparison/pagescms), [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites).
+**Overview guides**: [top Git based CMS platforms](/comparison/top-git-cms), [Decap alternatives](/comparison/netlifycms), [Pages CMS alternatives](/comparison/pagescms), [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites).

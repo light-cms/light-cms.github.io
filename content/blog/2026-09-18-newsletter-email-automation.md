@@ -1,6 +1,7 @@
 ---
-title: "Newsletter Automation Without a Newsletter Service"
-description: "How to run a blog newsletter straight from your Git repository with Newsy: no mailing-list vendor, no SMTP relay, no per-subscriber fees."
+title: Newsletter Automation Without a paid
+description: "How to run a blog newsletter straight from your Git repository
+  with Newsy: no mailing list to manage, no SMTP relay, no sass fees"
 serial: 5
 date: 2026-09-18T01:50:00Z
 draft: false
@@ -9,7 +10,6 @@ keywords:
   - github newsletter
   - newsy
   - static site newsletter
-  - lightcms
 preview: /og-image.webp
 taxonomies:
   tags:
@@ -18,7 +18,6 @@ taxonomies:
     - github
     - publishing
 ---
-
 Email is one of the most effective ways to build a dedicated audience. The traditional way of doing it, though, has become cumbersome and expensive.
 
 LightCMS takes a different route: **Git-driven newsletters** powered by [Newsy](https://github.com/light-cms/newsy), where the repository you already have *is* the backend, so you can drop the newsletter service entirely.
@@ -30,8 +29,8 @@ LightCMS takes a different route: **Git-driven newsletters** powered by [Newsy](
 With conventional platforms like Mailchimp, Substack, or Brevo, your workflow typically requires:
 
 1. Signing up for an external service with rigid subscription tiers.
-2. Managing fragmented mailing lists across third-party dashboards.
-3. Manually copying and pasting your blog post into proprietary rich-text email builders.
+2. Managing fragmented mailing lists across third party dashboards.
+3. Manually copying and pasting your blog post into proprietary rich text email builders.
 4. Dealing with bloated tracking scripts, cookies, and privacy compliance requirements.
 5. Paying substantial monthly fees as your subscriber count grows.
 
@@ -39,7 +38,7 @@ Every one of those steps exists because an email service sits between you and yo
 
 ---
 
-## The Git-Driven Approach: Newsy
+## The Git Driven Approach: Newsy
 
 The **Newsy** philosophy is simple: **your Git repository is the newsletter backend.**
 
@@ -58,7 +57,7 @@ Because delivery runs through GitHub's own notification system, there is no list
 
 A static site already has a pipeline: content is committed, CI builds, the CDN serves. Newsy slots into the same flow: the commit that publishes the page also announces it. Nothing is duplicated into a proprietary editor, and nothing needs syncing back.
 
-It is also free in the way static hosting is free: open source, self-hostable (Go plus a small Postgres table), and it runs happily on serverless platforms. There is no monthly plan that scales with your audience.
+It is also free in the way static hosting is free: open source, self hostable (Go plus a small Postgres table), and it runs happily on serverless platforms. There is no monthly plan that scales with your audience.
 
 ---
 

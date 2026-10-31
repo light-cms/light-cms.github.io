@@ -11,7 +11,7 @@ keywords:
   - getting started
   - wysiwyg
   - markdown
-  - git-backed
+  - Git based
 tags:
   - Light
   - Cms
@@ -61,6 +61,6 @@ Git provides the version history and makes the entire process auditable, and you
 - [Static Sites vs Dynamic Sites](/blog/static-vs-dynamic/): why static wins for content sites.
 - [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): choosing a static site generator.
 - [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): choosing where to host.
-- [Git-Backed CMS vs Traditional CMS](/blog/git-cms-vs-traditional-cms/): how the two models differ.
+- [Git based CMS vs Traditional CMS](/blog/git-cms-vs-traditional-cms/): how the two models differ.
 - [Top Git Backed CMS Platforms](/comparison/top-git-cms/): LightCMS next to Decap, TinaCMS, Keystatic, and others.
 - [How to Start a Blog](/blog/how-to-start-a-blog/): the full Markdown blogging guide.

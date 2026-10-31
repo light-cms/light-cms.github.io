@@ -41,7 +41,7 @@ Benchmarks of real content sites consistently favor lean Astro output on payload
 
 Astro's content collections validate front matter with schemas at build time, a real advantage for editorial sites. Next.js handles Markdown fine, but the content layer is DIY by comparison.
 
-Both consume **Markdown with YAML front matter** from your repository, so any Git-backed CMS publishes to either, from [LightCMS](/getting-started/) to the alternatives in this [comparison](/comparison/top-git-cms/).
+Both consume **Markdown with YAML front matter** from your repository, so any Git based CMS publishes to either, from [LightCMS](/getting-started/) to the alternatives in this [comparison](/comparison/top-git-cms/).
 
 ## Ecosystem and Careers
 

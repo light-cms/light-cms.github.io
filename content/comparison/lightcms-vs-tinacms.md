@@ -47,7 +47,7 @@ Tina is optimized for the first case; LightCMS for the second.
 | | LightCMS | TinaCMS |
 | :--- | :--- | :--- |
 | **Editing model** | Standalone document workspace | On-page, in-context editing |
-| **Content store** | Your GitHub repository | GitHub (or Git-backed storage) |
+| **Content store** | Your GitHub repository | GitHub (or Git based storage) |
 | **Content schema** | Configured in the app; front matter as a form | Schema defined in code with Tina's content SDK |
 | **Editor** | TipTap WYSIWYG: tables, math, code, task lists | Inline rich text tuned for page copy |
 | **AI copilot** | Built in (any OpenAI-compatible endpoint) | Not bundled |
@@ -120,7 +120,7 @@ Both produce clean, conventional Markdown and front matter. Editor output is a d
 
 ### Do either require a database?
 
-LightCMS does not. Tina's hosted offering stores content in Git-backed storage; self-hosted arrangements vary by configuration.
+LightCMS does not. Tina's hosted offering stores content in Git based storage; self-hosted arrangements vary by configuration.
 
 ---
 

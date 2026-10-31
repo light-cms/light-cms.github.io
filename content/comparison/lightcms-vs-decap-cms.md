@@ -19,7 +19,7 @@ taxonomies:
     - comparison
 ---
 
-[Decap CMS](/comparison/netlifycms), formerly Netlify CMS, is the elder statesman of Git-backed content. It's been the default answer to "CMS for my static site" for the better part of a decade, and much of that reputation is earned: it established the pattern of an admin app sitting on top of your repository.
+[Decap CMS](/comparison/netlifycms), formerly Netlify CMS, is the elder statesman of Git based content. It's been the default answer to "CMS for my static site" for the better part of a decade, and much of that reputation is earned: it established the pattern of an admin app sitting on top of your repository.
 
 LightCMS starts from the same premise and a different center of gravity: the writing.
 
@@ -111,4 +111,4 @@ Equally. Your SSG and theme decide the generated HTML, not the editor that produ
 
 ---
 
-See also: [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms/), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), and the [full Git-backed CMS comparison](/comparison/top-git-cms).
+See also: [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms/), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), and the [full Git based CMS comparison](/comparison/top-git-cms).
