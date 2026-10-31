@@ -1,4 +1,5 @@
-base_url = "https://blogs.lightcms.me"
+# base_url = "https://blogs.lightcms.me"
+base_url = "http://localhost:8000"
 title = "LightCMS"
 description = "LightCMS is a Git based CMS for static sites: a visual Markdown editor with AI drafting, voice-to-text, and newsletters. Content stays in your repository."
 

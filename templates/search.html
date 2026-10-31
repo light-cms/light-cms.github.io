@@ -7,26 +7,13 @@
 {%- endif -%}
 
 <div id="search-container">
-    <pagefind-modal-trigger></pagefind-modal-trigger>
-    <pagefind-modal></pagefind-modal>
+    <pagefind-searchbox></pagefind-searchbox>
+    <pagefind-results></pagefind-results>
 </div>
-
-<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
-
 
 <style>
     #search-container {
         margin: 2rem 0;
-    }
-
-    pagefind-search {
-        --pagefind-ui-scale: 1;
-        --pagefind-ui-primary: var(--fg, #000);
-        --pagefind-ui-text: var(--fg, #000);
-        --pagefind-ui-background: var(--bg, #fff);
-        --pagefind-ui-border: var(--fg-muted, #666);
-        --pagefind-ui-border-width: 2px;
     }
 </style>
 
