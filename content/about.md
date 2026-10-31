@@ -1,7 +1,7 @@
 ---
 title: About
-description: 'Content managed with: lightcms.me'
-date: '2026-10-30T16:50:00Z'
+description: "Content managed with: lightcms.me"
+date: 2026-10-30T16:50:00Z
 draft: false
 weight: 0
 keywords:
@@ -27,9 +27,9 @@ New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exis
 
 ## Who We Are
 
-We are building [LightCMS](https://www.lightcms.me/). Writing should feel like storytelling, and sharing it should be easy. Instead, modern editors have become so complex that people lose touch with their inner author. 
+We are building [LightCMS](https://www.lightcms.me/). Writing should feel like storytelling, and sharing it should be easy. Instead, modern editors have become so complex that people lose touch with their inner author.
 
-BTW, Static site generators are a great way to build a simple, fast, and eco friendly website. but why should one have to be a developer to use such a nice thing?
+By the way, Static site generators are a great way to build a simple, fast, and eco friendly website. But why should one have to be a developer to use such a nice thing?
 
 In LightCMS, we are trying to democratize the use of static site generators and give everyone a space to share their thoughts on the internet.
 
@@ -42,6 +42,7 @@ In LightCMS, we are trying to democratize the use of static site generators and 
 - **X (Twitter)**: [@LightCms5](https://x.com/LightCms5)
 - **Bluesky**: [@lightcms.bsky.social](https://bsky.app/profile/lightcms.bsky.social)
 - **Discord:** [https://discord.gg/HwNd6SufRT](https://discord.gg/HwNd6SufRT)
+- **Message us:** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
 
 This site's content is itself managed with [LightCMS](https://www.lightcms.me/).
 

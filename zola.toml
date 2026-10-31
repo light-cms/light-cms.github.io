@@ -29,7 +29,7 @@ error_on_missing_language = true
 
 
 [extra]
-default_theme = "solarized-dark"
+default_theme = "dark"
 source_url = "https://github.com/light-cms/lightcms"
 
 [extra.nav]
@@ -37,7 +37,6 @@ links = [
 	{ name = "Blog", menu = [
 		{ url = "@/blog/_index.md", name = "Blog" },
 		{ url = "@/comparison/_index.md", name = "Comparisons" },
-		{ url = "@/getting-started.md", name = "Getting Started" }
 	] },
 	{ url = "@/about.md", name = "About" }
 ]
@@ -49,7 +48,6 @@ show_theme_switcher = true
 # links = [
 # 	{ url = "@/blog/_index.md", name = "Blog" },
 # 	{ url = "@/comparison/_index.md", name = "Comparisons" },
-# 	{ url = "@/getting-started.md", name = "Getting Started" },
 # 	{ url = "@/about.md", name = "About" }
 # ]
 # Social links in the footer.

@@ -2,22 +2,21 @@
 :root {
 	color-scheme: light dark;
 
-	--bg: light-dark(#fdfcfa, #14141a);
-	--text: light-dark(#232329, #e9e9ef);
-	--muted: light-dark(#5d5d68, #a2a2b0);
-	--accent: light-dark(#5b21b6, #c4b5fd);
-	--accent-strong: light-dark(#4c1d95, #b3a3f5);
-	--accent-ink: light-dark(#ffffff, #221245);
-	--accent-soft: light-dark(#f3effc, #241a3d);
-	--border: light-dark(#e6e3dc, #2c2c35);
-	--surface: light-dark(#f6f4ef, #1e1e26);
-	--code-bg: light-dark(#1e1e2e, #1b1b28);
+	/* Light mode defaults */
+	--bg: #fdfcfa;
+	--text: #232329;
+	--muted: #5d5d68;
+	--accent: #5b21b6;
+	--accent-strong: #4c1d95;
+	--accent-ink: #ffffff;
+	--accent-soft: #f3effc;
+	--border: #e6e3dc;
+	--surface: #f6f4ef;
+	--code-bg: #1e1e2e;
 	--radius: 8px;
 	--radius-lg: 12px;
-	--shadow: light-dark(0 1px 2px rgba(30, 25, 20, 0.06),
-			0 1px 2px rgba(0, 0, 0, 0.4));
-	--shadow-lift: light-dark(0 12px 28px -14px rgba(76, 29, 149, 0.28),
-			0 12px 28px -14px rgba(0, 0, 0, 0.7));
+	--shadow: 0 1px 2px rgba(30, 25, 20, 0.06);
+	--shadow-lift: 0 12px 28px -14px rgba(76, 29, 149, 0.28);
 	--font:
 		system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
 		sans-serif;
@@ -41,8 +40,46 @@
 	--pf-font: var(--font);
 	--pf-border-radius: var(--radius);
 	--pf-input-height: 34px;
-	--pf-modal-backdrop: light-dark(rgba(20, 20, 26, 0.45), rgba(0, 0, 0, 0.72));
+	--pf-modal-backdrop: rgba(20, 20, 26, 0.45);
 	--pf-modal-max-width: 580px;
+}
+
+/* Sepia dark mode — explicit toggle via [data-theme="dark"] */
+[data-theme="dark"] {
+	color-scheme: dark;
+	--bg: #2e2418;
+	--text: #f0e2c8;
+	--muted: #b89870;
+	--accent: #d4943a;
+	--accent-strong: #bf7d20;
+	--accent-ink: #1f150a;
+	--accent-soft: #4a3520;
+	--border: #5c4530;
+	--surface: #3d2e1e;
+	--code-bg: #261d11;
+	--shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	--shadow-lift: 0 12px 28px -14px rgba(0, 0, 0, 0.6);
+	--pf-modal-backdrop: rgba(0, 0, 0, 0.72);
+}
+
+/* Sepia dark mode — OS/system preference (when no explicit data-theme is set) */
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		color-scheme: dark;
+		--bg: #2e2418;
+		--text: #f0e2c8;
+		--muted: #b89870;
+		--accent: #d4943a;
+		--accent-strong: #bf7d20;
+		--accent-ink: #1f150a;
+		--accent-soft: #4a3520;
+		--border: #5c4530;
+		--surface: #3d2e1e;
+		--code-bg: #261d11;
+		--shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+		--shadow-lift: 0 12px 28px -14px rgba(0, 0, 0, 0.6);
+		--pf-modal-backdrop: rgba(0, 0, 0, 0.72);
+	}
 }
 
 * {

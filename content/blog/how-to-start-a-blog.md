@@ -65,7 +65,7 @@ Every push rebuilds and republishes your blog in under a minute. Compare your op
 
 This is the step most guides skip. If publishing requires opening a terminal, you will stop writing.
 
-A **Git based CMS** like [LightCMS](/getting-started/) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
+A **Git based CMS** like [LightCMS](/) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
 
 ## Step 5: Grow It
 

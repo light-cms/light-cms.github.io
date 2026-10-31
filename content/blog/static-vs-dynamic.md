@@ -88,10 +88,10 @@ Yes. Static sites typically load faster and have better Core Web Vitals than dyn
 
 Yes. Client-side JavaScript, serverless functions, or third-party services handle forms and interactivity, and the page itself stays static.
 
-### Is a static site cheaper to run?
+### Is a Static Site Cheaper to Run?
 
 For content-driven sites, almost always. Static files can be served from free hosting tiers with generous bandwidth, while dynamic sites need running servers and managed databases.
 
-### Do static sites need a CMS?
+### Do Static Sites Need a CMS?
 
 Not necessarily, but if more than one person publishes, or you want to write from your phone, a Git based CMS gives you the editing experience of WordPress with the architecture of a static site.

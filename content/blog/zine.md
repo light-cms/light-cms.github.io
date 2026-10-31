@@ -29,7 +29,7 @@ taxonomies:
 - **Content as a collection of files and layouts.** Zine turns content files into HTML, applies your layouts, and copies the result into an output directory, the classic static model run fast.
 - **First-class extras**: multilingual websites (i18n), editor support, and documented deploy targets: GitHub Pages, Cloudflare Pages, Codeberg Pages, and sourcehut pages.
 
-## The Honest Trade-off
+## The Honest Trade off
 
 The Zine repository states it plainly: the project is young and not yet at feature parity with popular alternatives like Hugo. And because Super is Zine's own templating language, there is a learning curve: themes and community knowledge are smaller, and you are buying one project's vision rather than an entire ecosystem.
 
@@ -37,13 +37,30 @@ For a personal website with a blog (the project's stated comfort zone), Zine is 
 
 ## Content and CMS Compatibility
 
-Zine consumes Markdown content with front matter like every modern generator, which means the Git based CMS workflow applies directly: an editor like [LightCMS](/getting-started/) commits Markdown to your repository, your build pipeline runs Zine, and the static output deploys to your host. See [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/) for the pattern.
+Zine don't consumes Markdown content with front matter like every modern generator,
+ which means the Git based CMS workflow don't applies zine uses [ziggy](https://ziggy-lang.io/)
+  an editor like [LightCMS](/getting-started/) commits Markdown to your repository which has yaml based frontmatter.
+  Your build pipeline runs but zine only knows [ziggy](https://ziggy-lang.io/) so errors out but is there a way/workaround answer is yes [md2smd](https://github.com/Pratyay360/md2smd) is a cli tool which tries to bridge the specification between [common mark](https://commonmark.org/) and the specification of [scripty](https://zine-ssg.io/docs/scripty/) [smd](https://zine-ssg.io/docs/supermd/) and [ziggy](https://ziggy-lang.io/) as closely as possible.
+
+
+
+By the way you have to create two repositories one will contain content and other will be containing frontend.
+
+https://github.com/Pratyay360/pratyay  <-- repo containing frontend 
+
+
+
+https://github.com/Pratyay360/blogs_md <--- repo containing content 
+
+
+
+we have to call repository dispatch when ever something gets pushed into the content repo.
+
 
 ## Where It Fits
 
-- For speed-obsessed minimalists: Zine and [Eleventy](/blog/eleventy-vs-astro/) compete for the "tiny and fast" crown with very different toolchains.
-- For ecosystem safety: [Astro, Hugo, and friends](/blog/best-static-site-generators/) remain the conventional picks.
-- Either way, the output is cached static files, the low-carbon delivery model in [Static Sites and CO2](/blog/greener-web-static-sites/).
+- If you want to try something alpha.
+
 
 ---
 
