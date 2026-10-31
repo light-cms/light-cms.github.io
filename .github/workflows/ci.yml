@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@main
+        with:
+          submodules: true
       - name: cache mise dependencies
         uses: actions/cache@main
         with:
