@@ -36,15 +36,14 @@ jobs:
             mise deps
             mise install
             mise run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@main
-        with:
-          path: ./public
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@main
+#
+#       - name: Upload artifact
+#         uses: actions/upload-pages-artifact@main
+#         with:
+#           path: ./public
+#
+#       - name: Deploy to GitHub Pages
+#         uses: actions/deploy-pages@main
 
       - name: index now key file
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
