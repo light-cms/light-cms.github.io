@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="gallery-page">
+	<header class="gallery-header">
+		<h1>{{ section.title }}</h1>
+		{%- if section.description %}
+		<p class="gallery-lead">{{ section.description }}</p>
+		{%- endif %}
+	</header>
+
+	<div class="gallery-content" id="gallery-content">
+		{{ section.content | safe }}
+	</div>
+
+	{# Lightbox Modal for full size view #}
+	<dialog id="gallery-lightbox" class="gallery-lightbox" onclick="if (event.target === this) closeLightbox();">
+		<div class="lightbox-content">
+			<button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image">✕</button>
+			<img id="lightbox-img" src="" alt="" />
+			<p id="lightbox-caption" class="lightbox-caption"></p>
+		</div>
+	</dialog>
+</section>
+
+<style>
+.gallery-page {
+	margin: 2rem 0 4rem;
+}
+
+.gallery-header {
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--border, #e6e3dc);
+	padding-bottom: 1.25rem;
+}
+
+.gallery-header h1 {
+	margin: 0 0 0.5rem;
+	font-size: 2.2rem;
+	line-height: 1.2;
+}
+
+.gallery-lead {
+	font-size: 1.15rem;
+	color: var(--muted, #5d5d68);
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+	gap: 1.5rem;
+	margin: 1.5rem 0 2.5rem;
+}
+
+/* Gallery Card */
+.gallery-card {
+	margin: 0;
+	background: var(--surface, #f6f4ef);
+	border: 1px solid var(--border, #e6e3dc);
+	border-radius: var(--radius-lg, 12px);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.gallery-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.18);
+	border-color: var(--accent, #5b21b6);
+}
+
+.gallery-media {
+	position: relative;
+	aspect-ratio: 16 / 10;
+	background: var(--code-bg, #1e1e2e);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.gallery-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-media img {
+	transform: scale(1.03);
+}
+
+.media-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.35);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.gallery-media:hover .media-overlay {
+	opacity: 1;
+}
+
+.zoom-icon {
+	color: #fff;
+	background: rgba(0, 0, 0, 0.65);
+	padding: 0.4rem 0.85rem;
+	border-radius: 9999px;
+	font-size: 0.85rem;
+	backdrop-filter: blur(4px);
+	font-weight: 500;
+}
+
+.gallery-caption {
+	padding: 0.85rem 1rem;
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--text, #232329);
+	line-height: 1.4;
+	background: var(--surface, #f6f4ef);
+	border-top: 1px solid var(--border, #e6e3dc);
+}
+
+/* Fallback styling for images before JS runs */
+.gallery-content p:has(> img) {
+	margin: 1.5rem 0;
+}
+
+.gallery-content img {
+	border-radius: var(--radius-lg, 12px);
+	max-width: 100%;
+	height: auto;
+}
+
+/* Lightbox Dialog */
+.gallery-lightbox {
+	border: none;
+	background: transparent;
+	padding: 0;
+	max-width: 92vw;
+	max-height: 92vh;
+}
+
+.gallery-lightbox::backdrop {
+	background: rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(4px);
+}
+
+.lightbox-content {
+	position: relative;
+	background: var(--surface, #1e1e26);
+	border: 1px solid var(--border, #333);
+	border-radius: 12px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1100px;
+}
+
+.lightbox-content img {
+	max-width: 88vw;
+	max-height: 78vh;
+	object-fit: contain;
+	border-radius: 6px;
+}
+
+.lightbox-caption {
+	margin: 0.75rem 0 0.25rem;
+	color: var(--text, #fff);
+	font-size: 1rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.lightbox-close {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 34px;
+	height: 34px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+	background: rgba(0, 0, 0, 0.85);
+}
+</style>
+
+<script>
+function openLightbox(src, caption) {
+	const dialog = document.getElementById('gallery-lightbox');
+	const img = document.getElementById('lightbox-img');
+	const cap = document.getElementById('lightbox-caption');
+	if (dialog && img) {
+		img.src = src;
+		img.alt = caption || '';
+		if (cap) cap.textContent = caption || '';
+		dialog.showModal();
+	}
+}
+
+function closeLightbox() {
+	const dialog = document.getElementById('gallery-lightbox');
+	if (dialog) dialog.close();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	const container = document.getElementById('gallery-content');
+	if (!container) return;
+
+	// Automatically group Markdown images into a responsive gallery grid
+	const elements = Array.from(container.children);
+	let currentGrid = null;
+
+	elements.forEach((el) => {
+		const imgs = el.querySelectorAll('img');
+		const isImageOnly = el.tagName === 'P' && imgs.length > 0 && el.textContent.trim() === '';
+
+		if (isImageOnly) {
+			if (!currentGrid) {
+				currentGrid = document.createElement('div');
+				currentGrid.className = 'gallery-grid';
+				el.parentNode.insertBefore(currentGrid, el);
+			}
+			imgs.forEach((img) => {
+				const card = createCard(img);
+				currentGrid.appendChild(card);
+			});
+			el.remove();
+		} else {
+			currentGrid = null;
+		}
+	});
+
+	function createCard(img) {
+		const figure = document.createElement('figure');
+		figure.className = 'gallery-card';
+
+		const mediaWrap = document.createElement('div');
+		mediaWrap.className = 'gallery-media';
+		mediaWrap.onclick = () => openLightbox(img.src, img.alt);
+
+		const newImg = document.createElement('img');
+		newImg.src = img.src;
+		newImg.alt = img.alt || '';
+		newImg.loading = 'lazy';
+		mediaWrap.appendChild(newImg);
+
+		const overlay = document.createElement('div');
+		overlay.className = 'media-overlay';
+		overlay.innerHTML = '<span class="zoom-icon">🔍 View</span>';
+		mediaWrap.appendChild(overlay);
+
+		figure.appendChild(mediaWrap);
+
+		const captionText = img.alt || img.title;
+		if (captionText) {
+			const figcaption = document.createElement('figcaption');
+			figcaption.className = 'gallery-caption';
+			figcaption.textContent = captionText;
+			figure.appendChild(figcaption);
+		}
+
+		return figure;
+	}
+});
+</script>
+{% endblock content %}

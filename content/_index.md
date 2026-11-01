@@ -1,15 +1,13 @@
 +++
 title = "Getting Started with LightCMS"
-description = "Learn how git based workflow works with lightcms. And how to connect a GitHub repository and publish by committing to Git tree."
+description = "Learn how git native workflow works with lightcms. "
 +++
 
-### LightCMS Is a Git Based Content Management System for Static Sites. One Can Edit Markdown in the Visual Editor, and LightCMS Commits the Files to Your Git Repository.
+### LightCMS Is a Git Based Content Management System for Static Sites
 
-> ### What You Get
+**Posts are stored as markdown files and they stays in repository.** Every draft and post lives as Markdown with frontmatter schema.
 
-**Posts are stored as files and in they stays in repository.** Every draft and post lives as Markdown with frontmatter schema.
-
-Git provides the version history and makes the entire process auditable, and you have the option to roll back. You can clone the repository and keep working in any editor you like.
+Git provides the version history and makes the entire process auditable, and you always have the option to roll back. You can clone the repository and keep working in any editor you like.
 
 1. **An editor that makes you a writer again.** LightCMS uses the [TipTap](https://tiptap.dev) wysiwyg editor. Which is very closely resembles Notion.
 2. **An AI copilot.** An AI copilot for modifying and enhancing your writing.

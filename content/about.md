@@ -1,7 +1,6 @@
 ---
 title: About
 description: "Content managed with: lightcms.me"
-date: 2026-10-30T16:50:00Z
 draft: false
 weight: 0
 keywords:
@@ -16,6 +15,8 @@ tags:
   - sveltekit
 isCJKLanguage: false
 headless: false
+extra:
+  comments: false
 ---
 ## What We Write Here
 

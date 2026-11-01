@@ -1,0 +1,99 @@
+<script src="https://script.supademo.com/supademo.js"></script>
+<script src="/js/image-proxy.js" defer></script>
+<footer id="site-footer">
+	{%- if config.extra.footer?.links %}
+	<nav>
+		<ul>
+			{%- for link in config.extra.footer?.links %}
+			{%- if link.url is matching(pat='^https?://') %}
+			<li>
+				<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">
+					{{-
+					<translate key={link.name} default={link.name} language_strings /> -}}
+				</a>
+			</li>
+			{%- else %}
+			<li>
+				<a href="{{ get_url(path=link.url, lang=lang)}}" {%- if current_url | default(value='/' ) |
+					trim_end(pat='/' ) | safe==get_url(path=link.url, lang=lang) | trim_end(pat='/' ) | safe -%}
+					class="active" {%- endif -%}>
+					{{-
+					<translate key={link.name} default={link.name} language_strings /> -}}
+				</a>
+			</li>
+			{%- endif %}
+			{%- endfor %}
+		</ul>
+	</nav>
+	{%- endif %}
+
+	{%- if config.extra.footer?.show_copyright %}
+	{%- if config.extra.footer?.copyright %}
+	{{ config.extra.footer?.copyright | markdown | safe }}
+	{%- else %}
+	<p>&copy; {{ config.title }}, {{ now() | date(format="%Y") }}</p>
+	{%- endif %}
+	{%- endif %}
+
+	{%- if config.extra?.source_url and config.extra.footer?.show_source %}
+	<p>
+		<a class="external" href="{{ config.extra.source_url }}" rel="{{ rel_attributes }}">
+			{{-
+			<translate key="source" default="Website source" language_strings /> -}}
+		</a>
+	</p>
+	{%- endif %}
+
+	{%- if config.extra.footer?.show_powered_by %}
+	<p>
+		<small>
+			Powered by <a class="link external" href="https://www.getzola.org" rel="{{ rel_attributes }}">Zola</a> and <a class="link external" href="https://duckquill.daudix.one" rel="{{ rel_attributes }}">Duckquill</a>
+		</small>
+	</p>
+	{%- endif %}
+
+	<div class="supademo-tour-container">
+		<button type="button" class="supademo-tour-btn" onclick="Supademo.open('cmvvdyema01exqmwtg0adiw7p')">
+			✨ Try the tour
+		</button>
+	</div>
+
+	{%- if config.extra.footer?.socials %}
+	<ul id="external-links">
+		{%- for link in config.extra.footer?.socials %}
+		<li>
+			<a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me" title="{{ link.name }}">
+				<i class="icon" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+				<span>{{ link.name }}</span>
+			</a>
+		</li>
+		{%- endfor %}
+	</ul>
+	{%- endif %}
+</footer>
+
+<style>
+.supademo-tour-container {
+	margin: 1.25rem 0;
+}
+.supademo-tour-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: var(--surface, #f6f4ef);
+	color: var(--text, #232329);
+	border: 1px solid var(--border, #e6e3dc);
+	border-radius: 9999px;
+	padding: 0.45rem 1.1rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.supademo-tour-btn:hover {
+	background: var(--accent-soft, #f3effc);
+	border-color: var(--accent, #5b21b6);
+	color: var(--accent, #5b21b6);
+	transform: translateY(-1px);
+}
+</style>

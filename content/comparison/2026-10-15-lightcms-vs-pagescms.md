@@ -10,7 +10,7 @@ keywords:
   - pages cms review
   - github cms comparison
   - best cms for markdown
-preview: /og-image.webp
+preview: /og-image.png
 taxonomies:
   tags:
     - lightcms

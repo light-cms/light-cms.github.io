@@ -3,8 +3,6 @@ zola = "latest"
 bun = "latest"
 biome = "latest"
 "npm:pagefind" = "latest"
-marksman = "latest"
-markdownlint-cli2 = "latest"
 
 
 [tasks]

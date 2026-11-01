@@ -1,6 +1,6 @@
 +++
 title = "Comparisons"
-description = "LightCMS compared side by side with every CMS, headless platform, and site builder people actually evaluate: storage, cost, lock-in, and where each one wins."
+description = "LightCMS compared side by side with every CMS, headless platform, and site builder"
 sort_by = "date"
 +++
 
