@@ -188,7 +188,7 @@ Netlify pioneered the Jamstack architecture and remains a trusted solution for s
 - **built in Backend Services**: Netlify Forms, Netlify Identity (user authentication), and serverless functions 
 no database required
 - **Split Testing**: Launch beta features to specific visitor percentages at the CDN layer
-- **One-Click Rollbacks**: Revert to previous deployments instantly with atomic cache guarantees
+- **One Click Rollbacks**: Revert to previous deployments instantly with atomic cache guarantees
 - **Deploy Previews**: Automatic preview URLs for every pull request
 - **Plugin Ecosystem**: Extend functionality with build plugins for optimization, SEO, and more
 
