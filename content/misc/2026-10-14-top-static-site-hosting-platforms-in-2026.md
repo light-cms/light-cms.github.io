@@ -1,12 +1,12 @@
 ---
-title: "Top Static Site Hosting Platforms in 2026: Speed, Pricing & Features"
-description: "A practical comparison of the best static site hosting providers in 2026: GitHub Pages, Cloudflare Pages, Wasmer, Vercel, Netlify, and Deno Deploy."
+title: Top Static Site Hosting Platforms in 2026
+description: A practical comparison of the best static site hosting providers in 2026 GitHub Pages, Cloudflare Pages, Wasmer, Vercel, Netlify, and Deno Deploy.
 date: 2026-10-14T10:00:00Z
 draft: false
 weight: 1
 serial: 6
-isCJKLanguage: false
-headless: false
+isCJKLanguage: true
+headless: true
 keywords:
   - static site hosting
   - best free hosting
@@ -18,12 +18,11 @@ keywords:
 preview: /og-image.webp
 taxonomies:
   tags:
-    - hosting
-    - static-sites
-    - jamstack
     - cloudflare
     - github-pages
-    - wasmer
+    - hosting
+    - jamstack
+    - static-sites
 ---
 
 ## Introduction
@@ -199,8 +198,7 @@ no database required
 - Mature serverless function ecosystem
 - Atomic deploys prevent downtime and mismatched assets
 - built in identity management for user authentication
-- Excellent CDN-layer split testing capabilities
-
+- Excellent CDN layer 
 #### Cons
 
 - 100 GB bandwidth/month limit on starter tier
