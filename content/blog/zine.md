@@ -1,8 +1,6 @@
 ---
 title: 'Zine: The Zig-Powered Static Site Generator'
-description: >-
-  What Zine is: a fast, young static site generator written in Zig, with its own
-  Super templating language, i18n support, and simple deploys to static hosting.
+description: 'What Zine is: a fast, young static site generator written in Zig'
 date: '1111-11-11T11:11:00Z'
 draft: false
 keywords:
