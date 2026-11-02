@@ -1,5 +1,5 @@
 ---
-title: 'Zine: The Zig-Powered Static Site Generator'
+title: 'Zine: The Static Site Generator'
 description: 'What Zine is: a fast, young static site generator written in Zig'
 date: '1111-11-11T11:11:00Z'
 draft: false
