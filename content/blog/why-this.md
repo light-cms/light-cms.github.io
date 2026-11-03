@@ -67,7 +67,7 @@ More: [Static Sites and CO2: Building a Greener Web](/blog/greener-web-static-si
 
 ## A CMS That Stays Out of Your Way
 
-LightCMS aims to make writing and publishing simple without sacrificing the benefits of modern developer tooling:
+[LightCMS](https://lightcms.me)aims to make writing and publishing simple without sacrificing the benefits of modern developer tooling:
 
 - **Content Lives in Git**: Your articles remain pure Markdown in your own GitHub repository.
 - **Automated CI/CD**: Your existing build pipelines (GitHub Actions, Vercel, Cloudflare Pages) continue to build and deploy your site automatically.

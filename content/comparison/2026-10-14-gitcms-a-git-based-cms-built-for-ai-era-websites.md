@@ -19,7 +19,7 @@ taxonomies:
     - git
 ---
 
-[GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built by AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
+[GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built with AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
 
 ---
 

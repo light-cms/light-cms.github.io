@@ -4,7 +4,7 @@ description = "LightCMS compared side by side with every CMS, headless platform,
 sort_by = "date"
 +++
 
-Honest, side by side write ups of LightCMS against the field. Each one starts from the architecture (where content lives, what runs at request time) and ends with who should actually pick it.
+Honest, side by side write ups of [LightCMS](https://lightcms.me) against the field. Each one starts from the architecture (where content lives, what runs at request time) and ends with who should actually pick it.
 
 **Versus headless platforms**: [Sanity](/comparison/lightcms-vs-sanity), [Contentful](/comparison/lightcms-vs-contentful), [Storyblok](/comparison/lightcms-vs-storyblok), [Strapi](/comparison/lightcms-vs-strapi), [Payload](/comparison/lightcms-vs-payload-cms).
 

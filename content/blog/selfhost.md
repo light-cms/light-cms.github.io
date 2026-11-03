@@ -1,6 +1,6 @@
 ---
-title: Self Hosting LightCMS
-description: Guide to self host LightCMS, covering the GitHub App, PostgreSQL, environment variables, optional AI, CDN and email, and deploying to edge.
+title: Self Hosting [LightCMS](https://lightcms.me)
+description: Guide to self host [LightCMS](https://lightcms.me), covering the GitHub App, PostgreSQL, environment variables, optional AI, CDN and email, and deploying to edge.
 serial: 4
 section: Get Started
 badge: Deploy
@@ -22,7 +22,7 @@ preview: /og-image.png
 canonical: https://www.lightcms.me/docs
 ---
 
-Want LightCMS fully under your control? LightCMS is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
+Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
 
 This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
 PostgreSQL, configuring environment variables, and deploying.
@@ -73,7 +73,7 @@ mise run install
 
 ## 2. Create the GitHub App
 
-LightCMS uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
+[LightCMS](https://lightcms.me) uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
 through installations. You can create it with the built in Probot setup wizard, or by hand.
 
 ### Option A: Probot setup wizard
@@ -90,7 +90,7 @@ With no credentials in `.env`, Probot starts a setup server at `http://localhost
 2. Choose your personal account or an organization.
 3. Confirm. Probot creates the app and writes its credentials to your `.env` file.
 
-The wizard sets the app's webhook URL to a Smee channel (or `http://localhost:3000/`), not to LightCMS's webhook
+The wizard sets the app's webhook URL to a Smee channel (or `http://localhost:3000/`), not to [LightCMS](https://lightcms.me)'s webhook
 endpoint. Update it in the GitHub App settings before going live (see [Production deployment](#6-production-deployment)).
 
 ### Option B: Manual setup
@@ -156,7 +156,7 @@ the Probot wizard writes it.
 
 ### Required for development
 
-LightCMS reports analytics and errors to [PostHog](https://posthog.com). When the keys are missing, the app **throws in development** to stop events being silently dropped. In production they are optional, and telemetry is skipped when they are unset.
+[LightCMS](https://lightcms.me) reports analytics and errors to [PostHog](https://posthog.com). When the keys are missing, the app **throws in development** to stop events being silently dropped. In production they are optional, and telemetry is skipped when they are unset.
 
 ```bash
 PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxx"
@@ -194,7 +194,7 @@ Any provider that exposes an OpenAI-compatible API works, for example [OpenAI](h
 
 ### Optional: speech-to-text dictation
 
-LightCMS supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
+[LightCMS](https://lightcms.me) supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
 
 **OpenAI-compatible transcription.** It is selected when `SPEECH_API_KEY` is set, and also needs `SPEECH_MODEL`:
 
@@ -228,7 +228,7 @@ CDN_KEY="<cdn-api-key>"
 ```
 
 `CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the
-variables are unset, LightCMS falls back to embedding the image in the document as a base64 `data:` URL. This works,
+variables are unset, [LightCMS](https://lightcms.me) falls back to embedding the image in the document as a base64 `data:` URL. This works,
 but it makes your Markdown files much larger, so configure a CDN for real use.
 
 ### Local webhook forwarding (development only)
@@ -251,7 +251,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 
 ## 4. Set up the database
 
-LightCMS uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
+[LightCMS](https://lightcms.me) uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
 are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
 
 ```bash
@@ -281,7 +281,7 @@ bun run dev
 
 ![permissions detailed](https://i.ibb.co/0p7tk88V/image.png)
 
-LightCMS is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
+[LightCMS](https://lightcms.me) is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
 
 ### Testing webhooks locally
 

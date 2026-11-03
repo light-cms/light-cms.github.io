@@ -3,13 +3,13 @@ title = "Getting Started with LightCMS"
 description = "Learn how git native workflow works with lightcms. "
 +++
 
-### LightCMS Is a Git Based Content Management System for Static Sites
+### [LightCMS](https://lightcms.me) Is a Git Based Content Management System for Static Sites
 
 **Posts are stored as markdown files and they stays in repository.** Every draft and post lives as Markdown with frontmatter schema.
 
 Git provides the version history and makes the entire process auditable, and you always have the option to roll back. You can clone the repository and keep working in any editor you like.
 
-1. **An editor that makes you a writer again.** LightCMS uses the [TipTap](https://tiptap.dev) wysiwyg editor. Which is very closely resembles Notion.
+1. **An editor that makes you a writer again.** [LightCMS](https://lightcms.me) uses the [TipTap](https://tiptap.dev) wysiwyg editor. Which is very closely resembles Notion.
 2. **An AI copilot.** An AI copilot for modifying and enhancing your writing.
 3. **Voice dictation.** Speak and let Whisper (openai compatible model) or [Wit.ai](http://Wit.ai) write the text for you.
 4. **Light and dark themes.** Pick the one you find easier on the eyes. [LightCMS](https://www.lightcms.me) covers you.
@@ -20,9 +20,9 @@ Git provides the version history and makes the entire process auditable, and you
 ## How It Works
 
 1. **Sign in** with your GitHub account.
-2. **Choose a repository.** Install lightcms app at the repo that holds your site. It works with all major static site generators, if it’s compatible with frontmater Lightcms covers you.
+2. **Choose a repository.** Install lightcms app at the repo that holds your site. It works with all major static site generators, if it’s compatible with frontmater [LightCMS](https://lightcms.me) covers you.
 3. **Write.** The editor handles formatting and uploads images to CDN as you add them.
-4. **Publish.** LightCMS commits the change on behalf of user, building, and deploys are handled by CI as it always does. Lightcms uses the model bring your own hosting provider; GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.Sh](https://surge.sh), or any S3 compatible object storage.
+4. **Publish.** [LightCMS](https://lightcms.me) commits the change on behalf of user, building, and deploys are handled by CI as it always does. [LightCMS](https://lightcms.me) uses the model bring your own hosting provider; GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.Sh](https://surge.sh), or any S3 compatible object storage.
 
 ---
 
@@ -38,5 +38,5 @@ Git provides the version history and makes the entire process auditable, and you
 - [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): choosing a static site generator.
 - [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): choosing where to host.
 - [Git based CMS vs Traditional CMS](/blog/git-cms-vs-traditional-cms/): how the two models differ.
-- [Top Git Backed CMS Platforms](/comparison/top-git-cms/): LightCMS next to Decap, TinaCMS, Keystatic, and others.
+- [Top Git Backed CMS Platforms](/comparison/top-git-cms/): [LightCMS](https://lightcms.me) next to Decap, TinaCMS, Keystatic, and others.
 - [How to Start a Blog](/blog/how-to-start-a-blog/): the full Markdown blogging guide.

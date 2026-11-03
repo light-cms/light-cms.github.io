@@ -1,6 +1,6 @@
 ---
-title: "A Tour of the LightCMS Editor: WYSIWYG That Outputs Clean Markdown"
-description: "Inside the LightCMS writing surface: TipTap-powered visual editing with math, code highlighting, tables, task lists, and media that still produces hand-editable Markdown."
+title: "A Tour of the [LightCMS](https://lightcms.me) Editor: WYSIWYG That Outputs Clean Markdown"
+description: "Inside the [LightCMS](https://lightcms.me) writing surface: TipTap-powered visual editing with math, code highlighting, tables, task lists, and media that still produces hand-editable Markdown."
 serial: 31
 date: 2026-10-16T09:10:00Z
 draft: false
@@ -54,7 +54,7 @@ Write inline math or display equations and see them typeset live. For technical 
 Insert rows and columns visually. Markdown tables are miserable to author by hand; here they are just cells.
 
 ### Media
-Drag images onto the page. LightCMS stores the file, generates the reference, and writes it into your content, so a screenshot goes from clipboard to published without a trip through your file system.
+Drag images onto the page. [LightCMS](https://lightcms.me) stores the file, generates the reference, and writes it into your content, so a screenshot goes from clipboard to published without a trip through your file system.
 
 ---
 
@@ -62,7 +62,7 @@ Drag images onto the page. LightCMS stores the file, generates the reference, an
 
 The other half of any static-site post is its front matter, and it is where hand-editing usually goes wrong: a stray tab, a date in the wrong format, an unclosed quote, and the build breaks.
 
-In LightCMS, front matter is a form: title, description, date, tags, keywords, and whatever else your schema declares. The editor validates as you type and writes correctly formatted YAML on publish. Writers never see the syntax, and the repository still receives what the SSG expects.
+In [LightCMS](https://lightcms.me), front matter is a form: title, description, date, tags, keywords, and whatever else your schema declares. The editor validates as you type and writes correctly formatted YAML on publish. Writers never see the syntax, and the repository still receives what the SSG expects.
 
 A large share of "my build is failing" support threads in static-site communities trace back to malformed front matter, and a visual form removes that class of error.
 
@@ -70,7 +70,7 @@ A large share of "my build is failing" support threads in static-site communitie
 
 ## Themes Built for Long Sessions
 
-The editor ships with light and dark modes. That sounds cosmetic until you have written for three hours: a pure `#ffffff` background at 1am is hostile, and most admin dashboards do not care. LightCMS picks its palettes for reading and writing over long sessions, not for a screenshot on a landing page.
+The editor ships with light and dark modes. That sounds cosmetic until you have written for three hours: a pure `#ffffff` background at 1am is hostile, and most admin dashboards do not care. [LightCMS](https://lightcms.me) picks its palettes for reading and writing over long sessions, not for a screenshot on a landing page.
 
 ---
 
@@ -87,7 +87,7 @@ Two boundaries are intentional:
 
 You can, and developers often do. But as soon as a second person touches the repository, "just edit the Markdown" becomes a support burden: wrong front matter, mangled tables, accidental whitespace commits. Fixing a typo then means installing an editor, cloning a repo, and learning a branch workflow.
 
-The LightCMS editor leaves the developer's workflow untouched and removes those barriers for everyone else.
+The [LightCMS](https://lightcms.me) editor leaves the developer's workflow untouched and removes those barriers for everyone else.
 
 ---
 
@@ -99,7 +99,7 @@ No. It serializes to standard Markdown with YAML front matter, the same output a
 
 ### Can I Still Edit the Files by Hand?
 
-Always. LightCMS commits to your repository like anyone else would. Hand edits, editor edits, and AI edits all land as the same `.md` files.
+Always. [LightCMS](https://lightcms.me) commits to your repository like anyone else would. Hand edits, editor edits, and AI edits all land as the same `.md` files.
 
 ### Does It Support Markdown Short-Codes?
 
@@ -107,7 +107,7 @@ Your SSG's shortcodes live in the content as plain text and are passed through u
 
 ### What About Images?
 
-Drag and drop. LightCMS places the asset and writes the reference so the path matches what your build expects.
+Drag and drop. [LightCMS](https://lightcms.me) places the asset and writes the reference so the path matches what your build expects.
 
 ---
 

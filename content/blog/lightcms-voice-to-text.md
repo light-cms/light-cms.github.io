@@ -1,6 +1,6 @@
 ---
-title: "Dictate Your Drafts: Voice to Text in LightCMS"
-description: "How LightCMS turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
+title: "Dictate Your Drafts: Voice to Text in [LightCMS](https://lightcms.me)"
+description: "How [LightCMS](https://lightcms.me) turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
 serial: 33
 date: 2026-10-16T09:30:00Z
 draft: false
@@ -20,7 +20,7 @@ taxonomies:
 ---
 Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.
 
-LightCMS features dictation. Hit record, speak, and your words are written to your draft.
+[LightCMS](https://lightcms.me) features dictation. Hit record, speak, and your words are written to your draft.
 
 ---
 
@@ -28,7 +28,7 @@ How It Works
 
 1. Open your application in the editor. Browser prompt for microphone permission.
 2. Just Speak. Pauses are okay; you are just spit balling, not reading.
-3. Stop. LightCMS is feeding the audio into a Whisper transcription endpoint on Groq, and placing the returned text into the cursor.
+3. Stop. [LightCMS](https://lightcms.me) is feeding the audio into a Whisper transcription endpoint on Groq, and placing the returned text into the cursor.
 4. The transcript appears as plain old Markdown in the page: still your words, still fully editable, still only pushed when you publish.
 
 The transcript is not an attachment or a separate piece. It's a component of a post as soon as it comes in, so the next pass is just common editing: cut the rambling, put in the order, insert the headings.
@@ -68,7 +68,7 @@ It's not just about time. For the one-too-many carpal tunnel suffers and/or wear
 
 What Happens to the Audio?
 
-LightCMS transmits the recording for transcription and provides your text back. The audio never touches your repository: what goes into git is the Markdown, just like any other edit. Your writing is stored as files in your repository, which is the same promise that the rest of LightCMS makes: zero lock-in, zero database.
+[LightCMS](https://lightcms.me) transmits the recording for transcription and provides your text back. The audio never touches your repository: what goes into git is the Markdown, just like any other edit. Your writing is stored as files in your repository, which is the same promise that the rest of [LightCMS](https://lightcms.me) makes: zero lock-in, zero database.
 
 
 ## A Word on the Review
@@ -79,7 +79,7 @@ Frequently Asked Questions:-
 
 ## Do I need a separate transcription subscription?
 
-No. Transcription is directed to the Whisper endpoint that is configured for your LightCMS instance, in the same way as the AI copilot - bring-your-own-endpoint model.
+No. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) instance, in the same way as the AI copilot - bring-your-own-endpoint model.
 
 ## Is it effective in other languages?
 

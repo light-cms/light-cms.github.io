@@ -118,7 +118,7 @@ That last point is where most evaluations land. The architecture is usually righ
 - **Hosting model.** Self-hosted (you run it) versus hosted (they run it).
 - **Exit cost.** It should be zero. If the tool disappeared tomorrow, your repository should still build.
 
-LightCMS is built around those criteria; see [what LightCMS is](/blog/what-is-lightcms/). The wider field is surveyed in [top Git based CMS platforms](/comparison/top-git-cms).
+[LightCMS](https://lightcms.me) is built around those criteria; see [what LightCMS is](/blog/what-is-lightcms/). The wider field is surveyed in [top Git based CMS platforms](/comparison/top-git-cms).
 
 ---
 

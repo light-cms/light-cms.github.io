@@ -19,7 +19,7 @@ taxonomies:
     - workflow
 ---
 
-The fastest way to make a writing tool unpopular is to fill it with generated text nobody asked for. The LightCMS AI copilot is built on the opposite premise: **the model assists inside your workflow, and you remain the author.**
+The fastest way to make a writing tool unpopular is to fill it with generated text nobody asked for. The [LightCMS](https://lightcms.me) AI copilot is built on the opposite premise: **the model assists inside your workflow, and you remain the author.**
 
 It is not a chat window bolted onto a CMS. It is a set of contextual actions sitting next to the text you are already editing.
 
@@ -40,7 +40,7 @@ Every result lands in the document as editable text. Accept it, tweak it, or und
 
 ## Bring Your Own Model
 
-LightCMS talks to any **OpenAI-compatible** endpoint, which covers a wide field without a proprietary wrapper:
+[LightCMS](https://lightcms.me) talks to any **OpenAI-compatible** endpoint, which covers a wide field without a proprietary wrapper:
 
 | Provider | Why people pick it |
 | :--- | :--- |
@@ -51,7 +51,7 @@ LightCMS talks to any **OpenAI-compatible** endpoint, which covers a wide field 
 
 Because the interface is the standard `/v1/chat/completions` shape, anything else exposing it (a local model behind an OpenAI-compatible proxy, an internal gateway, a corporate endpoint) works too.
 
-Practically, this means your API key lives in **your** instance of LightCMS. Your drafting data goes to the provider you configured, under the account you control. For a self-hosted, Apache-licensed tool, that is the only arrangement worth having.
+Practically, this means your API key lives in **your** instance of [LightCMS](https://lightcms.me). Your drafting data goes to the provider you configured, under the account you control. For a self-hosted, Apache-licensed tool, that is the only arrangement worth having.
 
 ---
 
@@ -75,7 +75,7 @@ A few habits the workflow encourages:
 - **Verify claims.** The model does not know your codebase, your product, or your numbers. Facts remain your job.
 - **Keep secrets out of prompts.** Anything you send to a provider is visible to that provider, so treat prompts like any third-party service.
 
-LightCMS commits whatever you finally approve. There is no silent background generation, no content stored on a LightCMS server, and no training loop attached to your drafts.
+[LightCMS](https://lightcms.me) commits whatever you finally approve. There is no silent background generation, no content stored on a [LightCMS](https://lightcms.me) server, and no training loop attached to your drafts.
 
 ---
 
@@ -91,15 +91,15 @@ LightCMS commits whatever you finally approve. There is no silent background gen
 
 ### Do I need an API key?
 
-To use the copilot, yes: you configure a provider in your LightCMS instance. Everything else in the editor works without one.
+To use the copilot, yes: you configure a provider in your [LightCMS](https://lightcms.me) instance. Everything else in the editor works without one.
 
 ### Is my content used to train models?
 
-No. LightCMS sends only the text you explicitly select for an action, to the endpoint you configured. Your repository and drafts are not shipped anywhere else.
+No. [LightCMS](https://lightcms.me) sends only the text you explicitly select for an action, to the endpoint you configured. Your repository and drafts are not shipped anywhere else.
 
 ### Can I use a local model?
 
-If it exposes an OpenAI-compatible API, yes. Point LightCMS at the local endpoint and the copilot works the same way.
+If it exposes an OpenAI-compatible API, yes. Point [LightCMS](https://lightcms.me) at the local endpoint and the copilot works the same way.
 
 ### Will it rewrite my front matter?
 

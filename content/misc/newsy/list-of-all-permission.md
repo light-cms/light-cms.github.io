@@ -4,7 +4,8 @@ title: Required Permissions
 description: The list of permissions the Newsy bot requests.
 author: light-cms
 created: 2026-08-22T07:28:38+00:00
-visibility: "public"
+visibility: public
+fmContentType: default
 ---
 
 The Newsy GitHub App needs the following permissions to watch your content and create

@@ -19,7 +19,7 @@ taxonomies:
     - git
 ---
 
-[Netlify CMS](https://decapcms.org) still powers many Jamstack sites, and since its rename to **Decap CMS** many teams have taken the opportunity to weigh alternatives. The reasons vary: an aging editing UI, YAML-first configuration, or editors who want a real writing experience. But the Git based CMS category is stronger than it has ever been. Here are the best Netlify CMS alternatives in 2026.
+[Netlify CMS](https://decapcms.org) still powers many Jamstack sites, and since its rename to **Decap CMS** many teams have taken the opportunity to weigh alternatives. The reasons vary: an aging editing UI, YAML first configuration, or editors who want a real writing experience. But the Git based CMS category is stronger than it has ever been. Here are the best Netlify CMS alternatives in 2026.
 
 ---
 

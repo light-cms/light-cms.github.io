@@ -1,3 +1,24 @@
 {%- if config.extra?.show_copy_button %}
 	<span id="copy-code-text" class="hidden">{{ <translate key="copy_code" default="Copy Code" language_strings /> }}</span>
 {%- endif %}
+
+{%- if config.build_search_index %}
+<script type="text/javascript">
+	document.addEventListener("keydown", function(e) {
+		if ((e.key === "/" || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k")) &&
+			!["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName) &&
+			!document.activeElement?.isContentEditable) {
+			e.preventDefault();
+			var searchUrl = "{{ get_url(path='@/search.md', lang=lang) | safe }}";
+			var targetPath = new URL(searchUrl, window.location.origin).pathname.replace(/\/$/, "");
+			var currentPath = window.location.pathname.replace(/\/$/, "");
+			if (currentPath !== targetPath) {
+				window.location.href = searchUrl;
+			} else {
+				var input = document.querySelector("#search-container input");
+				if (input) input.focus();
+			}
+		}
+	});
+</script>
+{%- endif %}

@@ -32,7 +32,7 @@ We are building [LightCMS](https://www.lightcms.me/). Writing should feel like s
 
 By the way, Static site generators are a great way to build a simple, fast, and eco friendly website. But why should one have to be a developer to use such a nice thing?
 
-In LightCMS, we are trying to democratize the use of static site generators and give everyone a space to share their thoughts on the internet.
+In [LightCMS](https://lightcms.me), we are trying to democratize the use of static site generators and give everyone a space to share their thoughts on the internet.
 
 ## Where to Find Us
 

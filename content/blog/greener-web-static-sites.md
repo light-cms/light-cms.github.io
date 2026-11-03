@@ -50,7 +50,7 @@ You cannot improve what you do not measure:
 - **[Ecograder](https://ecograder.com/)** gives a comparable estimate, alongside performance and accessibility scoring.
 - Real-user metrics matter too: Largest Contentful Paint and total bytes transferred correlate directly with energy per view.
 
-The LightCMS site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
+The [LightCMS](https://lightcms.me) site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
 
 ## How to Build a Greener Web
 
@@ -61,9 +61,9 @@ The LightCMS site displays a live carbon rating in its footer, using the same me
 5. **Keep content durable**: plain Markdown and open formats mean a site never needs a rebuild from scratch.
 6. **Publish deliberately**: a small, high-value site that people return to beats a sprawling one nobody reads.
 
-## Where LightCMS Fits
+## Where [LightCMS](https://lightcms.me) Fits
 
-LightCMS follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS runs only while you write. No production database serves readers; the CDN does.
+[LightCMS](https://lightcms.me) follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS runs only while you write. No production database serves readers; the CDN does.
 
 - [Static sites vs dynamic sites](/blog/static-vs-dynamic/) covers the architecture in depth.
 - [Top static site hosting platforms](/misc/top-static-site-hosting/) compares where to host sustainably.

@@ -27,7 +27,7 @@ Git answers all three without a writer learning Git.
 
 ## The Draft Stays a Draft
 
-`draft: true` in the front matter is the whole mechanism. When you create or edit a post in LightCMS, the flag lives in the file's front matter, and your SSG skips it during build. The post sits in the repository, reviewable and safe, and never renders on the live site.
+`draft: true` in the front matter is the whole mechanism. When you create or edit a post in [LightCMS](https://lightcms.me), the flag lives in the file's front matter, and your SSG skips it during build. The post sits in the repository, reviewable and safe, and never renders on the live site.
 
 Flip it to `false` on publish and the next build picks it up. No separate "drafts database" can drift from what sits in your repository, and a draft cannot leak because two systems disagree about its state.
 
@@ -37,7 +37,7 @@ Because a draft is just a file, everything else works on it too: it can sit on a
 
 ## Every Save Is a Commit
 
-Each publish in LightCMS creates a commit with a coherent message, which gives you:
+Each publish in [LightCMS](https://lightcms.me) creates a commit with a coherent message, which gives you:
 
 - **Complete history.** Who changed what, and when. No plugin required.
 - **True diffs.** Markdown diffs are readable, unlike rows in a `post_content` column.
@@ -50,7 +50,7 @@ For a solo writer this is invisible infrastructure. For a team, it is the audit 
 
 ## Branches and Pull Requests: Editorial Review, Properly
 
-LightCMS can publish in two modes, and choosing between them is choosing your editorial process:
+[LightCMS](https://lightcms.me) can publish in two modes, and choosing between them is choosing your editorial process:
 
 | Mode | Flow | Best for |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ Every CMS should answer one question fast: **something wrong is live, so how do 
 
 With Git based content the answer is a revert:
 
-1. Open the file's history in GitHub (or LightCMS).
+1. Open the file's history in GitHub (or [LightCMS](https://lightcms.me)).
 2. Choose the last good version.
 3. Revert.
 
@@ -92,7 +92,7 @@ For a small team, the arrangement that tends to stick:
 - **Pull requests for anything editorially sensitive**, direct commits for typo fixes, because requiring review on a comma correction guarantees people will work around the process.
 - **Tag or milestone releases** if you publish on a schedule; a failed deploy can then be traced to a known set of changes.
 
-None of that is configured inside LightCMS. It is standard GitHub practice, which is the point: the CMS inherits a workflow your repository already has.
+None of that is configured inside [LightCMS](https://lightcms.me). It is standard GitHub practice, which is the point: the CMS inherits a workflow your repository already has.
 
 ---
 
@@ -114,7 +114,7 @@ No. A post with `draft: true` is excluded from the build, so it never reaches th
 
 The second commit conflicts, and Git flags it explicitly rather than silently overwriting. For most teams, publishing to a branch and reviewing with a pull request removes the problem before it happens.
 
-### Does LightCMS keep its own copy of my content?
+### Does [LightCMS](https://lightcms.me) keep its own copy of my content?
 
 No. The repository is the source of truth, the same [zero lock-in principle](/blog/what-is-lightcms/) that makes the approach worth choosing.
 

@@ -148,7 +148,7 @@ Subscribe to see Newsy in action:
 
 ## Generate Your Subscription Button
 
-Generate an embedded subscription button for your account at [**newsy.surge.sh**](https://newsy.lightcms.me/).
+Generate an embedded subscription button for your account at [newsy.lightcms.me](https://newsy.lightcms.me/).
 
 You can customize and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
 

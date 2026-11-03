@@ -60,7 +60,7 @@ Read the storage model, not the pricing page. Content in your repository can be 
 
 ## The Picks
 
-### Best overall for publishing: LightCMS
+### Best overall for publishing: [LightCMS](https://lightcms.me)
 
 A self-hosted, Apache 2.0 workspace that commits plain Markdown to GitHub, with a TipTap WYSIWYG editor (math, code highlighting, tables, task lists, drag-and-drop media), an [AI copilot](/blog/lightcms-ai-copilot/), [voice dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) through Newsy, with no email service involved. This is the only option here that treats writing, publishing, and distribution as one loop, and storage stays in your repository. See [what LightCMS is](/blog/what-is-lightcms/) for the full picture.
 
@@ -108,7 +108,7 @@ Yes. That is what Git based CMS tools do. The CMS writes Markdown into your repo
 
 ### What costs money in a free CMS?
 
-Self-hosted, open-source options like LightCMS, Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
+Self-hosted, open-source options like [LightCMS](https://lightcms.me), Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
 
 ### Do I need a database for a blog?
 

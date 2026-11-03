@@ -7,6 +7,11 @@
       "previewPath": null,
       "fields": [
         {
+          "title": "id",
+          "name": "id",
+          "type": "string"
+        },
+        {
           "title": "title",
           "name": "title",
           "type": "string"
@@ -17,70 +22,19 @@
           "type": "string"
         },
         {
-          "title": "sort_by",
-          "name": "sort_by",
+          "title": "author",
+          "name": "author",
           "type": "string"
         },
         {
-          "title": "date",
-          "name": "date",
+          "title": "created",
+          "name": "created",
           "type": "datetime"
         },
         {
-          "title": "draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "weight",
-          "name": "weight",
-          "type": "number"
-        },
-        {
-          "title": "serial",
-          "name": "serial",
-          "type": "number"
-        },
-        {
-          "title": "isCJKLanguage",
-          "name": "isCJKLanguage",
-          "type": "boolean"
-        },
-        {
-          "title": "headless",
-          "name": "headless",
-          "type": "boolean"
-        },
-        {
-          "title": "keywords",
-          "name": "keywords",
-          "type": "choice",
-          "choices": [
-            "static site hosting",
-            "best free hosting",
-            "cloudflare pages",
-            "github pages",
-            "wasmer edge",
-            "vercel",
-            "netlify"
-          ]
-        },
-        {
-          "title": "preview",
-          "name": "preview",
+          "title": "visibility",
+          "name": "visibility",
           "type": "string"
-        },
-        {
-          "title": "taxonomies",
-          "name": "taxonomies",
-          "type": "fields",
-          "fields": [
-            {
-              "title": "tags",
-              "name": "tags",
-              "type": "tags"
-            }
-          ]
         }
       ]
     }

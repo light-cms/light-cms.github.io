@@ -1,7 +1,7 @@
 {%- if config.extra.nav?.auto_hide %}
 	<div id="handle"></div>
 {%- endif %}
-<header id="site-nav">
+<header id="site-nav" data-pagefind-ignore>
 	<nav>
 		<a href="#main-content" tabindex="0">
 			{{ <translate key="skip_to_content" default="Skip to Main Content" language_strings /> }}
@@ -63,9 +63,9 @@
 			{%- endfor -%}
 			{%- if config.build_search_index %}
 				<li id="search">
-					<pagefind-modal-trigger class="circle" title="{{ <translate key="search" default="Search" language_strings /> }}">
+					<a href="{{ get_url(path='@/search.md', lang=lang) }}" class="circle{% if current_url | default(value='/') | safe == get_url(path='@/search.md', lang=lang) | safe %} active{% endif %}" title="{{ <translate key="search" default="Search" language_strings /> }}">
 						<i class="icon"></i>
-					</pagefind-modal-trigger>
+					</a>
 				</li>
 			{%- endif %}
 			{%- if config.languages | length > 0 %}

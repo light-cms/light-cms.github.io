@@ -1,1 +1,37 @@
-{"taxonomy":{"categories":[],"tags":["about","blogging","cloudflare","cms","deployment","free newsletter","github","github-pages","golang","hosting","jamstack","lightcms","modern solution","netlify","newsletter","newsy","opensource","pagescms","postgresql","selfhost","static site","static-sites","svelte","sveltekit","vercel","video","wasmer","webassembly","youtube","zola"]}}
+{
+  "taxonomy": {
+    "categories": [],
+    "tags": [
+      "about",
+      "blogging",
+      "cloudflare",
+      "cms",
+      "deployment",
+      "free newsletter",
+      "github",
+      "github-pages",
+      "golang",
+      "hosting",
+      "jamstack",
+      "lightcms",
+      "modern solution",
+      "netlify",
+      "newsletter",
+      "newsy",
+      "opensource",
+      "pagescms",
+      "postgresql",
+      "selfhost",
+      "static site",
+      "static-sites",
+      "svelte",
+      "sveltekit",
+      "vercel",
+      "video",
+      "wasmer",
+      "webassembly",
+      "youtube",
+      "zola"
+    ]
+  }
+}

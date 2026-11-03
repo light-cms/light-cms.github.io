@@ -19,15 +19,15 @@ taxonomies:
     - lightcms
 ---
 
-Connecting your static site to LightCMS requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
+Connecting your static site to [LightCMS](https://lightcms.me) requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
 
-Follow this guide to structure your repository, install the LightCMS GitHub App, and set up automated deployments.
+Follow this guide to structure your repository, install the [LightCMS](https://lightcms.me) GitHub App, and set up automated deployments.
 
 ---
 
 ## 1. Structure Your Content Repository
 
-LightCMS works natively with any static site generator (SSG) that stores content as Markdown (`.md` or `.mdx`) files with YAML front matter.
+[LightCMS](https://lightcms.me) works natively with any static site generator (SSG) that stores content as Markdown (`.md` or `.mdx`) files with YAML front matter.
 
 A typical repository layout looks like this:
 
@@ -45,7 +45,7 @@ my-blog-repo/
 
 ### Standard Front Matter Header
 
-LightCMS reads and writes YAML front matter metadata at the top of your Markdown files. A standard header includes:
+[LightCMS](https://lightcms.me) reads and writes YAML front matter metadata at the top of your Markdown files. A standard header includes:
 
 ```markdown
 ---
@@ -63,21 +63,21 @@ Your article content begins here...
 
 ---
 
-## 2. Install the LightCMS GitHub App
+## 2. Install the [LightCMS](https://lightcms.me) GitHub App
 
-To allow LightCMS to read your files and commit newly written articles:
+To allow [LightCMS](https://lightcms.me) to read your files and commit newly written articles:
 
-1. Sign in to your LightCMS instance using your GitHub account.
+1. Sign in to your [LightCMS](https://lightcms.me) instance using your GitHub account.
 2. Navigate to your dashboard and click **Connect Repository** (or **Install GitHub App**).
 3. GitHub will prompt you to select which account or organization to install the app on.
 4. You can grant access to **All repositories** or select **Only select repositories** to limit access strictly to your blog repo.
-5. Once authorized, your repository will appear in your LightCMS dashboard.
+5. Once authorized, your repository will appear in your [LightCMS](https://lightcms.me) dashboard.
 
 ---
 
 ## 3. Configure Automated CI/CD Deployments
 
-Every time you hit **Publish** or **Save** in LightCMS, the app commits your updated Markdown file directly to your specified Git branch. To turn those commits into live website updates, configure a GitHub Actions workflow.
+Every time you hit **Publish** or **Save** in [LightCMS](https://lightcms.me), the app commits your updated Markdown file directly to your specified Git branch. To turn those commits into live website updates, configure a GitHub Actions workflow.
 
 ### Example a: Astro Deployment (GitHub Pages / Static Host)
 
@@ -142,7 +142,7 @@ If you are using [Hugo](https://gohugo.io), platforms like **Cloudflare Pages**,
 1. Connect your GitHub repository directly to [Cloudflare Pages](https://pages.cloudflare.com) or [Vercel](https://vercel.com).
 2. Set the build command to `hugo --minify`.
 3. Set the build output directory to `public`.
-4. Whenever LightCMS pushes a new post to `main`, the hosting platform automatically re-generates and deploys your site globally in seconds.
+4. Whenever [LightCMS](https://lightcms.me) pushes a new post to `main`, the hosting platform automatically re-generates and deploys your site globally in seconds.
 
 ---
 
@@ -162,7 +162,7 @@ Several reliable platforms offer generous free tiers for hosting static sites:
 
 Once your repository is configured and CI/CD is in place:
 
-1. Open your LightCMS editor and create a new post.
+1. Open your [LightCMS](https://lightcms.me) editor and create a new post.
 2. Add your content and click **Publish**.
-3. Check the **Actions** tab on your GitHub repository. Your CI/CD workflow runs on the LightCMS commit.
+3. Check the **Actions** tab on your GitHub repository. Your CI/CD workflow runs on the [LightCMS](https://lightcms.me) commit.
 4. Within a minute or two, your new post is live on your website.

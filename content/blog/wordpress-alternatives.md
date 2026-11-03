@@ -85,7 +85,7 @@ WordPress core is maintained, but its exposure (admin panels, plugins, databases
 
 ### What is the closest WordPress replacement for a blogger?
 
-LightCMS with a static site generator: visual editing, one-click publishing, and no database. Keep reading if memberships or paid newsletters are your model, since Ghost handles those natively.
+[LightCMS](https://lightcms.me)with a static site generator: visual editing, one-click publishing, and no database. Keep reading if memberships or paid newsletters are your model, since Ghost handles those natively.
 
 ### Do I lose SEO when leaving WordPress?
 

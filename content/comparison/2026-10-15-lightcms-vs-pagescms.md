@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Pages CMS: Rich Writing vs a Clean Form Over GitHub"
-description: "Pages CMS gives you a tidy form over a GitHub repository; LightCMS gives writers a full visual editor with AI, dictation, and newsletters. A side-by-side comparison."
+description: "LightCMS gives writers a full visual editor with AI, dictation, and newsletters. A complete package."
 serial: 41
 date: 2026-10-15T20:09:55Z
 draft: false
@@ -21,7 +21,7 @@ taxonomies:
 
 [Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well-designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
 
-LightCMS starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **what the person publishing actually experiences**.
+[LightCMS](https://lightcms.me) starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **what the person publishing actually experiences**.
 
 ---
 
@@ -76,7 +76,7 @@ The difference compounds. Publishing frequency is a function of how much frictio
 - You want the smallest possible tool with no additional services running.
 - Your team already works comfortably with Markdown and only needs a GUI for file access.
 
-## When LightCMS Is the Right Call
+## When [LightCMS](https://lightcms.me) Is the Right Call
 
 - The core output is **articles, docs, or newsletters**.
 - Contributors are writers rather than developers.
@@ -86,15 +86,15 @@ The difference compounds. Publishing frequency is a function of how much frictio
 
 ## Migration
 
-Both write Markdown with YAML front matter to GitHub, so moving between them is a configuration change rather than a data migration: connect the repository, map the fields, and your archive comes with you. The existing content in Pages CMS's YAML config becomes LightCMS's in-app field definitions, typically an afternoon's work.
+Both write Markdown with YAML front matter to GitHub, so moving between them is a configuration change rather than a data migration: connect the repository, map the fields, and your archive comes with you. The existing content in Pages CMS's YAML config becomes [LightCMS's](https://lightcms.me) in app field definitions, typically an afternoon's work.
 
 ---
 
 ## Frequently Asked Questions
 
-### Does LightCMS store content outside my repository?
+### Does [LightCMS](https://lightcms.me) store content outside my repository?
 
-No. The repository is the source of truth; LightCMS commits like any other contributor.
+No. The repository is the source of truth; [LightCMS](https://lightcms.me) commits like any other contributor.
 
 ### Is Pages CMS free?
 
