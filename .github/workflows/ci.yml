@@ -143,9 +143,6 @@ jobs:
               ;;
           esac
           
-  publish:
-    runs-on: ubuntu-latest
-    steps:
       - name: Publish or update feed items
         uses: light-cms/dev-dot-to@main
         with:
