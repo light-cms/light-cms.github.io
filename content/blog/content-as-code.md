@@ -4,7 +4,7 @@ description: >-
   Content as code means storing writing as plain text in a repository, reviewed
   and deployed like software, with the workflow benefits and the real
   limitations.
-date: '2026-10-16T11:30:00Z'
+date: '2026-11-04T19:22:00Z'
 draft: false
 keywords:
   - content as code
@@ -47,7 +47,7 @@ Once those hold, most of the benefits follow automatically.
 
 ---
 
-## What You Inherit From Software Practice
+### What You Inherit From Software Practice
 
 ### Review that means something
 
@@ -69,9 +69,7 @@ Two writers on two files merge cleanly. Conflicts are rare by construction, beca
 
 Every clone is a complete copy. Moving platforms is a `git clone` away from succeeding.
 
----
-
-## Where It Gets Hard
+### Where It Gets Hard
 
 The honest list, because this is not free:
 
