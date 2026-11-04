@@ -1,8 +1,10 @@
 ---
-title: "Content as Code: Treating Writing Like Source"
-description: "Content as code means storing writing as plain text in a repository, reviewed and deployed like software, with the workflow benefits and the real limitations."
-serial: 47
-date: 2026-10-16T11:30:00Z
+title: 'Content as Code: Treating Writing Like Source Code'
+description: >-
+  Content as code means storing writing as plain text in a repository, reviewed
+  and deployed like software, with the workflow benefits and the real
+  limitations.
+date: '2026-10-16T11:30:00Z'
 draft: false
 keywords:
   - content as code
@@ -10,6 +12,15 @@ keywords:
   - content in git
   - markdown workflow
   - version controlled content
+tags:
+  - Content
+  - Frontmatter
+  - Docs
+  - Markdown
+  - Lightcms
+isCJKLanguage: false
+headless: false
+serial: 47
 preview: /og-image.png
 taxonomies:
   tags:
@@ -18,7 +29,6 @@ taxonomies:
     - cms
     - explainers
 ---
-
 **Content as code** is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
 
 "Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
@@ -40,18 +50,23 @@ Once those hold, most of the benefits follow automatically.
 ## What You Inherit From Software Practice
 
 ### Review that means something
+
 A pull request on a document gives line-level comments on the exact sentence, an explicit approve, and a merge. Editorial review happens in the pull request instead of an email thread with attachments.
 
 ### History that answers questions
+
 `git log` on a file shows every change, author, and timestamp. "When did we change the pricing claim?" is a search, not an investigation.
 
 ### Automation
+
 Spelling, link checking, style rules, front matter validation, and preview builds all run on the same CI that builds code. Broken metadata fails the pipeline instead of the live site.
 
 ### Parallel work
+
 Two writers on two files merge cleanly. Conflicts are rare by construction, because the unit of content is a file.
 
 ### Backup and portability
+
 Every clone is a complete copy. Moving platforms is a `git clone` away from succeeding.
 
 ---
