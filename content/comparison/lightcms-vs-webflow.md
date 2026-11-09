@@ -80,8 +80,8 @@ Webflow exports HTML/CSS for design, and CMS items can be exported to CSV. Movin
 
 ## Which Should You Choose?
 
-- **Choose Webflow** when visual design and instant publishing matter more than code ownership.
-- **Choose LightCMS** when the site is code you own and content is what changes daily.
+- **Choose Webflow** When visual design and instant publishing matter more than code ownership.
+- **Choose LightCMS** When the site is code you own and content is what changes daily.
 
 ---
 
