@@ -18,13 +18,17 @@ keywords:
   - vercel
   - netlify
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - cloudflare
-    - github-pages
-    - hosting
-    - jamstack
-    - static-sites
+tags:
+  - static site
+  - hosting
+  - static hosting
+  - lightcms
+  - cloudflare pages
+  - vercel
+  - netlify
+  - opensource
+  - blog
+  - documentation
 slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
 ## Introduction
