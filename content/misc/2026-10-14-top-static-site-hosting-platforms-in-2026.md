@@ -66,7 +66,7 @@ GitHub Pages is the go-to platform for hosting personal portfolios, documentatio
 - **Direct Repository Serving**: Deploy from your main branch, a `/docs` folder, or GitHub Actions workflows
 - **Automatic SSL**: Simple CNAME mapping with automatic Let's Encrypt certificate management
 - **Zero Configuration**: No third-party accounts, billing information, or webhooks required
-- **Jekyll Integration**: built in support for Jekyll static site generation
+- **Jekyll Integration**: Built in support for Jekyll static site generation
 
 #### Pros
 
@@ -159,7 +159,7 @@ Vercel pioneered the modern frontend deployment experience and continues to set 
 - **Zero-Config Framework Support**: Native optimization for Next.js, SvelteKit, Astro, Nuxt, and Vite with no configuration required
 - **Collaborative Preview Comments**: Add inline comments and annotations directly on live branch preview deployments
 - **Edge Middleware**: Lightweight geolocation routing, A/B testing, and authentication checks at the edge
-- **Automatic Image Optimization**: built in image optimization and responsive serving
+- **Automatic Image Optimization**: Built in image optimization and responsive serving
 - **Analytics &amp; Monitoring**: Real-time performance insights and Web Vitals tracking
 
 #### Pros
@@ -253,11 +253,11 @@ TypeScript developers building edge-native applications who value modern web sta
 
 Each platform excels in different scenarios:
 
-- **Choose GitHub Pages** for open-source projects and personal portfolios already on GitHub
-- **Choose Cloudflare Pages** for high-traffic sites needing unlimited bandwidth and edge speed
+- **Choose GitHub Pages** For open-source projects and personal portfolios already on GitHub
+- **Choose Cloudflare Pages** For high-traffic sites needing unlimited bandwidth and edge speed
 - **Choose Wasmer Edge** for WebAssembly-powered interactive applications
 - **Choose Vercel** for Next.js/React projects prioritizing developer experience
-- **Choose Netlify** for sites needing built in forms, identity, and serverless functions
-- **Choose Deno Deploy** for TypeScript-first edge applications with modern web APIs
+- **Choose Netlify** For sites needing built-in forms, identity, and serverless functions
+- **Choose Deno Deploy** For TypeScript-first edge applications with modern web APIs
 
 Consider your traffic expectations, framework choice, required backend services, and budget when making your decision. Most platforms offer generous free tiers, so you can experiment before committing.
