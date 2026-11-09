@@ -237,7 +237,7 @@ Deno Deploy executes JavaScript, TypeScript, and static assets at the edge using
 - Clean JavaScript and TypeScript ergonomics
 - Fast deployment process
 - Modern web standard APIs (no Node.js legacy baggage)
-- built in edge storage with Deno KV
+- Built in edge storage with Deno KV
 - No transpilation needed for TypeScript
 
 #### Cons
