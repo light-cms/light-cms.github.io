@@ -19,7 +19,7 @@ taxonomies:
     - static-sites
 slug: start-with-a-lightcms-template
 ---
-Have you read 10 different blogs about which ssg to choose and why?
+Have you read 10 different blogs about which SSG to choose and why?
 
 [LightCMS](https://lightcms.me) Covers you all, by default lightcms is vendor neutral,
 and we provide a lot of starter templates to make your journey setting up smoother.
