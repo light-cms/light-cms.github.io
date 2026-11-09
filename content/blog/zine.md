@@ -53,7 +53,7 @@ Your build pipeline runs but zine only knows [Ziggy](https://ziggy-lang.io/) so 
 
 
 
-By the way you have to create two repositories one will contain content and other will be containing front end.
+By the way you have to create two repositories one will contain content and other will be containing frontend.
 
 [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site)  &lt;-- repo containing front end 
 
