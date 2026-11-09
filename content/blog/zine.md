@@ -55,11 +55,11 @@ Your build pipeline runs but zine only knows [Ziggy](https://ziggy-lang.io/) so 
 
 By the way you have to create two repositories one will contain content and other will be containing frontend.
 
-[https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site)  &lt;-- repo containing front end 
+[https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site)  &lt;– repo containing frontend 
 
 
 
-[https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md) &lt;--- repo containing content 
+[https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md) &lt;— repo containing content 
 
 we have to call repository dispatch when ever something gets pushed into the content repo.
 
