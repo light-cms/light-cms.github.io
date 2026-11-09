@@ -1,8 +1,10 @@
 ---
-title: "LightCMS vs Webflow: Visual Building vs Markdown in Git"
-description: "Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based editor for developer-owned sites. Where each approach wins for content teams."
+title: 'LightCMS vs Webflow: Visual Building vs Markdown in Git'
+description: >-
+  Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based
+  editor for developer-owned sites. Where each approach wins for content teams.
 serial: 57
-date: 2026-10-16T13:10:00Z
+date: '2026-10-16T13:10:00.000Z'
 draft: false
 keywords:
   - lightcms vs webflow
@@ -11,17 +13,12 @@ keywords:
   - webflow vs static site generator
   - webflow pricing alternatives
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - lightcms
-    - webflow
-    - cms
-    - comparison
+taxonomies: []
+slug: lightcms-vs-webflow
 ---
+[Webflow](https://webflow.com) Dominates a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that promise is real and hard to beat.
 
-[Webflow](https://webflow.com) dominates a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that promise is real and hard to beat.
-
-LightCMS starts from a different constraint: **the code is owned by developers, the content by writers**. It solves only the second half, and solves it well.
+LightCMS starts from a different constraint: **The code is owned by developers, the content by writers**. It solves only the second half, and solves it well.
 
 ---
 
@@ -29,18 +26,20 @@ LightCMS starts from a different constraint: **the code is owned by developers, 
 
 **Webflow** is a design tool with a CMS attached: a visual canvas, CSS generated from your interactions, a hosted CMS with collection fields, and publishing on Webflow's infrastructure. It replaces the developer for front-end production.
 
-**LightCMS** assumes the front end already exists (an SSG in a repository, built by your pipeline) and replaces the code editor *for content*: writers publish Markdown through a visual editor.
+**LightCMS** Assumes the frontend already exists (an SSG in a repository, built by your pipeline) and replaces the code editor *for content*: Writers publish Markdown through a visual editor.
 
-| | LightCMS | Webflow |
-| :--- | :--- | :--- |
-| **Design** | Your code, your templates | Visual canvas, exported CSS |
-| **Content storage** | Markdown in your repository | Webflow's hosted CMS |
-| **Output** | Static files on your host | Static files on Webflow |
-| **Editing** | Document editor → Markdown | Form fields bound to collections |
-| **Version control** | Git history, diffs, PR review | Version history, no Git |
-| **Lock-in** | None: files you own | Design and content inside Webflow |
-| **Cost** | Hosting only | Site plans by tier and traffic |
-| **Code ownership** | Complete | Exportable, but designed in Webflow |
+
+|                     | LightCMS                      | Webflow                             |
+| :------------------- | :----------------------------- | :----------------------------------- |
+| **Design**          | Your code, your templates     | Visual canvas, exported CSS         |
+| **Content storage** | Markdown in your repository   | Webflow's hosted CMS                |
+| **Output**          | Static files on your host     | Static files on Webflow             |
+| **Editing**         | Document editor → Markdown    | Form fields bound to collections    |
+| **Version control** | Git history, diffs, PR review | Version history, no Git             |
+| **Lock-in**         | None: files you own           | Design and content inside Webflow   |
+| **Cost**            | Hosting only                  | Site plans by tier and traffic      |
+| **Code ownership**  | Complete                      | Exportable, but designed in Webflow |
+
 
 ---
 
@@ -94,7 +93,7 @@ Yes. Webflow includes a hosted CMS with collections and fields alongside its des
 
 ### Is LightCMS a website builder?
 
-No. LightCMS manages content for a site built with a static site generator; design lives in your templates.
+1. LightCMS manages content for a site built with a static site generator; design lives in your templates.
 
 ### Can I export from Webflow?
 
