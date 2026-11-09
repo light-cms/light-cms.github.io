@@ -107,6 +107,4 @@ Both produce static, fast pages. The difference is content quality and site stru
 
 Once, to set up the repository and build. After that, publishing is a browser activity.
 
----
-
 More: [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [best static site generators](/blog/best-static-site-generators/), [static site hosting compared](/misc/top-static-site-hosting/).
