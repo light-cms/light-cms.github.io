@@ -47,7 +47,7 @@ For a personal website with a blog (the project's stated comfort zone), Zine is 
 
 Zine don't consumes Markdown (common mark) content with front matter like every modern static site generator, which means the Git based CMS workflow don't applies for zine directly.
 
-Your build pipeline runs but zine only knows [Ziggy](https://ziggy-lang.io/) so errors out but is there a way/workaround answer is yes [md2smd](https://github.com/Pratyay360/md2smd) is a cli tool which tries to bridge the specification between [common mark](https://commonmark.org/) and the specification of [scripty](https://zine-ssg.io/docs/scripty/) [smd](https://zine-ssg.io/docs/supermd/) and [ziggy](https://ziggy-lang.io/) as closely as possible.
+Your build pipeline runs but zine only knows [Ziggy](https://ziggy-lang.io/) so errors out but is there a way/work around answer is yes [md2smd](https://github.com/Pratyay360/md2smd) is a cli tool which tries to bridge the specification between [common mark](https://commonmark.org/) and the specification of [scripty](https://zine-ssg.io/docs/scripty/) [smd](https://zine-ssg.io/docs/supermd/) and [ziggy](https://ziggy-lang.io/) as closely as possible.
 
 ![](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png "Zine build pipeline")
 
