@@ -63,7 +63,7 @@ LightCMS starts from a different constraint: **The code is owned by developers, 
 
 ## The Decision Test
 
-Ask who owns the front end:
+Ask who owns the frontend:
 
 - **Designers and marketers own it, and there is no developer** → Webflow is likely the right call. Do not adopt a build pipeline you will not maintain.
 - **Developers own it, writers fill it** → LightCMS fits: engineers keep the repository and the pipeline, writers get an editor, and neither side works in the other's tool.
