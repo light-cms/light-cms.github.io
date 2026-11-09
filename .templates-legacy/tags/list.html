@@ -13,7 +13,7 @@ comparisons, grouped by topic.{% endblock og_description %}
 		"@context": "https://schema.org",
 		"@type": "CollectionPage",
 		"name": {{ config.title | json_encode() | safe }},
-		"description": "Every LightCMS post on static sites, Git based content, Markdown publishing, and hosting comparisons, grouped by topic.",
+		"description": "Every LightCMS post on static site, Git based content, Markdown publishing, and hosting comparisons, grouped by topic.",
 		"url": {{ config.base_url | json_encode() | safe }},
 		"inLanguage": "en",
 		"isPartOf": { "@type": "WebSite", "name": {{ config.title | json_encode() | safe }}, "url": {{ config.base_url | json_encode() | safe }} }

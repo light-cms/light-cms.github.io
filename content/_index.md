@@ -3,7 +3,7 @@ title = "Getting Started with LightCMS"
 description = "Learn how git native workflow works with lightcms. "
 +++
 
-### [LightCMS](https://lightcms.me) Is a Git Based Content Management System for Static Sites
+## [LightCMS](https://lightcms.me) Is a Git Based Content Management System for Static Sites
 
 **Posts are stored as markdown files and they stays in repository.** Every draft and post lives as Markdown with frontmatter schema.
 

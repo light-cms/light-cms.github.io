@@ -1,89 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ page.title }}</h1>
-{%- if page.description -%}
-<p>{{ page.description }}</p>
-{%- endif -%}
+<header class="page-header search-header">
+	<h1>{{ page.title }}</h1>
+	{%- if page.description %}<p>{{ page.description }}</p>{% endif %}
+</header>
 
-<div id="search-container">
-    <pagefind-input autofocus placeholder="{{ <translate key="search_for" default="Search for" language_strings /> }}…"></pagefind-input>
-    <pagefind-summary></pagefind-summary>
-    <pagefind-results></pagefind-results>
-</div>
-
-<style>
-    #search-container {
-        margin: 2rem 0;
-        --pf-background: var(--bg-color, #fff);
-        --pf-text: var(--fg-color, #1a1a1a);
-        --pf-text-secondary: var(--fg-muted-5, #666);
-        --pf-text-muted: var(--fg-muted-4, #767676);
-        --pf-border: var(--fg-muted-2, #e0e0e0);
-        --pf-border-focus: var(--accent-color, #999);
-        --pf-hover: var(--fg-muted-1, #f5f5f5);
-        --pf-mark: var(--accent-color, #1a1a1a);
-        --pf-font: inherit;
-    }
-
-    #search-container pagefind-input {
-        display: block;
-        margin-bottom: 1.25rem;
-    }
-
-    #search-container pagefind-summary {
-        display: block;
-        margin-bottom: 1.5rem;
-    }
-
-    #search-container .pf-input-wrapper {
-        border-radius: var(--rounded-corner, 8px);
-    }
-
-    #search-container .pf-input {
-        height: 44px;
-        font-size: 1.05rem;
-        background: var(--pf-background);
-        border: 1px solid var(--pf-border);
-        border-radius: var(--rounded-corner, 8px);
-        color: var(--pf-text);
-        transition: border-color var(--transition, 0.2s), box-shadow var(--transition, 0.2s);
-    }
-
-    #search-container .pf-input:focus-visible {
-        border-color: var(--pf-border-focus);
-        outline: none;
-        box-shadow: 0 0 0 2px color-mix(in srgb, var(--pf-border-focus) 30%, transparent);
-    }
-
-    #search-container .pf-result-card {
-        border-radius: var(--rounded-corner, 8px);
-        margin-bottom: 1rem;
-        border: 1px solid var(--pf-border);
-        background: var(--pf-background);
-        transition: border-color var(--transition, 0.2s), box-shadow var(--transition, 0.2s);
-    }
-
-    #search-container .pf-result-card:hover {
-        border-color: var(--pf-border-focus);
-    }
-
-    #search-container .pf-result-link {
-        color: var(--accent-color, var(--pf-text));
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    #search-container .pf-result-link:hover {
-        text-decoration: underline;
-    }
-
-    #search-container mark {
-        background-color: color-mix(in srgb, var(--accent-color, #6f8396) 25%, transparent);
-        color: inherit;
-        border-radius: 2px;
-        padding: 0.05em 0.2em;
-    }
-</style>
-
+<section id="search-container" aria-label="Site search">
+	<pagefind-input autofocus placeholder="{{ <translate key='search_for' default='Search for' language_strings /> }}…"></pagefind-input>
+	<pagefind-summary aria-live="polite"></pagefind-summary>
+	<pagefind-results></pagefind-results>
+	<noscript><p class="error-state">Search needs JavaScript. Use the Blog or Comparisons pages to browse the archive.</p></noscript>
+</section>
 {% endblock content %}

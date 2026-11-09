@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="home-intro">
+	<div class="home-title-group">
+		<p class="home-edition">{{ config.extra.brand | default(value="LightCMS Journal") }}</p>
+		<h1>{{ section.title }}</h1>
+	</div>
+	{%- if section.description %}
+	<p class="home-summary">{{ section.description }}</p>
+	{%- endif %}
+</header>
+
+<div class="home-copy">
+	{{ section.content | safe }}
+</div>
+
+{%- set blog = get_section(path="blog/_index.md") -%}
+{%- if blog.pages %}
+<section class="latest-writing" aria-labelledby="latest-writing-title">
+	<div class="section-heading">
+		<h2 id="latest-writing-title">Latest writing</h2>
+		<a href="{{ blog.permalink | safe }}">Browse all articles</a>
+	</div>
+	<ol class="latest-list">
+		{%- for post in blog.pages %}
+		{%- if loop.index <= 5 %}
+		<li>
+			{%- if post.date %}
+			<time datetime="{{ post.date | date(format='%Y-%m-%d') }}">{{ post.date | date(format='%b %d, %Y') }}</time>
+			{%- endif %}
+			<div>
+				<h3><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h3>
+				{%- if post.description %}<p>{{ post.description }}</p>{% endif %}
+				{%- set views_path = post.path %}
+				{%- include "partials/view-count.html" %}
+			</div>
+		</li>
+		{%- endif %}
+		{%- endfor %}
+	</ol>
+</section>
+{%- endif %}
+{% endblock content %}

@@ -19,92 +19,76 @@ taxonomies:
     - workflow
 ---
 
-The fastest way to make a writing tool unpopular is to fill it with generated text nobody asked for. The [LightCMS](https://lightcms.me) AI copilot is built on the opposite premise: **the model assists inside your workflow, and you remain the author.**
+The quickest way to make a writing tool unpopular is to fill it with generated text you did not ask for. The [LightCMS](https://lightcms.me) AI copilot works differently: the model helps, and you keep ownership of the draft.
 
-It is not a chat window bolted onto a CMS. It is a set of contextual actions sitting next to the text you are already editing.
+It is not a chat window. It is a set of actions that work with the text you are already editing.
 
----
+## What it does
 
-## What It Actually Does
+Select a paragraph, or select nothing, and the copilot gives you four options:
 
-Select a paragraph, or nothing at all, and the copilot offers the four things writers repeatedly do:
+- **Outline**: Turn a topic into a structure you can accept, reorder, or delete.
+- **Rephrase**: Rewrite the same idea in a different tone. You can tighten a long sentence, make a note more formal, or soften a harsh line.
+- **Expand**: Turn a short idea into a fuller draft when you know what to say but not how much to write.
+- **Fix grammar**: Clean up punctuation, grammar, and typos before you publish.
 
-- **Outline**: turn a topic into a structured skeleton of sections and bullets you can accept, reorder, or delete.
-- **Rephrase**: same meaning, different register. Tighten a rambling sentence, make a casual note more formal, or soften a blunt one.
-- **Expand**: take a compressed idea and pull it out into a full draft, useful when you know what you want to say but not how long to say it.
-- **Fix grammar**: punctuation, agreement, stray typos. The unglamorous pass that happens right before publish.
+Every result appears in the document as editable text. You can accept it, change it, or undo it. Nothing is saved until you publish, and nothing is published until you have read it.
 
-Every result lands in the document as editable text. Accept it, tweak it, or undo it. Nothing is committed until you publish, and nothing is published that you did not read.
+## Bring your own model
 
----
+LightCMS works with any OpenAI-compatible endpoint.
 
-## Bring Your Own Model
-
-[LightCMS](https://lightcms.me) talks to any **OpenAI-compatible** endpoint, which covers a wide field without a proprietary wrapper:
-
-| Provider | Why people pick it |
+| Provider | Why people choose it |
 | :--- | :--- |
-| **OpenAI** | Broadest capability, familiar models |
-| **OpenRouter** | One key, many models, easy switching |
-| **Groq** | Very fast inference, generous free tier |
-| **NVIDIA NIM** | Self-hostable and GPU-friendly endpoints |
+| **OpenAI** | Familiar models with broad capability |
+| **OpenRouter** | One key for many models, with easy switching |
+| **Groq** | Fast inference and a free tier |
+| **NVIDIA NIM** | Endpoints you can run yourself, including GPU-friendly setups |
 
-Because the interface is the standard `/v1/chat/completions` shape, anything else exposing it (a local model behind an OpenAI-compatible proxy, an internal gateway, a corporate endpoint) works too.
+Because LightCMS uses the standard `/v1/chat/completions` format, other compatible endpoints can work too. That includes a local model behind an OpenAI-compatible proxy, a private gateway, or a company endpoint.
 
-Practically, this means your API key lives in **your** instance of [LightCMS](https://lightcms.me). Your drafting data goes to the provider you configured, under the account you control. For a self-hosted, Apache-licensed tool, that is the only arrangement worth having.
+Your API key stays in your LightCMS instance. The text you send for a copilot action goes to the provider you configured. For a self-hosted, Apache-licensed tool, that control matters.
 
----
+## Why it lives in the editor
 
-## Why It Lives in the Editor, Not a Sidebar Chat
+A chat can produce long, generic text that you still need to paste, format, and rewrite. Contextual actions avoid that problem.
 
-Long conversations with a model tend to produce long, generic prose that then has to be pasted, formatted, and de-AI-ified. Contextual actions avoid that failure mode:
+- **Small scope**: Rephrasing a paragraph has a clear result. "Write me a blog post" does not.
+- **Formatting stays intact**: The copilot works inside the editor, so lists stay lists and front matter stays untouched.
+- **Fast iteration**: If you do not like the result, regenerate the selected text instead of the whole document.
 
-1. **Scope is small.** "Rephrase this paragraph" has a bounded, verifiable result. "Write me a blog post" does not.
-2. **Formatting is preserved.** The copilot operates inside the editor's schema, so a rewrite of a bulleted list stays a bulleted list, and front matter is never touched.
-3. **Iteration is fast.** Dislike the result? Regenerate the selection, not the document.
+This makes AI feel like a set of small edits, closer to how a copy editor works.
 
-The practical effect is that AI becomes a set of micro-edits woven into your normal pass, the way a good copyeditor works minus the scheduling.
+## Use it responsibly
 
----
+- **Write the voice yourself**: Use outlines and expansions as starting points, then keep the sentences that sound like you.
+- **Check the facts**: The model does not know your codebase, your product, or your numbers.
+- **Keep secrets out of prompts**: Anything you send to a provider is visible to that provider.
 
-## A Responsible Default
+LightCMS saves only what you approve. It does not generate content in the background, store drafts on LightCMS servers, or use your drafts for training.
 
-A few habits the workflow encourages:
+## When it helps most
 
-- **Generate structure, write voice.** Outlines and expansions are starting points; the sentences that sound like you are the ones you keep.
-- **Verify claims.** The model does not know your codebase, your product, or your numbers. Facts remain your job.
-- **Keep secrets out of prompts.** Anything you send to a provider is visible to that provider, so treat prompts like any third-party service.
-
-[LightCMS](https://lightcms.me) commits whatever you finally approve. There is no silent background generation, no content stored on a [LightCMS](https://lightcms.me) server, and no training loop attached to your drafts.
-
----
-
-## When the Copilot Earns Its Keep
-
-- **Cold starts**: an outline converts a blank page into a list you disagree with, and disagreement is much easier to write against than emptiness.
-- **Rewrites at the end**: tighten the intro after the piece is done, when you finally know what it is about.
-- **Grammar passes**: the last five minutes before publish, when your eyes stop seeing commas.
-
----
+- **Getting started**: An outline turns a blank page into a draft you can react to.
+- **Rewriting at the end**: Tighten the introduction after you know what the post says.
+- **Final cleanup**: Run a grammar pass in the last few minutes before publishing.
 
 ## Frequently Asked Questions
 
 ### Do I need an API key?
 
-To use the copilot, yes: you configure a provider in your [LightCMS](https://lightcms.me) instance. Everything else in the editor works without one.
+Yes, to use the copilot you need to configure a provider in your LightCMS instance. Everything else in the editor works without an API key.
 
-### Is my content used to train models?
+### Will my content be used to train models?
 
-No. [LightCMS](https://lightcms.me) sends only the text you explicitly select for an action, to the endpoint you configured. Your repository and drafts are not shipped anywhere else.
+No. LightCMS sends only the text you select for an action to the endpoint you configured. It does not send your repository or drafts anywhere else.
 
 ### Can I use a local model?
 
-If it exposes an OpenAI-compatible API, yes. Point [LightCMS](https://lightcms.me) at the local endpoint and the copilot works the same way.
+Yes. If the model exposes an OpenAI-compatible API, point LightCMS at that endpoint and the copilot works the same way.
 
-### Will it rewrite my front matter?
+### Will it change my front matter?
 
-No. Copilot actions are scoped to the selected body content; metadata is untouched.
+No. Copilot actions affect only the content you select.
 
----
-
-Paired with [voice-to-text](/blog/lightcms-voice-to-text/), the copilot covers the two halves of drafting: getting words out quickly, and getting them into shape.
+Paired with [voice-to-text](/blog/lightcms-voice-to-text/), the copilot helps with both sides of drafting: getting words down quickly and shaping them into a publishable post.

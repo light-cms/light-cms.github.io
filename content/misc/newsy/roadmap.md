@@ -13,22 +13,20 @@ headless: false
 
 ---
 
-In the future, i have some plans to add things like
-~~db support which decreases the need for self-hosting.~~
+Newsy already supports a shared instance and stores only the installation ID in its database.
 
-~~and sharing one instance with multiple users.~~
+## Use the hosted instance
 
-These two are done now you can use one instance with multiple users .. db is there just to store the installation id.
+You can try the hosted instance at [https://newsy.lightcms.me](https://newsy.lightcms.me).
 
-## [To use the hosted instance of newsy kindly visit: https://newsy.lightcms.me/](https://newsy.lightcms.me)
+## Deploy your own instance
 
-Or you can deploy your own instance on vercel
+Deploy your own copy on Vercel:
 
-![Deployed on Vercel](https://shieldcn.dev/badge/Deployed%20on-Vercel-000000.svg?logo=vercel&logoColor=fff&variant=branded)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy&env=DATABASE_URL&project-name=newsy&repository-name=newsy)
 
-Currently, I am using the hobby tier of Vercel which accounts for a limited  
-number of function invocations per month so can't afford uptime for everyone.
+The hosted instance runs on Vercel's hobby tier, so uptime and function-invocation limits may apply.
 
-Kindly support my work if any of my work has helped you in any way (at least you can star the repo).
+If Newsy has been useful, starring the [repository](https://github.com/light-cms/newsy) helps.
 
 [![UPI Pay](https://github.com/inulute/upi/raw/main/assets/upi.svg)](https://upi.pratyay.online)

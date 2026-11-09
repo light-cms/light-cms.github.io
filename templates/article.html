@@ -1,201 +1,118 @@
 {% extends "base.html" %}
 
 {% block content %}
-{%- set date_format =
-<translate key="date_format" default="%B %d, %Y" language_strings /> -%}
+{%- set date_format = <translate key="date_format" default="%B %d, %Y" language_strings /> -%}
+<article class="article-page">
+	{%- if page?.extra?.banner %}
+	<figure class="article-banner">
+		<img src="{{ current_url ~ page.extra.banner }}"
+			alt="{{ page.extra.banner_alt | default(value=page.title) }}"
+			width="{{ page.extra.banner_width | default(value=1600) }}"
+			height="{{ page.extra.banner_height | default(value=800) }}"
+			fetchpriority="high" />
+	</figure>
+	{%- endif %}
 
-{%- if page?.extra?.toc_ordered or section?.extra?.toc_ordered or config.extra?.toc_ordered -%}
-{%- set list_element = "ol" -%}
-{%- else -%}
-{%- set list_element = "ul" -%}
-{%- endif -%}
-
-<article>
-	{%- if page?.extra?.banner -%}
-	<div id="banner-container">
-		<img id="banner" class="full-bleed{% if page.extra.banner_pixels %} pixels{% endif %}"
-			src="{{ current_url ~ page.extra.banner }}" {% if config.markdown?.lazy_async_image %}decoding="async"
-			loading="lazy" {% endif %} />
-	</div>
-	{%- endif -%}
-
-	<div id="heading">
-		{%- if page.date -%}
-		<p>
-			<small>
-				<time datetime="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S') }}">
-					{{-
-					<translate key="published" default="Published on" language_strings /> }}
-					{{ page.date | date(format=date_format) -}}
-				</time>
-				{%- if page.updated -%}
-				<span> {{ config.extra?.separator | default(value="•") }} </span>
-				<time datetime="{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S') }}">
-					{{-
-					<translate key="updated" default="Updated on" language_strings /> }}
-					{{ page.updated | date(format=date_format) -}}
-				</time>
-				{%- endif -%}
-			</small>
+	<header id="heading" class="article-header">
+		{%- if page.date %}
+		<p class="article-date">
+			<time datetime="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S') }}">{{ page.date | date(format=date_format) }}</time>
+			{%- if page.updated %}
+			<span aria-hidden="true">/</span>
+			<span>Updated <time datetime="{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S') }}">{{ page.updated | date(format=date_format) }}</time></span>
+			{%- endif %}
+			{%- set views_path = page.path %}
+			{%- include "partials/view-count.html" %}
 		</p>
-		{%- endif -%}
+		{%- endif %}
 
 		<h1>{{ page.title }}</h1>
+		{%- if page.description %}<p class="article-dek">{{ page.description }}</p>{% endif %}
 
-		{%- if page.authors or config.extra?.show_reading_time -%}
-		<p>
-			<small>
-				{%- if page.authors -%}
-				<span>{% include "partials/authors.html" -%}</span>
-				{%- if config.extra?.show_reading_time -%}
-				<span> {{ config.extra?.separator | default(value="•") }} </span>
-				{%- endif -%}
-				{%- endif -%}
-
-				{%- if config.extra?.show_reading_time -%}
-				<span>{{
-					<translate key="minutes_read" number={page.reading_time} default="$NUMBER minute read"
-						language_strings /> }}
-				</span>
-				{%- if page?.taxonomies -%}
-				<span> {{ config.extra?.separator | default(value="•") }} </span>
-				{%- endif -%}
-				{%- endif -%}
-			</small>
-		</p>
-		{%- endif -%}
-
-		{%- if page?.taxonomies -%}
-		{%- for name, taxon in page.taxonomies %}
-		<ul class="tags">
-			<a class="tag" href="{{- get_url(path=name, lang=lang) -}}">{{
-				<translate key={name} default={name} language_strings /> }}:
-			</a>
-			{%- for item in taxon -%}
-			<li><a class="tag" href="{{ get_taxonomy_url(kind=name, term=item, lang=lang) }}">{{ item }}</a></li>
-			{%- endfor %}
-		</ul>
-		<br />
-		{%- endfor -%}
+		{%- if page.authors or config.extra?.show_reading_time %}
+		<div class="article-byline">
+			{%- if page.authors %}<span>{% include "partials/authors.html" %}</span>{% endif %}
+			{%- if config.extra?.show_reading_time %}<span>{{ page.reading_time }} minute read</span>{% endif %}
+		</div>
 		{%- endif %}
+
+		{%- if page?.taxonomies %}
+		<div class="article-taxonomies">
+			{%- for name, taxon in page.taxonomies %}
+			<ul class="tags" aria-label="{{ name | capitalize }}">
+				{%- for item in taxon %}<li><a class="tag" href="{{ get_taxonomy_url(kind=name, term=item, lang=lang) }}">{{ item }}</a></li>{% endfor %}
+			</ul>
+			{%- endfor %}
+		</div>
+		{%- endif %}
+	</header>
+
+	{%- if page?.extra?.toc and page.toc | length > 0 %}
+	<details class="article-toc closable">
+		<summary>On this page</summary>
+		<nav aria-label="Table of contents">
+			<ul>
+				{%- for heading in page.toc %}
+				<li>
+					<a href="{{ heading.permalink | safe }}">{{ heading.title }}</a>
+					{%- if heading.children %}
+					<ul>{%- for child in heading.children %}<li><a href="{{ child.permalink | safe }}">{{ child.title }}</a></li>{% endfor %}</ul>
+					{%- endif %}
+				</li>
+				{%- endfor %}
+			</ul>
+		</nav>
+	</details>
+	{%- endif %}
+
+	<div class="article-body">
+		{{ page.content | safe }}
 	</div>
 
-	<div id="buttons-container">
-		{%- if page?.extra?.toc and page.toc | length > 0 -%}
-		<details id="toc" class="closable">
-			<summary title="{{ <translate key=" table_of_contents" default="Table of Contents" language_strings />
-			}}"><i class="icon"></i></summary>
-			<div>
-				<strong class="title">{{
-					<translate key="table_of_contents" default="Table of Contents" language_strings /> }}
-				</strong>
-				<div>
-					<{{ list_element }}>
-						{%- for h1 in page.toc -%}
-						<li>
-							<a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-							{%- if h1.children -%}
-							<{{ list_element }}>
-								{%- for h2 in h1.children -%}
-							<li>
-								<a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-							</li>
-							{%- endfor -%}
-							</{{ list_element }}>
-							{%- endif -%}
-						</li>
-						{%- endfor -%}
-					</{{ list_element }}>
-				</div>
-			</div>
-		</details>
-		{%- endif -%}
-		{%- if config.extra?.show_backlinks and page?.backlinks | length > 0 -%}
-		<details id="backlinks" class="closable">
-			<summary title="{{ <translate key=" backlinks" default="Backlinks" language_strings /> }}"><i
-				class="icon"></i></summary>
-			<div>
-				<strong class="title">{{
-					<translate key="backlinks" default="Backlinks" language_strings /> }}
-				</strong>
-				<div>
-					<ul>
-						{%- for backlink in page.backlinks -%}
-						<li>
-							<a href="{{ backlink.permalink }}">{{ backlink.title }}</a>
-						</li>
-						{%- endfor -%}
-					</ul>
-				</div>
-			</div>
-		</details>
-		{%- endif -%}
-		<a id="go-to-top" href="#top" title="{{ <translate key=" go_to_top" default="Go to Top" language_strings />
-		}}"><i class="icon"></i></a>
-		{%- if config.extra?.show_share_button -%}
-		<a id="share"
-			href="https://shareopenly.org/share/?url={{ page.permalink }}{% if page.description %}&text={{ page.description | urlencode }}{% endif %}"
-			rel="{{ rel_attributes }}" title="{{ <translate key=" share" default="Share" language_strings /> }}"><i
-			class="icon"></i></a>
-		{%- endif -%}
-		{%- if config.extra?.issues_url -%}
-		<a id="issue" href="{{ config.extra.issues_url }}" rel="{{ rel_attributes }}" title="{{ <translate key="
-			file_an_issue" default="File an Issue" language_strings /> }}"><i class="icon"></i></a>
-		{%- endif -%}
-	</div>
-
-	{%- include "partials/statements.html" -%}
-
-	{%- if page?.extra?.toc_inline -%}
-	{%- include "partials/toc.html" -%}
-	{%- elif config.extra?.toc_inline -%}
-	{%- include "partials/toc.html" -%}
-	{%- endif -%}
-
-	{{ page.content | safe }}
+	<nav class="article-actions" aria-label="Article actions">
+		<a href="#main-content">Back to top</a>
+		{%- if config.extra?.show_share_button %}<a href="https://shareopenly.org/share/?url={{ page.permalink }}{% if page.description %}&text={{ page.description | urlencode }}{% endif %}" rel="{{ rel_attributes }}">Share this article</a>{% endif %}
+		{%- if config.extra?.issues_url %}<a href="{{ config.extra.issues_url }}" rel="{{ rel_attributes }}">Report an issue</a>{% endif %}
+	</nav>
 </article>
 
-{%- if page.extra.comments != false and page.date -%}
-<section class="comments" data-pagefind-ignore="all">
-  <div class="giscus"></div>
-  <script src="https://giscus.app/client.js"
-       data-repo="light-cms/light-cms.github.io"
-       data-repo-id="R_kgDOVK5Kgg"
-       data-category-id="DIC_kwDOVK5Kgs4DJaNd"
-       data-mapping="title"
-       data-strict="0"
-       data-reactions-enabled="1"
-       data-emit-metadata="1"
-       data-input-position="top"
-       data-theme="preferred_color_scheme"
-       data-lang="en"
-       data-loading="lazy"
-       crossorigin="anonymous"
-       async>
-  </script>
-  <script src="/js/giscus-theme.js" defer></script>
+{%- if page.extra.comments != false and page.date %}
+<section class="comments" aria-labelledby="comments-title" data-pagefind-ignore="all">
+	<h2 id="comments-title">Discussion</h2>
+	<p class="comments-status" role="status">Loading discussion…</p>
+	<div class="giscus"></div>
+	<script src="https://giscus.app/client.js"
+		data-repo="light-cms/light-cms.github.io"
+		data-repo-id="R_kgDOVK5Kgg"
+		data-category-id="DIC_kwDOVK5Kgs4DJaNd"
+		data-mapping="title"
+		data-strict="0"
+		data-reactions-enabled="1"
+		data-emit-metadata="1"
+		data-input-position="top"
+		data-theme="preferred_color_scheme"
+		data-lang="en"
+		data-loading="lazy"
+		crossorigin="anonymous"
+		async></script>
+	<script src="{{ get_url(path='js/giscus-theme.js') }}" defer></script>
 </section>
-{%- endif -%}
+{%- endif %}
 
-{%- if page?.lower or page?.higher -%}
-<hr />
-<nav id="post-nav">
-	{%- if page.higher -%}
+{%- if page?.lower or page?.higher %}
+<nav id="post-nav" aria-label="Adjacent articles">
+	{%- if page.higher %}
 	<a class="post-nav-item post-nav-prev" href="{{ page.higher.permalink }}">
-		<div class="nav-arrow">{{
-			<translate key="previous" default="Previous" language_strings /> }}
-		</div>
+		<small>Previous article</small>
 		<span class="post-title">{{ page.higher.title }}</span>
 	</a>
-	{%- endif -%}
-	{%- if page.lower -%}
+	{%- endif %}
+	{%- if page.lower %}
 	<a class="post-nav-item post-nav-next" href="{{ page.lower.permalink }}">
-		<div class="nav-arrow">{{
-			<translate key="next" default="Next" language_strings /> }}
-		</div>
+		<small>Next article</small>
 		<span class="post-title">{{ page.lower.title }}</span>
 	</a>
-	{%- endif -%}
+	{%- endif %}
 </nav>
-{%- endif -%}
+{%- endif %}
 {% endblock content %}

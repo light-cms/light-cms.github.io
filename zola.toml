@@ -9,7 +9,6 @@ default_language = "en"
 compile_sass = true
 
 build_search_index = true
-
 generate_feeds = true
 feed_filenames = ["atom.xml"]
 
@@ -29,15 +28,21 @@ error_on_missing_language = true
 
 
 [extra]
-default_theme = "dark"
+brand = "LightCMS Journal"
+accent_color = "#983d25"
+accent_color_dark = "#e28b65"
+styles = ["css/style.css"]
 source_url = "https://github.com/light-cms/lightcms"
+favicon = "favicon.png"
+
+# GoatCounter analytics; the theme only loads count.js when this table exists.
+[extra.goatcounter]
+user = "lightcms-docs"
 
 [extra.nav]
 links = [
-	{ name = "Blog", menu = [
-		{ url = "@/blog/_index.md", name = "Blog" },
-		{ url = "@/comparison/_index.md", name = "Comparisons" },
-	] },
+	{ url = "@/blog/_index.md", name = "Blog" },
+	{ url = "@/comparison/_index.md", name = "Comparisons" },
 	{ url = "@/gallery/_index.md", name = "Gallery" },
 	{ url = "@/about.md", name = "About" }
 ]

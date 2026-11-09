@@ -17,10 +17,12 @@ isCJKLanguage: false
 headless: false
 slug: about
 date: '2026-11-08T21:20:01.403Z'
+extra:
+  comments: false
 ---
 ## What We Write Here
 
-We write about what we learn building [LightCMS](https://www.lightcms.me/), and about the broader problems it is meant to solve.
+We write about what we learn building [LightCMS](https://lightcms.me/), and about the broader problems it is meant to solve.
 
 New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exists](/blog/why-this).
 
@@ -28,7 +30,7 @@ New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exis
 
 ## Who We Are
 
-We are building [LightCMS](https://www.lightcms.me/). Writing should feel like storytelling, and sharing it should be easy. Instead, modern editors have become so complex that people lose touch with their inner author.
+We are building [LightCMS](https://lightcms.me/). Writing should feel like storytelling, and sharing it should be easy. Instead, modern editors have become so complex that people lose touch with their inner author.
 
 By the way, Static site generators are a great way to build a simple, fast, and eco friendly website. But why should one have to be a developer to use such a nice thing?
 
@@ -45,7 +47,7 @@ In [LightCMS](https://lightcms.me), we are trying to democratize the use of stat
 - **Discord:** [https://discord.gg/HwNd6SufRT](https://discord.gg/HwNd6SufRT)
 - **Message us:** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
 
-This site's content is itself managed with [LightCMS](https://www.lightcms.me/).
+This site's content is itself managed with [LightCMS](https://lightcms.me/).
 
 ## Get in Touch
 

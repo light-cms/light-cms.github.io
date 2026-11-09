@@ -1,5 +1,4 @@
 ---
-
 title: Video Walkthrough
 description: A video guide to the greenfield (local) setup.
 date: '2026-09-12T01:07:00Z'
@@ -15,13 +14,14 @@ headless: false
 
 ---
 
-Prefer to learn by watching?
+Prefer to learn by watching? This walkthrough covers the setup process, from cloning the repository to launching the bot.
 
-## New Method with Multitenancy Support
+## New method with multitenancy support
 
-[![newsy](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
+[![Newsy setup walkthrough](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
 
-This walkthrough covers the complete setup process, from cloning the
-repository to launching the bot. (Please disregard the previous video).
+## Earlier walkthrough
 
-[![YouTube walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
+The previous video is still available for reference:
+
+[![Earlier Newsy walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)

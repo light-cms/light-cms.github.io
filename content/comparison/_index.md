@@ -2,6 +2,7 @@
 title = "Comparisons"
 description = "LightCMS compared side by side with every CMS, headless platform, and site builder"
 sort_by = "date"
+page_template = "article.html"
 +++
 
 Honest, side by side write ups of [LightCMS](https://lightcms.me) against the field. Each one starts from the architecture (where content lives, what runs at request time) and ends with who should actually pick it.

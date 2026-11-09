@@ -43,25 +43,22 @@ The Zine repository states it plainly: the project is young and not yet at featu
 
 For a personal website with a blog (the project's stated comfort zone), Zine is more than capable, and the author experience is quick and pleasant once Super clicks.
 
-## Content and CMS Compatibility
+## Content and CMS compatibility
 
-Zine don't consumes Markdown (common mark) content with front matter like every modern static site generator, which means the Git based CMS workflow don't applies for zine directly.
+Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git-based CMS workflow does not apply directly.
 
-Your build pipeline runs but zine only knows [Ziggy](https://ziggy-lang.io/) so errors out but is there a way/work around answer is yes [md2smd](https://github.com/Pratyay360/md2smd) is a cli tool which tries to bridge the specification between [common mark](https://commonmark.org/) and the specification of [scripty](https://zine-ssg.io/docs/scripty/) [smd](https://zine-ssg.io/docs/supermd/) and [ziggy](https://ziggy-lang.io/) as closely as possible.
+Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/Pratyay360/md2smd) can help convert between [CommonMark](https://commonmark.org/) and Zine's formats.
 
 ![](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png "Zine build pipeline")
 
 
 
-By the way you have to create two repositories one will contain content and other will be containing frontend.
+You need two repositories: one for the frontend and one for the content.
 
-[https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site)  &lt;– repo containing frontend 
+- [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site), the frontend repository
+- [https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md), the content repository
 
-
-
-[https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md) &lt;— repo containing content 
-
-we have to call repository dispatch when ever something gets pushed into the content repo.
+Trigger a repository dispatch when new content is pushed to the content repository.
 
 ## Where It Fits
 

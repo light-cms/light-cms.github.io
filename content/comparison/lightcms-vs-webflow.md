@@ -1,5 +1,5 @@
 ---
-title: 'LightCMS vs Webflow: Visual Building vs Markdown in Git'
+title: "LightCMS vs Webflow: Visual Building vs Markdown in Git"
 description: >-
   Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based
   editor for developer-owned sites. Where each approach wins for content teams.
@@ -7,26 +7,27 @@ serial: 57
 date: '2026-10-16T13:10:00.000Z'
 draft: false
 keywords:
-  - lightcms vs webflow
-  - webflow alternatives
-  - webflow cms limitations
-  - webflow vs static site generator
-  - webflow pricing alternatives
-preview: /og-image.webp
-taxonomies: []
+  - 'lightcms vs webflow'
+  - 'webflow'
+  - 'webflow limitations'
+  - 'webflow vs static site generator'
+  - 'webflow pricing alternatives'
+preview: /og-image.png
+# taxonomies: []
 slug: lightcms-vs-webflow
 ---
-[Webflow](https://webflow.com) Dominates a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that promise is real and hard to beat.
 
-LightCMS starts from a different constraint: **The code is owned by developers, the content by writers**. It solves only the second half, and solves it well.
+[Webflow](https://webflow.com) is built for a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that can be a strong fit.
+
+[LightCMS](https://lightcms.me) starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
 
 ---
 
-## Different Jobs
+## Different jobs
 
-**Webflow** is a design tool with a CMS attached: a visual canvas, CSS generated from your interactions, a hosted CMS with collection fields, and publishing on Webflow's infrastructure. It replaces the developer for front-end production.
+**Webflow** is a design tool with a CMS attached. It gives you a visual canvas, generates CSS from your interactions, stores content in hosted collections, and publishes on Webflow's infrastructure.
 
-**LightCMS** Assumes the frontend already exists (an SSG in a repository, built by your pipeline) and replaces the code editor *for content*: Writers publish Markdown through a visual editor.
+**LightCMS** assumes the frontend already exists in a repository and is built by your pipeline. It gives writers a visual editor for publishing Markdown without asking them to work in code.
 
 
 |                     | LightCMS                      | Webflow                             |

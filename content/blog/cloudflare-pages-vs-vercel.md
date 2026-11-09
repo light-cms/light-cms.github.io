@@ -25,7 +25,7 @@ taxonomies:
 
 ## What Is Cloudflare Pages?
 
-Cloudflare Pages is a static site hosting platform that deploys from your Git repository to a global edge network. The free tier includes unlimited bandwidth, making it attractive for blogs and documentation sites that may go viral. Beyond static hosting, it offers Pages Functions (serverless functions), KV (key-value storage), and R2 (object storage) — all within the same Cloudflare ecosystem.
+Cloudflare Pages is a static site hosting platform that deploys from your Git repository to a global edge network. The free tier includes unlimited bandwidth, making it attractive for blogs and documentation sites that may go viral. Beyond static hosting, it offers Pages Functions (serverless functions), KV (key-value storage), and R2 (object storage), all within the same Cloudflare ecosystem.
 
 ## What Is Vercel?
 
