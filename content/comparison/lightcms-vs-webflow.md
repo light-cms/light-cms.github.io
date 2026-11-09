@@ -48,7 +48,7 @@ LightCMS starts from a different constraint: **The code is owned by developers, 
 - **Visual design freedom without code.** Interactions, breakpoints, and layouts designed directly, a real substitute for front-end work.
 - **One tool for design and content.** No build pipeline, no repository, no CI to understand.
 - **Instant publishing.** Content changes go live immediately, with no build step.
-- **Polished hosting and preview** with a CMS the whole marketing team can learn in an afternoon.
+- **Polished hosting and preview** With a CMS the whole marketing team can learn in an afternoon.
 - **Design-to-content binding:** editors see the field that feeds the component.
 
 ## Where LightCMS Wins
