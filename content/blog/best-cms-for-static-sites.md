@@ -86,17 +86,18 @@ A browser-hosted editor committing through the GitHub API. Fast to adopt, easy t
 
 ### Best managed service: CloudCannon
 
-Paid, polished, agency-oriented. You are buying someone else's operations.
+Paid, polished, agency oriented. You are buying someone else's operations.
 
 ### Best when you need a database: Payload CMS
 
-A modern headless CMS with real relational content and a powerful admin panel: the right call for application-shaped projects and the wrong one for a static publication. See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
+A modern headless CMS with real relational content and a powerful admin panel: the right call for application shaped projects and the wrong one for a static publication. 
+See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
 
 ---
 
 ## One Architectural Note
 
-Every option in the file-based half of this table shares one advantage: **the build is the only runtime.** No database listener to patch, no PHP version to upgrade, no plugin supply chain to audit. The CMS produces files; the site remains files. That keeps the category growing. Static sites got cheap and fast, and the tooling for writing them has caught up.
+Every option in the file based half of this table shares one advantage: **the build is the only runtime.** No database listener to patch, no PHP version to upgrade, no plugin supply chain to audit. The CMS produces files; the site remains files. That keeps the category growing. Static sites got cheap and fast, and the tooling for writing them has caught up.
 
 ---
 
@@ -108,19 +109,19 @@ Yes. That is what Git based CMS tools do. The CMS writes Markdown into your repo
 
 ### What costs money in a free CMS?
 
-Self-hosted, open-source options like [LightCMS](https://lightcms.me), Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
+Self hosted, open source options like [LightCMS](https://lightcms.me), Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
 
 ### Do I need a database for a blog?
 
-No. A blog is an append-mostly collection of documents, which is the best possible case for files.
+No. A blog is an append mostly collection of documents, which is the best possible case for files.
 
-### Which CMS is easiest for non-technical writers?
+### Which CMS is easiest for non technical writers?
 
 One with a real editor rather than a field form. Writers should see a document, not a schema.
 
 ### Can I switch CMS later?
 
-With file-based content, yes: the repository is the interface. Point a different tool at the same content directory and the archive survives.
+With file based content, yes: the repository is the interface. Point a different tool at the same content directory and the archive survives.
 
 ---
 
