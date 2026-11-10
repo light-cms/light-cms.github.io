@@ -21,7 +21,9 @@ taxonomies:
     - blogging
     - workflow
 ---
-Two years into "AI writing tools," most blogs learned the same lesson: generating a full article and pressing publish produces content nobody finishes reading. The open question is **where** AI belongs in a writing workflow.
+Two years into "AI writing tools," most blogs learned the same lesson: generating a full
+article and pressing publish produces content nobody finishes reading.
+The open question is **where** AI belongs in a writing workflow.
 
 Some tasks suit a model and some do not.
 

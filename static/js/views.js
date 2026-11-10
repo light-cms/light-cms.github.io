@@ -5,29 +5,34 @@
 	const endpoint = script?.dataset.goatcounter;
 	if (!endpoint) return;
 
-	const base = endpoint.replace(/count$/, "counter/");
+	const base = endpoint.replace(/count\/?$/, "counter/");
 	const targets = Array.from(
 		document.querySelectorAll(".view-count[data-views-path]"),
 	);
 	if (targets.length === 0) return;
 
 	const fill = async (element) => {
-		const path = element.dataset.viewsPath;
+		let path = element.dataset.viewsPath;
+		if (!path) path = window.location.pathname;
 		if (!path) return;
+
+		// Ensure path starts with a slash
+		if (!path.startsWith("/")) path = `/${path}`;
 
 		try {
 			const response = await fetch(`${base}${encodeURIComponent(path)}.json`, {
 				headers: { Accept: "application/json" },
 			});
-			if (!response.ok) return;
+			// GoatCounter returns HTTP 404 for paths with 0 views, but still supplies JSON: {"count_unique":"0", "count":"0"}
+			if (response.status !== 200 && response.status !== 404) return;
 
 			const data = await response.json();
-			const raw = String(data.count ?? "");
+			const raw = String(data.count ?? "0");
 			const count = Number(raw.replace(/,/g, ""));
-			// Unknown paths and disabled counters report 0; leave the slot empty.
-			if (!Number.isFinite(count) || count < 1) return;
+			if (!Number.isFinite(count) || count < 0) return;
 
 			element.textContent = `${raw} ${count === 1 ? "view" : "views"}`;
+			element.setAttribute("title", `${raw} page views via GoatCounter`);
 		} catch {
 			// Counts are supplementary; a failed request leaves the slot empty.
 		}

@@ -1,0 +1,31 @@
+{#- Only offer languages for which this page/section actually has a translation.
+    TranslatedContent.lang is empty for the default language. -#}
+{%- if page is defined -%}
+  {%- set translations = page.translations -%}
+{%- elif section is defined -%}
+  {%- set translations = section.translations -%}
+{%- else -%}
+  {%- set translations = [] -%}
+{%- endif -%}
+{%- if translations | length > 1 -%}
+<li id="language-switcher">
+	<details class="closable">
+		<summary class="circle" title="{{ <translate key="language" default="Language" language_strings /> }}">
+			<i class="icon"></i>
+		</summary>
+		<ul>
+			{%- for t in translations -%}
+				{%- set lcode = t.lang | default(value=config.default_language) -%}
+				{%- if lcode == lang -%}{%- continue -%}{%- endif -%}
+				{%- set other_language_strings = load_data(path="i18n/" ~ lcode ~ ".toml", required=false) -%}
+				{%- if not other_language_strings -%}
+					{%- set other_language_strings = load_data(path="themes/duckquill/i18n/" ~ lcode ~ ".toml", required=false) -%}
+				{%- endif -%}
+				{%- set other_language_strings = other_language_strings or {} -%}
+				{%- set language_name = <translate key="language_name" default={lcode} language_strings={other_language_strings} /> -%}
+				<li><a lang="{{ lcode }}" href="{{ t.permalink | safe }}">{{ language_name }}</a></li>
+			{%- endfor -%}
+		</ul>
+	</details>
+</li>
+{%- endif -%}

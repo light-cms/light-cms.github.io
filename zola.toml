@@ -67,3 +67,63 @@ socials = [
 in_search_index = true
 show_copyright = true
 show_powered_by = true
+
+# Translations use Zola's filename suffix convention:
+# content/blog/post.md -> content/blog/post.<code>.md.
+# UI strings are read from i18n/<code>.toml, falling back to the theme's files.
+# A language must be listed here before Crowdin downloads its translations, and
+# each key must match the Crowdin %locale% code used in crowdin.yml.
+
+[languages.de]
+title = "LightCMS - Git-basiertes CMS für statische Websites"
+description = "LightCMS ist ein Git-basiertes CMS für statische Websites."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+search = { index_format = "fuse_json" }
+
+[languages.es]
+title = "LightCMS - CMS basado en Git para sitios estáticos"
+description = "LightCMS es un CMS basado en Git para sitios estáticos."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+search = { index_format = "fuse_json" }
+
+[languages.fr]
+title = "LightCMS - CMS basé sur Git pour sites statiques"
+description = "LightCMS est un CMS basé sur Git pour les sites statiques."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+search = { index_format = "fuse_json" }
+
+[languages.pt-BR]
+title = "LightCMS - CMS baseado em Git para sites estáticos"
+description = "O LightCMS é um CMS baseado em Git para sites estáticos."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+search = { index_format = "fuse_json" }
+
+[languages.ru]
+title = "LightCMS - CMS на основе Git для статических сайтов"
+description = "LightCMS — это CMS на основе Git для статических сайтов."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+build_search_index = true
+taxonomies = [{ name = "tags" }]
+search = { index_format = "fuse_json" }
+
+[languages.zh-Hans]
+title = "LightCMS - 基于 Git 的静态网站 CMS"
+description = "LightCMS 是一个基于 Git 的静态网站 CMS。"
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+build_search_index = false
+taxonomies = [{ name = "tags" }]
+search = { index_format = "fuse_json" }

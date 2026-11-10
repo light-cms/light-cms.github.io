@@ -5,6 +5,12 @@
 	<header class="page-header">
 		<h1>{{ page.title }}</h1>
 		{%- if page.description %}<p>{{ page.description }}</p>{% endif %}
+		{%- if config.extra?.goatcounter %}
+		<p class="page-meta">
+			{%- set views_path = page.path %}
+			{%- include "partials/view-count.html" %}
+		</p>
+		{%- endif %}
 	</header>
 	{%- include "partials/statements.html" -%}
 	{%- if page?.extra?.toc and not page?.extra?.toc_sidebar %}

@@ -19,7 +19,10 @@ taxonomies:
     - documentation
 ---
 
-For documentation sites in 2026, two names keep appearing: **Hugo** (the speed-obsessed generalist, usually wearing a docs theme) and **Astro Starlight** (the purpose-built documentation template on top of Astro). Both produce fast, static, Markdown-driven docs. They differ in how much of the docs experience you get out of the box.
+For documentation sites in 2026, two names keep appearing: **Hugo** (the speed obsessed generalist,
+usually wearing a docs theme) and **Astro Starlight** (the purpose-built documentation template on
+top of Astro). Both produce fast, static, Markdown-driven docs. They differ in how
+much of the docs experience you get out of the box.
 
 ---
 

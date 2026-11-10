@@ -13,6 +13,36 @@
 	<title>{% include "partials/title.html" %}</title>
 	<link rel="canonical" href="{{ current_url | default(value='/') | safe }}" />
 
+	{#- hreflang alternates for every available translation of this page/section -#}
+	{%- if page is defined -%}
+		{%- set _translations = page.translations -%}
+	{%- elif section is defined -%}
+		{%- set _translations = section.translations -%}
+	{%- else -%}
+		{%- set _translations = [] -%}
+	{%- endif -%}
+	{%- if _translations | length == 0 and (page is defined or section is defined) -%}
+		{#- Fall back to the current page itself when no translation list is present -#}
+		{%- if page is defined -%}
+			{%- set _translations = [{"lang": page.lang, "permalink": page.permalink}] -%}
+		{%- else -%}
+			{%- set _translations = [{"lang": section.lang, "permalink": section.permalink}] -%}
+		{%- endif -%}
+	{%- endif -%}
+	{%- for t in _translations -%}
+		{%- set _lcode = t.lang | default(value=config.default_language) -%}
+		{%- if _lcode == "" -%}{%- set _lcode = config.default_language -%}{%- endif -%}
+		<link rel="alternate" hreflang="{{ _lcode }}" href="{{ t.permalink | safe }}" />
+	{%- endfor -%}
+	{#- x-default points at the default-language version when available -#}
+	{%- set _default_href = current_url | default(value='/') -%}
+	{%- for t in _translations -%}
+		{%- if t.lang == "" or t.lang == config.default_language -%}
+			{%- set_global _default_href = t.permalink -%}
+		{%- endif -%}
+	{%- endfor -%}
+	<link rel="alternate" hreflang="x-default" href="{{ _default_href | safe }}" />
+
 	{%- if config.extra?.comments %}
 		<link rel="me" href="https://{{ config.extra.comments.host }}/@{{ config.extra.comments.user }}" />
         <meta name="fediverse:creator" content="@{{ config.extra.comments.user }}@{{ config.extra.comments.host }}" />
@@ -97,10 +127,8 @@
 		{%- set scripts = [...scripts, "comments.js"] %}
 	{%- endif %}
 
-	{%- if config.build_search_index %}
-		<link rel="stylesheet" href="{{ get_url(path='pagefind/pagefind-component-ui.css') | safe }}" />
-		<script src="{{ get_url(path='pagefind/pagefind-component-ui.js') }}" type="module"></script>
-	{%- endif %}
+	<link rel="stylesheet" href="{{ get_url(path='pagefind/pagefind-component-ui.css') | safe }}" />
+	<script src="{{ get_url(path='pagefind/pagefind-component-ui.js') }}" type="module"></script>
 
 	{%- if config.extra?.scripts %}
 		{%- set scripts = [...scripts, ...config.extra.scripts] %}

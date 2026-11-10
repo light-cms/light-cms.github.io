@@ -25,7 +25,8 @@ Deploy your own copy on Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy&env=DATABASE_URL&project-name=newsy&repository-name=newsy)
 
-The hosted instance runs on Vercel's hobby tier, so uptime and function-invocation limits may apply.
+The hosted instance runs on Vercel's hobby tier, so uptime and function 
+invocation limits may apply.
 
 If Newsy has been useful, starring the [repository](https://github.com/light-cms/newsy) helps.
 

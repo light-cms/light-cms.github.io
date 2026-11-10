@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "skills": {
+    "context-extraction": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/context-extraction/SKILL.md",
+      "computedHash": "eb2b3338975b22d56ba53b70dadef66699ea805331d12ee57655e060e0a3fd57"
+    },
+    "create-app": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/create-app/SKILL.md",
+      "computedHash": "61e5aa4ee02770e1808d2aea96126510331496cb1c9d53badbaff2f7d5116abc"
+    },
+    "croql": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/croql/SKILL.md",
+      "computedHash": "e3806879b2291b338a93e0ec9a83af5b222f160717b2104c0d232d8529575719"
+    },
+    "crowdin-api-client": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/crowdin-api-client/SKILL.md",
+      "computedHash": "4d6c2bf8bb4f13e826d1074bcd640d1ac0fe39cba46523a21fd2e9cb703e2eef"
+    },
+    "crowdin-cli": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/crowdin-cli/SKILL.md",
+      "computedHash": "10d90c3764450dca0dcc88d793e34d9df7a68a99b87daecee7da81e1b70cadd1"
+    },
+    "feedback": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/feedback/SKILL.md",
+      "computedHash": "88433c4b652709a07f21eec64497d3e84ecf14e3c393cfd23e38ff4f4cf9dee8"
+    },
+    "generate-screenshots": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/generate-screenshots/SKILL.md",
+      "computedHash": "a02edd0b3b05771cccb3991f413f051e5c752c1d01a932275b6597ad630e1118"
+    },
+    "github-action": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/github-action/SKILL.md",
+      "computedHash": "0a192f53188fba6ce874b067639fb047d752419c38380aed58a9d9698c093963"
+    },
+    "glossary-term-translations": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/glossary-term-translations/SKILL.md",
+      "computedHash": "0d757a52d3526e6a67e6d9d1285c2e4e8bd269238bb2f95da56e27b12ad0841b"
+    },
+    "glossary-terms-extraction": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/glossary-terms-extraction/SKILL.md",
+      "computedHash": "fe7c390d216f08fc2028bf8ccfe9066f5467f43e6bf4e6fa6d8a6da9834b2a4b"
+    },
+    "graphql": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/graphql/SKILL.md",
+      "computedHash": "a541588bdf7557b32c8721b81adf842c181438c230f0861208d14b666b00ec8e"
+    },
+    "how-to-crowdin": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/how-to-crowdin/SKILL.md",
+      "computedHash": "3b81c3976afd78f155ce124382a5c75f4afe8526fea007d0739d0df60bc27b9b"
+    },
+    "i18n-setup": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/i18n-setup/SKILL.md",
+      "computedHash": "8ec97f95573d84b12d6a0ac375b77562f708e274759c9edd05fce7ee231d6df9"
+    },
+    "integration-sync": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/integration-sync/SKILL.md",
+      "computedHash": "af8f54e7b1c5914adc4ae3b2a2534772b1259ec1d332580433daadb8440c48ed"
+    },
+    "translate": {
+      "source": "crowdin/skills",
+      "sourceType": "github",
+      "skillPath": "skills/translate/SKILL.md",
+      "computedHash": "bc4aa074b453545d7ffc2e6cee650f92540bd10583f5bb213fb156145587e879"
+    }
+  }
+}

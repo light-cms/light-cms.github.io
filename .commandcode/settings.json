@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(mkdir:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

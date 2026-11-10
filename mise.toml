@@ -3,8 +3,10 @@ zola = "latest"
 bun = "latest"
 biome = "latest"
 "npm:pagefind" = "latest"
+"npm:@crowdin/cli" = "latest"
 
 
 [tasks]
 start = "zola serve"
+fetch = "bunx -y crowdin pull"
 build = "zola build && bunx -y pagefind --site public"

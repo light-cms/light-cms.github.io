@@ -1,0 +1,39 @@
+name: Crowdin
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: crowdin
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Synchronize with Crowdin
+        uses: crowdin/github-action@v3
+        with:
+          upload_sources: true
+          upload_translations: false
+          download_translations: true
+          localization_branch_name: l10n_crowdin_translations
+          create_pull_request: true
+          pull_request_title: "New Crowdin translations"
+          pull_request_body: "Translations downloaded from Crowdin. Zola renders `name.<lang>.md` for the languages enabled in `zola.toml` (de, es, fr, pt-BR, ru, zh-Hans); enable any new Crowdin language there first, then add it to `languages_mapping` in `crowdin.yml` if its Crowdin locale code differs."
+          pull_request_base_branch_name: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "servers": {
+      "crowdin": {
+        "type": "remote",
+        "url": "https://mcp.crowdin.com/v2/mcp"
+      }
+    }
+  }
+}

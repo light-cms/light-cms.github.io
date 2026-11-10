@@ -37,13 +37,11 @@
 			</ul>
 
 			<ul class="nav-actions" aria-label="Site tools">
-				{%- if config.build_search_index %}
 				<li id="search">
 					<a href="{{ get_url(path='@/search.md', lang=lang) }}" class="circle{% if current_url | default(value='/') | safe == get_url(path='@/search.md', lang=lang) | safe %} active{% endif %}" aria-label="{{ <translate key='search' default='Search' language_strings /> }}" title="{{ <translate key='search' default='Search' language_strings /> }}">
 						<i class="icon" aria-hidden="true"></i>
 					</a>
 				</li>
-				{%- endif %}
 				{%- if config.extra?.default_theme and config.extra.nav?.show_theme_switcher != false or config.extra.nav?.show_theme_switcher %}
 				<li id="theme-switcher">
 					<details class="closable">
@@ -56,8 +54,9 @@
 							<li><button type="button" class="circle" id="theme-system" aria-label="{{ <translate key='theme_system' default='Use System Theme' language_strings /> }}" title="{{ <translate key='theme_system' default='Use System Theme' language_strings /> }}"><i class="icon" aria-hidden="true"></i></button></li>
 						</ul>
 					</details>
-				</li>
+					</li>
 				{%- endif %}
+				{%- include "partials/language_switcher.html" %}
 			</ul>
 		</div>
 	</nav>
