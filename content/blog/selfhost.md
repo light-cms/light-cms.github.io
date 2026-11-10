@@ -1,6 +1,6 @@
 ---
-title: Self Hosting [LightCMS](https://lightcms.me)
-description: Guide to self host [LightCMS](https://lightcms.me), covering the GitHub App, PostgreSQL, environment variables, optional AI, CDN and email, and deploying to edge.
+title: Self Hosting LightCMS
+description: Guide to self host LightCMS.
 serial: 4
 section: Get Started
 badge: Deploy
