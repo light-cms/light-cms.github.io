@@ -45,7 +45,7 @@ Both consume **Markdown with YAML front matter** from your repository, so any Gi
 
 ## Ecosystem and Careers
 
-Next.js remains the most hireable frontend framework, with the largest ecosystem and the deepest Vercel integration. Astro is younger but widely used in the content and documentation space, with Starlight becoming the default docs template ([Hugo vs Starlight](/blog/hugo-vs-astro-starlight/)).
+Next.js remains the most hire able frontend framework, with the largest ecosystem and the deepest Vercel integration. Astro is younger but widely used in the content and documentation space, with Starlight becoming the default docs template ([Hugo vs Starlight](/blog/hugo-vs-astro-starlight/)).
 
 ---
 

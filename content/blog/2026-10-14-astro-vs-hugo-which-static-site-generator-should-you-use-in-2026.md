@@ -42,7 +42,8 @@ taxonomies:
 
 ## Content Collections and Front Matter
 
-Both generators are built around Markdown files with YAML front matter, which means **both work identically with any Git based CMS**: your content stays in your repository as plain files, and publishing is just a commit.
+Both generators are built around Markdown files with YAML front matter, which means both work identically with any Git based CMS: 
+    your content stays in your repository as plain files, and publishing is just a commit.
 
 Astro adds content collection schemas that validate front matter at build time. That's a real advantage for teams: a malformed `date` or missing `title` fails the build instead of silently rendering a broken page.
 

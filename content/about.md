@@ -20,35 +20,33 @@ date: '2026-11-08T21:20:01.403Z'
 extra:
   comments: false
 ---
-## What We Write Here
+## What we write here
 
-We write about what we learn building [LightCMS](https://lightcms.me/), and about the broader problems it is meant to solve.
+We write about what we learn while building [LightCMS](https://lightcms.me/), and about the problems it aims to solve.
 
 New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exists](/blog/why-this).
 
 ---
 
-## Who We Are
+## Who we are
 
-We are building [LightCMS](https://lightcms.me/). Writing should feel like storytelling, and sharing it should be easy. Instead, modern editors have become so complex that people lose touch with their inner author.
+We are building [LightCMS](https://lightcms.me/). We want writing to feel straightforward and publishing to feel simple.
 
-By the way, Static site generators are a great way to build a simple, fast, and eco friendly website. But why should one have to be a developer to use such a nice thing?
+Static site generators can produce fast, lightweight websites, but they often ask writers to work like developers. With LightCMS, we want more people to publish on the web with static sites, without needing to learn a developer workflow first.
 
-In [LightCMS](https://lightcms.me), we are trying to democratize the use of static site generators and give everyone a space to share their thoughts on the internet.
+## Where to find us
 
-## Where to Find Us
-
-- **website:** [lightcms.me](https://www.lightcms.me/)
-- **Main source code**: [github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
-- **Starter templates**: [github.com/light-cms](https://github.com/light-cms/)
-- **Newsletter tool**: [Newsy](https://github.com/light-cms/newsy)
-- **X (Twitter)**: [@LightCms5](https://x.com/LightCms5)
-- **Bluesky**: [@lightcms.bsky.social](https://bsky.app/profile/lightcms.bsky.social)
+- **Website:** [lightcms.me](https://www.lightcms.me/)
+- **Main source code:** [github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
+- **Starter templates:** [github.com/light-cms](https://github.com/light-cms/)
+- **Newsletter tool:** [Newsy](https://github.com/light-cms/newsy)
+- **X (Twitter):** [@LightCms5](https://x.com/LightCms5)
+- **Bluesky:** [@lightcms.bsky.social](https://bsky.app/profile/lightcms.bsky.social)
 - **Discord:** [https://discord.gg/HwNd6SufRT](https://discord.gg/HwNd6SufRT)
 - **Message us:** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
 
-This site's content is itself managed with [LightCMS](https://lightcms.me/).
+We manage this site's content with [LightCMS](https://lightcms.me/).
 
-## Get in Touch
+## Get in touch
 
-Have a correction, a comparison we have not written, or a workflow you would like covered? Open an issue or send a pr, we are very open for contributions.
+Have a correction, a comparison we have not written, or a workflow you would like covered? Open an issue or send a pull request. We welcome contributions.

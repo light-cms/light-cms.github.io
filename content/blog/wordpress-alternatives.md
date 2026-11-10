@@ -69,7 +69,7 @@ Enterprise-grade and capable, with the complexity to match. A serious alternativ
 
 ## The Green Bonus
 
-A static, CDN-served site emits far less CO2 than a database-driven one: no always-on servers, no per-view computation. If sustainability is part of your decision, see [Static Sites and CO2](/blog/greener-web-static-sites/).
+A static, CDN-served site emits far less CO2 than a database-driven one: no always on servers, no per-view computation. If sustainability is part of your decision, see [Static Sites and CO2](/blog/greener-web-static-sites/).
 
 ---
 

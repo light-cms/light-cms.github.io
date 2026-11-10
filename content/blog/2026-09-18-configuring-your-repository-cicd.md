@@ -77,7 +77,7 @@ To allow [LightCMS](https://lightcms.me) to read your files and commit newly wri
 
 ## 3. Configure Automated CI/CD Deployments
 
-Every time you hit **Publish** or **Save** in [LightCMS](https://lightcms.me), the app commits your updated Markdown file directly to your specified Git branch. To turn those commits into live website updates, configure a GitHub Actions workflow.
+Every time you hit **Publish** or **Save** in [LightCMS](https://lightcms.me), the app commits the content as Markdown file directly to your Git repository. To turn those commits into live website updates, configure a GitHub Actions workflow.
 
 ### Example a: Astro Deployment (GitHub Pages / Static Host)
 
@@ -150,7 +150,7 @@ If you are using [Hugo](https://gohugo.io), platforms like **Cloudflare Pages**,
 
 Several reliable platforms offer generous free tiers for hosting static sites:
 
-- **[Vercel](https://vercel.com)**: Zero-config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
+- **[Vercel](https://vercel.com)**: Zero config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
 - **[Cloudflare Pages](https://pages.cloudflare.com)**: Global edge network in 300+ cities, unlimited bandwidth on the free tier.
 - **[Netlify](https://www.netlify.com)**: Pioneer of Jamstack hosting with rich form and asset handling.
 - **[GitHub Pages](https://pages.github.com)**: Direct built in hosting for open source and personal repositories.

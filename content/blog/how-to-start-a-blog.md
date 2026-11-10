@@ -65,7 +65,7 @@ Every push rebuilds and republishes your blog in under a minute. Compare your op
 
 This is the step most guides skip. If publishing requires opening a terminal, you will stop writing.
 
-A **Git based CMS** like [LightCMS](/) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
+A **Git based CMS** like [LightCMS](https://lightcms.me) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
 
 ## Step 5: Grow It
 
@@ -89,7 +89,8 @@ The work that compounds:
 
 You can run a serious publication for the price of a domain name.
 
-There is a fourth column nobody lists: energy. A static blog served from cached edge nodes emits a fraction of the CO2 of a database-driven site, so publishing on a shoestring and publishing sustainably turn out to be the same decision. More in [Static Sites and CO2](/blog/greener-web-static-sites/).
+There is a fourth column nobody lists: energy. A static blog served from cached edge nodes emits a fraction of the CO2 of a database driven site, so publishing on a shoestring and publishing sustainably turn out to be the same decision.
+More in [Static Sites and CO2](/blog/greener-web-static-sites/).
 
 ---
 

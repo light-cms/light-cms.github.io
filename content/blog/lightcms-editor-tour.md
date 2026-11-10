@@ -1,6 +1,6 @@
 ---
-title: "A Tour of the [LightCMS](https://lightcms.me) Editor: WYSIWYG That Outputs Clean Markdown"
-description: "Inside the [LightCMS](https://lightcms.me) writing surface: TipTap-powered visual editing with math, code highlighting, tables, task lists, and media that still produces hand-editable Markdown."
+title: "A Tour of the LightCMS Editor: WYSIWYG That Outputs Clean Markdown"
+description: "Inside the LightCMS writing surface: TipTap-powered visual editing with math, code highlighting, tables, task lists, and media that still produces hand-editable Markdown."
 serial: 31
 date: 2026-10-16T09:10:00Z
 draft: false

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(zola:*)",
+      "Shell(mise:*)",
+      "Shell(cd /var/home/pmustafi/alpha/light-cms.github.io && zola build 2>&1; echo \"---exit:$?---\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

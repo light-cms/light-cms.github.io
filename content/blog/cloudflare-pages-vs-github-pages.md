@@ -19,7 +19,9 @@ taxonomies:
     - jamstack
 ---
 
-Both will host your static site for free, forever, straight from a Git repository. But [Cloudflare Pages](https://pages.cloudflare.com) and [GitHub Pages](https://pages.github.com) are built with different philosophies, and the differences show up the moment your blog gets its first taste of traffic.
+Both will host your static site for free, forever, straight from a Git repository. But [Cloudflare Pages](https://pages.cloudflare.com) 
+and [GitHub Pages](https://pages.github.com) are built with different philosophies,
+and the differences show up the moment your blog gets its first taste of traffic.
 
 ---
 
