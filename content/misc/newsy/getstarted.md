@@ -72,7 +72,9 @@ go build
 #### 4. Configure the GitHub App
 
 1. Open [http://localhost:3000](http://localhost:3000) in your browser.
-2. If you need to expose your local server, use a tunneling service such as [ngrok](https://ngrok.com), [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/), or SSH tunneling via [localhost.run](http://localhost.run/):
+2. If you need to expose your local server, use a tunneling service such as [ngrok](https://ngrok.com),
+  [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/),
+  or SSH tunneling via [localhost.run](http://localhost.run/):
 
 ```bash
 ssh -R 80:localhost:3000 localhost.run
