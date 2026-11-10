@@ -1,0 +1,4 @@
+files:
+  - source: '*.md'
+    translation: en
+    multilingual: 1
