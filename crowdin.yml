@@ -17,6 +17,25 @@ files:
     translation: "/%original_path%/%file_name%.%locale%.%file_extension%"
     ignore:
       - "/content/**/*.*.md"
+    excluded_front_matter_elements:
+      - sort_by
+      - template
+      - page_template
+      - in_search_index
+      - draft
+      - date
+      - created
+      - slug
+      - canonical
+      - preview
+      - headless
+      - id
+      - isCJKLanguage
+      - serial
+      - weight
+      - visibility
+      - fmContentType
+      - extra
     languages_mapping:
       locale:
         de: "de"
