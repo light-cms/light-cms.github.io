@@ -9,4 +9,4 @@ biome = "latest"
 [tasks]
 start = "zola serve"
 fetch = "bunx -y crowdin pull"
-build = "mise run fetch && zola build && bunx -y pagefind --site public"
+build = "zola build && bunx -y pagefind --site public"
