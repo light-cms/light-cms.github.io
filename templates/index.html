@@ -15,7 +15,7 @@
 	{{ section.content | safe }}
 </div>
 
-{%- set blog = get_section(path="blog/_index.md") -%}
+{%- set blog = get_section(path="blog/_index.md", lang=config.default_language) -%}
 {%- if blog.pages %}
 <section class="latest-writing" aria-labelledby="latest-writing-title">
 	<div class="section-heading">

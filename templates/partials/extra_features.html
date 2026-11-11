@@ -9,7 +9,7 @@
 			!["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName) &&
 			!document.activeElement?.isContentEditable) {
 			e.preventDefault();
-			var searchUrl = "{{ get_url(path='@/search.md', lang=lang) | safe }}";
+			var searchUrl = "{{ get_url(path='@/search.md', lang=config.default_language) | safe }}";
 			var targetPath = new URL(searchUrl, window.location.origin).pathname.replace(/\/$/, "");
 			var currentPath = window.location.pathname.replace(/\/$/, "");
 			if (currentPath !== targetPath) {

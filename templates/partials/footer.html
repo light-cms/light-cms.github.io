@@ -14,7 +14,7 @@
 					{%- if link.url is matching(pat='^https?://') %}
 					<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">{{ <translate key={link.name} default={link.name} language_strings /> }}</a>
 					{%- else %}
-					<a href="{{ get_url(path=link.url, lang=lang) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=link.url, lang=lang) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={link.name} default={link.name} language_strings /> }}</a>
+					<a href="{{ get_url(path=link.url, lang=config.default_language) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=link.url, lang=config.default_language) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={link.name} default={link.name} language_strings /> }}</a>
 					{%- endif %}
 				</li>
 				{%- endfor %}

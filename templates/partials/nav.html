@@ -21,7 +21,7 @@
 									{%- if item.url is matching(pat='^https?://') %}
 									<a href="{{ item.url }}" rel="{{ rel_attributes }}" class="external">{{ <translate key={item.name} default={item.name} language_strings /> }}</a>
 									{%- else %}
-									<a href="{{ get_url(path=item.url, lang=lang) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=item.url, lang=lang) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={item.name} default={item.name} language_strings /> }}</a>
+									<a href="{{ get_url(path=item.url, lang=config.default_language) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=item.url, lang=config.default_language) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={item.name} default={item.name} language_strings /> }}</a>
 									{%- endif %}
 								</li>
 								{%- endfor %}
@@ -31,14 +31,14 @@
 					{%- elif link.url is matching(pat='^https?://') %}
 					<li><a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">{{ <translate key={link.name} default={link.name} language_strings /> }}</a></li>
 					{%- else %}
-					<li><a href="{{ get_url(path=link.url, lang=lang) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=link.url, lang=lang) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={link.name} default={link.name} language_strings /> }}</a></li>
+					<li><a href="{{ get_url(path=link.url, lang=config.default_language) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=link.url, lang=config.default_language) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={link.name} default={link.name} language_strings /> }}</a></li>
 					{%- endif %}
 				{%- endfor %}
 			</ul>
 
 			<ul class="nav-actions" aria-label="Site tools">
 				<li id="search">
-					<a href="{{ get_url(path='@/search.md', lang=lang) }}" class="circle{% if current_url | default(value='/') | safe == get_url(path='@/search.md', lang=lang) | safe %} active{% endif %}" aria-label="{{ <translate key='search' default='Search' language_strings /> }}" title="{{ <translate key='search' default='Search' language_strings /> }}">
+					<a href="{{ get_url(path='@/search.md', lang=config.default_language) }}" class="circle{% if current_url | default(value='/') | safe == get_url(path='@/search.md', lang=config.default_language) | safe %} active{% endif %}" aria-label="{{ <translate key='search' default='Search' language_strings /> }}" title="{{ <translate key='search' default='Search' language_strings /> }}">
 						<i class="icon" aria-hidden="true"></i>
 					</a>
 				</li>
