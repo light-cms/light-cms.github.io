@@ -1,7 +1,7 @@
 +++
 title = "Galerie"
 description = "Visuelle Darstellung von LightCMS Features, Editorworkspace, AI copilot und Git-native Workflows."
-sort_by = "gewicht"
+sort_by = "weight"
 template = "gallery.html"
 +++
 
