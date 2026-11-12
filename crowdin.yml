@@ -11,7 +11,6 @@ export_languages:
   - pt-BR
   - ru
   - zh-CN
-  - bn
 
 files:
   - source: "/content/**/*.md"
@@ -45,4 +44,3 @@ files:
         ru: "ru"
         zh-CN: "zh-Hans"
         pt-BR: "pt-BR"
-        bn: "bn"
