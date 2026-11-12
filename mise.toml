@@ -8,5 +8,5 @@ biome = "latest"
 
 [tasks]
 start = "zola serve"
-fetch = "bunx -y crowdin pull"
+fetch = "crowdin pull"
 build = "zola build && bunx -y pagefind --site public"
