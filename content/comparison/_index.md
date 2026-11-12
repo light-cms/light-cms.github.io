@@ -1,7 +1,6 @@
 +++
 title = "Comparisons"
 description = "LightCMS compared side by side with every CMS, headless platform, and site builder"
-sort_by = "date"
 page_template = "article.html"
 +++
 
