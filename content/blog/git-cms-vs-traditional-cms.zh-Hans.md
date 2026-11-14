@@ -2,7 +2,7 @@
 title: "基于 Git-CMS 与传统CMS：哪个对您来说是正确的？"
 description: 基于 Git 的 CMS 平台与WordPress、Ghost和Content 关于安全性、所有权、成本和工作流程的比较，以及为什么静态发布转移到 Git 的原因。
 serial: 10
-date: 2026-10-14T12:30:00Z
+date: 2026-10-14T12：30：00Z
 draft: false
 keywords:
   - 基于 git 的 cms

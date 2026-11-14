@@ -2,7 +2,7 @@
 title: Automatisierung des Newsletters ohne Bezahlung
 description: "Wie Sie einen Blog-Newsletter direkt aus Ihrem Git-Repository mit Newsy: Keine Mailingliste zu verwalten, kein SMTP-Relais, keine Sass-Gebühren"
 serial: 5
-date: 2020-09-18T01:50:00Z
+date: 18.09.20T01:50:00Z
 draft: false
 keywords:
   - newsletter-Automatisierung

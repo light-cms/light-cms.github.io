@@ -2,7 +2,7 @@
 title: Konfigurieren Ihres Repository & CI/CD
 description: Verbinden Sie ein statisches Site-Repository (Hugo, Astro, Jekyll, SvelteKit) mit LightCMS und automatisieren Sie Installationen mit CI/CD.
 serial: 3
-date: 2020-09-18T01:42:00Z
+date: 18.09.20T01:42:00Z
 draft: false
 keywords:
   - repository-Konfiguration

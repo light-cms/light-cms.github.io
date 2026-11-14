@@ -2,7 +2,7 @@
 title: "LightCMS vs Pages CMS：富写和 GitHub 上的干净表单"
 description: "LightCMS为作者提供了一个完整的视觉编辑器，其中有AI、口述和新闻通讯。一个完整的包。"
 serial: 41
-date: 2026-10-15T20:09:55Z
+date: 2026-10-15T20：09：55Z
 draft: false
 keywords:
   - lightcms vs pages cms

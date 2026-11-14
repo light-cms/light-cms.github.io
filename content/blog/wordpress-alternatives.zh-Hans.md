@@ -2,7 +2,7 @@
 title: "2026年的顶级WordPress 替代品：将数据库平移"
 description: "2026年最好的 WordPress 备选办法：基于 Git 的 CMS 平台和静态站点建筑，能够更快地装载，降低成本，减少攻击风险。"
 serial: 17
-date: 2026-10-14T13:40:00Z
+date: 2026-10-14T13：40：00Z
 draft: false
 keywords:
   - wordpress 选项

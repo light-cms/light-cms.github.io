@@ -2,7 +2,7 @@
 title: "LightCMS vs Pages CMS : Rich Writing vs a Clean Form over GitHub"
 description: "LightCMS offre aux rédacteurs un éditeur visuel complet avec AI, dictation et newsletters. Un forfait complet."
 serial: 41
-date: '2026-10-15T20:09:55Z'
+date: 15T20:09:55Z
 draft: false
 keywords:
   - lightcms vs pages cms

@@ -2,7 +2,7 @@
 title: "Vercel vs Netlife: 你应该选择哪个Jamstack 主机？"
 description: 与免费级别、带宽、构建分钟、框架、边缘功能和定价相比较的Vercel 和 Netlify，每一类项目都有一个清晰的选择。
 serial: 23
-date: 2026-10-14T14:40:00Z
+date: 2026-10-14T14：40：00Z
 draft: false
 keywords:
   - vercel vs netlify
