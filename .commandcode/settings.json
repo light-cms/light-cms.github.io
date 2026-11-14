@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(git:*)",
+      "Shell(find /var/home/pmustafi/alpha/light-cms.github.io -name \"*.toml\" -not -path \"*/themes/*\" | xargs grep -l \"\\[.*frontmatter\" 2>&1 | head -10)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
