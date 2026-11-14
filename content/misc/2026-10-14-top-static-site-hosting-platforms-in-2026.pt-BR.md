@@ -2,7 +2,7 @@
 title: Plataformas de Hospedagem do Site Estático em 2026
 description: >-
   Uma comparação prática dos melhores provedores de hospedagem de site estático em 2026 GitHub Pages, Cloudflare Pages, Wasmer, Vercel, Netly e Deno Deploy.
-date: '2026-10-14T10:00:00Z'
+date: '2026-10-14T10:00.000Z'
 draft: false
 weight: 1
 serial: 6
