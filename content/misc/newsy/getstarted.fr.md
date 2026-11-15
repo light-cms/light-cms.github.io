@@ -1,92 +1,92 @@
 ---
-title: "Getting Started with Newsy: GitHub-Powered Newsletters"
-description: "Deploy and self-host Newsy, a serverless newsletter platform powered entirely by Go, WebAssembly, and GitHub Issues."
-label: "Getting Started"
+title: "Démarrage avec Newsy : Newsletters gérées par GitHub"
+description: "Déployer et auto-héberger Newsy, une plateforme de newsletter sans serveur entièrement gérée par Go, WebAssembly et GitHub."
+label: "Commencer"
 tags:
-  - newsy
-  - newsletter
-  - modern solution
-  - free newsletter
+  - Nouvelles
+  - Newsletter
+  - solution moderne
+  - newsletter gratuite
   - github
   - golang
   - webassembly
 isCJKLanguage: false
 ---
 
-Introducing [Newsy](https://newsy.lightcms.me), an open-source newsletter platform powered by GitHub.
+Introduction à [Newsy](https://newsy.lightcms.me), une plateforme de newsletter open-source propulsée par GitHub.
 
-Newsy is heavily inspired by tools like Utterances, Giscus, and Gitalk, which reimagined commenting for static sites using GitHub Issues.
-Newsy takes the same GitHub-driven approach and brings it to newsletters:
-instead of relying on external services or maintaining a separate mailing list,
-your newsletter lives right alongside your code in your GitHub repository.
+Newsy est fortement inspiré par des outils tels que Utterances, Giscus et Gitalk, qui ont réimaginé les commentaires de sites statiques utilisant GitHub Issues.
+Newsy adopte la même approche basée sur GitHub et l'apporte aux newsletters :
+au lieu de s'appuyer sur des services externes ou de maintenir une liste de diffusion séparée
+votre newsletter vit à côté de votre code dans votre dépôt GitHub.
 
 Why GitHub?
 
-1. Your newsletter lives right alongside your code in your GitHub repository.
-2. No mailing list management. Subscribers and updates are tracked in GitHub.
-3. No expensive email APIs. You do not need a separate email subscription service.
-4. No email delivery setup. You do not need to manage SMTP, spam filters, or domain reputation.
-5. No subscription database. You do not need a separate database for subscriptions and unsubscribes.
-6. You just focus on writing. GitHub and Newsy handle the rest.
+1. Votre newsletter vit à côté de votre code dans votre dépôt GitHub.
+2. Pas de gestion de listes de diffusion. Les abonnés et les mises à jour sont suivis dans GitHub.
+3. Aucune API email coûteuse. Vous n'avez pas besoin d'un service d'abonnement à des e-mails séparé.
+4. Aucune configuration d'envoi de courriel. Vous n'avez pas besoin de gérer les SMTP, les filtres anti-spam ou la réputation du domaine.
+5. Aucune base de données d'abonnement. Vous n'avez pas besoin d'une base de données séparée pour les abonnements et les désabonnements.
+6. Vous vous concentrez sur l'écriture. GitHub et Newsy s'occupent du reste.
 
-Publishing should be accessible to everyone. There is no need to pay a heavy fee to a SaaS platform or spend hours wrestling with email infrastructure just to share updates with your readers.
+La publication doit être accessible à tous. Il n'est pas nécessaire de payer des frais élevés à une plateforme SaaS ou de passer des heures à lutter avec l'infrastructure de messagerie simplement pour partager les mises à jour avec vos lecteurs.
 
-- Deploys on serverless (e.g., Vercel, AWS Lambda) for production.
-- WebAssembly support: Compile the Go binary to WebAssembly with [TinyGo](https://tinygo.org/) and run it on serverless platforms that support JavaScript or TypeScript runtimes.
+- Déploie sur serveur sans serveur (par exemple, Vercel, AWS Lambda) pour la production.
+- Prise en charge de WebAssembly : Compiler le binaire Go vers WebAssembly avec [TinyGo](https://tinygo.org/) et l'exécuter sur des plates-formes sans serveur qui prennent en charge les exécutions JavaScript ou TypeScript.
 
-A video walkthrough of the local setup is available in the [video guide](/content/misc/newsy/video.md).
+Une présentation vidéo de la configuration locale est disponible dans le [guide vidéo](/content/misc/newsy/video.md).
 
-## Self Host Your Bot
+## Héberger votre Bot
 
-Follow these steps to run Newsy and connect it to your GitHub repositories.
+Suivez ces étapes pour exécuter Newsy et le connecter à vos dépôts GitHub.
 
-#### 1. Clone the Repository
+#### 1. Cloner le dépôt
 
 ```bash
 git clone git@github.com:light-cms/newsy.git
-cd newsy
+newsy cd
 ```
 
-#### 2. Set Up the Environment
+#### 2. Mettre en place l'environnement
 
-We use [mise](https://mise.jdx.dev) to keep the development environment
-consistent and easy to manage:
+Nous utilisons [mise](https://mise.jdx.dev) pour maintenir l'environnement de développement
+cohérent et facile à gérer :
 
 ```bash
 mise deps
 ```
 
-#### 3. Build and Run
+#### 3. Construire et exécuter
 
-Build and run the Go binary:
+Construire et exécuter le binaire Go :
 
 ```bash
-go build
+allez construire
 ./newsy
 ```
 
 #### 4. Configure the GitHub App
 
-1. Open [http://localhost:3000](http://localhost:3000) in your browser.
-2. If you need to expose your local server, use a tunneling service such as [ngrok](https://ngrok.com),
-   [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/),
-   or SSH tunneling via [localhost.run](http://localhost.run/):
+1. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+2. Si vous avez besoin d'exposer votre serveur local, utilisez un service de tunneling tel que [ngrok](https://ngrok.com),
+   [Tunnel de Fusée nuageuse](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/),
+   ou SSH tunneling via [localhost.run](http://localhost.run/):
 
 ```bash
 ssh -R 80:localhost:3000 localhost.run
 ```
 
-3. Open your tunnel URL (e.g., `https://xyz.localhost.run`) in your browser:
+3. Ouvrez l'URL de votre tunnel (par exemple, `https://xyz.localhost.run`) dans votre navigateur:
 
 [![newsy a github issues backed newsletter platform](https://markdown-videos-api.jorgenkh.no/youtube/sfjo6ZVgC9w.gif?duration=600)](https://youtu.be/sfjo6ZVgC9w)
 
-_(If you run into issues, refer to the [video guide](/guides/newsy/video/) or try an alternative tunneling provider.)_
+_(Si vous rencontrez des problèmes, reportez-vous au [guide vidéo](/guides/newsy/video/) ou essayez un fournisseur alternatif de tunneling.)_
 
-4. Choose an **App name** (preferably unique).
-5. Paste the tunnel URL into the **Webhook URL** field and submit.
-6. A `.env` file containing your app's secrets will be generated in your project root. Keep this file safe.
+4. Choisissez un **nom de l'application** (de préférence unique).
+5. Collez l'URL du tunnel dans le champ **Webhook URL** et soumettez-le.
+6. Un fichier `.env` contenant les secrets de votre application sera généré à la racine de votre projet. Garder ce fichier en sécurité.
 
-The generated `.env` should look like this:
+Le fichier `.env` généré devrait ressembler à ceci :
 
 ```bash
 APP_ID=""
@@ -96,62 +96,62 @@ DATABASE_URL=""
 ```
 
 > \[!IMPORTANT\]
-> Install the GitHub App on **specific repositories only**, rather than on "All repositories".
+> Installez l'application GitHub sur **des dépôts spécifiques**, plutôt que sur "Tous les dépôts".
 
-Each instance of Newsy can be shared across multiple repositories or users.
+Chaque instance de Newsy peut être partagée entre plusieurs dépôts ou utilisateurs.
 
 > \[!NOTE\]
-> By default, Newsy only triggers comments and issues upon the creation of new content files (`.html`, `.md`, `.mdx`, etc.), rather than on subsequent edits.
+> Par défaut, Newsy ne déclenche que les commentaires et les problèmes lors de la création de nouveaux fichiers de contenu (`. tml`, `.md`, `.mdx`, etc.), plutôt que sur les modifications suivantes.
 
 ---
 
-## Try Newsy via the Hosted Instance
+## Essayez Newsy via l'instance hébergée
 
-You can test Newsy directly using the hosted version: [https://newsy.lightcms.me](https://newsy.lightcms.me)
+Vous pouvez tester Newsy directement en utilisant la version hébergée : [https://newsy.lightcms.me](https://newsy.lightcms.me)
 
 [![Newsy Demo](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://youtu.be/3d1xLYkeVsA)
 
 ---
 
-## Deploy on Vercel
+## Déployer sur Vercel
 
 ![Deploy with Vercel](https://vercel.com/button)
 
-Once deployed, update your GitHub App's Webhook URL from `*.localhost.run` to your production domain: `https://<your-app>.vercel.app`.
+Une fois déployé, mettez à jour l'URL du Webhook de votre application GitHub depuis `*.localhost.run` vers votre domaine de production : `https://<your-app>.vercel.app`.
 
-> \[!WARNING\]
-> Only use the deploy button if you already have a configured GitHub App and have its credentials ready. Otherwise, follow the [Self-Host Your Bot](#self-host-your-bot) steps first to create one.
+> \[!AVERTISSEMENT \]
+> N'utilisez le bouton de déploiement que si vous avez déjà une application GitHub configurée et que ses identifiants sont prêts. Sinon, suivez les étapes de [Self-Host Your Bot](#self-host-your-bot) pour en créer un.
 
 ---
 
 ## Operating Costs &amp; Resource Usage
 
-Vercel and many other cloud providers offer free tiers for serverless workloads. You can also host Newsy on JavaScript or TypeScript-only runtimes by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org/).
+Vercel et de nombreux autres fournisseurs de cloud offrent des tiers gratuits pour des charges de travail sans serveur. Vous pouvez également héberger Newsy sur des exécutions JavaScript ou TypeScript-only en compilant le binaire Go vers WebAssembly avec [TinyGo](https://tinygo.org/).
 
-Because it is a compiled Go binary:
-- **Low memory footprint**, comfortably staying well within serverless memory and execution limits.
+Parce que c'est un binaire Go compilé :
+- **Faible empreinte mémoire**, en restant confortablement dans la mémoire sans serveur et les limites d'exécution.
 
 ---
 
-## Subscribe to the Newsletter
+## S'abonner à la Newsletter
 
-Subscribe to see Newsy in action:
+Abonnez-vous pour voir les Newsy en action :
 
 👉 [**Subscribe on GitHub**](https://github.com/Pratyay360/blogs_md/issues/1)
 
 ---
 
-## Generate Your Subscription Button
+## Générer votre bouton d'abonnement
 
-Generate an embedded subscription button for your account at [newsy.lightcms.me](https://newsy.lightcms.me/).
+Générez un bouton d'abonnement intégré pour votre compte à [newsy.lightcms.me](https://newsy.lightcms.me/).
 
-You can customize and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
+Vous pouvez personnaliser et styliser le bouton en utilisant [Primer CSS](https://cdnjs.com/libraries/Primer).
 
 > \[!TIP\]
-> **Security tip:** After the bot publishes its first newsletter message, lock the conversation to prevent any unintended behavior.
+> **Conseil de sécurité :** Après la publication de son premier message de newsletter, verrouillez la conversation pour éviter tout comportement involontaire.
 
-![Locking the conversation](/static/newsy-lock.png)
+![Verrouiller la conversation](/static/newsy-lock.png)
 
 ![newsy unlock](/static/newsy-unlock.png)
 
-For further details on permissions, refer to the [required permissions](/guides/newsy/list-of-all-permission/) documentation.
+Pour plus de détails sur les permissions, reportez-vous à la documentation [autorisations requises](/guides/newsy/list-of-all-permission/).
