@@ -1,110 +1,110 @@
 ---
-title: "LightCMS vs Ghost: Publishing Platforms Compared"
-description: "Ghost is a Node.js publishing platform with memberships and email built in; LightCMS is a Git based editor for static sites. Compare storage, cost, and writing workflow."
+title: "LightCMS vs fantôme : plateformes de publication comparées"
+description: "Ghost est une plate-forme de publication Node.js avec des adhésions et des e-mails intégrés; LightCMS est un éditeur basé sur Git pour les sites statiques. Comparer le stockage, le coût et le flux de travail d'écriture."
 serial: 54
 date: 2026-10-16T12:40:00Z
 draft: false
 keywords:
-  - lightcms vs ghost
-  - ghost alternatives
-  - ghost vs static site
-  - self hosted blogging platform
-  - ghost pricing alternative
+  - lightcms vs fantôme
+  - alternatives fantômes
+  - fantôme vs site statique
+  - Plateforme de blogging auto-hébergée
+  - alternative tarifaire fantômes
 preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms
-    - ghost
+    - fantôme
     - cms
-    - comparison
-    - publishing
+    - Comparaison
+    - Publication
 ---
 
 [Ghost](https://ghost.org) is the most convincing modern take on "publish and get paid": a fast Node.js publishing platform with a beautiful editor, memberships, newsletters, and payments in one package, self-hostable or hosted.
 
-LightCMS covers the writing half of that and none of the membership half. The choice comes down to whether your publication needs a _platform_ or a _pipeline_.
+LightCMS couvre la moitié de ce qui est écrit et aucune de la moitié de l'adhésion. Le choix revient à savoir si votre publication a besoin d'une _plateforme_ ou d'une _pipeline_.
 
 ---
 
-## The Split
+## Le Split
 
-**Ghost** is an application: Node.js plus a MySQL database, rendering pages per request (or client-fetching into a Jamstack frontend). Content, members, subscriptions, and email all live in its database.
+**Ghost** est une application : Node.js plus une base de données MySQL, le rendu des pages par requête (ou la récupération du client dans un frontend Jamstack). Contenu, membres, abonnements et e-mails en direct dans sa base de données.
 
-**LightCMS** is a content tool: Markdown in your repository, a static build, and a CDN. Distribution beyond the site, such as [newsletters](/blog/newsletter-email-automation/), runs on GitHub rather than inside a member database.
+**LightCMS** est un outil de contenu : Markdown dans votre dépôt, une compilation statique, et un CDN. La distribution au-delà du site, comme [newsletters](/blog/newsletter-email-automation/), fonctionne sur GitHub plutôt que dans une base de données de membres.
 
-|                        | LightCMS                           | Ghost                        |
-| :--------------------- | :--------------------------------- | :--------------------------- |
-| **Storage**            | Markdown in Git                    | MySQL database               |
-| **Rendering**          | Pre-built static HTML              | Server-side / headless API   |
-| **Members & payments** | Not built in                       | Native memberships, Stripe   |
-| **Newsletters**        | Newsy on GitHub (no email service) | Native email to members      |
-| **Editor**             | TipTap WYSIWYG → Markdown          | Clean Markdown-based editor  |
-| **AI copilot / voice** | Built in                           | Not bundled                  |
-| **Operations**         | None at runtime                    | App + DB to run and patch    |
-| **Cost**               | Hosting only                       | Hosting, or Ghost(Pro) plans |
-| **Portability**        | Clone the repository               | Export members + content     |
-
----
-
-## Where Ghost Wins
-
-- **Memberships and subscriptions out of the box.** Paid tiers, Stripe billing, and member management sit outside LightCMS's scope.
-- **Native newsletters to an audience list.** Email sending, open rates, and segmentation are part of the product.
-- **An all-in-one publishing business.** One application handles writing, delivery, and monetization.
-- **A polished admin** and a strong default theme.
-
-## Where LightCMS Wins
-
-- **Static output.** No database queries per page view: faster, cheaper at scale, and a smaller attack surface. See [static vs dynamic sites](/blog/static-vs-dynamic/).
-- **Ownership and portability.** Content is files in your repository; there is no member-database-shaped lock-in for the writing itself.
-- **The extra writing tools.** [AI drafting](/blog/lightcms-ai-copilot/), [voice-to-text](/blog/lightcms-voice-to-text/), and full document editing with tables, code, and math.
-- **Zero operational surface.** No Node process, no MySQL to patch or back up.
-- **Cost that does not scale with audience.** A bigger list does not mean a bigger server.
+|                         | LightCMS                                        | Fantôme                                  |
+| :---------------------- | :---------------------------------------------- | :--------------------------------------- |
+| **Stockage**            | Markdown dans Git                               | Base de données MySQL                    |
+| **Équivalent**          | HTML statique précompilé                        | API côté serveur / headless              |
+| **Membres & paiements** | Non intégré                                     | Adhésions autochtones, Stripe            |
+| **Newsletters**         | Newsy sur GitHub (pas de service de messagerie) | E-mail natif pour les membres            |
+| **Éditeur**             | TipTap WYSIWYG → Markdown                       | Nettoyer l'éditeur basé sur Markdown     |
+| **pilote IA / voix**    | Inclus dans                                     | Non groupé                               |
+| **Opérations**          | Aucun au moment de l'exécution.                 | Application + DB à exécuter et à patcher |
+| **Coût**                | Hébergement uniquement                          | Hébergement, ou offres Ghost(Pro)        |
+| **Portabilité**         | Cloner le dépôt                                 | Exporter les membres + le contenu        |
 
 ---
 
-## The Practical Question
+## Où le fantôme gagne
 
-Do you monetize an audience directly inside your site?
+- **Les adhésions et les abonnements sont gratuits.** Les paliers payants, la facturation Stripe et la gestion des membres se situent en dehors du champ d'application de LightCMS.
+- **Des newsletters indigènes à une liste d'auditoires.** L'envoi, les tarifs ouverts et la segmentation font partie du produit.
+- **Une entreprise d’édition tout-en-un.** Une application gère l’écriture, la livraison et la monétisation.
+- **Un administrateur poli** et un thème fort par défaut.
 
-- **Yes** → Ghost is purpose-built for it, and the database is earning its keep.
-- **No** → you are running a database to hold posts that a folder of files would hold, plus the maintenance that comes with it. Pair LightCMS with a mailing list provider or Newsy and you keep the newsletter without the runtime.
+## Où LightCMS gagne
 
-Many teams run both: a static marketing site and blog on LightCMS, with the membership area as a separate application.
+- **Sortie statique.** Aucune requête de base de données par page : plus rapide, moins cher à l'échelle et une plus petite surface d'attaque. Voir [les sites statiques vs dynamiques] (/blog/static-vs-dynamic/).
+- **Propriété et portabilité.** Le contenu est un fichier dans votre dépôt; il n'y a pas de verrouillage en forme de base de données pour l'écriture elle-même.
+- **Les outils d'écriture supplémentaires.** [AI drafting](/blog/lightcms-ai-copilot/), [voice-to-text](/blog/lightcms-voice-to-text/), et l'édition de documents complets avec des tableaux, du code et des mathématiques.
+- **Zéro surface opérationnelle.** Pas de processus de nœud, pas de MySQL à patcher ou à sauvegarder.
+- **Coûts qui ne s'échelonnent pas avec le public.** Une plus grande liste ne signifie pas un serveur plus grand.
+
+---
+
+## La question pratique
+
+Monétissez-vous un public directement à l'intérieur de votre site?
+
+- **Oui** → Ghost est construit à des fins et la base de données gagne sa conservation.
+- **Non** → vous utilisez une base de données pour contenir des messages qu'un dossier de fichiers contiendrait, ainsi que la maintenance qui l'accompagne. Pair LightCMS avec un fournisseur de listes de diffusion ou Newsy et vous gardez la newsletter sans le temps d'exécution.
+
+De nombreuses équipes dirigent les deux: un site de marketing statique et blog sur LightCMS, avec la zone d'adhésion comme une application séparée.
 
 ---
 
 ## Migration
 
-Ghost exports posts as JSON (and members as CSV). Converting posts to Markdown with front matter is mostly mechanical; Ghost's editor output is close to Markdown already. The member list moves to whatever newsletter platform you choose. Plan for a weekend, not a quarter.
+Ghost exporte des messages en JSON (et les membres en CSV). La conversion des messages en Markdown avec la première question est principalement mécanique; la sortie de l'éditeur de Ghost's est déjà proche de Markdown. La liste des membres se déplace vers la plateforme de newsletter que vous choisissez. Planifiez pour une fin de semaine, pas un trimestre.
 
 ---
 
-## Which Should You Choose?
+## Que devriez-vous choisir?
 
-- **Choose Ghost** if memberships, paid subscriptions, and native email are the product.
-- **Choose LightCMS** if the product is the writing, and the site should be static, fast, and yours.
-
----
-
-## Frequently Asked Questions
-
-### Is Ghost free?
-
-Ghost is open source (MIT) and self-hostable; Ghost(Pro) is the hosted, paid option. Either way you own your content, though self-hosting means running Node and MySQL.
-
-### Can I build a newsletter with LightCMS?
-
-Yes. [Newsy](https://github.com/light-cms/newsy) turns new posts into an announcement on a GitHub issue that readers subscribe to, with no newsletter service, no SMTP relay, and no per-subscriber fee. What you do not get is Ghost's member database and segmentation.
-
-### Is Ghost faster than a static site?
-
-Ghost is fast for a dynamic app, but a pre-built page served from a CDN has a structural advantage on first load.
-
-### Can Ghost output a static site?
-
-Ghost has a content API and works headless, but the Ghost application and database still run.
+- **Choisissez Ghost** si les adhésions, les abonnements payants et les e-mails natifs sont le produit.
+- **Choisissez LightCMS** si le produit est écrit et que le site doit être statique, rapide et le vôtre.
 
 ---
 
-More: [WordPress alternatives](/blog/wordpress-alternatives/), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [best CMS for static sites](/blog/best-cms-for-static-sites/).
+## Foire aux questions
+
+### Fantôme est-il gratuit ?
+
+Ghost est open source (MIT) et auto-hébergeable; Ghost(Pro) est l'option hébergée, payante. Dans les deux cas, vous possédez votre contenu, mais l'auto-hébergement signifie exécuter Node et MySQL.
+
+### Puis-je créer une newsletter avec LightCMS ?
+
+« Oui. » [Newsy](https://github.com/light-cms/newsy) transforme de nouveaux messages en une annonce sur un problème GitHub auquel les lecteurs s'abonnent, sans service de newsletter, sans relais SMTP et sans frais d'abonné. Ce que vous n'obtenez pas, c'est la base de données et la segmentation des membres de Ghost.
+
+### Ghost est-il plus rapide qu'un site statique?
+
+Ghost est rapide pour une application dynamique, mais une page pré-construite servie à partir d'un CDN a un avantage structurel à la première charge.
+
+### Ghost peut-il afficher un site statique ?
+
+Ghost a une API de contenu et fonctionne sans tête, mais l'application et la base de données Ghost tournent toujours.
+
+---
+
+Plus: [WordPress alternatives](/blog/wordpress-alternatives/), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [best CMS for static sites] (/blog/best-cms-for-static-sites/).
