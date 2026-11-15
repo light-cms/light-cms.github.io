@@ -1,16 +1,16 @@
 +++
-title = "Comparisons"
-description = "LightCMS compared side by side with every CMS, headless platform, and site builder"
+title = "比较"
+description = "LightCMS与每个CMS、无头平台和网站生成器并列比较"
 sort_by = "date"
 page_template = "article.html"
 +++
 
-Honest, side by side write ups of [LightCMS](https://lightcms.me) against the field. Each one starts from the architecture (where content lives, what runs at request time) and ends with who should actually pick it.
+诚心诚意地并肩编写 [LightCMS](https://lightcms.me) 对付字段。每个人都从架构开始(内容存续，请求时间运行)，以谁实际挑选结束。
 
 **Versus headless platforms**: [Sanity](/comparison/lightcms-vs-sanity), [Contentful](/comparison/lightcms-vs-contentful), [Storyblok](/comparison/lightcms-vs-storyblok), [Strapi](/comparison/lightcms-vs-strapi), [Payload](/comparison/lightcms-vs-payload-cms).
 
-**Versus Git based editors**: [Decap CMS](/comparison/lightcms-vs-decap-cms), [TinaCMS](/comparison/lightcms-vs-tinacms), [Keystatic](/comparison/lightcms-vs-keystatic), [Pages CMS](/comparison/lightcms-vs-pagescms).
+**Versus Git 基于 Git 的编辑器**: [Decap CMS](/comparison/lightcms-vs-decap-cms), [TinaCMS](/comparison/lightcms-vs-tinacms), [Keystatic](/comparison/lightcms-vs-keystatic), [CMS](/comparison/lightcms-vs-pagescms)。
 
-**Versus traditional CMS and builders**: [WordPress](/comparison/lightcms-vs-wordpress), [Drupal](/comparison/lightcms-vs-drupal), [Joomla](/comparison/lightcms-vs-joomla), [Ghost](/comparison/lightcms-vs-ghost), [Webflow](/comparison/lightcms-vs-webflow).
+**Versus traditional CMS and builders**: [WordPress](/comparison/lightcms-vs-wordpress), [Drupal](/comparison/lightcms-vs-drupal), [Joomla](/comparison/lightcms-vs-joomla), [Ghost](/comparison/lightcms-vs-ghost), [Webflow](/comparison/lightcms-vs-webflow)
 
-**Overview guides**: [top Git based CMS platforms](/comparison/top-git-cms), [Decap alternatives](/comparison/netlifycms), [Pages CMS alternatives](/comparison/pagescms), [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites).
+**概述指南**: [前 Git 基于 CMS 平台](/comparison/top-git-cms), [Decap 替代](/comparison/netlifycms), [Pages CMS alternatives](/comparison/pagescms), [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites)。
