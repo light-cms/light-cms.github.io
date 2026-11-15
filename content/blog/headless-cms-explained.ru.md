@@ -1,79 +1,79 @@
 ---
-title: What Is a Headless CMS? (And Why Git Based Ones Matter)
-description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git based CMS tools."
+title: Что такое бесшовный CMS? (И почему Git основан на матери)
+description: "Беспроводной CMS объяснил: как работает разложенная поставка контента, где не хватает традиционных платформ и почему разработчики предпочитают инструменты CMS на основе Git."
 serial: 26
 date: 2026-10-14T15:10:00Z
 draft: false
 keywords:
-  - what is headless cms
-  - headless cms explained
-  - headless cms vs traditional
-  - git based headless cms
-  - headless cms examples
+  - что бесголовные cms
+  - бесголовные cms объяснили
+  - бесголовные cms против традиционных
+  - git основанный на бесголовных cms
+  - примеры бесголовных cms
 preview: ./
 taxonomies:
   tags:
-    - cms
-    - headless
+    - смс
+    - без головы
     - api
     - jamstack
 ---
 
-A **headless CMS** is a content system with no front end of its own: it stores and structures content, then delivers it through an API to any consumer (a website, an app, a kiosk, a newsletter). The "head" (the website) is severed from the "body" (the content store). It is how most modern content stacks are built. It is also where an important distinction gets lost: **not all headless CMSs store content the same way**.
+**Бесконечная CMS** — это контентная система, не имеющая собственного интерфейса: она хранит контент и структуры, затем передает его через API любому потребителю (сайту, приложению, киоску, рассылке). "Голова" (сайт) отделяется от "тела" (контент-магазин). Именно так построены самые современные комплекты контента. Здесь также теряется важное различие: **не все бесголовые CMS хранят содержимое одинакового**.
 
 ---
 
-### How a Traditional CMS Works
+### Как работает традиционный CMS
 
-WordPress renders pages itself: content in MySQL, templates in PHP, output assembled per request on the same server. Presentation and content are welded together. That is powerful, but the site's performance, security, and uptime all ride on that runtime.
+WordPress сама предоставляет страницы: содержимое в MySQL, шаблоны в PHP, вывод собранных за запрос на том же сервере. Презентация и содержание сварены вместе. Это мощный, но производительность, безопасность сайта и прошивка всех ездовых на тот момент работы.
 
-### How a Headless CMS Works
+### Как работает Headless CMS
 
-A headless platform decouples the two:
+Бесголовная платформа разлагает два:
 
-1. Editors write in the platform's admin interface.
-2. Content sits as structured data in the provider's database.
-3. Frontends fetch it via API (REST or GraphQL) at build time or runtime.
-4. The same content can feed a website, a mobile app, and an IoT screen simultaneously.
+1. Редакторы пишут в админ-интерфейсе платформы.
+2. Содержимое хранится в виде структурированных данных в базе данных провайдера.
+3. Frontends get it via API (REST или GraphQL) at build time or runtime.
+4. Тот же контент может накормить веб-сайт, мобильное приложение и экран IoT.
 
-This is the model behind Contentful, Sanity, Strapi, and Prismic. For multi-channel, application-heavy organizations, it is the right model.
+Это модель, лежащая за содержимым, санитарии, Strapi и Prismic. Для многоканальных организаций это правильная модель.
 
-### The Trade-offs Developers Discovered
+### Разработчики компромиссов обнаружены
 
-Headless solved WordPress's problems but introduced new ones:
+Без головы решали проблемы WordPress, но ввели новые:
 
-- **Content lock-in**: your articles live in a proprietary database behind an API. Leaving means exporting and reformatting everything.
-- **Per-seat pricing**: costs scale with editors, not value.
-- **A second infrastructure**: the CMS becomes a SaaS dependency between your writers and your site, with outages, plan limits, and schema migrations of its own.
-- **Build-time fetching complexity**: the frontend must model content as API data rather than files.
+- **Блокировка контента**: ваши статьи живут в проприетарной базе данных за API. Оставление означает экспорт и переформатирование всего.
+- **Цены на одно место**: стоит шкала с редактором, а не стоимость.
+- **Вторая инфраструктура**: CMS становится зависимым SaaS от ваших писателей и вашего сайта, с ошибками, планами и схемой самостоятельных переходов.
+- **Сложность выборки времени сборки**: интерфейс должен моделировать содержимое как данные API, а не файлы.
 
-### The Git based Headless CMS
+### Git на основе Headless CMS
 
-A Git based CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: as Markdown files with YAML front matter in your own repository.
+Основанная на Git CMS является бесконечной поставкой: любой статический генератор сайтов может потреблять свой выход. Но он хранит контент, в котором его хотят разработчики: как Markdown файлы с интерфейсом YAML в вашем собственном репозитории.
 
-- No lock-in: the content is a folder of plain-text files you own.
-- No per-seat SaaS bill: self-hosted and open source options like [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/), and [Decap CMS](/comparison/netlifycms/).
-- The publishing pipeline is the same everywhere: commit → CI/CD → CDN.
-- Version history, review, and rollback, because it is Git.
+- Нет блокировки: содержимое является папкой из текстовых файлов, которые вы владеете.
+- Нет счета на каждое место в SaaS: настройки с открытым исходным кодом, такие как [LightCMS](/getting-started/), [страницы CMS](/comparison/pagescms/), и [Decap CMS](/comparison/netlifycms/).
+- Издательский трубопровод одинаково везде: commit → CI/CD → CDN.
+- История версий, обзор и откат, потому что это Git.
 
-For the full field, see [Git based CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).
+Полное поле, см. [Compared] [платформы, основанные на Git] (/comparison/top-git-cms/); архитектуру, которую она питается, [что такое Jamstack](/blog/what-is-jamstack/).
 
 ---
 
-### Frequently Asked Questions
+### Часто задаваемые вопросы
 
 #### Is a headless CMS better than WordPress?
 
-For new projects, usually. Decoupled delivery is faster, safer, and more flexible. The remaining question is where the content itself is stored.
+Для новых проектов, как обычно. Встроенная поставка осуществляется быстрее, безопаснее и гибче. Остальной вопрос - место хранения содержимого.
 
-#### What is the best headless CMS for developers?
+#### Что такое лучший бесголовной CMS для разработчиков?
 
-Depends on the trade-off you want: hosted API platforms (Contentful, Sanity) for multi-channel SaaS; Git based CMSs (LightCMS, Pages CMS, TinaCMS) for ownership and zero lock-in.
+Зависит от trade-off вы хотите: hosted API платформы (контентные, безопасные) для многоканальных SaaS; CMS, основанные на Git, (LightCMS, Pages CMS, TinaCMS) для владения и нулевой блокировки.
 
-#### Does a headless CMS need an API?
+#### Нужен ли CMS для бесголовного интерфейса?
 
-A hosted headless CMS serves content via API. A Git based one serves content as static files from your CDN, often the fastest "API" there is, since it's just a cached HTTP request.
+Контент без заголовков CMS обслуживает контент через API. Git использует содержимое как статические файлы из вашего CDN, часто это самый быстрый "API", поскольку это всего лишь кэшированный HTTP-запрос.
 
-#### Can I move from a hosted headless CMS to a Git based one?
+#### Могу ли я переместиться с безголовного CMS на Git основанный?
 
-Yes. Export to Markdown, commit to a repository, and point your generator at the files. The migration typically removes a monthly bill.
+Да. Экспорт в Markdown, зафиксировать в репозиторий и указать генератору файлов. Миграция обычно удаляет ежемесячный счет.
