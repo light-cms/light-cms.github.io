@@ -1,79 +1,79 @@
 ---
-title: What Is a Headless CMS? (And Why Git Based Ones Matter)
-description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git based CMS tools."
+title: O que é uma CMS sem cabeça? (E porque o Git Baseado em Matérias)
+description: "CMS sem cabeça explicado: como funciona a dissociação da entrega de conteúdo, onde as plataformas tradicionais sem cabeça ficam curtas e porque os desenvolvedores preferem ferramentas CMS baseados no Git."
 serial: 26
 date: 2026-10-14T15:10:00Z
 draft: false
 keywords:
-  - what is headless cms
-  - headless cms explained
-  - headless cms vs traditional
-  - git based headless cms
-  - headless cms examples
+  - o que é ms sem cabeça
+  - cms sem cabeça explicados
+  - cms sem cabeça vs. tradicional
+  - git baseado em xícaras headless
+  - exemplos de cms headless
 preview: ./
 taxonomies:
   tags:
-    - cms
-    - headless
+    - SMS
+    - sem cabeça
     - api
     - jamstack
 ---
 
-A **headless CMS** is a content system with no front end of its own: it stores and structures content, then delivers it through an API to any consumer (a website, an app, a kiosk, a newsletter). The "head" (the website) is severed from the "body" (the content store). It is how most modern content stacks are built. It is also where an important distinction gets lost: **not all headless CMSs store content the same way**.
+Um **CMS sem cabeça** é um sistema de conteúdo sem front-end próprio: armazena e estrutura de conteúdo, depois o entrega por meio de uma API para qualquer consumidor (um site, um app, um kiosk, um boletim informativo). O "cabeça" (o site) é reverenciado pelo "corpo" (a loja de conteúdo). É assim que são construídas as mais modernas pilhas de conteúdo. Também é onde se perde uma distinção importante: **nem todas as CMSs sem cabeça armazenam conteúdo da mesma maneira**.
 
 ---
 
-### How a Traditional CMS Works
+### Como funciona um CMS tradicional
 
-WordPress renders pages itself: content in MySQL, templates in PHP, output assembled per request on the same server. Presentation and content are welded together. That is powerful, but the site's performance, security, and uptime all ride on that runtime.
+WordPress renderiza as próprias páginas: conteúdo em MySQL, modelos no PHP, a saída foi montada por solicitação no mesmo servidor. A apresentação e o conteúdo são reunidos. Isso é poderoso, mas o desempenho, a segurança e o tempo de uso desse local são todos percorridos nesse tempo de execução.
 
-### How a Headless CMS Works
+### Como funciona um CMS sem cabeça
 
-A headless platform decouples the two:
+Uma plataforma sem cabeça une as duas:
 
-1. Editors write in the platform's admin interface.
-2. Content sits as structured data in the provider's database.
-3. Frontends fetch it via API (REST or GraphQL) at build time or runtime.
-4. The same content can feed a website, a mobile app, and an IoT screen simultaneously.
+1. Os editores escrevem na interface de administração da plataforma.
+2. Sites de conteúdo como dados estruturados no banco de dados do provedor.
+3. Frontend busca-o via API (REST ou GraphQL) no tempo de compilação ou tempo de execução.
+4. O mesmo conteúdo pode adicionar um site, um aplicativo móvel e uma tela de IoT simultaneamente.
 
-This is the model behind Contentful, Sanity, Strapi, and Prismic. For multi-channel, application-heavy organizations, it is the right model.
+Este é o modelo por trás de Contentful, Sanity, Strapi e Prismica. Para organizações multicanais, organizações pesadas em aplicação, ele é o modelo correto.
 
-### The Trade-offs Developers Discovered
+### Os Desenvolvedores da Troca Descobertos
 
-Headless solved WordPress's problems but introduced new ones:
+Os problemas do WordPress foram resolvidos sem cabeça, mas introduziram novos:
 
-- **Content lock-in**: your articles live in a proprietary database behind an API. Leaving means exporting and reformatting everything.
-- **Per-seat pricing**: costs scale with editors, not value.
-- **A second infrastructure**: the CMS becomes a SaaS dependency between your writers and your site, with outages, plan limits, and schema migrations of its own.
-- **Build-time fetching complexity**: the frontend must model content as API data rather than files.
+- **Conteúdo de bloqueio**: seus artigos vivem em um banco de dados proprietário por trás de uma API. Deixar significa exportar e reformatar tudo.
+- **Preços por assento**: custa escala com editores, não valor.
+- **Uma segunda infraestrutura**: o CMS se torna uma dependência do SaaS entre seus escritores e seu site, com interrupções, limites de plano e migrações de esquemas.
+- **Busca por tempo de construção**: o frontend deve modelar o conteúdo como dados de API em vez de arquivos.
 
-### The Git based Headless CMS
+### Git baseado em CMS sem cabeça
 
-A Git based CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: as Markdown files with YAML front matter in your own repository.
+Um CMS baseado em Git é sem cabeça na entrega: qualquer gerador de site estático pode consumir sua saída. Mas ele armazena o conteúdo onde os desenvolvedores o querem: como arquivos Markdown com a página inicial YAML no seu próprio repositório.
 
-- No lock-in: the content is a folder of plain-text files you own.
-- No per-seat SaaS bill: self-hosted and open source options like [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/), and [Decap CMS](/comparison/netlifycms/).
-- The publishing pipeline is the same everywhere: commit → CI/CD → CDN.
-- Version history, review, and rollback, because it is Git.
+- Nenhum bloqueio: o conteúdo é um diretório de arquivos de texto simples que você possui.
+- Sem conta SaaS por assento: opções auto-hospedadas e de código aberto, como [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/) e [Decap CMS](/comparison/netlifycms/).
+- O pipeline de publicação é o mesmo em todo o lugar: commit → CI/CD → CDN.
+- Histórico de versões, revisão, e reversão, porque é o Git.
 
-For the full field, see [Git based CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).
+Para o campo completo, consulte [Git based CMS platforms comparadas](/comparison/top-git-cms/); para a arquitetura que ele alimenta, [quê o Jamstack](/blog/what-is-jamstack/).
 
 ---
 
-### Frequently Asked Questions
+### Perguntas Frequentes
 
-#### Is a headless CMS better than WordPress?
+#### O CMS sem cabeça é melhor que o WordPress?
 
-For new projects, usually. Decoupled delivery is faster, safer, and more flexible. The remaining question is where the content itself is stored.
+Para novos projetos, normalmente. Entrega dissociada é mais rápida, mais segura e mais flexível. A outra questão é saber onde fica o conteúdo em si.
 
-#### What is the best headless CMS for developers?
+#### O que é o melhor CMS para desenvolvedores?
 
-Depends on the trade-off you want: hosted API platforms (Contentful, Sanity) for multi-channel SaaS; Git based CMSs (LightCMS, Pages CMS, TinaCMS) for ownership and zero lock-in.
+Depende do trade-off que você quer: plataformas de API hospedadas (Contentful, Sanity) para multi-canal SaaS; CMSs baseados no Git (LightCMS, Pages CMS, TinaCMS) para propriedade e bloqueio zero.
 
-#### Does a headless CMS need an API?
+#### Um CMS sem cabeça precisa de uma API?
 
-A hosted headless CMS serves content via API. A Git based one serves content as static files from your CDN, often the fastest "API" there is, since it's just a cached HTTP request.
+Um CMS hospedado sem cabeça serve o conteúdo via API. Um Git baseado em um conteúdo serve como arquivos estáticos do seu CDN, muitas vezes o "API" mais rápido, já que é apenas uma requisição HTTP em cache.
 
-#### Can I move from a hosted headless CMS to a Git based one?
+#### Posso mover de um CMS hospedado para um Git baseado em dados?
 
-Yes. Export to Markdown, commit to a repository, and point your generator at the files. The migration typically removes a monthly bill.
+Sim. Exportar para Markdown, commit em um repositório e apontar seu gerador para os arquivos. A migração tipicamente remove uma conta mensal.
