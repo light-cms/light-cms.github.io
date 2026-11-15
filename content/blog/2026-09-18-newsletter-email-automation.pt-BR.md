@@ -1,78 +1,78 @@
 ---
-title: Newsletter Automation Without a paid
-description: "How to run a blog newsletter straight from your Git repository with Newsy: no mailing list to manage, no SMTP relay, no sass fees"
+title: Automação da Newsletter sem um pagamento
+description: "Como executar um boletim informativo de blog diretamente do seu repositório Git com o Newsy: sem lista de envio para gerenciar, sem retransmissão SMTP, sem taxas de transmissão"
 serial: 5
 date: 2026-09-18T01:50:00Z
 draft: false
 keywords:
-  - newsletter automation
+  - automação da newsletter
   - github newsletter
-  - newsy
-  - static site newsletter
+  - noticiário
+  - Boletim do site estático
 preview: /og-image.webp
 taxonomies:
   tags:
-    - newsletter
-    - newsy
+    - boletim
+    - noticiário
     - github
-    - publishing
+    - publicação
 ---
-Email is one of the most effective ways to build a dedicated audience. The traditional way of doing it, though, has become cumbersome and expensive.
+O e-mail é uma das formas mais eficazes de construir um público dedicado. No entanto, a forma tradicional de o fazer tornou-se pesada e dispendiosa.
 
-[LightCMS](https://lightcms.me) takes a different route: **Git-driven newsletters** powered by [Newsy](https://github.com/light-cms/newsy), where the repository you already have _is_ the backend, so you can drop the newsletter service entirely.
-
----
-
-## The Traditional Newsletter Problem
-
-With conventional platforms like Mailchimp, Substack, or Brevo, your workflow typically requires:
-
-1. Signing up for an external service with rigid subscription tiers.
-2. Managing fragmented mailing lists across third party dashboards.
-3. Manually copying and pasting your blog post into proprietary rich text email builders.
-4. Dealing with bloated tracking scripts, cookies, and privacy compliance requirements.
-5. Paying substantial monthly fees as your subscriber count grows.
-
-Every one of those steps exists because an email service sits between you and your readers. Newsy removes that layer rather than improving it.
+[LightCMS](https://lightcms.me) leva uma rota diferente: **Git-driven newsletters** alimentado por [Newsy](https://github.com/light-cms/newsy), onde o repositório você já tem _é_ o backend, então você pode excluir o serviço da newsletter completamente.
 
 ---
 
-## The Git Driven Approach: Newsy
+## O problema tradicional da Newsletter
 
-The **Newsy** philosophy is simple: **your Git repository is the newsletter backend.**
+Com plataformas convencionais como Mailchimp, Substack, ou Brevo, seu fluxo de trabalho normalmente exige:
 
-[Newsy](https://github.com/light-cms/newsy) is an open-source newsletter service for static sites, inspired by [utterances](https://utteranc.es), and it deliberately keeps no mailing list, no SMTP relay, and no email vendor in the loop:
+1. Inscrevendo-se para um serviço externo com níveis rígidos de assinatura.
+2. Gerenciar listas de discussão fragmentadas entre painéis de terceiros.
+3. Copiando e colando manualmente o post do seu blog em construtores de e-mail de rich text.
+4. Lidando com scripts de rastreamento inchados, cookies e requisitos de conformidade com a privacidade.
+5. À medida que o número de seus assinantes aumenta, pagando taxas mensais substanciais.
 
-1. **Publish**: You hit Publish in [LightCMS](https://lightcms.me), and the Markdown file is committed to your repository.
-2. **Detect**: Newsy watches push events. A newly added post file (or an existing post flipped from `draft: true` to `false`) triggers an announcement. Routine edits and deletions are ignored, so everyday work never spams your readers.
-3. **Upsert**: Newsy creates or updates a single open issue per repository titled `announcement` with the label `newsletter`. It carries the commit summary, the file list, and the post content; each subsequent post lands as a comment on that issue. Issues can be locked and unlocked like any other.
-4. **Subscribe**: You drop an embeddable Subscribe button into your static site; [newsy.lightcms.me](https://newsy.lightcms.me) generates the snippet from your `owner/repo`. It points readers at the issue, where they click **Subscribe** to get GitHub notifications for every new post.
-
-Because delivery runs through GitHub's own notification system, there is no list to export, no per-subscriber pricing, no deliverability debugging, and no third-party email platform to renew.
-
----
-
-## Why This Fits a Static Site
-
-A static site already has a pipeline: content is committed, CI builds, the CDN serves. Newsy slots into the same flow: the commit that publishes the page also announces it. Nothing is duplicated into a proprietary editor, and nothing needs syncing back.
-
-It is also free in the way static hosting is free: open source, self hostable (Go plus a small Postgres table), and it runs happily on serverless platforms. There is no monthly plan that scales with your audience.
+Cada um desses passos existe porque um serviço de e-mail está entre você e seus leitores. Novidades remove essa camada em vez de melhorá-la.
 
 ---
 
-## Getting Started
+## A Abordagem Orientada ao Git: Novidades
 
-1. Install the **Newsy GitHub App** on the repository you publish from: [github.com/apps/newsletter-newsy](https://github.com/apps/newsletter-newsy/installations/select_target).
-2. Push a new post, from [LightCMS](https://lightcms.me) or your terminal.
-3. Generate the Subscribe button at [newsy.lightcms.me](https://newsy.lightcms.me) and paste it into your site.
+A filosofia **Newsy** é simples: **seu repositório Git é o backend da newsletter.**
 
-Readers land on the announcement issue and subscribe there; every future post reaches them automatically.
+[Newsy](https://github.com/light-cms/newsy) é um serviço de newsletter de código aberto para sites estáticos, inspirado por [utterances](https://utteranc.es), e deliberadamente não mantém nenhuma lista de e-mails, nenhum fornecedor de e-mail no loop:
+
+1. **Publicar**: Você clicou em Publish no [LightCMS](https://lightcms.me), e o arquivo Markdown está disponível no seu repositório.
+2. **Detectar**: o Newsy observa eventos por push. Um novo arquivo de postagem (ou um post existente virado de `draft: true` para `false`) aciona um anúncio. Edições e exclusões de rotina são ignoradas, então o trabalho diário nunca esmaga seus leitores.
+3. **Upsert**: Novidades cria ou atualiza uma única issue aberta por repositório intitulado `anúncio` com a etiqueta `newsletter`. Ele carrega o resumo do commit, a lista de arquivos e o conteúdo do post; cada post subsequente aparece como um comentário sobre essa questão. Os problemas podem ser bloqueados e desbloqueados como qualquer outro.
+4. **Assinar**: Você solta um botão de inscrição incorporável no seu site estático; [newsy.lightcms.me](https://newsy.lightcms.me) gera o snippet do seu `proprietário/repo`. Ele aponta os leitores para o problema, onde eles clicam em **inscrever** para obter notificações GitHub para cada nova publicação.
+
+A entrega é feita através do próprio sistema de notificação do GitHub, não há lista para exportar, sem preços por assinante, sem depuração de entregáveis e sem plataforma de e-mail de terceiros para renovar.
 
 ---
 
-## Further Reading
+## Por que isso se enquadra em um site estático
 
-- [Newsy source and docs](https://github.com/light-cms/newsy)
-- [Self-hosting LightCMS](/blog/selfhost/): the full environment reference
-- [Drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/): how publishing works
-- [Getting started with LightCMS](/getting-started/): the wider workflow
+Um site estático já tem um pipeline: o conteúdo é compilado com CI, os servos CDN. Novos slots para o mesmo fluxo: o commit que publica a página também o anuncia. Nada é duplicado em um editor proprietário e nada precisa de sincronização de volta.
+
+É também gratuito na forma como o hospedagem estática é gratuito: código aberto, Hostable self-hostable (Go plus uma tabela de pequenos Postgres), e é executado alegremente em plataformas sem servidores. Não há nenhum plano mensal que escale com seu público.
+
+---
+
+## Primeiros passos
+
+1. Instale o **Newsy GitHub App** no repositório no qual você publica: [github.com/apps/newsletter-newsy](https://github.com/apps/newsletter-newsy/installations/select_target).
+2. Empurre uma nova postagem a partir de [LightCMS](https://lightcms.me) ou seu terminal.
+3. Gere o botão "Inscrever" em [newsy.lightcms.me](https://newsy.lightcms.me) e cole-o no seu site.
+
+Os leitores publicam a questão do anúncio e assinam lá; cada publicação futura chega automaticamente a eles.
+
+---
+
+## Leitura mais recente
+
+- [Nova fonte e documentação](https://github.com/light-cms/newsy)
+- [Luz de auto-hospedagem](/blog/selfhost/): a referência ao ambiente completo
+- [Rascunhos, revisões e reversões](/blog/lightcms-drafts-and-versioning/): como a publicação funciona
+- [Começando com LightCMS](/getting-started/): o fluxo de trabalho mais amplo
