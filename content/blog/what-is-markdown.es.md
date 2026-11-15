@@ -1,64 +1,64 @@
 ---
-title: What Is Markdown? The Plain-Text Format Powering the Web
-description: "Markdown explained: what it is, why it has lasted, the syntax you need, and how Git based CMS tools turn plain text into a publishing format."
+title: ¿Qué es Markdown? El formato de texto plano potenciando la web
+description: "Markdown explicó: ¿qué es, por qué ha durado, la sintaxis que necesitas, y cómo las herramientas CMS basadas en Git convierten el texto plano en un formato de publicación."
 serial: 25
 date: 2026-10-14T15:00:00Z
 draft: false
 keywords:
-  - what is markdown
-  - markdown tutorial
-  - markdown syntax guide
-  - why use markdown
-  - markdown for writers
+  - qué es markdown
+  - tutorial de markdown
+  - guía de sintaxis de markdown
+  - por qué usar markdown
+  - markdown para escritores
 preview: /og-image.webp
 taxonomies:
   tags:
     - markdown
-    - writing
-    - content
+    - escribir
+    - contenido
 ---
 
-Markdown is plain text with a small set of formatting symbols. John Gruber created it in 2004 as the simplest way to write formatted documents. Two decades later it has become the lingua franca of the web: documentation, README files, notes, newsletters, and millions of sites keep their content in it.
+Markdown es texto plano con un pequeño conjunto de símbolos de formato. John Gruber lo creó en 2004 como la manera más sencilla de escribir documentos formateados. Dos décadas más tarde se ha convertido en la lingua franca de la web: documentación, Archivos README, notas, boletines y millones de sitios mantienen su contenido en él.
 
 ---
 
-## Why Markdown Won
+## Por qué Markdown ganó
 
-- **It does not rot**. A `.md` file from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
-- **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git based CMS stores content as Markdown.
-- **It is easy to learn**. The core syntax takes five minutes.
-- **It separates content from presentation**. Write structure; let the theme handle looks.
-- **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
+- **No rota**. Un archivo `.md` de 2004 todavía se abre en cualquier editor de texto. Los formatos de documentos propietarios caducan; texto plano no.
+- **Difiere hermosamente**. Debido a que se trata de texto, Git puede rastrear cada cambio, razón por la cual cada CMS basado en Git almacena contenido como Markdown.
+- **Es fácil de aprender**. La sintaxis básica tarda cinco minutos.
+- **Separa el contenido de la presentación**. Escribir estructura; deje que el tema se vea manejado.
+- **Está en todas partes**. GitHub, Notion exporta, generadores estáticos de sitios y herramientas de IA hablan de ello.
 
-## The Syntax You Need
+## La sintaxis que necesitas
 
 ````markdown
-# Heading 1
-## Heading 2
+# Encabezado 1
+## Encabezado 2
 
-A paragraph with **bold** and *italic* text.
+Un párrafo con texto **negrita** y *cursiva*.
 
-- A bullet point
-- Another one
+- Un punto
+- Otro
 
-1. A numbered list
-2. And the next item
+1. Una lista numerada
+2. Y el siguiente elemento
 
-> A blockquote for asides.
+> Una cita de bloques para asides.
 
-[A link](https://example.com)
-![An image](/images/photo.jpg)
+[Un enlace](https://example.com)
+![Una imagen](/images/photo.jpg)
 
-`inline code` and fenced code blocks:
+`código en línea` y bloques de código cercados:
 
 ```js
-console.log("hello, web");
+console.log("hola, web");
 ````
 ````
 
-That covers the vast majority of real-world writing. Tables, task lists, and footnotes round out the extended syntax that GitHub-flavored Markdown adds.
+Eso cubre la gran mayoría de la escritura en el mundo real. Tablas, listas de tareas y notas al pie de página completan la sintaxis extendida que añade Markdown con sabor a GitHub.
 
-## The Missing Piece: Front Matter
+## The Fissing Piece: Front Matter
 
 Static sites add a small metadata header to each file:
 
@@ -70,33 +70,33 @@ tags:
   - blogging
 ---
 
-The article begins here.
+The article starts here.
 ````
 
-This YAML front matter is where the CMS lives: titles, dates, drafts, and taxonomies ride along with the Markdown body.
+Esta materia frontal YAML es donde vive el CMS: títulos, fechas, borradores y taxonomías conducen junto con el cuerpo Markdown.
 
-## Writing Markdown Without the Syntax
+## Escribir Markdown sin la sintaxis
 
-**You do not have to write Markdown by hand anymore.** Modern Git based editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
+\*\*Ya no tienes que escribir Markdown a mano. \* Los modernos editores basados en Git, [LightCMS](/getting-started/) entre ellos, te dan un editor visual completo con imágenes, , y los atajos de formateo, luego serializa tu escritura para limpiar Markdown por debajo. Consigue una durabilidad de texto simple con una experiencia de escritura cómoda.
 
-That combination (visual editing on top of Markdown in Git) is what powers the whole [Git based CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
+Esa combinación (edición visual en la parte superior de Markdown in Git) es la que potencia a todo [categoría CMS basada en Git](/blog/git-cms-vs-traditional-cms/), y es cómo los sitios estáticos en [los mejores generadores estáticos de sitios](/blog/best-static-site-generators/) obtienen su contenido.
 
 ---
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-### Is Markdown dead?
+### ¿Está muerto Markdown?
 
-The opposite. After 20+ years it is more central than ever. It is the content format of GitHub, documentation toolchains, and AI-era writing.
+Lo contrario. Después de más de 20 años es más central que nunca. Es el formato de contenido de GitHub, herramientas de documentación y escritura de la era de AI.
 
-### What is the difference between Markdown and HTML?
+### ¿Cuál es la diferencia entre Markdown y HTML?
 
-Markdown is the authoring format (plain text, human-writable); HTML is the rendering format (what browsers display). Generators convert the former into the latter.
+Markdown es el formato de autor (texto plano, escritura humana); HTML es el formato de representación (lo que los navegadores muestran). Los generadores convierten el primero en el segundo.
 
-### Do I need to learn Markdown to blog?
+### ¿Necesito aprender Markdown a blog?
 
-Not with a visual Git based CMS: you write normally, and the tool produces Markdown for you. Learning the basics still helps for quick edits.
+No con un CMS visual basado en Git: escribes normalmente, y la herramienta produce Markdown para ti. Aprender lo básico sigue ayudando a editar rápidamente.
 
-### Where is Markdown stored?
+### ¿Dónde está almacenado Markdown?
 
-As `.md` files, ideally in a Git repository, which gives you version history, review, and portable ownership of everything you write.
+Como archivos `.md`, idealmente en un repositorio Git, que le da historial de versiones, revisión y propiedad portable de todo lo que escribes.
