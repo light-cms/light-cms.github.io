@@ -1,117 +1,117 @@
 ---
-title: "LightCMS vs Keystatic: Code First Schema vs a Writer First Workspace"
-description: "Keystatic keeps content as files with schemas defined in code; LightCMS keeps content as files with an editor anyone can use. Which one fits your team."
+title: "LightCMS против Keystatic: первая схема кода по первому рабочему пространству"
+description: "Ключевая статика хранит содержимое в виде файлов со схемами, определенными в коде; LightCMS хранит содержимое в виде файлов с редактором, которым может пользоваться. Который соответствует вашей команде."
 serial: 40
 date: 2026-10-16T10:40:00Z
 draft: false
 keywords:
-  - lightcms vs keystatic
-  - keystatic alternatives
-  - keystatic cms
-  - file based cms comparison
-  - local first cms
+  - lightcms против клавиатуры
+  - альтернативы клавиатуры
+  - кестатические cms
+  - сравнение cms на основе файлов
+  - локальные первые смс
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - keystatic
-    - cms
-    - comparison
+    - молнии
+    - кестатика
+    - смс
+    - сравнение
 ---
 
-[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git based CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits Astro and Next.js projects and takes the local-first promise seriously.
+[Keystatic](https://keystatic.com), от команды Thinkmill, является наиболее уважаемым для разработчиков инструментом в категории Git: содержимое — это файлы, схема является кодом, и формы создаются из этой схемы. Оно соответствует Astro и Next.js проекты и серьезно воспринимает обещание локально.
 
-LightCMS shares the storage model (files in your repository) and inverts the audience. Keystatic is built so developers can define content well; LightCMS is built so writers can use it without developers at all.
-
----
-
-## The Same Foundation
-
-Both tools agree on the fundamentals that matter most:
-
-- **Content is Markdown and front matter in your repository.** No database, no export, no lock-in.
-- **Git history is the version history.** Diffs, blame, revert, and pull request review all work.
-- **The SSG is untouched.** Hugo, Astro, Eleventy, or any generator reading your content directory keeps working.
-- **Open source.** You can read, fork, and self-host both.
-
-If your evaluation starts and ends with "does it keep my content in Git," both pass, and the differences below are what you are actually choosing between.
+LightCMS делится моделью хранилища (файлы в вашем хранилище) и инвертирует аудиторию. Keystatic собран так, чтобы разработчики могли хорошо определить контент; LightCMS создан, чтобы писатели могли использовать его без разработчиков вообще.
 
 ---
 
-## Comparison
+## Тот же фундамент
 
-|                             | LightCMS                                            | Keystatic                                     |
-| :-------------------------- | :-------------------------------------------------- | :-------------------------------------------- |
-| **Model**                   | Self-hosted writing workspace                       | Local-first files with generated forms        |
-| **Content schema**          | Managed in the app                                  | Defined in code (TypeScript/JSX config)       |
-| **Primary surface**         | Document editor (TipTap WYSIWYG)                    | Form views generated from your schema         |
-| **Runs where?**             | Hosted by you; writers use a browser                | Locally via CLI, or with cloud offering       |
-| **Non-developer usability** | Designed for it                                     | Requires the project and tooling set up first |
-| **AI copilot**              | Built in (any OpenAI-compatible endpoint)           | Not bundled                                   |
-| **Voice-to-text**           | Built in (Whisper)                                  | Not bundled                                   |
-| **Newsletters**             | Built in via Newsy: GitHub-backed, no email service | Not bundled                                   |
-| **MDX / rich content**      | Markdown pass-through                               | Strong MDX support                            |
-| **Licensing**               | Apache 2.0                                          | Open source (MIT)                             |
+Оба инструмента согласуют основные принципы в наибольшей степени:
+
+- **Контент - Markdown и первый элемент в вашем репозитории.** Ни одна база данных, ни экспорт не блокируется.
+- **Git история версий.** Распределения, вина, рекавери и запроса на слияние просматривают всю работу.
+- **SSG нетронут.** Hugo, Astro, Eleventy, или любой генератор чтения вашего каталога содержимого продолжает работать.
+- **Открытый исходный код.** Вы можете читать, форк и самохозяин того и другого.
+
+Если ваша оценка начинается и заканчивается на "Сохраняет мой контент в Git, И проезд, и отличия ниже это то, что вы действительно выбираете между собой.
 
 ---
 
-## Where Keystatic Wins
+## Сравнение
 
-- **Schema as code.** Content structure lives in version control, reviewed in pull requests and typed at build time. For engineering teams this is the right call.
-- **Local-first workflow.** Writing can happen offline against the working tree, with Git as the sync mechanism, a real advantage for developers who think in repositories.
-- **Framework fit.** First-class positioning inside Astro and Next.js projects, with field types that map cleanly onto component props.
-- **MDX.** If your content carries components rather than plain prose, Keystatic handles that natively.
-
-## Where LightCMS Wins
-
-- **Zero setup for contributors.** A writer signs in with GitHub, opens a repository, and starts writing. No CLI, no local checkout, no Node version to match.
-- **Writing, not form-filling.** Articles are documents. Keystatic's generated forms are excellent for structured records and heavier for a 2,000-word essay.
-- **Structure without a deploy.** New front matter fields are configured in the tool rather than committed as code, so metadata changes do not wait on a developer.
-- **The bundled extras.** [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) are part of the product.
-
----
-
-## The Real Question: Who Is the User?
-
-Almost every LightCMS-vs-Keystatic decision resolves to a single question about your team:
-
-**Is the person entering content a developer?**
-
-- **Yes, mostly.** Keystatic feels like a natural extension of your stack. Schemas are typed, forms are derived, and everything happens where your code already is.
-- **No, or not only.** LightCMS removes the prerequisite. Contributors do not clone, install, or run anything; they open a browser. The repository stays the source of truth, but the entry point stops being a terminal.
-
-Hybrid teams often land on LightCMS because it lets engineers keep their conventions while non-engineers get a real editor, without either side operating inside the other's tooling.
+|                                     | LightCMS                                                     | Ключевая статика                                   |
+| :---------------------------------- | :----------------------------------------------------------- | :------------------------------------------------- |
+| **Модель**                          | Собственный проект для записи                                | Локальные файлы с созданными формами               |
+| **Контентная схема**                | Управляется в приложении                                     | Определяется в коде (TypeScript/JSX конфигурация)  |
+| **Основная поверхность**            | Редактор документов (TipTap WYSIWYG)                         | Представления форм, созданные по вашей схеме       |
+| **Бегите здесь?**                   | Размещено вами; писатели используют браузер                  | Локально через CLI, или с предложением облака      |
+| **Недоступность для разработчиков** | Разработано для него                                         | Сначала требуется настройка проекта и инструментов |
+| **Копилот AI**                      | Встроенный (любой OpenAI-совместимый конечный пункт)         | Не в комплекте                                     |
+| **Голосование**                     | Встроенный в (Шепошёл)                                       | Не в комплекте                                     |
+| **Рассылка новостей**               | Встроенный через Newsy: GitHub-backed, нет почтового сервиса | Не в комплекте                                     |
+| **MDX / богатый контент**           | Проход Markdown                                              | Поддержка сильного MDX                             |
+| **Лицензирование**                  | Apache 2.0                                                   | Открытый код (MIT)                                 |
 
 ---
 
-## Migration
+## Где Keystatic победы
 
-Straightforward in both directions: the artifacts are identical Markdown files with YAML front matter. Moving from Keystatic means pointing LightCMS at the repository and recreating the schema as in-app fields; moving the other way means transcribing those fields into a Keystatic config. Content and media paths are unchanged either way.
+- **Схема как код.** Структура содержимого живет в системе контроля версий, проверена в запросах на слияние и введена в момент сборки. Для инженерных команд это правильный звонок.
+- **Локально первый рабочий процесс.** Написание может происходить в автономном режиме против рабочего дерева, с Git в качестве механизма синхронизации, что является реальным преимуществом для разработчиков, думающих о репозиториях.
+- **Фрейм.** Позиционирование первого класса внутри проектов Astro и Next.js с типами полей, которые соответствуют свойствам компонента.
+- **MDX.** Если ваш контент содержит компоненты, а не прою, то Keystatic обрабатывает это родно.
 
----
+## Где LightCMS побеждает
 
-## Frequently Asked Questions
-
-### Does LightCMS require a developer to set up?
-
-Someone has to connect the repository and confirm the build: minutes of work, not an integration project. After that, writers work entirely on their own.
-
-### Can Keystatic run without local tooling?
-
-Local mode assumes a checkout and a running dev process. Keystatic's cloud offering changes that equation; check its current documentation for the latest shape.
-
-### Do both support Markdown?
-
-Yes. Both write Markdown with YAML front matter into your repository.
-
-### Which is better for MDX?
-
-Keystatic: it models component-bearing content deliberately. If your content is prose with occasional embedded media, LightCMS's Markdown output is simpler.
-
-### Is either a hosted vendor that could hold my content hostage?
-
-No. Content lives in your repository in both cases, which is the whole point of the category.
+- **Нулевая настройка для участников.** Писатель подписывает вместе с GitHub, открывает репозиторий и начинает писать. Нет CLI, нет локальной проверки, версия узла не совпадает.
+- **Написание, не заполнение формы.** Статьи — это документы. Keystatic, генерируемые формы отлично подходят для структурированных записей и тяжелее для эссе 2000 слов.
+- \*\*Структура без развертывания. \* Новые передние поля задаются в инструменте, а не фиксируются как код, поэтому изменения метаданных не ждут разработчика.
+- **Пакет дополнительных услуг.** [ИИ черновик](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/) и [диспетчер рассылки](/blog/newsletter-email-automation/) являются частью продукта.
 
 ---
 
-More: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms), and the [Git based CMS overview](/comparison/top-git-cms).
+## Реальный вопрос: кто это пользователь?
+
+Почти каждое LightCMS-vs-Keystatic решение решает один вопрос о вашей команде:
+
+**Ввод контента разработчиком?**
+
+- **Да, в основном.** Ключевая статика чувствует себя естественным расширением стека. Схемы печатаются, формы производятся и все происходит там, где ваш код уже есть.
+- **Нет, или не только.** LightCMS удаляет необходимые условия. Авторы не клонируют, не устанавливают или не запускают ничего; они открывают браузер. Репозиторий остается источником истины, но входная точка перестает быть терминалом.
+
+Гибридные команды часто приходят в LightCMS потому, что они позволяют инженерам сохранять свои договоры, в то время как неинженеры получают реального редактора, без любой стороны работает внутри инструментов другого.
+
+---
+
+## Миграция
+
+Прямо в обоих направлениях: артефакты идентичны Markdown файлам с YAML переднего края. Переход из Keystatic означает указание LightCMS на хранилище и восстановление схемы как в полях приложения; перемещение другого способа означает транскрипцию этих полей в Keystatic конфигурации. Контент и медиа пути не изменяются в любом виде.
+
+---
+
+## Часто задаваемые вопросы
+
+### Нужна ли настройка LightCMS разработчиком?
+
+Кто-то должен подключить репозиторий и подтвердить сборку: минуты работы, а не интеграционный проект. После этого авторы работают полностью самостоятельно.
+
+### Можно ли использовать Keystatic без локальных инструментов?
+
+Локальный режим предполагает проверку и запущенный процесс dev. Облако ключевой статики, предлагающее изменения этого уравнения; проверьте свою текущую документацию для последней формы.
+
+### Поддерживает ли оба Markdown?
+
+Да. Записывайте Markdown с YAML первым вопросом в ваш репозиторий.
+
+### Что лучше для MDX?
+
+Ключевый: она намеренно моделирует содержание компонентов. Если ваш контент прозаичен с помощью иногда встроенных медиа, то вывод LightCMS Markdown проще.
+
+### Является ли тот или иной поставщик, который мог бы задерживать мой заложник содержимого?
+
+Нет. Содержимое живет в вашем хранилище в обоих случаях, что является всей категорией.
+
+---
+
+Подробнее: [LightCMS против страниц CMS](/comparison/lightcms-vs-pagescms), [LightCMS против TinaCMS](/comparison/lightcms-vs-tinacms), и [обзор на основе Git](/comparison/top-git-cms).
