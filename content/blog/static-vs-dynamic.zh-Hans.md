@@ -1,97 +1,97 @@
 ---
-title: "Static vs Dynamic Sites: Which one to choose and when?"
-description: "A practical comparison of static and dynamic websites: performance, cost, security, and when a static site with a Git based CMS is the better choice."
+title: "静态对动态站点：哪一个要选择何时选择？"
+description: "比较静态网站和动态网站：性能，成本，安全，以及如果一个静态站点有一个基于 Git 的 CMS 是更好的选择。"
 serial: 7
 date: 2026-10-14T12:00:00Z
 draft: false
 keywords:
-  - static site vs dynamic site
-  - static website vs dynamic website
-  - static site advantages
-  - jamstack vs dynamic
-  - static site cms
+  - 静态站点与动态站点对齐
+  - 静态网站与动态网站
+  - 静态站点优势
+  - jamstack 与动态
+  - 静态站点cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - static-sites
-    - architecture
+    - 静态站点
+    - 结构
     - jamstack
 ---
 
-Choosing between a static site and a dynamic site is one of the first architectural decisions you will make for a blog, documentation site, or company website. The short version: **static wins on speed, cost, security, and durability**. Dynamic rendering still has a place, a smaller one than it had ten years ago.
+在静态站点和动态站点之间选择是您将对博客做出的首批建筑决策之一， 文档网站或公司网站。短版本︰ **静态在速度、成本、安全性和耐久性上赢得**。动态渲染仍然有一个地方，比十年前更小。
 
 ---
 
-## What Is a Static Site?
+## 什么是静态站点？
 
-A static site is a collection of pre-rendered HTML, CSS, JavaScript, and media files. The pages are generated once, at build time, and served as they are. Every visitor receives the same bytes, typically from a global CDN edge node close to them.
+静态站点是预渲染的 HTML、CSS 、 JavaScript 和媒体文件集。页面是在构建时生成一次的，并起到原样的作用。每个访客都会收到相同的字节，通常来自靠近他们的全局CDN边缘节点。
 
-Popular static site generators include [Astro](https://astro.build), [Hugo](https://gohugo.io), [Eleventy](https://www.11ty.dev), [Jekyll](https://jekyllrb.com), and [SvelteKit](https://svelte.dev). [zine](https://zine-ssg.io) is a new static site generator that combines the speed of static sites with the editing experience of a CMS.
+热门静态站点发电机包括 [Astro](https://astro.build), [Hugo](https://gohugo.io), [Eleventy](https://www.11ty.dev)、 [Jekyll](https://jekyllrb.com)和 [SvelteKit](https://svelte.dev)。 [zine](https://zine-ssg.io) 是一个新的静态站点生成器，它将静态站点的速度与CMS的编辑体验相结合。
 
-## What Is a Dynamic Site?
+## 动态站点是什么？
 
-A dynamic site renders each request on the server (or in a function/edge worker), often querying a database first. Content management systems like WordPress power this model: PHP executes, a database responds, and the final HTML is assembled per visit.
-
----
-
-## Head-to-Head Comparison
-
-| Factor           | Static Site                                 | Dynamic Site                                                  |
-| :--------------- | :------------------------------------------ | :------------------------------------------------------------ |
-| Performance      | Pre-rendered, CDN-served, near-instant      | Depends on server load and database latency                   |
-| Security         | No database or admin runtime exposed        | Constant patching, plugin vulnerabilities, SQL injection risk |
-| Cost             | Free tiers easily cover most sites          | Servers, databases, and scaling costs                         |
-| Scalability      | Scales by CDN replication                   | Requires vertical or horizontal scaling                       |
-| Durability       | Files outlive frameworks and vendors        | Tied to a runtime, database, and host                         |
-| Content updates  | Rebuild in seconds via CI/CD                | Instant, but with a heavier operational surface               |
-| Dynamic features | Added via forms, functions, or edge workers | Native, at the cost of complexity                             |
+动态网站在服务器上(或在函数/边缘工作器中)显示每个请求，常常先查询数据库。此模型的 WordPress 能量等内容管理系统：PHP 运行，数据库响应，最终的 HTML 每次访问组合。
 
 ---
 
-## Where Static Sites Win
+## 头对头比较
 
-- **Speed**: Pre-rendered HTML served from the edge gives strong Core Web Vitals scores, which search engines reward directly.
-- **Security**: There is no production database, no login panel exposed to the internet, and far fewer attack surfaces.
-- **Cost**: A personal blog or documentation site fits comfortably inside free tiers of modern hosting platforms.
-- **Simplicity of operations**: Your "server" is a folder of files. If your host disappears, you can serve the same files anywhere.
-- **Lower emissions**: Serving a cached static file uses a fraction of the energy of rendering a page on demand, with no always-on database and no per-request computation. See [Static Sites and CO2](/blog/greener-web-static-sites/) for the full picture.
-
-## Where Dynamic Sites Still Make Sense
-
-- Heavily personalized pages (dashboards, account areas)
-- Content that must change millisecond-by-millisecond (trading dashboards, live auctions)
-- Applications where every page is a unique database query
-
-Even then, the common modern pattern is a **static frontend with dynamic islands**: a static site plus serverless functions, databases, or third-party APIs used only where needed.
+| 因子   | 静态站点             | 动态站点                |
+| :--- | :--------------- | :------------------ |
+| 业绩   | 预渲染，CDN服务，近即时服务  | 依赖于服务器加载和数据库延迟      |
+| 安全   | 未曝光数据库或管理员运行时间   | 固定补丁，插件脆弱性，SQL 注入风险 |
+| 费用   | 免费等级很容易覆盖大部分站点   | 服务器、数据库和缩放成本        |
+| 可伸展性 | 通过CDN复制缩放        | 需要垂直或水平缩放           |
+| 耐久性  | 文件超出框架和供应商       | 绑定到运行时间、数据库和主机      |
+| 内容更新 | 通过 CI/CD 重建以秒为单位 | 瞬间，但具有更加沉重的操作面图     |
+| 动态功能 | 通过表格、 函数或边缘工人添加  | 以复杂性为代价的原生的         |
 
 ---
 
-## The Missing Piece: Editing Static Content
+## 静态站点赢得的地方
 
-The historical complaint about static sites was editing, not performance. Asking writers to pull Git branches and hand-edit Markdown files is friction most people will not accept.
+- **Speed**: 预渲染的HTML会从边缘上获得很高的Core Web Vitals分数, 并直接奖励搜索引擎。
+- **Security**：没有生产数据库，没有登录面板接触互联网，攻击面要少得多。
+- **成本**：一个个人博客或文档网站适合于现代托管平台的免费层次。
+- **操作的简洁性**: 你的“服务器”是一个文件文件夹。如果你的主机消失，你可以在任何地方服务相同的文件。
+- **较低的排放** ：缓存静态文件使用了一个按需呈现页面的能量的一部分。 没有始终开启的数据库，没有每个请求的计算。查看[静态站点和CO2](/blog/greener-web-static-sites/) 以了解全景。
 
-A Git based CMS closes that gap: authors write in a visual editor, and the CMS commits clean Markdown and front matter back to your repository. Your CI/CD pipeline rebuilds and redeploys the site automatically. You keep the static architecture; writers get a normal editing experience.
+## 动态站点仍然设定传感器
 
-- [Why Git based publishing works](/blog/why-this/) explains the philosophy behind this model.
-- [Getting started with LightCMS](/getting-started/) walks through the workflow end to end.
-- [Top static site hosting platforms](/misc/top-static-site-hosting/) compares where to serve your static site.
+- 个人化页面(dashboards, account areas)
+- 内容必须改变毫秒-逐毫秒(交易仪表板，实时拍卖)
+- 每个页面都是唯一数据库查询的应用程序
+
+即使这样，共同的现代模式是一个**动态岛屿的静态前端**：一个静态站点加上无服务器的功能。 数据库或第三方API仅在需要时使用。
 
 ---
 
-## Frequently Asked Questions
+## 缺少的块：编辑静态内容
 
-### Are static sites good for SEO?
+关于静态站点的历史抱怨是在编辑而不是在演出。要求作者拉取Git 分支和手动编辑Markdown 文件是摩擦，大多数人都不会接受。
 
-Yes. Static sites typically load faster and have better Core Web Vitals than dynamically rendered sites, both of which are ranking factors. They also make clean semantic HTML and structured data easy to control.
+基于 Git 的 CMS 关闭了该空白：作者在视觉编辑器中写入， 并且CMS将干净的 Markdown 和前事项退回到您的资源库。您的 CI/CD 管道自动重建和重新部署站点。您保留静态建筑；作者获得正常的编辑体验。
 
-### Can a static site have a contact form or comments?
+- [为什么基于 Git 的发布工作](/blog/why-this/) 解释此模型背后的原理。
+- [开始从 LightCMS](/getting-started/)步行通过工作流结束到结束。
+- [顶级静态站点主机平台](/misc/top-static-site-hosting/) 比较您的静态站点服务的位置。
 
-Yes. Client-side JavaScript, serverless functions, or third-party services handle forms and interactivity, and the page itself stays static.
+---
 
-### Is a Static Site Cheaper to Run?
+## 常见问题
 
-For content-driven sites, almost always. Static files can be served from free hosting tiers with generous bandwidth, while dynamic sites need running servers and managed databases.
+### 静态站点是否适合SEO？
 
-### Do Static Sites Need a CMS?
+是。静态站点的负载一般比动态生成站点更快，核心网络Vits比动态生成站点更好，这两个站点都是排序因素。它们还使清净的语义HTML和结构化数据易于控制。
 
-Not necessarily, but if more than one person publishes, or you want to write from your phone, a Git based CMS gives you the editing experience of WordPress with the architecture of a static site.
+### 一个静态站点是否有联系表单或评论？
+
+是。客户端JavaScript、无服务器函数或第三方服务处理表单和交互，页面本身保持静止状态。
+
+### 静态站点便宜运行吗？
+
+对于内容驱动的网站，几乎总是如此。静态文件可以从免费托管层的带宽宽宽度提供服务，动态站点则需要运行服务器和管理数据库。
+
+### 静态站点需要CMS吗？
+
+不一定需要发布，但如果有多人发布，或您想要从您的手机写入。 a 基于 Git 的 CMS 给你一个静态站点的结构来编辑WordPress 的体验。
