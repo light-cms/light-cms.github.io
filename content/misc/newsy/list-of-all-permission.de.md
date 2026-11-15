@@ -3,9 +3,9 @@ id: IXGd7-xioQc
 title: Erforderliche Berechtigungen
 description: Die Liste der Berechtigungen, die der Newsy Bot anfordert.
 author: hell-cms
-created: 22.08.20T07:28:38+00:00
-visibility: öffentlich
-fmContentType: Standard
+created: 2026-08-22T07:28:38+00:00
+visibility: public
+fmContentType: default
 ---
 
 Die Newsy GitHub App benötigt folgende Berechtigungen, um Ihre Inhalte anzusehen und
