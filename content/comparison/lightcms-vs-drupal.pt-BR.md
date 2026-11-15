@@ -1,110 +1,110 @@
 ---
-title: "LightCMS vs Drupal: Enterprise Framework vs a Content Tool"
-description: "Drupal is a full-featured PHP CMS for complex, governed sites; LightCMS is a Git based editor that produces static output. Where each one belongs."
+title: "LightCMS vs Drupal: Enterprise Framework vs uma Ferramenta de Conteúdo"
+description: "Drupal é um padrão completo de CMS PHP para sites complexos e governados; LightCMS é um editor baseado em Git que produz saída estática. Onde cada um pertence."
 serial: 55
 date: 2026-10-16T12:50:00Z
 draft: false
 keywords:
-  - lightcms vs drupal
-  - drupal alternatives
-  - drupal vs static site
-  - drupal for small sites
-  - modern cms alternatives
+  - luzes vs drupal
+  - alternativas de drupal
+  - drupal vs site estático
+  - drupal para pequenos sites
+  - alternativas modernas de cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - luzes
     - drupal
-    - cms
-    - comparison
+    - SMS
+    - comparação
 ---
 
-[Drupal](https://www.drupal.org) is the serious end of open-source content management: a PHP framework with a content model, permissions, views, and an ecosystem built for universities, governments, and large organizations with real governance requirements.
+[Drupal](https://www.drupal.org) é o fim sério do gerenciamento de conteúdo de código aberto: um framework PHP com um modelo de conteúdo, permissões, visões e um ecossistema construído para universidades, governos e grandes organizações com verdadeiros requisitos de governança.
 
-Comparing it to LightCMS is almost unfair: they sit at opposite ends of the complexity spectrum. The comparison is still useful, because plenty of teams ask whether they need Drupal's weight for a publishing site.
-
----
-
-## What Each One Is
-
-**Drupal** is an application framework with a CMS inside it: entities, fields, taxonomies, roles, modules, and a theming layer, running on PHP with a SQL database. It can model almost anything and asks for significant expertise in return.
-
-**LightCMS** is a content editor in front of a repository: Markdown files with front matter, a visual editor, and a static build. It models documents and nothing else.
-
-|                   | LightCMS             | Drupal                                   |
-| :---------------- | :------------------- | :--------------------------------------- |
-| **Stack**         | Files + SSG + CDN    | PHP + SQL database                       |
-| **Content model** | Front matter fields  | Entities, fields, bundles                |
-| **Permissions**   | Repository access    | Granular role/field permissions          |
-| **Rendering**     | Pre-built static     | Server-side, cacheable                   |
-| **Themes**        | Your SSG's templates | Drupal themes + preprocess               |
-| **Maintenance**   | Content changes only | Core/module updates, security advisories |
-| **Skill to run**  | Browser for writers  | Developers for nearly everything         |
-| **Cost**          | Hosting              | Hosting + developer time                 |
+Compará-lo com o CMS é quase injusto: eles sentam-se ao lado oposto do espectro de complexidade. A comparação ainda é útil, porque muitas equipes perguntam se eles precisam do peso de Drupal para um site de publicação.
 
 ---
 
-## Where Drupal Wins
+## O que Cada Um É
 
-- **Complex content models.** Related entities, references, and custom bundles; a database does this properly.
-- **Governance.** Granular roles, editorial workflows, content moderation states, and audit requirements.
-- **Scale of organization.** Multisite, multilingual, and large-editorial-team features that are mature after two decades.
-- **A vast module ecosystem** and long-term enterprise support.
-- **Server-side personalization** and dynamic logic when the site needs it.
+**Drupal** é uma estrutura de aplicação com um CMS dentro dele: entidades, campos, taxonomias, papéis, módulos e uma camada temática, rodando no PHP com um banco de dados SQL. Pode modelar quase tudo e pedir em troca conhecimentos especializados significativos.
 
-## Where LightCMS Wins
+**LightCMS** é um editor de conteúdo na frente de um repositório: arquivos Markdown com front, um editor visual e uma compilação estática. Ele modela documentos e nada mais.
 
-- **Proportion.** For a blog, docs site, or marketing pages, Drupal is a factory buying assembly-line parts for a workshop.
-- **No maintenance treadmill.** Static output has no PHP to patch, no module advisories, and no upgrade path to plan. See [static vs dynamic sites](/blog/static-vs-dynamic/).
-- **Writers work alone.** No developer needed after setup; a browser is the entire toolchain.
-- **Speed by default.** Pre-rendered pages from a CDN beat server-rendered ones on Core Web Vitals with zero tuning.
-- **Portability.** Plain Markdown in Git, readable for decades.
-
----
-
-## Who Actually Needs Drupal?
-
-Drupal fits organizations with regulated content, complex permissions, multilingual requirements, and integration-heavy architectures. If you are a small team publishing articles, none of that applies, and Drupal's real cost is the expertise it demands for the life of the site, since the license is free.
-
-If you are in that smaller group and want the ownership benefits, the file-based world gives you the same durability with none of the operations: [what is a Git based CMS?](/blog/git-based-cms-explained/) explains the model.
+|                           | CMS                           | Drupal                                              |
+| :------------------------ | :---------------------------- | :-------------------------------------------------- |
+| **Empilha**               | Arquivos + SSG + CDN          | PHP + banco de dados SQL                            |
+| **Modelo de conteúdo**    | Campos iniciais de matéria    | Entidades, campos, pacotes                          |
+| **Permissões**            | Acesso ao repositório         | Função/Permissões de campo granular                 |
+| **Renderização**          | Estática pré-construída       | Server-side, cacheable                              |
+| **Temas**                 | Seus modelos do SSG           | Temas rupais + pré-processamento                    |
+| **Manutenção**            | Apenas alterações de conteúdo | Atualizações do Core/módulo, conselhos de segurança |
+| **Habilidade a executar** | Navegador para escritores     | Desenvolvedores para quase tudo                     |
+| **Custo**                 | Hospedagem                    | Hospedagem + tempo de desenvolvedor                 |
 
 ---
 
-## Migration
+## Onde Vitórias no Drupal
 
-Drupal exports content through Feeds, Migrate, or its JSON:API. Article-shaped content converts to Markdown well; entity references, paragraph blocks, and view-driven listings do not. They become templates and data files in the new stack. Expect a content audit as part of any move.
+- **Modelos de conteúdo complexos.** Entidades, referências e pacotes personalizados; um banco de dados faz isso corretamente.
+- **Governação.** Papéis granares, fluxos de trabalho editoriais, estados de moderação de conteúdo e requisitos de auditoria.
+- **Escala da organização.** Multisite, recursos multilíngues e de equipes grandes editoriais maduros após duas décadas.
+- **Um vasto módulo ecossistema** e suporte empreendedorista a longo prazo.
+- **Personalização do servidor** e lógica dinâmica quando o site precisar.
 
----
+## Onde Vitórias no LightCMS
 
-## Which Should You Choose?
-
-- **Choose Drupal** for complex, governed, integration-heavy sites with a team to maintain them.
-- **Choose LightCMS** for publications where speed, simplicity, and ownership decide the outcome.
-
----
-
-## Frequently Asked Questions
-
-### Is Drupal overkill for a blog?
-
-For a straightforward publication, yes. You're adopting a framework to do a folder's job.
-
-### Is LightCMS a Drupal alternative?
-
-Not as a platform: LightCMS does not model relational content. It is an alternative for the publishing use case Drupal sometimes gets used for.
-
-### Can Drupal Output Static Pages?
-
-Drupal can pre-render or be paired with a static export, but the application and database remain part of the architecture.
-
-### Which is more secure?
-
-Static output removes the runtime; Drupal's security depends on keeping core and modules patched, a recurring obligation.
-
-### Is Drupal still maintained?
-
-Yes. It is a mature open-source project with an active community. Check current release schedules before standardizing.
+- **Proporção.** Para um blog, site de docs ou páginas de marketing, Drupal é uma fábrica que compra peças de linha de montagem para uma oficina.
+- **Sem solução de manutenção.** A saída estática não possui PHP para patch, sem consultores de módulo, nem nenhum caminho de atualização para o plano. Ver [estático vs sites dinâmicos](/blog/static-vs-dynamic/).
+- **Os autores trabalham sozinho.** Nenhum desenvolvedor necessário após a configuração; um navegador é toda a cadeia de ferramentas.
+- **Velocidade por padrão.** Páginas pré-renderizadas de uma versão CDN renderizada pelo servidor nos Core Web Vitals com zero ajuste.
+- **Portabilidade.** Markdown simples no Git, legível por décadas.
 
 ---
 
-More: [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [LightCMS vs Strapi](/comparison/lightcms-vs-strapi), [static vs dynamic sites](/blog/static-vs-dynamic/).
+## Quem realmente precisa de rupidade?
+
+A Drupal se encaixa em organizações com conteúdo regulamentado, permissões complexas, requisitos multilíngues e arquiteturas pesadas na integração. Se você é um pequeno artigo com a publicação de um time, nada disso se aplica, e o custo real da Drupal é o conhecimento que exige para a vida do site, uma vez que a licença é gratuita.
+
+Se você está naquele grupo menor e quer os benefícios patrimoniais, o mundo baseado em arquivos lhe dá a mesma durabilidade sem nenhuma operação: [o que é um CMS baseado em Git (Git CMS)? (/blog/git-based-cms-explained/) explica o modelo.
+
+---
+
+## Migração
+
+O Drupal exporta conteúdo através de Feeds, Migrate ou sua JSON: API. Conteúdo em forma de artigo converte para Markdown well; referências de entidades, blocos de parágrafos e listagens orientadas para visualização não são. Eles se tornam modelos e ficheiros de dados da nova pilha. Exige uma auditoria do conteúdo como parte de qualquer movimento.
+
+---
+
+## Qual você deveria escolher?
+
+- **Escolha Drupal** para sites complexos, governados e de integração com uma equipe para mantê-los.
+- **Escolha o LightCMS** para publicações onde a velocidade, a simplicidade e a propriedade decidem o resultado.
+
+---
+
+## Perguntas Frequentes
+
+### O Drupal é overkill para um blog?
+
+Para uma publicação simples, sim. Você está adotando uma estrutura para fazer o trabalho de uma pasta.
+
+### O LightCMS é uma alternativa Drupal?
+
+Não como uma plataforma: LightCMS não modelo de conteúdo relacional. É uma alternativa para o caso de uso da publicação Drupal, que por vezes é utilizado.
+
+### Páginas estáticas de saída rupal?
+
+A Drupal pode pré-renderizar ou ser emparelhada com uma exportação estática, mas a aplicação e a base de dados permanecem parte da arquitetura.
+
+### O que é mais seguro?
+
+A saída estática remove o tempo de execução; a segurança do Drupal depende de manter o núcleo e os módulos retalhados, uma obrigação recorrente.
+
+### Continua a ser mantida a Drupal?
+
+Sim. É um projeto de código aberto maduro com uma comunidade ativa. Verificar a versão atual antes de padronizar.
+
+---
+
+Mais: [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [LightCMS vs Strapi](/comparison/lightcms-vs-strapi), [estática vs dynamic sites](/blog/static-vs-dynamic/).
