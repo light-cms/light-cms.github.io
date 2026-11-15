@@ -1,116 +1,116 @@
 ---
-title: "LightCMS vs Keystatic: Code First Schema vs a Writer First Workspace"
-description: "Keystatic keeps content as files with schemas defined in code; LightCMS keeps content as files with an editor anyone can use. Which one fits your team."
+title: "LightCMS vs Keystatic: 代码First Schema vs 一个作者第一工作区"
+description: "按键静态将内容保留为代码中定义的模式的文件; LightCMS将内容保留为任何编辑器可以使用的文件。哪一个适合您的团队。"
 serial: 40
 date: 2026-10-16T10:40:00Z
 draft: false
 keywords:
-  - lightcms vs keystatic
-  - keystatic alternatives
-  - keystatic cms
-  - file based cms comparison
-  - local first cms
+  - lightcms vs keystatin
+  - 关键静态选项
+  - 按键静态cms
+  - 基于文件的 cms 比较
+  - 本地第一厘米
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - keystatic
-    - cms
-    - comparison
+    - 闪光
+    - 静态键
+    - 厘米
+    - 比较
 ---
 
-[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git based CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits Astro and Next.js projects and takes the local-first promise seriously.
+来自Thinkmill团队的 [Keystatic](https://keystatic.com是基于 Git 的 CMS 类别中最尊重开发者的工具：内容是文件， schema是代码，表格是从该scheme中生成的。它适合埃斯特罗和下达.js项目，并认真对待地方一级的承诺。
 
-LightCMS shares the storage model (files in your repository) and inverts the audience. Keystatic is built so developers can define content well; LightCMS is built so writers can use it without developers at all.
-
----
-
-## The Same Foundation
-
-Both tools agree on the fundamentals that matter most:
-
-- **Content is Markdown and front matter in your repository.** No database, no export, no lock-in.
-- **Git history is the version history.** Diffs, blame, revert, and pull request review all work.
-- **The SSG is untouched.** Hugo, Astro, Eleventy, or any generator reading your content directory keeps working.
-- **Open source.** You can read, fork, and self-host both.
-
-If your evaluation starts and ends with "does it keep my content in Git," both pass, and the differences below are what you are actually choosing between.
+LightCMS 共享存储模式 (您的存储库中的文件) 并反转观众。 Keystatic是构建的，以便开发者能够很好地定义内容；LightCMS是构建的，所以作者可以在没有开发者的情况下使用它。
 
 ---
 
-## Comparison
+## 同一基金会
 
-|                             | LightCMS                                            | Keystatic                                     |
-| :-------------------------- | :-------------------------------------------------- | :-------------------------------------------- |
-| **Model**                   | Self-hosted writing workspace                       | Local-first files with generated forms        |
-| **Content schema**          | Managed in the app                                  | Defined in code (TypeScript/JSX config)       |
-| **Primary surface**         | Document editor (TipTap WYSIWYG)                    | Form views generated from your schema         |
-| **Runs where?**             | Hosted by you; writers use a browser                | Locally via CLI, or with cloud offering       |
-| **Non-developer usability** | Designed for it                                     | Requires the project and tooling set up first |
-| **AI copilot**              | Built in (any OpenAI-compatible endpoint)           | Not bundled                                   |
-| **Voice-to-text**           | Built in (Whisper)                                  | Not bundled                                   |
-| **Newsletters**             | Built in via Newsy: GitHub-backed, no email service | Not bundled                                   |
-| **MDX / rich content**      | Markdown pass-through                               | Strong MDX support                            |
-| **Licensing**               | Apache 2.0                                          | Open source (MIT)                             |
+这两种工具就最重要的基本要素达成一致：
+
+- **内容是Markdown and front matters in your reposy.** No database, no export, and lock-in.
+- **Git 历史是版本历史。** Diffusion、责备、恢复和拉取请求审查所有工作。
+- **SSG 未触摸。** Hugo, Astro, Eleventy, 或任何生成器读取您的内容目录都能正常工作。
+- **开源。** 你可以阅读、分叉和自主两者。
+
+如果您的评价以"保持我的内容在 Git"开始和结尾。 两次通行证和下面的差异是你实际上在两者之间选择的。
 
 ---
 
-## Where Keystatic Wins
+## 比较
 
-- **Schema as code.** Content structure lives in version control, reviewed in pull requests and typed at build time. For engineering teams this is the right call.
-- **Local-first workflow.** Writing can happen offline against the working tree, with Git as the sync mechanism, a real advantage for developers who think in repositories.
-- **Framework fit.** First-class positioning inside Astro and Next.js projects, with field types that map cleanly onto component props.
-- **MDX.** If your content carries components rather than plain prose, Keystatic handles that natively.
-
-## Where LightCMS Wins
-
-- **Zero setup for contributors.** A writer signs in with GitHub, opens a repository, and starts writing. No CLI, no local checkout, no Node version to match.
-- **Writing, not form-filling.** Articles are documents. Keystatic's generated forms are excellent for structured records and heavier for a 2,000-word essay.
-- **Structure without a deploy.** New front matter fields are configured in the tool rather than committed as code, so metadata changes do not wait on a developer.
-- **The bundled extras.** [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) are part of the product.
-
----
-
-## The Real Question: Who Is the User?
-
-Almost every LightCMS-vs-Keystatic decision resolves to a single question about your team:
-
-**Is the person entering content a developer?**
-
-- **Yes, mostly.** Keystatic feels like a natural extension of your stack. Schemas are typed, forms are derived, and everything happens where your code already is.
-- **No, or not only.** LightCMS removes the prerequisite. Contributors do not clone, install, or run anything; they open a browser. The repository stays the source of truth, but the entry point stops being a terminal.
-
-Hybrid teams often land on LightCMS because it lets engineers keep their conventions while non-engineers get a real editor, without either side operating inside the other's tooling.
+|                 | LightCMS                             | 静态键                         |
+| :-------------- | :----------------------------------- | :-------------------------- |
+| **Model**       | 自托管写作工作区                             | 生成表单的本地第一文件                 |
+| **内容模式**        | 在应用程序中管理                             | 在代码 (TypeScript/JSX 配置) 中定义 |
+| **主要表面**        | 文档编辑器 (点击WYSIWYG)                    | 从您的方案生成的表单视图                |
+| **运行在哪里？**      | 由您托管；作者使用浏览器                         | 本地通过 CLI 或云端提供              |
+| **非开发者可用性**     | 为此设计                                 | 需要先安装项目和配刀设置                |
+| **AI 拷贝**       | 内置(任意OpenAI兼容端点)                     | 未捆绑的                        |
+| **语音对文本**       | 内置(Whisper)                          | 未捆绑的                        |
+| **Newsletters** | 通过 Newsy 内置: GitHub-backed, 没有电子邮件服务 | 未捆绑的                        |
+| **MDX / 丰富内容**  | Markdown 密码                          | 强大的 MDX 支持                  |
+| **许可**          | Apache 2.0                           | 开源 (MIT)                    |
 
 ---
 
-## Migration
+## 键静态胜利地点
 
-Straightforward in both directions: the artifacts are identical Markdown files with YAML front matter. Moving from Keystatic means pointing LightCMS at the repository and recreating the schema as in-app fields; moving the other way means transcribing those fields into a Keystatic config. Content and media paths are unchanged either way.
+- **Schema作为代码。** 内容结构存在于版本控制中，在合并请求中审查，并在构建时间键入。对于工程队，这是正确的呼叫。
+- **本地-第一个工作流程** 可以在网上与工作树脱机写入，Git作为同步机制，对于在资源库中思考的开发者来说是一个真正的优势。
+- **Framework 适合。** Astro和Next.js项目中的一流定位，现场类型可以在组件props上清晰地映射。
+- **MDX.** 如果你的内容带有组件而不是纯粹的样式，则按键静态处理那个本地化的方法。
+
+## LightCMS赢得的地方
+
+- **零设置贡献者。** 使用 GitHub 的写作符号，打开仓库并开始写入。没有 CLI ，没有本地结帐，没有要匹配的节点版本。
+- **写入，而不是填写表格。** 文章是文档。关键学生成的表格对于结构化记录来说非常优秀，对于2 000个字的文学来说更加繁重。
+- \*\*没有部署的结构。 \* 新的前台字段在工具中配置而不是承诺作为代码，所以元数据更改不会等待开发人员。
+- **捆绑的扩展。** [AI 正在起草](/blog/lightcms-ai-copilot/)、 [dictation](/blog/lightcms-voice-to-text/)和[通讯发送](/blog/newsletter-email-automation/)是产品的一部分。
 
 ---
 
-## Frequently Asked Questions
+## 真实问题：用户是谁？
 
-### Does LightCMS require a developer to set up?
+几乎每一个 LightCMS-vs-Key 静态决定都解析为您团队的单个问题：
 
-Someone has to connect the repository and confirm the build: minutes of work, not an integration project. After that, writers work entirely on their own.
+**输入内容的人是开发者？**
 
-### Can Keystatic run without local tooling?
+- **是的，大多数情况下** 键静态感觉像您的堆栈的自然扩展。方案类型，表单，一切都发生在你的代码已经存在的地方。
+- **不，或者不仅仅是。** LightCMS会移除先决条件。贡献者不会克隆、安装或运行任何东西；他们会打开浏览器。存储库仍然是真理的来源，但入口点是一个终端。
 
-Local mode assumes a checkout and a running dev process. Keystatic's cloud offering changes that equation; check its current documentation for the latest shape.
+混合小组往往登陆LightCMS，因为它允许工程师保留他们的约会，而非工程师获得真正的编辑器， 没有任何一方在对方的工具中操作。
 
-### Do both support Markdown?
+---
 
-Yes. Both write Markdown with YAML front matter into your repository.
+## 移 民
 
-### Which is better for MDX?
+双向直线前进：伪影是与 YAML 前端事项相同的 Markdown文件。从关键静态移动意味着在资源库中指向LightCMS并将方案作为应用内字段重新创建； 移动另一种方式意味着将这些字段转换为关键静态配置。内容和媒体路径均未改变。
 
-Keystatic: it models component-bearing content deliberately. If your content is prose with occasional embedded media, LightCMS's Markdown output is simpler.
+---
 
-### Is either a hosted vendor that could hold my content hostage?
+## 常见问题
 
-No. Content lives in your repository in both cases, which is the whole point of the category.
+### LightCMS是否需要开发者设置？
+
+有人必须连接仓库并确认构建：工作记录，而不是一个集成项目。此后，作者完全依靠自己开展工作。
+
+### 是否可以在没有本地工具的情况下运行静态键？
+
+本地模式假定结帐和正在运行的开发过程。 Keystatic的云端提供的更改等式；检查其当前文档的最新形状。
+
+### 双方是否支持Markdown？
+
+是。两者都使用 YAML 前缀将Markdown 写入你的资源库。
+
+### 下面哪个更好的 MDX？
+
+关键：它是模型含有组件的内容。如果您的内容有偶尔嵌入的介质，LightCMS的Markdown 输出就更简单了。
+
+### 要么是一个托管的供应商，可以将我的内容作为人质吗？
+
+否。内容存放在你的存储库中，这是该类别的全点。
 
 ---
 
