@@ -4,7 +4,7 @@ description: Leitfaden zum Selbst-Host LightCMS.
 serial: 4
 section: Los geht's
 badge: Deploy
-date: 18.09.20T01:45:00Z
+date: 2026-09-18T01:45:00Z
 draft: false
 tags:
   - selfhost
@@ -110,7 +110,7 @@ Erstelle die App in **GitHub Einstellungen → Entwicklereinstellungen → GitHu
 | Berechtigung     | Zugang              | Verwendet für                                              |
 | ---------------- | ------------------- | ---------------------------------------------------------- |
 | `Inhalte`        | Lesen und schreiben | Dateien lesen und übertragen                               |
-| "Probleme"       | Lesen und schreiben | Kommentare und Beschriftungen bei Pull-Requests überprüfen |
+| `Inhalte`        | Lesen und schreiben | Kommentare und Beschriftungen bei Pull-Requests überprüfen |
 | `Ziehe Anfragen` | Nur lesen           | Liste der geänderten Dateien in einem Pull-Request         |
 | `Commit status`  | Lesen und schreiben | Inhaltsüberprüfung bei Pushes melden                       |
 | `Metadaten`      | Nur lesen           | Pflichtfeld für jede GitHub App                            |
@@ -306,7 +306,7 @@ Das Projekt ist mit sveltekit konfiguriert, das sehr vendor agnostisch ist so
 
 1. Importieren Sie Ihr Git-Repository in die Bereitstellungsplattform.
 2. Fügen Sie jede Umgebungsvariable aus [Schritt 3](#3-configure-environment-variables) in **Projekteinstellungen → Umwelt
-   Variablen hinzu.** Setze `BETTER_AUTH_URL` auf deine Produktions-URL.
+   Variablen hinzu.** Setze `BETTER_AUTH_URL` auf deine Produktions-URL. Setze `BETTER_AUTH_URL` auf deine Produktions-URL.
 3. Deploy.
 
 Um die Produktion lokal zu überprüfen:
