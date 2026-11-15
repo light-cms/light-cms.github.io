@@ -1,114 +1,114 @@
 ---
-title: "LightCMS vs Decap CMS: Modern Writing vs the Veteran Admin App"
-description: "LightCMS and Decap CMS both commit Markdown to Git, but they differ on editor quality, provider support, configuration, and where writing happens."
+title: "LightCMS vs Decap CMS: Escritura moderna vs aplicación de administrador de Veteran"
+description: "Tanto LightCMS como Decap CMS confirman Markdown a Git, pero difieren en la calidad del editor, el soporte al proveedor, la configuración y donde ocurre la escritura."
 serial: 38
 date: 2026-10-16T10:20:00Z
 draft: false
 keywords:
-  - lightcms vs decap
-  - decap cms alternatives
-  - netlify cms alternative
-  - decap cms editor
-  - git cms comparison
+  - faros vs decapar
+  - decapar alternativas de cms
+  - netlify cms alternativa
+  - decapar editor de cms
+  - comparación de git cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - decap
+    - luces
+    - capear
     - cms
-    - comparison
+    - comparación
 ---
 
-[Decap CMS](/comparison/netlifycms), formerly Netlify CMS, is the elder statesman of Git based content. It's been the default answer to "CMS for my static site" for the better part of a decade, and much of that reputation is earned: it established the pattern of an admin app sitting on top of your repository.
+[Decap CMS](/comparison/netlifycms), anteriormente Netlify CMS, es el estadista mayor de contenido basado en Git. Es la respuesta predeterminada a "CMS para mi sitio estático" por la mejor parte de una década, y gran parte de esa reputación se gana: estableció el patrón de una aplicación de administración sentada encima de tu repositorio.
 
-LightCMS starts from the same premise and a different center of gravity: the writing.
-
----
-
-## The Core Difference
-
-Decap is configured around **collections**. You describe your content model in a YAML file (fields, types, widgets, folder structure), and Decap generates a form for it. The result is a competent, structured admin panel: labeled inputs, a Markdown field with a compact toolbar, a media library.
-
-LightCMS is configured around **the document**. You open a post and see the post, with headings, lists, tables, code, math, and images rendered as they will publish, edited directly, and serialized back to Markdown on save.
-
-Neither approach is wrong, but they produce different days:
-
-- In Decap, you are _operating a form_ over a content record.
-- In LightCMS, you are _writing a document_ that happens to be stored in Git.
-
-For structured content (event listings, product pages, directories), Decap's field model is the right shape. For articles, essays, release notes, and docs, a document beats a form every time.
+LightCMS parte de la misma premise y un centro de gravedad diferente: la escritura.
 
 ---
 
-## Comparison
+## La Diferencia del Núcleo
 
-|                    | LightCMS                                                                      | Decap CMS                                      |
-| :----------------- | :---------------------------------------------------------------------------- | :--------------------------------------------- |
-| **Model**          | Self-hosted writing workspace                                                 | Deployable React admin app                     |
-| **Content store**  | Your GitHub repository                                                        | Your repository (GitHub, GitLab, Bitbucket)    |
-| **Editor**         | TipTap WYSIWYG: tables, math, code highlighting, task lists, media            | Form fields with a compact Markdown toolbar    |
-| **Configuration**  | In-app, per repository                                                        | `config.yml` collections committed to the repo |
-| **AI copilot**     | Built in: outline, rephrase, expand, grammar (any OpenAI-compatible endpoint) | None                                           |
-| **Voice-to-text**  | Built in (Whisper)                                                            | None                                           |
-| **Newsletters**    | Built in via Newsy: GitHub-backed, no email service                           | None (webhooks/hooks only)                     |
-| **Licensing**      | Apache 2.0                                                                    | MIT                                            |
-| **Multi-provider** | GitHub-focused                                                                | GitHub, GitLab, Bitbucket                      |
+Decap está configurado alrededor de **colecciones**. Usted describe su modelo de contenido en un archivo YAML (campos, tipos, widgets, estructura de carpetas), y Decap genera un formulario para él. El resultado es un panel de administración estructurado y competente: entradas etiquetadas, un campo Markdown con una barra de herramientas compacta, una biblioteca de medios.
 
----
+LightCMS está configurado alrededor de **el documento**. Abre un post y ve el post, con encabezados, listas, tablas, código, matemáticas, y las imágenes renderizadas ya que publicarán, editarán directamente y se serializarán de vuelta a Markdown al guardar.
 
-## Where Decap Still Wins
+Ninguno de ellos está equivocado, pero producen días diferentes:
 
-Be honest about the incumbents:
+- En Decap, está _operando un formulario_ sobre un registro de contenido.
+- En LightCMS, está _escribiendo un documento_ que se almacena en Git.
 
-- **Provider breadth.** If your content lives in GitLab or Bitbucket, Decap supports it today; LightCMS is built around GitHub.
-- **Maturity of the ecosystem.** Years of widgets, community forks, and documented patterns for every SSG. When you search for a solution, a Decap answer probably exists.
-- **Structured collections.** Repetitive, field-shaped content is easier to model in a collection than to write as prose.
-- **Deploy alongside your site.** The admin app is a static bundle you host next to your site, with no separate service to run.
-
-## Where LightCMS Wins
-
-- **The writing surface.** Full document editing rather than field completion, with front matter handled as a validated form.
-- **Distribution built in.** Publishing, [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletters](/blog/newsletter-email-automation/) in one loop.
-- **Configuration without a config file.** Point it at a repository and start writing; nothing about your content model has to be declared in YAML first.
-- **Maintenance you control.** Self-hosted and Apache 2.0: run it, fork it, audit it, extend it.
+Para contenidos estructurados (listados de eventos, páginas de productos, directorios), el modelo de campo de Decap es la forma correcta. For articles, essays, release notes, and docs, a document beats a form every time.
 
 ---
 
-## Migration Effort
+## Comparación
 
-Minimal in either direction, because both write the same artifacts: Markdown files with YAML front matter. Moving from Decap to LightCMS means connecting the repository. Your existing content, front matter, and media references carry over untouched. The collection definitions in `config.yml` stop being needed for prose content.
-
----
-
-## Which Should You Choose?
-
-- **Choose Decap** if you are already running it, need GitLab/Bitbucket, or your content is field-shaped records.
-- **Choose LightCMS** if the primary act is writing articles and you want the editor, the AI pass, and distribution in one self-hosted tool.
-
----
-
-## Frequently Asked Questions
-
-### Is Decap CMS still maintained?
-
-It remains in use across a huge install base. As with any community project, check current activity before standardizing on it. A snapshot of the ecosystem is in [Decap CMS explained](/comparison/netlifycms).
-
-### Can I switch from Decap to LightCMS without rewriting content?
-
-Yes. Both store Markdown and YAML front matter in your repository; only the editing tool changes.
-
-### Does LightCMS support GitLab?
-
-Not as a storage provider: LightCMS connects to GitHub repositories. If GitLab is non-negotiable, Decap is the better fit.
-
-### Does Decap have AI features?
-
-No. It is a focused content editor; features like drafting assistance and transcription are outside its scope.
-
-### Which is more SEO-friendly?
-
-Equally. Your SSG and theme decide the generated HTML, not the editor that produced the Markdown.
+|                           | LightCMS                                                                                                   | Decaer CMS                                                              |
+| :------------------------ | :--------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+| **Modelo**                | Espacio de escritura autoalojado                                                                           | Aplicación de administración de React desplegable                       |
+| **Tienda de contenido**   | Your GitHub repository                                                                                     | Your repository (GitHub, GitLab, Bitbucket)                             |
+| **Editor**                | TipTap WYSIWYG: tablas, matemáticas, resaltado de código, listas de tareas, medios                         | Campos de formulario con una barra de herramientas de Markdown compacta |
+| **Configuración**         | En la aplicación, por repositorio                                                                          | colecciones `config.yml` comprometidas con el repositorio               |
+| **Copiloto IA**           | Construido en: contorno, reformulación, expansión, gramática (cualquier punto final compatible con OpenAI) | Ninguna                                                                 |
+| **Voice-a-texto**         | Construido en (susurro)                                                                                    | Ninguna                                                                 |
+| **Boletines de noticias** | Construido a través de Newsy: GitHub-backed, sin servicio de correo electrónico                            | Ninguno (sólo webhooks/hooks)                                           |
+| **Licencia**              | Apache 2.0                                                                                                 | MIT                                                                     |
+| **Multi-proveedor**       | GitHub-centrado                                                                                            | GitHub, GitLab, Bitbucket                                               |
 
 ---
 
-See also: [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms/), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), and the [full Git based CMS comparison](/comparison/top-git-cms).
+## Donde Decap gana todavía
+
+Sean honestos sobre los incumbentes:
+
+- **Proveedor de ancho.** Si tu contenido vive en GitLab o Bitbucket, Decap lo soporta hoy; LightCMS se construye alrededor de GitHub.
+- **Madurez del ecosistema.** Años de widgets, bifurcaciones comunitarias y patrones documentados para cada SG. Cuando busque una solución, probablemente exista una respuesta de Decap.
+- **Colecciones estructuradas.** El contenido repetitivo en forma de campo es más fácil de modelar en una colección que de escribir como prótesis.
+- **Despliega junto a tu sitio.** La aplicación de administración es un paquete estático que alojas junto a tu sitio, sin servicio separado para ejecutar.
+
+## Donde LightCMS gana
+
+- **La superficie de escritura.** Edición completa de documentos en lugar de completar el campo, con la materia frontal manejada como un formulario validado.
+- **Distribución incorporada.** Publicación, [borrador de IA](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), y [newsletters](/blog/newsletter-email-automation/) en un bucle.
+- **Configuración sin archivo de configuración.** Apunta a un repositorio y comienza a escribir; nada sobre tu modelo de contenido tiene que ser declarado primero en YAML.
+- **Mantenimiento que controles.** Autoalojado y Apache 2.0: ejecutarlo, bifurcarlo, auditarlo, ampliarlo.
+
+---
+
+## Effort de Migración
+
+Mínimo en cualquier dirección, porque ambos escriben los mismos artefactos: los archivos Markdown con el asunto del frente YAML. Pasar de Decap a LightCMS significa conectar el repositorio. Sus referencias de contenido, material delantero y medios existentes siguen sin tocar. Las definiciones de colección en `config.yml` dejan de ser necesarias para el contenido de prose.
+
+---
+
+## ¿Qué debería elegir?
+
+- **Elige Decap** si ya lo estás ejecutando, necesitas GitLab/Bitbucket, o tu contenido tiene forma de campo.
+- **Elige LightCMS** si el acto principal es escribir artículos y quieres que el editor, la IA pase y la distribución en una sola herramienta alojada.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Sigue manteniéndose el CMS del Decap?
+
+Sigue en uso a través de una gran base de instalación. Como en cualquier proyecto comunitario, compruebe la actividad actual antes de estandarizarla. Una instantánea del ecosistema está en [Decap CMS explicado](/comparison/netlifycms).
+
+### ¿Puedo cambiar de Decap a LightCMS sin reescribir el contenido?
+
+Sí. Ambos almacenan Markdown y YAML en su repositorio, sólo cambia la herramienta de edición.
+
+### ¿LightCMS soporta GitLab?
+
+No como proveedor de almacenamiento: LightCMS se conecta a los repositorios de GitHub. Si GitLab no es negociable, Decap es el mejor ajuste.
+
+### ¿El Decap tiene características de IA?
+
+No. Es un editor de contenidos enfocado; características como la asistencia para la redacción y la transcripción están fuera de su alcance.
+
+### ¿Qué es más amigable con SEO?
+
+Igualmente. Su SSG y el tema deciden el HTML generado, no el editor que produjo el Markdown.
+
+---
+
+Ver también: [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms/), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), y la [completa comparación CMS basada en Git](/comparison/top-git-cms).
