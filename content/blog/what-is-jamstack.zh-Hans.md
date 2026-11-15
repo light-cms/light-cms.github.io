@@ -1,81 +1,81 @@
 ---
-title: What Is the Jamstack? Why It Still Matters in 2026
-description: "The Jamstack explained: pre-rendered pages, decoupled APIs, and Git-driven deploys. Why the architecture outlived the hype, and how Git based CMS tools fit in."
+title: Jamstack是什么？为什么在2026年仍然存在事项
+description: "Jamstack解释了事先制作的网页、拆解的API和由Git驱动的部署。为什么架构会超过水力，以及基于 Git 的 CMS 工具如何适合。"
 serial: 20
 date: 2026-10-14T14:10:00Z
 draft: false
 keywords:
-  - what is jamstack
-  - jamstack explained
-  - jamstack vs traditional
+  - 什么是jamstack
+  - 已解释jamstack
+  - jamstack 对传统的
   - jamstack 2026
-  - headless architecture
+  - 无头的架构
 preview: /og-image.webp
 taxonomies:
   tags:
     - jamstack
-    - architecture
-    - static-sites
+    - 结构
+    - 静态站点
     - api
 ---
 
-"Jamstack" peaked as a buzzword around 2020, became insufferable for a while, and then won. In 2026 the JAM (JavaScript, APIs, Markup) describes how a large share of the modern web gets built, even among teams that would never say the word out loud. If you are choosing an architecture for a blog, documentation site, or company web presence, the term still matters.
+“Jamstack”在2020年前后作为一个蜂窝达到顶峰，长时间无法承受，然后获胜。 2026年，JAM(JavaScript、API、Markup)描述了如何构建大量现代网络， 甚至在那些永远不会大声疾呼的小组中也是如此。如果您选择一个博客、文档网站或公司网站存在的架构，该词仍然很重要。
 
 ---
 
-## The Definition
+## 定 义
 
-**Jamstack** is an architecture with three ingredients:
+**Jamstack** 是一个具有三个成分的结构：
 
-- **Markup**: Pages are pre-rendered as static files or cached responses rather than assembled per request from a database.
-- **APIs**: Dynamic capabilities (search, forms, accounts, commerce) come from services and APIs called from the client or edge, not from the page's own server render.
-- **JavaScript**: Interactivity is added deliberately on top of the served markup, rather than being the delivery mechanism for the content itself.
+- **Markup**：页面被预渲染为静态文件或缓存的响应，而不是从数据库中按请求组装。
+- **APIs**: 动态能力 (搜索、表格、账户、商务) 来自服务和从客户端或边缘调用的 API，而不是从页面自己的服务器渲染。
+- **JavaScript**：交互性是蓄意添加在所服务的标记之上的，而不是内容本身的交付机制。
 
-The original shorthand ("static sites with benefits") is still the most accurate one-liner.
+最初的短片(“有好处的静态站点”)仍然是最准确的单行器。
 
-## Why It Outlived the Hype
+## 为什么它还没过Hype
 
-Buzzwords fade; architectures with structural advantages do not. The Jamstack properties map directly to outcomes everyone wants:
+拼词淡入淡出；结构上具有结构优势的建筑物并不是这样。 Jambstack属性映射到每个人想要的结果：
 
-- **Performance**: Pre-rendered, CDN-served pages score well on Core Web Vitals.
-- **Security**: No production database or admin runtime is exposed on the serving path.
-- **Cost**: Content sites fit inside free hosting tiers.
-- **Resilience**: Static files do not crash under load; traffic spikes are a CDN's natural state.
+- **性能**：预渲染、CDN服务的页面在Core Web Vitals上得分很好。
+- **Security**：在服务路径上没有任何生产数据库或管理员运行时间。
+- **成本**：内容站点适合于免费主机层次。
+- **复原力**：静态文件不会在加载时崩溃；流量跳跃是 CDN 的自然状态。
 - **Sustainability**: Cached, compute-free page serving emits far less energy per view (see [Static Sites and CO2](/blog/greener-web-static-sites/)).
-- **Portability**: Markup is files; files can move.
+- **Portability**: Markup 是文件; 文件可以移动。
 
-## What Changed Since the Hype
+## 自Hype以来发生了什么变化
 
-Two honest evolutions:
+两个诚实的进化：
 
-1. **The "static" part got pragmatic.** Frameworks like SvelteKit and Astro prerender by default but can render dynamically where a page needs it. That is the hybrid model.
-2. **The content problem got solved.** The Jamstack's original weakness was editing: writers did not want Git. Git based CMS platforms ([LightCMS](/getting-started/), [Decap CMS](/comparison/netlifycms/), [Pages CMS](/comparison/pagescms/), [TinaCMS](/comparison/top-git-cms/)) now provide visual editing that commits clean Markdown, closing the gap that once sent everyone back to WordPress.
+1. **"静态"部分获得了实用性。** 框架像SwelteKit和Astro默认预渲，但可以动态地呈现页面需要它的地方。这是混合模式。
+2. **内容问题已解决。** Jamstack最初的弱点是编辑：作者不想Git。基于 Git 的 CMS 平台 ([LightCMS](/getting-started/), [Decap CMS](/comparison/netlifycms/), [CMS](/comparison/pagescms/), [TinaCMS](/comparison/top-git-cms/)现在提供可视化编辑，提供干净的Markdown，弥补了每个人返回WordPress后的缺口。
 
-## The Jamstack Recipe in Practice
+## 练习中的 Jamstack 配方
 
-1. Pick a generator: [Astro, Hugo, or friends](/blog/best-static-site-generators/).
+1. 选择一个生成器：[Astro、Hugo或朋友](/blog/best-static-site-generators/)。
 2. Store content as Markdown in GitHub, edited through a Git based CMS ([why it beats a database](/blog/git-cms-vs-traditional-cms/)).
-3. Host on an edge platform: [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) or the [full hosting roundup](/misc/top-static-site-hosting/).
-4. Add dynamic features only where they earn their place: forms, functions, and APIs.
+3. 在边缘平台上的主机：[Cloudflare页面与Vercel](/blog/cloudflare-pages-vs-vercel/)或[完全托管舍入](/misc/top-static-site-hosting/)。
+4. 仅在他们赚取收入的情况下添加动态功能：表格、函数和 API。
 
-That stack is free to start, fast by default, and greener than anything database-first, which is why it is still the recommendation.
+这个堆栈可以自由启动，默认情况下可以快速启动，并且比任何数据库更绿色，这就是为什么它仍然是建议的。
 
 ---
 
-## Frequently Asked Questions
+## 常见问题
 
-### Is Jamstack dead?
+### Jamstack死了吗？
 
-No. The term cooled; the architecture won. Most new content sites are built Jamstack style whether or not anyone uses the label.
+否。术语冷却度；建筑获胜。大多数新的内容网站都是构建的 Jamstack 风格，不管是否有人使用这个标签。
 
-### Is Jamstack the Same as a Static Site?
+### Jambstack 与静态站点相同吗？
 
-A static site is the Markup piece; Jamstack adds the API and JavaScript layers for dynamic features without giving up pre-rendered delivery.
+静态站点是标记件；Jamstack为动态功能添加API和JavaScript图层，而不放弃预渲送。
 
-### Can a Jamstack site be dynamic?
+### Jambstack网站可以是动态网站吗？
 
-Yes, through client-side data fetching, edge functions, and hybrid rendering. Pre-render by default and go dynamic by exception.
+是的，通过客户端数据获取，边缘功能和混合渲染。默认预渲染并通过异常动态进行。
 
-### What CMS does a Jamstack site use?
+### Jamstack网站使用了什么CMS？
 
-A Git based CMS: content lives as Markdown in your repository, and publishing is a commit that triggers the build.
+基于 Git 的 CMS：内容作为Markdown 生活在您的仓库中，发布是一个触发构建的提交。
