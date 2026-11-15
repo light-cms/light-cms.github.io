@@ -1,104 +1,104 @@
 ---
-title: "What Is LightCMS? The Git based CMS for Static Sites"
-description: "LightCMS is a self-hosted, Git based CMS with a visual WYSIWYG editor. It commits plain Markdown to your repository and lets your existing CI/CD deploy it."
+title: "Что такое LightCMS? CMS на основе Git для статических сайтов"
+description: "LightCMS является самостоятельной, основанной на Git CMS с визуальным редактором WYSIWYG. Оно совершает обычный Markdown в ваш репозиторий и позволяет CI/CD развертывать его."
 serial: 30
 date: 2026-10-16T09:00:00Z
 draft: false
 keywords:
-  - what is lightcms
-  - lightcms
-  - Git based cms
+  - что такое молния
+  - молнии
+  - Git на основе cms
   - markdown cms
-  - visual editor for markdown
+  - визуальный редактор markdown
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - cms
+    - молнии
+    - смс
     - git
     - markdown
 ---
 
-**LightCMS** is a content management system that keeps your content in your Git repository as plain Markdown files.
+**LightCMS** - это система управления контентом, которая хранит ваш контент в репозитории Git как обычный Markdown файлы.
 
-No database. No lock-in. Sign in with GitHub, pick a repository, write, and publish. [LightCMS](https://lightcms.me) commits the changes for you.
+Нет базы данных. Нет блокировки Войдите в GitHub, выберите репозиторий, запись и публикацию. [LightCMS](https://lightcms.me) фиксирует изменения для вас.
 
-## The problem [LightCMS](https://lightcms.me) solves
+## Задача [LightCMS](https://lightcms.me) решает
 
-Static site generators make publishing fast, cheap, and secure. But writing a post in a code editor can feel difficult if you are not used to that workflow.
+Статические генераторы сайтов делают публикацию быстрой, дешевой и безопасной. Но написать пост в редакторе кода может чувствовать себя трудно, если вы не привыкли к этому процессу.
 
-That workflow suits developers. It does not suit everyone who wants to write.
+Этот рабочий процесс подходит разработчикам. Это не подходит всем, кто хочет писать.
 
-[LightCMS](https://lightcms.me) removes that friction without removing Git. Developers keep content in the repository, and writers get a browser-based editor for drafting and publishing.
+[LightCMS](https://lightcms.me) снимает это трение, не снимая Git. Разработчики сохраняют содержимое в репозитории, а писатели получают браузерный редактор для составления и публикации.
 
 ---
 
 ## How [LightCMS](https://lightcms.me) works
 
-1. **Sign in with GitHub.** LightCMS uses GitHub OAuth, so you do not need a separate account system.
-2. **Connect a repository.** Choose any repo that contains Markdown content, including sites built with Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, or Next.js.
-3. **Write visually.** The TipTap-based editor supports headings, links, lists, tables, task lists, math, syntax-highlighted code, and drag-and-drop media.
-4. **Publish.** [LightCMS](https://lightcms.me) writes the file and front matter, then commits it directly or opens a pull request if you want review.
-5. **Deploy.** GitHub Actions, Cloudflare Pages, Vercel, or Netlify can rebuild and deploy your site. Writers stay in the browser, and maintainers keep their Git workflow.
+1. **Войдите в GitHub.** LightCMS использует GitHub OAuth, поэтому вам не нужна отдельная система аккаунта.
+2. **Подключите репозиторий.** Выберите любой репозиторий с Markdown содержимым, включая сайты, построенные с помощью Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit или Next.js.
+3. \*\*Напишите визуально. Редактор на основе чаппа поддерживает заголовки, ссылки, списки, таблицы, списки задач, математику, выделенный синтаксисом код и перетаскивание носителей.
+4. **Опубликовать.** [LightCMS](https://lightcms.me) записывает файл и переднюю часть, затем фиксирует его непосредственно или открывает запрос на слияние, если вы хотите проверить.
+5. **Разместить.** Действия GitHub, Cloudflare страницы, Vercel, или Netlify могут перестроить и развернуть ваш сайт. Авторы остаются в браузере, а сопровождающие сохраняют свой Git рабочий процесс.
 
-Step 4 creates a normal commit. If you stop using [LightCMS](https://lightcms.me), your site still builds because your content already lives in your repository.
-
----
-
-## What makes it different
-
-There are several capable Git-based CMS options ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, Pages CMS), and [LightCMS](https://lightcms.me) takes a different approach in a few areas:
-
-|                   | [LightCMS](https://lightcms.me)                                                                 |
-| :---------------- | :---------------------------------------------------------------------------------------------- |
-| **Storage**       | Your GitHub repository (Markdown + YAML front matter)                                           |
-| **Editor**        | TipTap-based WYSIWYG editor with math (KaTeX), code highlighting, tables, task lists, and media |
-| **AI**            | Built-in copilot for outlines, rewrites, and grammar, using any OpenAI-compatible provider      |
-| **Voice**         | Whisper-powered dictation in the editor                                                         |
-| **Newsletters**   | Publish Markdown and send updates with Newsy from GitHub                                        |
-| **Hosting model** | Self-hosted, Apache 2.0 licensed, runs on any Node.js host                                      |
-| **Lock-in**       | None: your content stays in files you own                                                       |
-
-[LightCMS](https://lightcms.me) covers drafting, editing, publishing, and newsletter distribution without adding a separate database.
+Шаг 4 создает нормальную коммит. Если вы прекратите использовать [LightCMS](https://lightcms.me), ваш сайт все еще строит, потому что ваш контент уже живет в вашем репозитории.
 
 ---
 
-## What [LightCMS](https://lightcms.me) is not
+## Что отличает его
 
-- **It is not a database-first CMS.** If you need relational content, complex roles and permissions, or an app-shaped content API, a headless platform like [Payload](/comparison/lightcms-vs-payload-cms) may fit better.
-- **It is not a hosting service.** [LightCMS](https://lightcms.me) manages content; your host (Cloudflare Pages, Vercel, Netlify, GitHub Pages) serves the site. See [static site hosting compared](/misc/top-static-site-hosting).
-- **It is not a theme or a site generator.** It commits content into whatever static site generator you already run.
+Существует несколько способных опций на основе GMS ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, Страницы CMS) и [LightCMS](https://lightcms.me) принимают другой подход в нескольких областях:
+
+|                       | [LightCMS](https://lightcms.me)                                                                                     |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| **Хранилище**         | Ваш GitHub репозиторий (Markdown + YAML передняя часть)                                                             |
+| **Редактор**          | WYSIWYG редактор на основе TipTap, с математикой (KaTeX), выделением кода, таблицами, списками задач и медиа        |
+| **AI**                | Встроенный copilot для описаний, перезаписей и грамматики с использованием любого поставщика, совместимого с OpenAI |
+| **Голос**             | Шепот в редакторе                                                                                                   |
+| **Рассылка новостей** | Опубликовать Markdown и отправлять обновления с помощью Newsy из GitHub                                             |
+| **Хостинг модели**    | Самохостинг, Apache 2.0 лицензирован, запускается на любом узле Node.js                                             |
+| **Заблокироваться**   | Нет: ваш контент остается в файлах, которые вы владеете                                                             |
+
+[LightCMS](https://lightcms.me) охватывает разработку, редактирование, публикацию и распространение бюллетеня без добавления отдельной базы данных.
 
 ---
 
-## Who it is for
+## Что [LightCMS](https://lightcms.me) не является
 
-- **Solo writers and bloggers** who want to own their content without running extra infrastructure.
-- **Teams** where developers maintain the site and non-developers write and publish content.
-- **Static site projects** that have outgrown editing Markdown in a code editor but still want a Git-based workflow.
-
-If that sounds like you, you can [copy a starter template](/blog/start-with-a-lightcms-template/) to get a repository, build setup, and deployment workflow ready for your first post.
+- \*\*Это не первая CMS. \* Если вам нужен реляционный контент, сложные роли и разрешения, или API контента в форме приложения, бесголовная платформа, подобная [Payload](/comparison/lightcms-vs-payload-cms), может выглядеть лучше.
+- **It is not a hosting service.** [LightCMS](https://lightcms.me) manages content; your host (Cloudflare Pages, Vercel, Netlify, GitHub Pages) serves the site. Смотрите [static site hosting compared](/misc/top-static-site-hosting).
+- **Это не тема или генератор сайта.** Оно вводит содержимое в любой статический генератор сайтов, который вы уже запустили.
 
 ---
 
-## Frequently asked questions
+## Кто это для
+
+- \*\*Соло-писатели и блоггеры \*\*, которые хотят владеть своим контентом без использования дополнительной инфраструктуры.
+- **Команды**, где разработчики ведут сайт и не разработчики, пишут и публикуют материалы.
+- **Статические проекты сайтов**, которые переросли в редактировании Markdown в редакторе кода, но всё ещё нуждаются в Git'е.
+
+Если это звучит как вы, вы можете [скопировать стартовый шаблон](/blog/start-with-a-lightcms-template/), чтобы получить репозиторий, сборка настроек, и процесс установки готовый к вашему первому посту.
+
+---
+
+## Часто задаваемые вопросы
 
 ### Is [LightCMS](https://lightcms.me) free?
 
-[LightCMS](https://lightcms.me) is open source under the Apache 2.0 license and designed to be self-hosted. You do not pay per seat, and you can host it wherever you run Node.js.
+[LightCMS](https://lightcms.me) является открытым исходным кодом под лицензией Apache 2.0 и разработан для самостоятельного хостинга. Вы не платите за место и вы можете размещать его везде, где бы вы ни запускали Node.js.
 
-### Does [LightCMS](https://lightcms.me) work with Hugo and Astro?
+### Работает ли [LightCMS](https://lightcms.me) с Hugo и Astro?
 
-Yes. Hugo and Astro read Markdown files with YAML front matter from a repository, which is what [LightCMS](https://lightcms.me) writes. The same applies to Zola, Eleventy, Jekyll, and SvelteKit.
+Да. Hugo и Astro читают файлы Markdown с поддержкой YAML из репозитория, что является записью [LightCMS](https://lightcms.me). То же самое относится и к Золе, Элиту, Джекиллу и Свелтекиту.
 
-### Where does my content live?
+### Где живет мой контент?
 
-In your repository as `.md` files with front matter. There is no separate database and no export step.
+В вашем хранилище как `.md` файлы с передним делом. Нет отдельной базы данных и никаких шагов экспорта.
 
-### Do writers need to know Git?
+### Нужно ли писателям знать Git?
 
-No. Writers use the editor and publish button. Commits, branches, and pull requests happen in the background.
+Нет. Писатели используют редактор и кнопку публикации. Коммиты, ветки и Pull Request'ы происходят в фоновом режиме.
 
-### How is this different from WordPress?
+### Как это отличается от WordPress?
 
-WordPress stores content in MySQL and renders pages with PHP at request time. [LightCMS](https://lightcms.me) writes static files that a CDN can serve. For a deeper comparison, see [static vs dynamic sites](/blog/static-vs-dynamic/) and [WordPress alternatives](/blog/wordpress-alternatives/).
+WordPress хранит содержимое в MySQL и отображает страницы в PHP по запросу времени. [LightCMS](https://lightcms.me) записывает статические файлы, которые может обслуживать CDN. Для более глубокого сравнения, см. [статические и динамические сайты](/blog/static-vs-dynamic/) и [альтернативы WordPress](/blog/wordpress-alternatives/).
