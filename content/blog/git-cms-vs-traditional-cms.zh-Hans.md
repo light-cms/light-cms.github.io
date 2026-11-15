@@ -1,87 +1,87 @@
 ---
-title: "Git-Based CMS vs Traditional CMS: Which Is Right for You?"
-description: How Git based CMS platforms compare with WordPress, Ghost, and Contentful on security, ownership, cost, and workflow, and why static publishing is shifting to Git.
+title: "基于 Git-CMS 与传统CMS：哪个对您来说是正确的？"
+description: 基于 Git 的 CMS 平台与WordPress、Ghost和Content 关于安全性、所有权、成本和工作流程的比较，以及为什么静态发布转移到 Git 的原因。
 serial: 10
 date: 2026-10-14T12:30:00Z
 draft: false
 keywords:
-  - git based cms
+  - 基于 git 的 cms
   - git cms
-  - headless cms vs git cms
-  - traditional cms vs static cms
-  - cms without database
+  - 无头cms vs git cms
+  - 传统cms对静态cms
+  - 没有数据库的 cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
+    - 厘米
     - git
-    - architecture
+    - 结构
     - jamstack
 ---
 
-A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
+传统的 CMS (WordPress, Drupal, Ghost) 将内容存储在数据库中，并在服务器上打开页面。一个基于 **Git 的 CMS** (也称为基于文件的 CMS) 将内容存储为 Markdown 文件，而前事项在 Git 仓库中， 和您的静态站点生成器在构建时间将这些文件变成页面。结构上的差别很小；实际后果并非如此。
 
 ---
 
-## How a Git based CMS Works
+## 基于 Git 的 CMS 如何工作
 
-1. An author writes in a visual editor in the browser.
-2. The CMS commits the finished article as a Markdown file with YAML front matter to your GitHub repository.
-3. Your CI/CD pipeline (GitHub Actions, Cloudflare Pages, Vercel) rebuilds the site.
-4. The updated static site deploys globally within minutes.
+1. 作者在浏览器的视觉编辑器中写入。
+2. CMS将已完成的文章作为带有YAML前缀的Markdown文件提交到您的 GitHub 仓库。
+3. 您的 CI/CD 管道(GitHub Actions, Cloudflare Pages, Vercel) 重建了网站。
+4. 更新的静态站点在几分钟内在全球部署。
 
-The repository is the single source of truth: every edit is a commit, every revision is inspectables, and rollback is a Git operation.
+仓库是唯一的真理源：每次编辑都是一个提交，每次修改都是可检查的，回退是一个 Git 操作。
 
-## Security
+## 安全
 
-This is the biggest practical difference. A traditional CMS exposes a database, an admin login, and a plugin runtime to the public internet: the attack surface behind most website compromises.
+这是最大的实际差别。传统的 CMS 将数据库、管理员登录和插件运行时间公开网络：大多数网站失事后的攻击表面。
 
-A Git based architecture exposes nothing at runtime. There is no production database, no login panel, no PHP. Content lives in Git; the deployed site is plain files on a CDN.
+基于 Git 的架构在运行时没有显示任何信息。没有生产数据库，没有登录面板，没有PHP。内容生活在Git中；部署的站点是CDN上的普通文件。
 
-## Ownership and Portability
+## 所有权和可移植性
 
-With a traditional hosted CMS, your content lives in someone else's database, and exporting it is a project of its own. With a Git based CMS, your content is a folder of Markdown files in your own repository. You can switch generators, hosts, or editors without a migration.
+使用传统托管的 CMS，您的内容生活在别人的数据库中，导出它是一个自己的项目。使用基于 Git 的 CMS，您的内容是您自己的仓库中Markdown 文件的文件夹。您可以在没有迁移的情况下切换生成器、主机或编辑器。
 
-## Cost
+## 费用
 
-Traditional CMS hosting requires servers, databases, and often premium plugins. Static sites served from Git deploys fit comfortably in free hosting tiers, and the CMS itself can be open source. [LightCMS](https://lightcms.me) is licensed under Apache 2.0, so the core is free forever.
+传统的 CMS 托管需要服务器、数据库和常常高级插件。来自Git部署的静态站点适合免费托管层，CMS本身可以是开放源。 [LightCMS](https://lightcms.me在 Apache 2.0 下授权，因此核心永远是免费的。
 
-## The Editing Experience Objection
+## 编辑经验异议
 
-The historical weakness of "just edit the Markdown files" was the editing experience, and it is a fair objection. Pulling branches at midnight is not writing.
+“只编辑Markdown 文件”的历史弱点是编辑经验，这是一个公平的反对意见。午夜收拾分支不是写作。
 
-A Git based CMS with a proper visual editor resolves it: writers get drag-and-drop formatting, image uploads, and front matter forms, while Git receives clean, reviewable Markdown underneath. TipTap-based editors like the one in [LightCMS](https://lightcms.me) even handle math, code highlighting, and task lists while preserving semantic Markdown.
-
----
-
-## When a Traditional CMS Still Makes Sense
-
-- You need non-technical editors working entirely inside a database-driven admin with no Git concept at all
-- Your site is a heavy application (membership portals, e-commerce) rather than a publication
-- Instant, per-character database edits matter more than reviewability
-
-For blogs, documentation, marketing sites, and publications, the Git based model now wins on security, cost, and ownership.
-
-- [Why LightCMS exists](/blog/why-this/) covers the philosophy in depth.
-- [Getting started](/getting-started/) shows the full workflow.
-- [Git based CMS options compared](/comparison/top-git-cms/) surveys the platforms in this space.
+基于 Git 的 CMS 的视觉编辑器解决了它：作者获得拖放格式化， 图像上传和前体表单，Git则接收干净、可检索的Markdown 基于 Tapp 的编辑器，如 [LightCMS](https://lightcms.me中的编辑器，在保留语义标记的同时甚至处理数学、代码高亮和任务列表。
 
 ---
 
-## Frequently Asked Questions
+## 当传统的 CMS 仍在制造Sense
 
-### What is a Git based CMS?
+- 您需要非技术性编辑器完全在数据库驱动的管理器中工作，没有Git概念。
+- 您的网站是一个繁重的应用程序(会员门户，电子商务)，而不是一个出版物
+- 快速、单个字符数据库编辑事项多于审查权限
 
-A CMS that stores your content as files (usually Markdown with YAML front matter) in a Git repository instead of in a database, and publishes by committing to that repository.
+对于博客、文件、销售场地和出版物，基于Git的模型现在在安全、成本和所有权方面取得了胜利。
 
-### Is WordPress a Git based CMS?
+- [为什么LightCMS存在](/blog/why-this/) 包含深度的哲学。
+- [正在开始](/getting-started/) 显示完整的工作流。
+- [基于 Git 的 CMS 选项比较](/comparison/top-git-cms/) 调查此空间中的平台。
 
-No. WordPress stores content in MySQL or MariaDB. Plugins can sync WordPress with Git, but the core architecture is database-driven.
+---
 
-### Do I need to know Git to use a Git based CMS?
+## 常见问题
 
-No. The whole point of a visual Git based editor is that authors never touch the command line; the CMS handles commits, branches, and pull requests for them.
+### 基于 Git 的 CMS 是什么？
 
-### Is a Git based CMS good for SEO?
+在 Git 仓库中而不是数据库中存储您的内容的 CMS (通常使用 YAML 前缀的 Markdown 文件) 并通过对该仓库的承诺来发布。
 
-Yes. Git based sites are usually static, which produces fast load times, clean semantic HTML, and strong Core Web Vitals, all direct ranking factors.
+### WordPress 是基于 Git 的 CMS 吗？
+
+否。 WordPress 在 MySQL 或 MariaDB 中存储内容。插件可以与 Git 同步 WordPress ，但核心架构是数据库驱动的。
+
+### 我是否需要知道Git才能使用基于 Git 的 CMS？
+
+否。基于 Git 的视图编辑器的整个点是，作者永远不触及命令行； CMS处理提交、分支并为它们拉取请求。
+
+### 基于 Git 的 CMS 是否适合SEO？
+
+是。基于 Git 的网站通常是静态的，它会产生快速负载时间、清理语义学HTML以及强大的Core Web Vitals, 所有直接排序因素。
