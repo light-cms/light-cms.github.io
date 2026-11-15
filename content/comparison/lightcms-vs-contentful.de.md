@@ -58,7 +58,7 @@ Es ist auch eine kostenpflichtige Plattform mit einer beträchtlichen Rechnung, 
 - **Preis.** Keine Sitze, keine Planebene, keine Benutzungsklippe wenn ein Beitrag vibriert wird.
 - **Eigentum.** Inhalt in deinem eigenen Projektarchiv ist keine Mieterbeziehung; siehe [Inhalt als Code](/blog/content-as-code/).
 - **Statische Ausgabe.** Keine API-Rundreise in der Seitenlade; der [Performance- und SEO-Fall](/blog/static-vs-dynamic/) ist strukturell.
-- \*\*Das Schreiberlebnis. \* Ein vollständiger Editor mit [AI assistance](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/) und [Newsletter versand](/blog/newsletter-email-automation/) statt einem Feldfüllineninhalt.
+- \* Ein vollständiger Editor mit [AI assistance](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/) und [Newsletter versand](/blog/newsletter-email-automation/) statt einem Feldfüllineninhalt.
 - **Keine Migrationsklippe.** Du bist nie vier Jahre in ein Content-Modell, das ein Vermögen kostet, zu exportieren.
 
 ---
