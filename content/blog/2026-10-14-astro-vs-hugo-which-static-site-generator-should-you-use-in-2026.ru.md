@@ -1,85 +1,85 @@
 ---
-title: "Astro vs Hugo: Which Static Site Generator Should You Use in 2026?"
-description: Astro and Hugo compared on performance, content collections, templating languages, build speed, and authoring experience, with a recommendation for each use case.
+title: "Astro vs Hugo: какой генератор статических сайтов должен быть использован в 2026 году?"
+description: Astro и Hugo сравниваются с производительностью, коллекциями контента, шаблонированием языков, скоростью сборки и авторским опытом, с рекомендацией для каждого варианта использования.
 date: 2026-10-14T12:10:00Z
 draft: false
 keywords:
-  - astro vs hugo
-  - hugo vs astro
-  - best static site generator
-  - astro or hugo for blog
-  - static site generator comparison
+  - астро против хуго
+  - хуго против астро
+  - лучший статический генератор сайтов
+  - astro или hugo для блога
+  - сравнение статического генератора сайта
 preview: /og-image.webp
 taxonomies:
   tags:
-    - astro
-    - hugo
-    - static
-    - sites
+    - астро
+    - хуго
+    - статический
+    - сайты
     - ssg
 ---
-[Astro](https://astro.build) and [Hugo](https://gohugo.io) are two of the most popular static site generators in 2026. The search "Astro vs Hugo" hides a simple truth: **both ship fast static sites; they differ in who feels at home**. Hugo rewards Go templates and raw build speed; Astro rewards component-driven development with React, Svelte, Vue, or plain HTML.
+[Astro](https://astro.build) и [Hugo](https://gohugo.io) являются двумя из самых популярных статических генераторов сайтов 2026. Поиск "Astro vs Hugo" скрывает простую правду: **оба корабля быстро статичные сайты; они отличаются от тех, кто чувствует себя как дома**. Шаблоны Hugo награды Go и скорость строительства; Разработка, управляемая компонентом Astro с помощью React, Svelte, Vue или простого HTML.
 
 ---
 
-## Speed and Build Times
+## Скорость и время строительства
 
-**Hugo** builds large sites in well under a second. Written in Go, it processes thousands of content files almost instantaneously.
+**Hugo** строит большие сайты за считанные секунды. Созданный в Go, он обрабатывает тысячи файлов практически мгновенно.
 
-**Astro** builds are fast too: content-heavy pages ship zero JavaScript by default. But a large Astro project takes noticeably longer to build than an equivalent Hugo site. For blogs and marketing sites, both fit comfortably in CI/CD budgets.
+**Astro** сборки тоже быстрые: по умолчанию жесткие страницы содержат контент и JavaScript. Но большой проект Astro занимает значительно больше времени, чем аналогичный Hugo сайт. Для блогов и маркетинговых сайтов оба удобно подходят в бюджеты CI/CD.
 
-**Verdict**: Hugo wins on raw build speed. Astro wins on the shipped payload, since its defaults produce lean, component-driven pages.
+**Вердик**: Хьюго выиграл на скорости сырой сборки. Astro выигрывает на отгруженной нагрузке, так как по умолчанию производится накладная, управляемая компонентом.
 
-## Templating and Developer Experience
+## Шаблоны и Опыт разработчика
 
-**Hugo** uses Go template syntax with its own shortcode system. It is powerful, but the learning curve is real: custom taxonomies, partials, and cascade configuration take time to internalize.
+**Hugo** использует синтаксис Go с собственной системой шорткода. Это мощный, но кривая обучения реально: пользовательские таксономии, частицы и каскад конфигурация занимает время для интернационализации.
 
-**Astro** uses `.astro` components, a JSX-like syntax familiar to anyone from the React, Svelte, or Vue world, plus full support for `.md` and `.mdx` content with type-safe content collections and schema validation for front matter.
+**Astro** использует `.astro` компоненты, синтаксис похожий на JSX, знакомый любому из React, Svelte или Vue world, плюс полная поддержка `. Содержание d` и `.mdx` с тип-безопасными коллекциями контента и схемами проверки на переднюю часть.
 
-**Verdict**: If you already live in the JavaScript ecosystem, Astro feels like home. If you prefer a config-driven, single-binary toolchain, Hugo is refreshingly simple to run.
+**Verdict**: Если вы уже живете в экосистеме JavaScript, Astro чувствует себя как дома. Если вы предпочитаете использовать config-driven, single-binary toolchain, Hugo прост в запуске.
 
-## Content Collections and Front Matter
+## Коллекции контента и передняя тематика
 
-Both generators are built around Markdown files with YAML front matter, which means both work identically with any Git based CMS:
-your content stays in your repository as plain files, and publishing is just a commit.
+Оба генератора создаются вокруг Markdown файлов с помощью передней части YAML, что означает, что оба работают одинаково с любыми CMS:
+ваше содержимое остается в вашем хранилище как обычные файлы, и публикация является лишь фиксацией.
 
-Astro adds content collection schemas that validate front matter at build time. That's a real advantage for teams:
-a malformed `date` or missing `title` fails the build instead of silently rendering a broken page.
+Astro добавляет схемы сбора контента, которые проверяют передний элемент во время сборки. Это реальное преимущество для команд:
+неправильно сформированная `date` или пропущенная `title` сборка неудачна вместо того, чтобы вывести сломанную страницу.
 
-## Themes and Ecosystem
+## Темы и экосистемы
 
-- **Hugo** has the larger theme marketplace, with hundreds of production-ready themes.
-- **Astro** has a rapidly growing theme and integration ecosystem, plus first-class islands architecture when you eventually need interactivity.
-
----
-
-## Which Should You Choose?
-
-- Choose **Hugo** if you want the fastest possible builds, prefer Go templates, or run a large documentation or publication site with thousands of pages.
-- Choose **Astro** if you want component driven development, type safe content collections, and the option to sprinkle in React or Svelte components where needed.
-
-Either way, your content remains portable Markdown, which means the CMS layer is a separate, swappable decision:
-
-- [Static sites vs dynamic sites](/blog/static-vs-dynamic/) covers why the static architecture is worth choosing in the first place.
-- [Getting started with LightCMS](/getting-started/) shows how visual editing maps onto Markdown in either generator.
-- [Configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/) includes deployment workflows for both Astro and Hugo.
+- **Hugo** имеет большой тематический рынок с сотнями готовых к производству тем.
+- **Astro** имеет быстро растущую тематику и интеграционную экосистему, а также первоклассную архитектуру островов, когда в конечном итоге вам понадобится интерактивность.
 
 ---
 
-## Frequently Asked Questions
+## Что Вы выбираете?
 
-### Is Hugo faster than Astro?
+- Выберите **Hugo**, если вы хотите наиболее быстрые сборки, предпочитаете Го-шаблоны, или запустите большой сайт документации или публикации с тысячами страниц.
+- Выберите **Astro**, если хотите, чтобы разрабатывался компонент, тип безопасных коллекций контента, и опцию посыпаться в компонентах React или Svelte, где это необходимо.
 
-Yes, at build time. Hugo is written in Go and builds large sites in fractions of a second. Both produce equally fast static pages for visitors.
+В любом случае ваше содержимое остается переносимым Markdown, что означает, что слой CMS является отдельным, изменяемым решением:
 
-### Can Astro use the same content as Hugo?
+- [Статические сайты и динамические сайты](/blog/static-vs-dynamic/) определяют, почему статическая архитектура стоит выбрать в первую очередь.
+- [Начало работы с LightCMS](/getting-started/) показывает, как визуальное редактирование карт на Markdown в обоих генераторах.
+- [Настройка репозитория и CI/CD](/blog/configuring-your-repository-cicd/) включает в себя процессы установки как для Astro, так и для Hugo.
 
-Yes. Both read Markdown files with YAML front matter, so the same content directory can often be reused, though front matter conventions may differ slightly.
+---
 
-### Which is better for blogs in 2026?
+## Часто задаваемые вопросы
 
-Astro is the more common recommendation for new blogs thanks to its content collections and component model, but Hugo remains excellent for very large publications.
+### Чем быстрее Hugo Astro?
 
-### Do both work with a Git based CMS?
+Да, во время строительства. Хьюго написано в Го и строит большие сайты в дроби секунды. Оба продукта создают одинаково быструю статическую страницу для посетителей.
 
-Yes. Because both consume plain Markdown files from your repository, a Git based CMS can commit directly to either project's content directory and trigger the normal build.
+### Можно ли Astro использовать тот же контент, что и Hugo?
+
+Да. Оба читают Markdown файлы с передним значением YAML, так что один и тот же каталог содержимого часто может быть использован повторно, хотя передние страницы могут несколько отличаться.
+
+### Что лучше для блогов в 2026 году?
+
+Astro является более общей рекомендацией для новых блогов благодаря своим коллекциям контента и модели компонентов, но Hugo остается отличным для очень больших публикаций.
+
+### Работает ли оба с Git основанными на CMS?
+
+Да. Поскольку оба потребляют обычные Markdown файлы из вашего репозитория, , основанный на Git CMS может напрямую зафиксировать либо в директорию содержания, либо вызвать обычную сборку.
