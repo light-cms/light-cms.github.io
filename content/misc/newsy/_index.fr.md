@@ -1,5 +1,5 @@
 +++
-title = "Newsy"
-description = "Long form guides on Newsy the github based newsletter platform."
+title = "Infos"
+description = "Guides de formulaire long sur Newsy la plate-forme de newsletter basée sur github."
 sort_by = "date"
 +++
