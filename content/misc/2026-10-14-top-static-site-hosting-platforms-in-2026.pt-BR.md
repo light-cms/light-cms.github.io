@@ -1,7 +1,7 @@
 ---
-title: Top Static Site Hosting Platforms in 2026
+title: Plataformas de Hospedagem do Site Estático em 2026
 description: >-
-  A practical comparison of the best static site hosting providers in 2026 GitHub Pages, Cloudflare Pages, Wasmer, Vercel, Netlify, and Deno Deploy.
+  Uma comparação prática dos melhores provedores de hospedagem de site estático em 2026 GitHub Pages, Cloudflare Pages, Wasmer, Vercel, Netly e Deno Deploy.
 date: '2026-10-14T10:00:00.000Z'
 draft: false
 weight: 1
@@ -9,245 +9,245 @@ serial: 6
 isCJKLanguage: true
 headless: true
 keywords:
-  - static site hosting
-  - best free hosting
-  - cloudflare pages
+  - hospedagem de site estático
+  - melhor hospedagem gratuita
+  - páginas cloudFlare
   - github pages
-  - wasmer edge
-  - vercel
+  - aresta de lixo
+  - Transportadora
   - netlify
 preview: /og-image.webp
 tags:
-  - static site
-  - hosting
-  - static hosting
-  - lightcms
-  - cloudflare pages
-  - vercel
+  - site estático
+  - hospedagem
+  - hospedagem estática
+  - luzes
+  - páginas cloudFlare
+  - Transportadora
   - netlify
-  - opensource
+  - código-aberto
   - blog
-  - documentation
+  - documentação
 slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
-## Introduction
+## Introdução
 
-Publish your static site quickly and securely. Whether you use Astro, Hugo, SvelteKit, Jekyll, or Next.js, modern hosting platforms offer global CDN delivery, automatic SSL, Git-based deployment, and little or no server management.
+Publique seu site estático rapidamente e com segurança. Seja você usar Astro, Hugo, SvelteKit, Jekyll ou Next. s, plataformas modernas de hospedagem oferecem distribuição global de CDN, SSL automática, implantação baseada em repositório e gerenciamento de servidor pouco ou nenhum.
 
-This guide compares the best static site hosting providers for 2026 based on speed, developer experience, bandwidth allowances, custom domain support, and pricing.
-
----
-
-## Quick Comparison Matrix
-
-| Provider             | Free Bandwidth   | Custom Domains &amp; SSL | Git CI/CD Builds        | Edge Network         | Best For                              |
-| :------------------- | :--------------- | :----------------------- | :---------------------- | :------------------- | :------------------------------------ |
-| **Cloudflare Pages** | Unlimited        | Unlimited free SSL       | 500 builds/mo           | 330+ cities          | High-traffic static sites             |
-| **GitHub Pages**     | 100 GB/mo (soft) | Yes, free Let's Encrypt  | via GitHub Actions      | Global CDN           | Open-source and personal projects     |
-| **Wasmer Edge**      | Generous tier    | Free SSL certs           | CLI and Git hooks       | Decentralized edge   | WebAssembly and static hybrid sites   |
-| **Vercel**           | 100 GB/mo        | Instant wildcard SSL     | 6,000 build mins        | Global Anycast       | Next.js and SvelteKit projects        |
-| **Netlify**          | 100 GB/mo        | 1-click Let's Encrypt    | 300 build mins          | High performance CDN | Jamstack sites with built-in features |
-| **Deno Deploy**      | See current docs | Yes                      | GitHub app              | Global               | V8 edge scripts and assets            |
-| **Surge.sh**         | Unlimited        | Free SSL                 | Manual deployment       | Global CDN           | Simple static sites                   |
-| **Neocities**        | Free (gratis)    | Free SSL                 | No automatic deployment | No CDN               | Experimental and artistic sites       |
-| **Bitbucket Pages**  | Unlimited pages  | Free                     | Bitbucket Pipelines     | Global CDN           | Bitbucket-hosted projects             |
-| **GitLab Pages**     | Unlimited        | Free Let's Encrypt       | GitLab CI/CD            | GitLab CDN           | GitLab-hosted projects                |
-| **Codeberg Pages**   | Unlimited        | Free Let's Encrypt       | Codeberg CI/CD          | Static host .eu      | Codeberg-hosted projects              |
+Este guia compara os melhores provedores de hospedagem de site estáticos para 2026 com base na velocidade, experiência do desenvolvedor, licenças de largura de banda, suporte de domínio personalizado e preços.
 
 ---
 
-## Detailed Platform Reviews
+## Matriz de Comparação Rápida
+
+| Fornecedor                | Banda Grátis          | Domínios personalizados &amp; SSL | Builds CI/CD Git           | Rede da borda         | Melhor para                               |
+| :------------------------ | :-------------------- | :-------------------------------- | :------------------------- | :-------------------- | :---------------------------------------- |
+| **Páginas do Cloudflare** | Ilimitado             | SSL gratuito ilimitado            | 500 construções/mês        | 330+ cidades          | Sites estáticos de alto tráfego           |
+| **GitHub Pages**          | 100 GB/mês (soft)     | Sim, Let's Encrypt gratuito       | via GitHub Actions         | CDN Global            | Projetos de código aberto e pessoal       |
+| **Borda do Martelo**      | Rank generoso         | Certificados SSL grátis           | CLI e hooks do Git         | Borda descentralizada | WebAssembly e sítios híbridos estáticos   |
+| **Vermelha**              | 100 GB/mês            | SSL curinga instantâneo           | 6.000 mins de construção   | Anycast global        | Next.js e projetos SvelteKit              |
+| **Netlify**               | 100 GB/mês            | 1 clique Let's Encrypt            | 300 mins de compilação     | Alto desempenho CDN   | Sites do Jamstack com recursos integrados |
+| **Deno Deploy**           | Ver documentos atuais | sim                               | GitHub app                 | Global                | V8 scripts e ativos de ponta              |
+| **Surge.sh**              | Ilimitado             | SSL grátis                        | Implementação manual       | CDN Global            | Sites estáticos simples                   |
+| **Neociosos**             | Free (gratis)         | SSL grátis                        | Sem implantação automática | Sem CDN               | Sites experimentais e artísticos          |
+| **Páginas do Bitbucket**  | Páginas ilimitadas    | Gratuito                          | Pipelines de Bitbucket     | CDN Global            | Projetos hospedados em Bitbucket          |
+| \*\*Páginas GitLab \*\*   | Ilimitado             | Let's Encrypt grátis              | GitLab CI/CD               | GitLab CDN            | Projetos hospedados no GitLab-Lab         |
+| **Páginas de Codeberg**   | Ilimitado             | Let's Encrypt grátis              | Codeberg CI/CD             | Host estático .eu     | Projetos hospedados no Codeberg           |
+
+---
+
+## Análises de Plataforma Detalhadas
 
 ### 1. GitHub Pages
 
-GitHub Pages is a good default for personal portfolios, project documentation, and small sites that already live in a GitHub repository.
+O GitHub Pages é um bom padrão para portfólios pessoais, documentação de projetos e pequenos sites que já residem em um repositório GitHub.
 
-#### Key features
+#### Principais recursos
 
-- **Direct repository serving**: Deploy from your main branch, a `/docs` folder, or GitHub Actions workflows.
-- **Automatic SSL**: Map a custom domain with automatic Let's Encrypt certificate management.
-- **Simple setup**: No separate hosting account is required if the project is already on GitHub.
-- **Jekyll support**: Built-in support for Jekyll-based sites.
+- **Serviço direto de repositório**: Faça deploy do seu ramo principal, uma pasta `/docs` ou fluxos de trabalho do GitHub Action.
+- **SSL automático**: Mapeia um domínio personalizado com gerenciamento automático de certificados de Let's Encrypt.
+- **Configuração simples**: nenhuma conta de hospedagem separada é necessária se o projeto já está no GitHub.
+- **Suporte para Jekyl**: Suporte integrado para sites baseados em Jekyll.
 
 #### Pros
 
-- Free for public repositories and simple project sites.
-- Works well with GitHub repositories, releases, and workflows.
-- A familiar choice for documentation and open-source projects.
+- Gratuito para repositórios públicos e sites de projetos simples.
+- Funciona bem com repositórios, lançamentos e fluxos de trabalho do GitHub.
+- Uma escolha familiar para a documentação e projetos de código aberto.
 
-#### Cons
+#### Contras
 
-- 1 GB repository size limit.
-- 100 GB/month soft bandwidth limit.
-- Cache invalidation can be slower than some edge-focused platforms.
-- Limited to static content.
+- Limite de tamanho de repositório de 1 GB.
+- 100 GB/mês limite de largura de banda macia.
+- A invalidação em cache pode ser mais lenta do que algumas plataformas focadas em arestas.
+- Limitado ao conteúdo estático.
 
-#### Best for
+#### Melhor para
 
-Open-source documentation, personal portfolios, personal blogs, and projects already built and managed on GitHub.
+Documentação de código aberto, portfólios pessoais, blogs pessoais e projetos já construídos e gerenciados no GitHub.
 
 ---
 
-### 2. Cloudflare Pages
+### 2. Páginas do Cloudflare
 
-Cloudflare Pages serves static sites from Cloudflare's global edge network and offers unlimited bandwidth on the free tier.
+Cloudflare Pages serve sites estáticos da rede global de bordas do CloudFlare e oferece largura de banda ilimitada no nível gratuito.
 
-#### Key features
+#### Principais recursos
 
-- **Unlimited bandwidth**: No bandwidth cap on static asset requests for Pages sites.
-- **Fast delivery**: Content is served from Cloudflare's global network.
-- **Workers integration**: Add dynamic routes, redirects, or form handling with Cloudflare Workers.
-- **Preview deployments**: Generate preview URLs for pull requests and branches.
-- **Security features**: DDoS protection and other Cloudflare platform features are available.
+- **Banda de banda ilimitada**: Não há limite de largura de banda nas solicitações de mídia estática para sites de páginas.
+- **Entrega rápida**: o conteúdo é servido a partir da rede global de Cloudflare.
+- **Integração com os trabalhadores**: Adicione rotas dinâmicas, redirecionamentos ou forme manipulação com os Trabalhadores do Cloudflare.
+- **Pré-visualização de implantações**: Gerar URLs para pré-visualização de pull requests e branches.
+- **Recursos de segurança**: proteção DDoS e outros recursos da plataforma Cloudflare estão disponíveis.
 
 #### Pros
 
-- Strong option for high-traffic static sites.
-- Good performance for globally distributed audiences.
-- Works well with the wider Cloudflare ecosystem.
+- Opção forte para sites estáticos de alto tráfego.
+- Bom desempenho para públicos distribuídos globalmente.
+- Funciona bem com o ecossistema mais amplo da Cloudflare.
 
-#### Cons
+#### Contras
 
-- Build minutes are capped at 500/month on the free plan.
-- Advanced Workers features take time to learn.
+- Build minutos são limitados às 500/mês no plano gratuito.
+- Recursos avançados de trabalhadores levam tempo para aprender.
 
-#### Best for
+#### Melhor para
 
-High-traffic blogs, marketing sites, and static projects that benefit from Cloudflare's edge network.
+blogs de alto tráfego, sites de marketing e projetos estáticos que se beneficiam da rede de borda do Cloudflare.
 
 ---
 
-### 3. Wasmer Edge
+### 3. Borda de Martelo
 
-Wasmer Edge is aimed at developers who want to serve static assets alongside WebAssembly workloads at the edge.
+O Wasmer Edge destina-se a desenvolvedores que desejam servir recursos estáticos ao lado de cargas de trabalho da WebAssembly na periferia.
 
-#### Key features
+#### Principais recursos
 
-- **Static and Wasm serving**: Serve static HTML/CSS alongside compiled WebAssembly modules.
-- **Fast startup**: Designed for lightweight edge execution.
-- **Declarative configuration**: Deploy with a `wasmer.toml` manifest through the CLI or CI/CD.
-- **Portable workloads**: Run the same Wasm modules without container overhead.
+- **Serviço estático e de Wasm**: Serve HTML/CSS estático ao lado de módulos compilados WebAssembly
+- **Inicialização rápida**: concebida para execução de aresta leve.
+- **Configuração declarativa**: Instale um manifesto `wasmer.toml` através do CLI ou CI/CD.
+- **Cargas de trabalho portáteis**: Execute os mesmos módulos de Wasm sem overhead.
 
 #### Pros
 
-- Interesting option for WebAssembly-based applications.
-- Useful when client-side or edge computation is part of the project.
-- Lightweight execution model.
+- Opção interessante para aplicações baseadas em WebAssembly.
+- Útil quando o cálculo do lado do cliente ou da borda faz parte do projeto.
+- Modelo de execução leve.
 
-#### Cons
+#### Contras
 
-- Smaller ecosystem and community than Cloudflare, Vercel, or Netlify.
-- Less documentation and fewer examples for common static-site setups.
-- More specialized than most teams need for a basic static site.
+- Ecossistema e comunidade menores do que Cloudflare, Vercel, ou Netlify.
+- Menos documentação e menos exemplos para configurações comuns de sites estáticos.
+- Mais especializados do que a maioria dos times precisam de um site estático básico.
 
-#### Best for
+#### Melhor para
 
-Developers building interactive applications with client-side WebAssembly components, such as calculators, compilers, image processors, or small apps with Wasm backends.
+Desenvolvedores construindo aplicativos interativos com componentes WebAssembly do lado cliente, tais como calculadoras, compiladores, processadores de imagens ou pequenos aplicativos com backends Wasm.
 
 ---
 
-### 4. Vercel
+### 4. Transportadora
 
-Vercel is known for Git-based deployments, preview URLs, and strong support for modern frontend frameworks.
+Vercel é conhecida por implantações baseadas no Git, visualização de URLs e forte suporte para frameworks modernos na frontend.
 
-#### Key features
+#### Principais recursos
 
-- **Framework support**: Native support for frameworks such as Next.js, SvelteKit, Astro, Nuxt, and Vite.
-- **Preview deployments**: Every branch or pull request can get a live preview.
-- **Edge middleware**: Add routing, A/B testing, or lightweight checks at the edge.
-- **Image optimization**: Built-in image optimization and responsive delivery.
-- **Analytics**: Performance insights and Web Vitals tracking.
+- **Suporte a frame**: suporte nativo para frameworks como Next.js, SvelteKit, Astro, Nux e Vite.
+- **Pré-visualize implantações**: todos os branches ou pull request podem obter uma pré-visualização ao vivo.
+- **Mid middleware**: adicionar roteamento, teste A/B ou verificações leves na borda.
+- **Otimização de imagem**: Otimização de imagem integrada e entrega responsiva.
+- **Análises**: Insights de desempenho e rastreamento de Web Vitals.
 
 #### Pros
 
-- Polished developer experience.
-- Strong Next.js and React support.
-- Useful preview workflow for teams.
-- Good ecosystem of integrations.
+- Experiência de desenvolvedor polida.
+- Forte suporte para Next.js e React.
+- Fluxo de trabalho de visualização útil para equipes.
+- O bom ecossistema de integrações.
 
-#### Cons
+#### Contras
 
-- The hobby tier has commercial-use restrictions.
-- Bandwidth and usage overages can become expensive.
-- The free tier is more restrictive than Cloudflare Pages for simple static hosting.
-- Some Next.js features can increase vendor lock-in.
+- O tier de passatempo tem restrições de uso comercial.
+- A largura de banda e as sobreposições de utilização podem tornar-se caras.
+- O nível gratuito é mais restritivo do que Cloudflare Pages para uma simples hospedagem estática.
+- Alguns recursos do Next.js podem aumentar o bloqueio do fornecedor.
 
-#### Best for
+#### Melhor para
 
-Teams building hybrid applications with Next.js or SvelteKit, and developers who value fast preview-and-deploy feedback.
+Equipes construindo aplicativos híbridos com Next.js ou SvelteKit, e desenvolvedores que valorizam o feedback de pré-visualização e deploy.
 
 ---
 
 ### 5. Netlify
 
-Netlify is a mature option for static sites that need built-in platform features such as forms, identity, and serverless functions.
+O Netlify é uma opção adulta para sites estáticos que precisam de recursos de plataforma integrada, tais como formulários, identidade e funções de não-servidor.
 
-#### Key features
+#### Principais recursos
 
-- **Built-in services**: Netlify Forms, Netlify Identity, and serverless functions.
-- **Split testing**: Route a percentage of visitors to different versions.
-- **Rollbacks**: Revert to previous deployments quickly.
-- **Deploy previews**: Generate preview URLs for pull requests.
-- **Plugins**: Extend builds with plugins for optimization, SEO, and other tasks.
+- **Serviços integrados**: Formas Netlify, Identidade Netlify e funções sem servidor.
+- **Dividir teste**: Rotear uma porcentagem de visitantes para diferentes versões.
+- **Rollbacks**: Reverter rapidamente para implantações anteriores.
+- **Implantar visualizações**: Gerar URLs de pré-visualização para pull requests.
+- **Plugins**: Extenda compilações com plugins para otimização, SEO e outras tarefas.
 
 #### Pros
 
-- Useful built-in features for static sites.
-- Mature serverless and deployment workflow.
-- Atomic deploys help avoid mismatched assets.
+- Recursos internos úteis para sites estáticos.
+- Servidor madura e fluxo de trabalho de deploy.
+- Os deploys atômicos ajudam a evitar os ativos incompatíveis.
 
-#### Cons
+#### Contras
 
-- 100 GB/month bandwidth limit on the starter tier.
-- 300 build minutes on the free plan.
-- Team pricing can add up for larger groups.
-- Less generous than Cloudflare Pages for simple high-traffic static hosting.
+- 100 GB/mês limite de banda no nível inicial.
+- 300 minutos no plano gratuito.
+- A precificação da equipe pode ser somada para grupos maiores.
+- Menos generoso que o Cloudflare Pages para hospedagem estática simples de alto tráfego.
 
-#### Best for
+#### Melhor para
 
-Static sites that need forms, authentication, split testing, or a single platform for common backend-adjacent features.
+Sites estáticos que precisam de formulários, autenticação, divisão de testes ou uma única plataforma para recursos comuns de back-end adjacentes
 
 ---
 
 ### 6. Deno Deploy
 
-Deno Deploy runs JavaScript, TypeScript, and static assets at the edge. Deno Deploy Classic was shut down on July 20, 2026, so verify current pricing, limits, and documentation for the current platform.
+Deno Deploy executa JavaScript, TypeScript e assets estáticos na periferia. Deno Deploy clássico foi desligado em 20 de julho de 2026, então verifique os preços, limites e documentação atuais da plataforma.
 
-#### Key features
+#### Principais recursos
 
-- **Native TypeScript**: Run TypeScript without a separate build step in many cases.
-- **Modern web standards**: Built around APIs such as Fetch, Web Streams, and WebSockets.
-- **Deno KV**: Key-value storage available from edge code.
-- **Simple deployment**: Deploy with the Deno CLI or GitHub integration.
+- **TypeScript nativo**: Executar TypeScript sem um passo separado de compilação em muitos casos.
+- **Padrões modernos**: construídos em torno de APIs como Fetch, Web Streams e WebSockets.
+- **Deno KV**: Armazenamento de valor fundamental disponível no código de aresta.
+- **Implementação simples**: implantar com a integração de Deno CLI ou GitHub.
 
 #### Pros
 
-- Clean JavaScript and TypeScript developer experience.
-- Modern web-standard APIs.
-- Useful for edge-native applications that also serve static assets.
+- Experiência de desenvolvedor de JavaScript e TypeScript.
+- API moderna de padrão web.
+- Útil para aplicativos de arestas nativos que também servem ativos estáticos.
 
-#### Cons
+#### Contras
 
-- More developer-focused than GUI-heavy hosting platforms.
-- The 2026 platform changes may make older tutorials outdated.
-- Smaller ecosystem than Node.js-based platforms.
-- Documentation can be thinner for some use cases.
+- Mais focado em desenvolvedor do que as plataformas de hospedagem para GUI.
+- As alterações na plataforma de 2026 podem tornar os tutoriais mais antigos desatualizados.
+- Ecossistema menor do que as plataformas baseadas em Node.js.
+- Documentação pode ser mais fina para alguns casos de uso.
 
-#### Best for
+#### Melhor para
 
-TypeScript developers building edge-native applications who prefer modern web standards and minimal build tooling.
+Desenvolvedores TypeScript construindo aplicativos de borda nativos que preferem padrões modernos da web e ferramentas mínimas de compilação.
 
 ---
 
-## Conclusion
+## Conclusão
 
-Each platform fits a different kind of project:
+Cada plataforma se encaixa em um tipo diferente de projeto:
 
-- **Choose GitHub Pages** for open-source projects, documentation, and personal sites already on GitHub.
-- **Choose Cloudflare Pages** for static sites that need fast global delivery and generous bandwidth.
-- **Choose Wasmer Edge** for projects that combine static assets with WebAssembly.
-- **Choose Vercel** for Next.js or SvelteKit projects that benefit from a strong preview workflow.
-- **Choose Netlify** for static sites that need built-in forms, identity, or serverless functions.
-- **Choose Deno Deploy** for TypeScript-first edge applications.
+- **Escolha GitHub Pages** para projetos de código aberto, documentação e sites pessoais já no GitHub.
+- **Escolha páginas do Cloudflare** para sites estáticos que precisam de uma entrega global rápida e uma banda larga generosa.
+- **Escolha o Wasmer Edge** para projetos que combinam ativos estáticos com WebAssembly.
+- **Escolha Vercel** para projetos Next.js ou SvelteKit que se beneficiam de um fluxo de trabalho de pré-visualização forte.
+- **Escolha Netlify** para sites estáticos que precisam de formulários embutidos, identidade ou funções sem servidor.
+- **Escolha Deno Deploy** para aplicativos TypeScript-first edit.
 
-Before choosing, check your traffic expectations, framework, backend needs, and budget. Most platforms have free tiers, so you can test a deployment before committing.
+Antes de escolher, verifique suas expectativas de tráfego, framework, necessidades de backend e orçamento. A maioria das plataformas tem níveis livres, então você pode testar uma implantação antes de se comprometer.
