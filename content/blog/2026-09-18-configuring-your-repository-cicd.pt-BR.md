@@ -1,103 +1,103 @@
 ---
-title: Configuring Your Repository & CI/CD
-description: Connect a static site repository (Hugo, Astro, Jekyll, SvelteKit) to LightCMS and automate deployments with CI/CD.
+title: Configurando seu repositório e CI/CD
+description: Conecte um site estático (Hugo, Astro, Jekyll, SvelteKit) ao LightCMS e automatize deploys com CI/CD.
 serial: 3
 date: 2026-09-18T01:42:00Z
 draft: false
 keywords:
-  - repository configuration
-  - github actions
-  - static site generator
-  - astro
+  - configuração do repositório
+  - ações do github
+  - gerador de site estático
+  - Astro
   - hugo
 preview: /og-image.png
 taxonomies:
   tags:
-    - configuration
+    - Configuração
     - github
-    - cicd
-    - lightcms
+    - cifra
+    - luzes
 ---
 
-Connecting your static site to [LightCMS](https://lightcms.me) requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
+Conectar seu site estático a [LightCMS](https://lightcms.me) requer apenas dois ingredientes: um repositório do GitHub contendo seus arquivos de conteúdo e um fluxo de trabalho automatizado CI/CD que constrói e implementa seu site sempre que houver alterações no sistema.
 
-Follow this guide to structure your repository, install the [LightCMS](https://lightcms.me) GitHub App, and set up automated deployments.
+Siga este guia para estruturar o repositório, instalar o aplicativo [LightCMS](https://lightcms.me) GitHub App, e configurar implantações automatizadas.
 
 ---
 
-## 1. Structure Your Content Repository
+## 1. Estrutura seu repositório de conteúdo
 
-[LightCMS](https://lightcms.me) works natively with any static site generator (SSG) that stores content as Markdown (`.md` or `.mdx`) files with YAML front matter.
+[LightCMS](https://lightcms.me) funciona nativamente com qualquer gerador de site estático (SSG) que armazena conteúdos como arquivos Markdown (`.md` ou `.mdx`) com o assunto frontal YAML.
 
-A typical repository layout looks like this:
+Um layout típico do repositório se parece com isto:
 
 ```text
-my-blog-repo/
-├── content/               # or src/content/blog/ in Astro
-│   ├── hello-world.md
-│   └── my-second-post.md
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # Automated build & deploy pipeline
-├── package.json
-└── astro.config.mjs       # or config.toml for Hugo
+meu-blog-repo/
+── content/ # ou src/content/blog/ no Astro
+── hello-world. d
+── meu-para-pena-post.md
+─ . ithub/
+── fluxos de trabalho/
+├── implantação. ml # Construção automatizada e pipeline de deploy
+pacote de ─tive. son
+── astro.config.mjs # ou config.toml para Hugo
 ```
 
-### Standard Front Matter Header
+### Cabeçalho Padrão de Elementos Frontais
 
-[LightCMS](https://lightcms.me) reads and writes YAML front matter metadata at the top of your Markdown files. A standard header includes:
+[LightCMS](https://lightcms.me) lê e grava os metadados da frente YAML na parte superior dos seus arquivos Markdown. Um cabeçalho padrão inclui:
 
 ```markdown
 ---
-title: My First Article
-description: A short overview of the article for SEO and cards.
-date: 2026-10-14T10:00:00Z
-draft: false
+título: Descrição do meu primeiro artigo
+: uma breve visão geral do artigo para SEO e cartões.
+data: 2026-10-14T10:00:00Z
+rascunho: false
 tags:
-  - technology
-  - blogging
+  - tecnologia
+  - blogando
 ---
 
-Your article content begins here...
+O conteúdo do seu artigo começa aqui...
 ```
 
 ---
 
-## 2. Install the [LightCMS](https://lightcms.me) GitHub App
+## 2. Instalar o aplicativo do GitHub [LightCMS](https://lightcms.me
 
-To allow [LightCMS](https://lightcms.me) to read your files and commit newly written articles:
+Para permitir que [LightCMS](https://lightcms.me) leia seus arquivos e commit artigos recém escritos:
 
-1. Sign in to your [LightCMS](https://lightcms.me) instance using your GitHub account.
-2. Navigate to your dashboard and click **Connect Repository** (or **Install GitHub App**).
-3. GitHub will prompt you to select which account or organization to install the app on.
-4. You can grant access to **All repositories** or select **Only select repositories** to limit access strictly to your blog repo.
-5. Once authorized, your repository will appear in your [LightCMS](https://lightcms.me) dashboard.
+1. Entre na sua instância [LightCMS](https://lightcms.me) usando sua conta do GitHub.
+2. Navegue até o seu painel de controle e clique em **Conectar Repositório** (ou **Instalar aplicativo GitHub**).
+3. O GitHub pedirá para você selecionar em qual conta ou organização instalar o aplicativo.
+4. Você pode conceder acesso a **Todos os repositórios** ou selecionar **Somente repositórios selecionados** para limitar o acesso estritamente ao repositório do seu blog.
+5. Uma vez autorizado, seu repositório aparecerá no painel [LightCMS](https://lightcms.me).
 
 ---
 
-## 3. Configure Automated CI/CD Deployments
+## 3. Configurar implantações de CI/CD automatizadas
 
-Every time you hit **Publish** or **Save** in [LightCMS](https://lightcms.me), the app commits the content as Markdown file directly to your Git repository. To turn those commits into live website updates, configure a GitHub Actions workflow.
+Toda vez que você clicar em **Publicar** ou **Salvar** no [LightCMS](https://lightcms.me), o aplicativo compromete o conteúdo como arquivo Markdown diretamente no seu repositório Git. Para transformar esses commits em atualizações ao vivo do site, configure um fluxo de trabalho do GitHub Actions.
 
-### Example a: Astro Deployment (GitHub Pages / Static Host)
+### Exemplo: Implantação Astro (GitHub Pages / Host Estático)
 
-Create `.github/workflows/deploy.yml` in your repository:
+Crie `.github/workflows/deploy.yml` no seu repositório:
 
 ```yaml
-name: Deploy Website
+Nome: Implantar o site
 
-on:
+em:
   push:
     branches:
-      - main
+      - permissões principais
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+:
+  conteúdos: ler
+  páginas: escrever
+  id-token: escrever
 
-concurrency:
-  group: "pages"
+concurracia:
+  grupo: "pages"
   cancel-in-progress: false
 
 jobs:
@@ -107,8 +107,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Node. s
+        usos: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -118,51 +118,51 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Upload Pages artifact
+      - name: Upload Pages artefato
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: . dist
 
   deploy:
     environment:
       name: github-pages
       url: ${% raw %}{{ steps.deployment.outputs.page_url }}{% endraw %}
     runs-on: ubuntu-latest
-    needs: build
+    precisa: criar
     steps:
-      - name: Deploy to GitHub Pages
+      - Nome de implantação para o GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 ```
 
-### Example B: Hugo Deployment (Cloudflare Pages or Vercel)
+### Exemplo B: Implantação Hugo (páginas de Cloudflare ou Vercel)
 
-If you are using [Hugo](https://gohugo.io), platforms like **Cloudflare Pages**, **Netlify**, or **Vercel** can build your repository automatically when they receive a GitHub push event:
+Se você está usando [Hugo](https://gohugo.io), plataformas como **Cloudflare Pages**, **Netlify**, ou a **Vercel** pode criar seu repositório automaticamente quando eles recebem um evento push no GitHub:
 
-1. Connect your GitHub repository directly to [Cloudflare Pages](https://pages.cloudflare.com) or [Vercel](https://vercel.com).
-2. Set the build command to `hugo --minify`.
-3. Set the build output directory to `public`.
-4. Whenever [LightCMS](https://lightcms.me) pushes a new post to `main`, the hosting platform automatically re-generates and deploys your site globally in seconds.
-
----
-
-## 4. Hosting Platform Recommendations
-
-Several reliable platforms offer generous free tiers for hosting static sites:
-
-- **[Vercel](https://vercel.com)**: Zero config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
-- **[Cloudflare Pages](https://pages.cloudflare.com)**: Global edge network in 300+ cities, unlimited bandwidth on the free tier.
-- **[Netlify](https://www.netlify.com)**: Pioneer of Jamstack hosting with rich form and asset handling.
-- **[GitHub Pages](https://pages.github.com)**: Direct built in hosting for open source and personal repositories.
-- **[Deno Deploy](https://deno.com/deploy)**: Lightweight edge hosting for JavaScript and static web assets.
+1. Conecte o seu repositório do GitHub diretamente no [Cloudflare Pages](https://pages.cloudflare.com) ou [Vercel](https://vercel.com).
+2. Defina o comando de compilação para `hugo --minify`.
+3. Defina o diretório de saída da compilação para `public`.
+4. Sempre que [LightCMS](https://lightcms.me) empurra uma nova publicação para `principal`, a plataforma de hospedagem gera automaticamente e implementa seu site globalmente em segundos.
 
 ---
 
-## 5. Verify the Publishing Loop
+## 4. Recomendações da Plataforma de Hospedagem
 
-Once your repository is configured and CI/CD is in place:
+Várias plataformas confiáveis oferecem níveis gratuitos generosos para hospedar sites estáticos:
 
-1. Open your [LightCMS](https://lightcms.me) editor and create a new post.
-2. Add your content and click **Publish**.
-3. Check the **Actions** tab on your GitHub repository. Your CI/CD workflow runs on the [LightCMS](https://lightcms.me) commit.
-4. Within a minute or two, your new post is live on your website.
+- **[Vercel](https://vercel.com)**: Implementações de configuração Zero para frameworks JS modernos, SSL automática, pré-visualizar URLs para rascunhos de pull requests.
+- **[Cloudflare Pages](https://pages.cloudflare.com)**: Rede de bordas global em mais de 300 cidades, largura de banda ilimitada no nível gratuito.
+- **[Netlify](https://www.netlify.com)**: Pioneer de Jamstack hosting com formulário rico e manipulação de ativos.
+- **[GitHub Pages](https://pages.github.com)**: Hospedagem direta para repositórios pessoais e de código aberto.
+- **[Deno Deploy](https://deno.com/deploy)**: Hospedagem de aresta leve para recursos de web estáticos e JavaScript.
+
+---
+
+## 5. Verificar o Loop de Publicação
+
+Uma vez que seu repositório é configurado e CI/CD é executado:
+
+1. Abra o seu editor [LightCMS](https://lightcms.me) e crie uma nova publicação.
+2. Adicione seu conteúdo e clique em **Publish**.
+3. Verifique a guia **Acções** no seu repositório do GitHub. Seu fluxo de trabalho CI/CD é executado no commit [LightCMS](https://lightcms.me).
+4. Dentro de um minuto ou dois, sua nova postagem estará disponível no seu site.
