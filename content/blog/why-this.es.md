@@ -1,82 +1,82 @@
 ---
-title: Why LightCMS?
-description: "The philosophy behind LightCMS: why writing should be frictionless, why Git based content matters, and why complexity stays away from the writer."
+title: ¿Por qué LightCMS?
+description: "La filosofía que subyace a LightCMS: por qué la escritura no debe ser frictionless, por qué el contenido basado en Git importa, y por qué la complejidad se mantiene alejada del escritor."
 serial: 2
 date: 2026-09-18T00:41:00Z
 draft: false
 keywords:
-  - why lightcms
-  - gitbacked cms
-  - static sites
-  - carbon footprint
+  - por qué faros
+  - cms gitbacked
+  - sitios estáticos
+  - huella de carbono
 preview: /og-image.webp
 taxonomies:
   tags:
     - cms
-    - philosophy
-    - lightcms
+    - filosofía
+    - luces
 ---
 
-I’ve tried dozens of CMSs over the years, and most felt a little pale. They worked, but they often missed the mark on the human experience of writing and managing a publication.
+He probado docenas de CMS a lo largo de los años, y la mayoría se sentía un poco pálido. Funcionaron, pero a menudo se perdieron la marca en la experiencia humana de escribir y administrar una publicación.
 
-The closest thing I found to a pleasant developer workflow was Front Matter in VS Code. It makes managing content files easier, but the barrier remains: opening a whole code editor, pulling remote Git branches, resolving formatting conflicts, and debugging local tools is a lot of friction for a three-paragraph reflection.
+La cosa más cercana que encontré a un agradable flujo de trabajo de desarrollador fue Front Matter en VS Code. Hace que la gestión de archivos de contenido sea más fácil, pero la barrera permanece: abrir un editor de código completo, tirar ramas Git remotas, la resolución de conflictos de formato y la depuración de herramientas locales es una gran frivolidad para una reflexión de tres párrafos.
 
-Writing should be the easy part.
-
----
-
-## The Imperative to Share
-
-There is real value in owning your publishing space on the web:
-
-1. **If you learned something over the years, share it.**
-2. **If you built something intriguing, write about it.**
-3. **If you solved a tricky bug that took you three days to understand, document it.** Six months from now, someone will search for that exact error and find your solution.
-
-Everyone deserves their own little corner of the internet. Publishing essays and technical insights shouldn't depend on proprietary social platforms that manipulate reach or lock your content behind algorithmic walls.
-
-Yet getting started shouldn't require you to be a senior DevOps engineer or full-stack web developer.
+Escribir debería ser la parte fácil.
 
 ---
 
-## The Static Site Paradox
+## El imperativo a compartir
 
-Static sites are the simplest, fastest, and most durable way to publish content on the web:
+Hay un valor real en poseer tu espacio de publicación en la web:
 
-- **Fast**: Pre-rendered HTML and CSS served globally from edge CDNs.
-- **Secure**: No server-side runtime or vulnerable database listeners exposed to the public.
-- **Eco-Friendly**: Minimal computational overhead and zero database queries per page view reduce digital carbon emissions (tools like [Website Carbon](https://www.websitecarbon.com/) measure the difference).
+1. **Si has aprendido algo a lo largo de los años, compártelo.**
+2. **Si construiste algo intrigante, escribe sobre ello.**
+3. \*\*Si solucionaste un error complicado que te tomó tres días para entenderlo, documentalo. \* Dentro de seis meses, alguien buscará ese error exacto y encontrará su solución.
 
-There is no shortage of capable static site generators: [Astro](https://astro.build), [Hugo](https://gohugo.io), [Jekyll](https://jekyllrb.com), [SvelteKit](https://svelte.dev), and [Eleventy](https://www.11ty.dev).
+Todo el mundo merece su pequeño rincón de Internet. Publicar ensayos y información técnica no debería depender de plataformas sociales autónomas que manipulen el alcance o bloqueen su contenido detrás de muros algorítmicos.
 
-**The paradox is that while running a static site is simple, managing it is not.**
-
-You shouldn't need to understand Git rebase flags, Markdown terminal linters, front matter YAML schema validators, or GitHub token scopes to publish your thoughts. Asking a non-technical writer or a tired developer to navigate VS Code at midnight is too much friction.
+Sin embargo, para empezar, no es necesario que seas un ingeniero senior de DevOps o un desarrollador web completo.
 
 ---
 
-## A Greener Web Is a Static Web
+## La paradoja del sitio estático
 
-Static publishing wins on energy. A dynamic site burns electricity on every request; a static site does the work once and serves the result from cache, close to the reader, at a fraction of the energy. No always-on database, no per-view computation, no runtime shipped to the visitor's battery.
+Los sitios estáticos son la forma más simple, rápida y duradera de publicar contenido en la web:
 
-Durable content is sustainable content, too: plain Markdown files in your own repository remain readable and rebuildable for decades, while platforms shut down and WordPress installs rot. Every blog that moves from database-driven hosting to a static architecture is a permanent, measurable reduction in its carbon footprint.
+- **Rápido**: HTML y CSS pre-renderizado servido globalmente desde CDNs de borde.
+- **Segura**: No hay oyentes vulnerables de bases de datos expuestos al público en tiempo de ejecución en el lado del servidor.
+- **Eco-Friendly**: La sobrecarga computacional mínima y cero consultas de base de datos por página reducen las emisiones de carbono digitales (herramientas como [Carbono del Sitio Web](https://www.websitecarbon.com/) miden la diferencia).
 
-More: [Static Sites and CO2: Building a Greener Web](/blog/greener-web-static-sites/).
+No hay escasez de generadores estáticos capaces de sitio: [Astro](https://astro.build), [Hugo](https://gohugo.io), [Jekyll](https://jekyllrb.com), [SvelteKit](https://svelte.dev) y [Eleventy](https://www.11ty.dev).
+
+**La paradoja es que mientras se ejecuta un sitio estático es simple, gestionarlo no lo es.**
+
+No debería necesitar entender las banderas rebase de Git, los linteros de terminal de Markdown, los validadores de esquemas YAML, o los ámbitos de GitHub para publicar sus pensamientos. Pedir a un escritor no técnico o a un desarrollador cansado que navegue por el código VS a medianoche es demasiado fricción.
 
 ---
 
-## A CMS That Stays Out of Your Way
+## Una web verde es una web estática
 
-[LightCMS](https://lightcms.me) aims to make writing and publishing simple without sacrificing the benefits of modern developer tooling:
+La publicación estática gana con la energía. Un sitio dinámico quema electricidad en cada petición; un sitio estático hace el trabajo una vez y sirve el resultado de la caché, cerca del lector, en una fracción de la energía. No hay una base de datos siempre activa, no hay cálculo por vista, no hay tiempo de ejecución enviado a la batería del visitante.
 
-- **Content Lives in Git**: Your articles remain pure Markdown in your own GitHub repository.
-- **Automated CI/CD**: Your existing build pipelines (GitHub Actions, Vercel, Cloudflare Pages) continue to build and deploy your site automatically.
-- **Frictionless Writing**: The author opens a distraction-free visual editor in their browser, writes, formats, and hits publish.
+El contenido duradero es también un contenido sostenible: los archivos Markdown en tu propio repositorio siguen siendo legibles y reconstruibles durante décadas, mientras las plataformas se apagan e WordPress instala la podredad. Cada blog que pasa del alojamiento basado en bases de datos a una arquitectura estática es una reducción permanente de su huella de carbono.
 
-You get all the auditability, rollback safety, and ownership of a Git based repository, while the author gets a distraction-free environment built for writing.
+Más: [Sitios estáticos y CO2: Construir una web verde](/blog/greener-web-static-sites/).
+
+---
+
+## Un CMS que se queda fuera de tu camino
+
+[LightCMS](https://lightcms.me) apunta a hacer que la escritura y publicación sean simples sin sacrificar los beneficios de las herramientas de desarrollo modernas:
+
+- **Contenidos en Git**: Tus artículos permanecen puramente Markdown en tu propio repositorio de GitHub.
+- **CI/CD automatizado**: Tus pipelines de compilación existentes (Acciones de GitHub, Vercel, Páginas de Cloudflare) continúan construyendo e implementando tu sitio automáticamente.
+- **Escritura sin fricciones**: El autor abre un editor visual sin distracción en su navegador, escritura, formatos y hits publicados.
+
+Usted obtiene toda la auditabilidad, la seguridad de cancelación y la propiedad de un repositorio basado en Git, mientras que el autor obtiene un entorno libre de distracción construido para escritura.
 
 ---
 
 ## TL;DR
 
-Writing a blog post should not feel like a high-stakes engineering task. Getting your ideas into words should be the easy part.
+Escribir un post en el blog no debe sentirse como una tarea de ingeniería de alto nivel. Conseguir sus ideas en palabras debería ser la parte fácil.
