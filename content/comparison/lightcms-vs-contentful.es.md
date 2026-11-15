@@ -1,111 +1,111 @@
 ---
-title: "LightCMS vs Contentful: Enterprise SaaS vs a Repository You Own"
-description: "Contentful is an enterprise SaaS headless CMS; LightCMS is a self-hosted editor that commits Markdown to Git. Compare cost, lock-in, and writing experience."
+title: "LightCMS vs Contenido: Enterprise SaaS vs un repositorio que posees"
+description: "Contentful is an enterprise SaaS headless CMS; LightCMS is a self-hosted editor that commits Markdown to Git. Compare costo, bloqueo y experiencia de escritura."
 serial: 49
 date: 2026-10-16T11:50:00Z
 draft: false
 keywords:
-  - lightcms vs contentful
-  - contentful alternatives
-  - contentful pricing alternative
-  - headless cms for blogs
-  - cms without vendor lock in
+  - luces vs contenido
+  - alternativas contentosas
+  - alternativa de precios contentosa
+  - cms sin cabeza para blogs
+  - cms sin bloqueo de proveedor
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - contentful
+    - luces
+    - contentoso
     - cms
-    - comparison
-    - headless
+    - comparación
+    - sin cabeza
 ---
 
-[Contentful](https://www.contentful.com) is the enterprise default in the headless CMS category: a mature SaaS platform with spaces and environments, roles and approvals, a content model editor, and CDN-delivered content APIs. Large teams ship real products on it.
+[Contentful](https://www.contentful.com) es la empresa por defecto en la categoría CMS sin heads: una plataforma SaaS madura con espacios y entornos, roles y aprobaciones, un editor de modelos de contenido, y API de contenido entregadas por CDN. Los grandes equipos envían productos reales en ella.
 
-It's also a paid platform with a substantial bill, built for organizations whose content powers applications rather than articles. That gap is where this comparison lives.
-
----
-
-## Two Business Models
-
-**Contentful** is a vendor relationship. Content lives in their cloud, is edited in their web app, and is served through their APIs under a subscription that scales with usage, seats, and environments. You get SLAs, support, and enterprise features, along with a monthly cost that grows with your success.
-
-**LightCMS** is software you run. Content lives in your repository, is edited in a self-hosted app, and is served as static files by your host. You get portability and a cost line near zero, with no vendor to negotiate with when priorities change.
-
-|                         | LightCMS                       | Contentful                     |
-| :---------------------- | :----------------------------- | :----------------------------- |
-| **Model**               | Self-hosted Git workspace      | SaaS headless platform         |
-| **Storage**             | Markdown in your repository    | Contentful cloud               |
-| **Delivery**            | Static build → CDN             | Content API at request time    |
-| **Content model**       | Front matter fields            | Custom content types in UI     |
-| **Pricing**             | Free (Apache 2.0)              | Subscription, usage/seat based |
-| **Enterprise features** | Git review, branch protection  | Roles, approvals, workflows    |
-| **Lock-in**             | None                           | Export required to leave       |
-| **Extras**              | AI copilot, voice, newsletters | Ecosystem, SDKs, app framework |
+También es una plataforma de pago con una factura sustancial, construida para organizaciones cuyo contenido permite aplicaciones en lugar de artículos. Esa brecha es donde vive esta comparación.
 
 ---
 
-## Where Contentful Wins
+## Dos modelos de negocio
 
-- **Governance.** Granular roles, approvals, localization workflows, and environments are enterprise requirements that a repository cannot replicate on its own.
-- **Multi-surface delivery.** One content set serving websites, apps, and kiosks through a documented API.
-- **Non-technical modeling.** Content types are defined in a UI by anyone, with validation and references.
-- **Operations handled.** Uptime, scaling, and security are their problem, and that is a real benefit with a real price.
-- **Localization** as a first-class feature across locales and fields.
+**Contenido** es una relación de proveedor. El contenido vive en su nube, se edita en su aplicación web, y se sirve a través de sus APIs bajo una suscripción que escala con el uso, asientos y entornos. Usted obtiene SLAs, soporte y características empresariales, junto con un costo mensual que crece con su éxito.
 
-## Where LightCMS Wins
+**LightCMS** es un software que ejecutas. El contenido vive en su repositorio, es editado en una aplicación autoalojada, y su host sirve como archivos estáticos. Obtienes portabilidad y una línea de costo cerca de cero, sin proveedor con el que negociar cuando cambian las prioridades.
 
-- **Price.** No seats, no plan tiers, no usage cliff when a post goes viral.
-- **Ownership.** Content in your own repository is not a tenant relationship; see [content as code](/blog/content-as-code/).
-- **Static output.** No API round trip in the page load; the [performance and SEO case](/blog/static-vs-dynamic/) is structural.
-- **The writing experience.** A full editor with [AI assistance](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) rather than a field-by-field content form.
-- **No migration cliff.** You are never four years into a content model that costs a fortune to export.
-
----
-
-## The Honest Caveat
-
-If you are choosing for a company with compliance requirements, multiple brands, and a content operations team, Contentful's cost buys things LightCMS deliberately does not attempt: workflow governance, localization at scale, and contractual support. Recommending a free self-hosted editor in that context would be bad advice.
-
-The comparison is sharp when the project is a **publication**: a blog, docs site, changelog, or marketing pages. That is where enterprise pricing buys nothing you need, and where a document editor beats a content-modeling console.
+|                                   | LightCMS                              | Contenidos                                       |
+| :-------------------------------- | :------------------------------------ | :----------------------------------------------- |
+| **Modelo**                        | Espacio de trabajo autoalojado de Git | Plataforma sin cabeza SaaS                       |
+| **Almacenamiento**                | Markdown en su repositorio            | Nube contenida                                   |
+| **Entrega**                       | Construcción estática → CDN           | API de contenido al momento de la solicitud      |
+| **Modelo contenido**              | Campos del asunto principal           | Tipos de contenido personalizados en la interfaz |
+| **Precio**                        | Free (Apache 2.0)                     | Suscripción, uso / asiento basado                |
+| **Características de la empresa** | Revisión de Git, protección de rama   | Roles, aprobaciones, workflows                   |
+| **Bloquear**                      | Ninguna                               | Exportación necesaria para salir                 |
+| **Extras**                        | AI copilote, voz, boletines           | Ecosistema, SDKs, framework de aplicaciones      |
 
 ---
 
-## Migration
+## Donde Ganancias por Contenido
 
-Contentful exports entries as JSON via its API or CLI. Converting entries to Markdown files is mechanical for article-shaped content and harder for component trees nested several levels deep. Plan for a script plus a cleanup pass; the direction is well-trodden because many teams have moved editorial content _off_ SaaS platforms for cost reasons.
+- **Gobernanza.** Los roles granulares, las aprobaciones, los flujos de trabajo de localización y los entornos son requisitos empresariales que un repositorio no puede replicar por sí mismo.
+- **Entrega multisuperficie.** Un conjunto de contenido que sirve sitios web, aplicaciones y kioscos a través de una API documentada.
+- **Modelado no técnico.** Los tipos de contenido son definidos en una interfaz de usuario por cualquier persona, con validación y referencias.
+- **Operaciones gestionadas.** La actualización, la escalación y la seguridad son su problema, y eso es un beneficio real con un precio real.
+- **Localización** como característica de primera clase en locales y campos.
 
----
+## Donde LightCMS gana
 
-## Which Should You Choose?
-
-- **Choose Contentful** for multi-channel product content with governance, localization, and budget behind it.
-- **Choose LightCMS** for a static publication where cost, ownership, and writing quality decide the outcome.
-
----
-
-## Frequently Asked Questions
-
-### Is Contentful free?
-
-There is a free tier with limits; production use is a paid plan. LightCMS has no license fee and no per-seat cost.
-
-### Does LightCMS have an API?
-
-Not as a content API: the output is static HTML from your build. LightCMS's interface is the writing surface plus Git itself.
-
-### Can Contentful serve a static site?
-
-Yes, by fetching at build time or client-side. Either way the runtime dependency on their API remains.
-
-### Which is better for a small blog?
-
-A free, self-hosted, Git based editor. You get a better writing experience with no bill and no lock-in.
-
-### Can I move off Contentful later?
-
-Yes, with an export and a conversion script. The cost of leaving is why platforms charge less at the start and more later.
+- **Precio.** Sin asientos, sin niveles de planes, sin acantilado de uso cuando un post se hace viral.
+- **Propiedad.** El contenido de tu propio repositorio no es una relación de arrendatario; mira [contenido como código](/blog/content-as-code/).
+- **Salida estática.** No hay viajes de ida y vuelta en la página cargada; el [rendimiento y caso SEO](/blog/static-vs-dynamic/) es estructural.
+- \*\*La experiencia de escritura. \* Un editor completo con [AI assistance](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), y [mailing dispatch](/blog/newsletter-email-automation/) en lugar de un formulario de contenido de campo por campo.
+- **No hay acantilado migratorio.** Nunca pasas cuatro años en un modelo de contenido que cuesta una fortuna para exportar.
 
 ---
 
-More: [LightCMS vs Sanity](/comparison/lightcms-vs-sanity), [LightCMS vs Strapi](/comparison/lightcms-vs-strapi), [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms).
+## La Cabaña más honesta
+
+Si estás eligiendo una empresa con requisitos de cumplimiento, varias marcas y un equipo de operaciones de contenido, El costo del contenido compra cosas que LightCMS deliberadamente no intenta: gestión del flujo de trabajo, localización a escala y apoyo contractual. Recomendar un editor autohospedado gratuito en ese contexto sería un mal consejo.
+
+La comparación es nítida cuando el proyecto es una **publicación**: un blog, un sitio de documentos, un registro de cambios o páginas de marketing. Ahí es donde la fijación de precios empresarial no compra nada que necesite, y donde un editor de documentos gana a una consola de modelado de contenidos.
+
+---
+
+## Migración
+
+El contenido exporta entradas como JSON a través de su API o CLI. La conversión de entradas a archivos Markdown es mecánica para el contenido en forma de artículo y más difícil para los árboles de componentes anidados varios niveles de profundidad. Planificar un guión más un pase de limpieza; la dirección está bien marcada porque muchos equipos han trasladado el contenido editorial _fuera_ las plataformas SaaS por razones de costo.
+
+---
+
+## ¿Qué debería elegir?
+
+- **Elige contenido** para contenido multicanal con gobernanza, localización y presupuesto detrás de él.
+- **Elige LightCMS** para una publicación estática donde el costo, la propiedad y la calidad de escritura deciden el resultado.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Es gratuito el contenido?
+
+Hay un nivel gratuito con límites; el uso de la producción es un plan de pago. LightCMS no tiene cuota de licencia ni costo por asiento.
+
+### ¿LightCMS tiene una API?
+
+No como una API de contenido: la salida es HTML estático desde su compilación. La interfaz de LightCMS es la superficie de escritura más Git mismo.
+
+### ¿Puede servir de contenido un sitio estático?
+
+Sí, obteniendo en tiempo de construcción o lado del cliente. De cualquier manera, la dependencia de tiempo de ejecución de su API permanece.
+
+### ¿Qué es mejor para un blog pequeño?
+
+Un editor libre y autoalojado, basado en Git. Usted obtiene una mejor experiencia de escritura sin factura ni bloqueo.
+
+### ¿Puedo abandonar el contenido más tarde?
+
+Sí, con una exportación y un script de conversión. El costo de salir es por qué las plataformas cobran menos al inicio y más adelante.
+
+---
+
+Más: [LightCMS vs Sanity](/comparison/lightcms-vs-sanity), [LightCMS vs Strapi](/comparison/lightcms-vs-strapi), [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms).
