@@ -1,55 +1,55 @@
 ---
-title: What Is Markdown? The Plain-Text Format Powering the Web
-description: "Markdown explained: what it is, why it has lasted, the syntax you need, and how Git based CMS tools turn plain text into a publishing format."
+title: Что такое Markdown? Простой текстовый формат, работающий в сети
+description: "Markdown объясняется: что это такое, почему он прошёл, нужный вам синтаксис, и как CMS основанные на Git инструменты превращают простой текст в формат публикации."
 serial: 25
 date: 2026-10-14T15:00:00Z
 draft: false
 keywords:
-  - what is markdown
-  - markdown tutorial
-  - markdown syntax guide
-  - why use markdown
-  - markdown for writers
+  - что такое markdown
+  - учебник markdown
+  - синтаксис markdown
+  - зачем использовать markdown
+  - разметка для писателей
 preview: /og-image.webp
 taxonomies:
   tags:
     - markdown
-    - writing
-    - content
+    - запись
+    - контент
 ---
 
-Markdown is plain text with a small set of formatting symbols. John Gruber created it in 2004 as the simplest way to write formatted documents. Two decades later it has become the lingua franca of the web: documentation, README files, notes, newsletters, and millions of sites keep their content in it.
+Markdown - это простой текст с небольшим набором символов форматирования. Джон Грубер создал его в 2004 году как самый простой способ писать форматированные документы. Через два десятилетия он стал французским языком в Интернете: документация, Файлы README, заметки, информационные бюллетени и миллионы сайтов хранят в них свое содержание.
 
 ---
 
-## Why Markdown Won
+## Почему победа в Markdown
 
-- **It does not rot**. A `.md` file from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
-- **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git based CMS stores content as Markdown.
-- **It is easy to learn**. The core syntax takes five minutes.
-- **It separates content from presentation**. Write structure; let the theme handle looks.
-- **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
+- **Он не вращается**. Файл `.md` с 2004 года все еще открывается в любом текстовом редакторе. Истекает срок действия проприетарных форматов документов; простой текст не работает.
+- **Он красиво отличается**. Поскольку это текст, Git может отслеживать каждое изменение, поэтому каждый Git на основе CMS хранит содержимое как Markdown.
+- **Учиться легко просто**. Основной синтаксис занимает пять минут.
+- **Содержимое отделяется от презентации**. Напишите структуру, пусть тема будет выглядеть так.
+- **Это везде**. GitHub, Notion exports, static site generators, and AI tools all speak it.
 
-## The Syntax You Need
+## Синтаксис, который вам нужен
 
 ````markdown
-# Heading 1
-## Heading 2
+# Заголовок 1
+## Заголовок 2
 
-A paragraph with **bold** and *italic* text.
+абзац с **жирным шрифтом** и *курсив* текстом.
 
-- A bullet point
-- Another one
+- Пулевая точка
+- Другая точка
 
-1. A numbered list
-2. And the next item
+1. Список пронумерованных
+2. А следующий пункт
 
-> A blockquote for asides.
+> Блокировка для asides.
 
-[A link](https://example.com)
-![An image](/images/photo.jpg)
+[link](https://example.com)
+![Изображение](/images/photo.jpg)
 
-`inline code` and fenced code blocks:
+`inline-код` и fenced code blocks:
 
 ```js
 console.log("hello, web");
@@ -73,30 +73,30 @@ tags:
 The article begins here.
 ````
 
-This YAML front matter is where the CMS lives: titles, dates, drafts, and taxonomies ride along with the Markdown body.
+YAML это передние материя, в которой живет CMS: названия, даты, черновики и таксономии вместе с телом Markdown.
 
-## Writing Markdown Without the Syntax
+## Запись Markdown без синтаксиса
 
-**You do not have to write Markdown by hand anymore.** Modern Git based editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
+\*\*Вам больше не нужно записывать Markdown вручную. \* Современные редакторы, основанные на Git, [LightCMS](/getting-started/) среди них дают полный визуальный редактор с изображениями, и ярлыки для форматирования, затем сериализуйте запись, чтобы очистить Markdown под ними. Вы получаете прочность текста с удобным оформлением.
 
-That combination (visual editing on top of Markdown in Git) is what powers the whole [Git based CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
+Эта комбинация (визуальное редактирование поверх Markdown в Git) - это сила целой [категории CMS](/blog/git-cms-vs-traditional-cms/), и именно так статические сайты [лучших статических генераторов сайтов](/blog/best-static-site-generators/) получают их содержимое.
 
 ---
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### Is Markdown dead?
+### Markdown мертв?
 
-The opposite. After 20+ years it is more central than ever. It is the content format of GitHub, documentation toolchains, and AI-era writing.
+Наоборот. Через 20 лет он стал более центральным, чем когда-либо. Это формат содержимого GitHub, документации инструментальных цепей и AI-эпохи.
 
-### What is the difference between Markdown and HTML?
+### В чем разница между Markdown и HTML?
 
-Markdown is the authoring format (plain text, human-writable); HTML is the rendering format (what browsers display). Generators convert the former into the latter.
+Markdown - это формат автора (простой текст, человеко-запись); HTML - формат рендеринга (какой отображает браузер). Генераторы превращают их в последние.
 
-### Do I need to learn Markdown to blog?
+### Нужно ли мне изучать Markdown для блога?
 
-Not with a visual Git based CMS: you write normally, and the tool produces Markdown for you. Learning the basics still helps for quick edits.
+Не с визуальным Git основанным на CMS: вы пишете нормально, и инструмент производит Markdown для вас. Изучение основ по-прежнему помогает быстро редактировать.
 
-### Where is Markdown stored?
+### Где находится Markdown?
 
-As `.md` files, ideally in a Git repository, which gives you version history, review, and portable ownership of everything you write.
+Как `.md` файлы, в идеале в Git-репозитории, что дает вам историю версий, обзор и переносимое владение всем, что вы пишли.
