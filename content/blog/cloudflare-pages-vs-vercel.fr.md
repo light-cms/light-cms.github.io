@@ -1,76 +1,76 @@
 ---
-title: "Cloudflare Pages vs Vercel: Which Is Better for Static Sites?"
-description: Cloudflare Pages and Vercel compared on bandwidth, build minutes, pricing, edge network, and framework support, so you can pick the right free hosting tier.
+title: "Pages de la fusée éclairante vs Vercel: Quel est le mieux pour les sites statiques?"
+description: Pages Cloudflare et Vercel comparés sur la bande passante, les minutes de construction, les tarifs, le réseau de bord et le support du framework pour que vous puissiez choisir le bon niveau d'hébergement gratuit.
 serial: 9
 date: 2026-10-14T12:20:00Z
 draft: false
 keywords:
-  - cloudflare pages vs vercel
-  - vercel vs cloudflare pages
-  - best free static site hosting
-  - cloudflare pages pricing
-  - vercel free tier
+  - pages de la fusée éclairante nuageuse vs vercel
+  - pages vercel vs cloudflare
+  - le meilleur hébergement de site statique gratuit
+  - tarification des pages cloudflare
+  - palier libre de vercel
 preview: /og-image.webp
 taxonomies:
   tags:
-    - hosting
-    - cloudflare
+    - hébergement
+    - fusée éclairante nuageuse
     - vercel
     - jamstack
 ---
 
-[Cloudflare Pages](https://pages.cloudflare.com) and [Vercel](https://vercel.com) are the two most common answers to "where do I host my static site for free?" Both deploy from Git, provision free SSL, and serve from a global edge network. The differences show up in **bandwidth policy, framework integration, and what happens when your project grows**.
+[Pages de la Fusée du Cloud](https://pages.cloudflare.com) et [Vercel](https://vercel.com) sont les deux réponses les plus communes à « Où puis-je héberger mon site statique gratuitement ? » Les deux déploiements depuis Git, fournissent un SSL gratuit et servent depuis un réseau de périphérie globale. Les différences apparaissent dans la **politique de bande passante, l'intégration du framework et ce qui se passe lorsque votre projet grandit**.
 
 ---
 
-## What Is Cloudflare Pages?
+## Que sont les PagesCloudflare ?
 
-Cloudflare Pages is a static site hosting platform that deploys from your Git repository to a global edge network. The free tier includes unlimited bandwidth, making it attractive for blogs and documentation sites that may go viral. Beyond static hosting, it offers Pages Functions (serverless functions), KV (key-value storage), and R2 (object storage), all within the same Cloudflare ecosystem.
+Cloudflare Pages est une plate-forme d'hébergement de sites statiques qui déploie depuis votre dépôt Git vers un réseau de pointe global. Le niveau gratuit inclut une bande passante illimitée, ce qui le rend attractif pour les blogs et les sites de documentation qui peuvent devenir viraux. Au-delà de l'hébergement statique, il offre des fonctions Pages (fonctions sans serveur), KV (stockage clé-valeur) et R2 (stockage d'objets), le tout dans le même écosystème Cloudflare.
 
-## What Is Vercel?
+## Qu'est-ce que Vercel?
 
-Vercel is the company behind Next.js and offers hosting optimized for its framework. It provides zero-configuration deployments for Next.js, SvelteKit, Astro, Nuxt, and Vite projects. The platform is known for polished preview deployments for every pull request, inline comments on deployments, and a developer-friendly dashboard.
+Vercel est la société derrière Next.js et propose un hébergement optimisé pour son cadre. Il fournit des déploiements de configuration zéro pour les projets Next.js, SvelteKit, Astro, Nuxt et Vite. La plateforme est connue pour les déploiements de prévisualisation perfectionnés pour chaque pull request, les commentaires en ligne sur les déploiements, et un tableau de bord convivial pour les développeurs.
 
-## Bandwidth: Unlimited vs Metered
+## Bande passante : Unlimited vs Metered
 
-- **Cloudflare Pages**: unlimited bandwidth on the free tier, the single biggest differentiator for content-heavy or unexpectedly viral sites.
-- **Vercel**: the hobby tier includes generous but metered bandwidth, with overages a real consideration for high-traffic sites.
+- **Cloudflare Pages** : bande passante illimitée sur le niveau libre, le plus grand différentiateur pour les sites viraux lourds ou inattendus.
+- **Vercel**: le passe-temps comprend une bande passante généreuse mais comptée, avec une prise en compte réelle des sites à fort trafic.
 
-Build limits also differ: Cloudflare offers hundreds of builds per month on the free tier, while Vercel meters build minutes. Both are ample for personal sites and small teams.
+Les limites de construction diffèrent également : Cloudflare offre des centaines de constructions par mois sur le niveau gratuit, tandis que Vercel comptant des minutes. Les deux sont vastes pour les sites personnels et les petites équipes.
 
-## Developer Experience
+## Expérience développeur
 
-Vercel's preview URLs for every pull request, inline comments on deployments, and framework-aware build settings make it a strong fit for team workflows. Cloudflare Pages also provides preview deployments, and its tight integration with Workers, Pages Functions, KV, and R2 gives it an edge for lightweight dynamic features.
+Les URLs d'aperçu de Vercel, pour chaque pull request, les commentaires en ligne sur les déploiements, et les paramètres de construction compatibles avec les frameworks, le rendent parfaitement adapté aux flux de travail de l'équipe. Cloudflare Pages fournit également des déploiements de prévisualisation, et son intégration étroite avec Workers, Pages Functions, KV et R2 lui donne un avantage pour des fonctionnalités dynamiques légères.
 
-## Lock-in and Portability
+## Verrouillage et Portabilité
 
-Both platforms build from the same Git repository, so your content and code stay portable. Vercel's framework optimizations and Cloudflare's Workers runtime each create some ecosystem gravity, but because your site is just static output plus a build command, switching hosts is a configuration change, not a rewrite.
-
----
-
-## Which Should You Choose?
-
-- Choose **Cloudflare Pages** for blogs, documentation, and content sites where unlimited bandwidth and minimal cost matter most.
-- Choose **Vercel** for application-like projects, team preview workflows, and deep framework integration.
-
-For a full comparison including GitHub Pages, Netlify, and Deno Deploy, see [top static site hosting platforms](/misc/top-static-site-hosting/). And once your host is chosen, [configure your repository and CI/CD](/blog/configuring-your-repository-cicd/) so every published post deploys automatically.
+Les deux plates-formes construites à partir du même dépôt Git, pour que votre contenu et votre code restent portables. Les optimisations de framework de Vercel, et le runtime Workers de Cloudflare chaque fois créent une certaine gravité de l'écosystème, mais parce que votre site est juste une sortie statique plus une commande de build, le changement d'hôte est un changement de configuration, pas une réécriture.
 
 ---
 
-## Frequently Asked Questions
+## Que devriez-vous choisir?
 
-### Is Cloudflare Pages Unlimited?
+- Choisissez **Cloudflare Pages** pour les blogs, la documentation et les sites de contenu où la bande passante illimitée et les coûts minimaux sont les plus importants.
+- Choisissez **Vercel** pour les projets ressemblant à des applications, les workflows d'aperçu d'équipe et l'intégration profonde du framework .
 
-Yes. The free tier does not meter bandwidth, which makes it the safest default for sites that may go viral.
+Pour une comparaison complète incluant les pages GitHub, Netlify, et Deno Deploy, voir [les plates-formes d'hébergement de sites statiques] (/misc/top-static-site-hosting/). Et une fois que votre hôte est choisi, [configurez votre dépôt et CI/CD](/blog/configuring-your-repository-cicd/) pour que chaque publication se déploie automatiquement.
 
-### Is Vercel Free for Static Sites?
+---
 
-Yes, the hobby tier covers personal static sites generously, though bandwidth and build minutes are metered.
+## Foire aux questions
 
-### Which Is Faster?
+### Les pages de Fusée nuageuse sont-elles illimitées ?
 
-Both serve from global edge networks with excellent performance. Cloudflare's network is larger; Vercel's framework-aware builds can produce more optimized output for its supported frameworks.
+« Oui. » Le niveau gratuit ne mesure pas la bande passante, ce qui en fait la valeur par défaut la plus sûre pour les sites qui peuvent devenir viraux.
 
-### Can I Move Between Them Later?
+### Vercel est-il gratuit pour les sites statiques ?
 
-Yes. Both deploy from your Git repository with a build command and output directory, so switching is a matter of configuration rather than migration.
+Oui, le passe-temps couvre généreusement les sites statiques personnels, bien que la bande passante et les minutes de construction soient comptées.
+
+### Qui est plus rapide ?
+
+Tous deux servent à partir de réseaux à la fine pointe de la planète avec d'excellentes performances. Le réseau de Cloudflare est plus grand ; les versions avec le framework de Vercel peuvent produire des sorties plus optimisées pour ses frameworks pris en charge.
+
+### Puis-je me déplacer plus tard entre eux ?
+
+« Oui. » Les deux déploiements depuis votre dépôt Git avec une commande de compilation et un répertoire de sortie, donc le changement est une question de configuration plutôt que de migration.
