@@ -1,149 +1,149 @@
 ---
-title: Self Hosting LightCMS
-description: Guide to self host LightCMS.
+title: Autoalojando LightCMS
+description: Guía a LightCMS auto alojamiento.
 serial: 4
-section: Get Started
-badge: Deploy
+section: Empezar
+badge: Desplegar
 date: 2026-09-18T01:45:00Z
 draft: false
 tags:
   - selfhost
-  - lightcms
+  - luces
   - postgresql
-  - deployment
+  - despliegue
 keywords:
-  - lightcms
+  - luces
   - probot
-  - self-hosting
+  - auto alojamiento
   - github_app
-  - vercel
+  - vértice
   - sveltekit
 preview: /og-image.png
 canonical: https://www.lightcms.me/docs
 ---
 
-Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
+¿Quieres [LightCMS](https://lightcms.me) completamente bajo tu control? [LightCMS](https://lightcms.me) es una aplicación [SvelteKit](https://svelte.dev) para que pueda ser desplegada en cualquier lugar, respaldado por una base de datos postgre y una aplicación de GitHub (octokit). Su contenido nunca abandona sus propios repositorios de GitHub.
 
-This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
-PostgreSQL, configuring environment variables, and deploying.
+Esta guía le guiará a través de todo lo que necesita para ejecutar su propia instancia: crear la aplicación de GitHub, provisionando
+PostgreSQL, configurar variables de entorno y desplegar.
 
-## How the Pieces Fit Together
+## Cómo encajan las piezas juntas
 
-| Component             | Purpose                                                                       | Required                     |
-| --------------------- | ----------------------------------------------------------------------------- | ---------------------------- |
-| PostgreSQL            | Stores users, sessions, passkeys and GitHub installations                     | Yes                          |
-| GitHub App            | Reads and writes content in your repositories, and signs users in with GitHub | Yes                          |
-| SMTP provider         | Sends magic-link sign-in emails                                               | Yes, for magic-link sign-in  |
-| OpenAI-compatible API | Powers the AI Copilot                                                         | Optional                     |
-| Speech-to-text API    | Powers voice dictation                                                        | Optional                     |
-| Image CDN             | Hosts images uploaded in the editor                                           | Optional                     |
-| PostHog               | Product analytics and AI observability                                        | Required in development only |
+| Componente                | Propósito                                                               | Requerido                                    |
+| ------------------------- | ----------------------------------------------------------------------- | -------------------------------------------- |
+| PostgreSQL                | Almacena instalaciones de usuarios, sesiones, claves de acceso e GitHub | Sí                                           |
+| GitHub App                | Lee y escribe contenido en tus repositorios y firma usuarios con GitHub | Sí                                           |
+| Proveedor SMTP            | Envía correos electrónicos de inicio de sesión de enlaces mágicos       | Sí, para inicio de sesión de enlaces mágicos |
+| API compatible con OpenAI | Potenciar el Copilote de IA                                             | Opcional                                     |
+| API de voz a texto        | Poder dictado de voz                                                    | Opcional                                     |
+| Imagen CDN                | Imágenes de hosts cargadas en el editor                                 | Opcional                                     |
+| PostHog                   | Análisis de productos y observabilidad de IA                            | Requerido sólo en el desarrollo              |
 
-## Prerequisites
+## Prerrequisitos
 
-- **[mise](https://mise.jdx.dev)**: installs and managing tasks dependencies. I will be assuming you have it installed.
-- **PostgreSQL**: a database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
-  [Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
-  [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
-- **GitHub account**: needed to register the GitHub App.
-- **SMTP provider** (for magic links): If you have a domain then [Resend](https://resend.com) will be having an awesome experience,
-  if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
+- **[mise](https://mise.jdx.dev)**: instala y gestiona las dependencias de tareas. Supondré que lo tienes instalado.
+- **PostgreSQL**: una base de datos que acepta conexiones TLS. Proveedores de nube como [Neon](https://neon.tech),
+  [Supabase](https://supabase.com) o [Nile](https://thenile.dev) funcionan bien. Ver
+  [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) para opciones gratis.
+- **Cuenta de GitHub**: necesaria para registrar la aplicación de GitHub.
+- **Proveedor SMTP** (para enlaces mágicos): Si tienes un dominio entonces [Resend](https://resend.com) tendrá una experiencia increíble,
+  si no es entonces [Zoho Mail](https://www.zoho.com/mail) recuerda crear una contraseña de la aplicación.
 
-> **TLS is mandatory.** The application connects to PostgreSQL with `ssl: "require"`. A local PostgreSQL instance
-> without TLS enabled will be rejected, so use a hosted database or configure TLS on your own server.
+> **TLS es obligatorio.** La aplicación se conecta a PostgreSQL con `ssl: "require"`. Una instancia local de PostgreSQL
+> sin activar TLS será rechazada, así que utilice una base de datos alojada o configure TLS en su propio servidor.
 
-## 1. Fork the repository and install dependencies
+## 1. Fork el repositorio e instalar dependencias
 
-Clone the repository and install dependencies:
+Clonar el repositorio e instalar dependencias:
 
 ```bash
 cd lightcms
 mise trust
 mise deps
-mise run install
+mise run install install
 ```
 
-Install the toolchain and the project dependencies:
+Instalar la toolchain y las dependencias del proyecto:
 
 ```bash
 mise trust
 mise deps
-mise run install
+mise run install install
 ```
 
 ## 2. Create the GitHub App
 
-[LightCMS](https://lightcms.me) uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
-through installations. You can create it with the built in Probot setup wizard, or by hand.
+[LightCMS](https://lightcms.me) usa una aplicación de GitHub para dos cosas: firmar usuarios con GitHub (OAuth), y actuar en tu nombre
+a través de instalaciones. Puedes crearlo con el asistente de configuración de Probot, o a mano.
 
-### Option A: Probot setup wizard
+### Opción A: Asistente de configuración de Probot
 
-start the bot with:
+inicia el bot con:
 
 ```bash
-mise run bot
+bot de ejecución mise
 ```
 
-With no credentials in `.env`, Probot starts a setup server at `http://localhost:3000`:
+Sin credenciales en `.env`, Probot inicia un servidor de configuración en `http://localhost:3000`:
 
-1. Open `http://localhost:3000` and click **Register GitHub App**.
-2. Choose your personal account or an organization.
-3. Confirm. Probot creates the app and writes its credentials to your `.env` file.
+1. Abre `http://localhost:3000` y haz clic en **Registrar aplicación de GitHub**.
+2. Elige tu cuenta personal o una organización.
+3. Confirmar. Probot crea la aplicación y escribe sus credenciales en tu archivo `.env`.
 
-The wizard sets the app's webhook URL to a Smee channel (or `http://localhost:3000/`), not to [LightCMS](https://lightcms.me)'s webhook
-endpoint. Update it in the GitHub App settings before going live (see [Production deployment](#6-production-deployment)).
+El asistente establece la URL del webhook de la aplicación a un canal Smee (o `http://localhost:3000/`), no a [LightCMS](https://lightcms.me)'s webhook
+endpoint. Actualízalo en la configuración de la aplicación de GitHub antes de ir en vivo (ver [despliegue de producción](#6-production-deployment)).
 
-### Option B: Manual setup
+### Opción B: Configuración manual
 
-Create the app in **GitHub Settings → Developer settings → GitHub Apps → New GitHub App** with these values:
+Crear la aplicación en **Configuración de GitHub → Configuración del desarrollador → Aplicaciones de GitHub → Nueva aplicación de GitHub** con estos valores:
 
-| Setting        | Value                                                           |
-| -------------- | --------------------------------------------------------------- |
-| Homepage URL   | `https://<your-domain>`                                         |
-| Callback URL   | `https://<your-domain>/api/auth/callback/github`                |
-| Setup URL      | `https://<your-domain>/github/setup`                            |
-| Webhook URL    | `https://<your-domain>/api/github/webhook`                      |
-| Webhook secret | A random secret (see [Generating secrets](#generating-secrets)) |
+| Ajustes            | Valor                                                                |
+| ------------------ | -------------------------------------------------------------------- |
+| URL de la página   | `https://<your-domain>`                                              |
+| Callback URL       | `https://<your-domain>/api/auth/callback/github`                     |
+| Setup URL          | `https://<your-domain>/github/setup`                                 |
+| URL de Webhook     | `https://<your-domain>/api/github/webhook`                           |
+| Secreto de Webhook | Un secreto aleatorio (ver [Generando secretos](#generating-secrets)) |
 
-**Repository permissions**
+**Permisos del repositorio**
 
-| Permission        | Access         | Used for                                    |
-| ----------------- | -------------- | ------------------------------------------- |
-| `Contents`        | Read and write | Reading and committing content files        |
-| `Issues`          | Read and write | Review comments and labels on pull requests |
-| `Pull requests`   | Read-only      | Listing the files changed in a pull request |
-| `Commit statuses` | Read and write | Reporting content validation on pushes      |
-| `Metadata`        | Read-only      | Mandatory for every GitHub App              |
+| Permiso             | Acceder         | Usado para                                       |
+| ------------------- | --------------- | ------------------------------------------------ |
+| `Contenido`         | Leer y escribir | Leyendo y confirmando archivos de contenido      |
+| `Problemas`         | Leer y escribir | Revisar comentarios y etiquetas en pull requests |
+| `Pull requests`     | Sólo lectura    | Listar los archivos cambiados en un pull request |
+| `Estado del commit` | Leer y escribir | Reportando validación de contenido en push       |
+| `Metadata`          | Sólo lectura    | Mandatorio para cada aplicación de GitHub        |
 
-**Subscribe to events:** `Push` and `Pull request`. Installation events are delivered to GitHub Apps automatically.
+**Suscríbete a los eventos:** `Push` y `Pull request`. Los eventos de instalación se entregan automáticamente a las aplicaciones de GitHub.
 
-After creating the app, note the **App ID**, generate a **client secret**, and generate and download a **private key**
+Después de crear la aplicación, ten en cuenta el **ID de la aplicación**, genera un **secreto del cliente**, y genera y descarga una **clave privada**
 (`.pem`).
 
-## 3. Configure environment variables
+## 3. Configurar variables de entorno
 
-Create a `.env` file in the project root. The repository does not ship a usable example file, so use the reference below.
+Crea un archivo `.env` en la raíz del proyecto. El repositorio no envía un archivo de ejemplo utilizable, así que utilice la referencia a continuación.
 
-### Required
+### Requerido
 
 ```bash
-# ---------------------------------------------------------------------------
-# Authentication (Better Auth)
-# ---------------------------------------------------------------------------
-BETTER_AUTH_SECRET="<output of: openssl rand -hex 32>"
-# Public URL of this instance. Must match the URL users visit.
+# -------------------------------------------------------------------
+# Autenticación (Mejor Autoridad)
+# -------------------------------------------------------------------
+BETER_AUTH_SECRET="<output of: openssl rand -hex 32>"
+# URL pública de esta instancia. Debe coincidir con la visita de los usuarios de URL.
 BETTER_AUTH_URL="http://localhost:5173"
 
 # ---------------------------------------------------------------------------
-# Database (PostgreSQL, TLS required)
-# ---------------------------------------------------------------------------
-DATABASE_URL="postgresql://user:password@host:5432/lightcms?sslmode=require"
+# Base de datos (PostgreSQL, TLS requerido)
+# ---------------------------------------------------
+DATABASE_URL="postgresql://user:password@host:5432/lightcms? slmode=require"
 
-# ---------------------------------------------------------------------------
+# -------------------------------------------------------------------
 # GitHub App
-# ---------------------------------------------------------------------------
+# -------------------------------------------------------------------
 GITHUB_APP_ID="123456"
-GITHUB_CLIENT_ID="Iv1.xxxxxxxxxxxx"
+GITHUB_CLIENT_ID="Iv1. xxxxxxxxxxx"
 GITHUB_CLIENT_SECRET="<github-app-client-secret>"
 GITHUB_WEBHOOK_SECRET="<webhook-secret>"
 GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
@@ -151,37 +151,37 @@ GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
 -----END RSA PRIVATE KEY-----"
 ```
 
-`GITHUB_PRIVATE_KEY` is the full PEM contents. Keep the line breaks and wrap the value in double quotes, which is how
-the Probot wizard writes it.
+`GITHUB_PRIVATE_KEY` es el contenido PEM completo. Mantenga los saltos de línea y envuelva el valor en comillas dobles, que es como lo escribe
+el asistente de Probot.
 
-### Required for development
+### Requerido para el desarrollo
 
-[LightCMS](https://lightcms.me) reports analytics and errors to [PostHog](https://posthog.com). When the keys are missing, the app **throws in development** to stop events being silently dropped. In production they are optional, and telemetry is skipped when they are unset.
+[LightCMS](https://lightcms.me) reporta análisis y errores a [PostHog](https://posthog.com). Cuando las claves faltan, la aplicación **arroja en desarrollo** para evitar que los eventos se eliminen silenciosamente. En la producción son opcionales, y la telemetría se omite cuando no están configuradas.
 
 ```bash
-PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxx"
+PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxxxxxx"
 PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
 ```
 
-### Email: required for magic-link sign-in
+### Correo electrónico: requerido para inicio de sesión mágico
 
-Magic links are sent over SMTP with [Nodemailer](https://nodemailer.com). Sending fails with a configuration error when
-`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` or `MAIL_FROM` is missing.
+Los enlaces mágicos se envían sobre SMTP con [Nodemailer](https://nodemailer.com). El envío falla con un error de configuración cuando falta
+`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` o `MAIL_FROM`.
 
 ```bash
 MAIL_HOST="smtp.resend.com"
-# Defaults to 587 when omitted
+# Por defecto es 587 cuando se omite
 MAIL_PORT="465"
-# "true", "1", "yes" or "on" enables implicit TLS. When omitted, TLS is enabled only for port 465.
+# "true", "1", "yes" o "on" habilita TLS implícito. Cuando se omite, TLS solo está habilitado para el puerto 465.
 MAIL_SECURE="1"
 MAIL_USER="resend"
 MAIL_PASS="<smtp-password-or-api-key>"
 MAIL_FROM="LightCMS <noreply@yourdomain.com>"
 ```
 
-### Optional: AI Copilot
+### Opcional: Copilot de IA
 
-The Copilot uses any OpenAI-compatible chat completions API. All three variables are needed for it to work.
+El Copilot utiliza cualquier API de terminación de chat compatible con OpenAI. Las tres variables son necesarias para que funcione.
 
 ```bash
 OPEN_AI_ENDPOINT="https://api.openai.com/v1"
@@ -189,147 +189,147 @@ OPEN_AI_APIKEY="sk-..."
 OPEN_AI_MODEL="gpt-4o-mini"
 ```
 
-Any provider that exposes an OpenAI-compatible API works, for example [OpenAI](https://platform.openai.com),
-[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) or [NVIDIA NIM](https://build.nvidia.com).
+Cualquier proveedor que exponga una API compatible con OpenAI funciona, por ejemplo [OpenAI](https://platform.openai.com),
+[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) o [NVIDIA NIM](https://build.nvidia.com).
 
-### Optional: speech-to-text dictation
+### Opcional: dictado de voz a texto
 
-[LightCMS](https://lightcms.me) supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
+[LightCMS](https://lightcms.me) soporta dos backends de transcripción. Cuando ambos están configurados, se utiliza el backend compatible con OpenAI.
 
-**OpenAI-compatible transcription.** It is selected when `SPEECH_API_KEY` is set, and also needs `SPEECH_MODEL`:
+**Transcripción compatible con OpenAI.** Se selecciona cuando se establece `SPEECH_API_KEY`, y también necesita `SPEECH_MODEL`:
 
 ```bash
 SPEECH_API_KEY="<api-key>"
 SPEECH_MODEL="whisper-1"
-# Base URL of the provider. Omit it to use the OpenAI default.
+# URL base del proveedor. Omitir para utilizar el valor predeterminado de OpenAI.
 SPEECH_ENDPOINT="https://api.openai.com/v1"
 ```
 
-Point `SPEECH_ENDPOINT` at any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` to a
-model that provider offers. A trailing `/audio/transcriptions` in the endpoint is stripped automatically.
+Apunte `SPEECH_ENDPOINT` a cualquier proveedor que implemente la API `/audio/transcriptions`, y establezca `SPEECH_MODEL` en un modelo
+que ofrezca el proveedor. Un `/audio/transcriptions` final en el punto final es eliminado automáticamente.
 
-**[Wit.ai](https://wit.ai)** is used when `SPEECH_API_KEY` is not set:
+**[Wit.ai](https://wit.ai)** se utiliza cuando `SPEECH_API_KEY` no está definido:
 
 ```bash
-WIT_AI_TOKEN="<wit-ai-server-access-token>"
+► _AI_TOKEN="<wit-ai-server-access-token>"
 ```
 
-If neither is configured, dictation is unavailable.
+Si ninguna de las dos está configurada, la dictación no está disponible.
 
-### Optional: image uploads (CDN)
+### Opcional: subidas de imágenes (CDN)
 
-Images pasted or uploaded in the editor are sent to a [Chevereto](https://chevereto.com)-compatible upload API.
-Hosted options include [FreeImage.host](https://freeimage.host) and [ImgBB](https://imgbb.com), or you can run
-your own Chevereto instance.
+Las imágenes pegadas o cargadas en el editor se envían a una API de subida [Chevereto](https://chevereto.com).
+Las opciones alojadas incluyen [FreeImage.host](https://freeimage.host) y [ImgBB](https://imgbb.com), o puedes ejecutar
+tu propia instancia de Chevereto.
 
 ```bash
 CDN_URL="https://freeimage.host/api/1/upload"
 CDN_KEY="<cdn-api-key>"
 ```
 
-`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the
-variables are unset, [LightCMS](https://lightcms.me) falls back to embedding the image in the document as a base64 `data:` URL. This works,
-but it makes your Markdown files much larger, so configure a CDN for real use.
+`CDN_KEY` es enviado como el parámetro de consulta `key` a menos que `CDN_URL` ya contenga uno. Si la carga falla o las variables
+no están configuradas, [LightCMS](https://lightcms.me) vuelve a incrustar la imagen en el documento como una URL base64 `data:` . Esto funciona,
+pero hace que tus archivos Markdown sean mucho más grandes, así que configura un CDN para uso real.
 
-### Local webhook forwarding (development only)
+### Desvío local de webhook (sólo desarrollo)
 
 ```bash
 WEBHOOK_PROXY_URL="https://smee.io/<your-channel>"
 ```
 
-This is read by Probot, not by the SvelteKit app. See [Testing webhooks locally](#testing-webhooks-locally).
+Esto es leído por Probot, no por la aplicación SvelteKit. Ver [Probando webhooks localmente](#testing-webhooks-locally).
 
-### Generating secrets
+### Generando secretos
 
-Use any of these to generate `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET`:
+Usa cualquiera de estos para generar `BETER_AUTH_SECRET` y `GITHUB_WEBHOOK_SECRET`:
 
 ```bash
 openssl rand -hex 32
-# or
+# o
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
-## 4. Set up the database
+## 4. Configurar la base de datos
 
-[LightCMS](https://lightcms.me) uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
-are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
+[LightCMS](https://lightcms.me) usa [Drizzle ORM](https://orm.drizzle.team). El esquema vive en `src/lib/server/db/schema.ts`, y las migraciones
+se generan en el directorio `drizzle`. Con el conjunto `DATABASE_URL`, aplicar las migraciones:
 
 ```bash
-bun run db:migrate
+ejecutar db:migrate
 ```
 
-During local development you can instead push the schema straight to the database, without migration files:
+Durante el desarrollo local puede empujar el esquema directamente a la base de datos, sin archivos de migración:
 
 ```bash
-bun run db:push
+ejecutar db:push
 ```
 
-Other database scripts:
+Otros scripts de base de datos:
 
-| Command               | Description                                   |
-| --------------------- | --------------------------------------------- |
-| `bun run db:generate` | Generate a migration after editing the schema |
-| `bun run db:studio`   | Browse and edit your data in Drizzle Studio   |
+| Comando               | Descripción                                        |
+| --------------------- | -------------------------------------------------- |
+| `bun run db:generate` | Generar una migración después de editar el esquema |
+| `bun run db:studio`   | Navega y edita tus datos en Drizzle Studio         |
 
-## 5. Run locally
+## 5. Ejecutar localmente
 
 ```bash
-bun run dev
+ejecutar dev
 ```
 
 ![imagebot](https://i.ibb.co/Jw1bjLrr/image.png)
 
-![permissions detailed](https://i.ibb.co/0p7tk88V/image.png)
+![permisos detallados](https://i.ibb.co/0p7tk88V/image.png)
 
-[LightCMS](https://lightcms.me) is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
+[LightCMS](https://lightcms.me) ahora está disponible en `http://localhost:5173`. Establece `BETTER_AUTH_URL` a esta dirección e inicia sesión con GitHub por primera vez.
 
-### Testing webhooks locally
+### Probando webhooks localmente
 
-GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io](https://smee.io):
+GitHub no puede entregar webhooks a `localhost`, así que reenvíalos a través de [smee.io](https://smee.io):
 
-1. Create a channel at [smee.io](https://smee.io) and copy its URL.
-2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL.
-3. Set the **Webhook URL** in your GitHub App settings to the same URL.
-4. Run the bot in a second terminal:
+1. Crear un canal en [smee.io](https://smee.io) y copiar su URL.
+2. Establece `WEBHOOK_PROXY_URL` en `.env` a esa URL.
+3. Estableció la **URL Webhook** en la configuración de la aplicación de GitHub a la misma URL.
+4. Ejecutar el bot en una segunda terminal:
 
    ```bash
-   bun run bot:start
+   ejecutar bun bot:start
    ```
 
-The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
-labels on `pull_request`, and `installation` logging.
+El bot registra los mismos manejadores que el punto final de producción: validación de contenido en `push`, comentarios de revisión y etiquetas
+en `pull_request`, y registro de `installation`.
 
-## 6. Production deployment
+## 6. Despliegue de producción
 
-The project is configured with sveltekit which is very vendor agnostic, so
-[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) all are supported deployment targets out of the box.
+El proyecto está configurado con sveltekit que es muy agnostico vendor, así
+[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) todos son blancos de despliegue soportados de serie.
 
-1. Import your Git repository into deployment platform.
-2. Add every environment variable from [step 3](#3-configure-environment-variables) in **Project Settings → Environment
-   Variables**. Set `BETTER_AUTH_URL` to your production URL.
-3. Deploy.
+1. Importe su repositorio Git en la plataforma de implementación.
+2. Agrega cada variable de entorno desde [paso 3](#3-configure-environment-variables) en **Configuración del proyecto → Entorno
+   Variables**. Establece `BETTER_AUTH_URL` a tu URL de producción.
+3. Desplegar.
 
-To verify the production build locally:
+Para verificar la construcción de producción localmente:
 
 ```bash
 bun run build
 bun run preview
 ```
 
-## Troubleshooting
+## Solución de problemas
 
-Make a account with [Wit.ai](https://wit.ai/) it's a free service by meta |
-And any openai compatible API for transcription. |
-One can use [groq](https://groq.com/) or [assemblyai](https://assemblyai.com/) or |
-[elevenlabs](https://elevenlabs.io/) or [deepgram](https://deepgram.com/) or [sarvam](https://sarvam.ai/). |
+Hacer una cuenta con [Wit.ai](https://wit.ai/) es un servicio gratuito por meta |
+Y cualquier API de transcripción compatible con openai. |
+Uno puede usar [groq](https://groq.com/) o [assemblyai](https://assemblyai.com/) o |
+[elevenlabs](https://elevenlabs.io/) o [deepgram](https://deepgram.com/) o [sarvam](https://sarvam.ai/). |
 
-## For development purpose you can use the following credentials for posthog
+## Para propósitos de desarrollo puedes usar las siguientes credenciales para posthog
 
-PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
+PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
 PUBLIC_POSTHOG_URL = "https://us.i.posthog.com"
 
 ```bash
-PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
+PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
 PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
@@ -338,8 +338,8 @@ https://wit.ai
 ![wit.ai](https://i.ibb.co/MySskPTt/image.png)
 
 ```bash
-WIT_AI_TOKEN="Server access token"
-WIT_AI_CLIENT_TOKEN="Client access token"
+► _AI_TOKEN="Token de acceso al servidor"
+a_AI_CLIENT_TOKEN="Token de acceso al cliente"
 ```
 
 ```bash
@@ -376,4 +376,4 @@ WIT_AI_CLIENT_TOKEN=
 WIT_AI_TOKEN=
 ```
 
-![configuration for the bot](https://i.ibb.co/jP5tgcJH/image.png)
+![configuración para el bot](https://i.ibb.co/jP5tgcJH/image.png)
