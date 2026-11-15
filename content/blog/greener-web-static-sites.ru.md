@@ -1,90 +1,90 @@
 ---
-title: "Static Sites and CO2: Building a Greener Web"
-description: Why static sites emit less carbon than dynamic ones, how CDN caching cuts energy use, how to measure your website's footprint, and what a greener web looks like.
+title: "Статические сайты и CO2: Создание Greener Web"
+description: Почему статические участки выделяют меньше углерода, чем динамические, как кэширование CDN сокращает потребление энергии, как измерить след вашего сайта и как выглядит более зеленый сайт.
 serial: 16
 date: 2026-10-14T13:30:00Z
 draft: false
 keywords:
-  - low carbon website
-  - static site co2
-  - greener web
-  - sustainable web design
-  - website carbon footprint
+  - сайт с низким содержанием углерода
+  - статический сайт co2
+  - зелёная паутина
+  - устойчивый веб-дизайн
+  - углеродный след сайта
 preview: /og-image.webp
 taxonomies:
   tags:
-    - sustainability
-    - static-sites
-    - green-web
+    - устойчивость
+    - статические сайты
+    - зелёная паутина
     - co2
 ---
 
-Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **static sites sit at the clean end**.
+Каждое окно просмотра требует энергии. Где-то сервер пропускает, пропускает кэш, запускает запрос к базе данных и использует электричество, измеряемое в граммах СО2, расходует абзац текста. По общепринятым оценкам, сеть поставляется примерно на 2–4% глобальных выбросов электроэнергии по сравнению с авиационной промышленностью. Архитектура вашего сайта определяет, где на этом участке вы находитесь, и **статические участки сидят на чистом конце**.
 
 ---
 
-### Why Static Sites Emit less Carbon
+### Почему статические сайты Emit меньше углерода
 
-A dynamic site does work on every request: execute code, query a database, assemble HTML. That work happens on servers that must stay powered around the clock, even when nobody is visiting.
+Динамический сайт работает по каждому запросу: выполнить код, запрос базы данных, собрать HTML. Эта работа происходит на серверах, которые должны оставаться в силе круглосуточно, даже если никто не посещает.
 
-A static site does the work once, at build time. The finished HTML is copied to CDN edge nodes worldwide and served from cache:
+Статический сайт выполняет работу один раз, в момент сборки. Законченный HTML копируется в узлы CDN по всему миру и служит из кэша:
 
-- **No compute per request**: serving a cached static file uses a tiny fraction of the energy of rendering a page on demand.
-- **No always-on database**: databases and application servers consume power continuously; static sites have neither.
-- **Cache-friendly by default**: a request that hits an edge cache barely moves electrons beyond the network hop.
-- **Tiny payloads**: Markdown-generated HTML is lean by construction, with no framework runtime shipped to the browser unless needed.
+- **Нет вычислений по запросу**: обработка кэшированного файла использует крошечную долю энергии страницы по требованию.
+- **Не всегда база данных**: базы данных и серверы приложений постоянно потребляют энергию; статические сайты ничтожны.
+- **Удобный для кэширования по умолчанию**: запрос, который едва передвигает электроны за пределы сетевого хупа.
+- **Tiny payloads**: Сгенерированный Markdown-файлом HTML-код является залогом строительства, при этом никакие работы в браузере не отправляются никаким образом, если это не нужно.
 
-Multiply that across every visitor, every month, for the life of the site, and the difference is not symbolic.
+Умножай что каждый посетитель, каждый месяц, на жизнь сайта, а разница не символическая.
 
-## The Ripple Effect: Durability Is Sustainability
+## Эффект Чистильщика: Прочность
 
-Static sites also age well. A Hugo or Astro site built in 2026 can still be rebuilt and served in 2036: the content is plain Markdown, the toolchain is open source, and the output is a folder of files. Sites that get abandoned because their platform shut down or their WordPress install became unmaintainable force rebuilds: rewriting the same content on new infrastructure is its own kind of waste.
+Статические места также возраст хорошо. Сайт Hugo или Astro, построенный в 2026 году, все еще может быть перестроен и подан в 2036 году: контент является простым Markdown, инструментальная цепочка является открытым исходным кодом, а вывод -- это папка файлов. Сайты, которые отказываются потому что их платформа закрывается или их установка WordPress стала необслуживаемых пересборки силы: перезапись того же содержания на новой инфраструктуре свой вид отходов.
 
-Owning your content as Markdown in Git is the durable, low-waste option.
+Владелец вашего контента как Markdown в Git является долговечным, низкозатратным вариантом.
 
-### How to Measure Your Website's Carbon
+### Как измерить уголь вашего сайта
 
-You cannot improve what you do not measure:
+Вы не можете улучшить то, что не измеряете:
 
-- **[Website Carbon Calculator](https://www.websitecarbon.com/)**: estimates the grams of CO2 emitted per page view and compares your site to others.
-- **[Ecograder](https://ecograder.com/)** gives a comparable estimate, alongside performance and accessibility scoring.
-- Real-user metrics matter too: Largest Contentful Paint and total bytes transferred correlate directly with energy per view.
+- **[Веб-сайт Карбонатного Калькулятора](https://www.websitecarbon.com/)**: оценивает граммы выбросов CO2 на страницу и сравнивает ваш сайт с другими.
+- **[Ecograder](https://ecograder.com/)** дает сопоставимую оценку, наряду с оценкой производительности и доступности.
+- Показатели реального пользователя: Крупнейшая Контентная краска и общее количество переданных байтов соотносятся непосредственно с энергией на вид.
 
-The [LightCMS](https://lightcms.me) site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
+На сайте [LightCMS](https://lightcms.me) показан живой рейтинг углерода в футере с использованием того же метода измерения, что и в руководстве.
 
-## How to Build a Greener Web
+## Как создать Greener Web
 
-1. **Serve statically from a CDN**: the biggest lever for content sites.
-2. **Choose green hosting**: providers that power data centers with renewable energy (several major providers now publish their energy sourcing).
-3. **Ship less JavaScript**: every kilobyte is parsed, executed, and paid for on the visitor's battery.
-4. **Compress and cache images**: media is usually the heaviest part of a page, so serve modern formats with long cache lifetimes.
-5. **Keep content durable**: plain Markdown and open formats mean a site never needs a rebuild from scratch.
-6. **Publish deliberately**: a small, high-value site that people return to beats a sprawling one nobody reads.
+1. **Статически обслуживать CDN**: самый большой рычаг для контент-сайтов.
+2. **Выберите хостинг зеленого**: провайдеры, которые используют энергетические центры с возобновляемой энергией (несколько крупных провайдеров сейчас публикуют свои источники энергии).
+3. **Отправлять без JavaScript**: каждый килобайт парсируется, выполняется и оплачивается за батарею посетителя.
+4. **Сжатие и кэширование изображений**: носитель обычно является самой большой частью страницы, так что служит современным форматам с длительным сроком жизни кэша.
+5. **Храните контент долговечный**: простой Markdown и открытый формат означает, что сайт никогда не нуждается в пересборке с нуля.
+6. **Опубликовать преднамеренно**: маленький, ценный сайт, который люди возвращаются к ударам распыления никто не читает.
 
-## Where [LightCMS](https://lightcms.me) Fits
+## Где [LightCMS](https://lightcms.me) соответствует
 
-[LightCMS](https://lightcms.me) follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS runs only while you write. No production database serves readers; the CDN does.
+[LightCMS](https://lightcms.me) follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. CMS работает только во время написания. Нет исходной базы данных для читателей; CDN делает.
 
-- [Static sites vs dynamic sites](/blog/static-vs-dynamic/) covers the architecture in depth.
-- [Top static site hosting platforms](/misc/top-static-site-hosting/) compares where to host sustainably.
-- [Why LightCMS](/blog/why-this/) explains the philosophy behind durable, lightweight publishing.
+- [Статические сайты и динамические сайты](/blog/static-vs-dynamic/) подробно описывает архитектуру.
+- [Наиболее статичные платформы хостинга сайтов](/misc/top-static-site-hosting/) сравниваются с местом размещения устойчивости.
+- [Why LightCMS](/blog/why-this/) объясняет философию, лежащую в основе прочного и легкого издания.
 
 ---
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### How much CO2 does a typical website emit?
+### Сколько CO2 выделяет типичный веб-сайт?
 
-Estimates vary by method, but a typical page view emits anywhere from a fraction of a gram to about a gram of CO2; heavy, poorly cached pages emit considerably more. Static, cached pages sit at the low end.
+Метод может варьироваться, но типичный вид страницы выделяется в любом месте от доли грамма до примерно грамма CO2; тяжелые, плохо кэшированные страницы значительно больше выделяют страницы. Статичные, кэшированные страницы сидеть на низком уровне.
 
-### Does green hosting matter?
+### Имеет ли значение зеленый хостинг?
 
-Yes. Data-center energy is the dominant factor in a site's footprint; hosting on renewable-powered infrastructure reduces it substantially.
+Да. Энергия дата-центра является доминирующим фактором в столице сайта; значительное сокращение ее размещения на восстановительной инфраструктуре.
 
-### Is a static blog eco friendly?
+### Удобный статический блог?
 
-Among the greenest options available: cached files served from an edge network, no always-on database, and content that remains readable and rebuildable for decades.
+Среди самых зеленоватых опций: кэшированные файлы обслуживаются из краеугольной сети, не всегда база данных, и контент, который остается читаемым и восстанавливаемым на протяжении десятилетий.
 
-### What is sustainable web design?
+### Что такое устойчивый веб-дизайн?
 
-A practice of minimizing the energy cost of the web: lean pages, efficient code, renewable hosting, durable content, and measured impact. Static architecture is the foundation.
+Практика минимизации энергетических затрат сети Интернет: страницы, эффективный код, возобновляемый хостинг, долговременное содержание и измеряемое воздействие. Статическая архитектура является фундаментом.
