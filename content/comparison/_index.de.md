@@ -1,7 +1,7 @@
 +++
 title = "Vergleiche"
 description = "LightCMS vergleicht nebeneinander mit jedem CMS, Headless-Plattform und Site-Builder"
-sort_by = "datum"
+sort_by = "date"
 page_template = "article.html"
 +++
 
