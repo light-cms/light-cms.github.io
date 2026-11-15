@@ -1,36 +1,36 @@
 ---
-title: "Headless CMS vs Git-Based CMS: Two Architectures Compared"
-description: "Headless CMS stores content in a database behind an API; Git based CMS stores it as files in a repository. How each works, where each wins, and how to choose."
+title: "无头CMS vs Git-based CMS：两个架构比较"
+description: "无头CMS在 API 背后的数据库中存储内容；Git 基于 CMS 将其作为文件存储在仓库中。各自如何运作、在哪里赢以及如何选择。"
 serial: 44
 date: 2026-10-16T11:00:00Z
 draft: false
 keywords:
-  - headless cms vs git based cms
-  - headless cms
-  - git based cms
-  - file based cms vs headless
-  - cms architecture
+  - 无头cms vs git based cms
+  - 无头cms
+  - 基于 git 的 cms
+  - 基于文件的 cms 对无头的
+  - cms 结构
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
-    - headless
+    - 厘米
+    - 头像
     - git
-    - explainers
+    - 解释
 ---
 
-"Headless" and "Git based" get used as if they were rival categories. They are not; they answer different questions:
+"无头" 和 "Git based" 被用作它们对立的类别。它们不是这样；它们回答了不同的问题：
 
-- **Headless** answers: _how does content reach the frontend?_ (Through an API, decoupled from presentation.)
-- **Git based** answers: _where does content live?_ (As files in a repository.)
+- **无头** 答案：_内容如何到达前端？_(通过一个 API 脱离演示文稿)
+- **Git based** 答案：_内容存放在哪里？_ (作为仓库中的文件)
 
-A tool can be both, either, or neither. Sorting out the two ideas lets you compare architectures instead of feature lists.
+一种工具既可以是两者，也可以是两者，也可以是两者。排序这两个想法让您可以比较结构而不是功能列表。
 
 ---
 
-## Headless CMS: Content Behind an API
+## 无头CMS：API后面的内容
 
-A headless CMS is a content database with an admin panel and an API. The editor writes; the frontend fetches.
+无头CMS是一个包含管理面板和API的内容数据库。编辑器写入；前端获取。
 
 ```text
 Editor ──> Headless CMS (database + admin)
@@ -39,110 +39,110 @@ Editor ──> Headless CMS (database + admin)
         Website · Mobile app · Watch face · Anything
 ```
 
-Typical properties:
+典型属性：
 
-- **Content is relational.** Entries, references, localizations, workflows.
-- **Delivery is API-driven.** Any number of consumers pull the same content.
-- **Changes are immediate.** No build step between save and read.
-- **Operations are ongoing.** A server, a database, backups, patches, and an uptime obligation.
+- **内容是关系。** 条目、引用、本地化、 工作流。
+- **送货是API驱动的。** 任何数量的消费者拉取相同的内容。
+- **更改是立即的。** 保存和阅读之间没有构建步骤。
+- **操作正在进行。** 一个服务器、一个数据库、备份、补丁和一个时效义务。
 
-This is the right shape when content must serve several surfaces at once, when relationships matter, or when publishing must take effect instantly without a rebuild. Popular examples include Contentful, Sanity, Strapi, and [Payload](/comparison/lightcms-vs-payload-cms).
+当内容必须同时服务于几个表面时，这是正确的形状， 当关系很重要时，或者当发布时必须立即生效，而无需重建。受欢迎的例子包括内容、 慈善、 Strapi和 [Payload](/comparison/lightcms-vs-payload-cms)。
 
-## Git based CMS: Content as Files
+## 基于 Git 的 CMS：内容为文件
 
-A Git based CMS is an editing surface over a repository. The editor writes; the build reads.
+基于 Git 的 CMS 是一个仓库上的编辑表面。编辑器写入；构建读取。
 
 ```text
-Editor ──> commit to repository ──> CI build ──> static output ──> CDN
+Editor --- --> commit to repository --- > CI building --> static output --- > CDN
 ```
 
-Typical properties:
+典型属性：
 
-- **Content is documents.** Markdown files with front matter.
-- **Delivery is the build.** Pages are assembled ahead of time and served as files.
-- **Versioning is Git history.** Diffs, blame, revert, pull requests.
-- **Operations are minimal.** There is no content runtime to keep alive.
+- **内容是文档。** 标记文件前缀。
+- **送货是构建。** 页面提前组装并作为文件服务。
+- **版本控制是Git 历史记录。** Diffusion、指责、恢复、拉取请求。
+- **操作最小化。** 没有内容运行时间可存活。
 
-This is the right shape when the consumer is a website, the content is prose, and "no server" is a feature. Decap CMS, TinaCMS, Keystatic, Pages CMS, and [LightCMS](/blog/what-is-lightcms/) live here.
-
----
-
-## Side by Side
-
-|                      | Headless CMS                           | Git based CMS                 |
-| :------------------- | :------------------------------------- | :---------------------------- |
-| **Storage**          | Database                               | Files in a repository         |
-| **Delivery**         | API at request time                    | Build to static files         |
-| **Change latency**   | Instant                                | Next build                    |
-| **Versioning**       | Plugin or built in revisions           | Git history for free          |
-| **Portability**      | Export and convert                     | Clone the repository          |
-| **Content model**    | Relational, strongly typed             | Document-oriented             |
-| **Access control**   | Granular, per role/field               | Repository-level              |
-| **Runtime cost**     | Server + database, always on           | Build only                    |
-| **Security surface** | API, auth layer, DB, dependencies      | Nothing at runtime            |
-| **Best for**         | Multi-channel apps and complex content | Publications and static sites |
+当消费者是一个网站、内容是prose和“无服务器”是一个功能时，这是正确的形式。 Decap CMS, TinaCMS, Keystati, Pages CMS, and [LightCMS](/blog/what-is-lightcms/) 生活在这里。
 
 ---
 
-## Where Each One Wins
+## 侧面
 
-### Choose headless when:
-
-- One body of content feeds **several consumers**: a website, an app, and an integration.
-- Content has **relationships**: products and variants, episodes and seasons, articles and authors.
-- Editors need **instant publication** with no build in the path, plus approvals and granular permissions.
-- Your frontend is an application, not a document.
-
-### Choose Git based when:
-
-- The output is a **website or publication**: blog, docs, changelog, marketing site.
-- Content is **documents**, and the natural tool for documents is a writing surface.
-- You want **zero runtime**: no server to patch, no database to bill, no per-request compute.
-- **Ownership and longevity** matter: plain files remain readable for decades, independent of any vendor.
-
-That last point deserves weight. Database content is portable only if someone writes the export and the importer survives; file content is portable on its own terms.
+|                      | 无头CMS            | 基于 Git 的 CMS |
+| :------------------- | :--------------- | :----------- |
+| **存储**               | 数据库              | 存储库中的文件      |
+| **送货**               | 请求时间的 API        | 构建到静态文件      |
+| **更改延迟**             | 即时的              | 下一个版本        |
+| **Versioning**       | 插件或构建在版本中        | 免费Git 历史记录   |
+| **Portability**      | 导出和转换            | 复制资源库        |
+| **内容模型**             | 相对，强烈输入          | 面向文件         |
+| **访问控制**             | 颗粒，每个角色/字段       | 仓库级别         |
+| **运行时间成本**           | 服务器 + 数据库，总是开启   | 仅生成          |
+| **Security surface** | API，认证图层，DB，依赖关系 | 运行时没有任何内容    |
+| **最好**               | 多频道应用和复杂内容       | 出版物和静态网站     |
 
 ---
 
-## The Overlap: Static Export and Hybrid Setups
+## 每个赢得一局的地方
 
-The categories blend in practice:
+### 选择无耳朵时：
 
-- A headless CMS with a static export step becomes Git-adjacent, but you still operate the database.
-- A Git based CMS that exposes an API for previews behaves headlessly, but the source of truth is still files.
-- Many teams run **Git based for the publication** and a **headless service for the application**, choosing per surface rather than per ideology.
+- 一种内容源**多个消费者**：网站、应用程序和集成。
+- 内容有 **relationship**: 产品和变体、 剧集和季节、 文章和作者
+- 编辑器需要**即时发布** 且没有构建在路上，加上审批和授标权限。
+- 您的前端是一个应用程序，不是一个文档。
 
-The pragmatic rule: decide where the source of truth should live for _this_ project, not which philosophy you endorse.
+### 选择基于 Git 的时候：
+
+- 输出为 **网站或出版物**：博客、文档、更新日志、营销网站。
+- 内容是 **documents**\*，文件的自然工具是写字面。
+- 你想要**零运行时间**: 没有服务器来补丁，没有数据库来支付费用，没有每个请求的计算。
+- **所有权和长久性** 很重要：几十年来，普通文件仍然可以阅读，独立于任何供应商。
+
+最后一点值得重视。数据库内容只有在某人写导出和导入者幸存者的情况下才能移动；文件内容按其自身的条件是可以移动的。
 
 ---
 
-## A Note on Cost Shapes
+## 重叠：静态导出和混合设置
 
-Headless pricing usually scales with API calls, seats, or bandwidth: consumption that grows with success. Git based costs are build minutes and hosting, which for static output is close to zero regardless of traffic. For a publication with spiky readership, that difference compounds. See [static vs dynamic sites](/blog/static-vs-dynamic/) for the underlying argument.
+分类在实践中混合：
+
+- 无头的 CMS 静态导出步骤变成Git-adjact，但您仍然在操作数据库。
+- 基于 Git 的 CMS，它暴露了用于预览的API，但真相来源仍然是文件。
+- 许多团队运行**Git发布**。**应用程序**无头服务\*\*，每个表层而不是每个意识形态。
+
+务实的规则：决定真相来源应该在哪里&#x4E3A;_&#x8FD9;&#x4E2A;_&#x9879;目，而不是你所赞同的哲学。
 
 ---
 
-## Frequently Asked Questions
+## 成本形状说明
 
-### Is a Git based CMS headless?
+无头定价通常用API调用、座位或带宽：成功增长的消耗。基于 Git 的成本是构建时间和主机，不管流量如何，静态输出都接近零。对于一个带有尖端读者的出版物来说，这种差异是多种多样的。查看[static vs dynamic sites](/blog/static-vs-dynamic/) 以了解基本参数。
 
-Not usually. Its output is static HTML from a build rather than API-delivered content, so the "headless" framing does not quite apply, though it is equally decoupled from presentation.
+---
 
-### Which is better for SEO?
+## 常见问题
 
-Either works. Static Git based output tends to score better on Core Web Vitals by default because there is no server work in the page load.
+### 基于 Git 的 CMS 难道没有头？
 
-### Which is easier for non-technical editors?
+不是通常情况。其输出来自构建而不是 API 交付的内容的静态HTML。 因此，“无头”框架并不完全适用，尽管它与表述方式相去甚远。
 
-Both can be easy. What matters is the editor itself: a document editor versus a field form matters more than the storage layer underneath.
+### 哪一种方法对SEO更好？
 
-### Can I switch between them later?
+两者都是行之有效的。基于静态Git的输出默认在Core Web Vits上得分较好，因为页面加载中没有服务器工作。
 
-Yes, but with different costs. Git to headless means importing files into a schema; headless to Git means exporting entries to Markdown. Plan the migration before the content model gets complicated.
+### 对于非技术性编辑来说，哪里更容易？
 
-#### Do I need a developer for a Git based CMS?
+两者都是容易的。重要的是编辑器本身：一个文件编辑器对一个字段的表单比下面的存储层更重要。
 
-Once, to connect the repository and confirm the build. After that, publishing is a browser activity.
+### 我可以稍后在它们之间切换吗？
+
+是的，但成本不同。获取无头状态意味着导入文件到方案中；无头状态表示导出条目到Markdown。在内容模型变得复杂之前规划迁移。
+
+#### 我需要基于 Git 的 CMS 的开发者吗？
+
+一次要连接仓库并确认构建。在此之后，发布是一个浏览器活动。
 
 ---
 
