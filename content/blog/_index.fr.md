@@ -1,9 +1,9 @@
 +++
-title = "Blog"
-description = "Every post: static site generators, Git based CMS workflows, and hosting comparisons."
+title = "Blogue"
+description = "Chaque post : générateurs de sites statiques, flux de travail CMS basés sur Git, et comparaisons d'hébergement."
 sort_by = "date"
 template = "article_list.html"
 page_template = "article.html"
 +++
 
-Every post: static site generators, Git based CMS workflows, and hosting comparisons.
+Chaque post : générateurs de sites statiques, flux de travail CMS basés sur Git, et comparaisons d'hébergement.
