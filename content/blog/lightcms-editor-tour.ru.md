@@ -1,114 +1,114 @@
 ---
 title: "A Tour of the LightCMS Editor: WYSIWYG That Outputs Clean Markdown"
-description: "Inside the LightCMS writing surface: TipTap-powered visual editing with math, code highlighting, tables, task lists, and media that still produces hand-editable Markdown."
+description: "Внутри LightCMS для написания: TipTap-powered visual editing with math, code highlighting, tables, task lists and media that still make hand-editable Markdown."
 serial: 31
 date: 2026-10-16T09:10:00Z
 draft: false
 keywords:
-  - lightcms editor
+  - Редактор lightcms
   - wysiwyg markdown editor
-  - visual editor for markdown
+  - визуальный редактор markdown
   - tiptap editor
   - markdown wysiwyg
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - editor
+    - молнии
+    - редактор
     - markdown
-    - writing
+    - запись
 ---
 
-Most "Markdown editors" are a text area with a preview pane stapled to the side. You write raw syntax, glance at the result, and hope the nesting is right. The lightCMS editor works the other way. **You write, and the editor writes Markdown underneath.**
+Большинство "Редакторов Markdown" - это текстовая область со панелью предварительного просмотра, расположенной сбоку. Вы пишете синтаксис, взгляните на результат и надеетесь на правильное вложение. Редактор lightCMS работает с другим способом. **Вы пишете и редактор записывает Markdown под собой.**
 
-This is a tour of that writing surface: what it does, why it works that way, and what it deliberately refuses to do.
+Это тур этой письменной поверхности: что она делает, почему она работает таким образом, и что она намеренно отказывается делать.
 
 ---
 
 ## The Core Idea: See the Document, Not the Syntax
 
-The editor is built on [TipTap](https://tiptap.dev), a ProseMirror-based rich text framework, configured to serialize everything it produces into standard Markdown plus YAML front matter.
+Редактор построен на [TipTap](https://tiptap.dev), основанном на ProseMirror, богатом текстовом фрейме настроен на сериализацию всего, что оно производит в стандартный Markdown плюс YAML перед делом.
 
-That means:
+Это означает:
 
-- **Bold** is a toolbar button or `Cmd+B`, and it writes `**bold**` to the file.
-- A heading is a dropdown, and it writes `## Heading`.
-- A table is inserted, dragged, and edited as a table, and lands as a pipe table in your repository.
+- **Жирный** — это кнопка панели инструментов или `Cmd+B`, и он записывает `**bold**` в файл.
+- Заголовок выпадает, и он пишет `## Заголовок`.
+- Таблица добавляется, перетаскивается и редактируется в виде таблицы, а земельные участки в качестве таблицы трубопроводов в вашем хранилище.
 
-You get the immediacy of a word processor with the durability of plain text. There is no proprietary document format, no binary blob, and no conversion step when you leave.
-
----
-
-## What You Can Drop Into a Post
-
-### Structured text
-Headings, block quotes, ordered and unordered lists, horizontal rules, and task lists: the full skeleton of a technical article, all keyboard-reachable.
-
-### Code Blocks with Highlighting
-Insert a fenced block, pick the language, and the editor keeps the fence and language tag intact. Your published post renders with the same syntax highlighting your SSG already applies.
-
-### Math with KaTeX
-Write inline math or display equations and see them typeset live. For technical publishing such as ML posts, physics notes, and algorithm write-ups, this removes the "compile to check the formula" loop.
-
-### Tables
-Insert rows and columns visually. Markdown tables are miserable to author by hand; here they are just cells.
-
-### Media
-Drag images onto the page. [LightCMS](https://lightcms.me) stores the file, generates the reference, and writes it into your content, so a screenshot goes from clipboard to published without a trip through your file system.
+Вы получаете мгновение текстового процессора с прочностью обычного текста. Нет ни одного формата документа собственности, ни бинарной блузки и ни одного шага преобразования при выходе.
 
 ---
 
-## Front Matter Without the YAML
+## Что вы можете выбросить на пост
 
-The other half of any static-site post is its front matter, and it is where hand-editing usually goes wrong: a stray tab, a date in the wrong format, an unclosed quote, and the build breaks.
+### Структурный текст
+Заголовки, блочные кавычки, упорядоченные и неупорядоченные списки, горизонтальные правила и списки задач: полный скелет технической статьи, вся клавиатура доступна.
 
-In [LightCMS](https://lightcms.me), front matter is a form: title, description, date, tags, keywords, and whatever else your schema declares. The editor validates as you type and writes correctly formatted YAML on publish. Writers never see the syntax, and the repository still receives what the SSG expects.
+### Кодовые Блоки с Подсветкой
+Вставьте огражденный блок, выберите язык, и редактор сохраняет забор и языковой тэг нетронутым. Ваш опубликованный пост с тем же синтаксисом подчёркивает ваш SSG уже применяется.
 
-A large share of "my build is failing" support threads in static-site communities trace back to malformed front matter, and a visual form removes that class of error.
+### Математика с KaTeX
+Напишите inline математические или дисплей уравнения и увидеть их типизит живым. Для технической публикации, такой как записи на ML, физические заметки и алгоритмы, это удаляет цикл "компилировать для проверки формулы".
 
----
+### Таблицы
+Вставьте строки и столбцы визуально. Таблицы Markdown несчастны автору вручную; здесь они просто ячейки.
 
-## Themes Built for Long Sessions
-
-The editor ships with light and dark modes. That sounds cosmetic until you have written for three hours: a pure `#ffffff` background at 1am is hostile, and most admin dashboards do not care. [LightCMS](https://lightcms.me) picks its palettes for reading and writing over long sessions, not for a screenshot on a landing page.
-
----
-
-## What the Editor Will Not Do
-
-Two boundaries are intentional:
-
-1. **It will not let you break the format.** Every action maps to valid Markdown. There is no state where the editor saves something your SSG cannot read.
-2. **It is not a design tool.** Layout, theme, and presentation belong to your templates: the CMS owns content, the repository owns code. Keeping that line clean is what lets designers and writers work in the same repository without stepping on each other.
+### Медиа
+Перетащите изображения на страницу. [LightCMS](https://lightcms.me) хранит файл, генерирует ссылку и записывает её в ваш контент, , так что скриншот отправляется из буфера обмена для публикации без поездки через вашу файловую систему.
 
 ---
 
-## Why Not Just Use a Code Editor?
+## Передняя Математика без YAML
 
-You can, and developers often do. But as soon as a second person touches the repository, "just edit the Markdown" becomes a support burden: wrong front matter, mangled tables, accidental whitespace commits. Fixing a typo then means installing an editor, cloning a repo, and learning a branch workflow.
+Остальной половиной любой статичной записи сайта является его передняя часть, и это там, где ручное редактирование обычно идет неправильно: белая вкладка, дата в неправильном формате, незакрытая кавычка и распаковка сборки.
 
-The [LightCMS](https://lightcms.me) editor leaves the developer's workflow untouched and removes those barriers for everyone else.
+В [LightCMS](https://lightcms.me) передняя часть — форма: заголовок, описание, дата, теги, ключевые слова и другие символы вашей схемы. Редактор проверяет правильность форматирования YAML при публикации. Авторы никогда не видят синтаксис, а репозиторий все еще получает то, что ожидает SSG.
 
----
-
-## Frequently Asked Questions
-
-### Does the editor produce messy Markdown?
-
-No. It serializes to standard Markdown with YAML front matter, the same output a careful human would write. Open any published post in VS Code and it reads normally.
-
-### Can I Still Edit the Files by Hand?
-
-Always. [LightCMS](https://lightcms.me) commits to your repository like anyone else would. Hand edits, editor edits, and AI edits all land as the same `.md` files.
-
-### Does It Support Markdown Short-Codes?
-
-Your SSG's shortcodes live in the content as plain text and are passed through untouched; the editor does not attempt to interpret or reformat them.
-
-### What About Images?
-
-Drag and drop. [LightCMS](https://lightcms.me) places the asset and writes the reference so the path matches what your build expects.
+Большая часть "моего сборки не работает" потоки поддержки в статичных сообществах сайта трассируются обратно к злоумышленникам передней материи, и визуальная форма удаляет этот класс ошибки.
 
 ---
 
-Next: [the AI copilot](/blog/lightcms-ai-copilot/) that lives beside this editor, and [dictating a draft with your voice](/blog/lightcms-voice-to-text/) when typing is the slow part.
+## Созданные темы для длинных сессий
+
+Редактор поставляется со светлыми и темными режимами. Это звучит косметически, пока вы не написали три часа: чистый фон «#ffffff» в 1am враждебно, и большинство панели админа не заботятся. [LightCMS](https://lightcms.me) выбирает свои палитры для чтения и записи за длительные сеансы, а не для скриншота на целевой странице.
+
+---
+
+## Что редактор не будет делать
+
+Два границы преднамеренны:
+
+1. **Это не позволит разбить формат.** Все действия на соответствующие Markdown. Нет состояния, в котором редактор сохраняет что-то, что ваш SSG не может прочитать.
+2. **Это не инструмент дизайна.** Макет, тема и презентация принадлежат вашим шаблонам: CMS владеет содержимым, репозиторий владеет кодом. Чистая строка - это то, что позволяет дизайнерам и писателям работать в одном и том же репозитории.
+
+---
+
+## Почему бы не использовать только редактор кода?
+
+Вы можете и разработчики часто делать. Но как только второй человек коснется репозитория, "просто отредактируйте Markdown" становится нагрузкой на поддержку: неправильные передние таблицы, случайные коммиты пробелов. Исправление опечатки означает установку редактора, клонирование репозитория и изучение рабочего процесса ветки.
+
+Редактор [LightCMS](https://lightcms.me) оставляет нетронутый рабочий процесс разработчика и устраняет эти барьеры для всех остальных.
+
+---
+
+## Часто задаваемые вопросы
+
+### Производит ли редактор беспорядочный Markdown?
+
+Нет. Он сериализуется к стандартному Markdown при помощи YAML переднего элемента, то же самое выводит тщательный ответ человеку. Откройте любой опубликованный пост в VS Code и читайте его нормально.
+
+### Могу ли я все еще редактировать файлы вручную?
+
+Всегда [LightCMS](https://lightcms.me) совершает коммиты в ваш репозиторий, как и кто-либо другой. Hand edits, editor edits, and AI edits all land as the same `.md` files
+
+### Поддерживает ли он Markdown Short-Codes?
+
+Шорткоды вашего SSG живут в виде обычного текста и пропускаются через нетронутые; редактор не пытается интерпретировать или реформировать их.
+
+### Что о изображениях?
+
+Перетащите и вытащите. [LightCMS](https://lightcms.me) размещает актив и пишет ссылку, чтобы путь соответствовал ожиданиям вашей сборки.
+
+---
+
+Далее: [копилот AI](/blog/lightcms-ai-copilot/), который живет рядом с этим редактором, и [диктовать черновик голосом](/blog/lightcms-voice-to-text/) при вводе является медленной частью.
