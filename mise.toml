@@ -4,6 +4,7 @@ bun = "latest"
 biome = "latest"
 "npm:pagefind" = "latest"
 "npm:@crowdin/cli" = "latest"
+"npm:@posthog/cli" = "latest"
 
 
 [tasks]
