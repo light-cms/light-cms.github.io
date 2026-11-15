@@ -66,8 +66,8 @@ Wenn Ihre Bewertung beginnt und endet mit "Hält sie meinen Inhalt in Git, beide
 
 - **Null-Setup für Mitwirkende.** Ein Autor meldet sich mit GitHub an, öffnet ein Repository und beginnt zu schreiben. Keine CLI, keine lokale Checkout, keine Knoten-Version zu finden.
 - **Schreiben, nicht Formularfüllung.** Artikel sind Dokumente. Keystatic's generierte Formulare eignen sich hervorragend für strukturierte Datensätze und schwerer für einen 2.000 Wort-Essay.
-- \*\*Struktur ohne Deploy. \* Neue Frontthemen werden im Tool konfiguriert, anstatt als Code zu übertragen, so dass Metadatenänderungen nicht auf einen Entwickler warten.
-- \*\*Die gebündelten Extras. \*\* [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/) und [Newsletter versand](/blog/newsletter-email-automation/) sind Teil des Produktes.
+- \* Neue Frontthemen werden im Tool konfiguriert, anstatt als Code zu übertragen, so dass Metadatenänderungen nicht auf einen Entwickler warten.
+- \*\* [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/) und [Newsletter versand](/blog/newsletter-email-automation/) sind Teil des Produktes.
 
 ---
 
