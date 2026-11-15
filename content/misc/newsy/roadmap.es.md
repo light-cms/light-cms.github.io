@@ -1,31 +1,31 @@
 ---
-title: Roadmap
-description: Roadmap
+title: Hoja de ruta
+description: Hoja de ruta
 date: '1111-11-11T11:11:00Z'
 draft: false
 weight: 0
 tags:
-  - newsy
-  - newsletter
+  - nuevo
+  - boletín de noticias
 isCJKLanguage: false
 headless: false
 ---
 
-Newsy already supports a shared instance and stores only the installation ID in its database.
+Newsy ya soporta una instancia compartida y almacena sólo el ID de instalación en su base de datos.
 
-## Use the hosted instance
+## Usar la instancia alojada
 
-You can try the hosted instance at [https://newsy.lightcms.me](https://newsy.lightcms.me).
+Puedes probar la instancia alojada en [https://newsy.lightcms.me](https://newsy.lightcms.me).
 
-## Deploy your own instance
+## Desplegar tu propia instancia
 
-Deploy your own copy on Vercel:
+Despliega tu propia copia en Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy\&env=DATABASE_URL\&project-name=newsy\&repository-name=newsy)
+[![Desplegar con Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy\&env=DATABASE_URL\&project-name=newsy\&repository-name=newsy)
 
-The hosted instance runs on Vercel's hobby tier, so uptime and function
-invocation limits may apply.
+La instancia alojada se ejecuta en el nivel hobby de Vercel, por lo que pueden aplicarse límites de tiempo de actividad y función
+.
 
-If Newsy has been useful, starring the [repository](https://github.com/light-cms/newsy) helps.
+Si Newsy ha sido útil, protagonizar la [repository](https://github.com/light-cms/newsy) ayuda.
 
-[![UPI Pay](https://github.com/inulute/upi/raw/main/assets/upi.svg)](https://upi.pratyay.online)
+[![Paga UPI](https://github.com/inulute/upi/raw/main/assets/upi.svg)](https://upi.pratyay.online)
