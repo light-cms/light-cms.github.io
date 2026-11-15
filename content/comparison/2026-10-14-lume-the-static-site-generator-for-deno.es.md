@@ -1,74 +1,74 @@
 ---
-title: "Lume: The Static Site Generator for Deno"
-description: "Deno's static site generator, explained: supported formats, plugin architecture, how it compares to Jekyll, Hugo, and Eleventy, and how it fits a Git CMS workflow."
+title: "Lume: Generador de sitios estáticos para Deno"
+description: "El generador estático de sitios de Deno, explicó: formatos soportados, arquitectura de plugins, cómo se compara con Jekyll, Hugo, y la funcionalidad, y cómo se ajusta a un flujo de trabajo CMS de Git."
 serial: 29
 date: 2026-10-14T15:40:00Z
 draft: false
 keywords:
-  - lume static site generator
+  - generador de sitio estático de lume
   - deno ssg
   - lume vs eleventy
-  - lume deno cms
-  - lume land
+  - lume deso cms
+  - tierra de lume
 preview: /og-image.webp
 taxonomies:
   tags:
     - ssg
     - lume
     - deno
-    - static-sites
+    - sitios estáticos
 ---
 
-[Lume](https://lume.land) (Galician for "fire") is the static site generator at the center of the Deno ecosystem. Inspired by Jekyll, Hugo, and Eleventy, it aims to be simpler to configure than any of them while staying just as flexible, and it runs natively on Deno, with no `node_modules` in sight.
+[Lume](https://lume.land) (Galiciano por "fuego") es el generador estático de sitios en el centro del ecosistema de Deno. Inspirado por Jekyll, Hugo, y umbrentía, apunta a ser más sencillo de configurar que cualquiera de ellos mientras permanece igual de flexible, y se ejecuta nativamente en Deno, sin `node_modules` en sight.
 
 ---
 
-## What Lume Is
+## Qué Lume es
 
-A fast, composable, extensible static site generator written in Deno. You point it at a source directory of content, it processes your files through a pipeline of plugins, and it writes pure static HTML ready for any CDN. The philosophy: sensible defaults, minimal configuration, and every stage swappable.
+Un generador de sitios estáticos rápido, compuesto y extensible escrito en Deno. Usted lo apunta a un directorio de origen de contenido, que procesa sus archivos a través de una pipeline de plugins, y escribe HTML estático puro listo para cualquier CDN. La afición: los valores por defecto, la configuración mínima, y cada etapa intercambiable.
 
-## Formats and Templating
+## Formatos y plantillas
 
-Lume's headline feature is format flexibility. Out of the box it handles:
+La característica de la línea de cabecera de Lum es la flexibilidad del formato. Fuera de la caja que maneja:
 
-- **Markdown** (with plugins for GitHub-flavored syntax, footnotes, and more)
-- **YAML and JSON data files**
-- **JavaScript and TypeScript modules** as pages or data sources
-- **JSX** (Preact components rendered to static HTML)
-- **Nunjucks** and other template languages via plugins
+- **Markdown** (con plugins para sintaxis con sabor a GitHub, notas a pie de página y más)
+- **Archivos de datos YAML y JSON**
+- **Módulos JavaScript y TypeScript** como páginas o fuentes de datos
+- **JSX** (componentes preactivos renderizados a HTML estático)
+- **Nunjucks** y otros idiomas de plantilla a través de plugins
 
-That last point matters: a Lume site can mix Markdown articles with JSX components in the same build, so content-heavy sites with occasional interactive sections feel natural.
+Ese último punto importa: un sitio de Lume puede mezclar artículos de Markdown con componentes JSX en la misma construcción, para que sitios pesados de contenido con secciones interactivas ocasionales se sientan naturales.
 
-## Ecosystem
+## Ecosistema
 
-- **Plugins** cover everything from syntax highlighting (Prism, Shiki) to image transformation, sitemaps, and feeds: the Eleventy-style "assemble your own pipeline" model, with Deno-native ergonomics.
-- **Deno toolchain**: built in TypeScript, secure-by-default execution, and reproducible environments without a package manager ritual.
+- Los **Plugins** cubren todo, desde el resaltado de sintaxis (Prisma, Shiki) hasta la transformación de imágenes, los sitemaps y los feeds: el estilo venezolano "ensamblar tu propio tubería" modelo, con ergonómica Deno-nativa.
+- **Deno toolchain**: compilado en TypeScript, ejecución segura por defecto y entornos reproducibles sin un ritual del gestor de paquetes.
 - **Backed by Deno**: used in official tutorials, it is the de-facto answer to "what do I use to make a static site on Deno?"
 
-## Where It Fits
+## Donde encaja
 
-Lume occupies the same niche as [Eleventy](/blog/eleventy-vs-astro/): minimal output, templating freedom, no client-side framework imposed. Choose it if your world is Deno/TypeScript; choose Eleventy if your world is Node; choose [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) if you want component islands built in. The wider field is surveyed in [best static site generators](/blog/best-static-site-generators/).
+Lume ocupa el mismo niche que [Eleventy](/blog/eleventy-vs-astro/): producción mínima, libertad de plantilla, no se impone un marco de trabajo del lado del cliente. Elige si tu mundo es Deno/TypeScript; elige entusiasta si tu mundo es Nodo; elige [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) si quieres incluir islas de componentes. El campo más ancho es encuestado en [los mejores generadores estáticos de sitios](/blog/best-static-site-generators/).
 
-## Content and CMS Workflow
+## Contenido y flujo de trabajo CMS
 
-Lume reads Markdown with front matter from your repository like every generator in this category. Pair it with a Git based CMS ([LightCMS](/getting-started/) or the [wider field](/comparison/top-git-cms/)) and writers publish visually while Lume compiles the commits into HTML. Deployment targets are the usual free static hosts ([comparison](/blog/cloudflare-pages-vs-github-pages/)).
+Lume lee Markdown con materia frontal de su repositorio como todos los generadores de esta categoría. Empareje con un CMS basado en Git ([LightCMS](/getting-started/) o el [campo más amplio](/comparison/top-git-cms/)) y los escritores publiquen visualmente mientras Lume compila los commits en HTML. Los objetivos de despliegue son los hosts estáticos habituales gratuitos ([comparison](/blog/cloudflare-pages-vs-github-pages/)).
 
 ---
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-### Is Lume a CMS or a static site generator?
+### ¿Es Lume un CMS o un generador estático de sitios?
 
-A static site generator. For the editing layer, pair it with a Git based CMS that commits Markdown into its source directory.
+Un generador de sitio estático. Para la capa de edición, emparejarla con un CMS basado en Git que compromete Markdown en su directorio de fuentes.
 
-### What is the difference between Lume and Eleventy?
+### ¿Cuál es la diferencia entre Lume y el Pacífico?
 
-Very little philosophically: both produce zero-JS static output with templating freedom. Lume is Deno-native with TypeScript built in; Eleventy runs on Node with the larger ecosystem.
+Muy poco de forma ófica: ambos producen salida estática cero JS con libertad de plantilla. Lume es Deno-native con TypeScript incorporado; enty funciona en Node con el ecosistema más grande.
 
-### Does Lume support JSX?
+### ¿Soporta Lume JSX?
 
-Yes. Preact components can render to static HTML alongside Markdown pages, one of its most loved features.
+Sí. Los componentes Preact pueden renderizar a HTML estático junto a páginas Markdown, una de sus características más queridas.
 
-### Is Lume fast?
+### ¿Es Lume rápido?
 
-Yes. Like all single-process generators producing static output, builds are measured in seconds; visitors receive the same cached HTML every SSG produces.
+Sí. Al igual que todos los generadores de procesos individuales que producen salida estática, las construcciones se miden en segundos; los visitantes reciben el mismo HTML en caché que cada SSG produce.
