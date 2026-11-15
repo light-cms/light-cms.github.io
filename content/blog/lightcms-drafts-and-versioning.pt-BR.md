@@ -1,123 +1,123 @@
 ---
-title: "Drafts, Revisions, and Rollbacks: Version Control for Writers"
-description: "LightCMS turns Git history into an editorial workflow: drafts, commits, pull requests, and one-click rollback, without asking a writer to learn Git."
+title: "Rascunhos, revisões e reversões: Controle de Versão para Escritores"
+description: "LightCMS transforma histórico Git em um fluxo de trabalho editorial: rascunhos, commits, pull requests, e reversão com um clique, sem pedir a um escritor para aprender Git."
 serial: 34
 date: 2026-10-16T09:40:00Z
 draft: false
 keywords:
   - git versioning content
-  - cms draft workflow
+  - Workflow rascunho de cms
   - content rollback
-  - markdown version history
-  - lightcms drafts
+  - histórico de versões markdown
+  - rascunhos de luzes
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - luzes
     - git
     - workflow
-    - collaboration
+    - colaboração
 ---
 
-Version control is the best argument for a Git based CMS, and the one most badly explained. Writers do not want to hear about commits, fast-forwards, or trees. They want to know three things: **can I save this without publishing it, see what changed, and undo it if I got it wrong?**
+O controle de versão é o melhor argumento para um CMS baseado em Git e o mais mal explicado. Os autores não querem ouvir falar de compromissos, de avanços rápidos ou de árvores. Eles querem saber três coisas: **Posso salvar isso sem publicá-lo, ver o que mudou e desfazer se eu errar?**
 
-Git answers all three without a writer learning Git.
-
----
-
-## The Draft Stays a Draft
-
-`draft: true` in the front matter is the whole mechanism. When you create or edit a post in [LightCMS](https://lightcms.me), the flag lives in the file's front matter, and your SSG skips it during build. The post sits in the repository, reviewable and safe, and never renders on the live site.
-
-Flip it to `false` on publish and the next build picks it up. No separate "drafts database" can drift from what sits in your repository, and a draft cannot leak because two systems disagree about its state.
-
-Because a draft is just a file, everything else works on it too: it can sit on a branch, live behind a pull request, be edited by someone else, and be diffed line by line before it goes live.
+Git responde a todos os três sem um escritor aprender Git.
 
 ---
 
-## Every Save Is a Commit
+## O rascunho fica como um rascunho
 
-Each publish in [LightCMS](https://lightcms.me) creates a commit with a coherent message, which gives you:
+`rascunho: verdadeiro` na parte da frente é o mecanismo inteiro. Quando você cria ou edita uma postagem em [LightCMS](https://lightcms.me), a bandeira mora na frente do arquivo e seu SSG pula durante a construção. A postagem está localizada no repositório, revisável e segura e nunca renderiza no site em produção.
 
-- **Complete history.** Who changed what, and when. No plugin required.
-- **True diffs.** Markdown diffs are readable, unlike rows in a `post_content` column.
-- **Blame that means something.** You can ask when a paragraph changed and get an answer.
-- **Free backups.** Every clone of the repository is a full copy of your content.
+Vire isto para `false` na publicação e a próxima criação o pega. Nenhum "banco de dados de rascunhos" separado pode derivar do que tem no seu repositório, e um rascunho não pode vazar porque dois sistemas discordam sobre seu estado.
 
-For a solo writer this is invisible infrastructure. For a team, it is the audit trail that most commercial CMSs charge for.
+Porque um rascunho é apenas um arquivo, todo o resto também funciona nele: ele pode sentar em um ramo ao vivo atrás de um pull request, seja editado por outra pessoa, e seja comparado linha por linha antes de sair ao vivo.
 
 ---
 
-## Branches and Pull Requests: Editorial Review, Properly
+## Cada Salvar é um Commit
 
-[LightCMS](https://lightcms.me) can publish in two modes, and choosing between them is choosing your editorial process:
+Cada publicação em [LightCMS](https://lightcms.me) cria um commit com uma mensagem coerente, o que dá a você:
 
-| Mode              | Flow                                      | Best for                                        |
-| :---------------- | :---------------------------------------- | :---------------------------------------------- |
-| **Direct commit** | Publish → commit → CI builds → live       | Solo writers, low-risk edits, quick fixes       |
-| **Pull request**  | Publish → PR → review → merge → CI builds | Teams, drafts with oversight, sensitive changes |
+- **História completa.** Quem mudou o quê e quando. Nenhum plugin necessário.
+- **Verdadeiros diffs.** Os diffs do Markdown são legíveis, ao contrário das linhas em uma coluna `post_content`.
+- **culpe isso significa alguma coisa.** Você pode perguntar quando um parágrafo mudou e obter uma resposta.
+- **Backup gratuitos.** Cada clone do repositório é uma cópia completa do seu conteúdo.
 
-The pull request mode deserves the attention. It gives you a real editorial gate: a colleague reads the proposed Markdown, leaves a comment on the exact sentence they object to, and merges when it is right. That gate runs on GitHub's native review tools rather than a bespoke approval system that locks your content to one vendor.
-
-Turn on branch protection and "publish" means "submit for review." Turn it off and "publish" means "publish."
+Para um escritor solo esta é uma infra-estrutura invisível. Para uma equipa, é a trilha de auditoria que a maior parte das CMS comerciais cobre.
 
 ---
 
-## Rollback: The Feature People Forget to Ask For
+## Branches e Pull Requests: Revisão Editorial, Propriedade
 
-Every CMS should answer one question fast: **something wrong is live, so how do I fix it?**
+[LightCMS](https://lightcms.me) pode publicar em dois modos e escolher entre eles está escolhendo o seu processo editorial:
 
-With Git based content the answer is a revert:
+| Modo                 | Fluxo                                                    | Melhor para                                                |
+| :------------------- | :------------------------------------------------------- | :--------------------------------------------------------- |
+| **Commit direto**    | Publicar → commit → compilações de CI → produção ao vivo | Solo escritores, edições de baixo risco, correções rápidas |
+| **Solicitar pedido** | Publicar → PR → review → merge → CI builds               | Equipe, rascunhos com supervisão e mudanças sensíveis      |
 
-1. Open the file's history in GitHub (or [LightCMS](https://lightcms.me)).
-2. Choose the last good version.
+O modo de pull request merece a atenção. Isso dá-lhe um verdadeiro portão editorial: um colega lê o Markdown proposto e Deixa um comentário na exata frase a qual eles objetam e mescla quando ela estiver correta. Esse portão é executado nas ferramentas de revisão nativas do GitHub, em vez de um sistema de aprovação adicional que bloqueia seu conteúdo a um fornecedor.
+
+Ativar a proteção de branch e "publicar" significa "enviar para revisão". Desligar e "publicar" significa "publicar".
+
+---
+
+## Reverter: As Pessoas em Recurso Esqueçam Pedir
+
+Todos os CMS devem responder rapidamente a uma pergunta: **algo errado está acontecendo, então como posso corrigi-lo?**
+
+Com o conteúdo baseado no Git, a resposta é um reverso:
+
+1. Abre o histórico do arquivo no GitHub (ou [LightCMS](https://lightcms.me)).
+2. Escolha a última versão boa.
 3. Revert.
 
-The correction commits like any other edit, your pipeline rebuilds, and the bad version is gone, usually within a minute on a modern host. Restoring a database backup at 2am also reverts every _other_ change made in between. With per-file history, you roll back one post, not the whole site.
+Os commits de correção como qualquer outra edição, o seu pipeline é reconstruído e a versão ruim sumiu, geralmente dentro de um minuto em um host moderno. Restaurar um backup de banco de dados no 2am também reverte todas as _outras_ alterações feitas no meio. Com histórico de arquivos, você reverte uma publicação, não todo o site.
 
 ---
 
-## Why Not Just Use Word and Email?
+## Por que não usar apenas palavras e e-mail?
 
-Because that round trip loses content. The version in the attachment is not the version on the site, nobody knows which file is canonical, and eventually someone publishes `final-v3-USE-THIS.md`. A shared repository with a visual editor collapses the loop: one file, one history, one publish button.
-
----
-
-## A Practical Team Setup
-
-For a small team, the arrangement that tends to stick:
-
-- **Main branch is always deployable.** Only merges reach it.
-- **Features and drafts on branches.** Long-form work in progress stays off main without being hidden.
-- **Pull requests for anything editorially sensitive**, direct commits for typo fixes, because requiring review on a comma correction guarantees people will work around the process.
-- **Tag or milestone releases** if you publish on a schedule; a failed deploy can then be traced to a known set of changes.
-
-None of that is configured inside [LightCMS](https://lightcms.me). It is standard GitHub practice, which is the point: the CMS inherits a workflow your repository already has.
+Porque essa ida e volta perde conteúdo. A versão no anexo não é a versão do site, ninguém sabe qual arquivo é canônico e eventualmente alguém publica o `final-v3-USE-THIS.md`. Um repositório compartilhado com um editor visual recolhe o laço: um arquivo, um histórico, um botão de publicação.
 
 ---
 
-## Frequently Asked Questions
+## Uma configuração prática de equipe
 
-### Do writers need to learn Git?
+Para uma pequena equipe, o arranjo que tende a ficar:
 
-No. They use the editor and a publish button. Branches, commits, and pull requests exist underneath and are surfaced only when you choose to use them.
+- **A branch principal é sempre implantável.** Somente as combinações a alcançam.
+- **Funcionalidades e rascunhos em branches.** Há trabalhos de longa forma em andamento que ficam fora do principal sem serem ocultados.
+- **Pull requests para qualquer coisa editorialmente sensível**, commits diretos para correções de tipos, porque exigir revisão em uma correção de vírgula garante que as pessoas trabalharão ao redor do processo.
+- **Marcadores ou marcos** se você publicar em um agendamento; um deploy falhado pode então ser rastreado por um conjunto conhecido de alterações.
 
-### Can I restore an old version of a post?
-
-Yes. Reverting to a previous commit restores that file's content, and the next build publishes it.
-
-### Are drafts visible to the public?
-
-No. A post with `draft: true` is excluded from the build, so it never reaches the deployed site. It is visible to anyone with repository access, which is the point.
-
-### What happens if two people edit the same post?
-
-The second commit conflicts, and Git flags it explicitly rather than silently overwriting. For most teams, publishing to a branch and reviewing with a pull request removes the problem before it happens.
-
-### Does [LightCMS](https://lightcms.me) keep its own copy of my content?
-
-No. The repository is the source of truth, the same [zero lock-in principle](/blog/what-is-lightcms/) that makes the approach worth choosing.
+Nada disso está configurado dentro de [LightCMS](https://lightcms.me). Esta é a prática padrão do GitHub, que é o ponto: o CMS herda um fluxo de trabalho que seu repositório já possui.
 
 ---
 
-See [starting from a starter template](/blog/start-with-a-lightcms-template/) to set up a repository with this workflow already wired, or [the editor tour](/blog/lightcms-editor-tour/) to see the writing side of it.
+## Perguntas Frequentes
+
+### Os autores precisam aprender o Git?
+
+Não. Eles usam o editor e um botão de publicação. Branches, commits e pull requests existem abaixo e são entregues apenas quando você escolhe usá-los.
+
+### Posso restaurar uma versão antiga de uma publicação?
+
+Sim. Reverter para um commit anterior restaura o conteúdo do arquivo e o próximo build publica-o.
+
+### Os rascunhos estão visíveis para o público?
+
+Não. Um post com `draft: true` é excluído da compilação, então ele nunca chega ao site implantado. É visível para qualquer pessoa com acesso ao repositório, que é o ponto.
+
+### O que acontece se duas pessoas editarem a mesma postagem?
+
+O segundo conflito de commit e a Git bandeiras explicitamente em vez de sobrescrever silenciosamente. Para a maioria das equipes, publicar em uma branch e rever com uma pull request remove o problema antes que aconteça.
+
+### [LightCMS](https://lightcms.me) mantém sua própria cópia do meu conteúdo?
+
+Não. O repositório é a fonte da verdade, o mesmo [princípio do bloqueio de zero](/blog/what-is-lightcms/) que torna a abordagem que vale a pena escolher.
+
+---
+
+Veja [starting from a starter template](/blog/start-with-a-lightcms-template/) para configurar um repositório com este fluxo de trabalho já conectado, ou [o tutorial do editor](/blog/lightcms-editor-tour/) para visualizar o lado da escrita dele.
