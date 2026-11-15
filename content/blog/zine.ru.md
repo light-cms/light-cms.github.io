@@ -1,20 +1,20 @@
 ---
-title: 'Zine: The Static Site Generator'
-description: 'What Zine is: a fast, young static site generator written in Zig'
+title: 'Зон: Генератор Статического Сайта'
+description: 'Что Zine - быстрый, молодой генератор статического сайта, написанный на Zig'
 date: '1111-11-11T11:11:00Z'
 draft: false
 keywords:
   - zine static site generator
   - zine ssg
-  - zig static site generator
-  - zine ssg vs hugo
-  - fastest ssg zig
+  - zig статический генератор сайта
+  - zine ssg против хуго
+  - самый быстрый ссг
 tags:
   - zine
   - zig
-  - ziggy
+  - зигги
   - ssg
-  - lightcms
+  - молнии
 isCJKLanguage: false
 headless: false
 serial: 28
@@ -24,42 +24,42 @@ taxonomies:
     - ssg
     - zine
     - zig
-    - static-sites
+    - статические сайты
 slug: zine
 ---
-[Zine](https://zine-ssg.io) Is a new static site generator Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
+[Zine](https://zine-ssg.io) Новый генератор статического сайта Zine быстрый, воспринимаемый и освежающий нетрадиционный. Это молодой проект, который с легкостью уже обрабатывает персональные сайты и блоги, и он вознаграждает авторов, желающих изучить свой собственный способ делать вещи.
 
-## What Makes Zine Different
+## Что делает Zine по-разному
 
-- **Written in Zig, from scratch.** No JavaScript runtime, no Ruby, no Go standard library comfort zone: the Markdown renderer, templating engine, and orchestration are all purpose-built. Build times are effectively instant.
-- **Its own templating language scripty.** Zine uses SuperHTML and SuperMD: and scripty templating system designed for the project rather than borrowed from an ecosystem.
-- **Scripty**, its scripting layer, adds programmable logic where templates alone fall short.
-- **Content as a collection of files and layouts.** Zine turns content files into HTML, applies your layouts, and copies the result into an output directory, the classic static model run fast.
-- **First-class extras**: Multilingual websites (i18n), editor support, and documented deploy targets: GitHub Pages, Cloudflare Pages, Codeberg Pages, and source hut pages.
+- \*\*Написано в Zig, с нуля. \* Ни один JavaScript-файловый сервер, ни Ruby, ни стандартная зона комфорта для библиотек не работают: встроенный в Markdown рендерер, механизм шаблонов и оркестра. Время сборки - это мгновенно.
+- **Собственный язык шаблонов.** Zine использует SuperHTML и SuperMD: и скриптовую систему шаблонов, разработанную для проекта, а не заимствованные из экосистемы.
+- **Scripty**, его скриптовый слой, добавляет программируемую логику, в которой шаблоны однажды сокращаются.
+- \*\*Контент как набор файлов и макетов. \* Zine превращает контент-файлы в HTML, применяет макеты и копирует результат в выходной каталог, классическая статическая модель быстро запускается.
+- **Дополнительные дополнения первого класса**: многоязычные веб-сайты (i18n), поддержка редакторов и документированные цели развертывания: страницы GitHub, Страницы Cloudflare, Страницы Codeberg и страницы с хранилищем данных.
 
-## The Honest Tradeoff
+## Сделка Чести
 
-The Zine repository states it plainly: the project is young and not yet at feature parity with popular alternatives like Hugo. And because Super is Zine's own templating language, there is a learning curve: themes and community knowledge is smaller, making support mostly, figure out yourself.
+Репозиторий Zine прямо гласит: проект молод и еще не в возможности паритета с популярными альтернативами, как Hugo. И потому что Супер является собственным языком шаблонов Zine, есть кривая обучения: темы и знания сообщества меньше, что делает поддержку в основном выясняйте себя.
 
-For a personal website with a blog (the project's stated comfort zone), Zine is more than capable, and the author experience is quick and pleasant once Super clicks.
+Для персонального сайта с блогом (объявленная зона комфорта проекта), Zine больше, чем возможный, и опыт автора быстро и приятно, когда Супер клики.
 
-## Content and CMS compatibility
+## Совместимость с контентом и CMS
 
-Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git-based CMS workflow does not apply directly.
+Zine не потребляет CommonMark Markdown с таким же образом, как и большинство статических генераторов сайтов, Таким образом, типичный CMS рабочий процесс на основе Git не применяется напрямую.
 
-Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/Pratyay360/md2smd) can help convert between [CommonMark](https://commonmark.org/) and Zine's formats.
+Zine ожидает свои собственные форматы содержимого, включая [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), и [Ziggy](https://ziggy-lang.io/). Если у вас уже есть содержимое Markdown, то [md2smd](https://github.com/Pratyay360/md2smd) может помочь конвертировать между форматами [CommonMark](https://commonmark.org/) и Zin.
 
-![](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png "Zine build pipeline")
+![](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png "Трубопровод строительства")
 
-You need two repositories: one for the frontend and one for the content.
+Вам нужны два репозитория: один для фронтенда и один для содержимого.
 
-- [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site), the frontend repository
-- [https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md), the content repository
+- [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site), репозиторий фронтенда
+- [https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md), репозиторий содержимого
 
-Trigger a repository dispatch when new content is pushed to the content repository.
+Запустите диспетчер репозитория, когда новый контент будет загружен в репозиторий содержимого.
 
-## Where It Fits
+## Где он подходит
 
-- If you want to try something alpha.
+- Если вы хотите попробовать что-то альфа.
 
-[Try the templates from our org for more information.](https://github.com/light-cms)
+[Попробуйте шаблоны с нашей организации для получения дополнительной информации.](https://github.com/light-cms)
