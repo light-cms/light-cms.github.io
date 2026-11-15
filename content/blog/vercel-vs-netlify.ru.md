@@ -1,81 +1,81 @@
 ---
-title: "Vercel vs Netlify: Which Jamstack Host Should You Pick?"
-description: Vercel and Netlify compared on free tiers, bandwidth, build minutes, frameworks, edge features, and pricing, with a clear pick for each kind of project.
+title: "Версель против Сети : Какой Jamstack хост вы должны пикать?"
+description: Vercel и Netlify сравниваются по бесплатным уровням, пропускной способности, минутам сборки, фреймворкам, краевым функциям и ценам с четким выбором для каждого проекта.
 serial: 23
 date: 2026-10-14T14:40:00Z
 draft: false
 keywords:
-  - vercel vs netlify
+  - версель против netlify
   - netlify vs vercel
-  - vercel or netlify for react
-  - jamstack hosting comparison
-  - vercel pricing vs netlify
+  - верстка или netlify для реакции
+  - сравнение хостов jamstack
+  - верстка цен и нетлификация
 preview: /og-image.webp
 taxonomies:
   tags:
-    - hosting
-    - vercel
+    - хостинг
+    - вершина
     - netlify
     - jamstack
 ---
 
-Vercel vs Netlify is the longest running debate in Jamstack hosting: the two platforms defined the category together, and in 2026 they remain the default shortlist for anyone deploying frontend code. Both deploy from Git, both have generous free tiers, and both have passionate advocates. The differences are real but narrower than the discourse suggests.
+Vercel vs Netlify является самым продолжительным обсуждением на сайте Jamstack: две платформы определяли эту категорию вместе, и в 2026 году они остаются по умолчанию коротким списком для всех, кто развёртывает интерфейс кода. Оба развёрнутые из Git, оба имеют щедрые свободные уровни, и оба имеют страстных адвокатов. Различия реальные, но более узкие по сравнению с дискурсом предлагает.
 
 ---
 
-## The Philosophical Difference
+## Философская разница
 
-**Vercel** is framework-centric: first-party optimization for Next.js (which it created), plus SvelteKit, Astro, Nuxt, and Vite. The product is built around the framework developer's loop: local dev, preview, production.
+**Vercel** — это framework-centric: первая партия оптимизации для Next.js (которая она создала), плюс SvelteKit, Astro, Nuxt и Vite. Продукт построен вокруг фреймворка разработчика: локальный разработчик, превью, производство.
 
-**Netlify** is platform-centric: functions, forms, identity, and edge features are the headline, with broad framework support underneath. It pioneered much of the Jamstack hosting playbook.
+**Netlify** является платформо-ориентированным: функции, формы, идентичность и краевые особенности являются заголовком с широкой поддержкой фреймворка под ним. Он стал пионером многих из Jamstack хостинга playbook.
 
-## Free Tiers and Limits
+## Бесплатные уровни и ограничения
 
-|                      | Vercel Hobby             | Netlify Free         |
-| :------------------- | :----------------------- | :------------------- |
-| Static bandwidth     | Generous, metered        | Generous, metered    |
-| Serverless functions | Included (metered)       | Included (metered)   |
-| Build minutes        | Metered                  | Metered              |
-| Preview deployments  | Yes                      | Yes                  |
-| Commercial use       | Restricted on hobby tier | Allowed on free tier |
+|                                        | Версель Хобби              | Бесплатно Netlify             |
+| :------------------------------------- | :------------------------- | :---------------------------- |
+| Статическая пропускная способность     | Щедрый, лимитированный     | Щедрый, лимитированный        |
+| Функции безсерверные                   | Включено (Metered)         | Включено (Metered)            |
+| Минут сборки                           | Измеренный                 | Измеренный                    |
+| Предварительный просмотр развертывания | Да                         | Да                            |
+| Коммерческое использование             | Ограничено на уровне хобби | Разрешено на свободном уровне |
 
-Read the fine print on both: Vercel's hobby tier restricts commercial usage, while Netlify's free tier permits it, which is a real differentiator for side projects that earn money.
+Читайте тонкий отпечаток на обоях: хобби Vercel'а ограничивает коммерческое использование, в то время как свободный уровень Netlify's разрешает это, что является реальным дифференциатором для побочных проектов, которые зарабатывают деньги.
 
-## Framework Experience
+## Опыт работы в рамках
 
-If your stack is **Next.js**, Vercel is home turf: its creators optimize the two together, and features like ISR and Image Optimization behave most predictably there. For **Astro, SvelteKit, or plain static sites**, the gap shrinks to near zero, and both deploy them without issue.
+Если ваш стек **Далее. s**, Vercel - домашняя база: его создатели оптимизируют друг друга, а функции, такие как ISR и Image Optimization ведут себя здесь как можно скорее. Для **Astro, SvelteKit или простого статического сайта** разрыв уменьшается до нуля, и оба разворачивают их без проблем.
 
-## Edge and Dynamic Features
+## Экран и динамические функции
 
-- **Netlify** brings Forms and Identity as products, useful for static sites that need contact forms or auth without third-party services.
-- **Vercel** brings Middleware, Edge Functions, and tighter full-stack framework integration.
+- **Netlify** предоставляет формы и идентификатор в качестве продуктов, полезных для статических сайтов, нуждающихся в контактных формах или авторизации без сторонних сервисов.
+- **Vercel** представляет Middleware, Edge Functions и уплотняет интеграцию в весь стек.
 
-## The Honest Verdict
+## Честный Указ
 
-- **Next.js application on Vercel**: the path of least resistance.
-- **Static content site or Astro/SvelteKit project**: flip a coin, or take the third option.
-- **Side project that might make money on a free tier**: check Netlify's terms first.
+- **Next.js application on Vercel**: path of least resistance.
+- **Статический сайт или проект Astro/SvelteKit**: подбросьте монету, или выберите третий вариант.
+- **Боковый проект, который может зарабатывать деньги на бесплатном уровне**: ознакомьтесь с условиями Netlify.
 
-That third option is worth naming: for pure static content sites, [Cloudflare Pages](/blog/cloudflare-pages-vs-vercel/) offers unlimited free bandwidth that neither platform matches. See the [full hosting roundup](/misc/top-static-site-hosting/).
+Этот третий вариант стоит назоветь: для сайтов с статическим содержимым, [Cloudflare Pages](/blog/cloudflare-pages-vs-vercel/) предлагает неограниченную бесплатную пропускную способность, которая не соответствует ни платформе. Смотрите [полную развязку хостинга](/misc/top-static-site-hosting/).
 
-Whichever you pick, the Git based workflow is identical: [LightCMS](/getting-started/) commits Markdown, the platform rebuilds, the site updates ([setup guide](/blog/configuring-your-repository-cicd/)).
+Независимо от того, что вы выбираете, основанный на Git рабочий процесс идентичный: [LightCMS](/getting-started/) коммитирует Markdown, платформу пересборки, обновления сайта ([руководство по установке](/blog/configuring-your-repository-cicd/)).
 
 ---
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### Is Vercel or Netlify Faster?
+### Версель или Netlify быстрее?
 
-Both serve from global edge networks with comparable performance for static assets. Differences appear only in specific dynamic/region-bound workloads.
+Оба они служат из глобальных передовых сетей с сопоставимой эффективностью для статических активов. Различия проявляются только в конкретной динамической/региональной рабочей нагрузке.
 
-### Which is cheaper at scale?
+### Что дешевле при масштабе?
 
-Comparable list prices with different meters. Netlify's included forms and identity can eliminate separate service costs; Vercel's framework optimizations can reduce the need for other infrastructure.
+Сопоставимые цены с различными метрами. b) оптимизация системы Vercel, которая может уменьшить потребность в другой инфраструктуре.
 
-### Can I migrate between them?
+### Могу ли я перейти между ними?
 
-Yes. Both build from Git with a config file, and migration is usually an afternoon.
+Да. Оба сборки из Git с конфигурационным файлом, и миграция обычно является днем или днем.
 
-### Which is better for Next.js?
+### Что лучше для Next.js?
 
-Vercel. It builds Next.js and the platform is co-developed; edge cases behave most predictably there.
+Версел. Он строит Next.js и платформа совместно разрабатывается; краевые кейсы ведут себя наиболее предсказуемо там.
