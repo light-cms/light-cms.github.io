@@ -1,90 +1,90 @@
 ---
-title: Hugo vs Astro Starlight for Documentation Sites
-description: "Hugo vs Astro Starlight compared for building documentation: sidebars, search, MDX, versioning, and theming, with guidance on which fits your docs project."
+title: Hugo vs Astro Starlight для сайтов документации
+description: "Hugo vs Astro Starlight сравнивает с документацией для зданий: боковые панели, поиск, MDX, версирование и оформление темы, с рекомендациями, которые соответствуют вашему документообороту."
 serial: 22
 date: 2026-10-14T14:30:00Z
 draft: false
 keywords:
-  - hugo vs starlight
-  - astro starlight vs hugo
-  - best docs site generator
-  - starlight documentation
-  - documentation site framework
+  - hugo против звезды
+  - астро звезда против хуго
+  - лучший генератор сайта docs
+  - документация по звёздочке
+  - фреймворк для документации
 preview: /og-image.webp
 taxonomies:
   tags:
-    - hugo
-    - astro
-    - starlight
-    - documentation
+    - хуго
+    - астро
+    - звезда
+    - документация
 ---
 
 For documentation sites in 2026, two names keep appearing: **Hugo** (the speed obsessed generalist,
 usually wearing a docs theme) and **Astro Starlight** (the purpose-built documentation template on
-top of Astro). Both produce fast, static, Markdown-driven docs. They differ in how
+top of Astro). Оба продукта производят быстро, статично, Markdown-ориентированные документы. They differ in how
 much of the docs experience you get out of the box.
 
 ---
 
-## What Each One Is
+## Что за каждый
 
-**Hugo** is a general-purpose static site generator. For documentation you pair it with a docs-oriented theme (docsify-style HugoDocs themes, Doxy, etc.) or build your own layout with Hugo's taxonomies and navigation.
+**Hugo** — генератор статических сайтов общего назначения. Для документации вы свяжите его с темой, ориентированной на документацию (темы в стиле docsify-HugoDocs, Doxy, и т.д.) или постройте свой собственный макет с таксономиями и навигацией в Hugo.
 
-**Starlight** is Astro's official documentation template: sidebars generated from your file structure, search (Pagefind) built in, i18n scaffolding, accessible components, and Markdown/MDX content collections with schema validation, all configured by default.
+**Starlight** является официальным шаблоном документации Astro: боковые панели, созданные из вашей структуры файлов, поиск по (Pagefind), встроенный в i18n строительные конструкции, доступные компоненты, и коллекции Markdown/MDX с проверкой схемы, настроенные по умолчанию.
 
-## Out-of-the-Box Documentation Features
+## Возможности документации, выходящей из коробки
 
-| Feature                 | Hugo + docs theme                   | Astro Starlight                  |
-| :---------------------- | :---------------------------------- | :------------------------------- |
-| Auto sidebar navigation | Theme-dependent                     | Built in                         |
-| Full-text search        | Add a service or theme feature      | Pagefind, built in               |
-| Versioned docs          | Manual (multiple branches/sections) | Patterns via content collections |
-| MDX support             | No (shortcodes instead)             | Yes                              |
-| i18n                    | Theme-dependent                     | built in scaffolding             |
-| Build speed             | Sub-second (Go)                     | Fast (Vite-based)                |
-| Custom UI components    | Go templates                        | Any UI framework via islands     |
+| Функция                                 | Hugo + docs тема                   | Звёздный свет Astro                        |
+| :-------------------------------------- | :--------------------------------- | :----------------------------------------- |
+| Auto sidebar navigation                 | Зависит от темы                    | Построен в                                 |
+| Полнотекстовый поиск                    | Добавить функцию службы или темы   | Pagefind, встроенный в                     |
+| Документация с версиями                 | Ручная (несколько ветвей/разделов) | Шаблоны через коллекции контента           |
+| Поддержка MDX                           | Нет (шорткоды)                     | Да                                         |
+| i18n                                    | Зависит от темы                    | построено в лесных лесниках                |
+| Скорость сборки                         | Подсекунда (вперед)                | Быстрое (Вибро)                            |
+| Компоненты пользовательского интерфейса | Шаблоны                            | Любые пользовательские рамки через острова |
 
-## Where Hugo Wins
+## Где Hugo побеждает
 
-- **Raw build speed**: irrelevant for tiny docs, decisive for massive ones.
-- **Maturity**: a decade of themes and deployments in production.
-- **Simple deployment**: single binary, no Node toolchain.
+- **Скорость сборки**: не имеет значения для крошечных досок, которые решают массивные доски.
+- **Зрелость**: десятилетие тем и развертываний в производстве.
+- **Простое развертывание**: один двоичный файл, без цепи узлов.
 
-## Where Starlight Wins
+## Где Звёздный свет побеждает
 
-- **Docs are the product, not a theme choice**: navigation, search, and accessibility come configured.
-- **Component-driven customization**: embed React, Svelte, or Vue components in MDX pages (live demos, interactive examples).
-- **Type-safe content collections**: front matter validated at build time, so a broken doc fails CI instead of shipping.
+- **Докы - это продукт, а не выбор темы**: навигация, поиск и доступность придуманы.
+- **Настраиваемая компонента**: встраивать React, Svelte или Vue компоненты на страницах MDX (живые демо, интерактивные примеры).
+- **Типы безопасных коллекций содержимого**: переднее вещество проверено во время сборки, так что повреждённая документация отлавливает CI вместо доставки.
 
-## The CMS Angle
+## Угол CMS
 
-Both read the same content currency: **Markdown with YAML front matter** in your Git repository. A Git based CMS like [LightCMS](/getting-started/) publishes to either stack identically: writers edit visually, the CMS commits Markdown, CI rebuilds the docs. Setup patterns are in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
-
----
-
-## Which Should You Choose?
-
-- **Hugo** if you already live in Hugo, need maximum build speed on a huge doc set, or want a single-binary toolchain.
-- **Starlight** if you are starting fresh documentation in 2026 and want search, sidebars, i18n, and accessibility handled for you; it's the default recommendation for most new docs projects.
-
-Context for the wider field: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) covers the general matchup, and [best static site generators](/blog/best-static-site-generators/) surveys the options.
+Оба читают одинаковую валюту содержимого: **Markdown с YAML передним вопросом** в вашем Git репозитории. A Git based CMS like [LightCMS](/getting-started/) publishes to either stack identically: writers edit visually, the CMS commits Markdown, CI rebuilds the docs. Шаблоны настройки находятся в [настройке вашего репозитория и CI/CD](/blog/configuring-your-repository-cicd/).
 
 ---
 
-## Frequently Asked Questions
+## Что Вы выбираете?
 
-### What is Astro Starlight?
+- **Hugo**, если вы уже живете в Hugo, нужно иметь максимальную скорость сборки на огромном наборе doc или хотите однобинарную цепочку инструментов.
+- **Starlight** если вы запускаете свежую документацию в 2026 году и хотите поиск, боковые панели, i18n и доступность для вас; это стандартная рекомендация для большинства новых проектов документации.
 
-Astro's official, batteries-included template for documentation sites, with navigation, search, i18n, and accessibility configured out of the box on top of the Astro framework.
+Контекст для более широкого поля: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) охватывает общее сопоставление и [лучшие генераторы сайтов](/blog/best-static-site-generators/) проверяет параметры.
 
-### Is Starlight faster than Hugo?
+---
 
-Hugo builds faster; visitors cannot tell the difference: both ship static HTML served from a CDN.
+## Часто задаваемые вопросы
 
-### Can Starlight use my existing Hugo Markdown?
+### Что такое Astro Starlight?
 
-Yes, mostly. Both use Markdown with front matter. Shortcode-heavy Hugo content may need conversion when moving to MDX.
+Официальный шаблон Astro, включающий батареи для сайтов документации, с навигацией, поиском, i18n, и доступностью настроен из коробки сверху фреймворка Astro.
 
-### Do documentation sites need a CMS?
+### Звёздный свет быстрее, чем Hugo?
 
-If more than one person writes docs (or you want PR-free publishing), a Git based CMS gives writers a visual editor while keeping Markdown in the repository.
+Hugo собирается быстрее, посетители не могут рассказать разницу: оба судна статический HTML-код, обслуживаемый с CDN.
+
+### Можно ли Starlight использовать мой существующий Hugo Markdown?
+
+Да, в основном. Оба используют Markdown с передней частью. Содержимое Hugo с коротким кодом может потребовать конвертации при перемещении в MDX.
+
+### Нужно ли документовым сайтам ЦСУ?
+
+Если более одного человека пишут документацию (или вы хотите бесплатную публикацию), CMS на основе Git дает визуальный редактор, сохраняя Markdown в репозитории.
