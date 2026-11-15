@@ -1,110 +1,110 @@
 ---
-title: "LightCMS vs WordPress: Static Files vs a Database Runtime"
-description: "WordPress owns publishing; LightCMS strips out the database, the runtime, and the patch cycle. A direct comparison of cost, speed, security, and what you give up."
+title: "LightCMS и WordPress: статические файлы и файлы базы данных"
+description: "WordPress владеет публикацией; LightCMS полосы из базы данных, время выполнения и цикл исправления. Прямое сравнение стоимости, скорости, безопасности и того, что вы сдаёте."
 serial: 52
 date: 2026-10-16T12:20:00Z
 draft: false
 keywords:
-  - lightcms vs wordpress
-  - wordpress alternative
-  - wordpress without database
-  - static site vs wordpress
-  - switch from wordpress
+  - свечи против WordPress
+  - Альтернативный WordPress
+  - wordpress без базы данных
+  - статический сайт против WordPress
+  - переключить с WordPress нажатия
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - молнии
     - wordpress
-    - cms
-    - comparison
-    - static-sites
+    - смс
+    - сравнение
+    - статические сайты
 ---
 
-WordPress still powers a huge share of the web, and for good reasons: an unmatched plugin ecosystem, total flexibility, and a familiar admin that anyone can learn. It is also a PHP application with a MySQL database attached to the public internet, and a modern static stack removes that.
+WordPress по-прежнему обеспечивает огромную долю Интернета, и по хорошим причинам: несовпадающая экосистема плагинов, полная гибкость и знакомый администратор, который каждый может научиться. Это также PHP приложение с базой данных MySQL, которая подключена к публичному интернету, и это удаляет современный статический стек.
 
-LightCMS is not a WordPress competitor in the marketplace sense. It is an answer to a narrower question: **can a publication get WordPress's writing workflow without WordPress's runtime?**
-
----
-
-## The Architecture, Side by Side
-
-|                   | LightCMS                      | WordPress                        |
-| :---------------- | :---------------------------- | :------------------------------- |
-| **Storage**       | Markdown files in Git         | MySQL database                   |
-| **Rendering**     | Pre-built static HTML         | PHP per request                  |
-| **Runtime**       | None                          | PHP + web server + DB, always on |
-| **Versioning**    | Git history, diffs, revert    | Revisions plugin / post meta     |
-| **Security**      | Nothing to exploit at runtime | Core, plugin, and theme patching |
-| **Performance**   | CDN cache hit                 | Rendered per request (cacheable) |
-| **Cost at scale** | Bandwidth only                | Server tier rises with traffic   |
-| **Editor**        | WYSIWYG document editor       | Block editor in admin            |
-| **Ecosystem**     | Small, focused                | Enormous                         |
-| **Lock-in**       | None: files you own           | Database you must migrate        |
+LightCMS не является конкурентом WordPress в смысле рынка. Это ответ на более узкий вопрос: **может ли публикация получить WordPress-написание рабочего процесса без WordPress?**
 
 ---
 
-## What You Gain Leaving WordPress
+## Архитектура, бок о бок
 
-- **The patch cycle disappears.** The most common compromise vector (an unpatched plugin or a brute-forced login) has no counterpart when there is no login, no database listener, and no server-side code.
-- **Speed becomes structural.** Pages are served from the nearest CDN edge rather than assembled on a server, which is the difference that [Core Web Vitals](/blog/static-vs-dynamic/) rewards.
-- **Traffic stops costing money.** A viral post on WordPress means a bigger server; on a static host it means a rounding error on bandwidth.
-- **Backups are trivial.** The repository is the backup, and rollback is a revert of one file.
-- **Longevity.** Plain Markdown with front matter outlives themes, plugins, and PHP versions. See [WordPress alternatives](/blog/wordpress-alternatives/).
+|                        | LightCMS                                | WordPress                             |
+| :--------------------- | :-------------------------------------- | :------------------------------------ |
+| **Хранилище**          | Markdown файлы в Git                    | База данных MySQL                     |
+| **Рендеринг**          | Встроенный статический HTML             | PHP за запрос                         |
+| **Рунтай**             | Нет                                     | PHP + веб-сервер + БД, всегда на      |
+| **Versioning**         | История Git, меняется, возврат          | Плагин ревизий / пост мета            |
+| **Безопасность**       | Нечего использовать во время выполнения | Я, плагин и патч тем                  |
+| **Производительность** | Удар кэша CDN                           | Отправлено по запросу (кэшируется)    |
+| **Стоимость по шкале** | Только пропускная способность           | Уровень сервера возрастает с трафиком |
+| **Редактор**           | Редактор документов WYSIWYG             | Блокировать редактор в админе         |
+| **Экосистема**         | Маленький, сфокусированный              | Огромный                              |
+| **Заблокироваться**    | Ничто: файлы, которые вы владеете       | База данных вам необходимо перенести  |
 
-## What You Give Up
+---
 
-Be clear-eyed about the trade:
+## Что вы получаете оставляя WordPress
 
-- **No plugin ecosystem.** Contact forms, memberships, commerce, and complex embeds need external services instead of a plugin install.
-- **No dynamic features.** Logged-in experiences, per-user content, and live search over changing data need a backend.
-- **A build step.** Changes appear after CI runs, not instantly on save.
-- **Smaller community.** You cannot hire "a WordPress person" for your stack.
+- \*\*Цикл патча исчезает. \* Наиболее распространенный компромисс вектор (unpatched плагин или принудительный логин) не имеет аналога, если нет логина, нет слушателей базы данных и нет кода на стороне сервера.
+- \*\*Скорость становится структурной. \* Страницы обслуживаются от ближайшего края CDN, а не собираются на сервере, это разница в наградах [Core Web Vitals](/blog/static-vs-dynamic/).
+- **Трафик останавливается на деньгах.** Виртуальный пост на WordPress означает больший сервер; на статическом хосте это означает округление ошибки по полосе пропускания.
+- **Резервные копии тривиальные.** Репозиторий — резервная копия, откат одного файла.
+- **Longevity.** Простой Markdown с темами переднего материи, выходящими из строк, плагинов и PHP версий. См. [Альтернативы WordPress](/blog/wordpress-alternatives/).
 
-If your site is an application with a publishing front end, WordPress (or a proper app CMS) remains the pragmatic choice.
+## Что вы отдаете
+
+Будьте понятны при сделке:
+
+- **Нет плагинов экосистем.** Контакты, членство, торговля и сложные вставки требуют внешних услуг вместо установки плагина.
+- **Нет динамических функций.** Вход в систему, контент для каждого пользователя и прямой поиск для изменения данных требуют бэкэнда.
+- **Шаг сборки.** Изменения появляются после запуска CI, а не мгновенно при сохранении.
+- **Меньшее сообщество.** Вы не можете нанять «человека WordPress» для вашего стека.
+
+Если ваш сайт является приложением с издательским интерфейсом, WordPress (или надлежащее приложение CMS) остается прагматическим выбором.
 
 ---
 
 ## The Writing Experience, Compared
 
-WordPress's block editor is good, and LightCMS's TipTap-based editor is built on the same instincts: write in the document, not in a form. Both produce clean, structured content; the difference is what happens on save: one writes to a database, the other commits Markdown with front matter to your repository, complete with [history, review, and rollback](/blog/lightcms-drafts-and-versioning/).
+Редактор блоков WordPress хорошо, а редактор подсказки LightCMS построен на тех же инстинктах: писать в документе, а не в форме. Оба продукта производят чистое, структурированное содержание; разница в том, что происходит при сохранении: один пишет в базу данных, другой коммит Markdown с фронтальным вопросом в ваш репозиторий, завершено с [историей, обзором и откатом](/blog/lightcms-drafts-and-versioning/).
 
 ---
 
-## Migration
+## Миграция
 
-Export your posts (WordPress has built in export, or tooling like `exitwp` converts to Markdown), map categories and tags to front matter, and move images into your asset directory. For a typical blog the content migration is an afternoon; the design work is the real project, since you are choosing a static theme rather than keeping a PHP one.
-
----
-
-## Which Should You Choose?
-
-- **Choose WordPress** when you need plugins, dynamic features, or a large talent pool, and the maintenance cost is acceptable.
-- **Choose LightCMS** when the site is a publication, the priorities are speed and safety, and you want content you own in a repository you control.
+Экспортировать ваши посты (WordPress создал в экспорте, или инструменты, как `exitwp` преобразования в Markdown), Сопоставьте категории и тэги на передний план и переместите изображения в ваш каталог активов. Для типичного блога миграция контента – вторая половина дня; работа над дизайном - это настоящий проект, так как вы выбираете статичную тему, а не сохраняете PHP.
 
 ---
 
-## Frequently Asked Questions
+## Что Вы выбираете?
 
-### Is WordPress bad?
-
-No. It is a powerful tool with a runtime cost and a maintenance obligation. For many projects that trade is worth it.
-
-### Can LightCMS run WooCommerce-style plugins?
-
-No. There is no plugin runtime; integrations are external services or build-time steps.
-
-### Is a static site faster than WordPress?
-
-Typically yes on first load and consistently on TTFB: the server does nothing, the CDN serves a file. Caching plugins close the gap but never remove the runtime.
-
-### What about WordPress security?
-
-Static output removes the attack surface rather than hardening it: no logins, no database, no PHP to patch.
-
-### Can I keep my existing WordPress content?
-
-Yes. Export to Markdown and commit it; the archive comes with you. See [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+- **Выберите WordPress**, когда вам нужны плагины, динамические функции или большой фонд талантов, и стоимость обслуживания приемлема.
+- **Выберите LightCMS**, когда сайт является публикацией, приоритетами являются скорость и безопасность, и вы хотите контент, который вы владеете в хранилище, под вашим контролем.
 
 ---
 
-More: [LightCMS vs Strapi](/comparison/lightcms-vs-strapi), [WordPress alternatives in 2026](/blog/wordpress-alternatives/), [static vs dynamic sites](/blog/static-vs-dynamic/).
+## Часто задаваемые вопросы
+
+### Является ли WordPress плохой?
+
+Нет. Это мощный инструмент с затратами на выполнение работ и обязательством по обслуживанию. Для многих проектов, торгующих это стоит.
+
+### Может ли LightCMS запускать плагины в стиле WooCommerce?
+
+Нет. Нет времени выполнения плагинов; интеграция - это внешние сервисы или этапы времени сборки.
+
+### Статический сайт быстрее, чем WordPress?
+
+Обычно да при первой загрузке и последовательно на TTFB: сервер ничего не делает, CDN обслуживает файл. Кэширование плагинов закрывает разрыв, но никогда не удаляет время выполнения.
+
+### Как насчет безопасности WordPress?
+
+Статический вывод удаляет поверхность атаки, а не укрепляет ее: нет логинов, ни базы данных, ни PHP для патча.
+
+### Могу ли я сохранить свой существующий контент WordPress?
+
+Да. Экспортируйте в Markdown и фиксируйте; архив поставляется с вами. См. [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+
+---
+
+Подробнее: [LightCMS против Strapi](/comparison/lightcms-vs-strapi), [WordPress альтернативы в 2026](/blog/wordpress-alternatives/), [статический против динамических сайтов](/blog/static-vs-dynamic/).
