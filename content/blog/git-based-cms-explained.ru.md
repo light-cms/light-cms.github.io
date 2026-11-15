@@ -1,60 +1,60 @@
 ---
-title: "What Is a Git-Based CMS? Architecture, Workflow, and Trade-Offs"
-description: "A Git based CMS stores content as files in a repository and commits edits like code: the architecture, the workflow, and when it beats a database."
+title: "Что такое CMS? Архитектура, рабочий процесс и компромиссы"
+description: "CMS на основе Git хранит содержимое в виде файлов в репозитории и фиксирует изменения в коде: архитектура, рабочий процесс, и когда он разбивает базу данных."
 serial: 43
 date: 2026-10-16T10:50:00Z
 draft: false
 keywords:
-  - what is a git based cms
-  - git based cms
+  - что такое cms основанные на git
+  - git на основе cms
   - git cms
-  - file based cms
-  - cms with version control
+  - cms на основе файла
+  - смс с контролем версий
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
+    - смс
     - git
-    - static-sites
-    - explainers
+    - статические сайты
+    - объяснения
 ---
 
-A **Git based CMS** is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
+**Git основанная на CMS** — система управления контентом, которая хранит контент в виде файлов в Git репозитории вместо строк в базе данных. Редактирование происходит в визуальном интерфейсе; сохранение происходит как фиксация. Сайт сборки читает эти файлы и производит страницы.
 
-That single design choice (files, not rows) cascades into everything else about how these tools behave: versioning, portability, cost, security, and who can use them.
+Этот один дизайн выбор (файлы, а не строки) каскады во все остальные о том, как эти инструменты ведут себя : версия, переносимость, стоимость, безопасность и кто может их использовать.
 
 ---
 
-## The Architecture
+## Архитектура
 
-A Git based CMS sits between a writer and a repository, and touches nothing else:
+Основанный на Git CMS сидит между писателем и репозиторием и ничего другого:
 
 ```text
-Writer ──> Visual editor ──> commit (.md + front matter)
-                                   │
-                                   ▼
-                          Git repository (source of truth)
-                                   │
-                                   ▼
-                     CI/CD build (Astro, Hugo, Zola, …)
-                                   │
-                                   ▼
-                        Static output ──> CDN ──> Reader
+Писатель-<unk> > Визуальный редактор, <unk> <unk> > commit (. d + передняя часть)
+                                   <unk>
+                                   ļ
+                          репозиторий Git (источник правды)
+                                   <unk>
+                                   <unk>
+                     CI/CD сборка (Astro, Гуго, Зола, …)
+                                   <unk>
+                                   <unk>
+                        Статическая выход, <unk> > CDN <unk> <unk> > Чтение
 ```
 
-Three properties define the category:
+Категория определяет три свойства:
 
-1. **The repository is the database.** There is no second copy of the content. If it is not committed, it does not exist; if it is committed, it is backed up by every clone.
-2. **The build is the runtime.** Pages are assembled at build time and served as files. Nothing renders content per request.
-3. **The CMS is a client, not a host.** It writes to the repository and can be replaced without touching the content.
+1. **Хранилище базы данных.** Нет второй копии содержимого. Если он не привержен, он не существует; если он принят, то он подкрепляется каждым клоном.
+2. **Сборка — это время выполнения.** Страницы собираются во время сборки и используются в качестве файлов. Ничего не отображает содержимое по запросу.
+3. **CMS является клиентом, а не хостом.** Он записывает в репозиторий и может быть заменен без нажатия на содержание.
 
-Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) works through the comparison.
+Контрастность, которая с традиционной CMS: содержание в MySQL, шаблоны PHP, собранные по каждому запросу, администрируется через одно и то же приложение, которое обслуживает сайт. [Git основанный на CMS и традиционной CMS](/blog/git-cms-vs-traditional-cms/) работает через сравнение.
 
 ---
 
-## What a Commit Does
+## Что такое коммит
 
-When a writer hits publish, the CMS serializes the document to Markdown with YAML front matter and commits it:
+Когда писатель наносит удар по публикации, CMS сериализует документ в Markdown с помощью YAML переднего дела и совершает его:
 
 ```markdown
 ---
@@ -68,82 +68,82 @@ tags:
 Body text begins here...
 ```
 
-That commit is doing several jobs at once:
+Это обязательство выполняет сразу несколько задач:
 
-- **It is the save.** The content is persisted in the repository.
-- **It is the audit entry.** Author, timestamp, and message recorded automatically.
-- **It is the backup.** Every clone contains the full history.
-- **It is the deploy trigger.** CI picks it up, builds, and ships.
+- **Это сохранение.** Содержимое сохраняется в репозитории.
+- **Это запись аудита**. Автор, метка времени и сообщение записываются автоматически.
+- **Это резервная копия.** В каждом клоне содержится полная история.
+- **Это триггер развертывания.** CI выбирает его, сборку и корабли.
 
-One write replaces four separate systems in a conventional stack.
-
----
-
-## The Workflow Properties You Get Free
-
-### Version history with real diffs
-Markdown diffs are legible. "Who changed this sentence, and when" is a one-line `git log`, not a plugin or a database query.
-
-### Rollback per file
-Revert one post without touching anything else. Restoring a database backup rolls back the whole site, usually silently.
-
-### Branches and pull requests as editorial review
-Write on a branch, submit a PR, take line-level comments on the exact paragraph, merge when approved. GitHub's native review tools become an editorial workflow.
-
-### Portable content
-The content is plain text. Move generators, move hosts, move CMS tools: the archive walks out with you.
+Одна запись заменяет четыре отдельных системы в обычном стеке.
 
 ---
 
-## The Trade-Offs (Stated Honestly)
+## Свойства рабочего процесса, которые вы получаете бесплатно
 
-Git based is not a universal win:
+### История версий с реальными изменениями
+Различия Markdown разборчивы. "Кто изменил это предложение, и когда" это однострочный журнал `git log`, а не плагин или запрос базы данных.
 
-- **No queries.** You cannot join content at request time; the build must produce whatever pages are needed. Relational content fits poorly.
-- **Rebuild latency.** A change is live after a build, not after a save. Modern builds are fast, but "instant" is measured in seconds to minutes.
-- **Merge conflicts.** Two people editing the same file create a real conflict. Well-designed CMS tools scope this (one post per file), but it exists.
-- **Coarse access control.** Repository access is not per-field permissions. If you need granular role enforcement, a database-backed admin is the better tool.
-- **Non-technical onboarding.** Raw Git is hostile to writers, which is the gap a Git based CMS fills: it hides the commits while keeping the benefits.
+### Откат за файл
+Восстановить один пост, не коснувшись ничего. Восстановление резервной копии базы данных откачивается на весь сайт, как правило, беззвучно.
 
-That last point is where most evaluations land. The architecture is usually right for a publication; the question is which tool makes it usable for the people publishing.
+### Ветки и Pull Request'ы как обзор редакции
+Написать в филиале, подать PR, сделать комментарии на уровне строк к точному абзацу, при их утверждении. Инструменты родного обзора GitHub становятся редакторским рабочим процессом.
 
----
-
-## What to Look For in One
-
-- **Editor quality.** Writers will live in it. Form fields versus a real document editor is the biggest practical difference between tools.
-- **Front matter handling.** Malformed metadata breaks builds; a good tool validates it.
-- **Publish model.** Direct commit, or pull request with review.
-- **Provider support.** GitHub, GitLab, Bitbucket: whichever you use.
-- **Hosting model.** Self-hosted (you run it) versus hosted (they run it).
-- **Exit cost.** It should be zero. If the tool disappeared tomorrow, your repository should still build.
-
-[LightCMS](https://lightcms.me) is built around those criteria; see [what LightCMS is](/blog/what-is-lightcms/). The wider field is surveyed in [top Git based CMS platforms](/comparison/top-git-cms).
+### Портативный контент
+Содержимое является простым текстом. Перемещение генераторов, перемещение хостов, перемещение инструментов CMS: архив выходит с вами.
 
 ---
 
-## Frequently Asked Questions
+## Торговля (честные сделки)
 
-### Is a Git based CMS the same as a headless CMS?
+Git не является универсальной победой:
 
-No. Headless describes _how content reaches a frontend_ (through an API); Git based describes _where content lives_ (files in a repository). The two ideas overlap in practice; see [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
+- **Нет запросов.** Вы не можете присоединиться к контенту в момент запроса; сборка должна вывести необходимые страницы. Реляционное содержание плохо подходит.
+- **Пересобрать задержки.** Изменение происходит после сборки, а не после сохранения. Современные сборки быстрые, но "мгновенные" измеряются в секундах до минуты.
+- **Слияние конфликтов.** Два человека, редактирующие один и тот же файл, создают настоящий конфликт. Хорошо разработанные инструменты CMS (один пост для каждого файла), но они существуют.
+- **Грубое управление доступом.** Доступ к репозиторию не разрешен за поля. Если вам нужна грандиозная роль, админ с базой данных является лучшим инструментом.
+- **Нетехнический борборт.** Raw Git враждебно настроен на писателей, что является разрывом между CMS на Git: он скрывает коммиты, сохраняя преимущества.
 
-### Do I need to know Git to use one?
-
-No. You need Git if you want to inspect history or manage branches yourself; the editor handles the commits.
-
-### Can a Git based CMS handle a large site?
-
-Yes. Generators build thousands of pages quickly, and the repository handles content volume comfortably. Build time is the practical ceiling, not storage.
-
-### Does it work with my static site generator?
-
-If your generator reads Markdown files with front matter (Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js), yes.
-
-### Where does media go?
-
-Typically to a directory in the repository or an asset bucket referenced from front matter. Either way, the reference lives with the content.
+Этот последний момент заключается в том, что большинство оценок земель. Архитектура обычно имеет право на публикацию; вопрос заключается в том, какой инструмент позволяет публиковать ее людям.
 
 ---
 
-Next: [headless vs Git based CMS](/blog/headless-vs-git-based-cms/) if you're still weighing architectures, or [what front matter is](/blog/what-is-front-matter/) if the metadata layer is new to you.
+## Что искать в одном
+
+- **Качество редактора.** В нем будут жить писатели. Поля формы и редактор документов – это наибольшая практическая разница между инструментами.
+- **Обработка фронтной.** Неправильные метаданные ломают сборки, хороший инструмент проверяет ее.
+- **Опубликовать модели.** Прямое коммит или запрос на слияние с обзором.
+- **Поддержка поставщика.** GitHub, GitLab, Bitbucket: что бы вы ни использовали.
+- **Хостинг модели.** Самостоятельный (вы используете её) в сравнении с хостингом (они запускают её).
+- **Стоимость выхода.** Стоимость должна быть равна нулю. Если инструмент исчезнет завтра, репозиторий все равно должен быть построен.
+
+[LightCMS](https://lightcms.me) построен вокруг этих критериев; посмотрите [что такое LightCMS] (/blog/what-is-lightcms/). Обширная область представлена на [платформах основанных на Git] (/comparison/top-git-cms).
+
+---
+
+## Часто задаваемые вопросы
+
+### Является ли CMS основанной на Git такой же, как бесголовной CMS?
+
+Нет. Без заголовка описывает _то, как контент достигает фронтенда_ (через API); основанный на Git описывает _где живет контент_ (файлы в репозитории). Оба идеи пересекаются на практике; см. [безголовные против Git CMS](/blog/headless-vs-git-based-cms/).
+
+### Нужно ли мне знать Git для использования одного?
+
+Нет. Вам нужно Git, если вы хотите исследовать историю или самостоятельно управлять ветками, редактор обрабатывает коммиты.
+
+### Может ли CMS на основе Git работать с большим сайтом?
+
+Да. Генераторы быстро строят тысячи страниц, а хранилище удобно обрабатывает объем содержимого. Время строительства – это практический потолок, а не хранилище.
+
+### Работает ли это с моим генератором статических сайтов?
+
+Если ваш генератор читает файлы Markdown с фронт-телом (Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js), да.
+
+### Где идет медиа?
+
+Обычно в каталог репозитория или актива ссылается на основную. В любом случае, ссылка живет с содержанием.
+
+---
+
+Далее: [бесголовная против Git-основанной CMS](/blog/headless-vs-git-based-cms/), если вы все еще взвешиваете архитектуры, или [какая передняя информация](/blog/what-is-front-matter/), если ваш уровень метаданных является новым.
