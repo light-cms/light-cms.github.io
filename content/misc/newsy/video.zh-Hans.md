@@ -1,26 +1,26 @@
 ---
-title: Video Walkthrough
-description: A video guide to the greenfield (local) setup.
+title: 视频访问
+description: 绿地(本地)设置视频指南。
 date: '2026-09-12T01:07:00Z'
 draft: false
 weight: 0
 tags:
-  - video
-  - youtube
-  - newsy
-  - newsletter
+  - 视频
+  - Youtube
+  - 新闻
+  - 新闻通讯
 isCJKLanguage: false
 headless: false
 ---
 
-Prefer to learn by watching? This walkthrough covers the setup process, from cloning the repository to launching the bot.
+喜欢通过观看学习吗？这个步行涵盖安装过程，从存储库的克隆到启动机器人。
 
-## New method with multitenancy support
+## 支持多租期的新方法
 
 [![Newsy setup walkthrough](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
 
-## Earlier walkthrough
+## 早期行程
 
-The previous video is still available for reference:
+上一个视频仍然可供参考：
 
-[![Earlier Newsy walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
+[![Newsy 早些时候通过](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
