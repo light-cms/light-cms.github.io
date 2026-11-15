@@ -28,7 +28,7 @@ tags:
   - opensquelle
   - blog
   - dokumentation
-slug: 2026-10-14-top-static-site-Hosting-Plattformen 2026
+slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
 ## Einführung
 

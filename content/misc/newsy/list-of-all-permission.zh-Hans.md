@@ -4,8 +4,8 @@ title: 所需权限
 description: 新建机器人请求的权限列表。
 author: 光厘米
 created: 2026-08-22T07:28:38+00:00
-visibility: 公开的
-fmContentType: 默认
+visibility: public
+fmContentType: default
 ---
 
 Newsy GitHub 应用程序需要以下权限来观看您的内容并代表您创建

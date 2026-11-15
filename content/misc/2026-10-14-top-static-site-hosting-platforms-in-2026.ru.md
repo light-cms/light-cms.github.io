@@ -28,7 +28,7 @@ tags:
   - прозрачный
   - блог
   - документация
-slug: 2026-10-14-топ-static-site-hosting-platforms-in-2026
+slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
 ## Введение
 

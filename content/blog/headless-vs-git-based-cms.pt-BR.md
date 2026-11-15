@@ -2,7 +2,7 @@
 title: "CMS sem cabeça vs CMS Baseado no Git: Duas Arquiteturas Comparadas"
 description: "CMS headless armazena conteúdo em um banco de dados por trás de uma API; Git baseado em CMS armazena-o como arquivos em um repositório. Como cada um funciona, onde cada um vence, e como escolher."
 serial: 44
-date: 2026-10-16T11:00Z
+date: 2026-10-16T11:00:00Z
 draft: false
 keywords:
   - cms sem cabeça vs cms baseado em git

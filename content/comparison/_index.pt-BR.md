@@ -1,7 +1,7 @@
 +++
 title = "Comparações"
 description = "LightCMS comparado lado a lado com cada CMS, plataforma sem cabeça e construtor de site"
-page_template = "artigo.html"
+page_template = "article.html"
 +++
 
 Honra, lado a lado, escreve sobre o campo [LightCMS](https://lightcms.me) contra o campo. Cada um parte da arquitetura (onde o conteúdo vive, o que é executado a pedido do tempo) e termina com quem deve realmente escolhê-lo.

@@ -2,7 +2,7 @@
 title: "LightCMS vs Strapi: Código Aberto, Duas Arquiteturas"
 description: "Strapi é uma CMS sem cabeçalho, apoiada em código-aberto; LightCMS é uma área de trabalho de escrita baseada em Git Mesma filosofia de licença, armazenamento muito diferente."
 serial: 50
-date: 2026-10-16T12:00Z
+date: 2026-10-16T12:00:00Z
 draft: false
 keywords:
   - lightcms vs correias

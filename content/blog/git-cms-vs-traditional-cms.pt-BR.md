@@ -2,7 +2,7 @@
 title: "CMS com GitLab vs CMS Tradicional: Qual é o melhor para você?"
 description: Como as plataformas CMS baseadas no Git são comparadas com WordPress, Ghost, e conteúdo sobre segurança, propriedade, custo e fluxo de trabalho, e por que a publicação estática está sendo transferida para o Git.
 serial: 10
-date: 2026-10-14T12:30Z
+date: 2026-10-14T12:30:00Z
 draft: false
 keywords:
   - git baseado em cms

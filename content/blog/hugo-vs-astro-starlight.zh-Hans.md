@@ -2,7 +2,7 @@
 title: 文档网站的 Hugo vs Astro Starlight
 description: "Hugo vs Astro Starlight 比较建筑文档：侧边栏、搜索、MDX、版本控制和主题，并提供适合你的文档项目的指南。"
 serial: 22
-date: 2026-10-14T14:30Z
+date: 2026-10-14T14:30:00Z
 draft: false
 keywords:
   - hugo vs starlight

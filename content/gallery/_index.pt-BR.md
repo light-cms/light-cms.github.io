@@ -1,7 +1,7 @@
 +++
 title = "Galeria"
 description = "Exposição visual de recursos do LightCMS, editor de espaço de trabalho, copiloto AI e fluxos de trabalho nativos do Git."
-template = "galeria .html"
+template = "gallery.html"
 +++
 
 ![LightCMS Banner](/og-image.webp)

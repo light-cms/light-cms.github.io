@@ -9,4 +9,4 @@ biome = "latest"
 [tasks]
 start = "zola serve"
 fetch = "crowdin pull"
-build = "zola build && bunx -y pagefind --site public"
+build = "bun scripts/normalize-translated-dates.ts && zola build && bunx -y pagefind --site public"

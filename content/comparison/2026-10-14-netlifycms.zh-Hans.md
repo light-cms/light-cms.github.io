@@ -2,7 +2,7 @@
 title: 2026 年顶级Netlify CMS (去除) 替代物
 description: 最好的 Netlify CMS 和 Decap CMS 替代品，包括LightCMS、Pages CMS、TinaCMS、Keystati、Sweltia CMS和GitCMS，与编辑经验、设置和价格相比较。
 serial: 13
-date: 2026-10-14T13:00:00
+date: 2026-10-14T13:00:00Z
 draft: false
 keywords:
   - netlife cms替代物

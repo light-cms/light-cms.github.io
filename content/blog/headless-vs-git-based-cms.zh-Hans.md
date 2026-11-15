@@ -2,7 +2,7 @@
 title: "无头CMS vs Git-based CMS：两个架构比较"
 description: "无头CMS在 API 背后的数据库中存储内容；Git 基于 CMS 将其作为文件存储在仓库中。各自如何运作、在哪里赢以及如何选择。"
 serial: 44
-date: 2026-10-16T11:00:00
+date: 2026-10-16T11:00:00Z
 draft: false
 keywords:
   - 无头cms vs git based cms

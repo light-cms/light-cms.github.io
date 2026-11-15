@@ -1,7 +1,7 @@
 +++
 title = "相册"
 description = "LightCMS功能、编辑器工作空间、AI 拷贝和 Git-本机工作流程的视觉展示。"
-template = "Gallery.html"
+template = "gallery.html"
 +++
 
 ![LightCMS Banner](/og-image.webp)

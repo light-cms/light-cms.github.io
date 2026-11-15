@@ -3,9 +3,9 @@ id: IXGd7-xioQc
 title: Permisos requeridos
 description: La lista de permisos que solicita el bot Newsy.
 author: cms de luz
-created: 08-2026-22T07:28:38+00:00
-visibility: público
-fmContentType: por defecto
+created: 2026-08-22T07:28:38+00:00
+visibility: public
+fmContentType: default
 ---
 
 The Newsy GitHub App needs the following permissions to watch your content and create

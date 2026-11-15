@@ -28,7 +28,7 @@ tags:
   - código abierto
   - blog
   - documentación
-slug: 2026-10-14-top-static-site-hosting-plataforms-in-2026
+slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
 ## Introducción
 

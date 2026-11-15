@@ -2,7 +2,7 @@
 title: "2026年静态站点最佳CMS：8 选项比较"
 description: "2026年静态站点的 CMS 最佳选项：基于Git 和无头的平台与编辑质量、锁定价格和安装努力相比较。"
 serial: 36
-date: 2026-10-16T10:00:00
+date: 2026-10-16T10:00:00Z
 draft: false
 keywords:
   - 最好的静态站点cms

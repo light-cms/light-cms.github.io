@@ -17,7 +17,7 @@ taxonomies:
     - modelos
     - github
     - estático-sítios
-slug: início-coma-lightcms-template
+slug: start-with-a-lightcms-template
 ---
 Você leu 10 blogs diferentes sobre qual SSG escolher e por quê?
 

@@ -2,7 +2,7 @@
 title: Alternativas do Top Netlify CMS (Decap) em 2026
 description: As melhores alternativas para Netlify CMS e Decap, incluindo LightCMS, TinaCMS, TinaCMS, Keystatic, Sveltia CMS e GitCMS, comparado com a edição de experiência, configuração e preço.
 serial: 13
-date: 2026-10-14T13:00Z
+date: 2026-10-14T13:00:00Z
 draft: false
 keywords:
   - netlify cms alternativas

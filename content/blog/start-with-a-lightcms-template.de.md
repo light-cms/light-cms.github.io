@@ -17,7 +17,7 @@ taxonomies:
     - vorlagen
     - github
     - statische Seiten
-slug: start-mit-a-lightcms-Vorlage
+slug: start-with-a-lightcms-template
 ---
 Haben Sie 10 verschiedene Blogs gelesen, über welche SSG zu wählen und warum?
 

@@ -28,7 +28,7 @@ tags:
   - Source opensource
   - blog
   - documentation
-slug: 2026-10-14 plates-formes d'hébergement statique haut de gamme en 2026
+slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
 ## Introduction
 

@@ -2,7 +2,7 @@
 title: "LightCMS vs Joomla: CMS tradicional vs Git baseado em Publicação"
 description: "Joomla é um CMS auto-hospedado clássico com painel de administração e banco de dados; LightCMS armazena o conteúdo como Markdown no Git e naves páginas estáticas. Uma comparação bem visível."
 serial: 56
-date: 2026-10-16T13:00Z
+date: 2026-10-16T13:00:00Z
 draft: false
 keywords:
   - lightcms vs joomla

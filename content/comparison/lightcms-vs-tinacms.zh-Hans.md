@@ -2,7 +2,7 @@
 title: "LightCMS vs TinaCMS：独立工作区与页面编辑"
 description: "两者都提交 Markdown 到 Git，但LightCMS 是一个独立的写作工作区，TinaCMS 编辑渲染页面上的内容。哪里符合您的工作流？"
 serial: 39
-date: 2026-10-16T10:30Z
+date: 2026-10-16T10:30:00Z
 draft: false
 keywords:
   - 闪光灯与毒性数

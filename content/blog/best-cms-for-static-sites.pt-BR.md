@@ -2,7 +2,7 @@
 title: "Melhor CMS para Sites Estáticos em 2026: 8 Opções Comparadas"
 description: "As melhores opções de CMS para um site estático em 2026: Git baseado em plataformas baseadas em bits e sem cabeça comparadas com a qualidade do editor, bloqueio, preço e esforço de instalação."
 serial: 36
-date: 2026-10-16T10:00Z
+date: 2026-10-16T10:00:00Z
 draft: false
 keywords:
   - melhores cms para sites estáticos

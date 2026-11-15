@@ -2,7 +2,7 @@
 title: "LightCMS vs Joomla: 传统CMS vs Git 基础发布"
 description: "Joomla是一个经典的自托管的 CMS，有一个管理面板和数据库；LightCMS 在 Git 中将内容存储为 Markdown 和船舶静态页面。清晰的比较。"
 serial: 56
-date: 2026-10-16T13:00:00
+date: 2026-10-16T13:00:00Z
 draft: false
 keywords:
   - lightcms vs joomla

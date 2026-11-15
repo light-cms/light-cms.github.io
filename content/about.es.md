@@ -15,7 +15,7 @@ tags:
   - sveltekit
 isCJKLanguage: false
 headless: false
-slug: sobre
+slug: about
 date: '2026-11-08T21:20:01.403Z'
 extra:
   comments: false

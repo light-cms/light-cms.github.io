@@ -17,7 +17,7 @@ taxonomies:
     - 模板
     - github
     - 静态站点
-slug: 开始使用 a-lightcms-template
+slug: start-with-a-lightcms-template
 ---
 您是否阅读了10种不同的博客来选择哪个SSG以及为什么？
 

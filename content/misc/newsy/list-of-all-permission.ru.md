@@ -4,8 +4,8 @@ title: Требуемые разрешения
 description: Список разрешений, которые запрашивает бот новости.
 author: световой см
 created: 2026-08-22T07:28:38+00:00
-visibility: публичный
-fmContentType: стандартный
+visibility: public
+fmContentType: default
 ---
 
 The Newsy GitHub App needs the following permissions to watch your content and create

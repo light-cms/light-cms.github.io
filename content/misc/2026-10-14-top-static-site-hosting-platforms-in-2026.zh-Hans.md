@@ -2,7 +2,7 @@
 title: 2026 年顶级静态站点主机平台
 description: >-
   最佳静态站点托管提供商的2026年GitHub 页面、 Cloudflare页面、 Wasmer、Vercel、Netlify和Deno Disploy的实用比较。
-date: '2026-10-14T10:00:00Z'
+date: '2026-10-14T10:00:00.000Z'
 draft: false
 weight: 1
 serial: 6
@@ -28,7 +28,7 @@ tags:
   - 打开源
   - 博客
   - 文件
-slug: 2026-10-14-static-site-hosting-plate-platforms-2026
+slug: 2026-10-14-top-static-site-hosting-platforms-in-2026
 ---
 ## 一. 导言
 

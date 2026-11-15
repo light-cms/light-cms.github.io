@@ -17,7 +17,7 @@ taxonomies:
     - plantillas
     - github
     - sitios estáticos
-slug: iniciar con una plantilla de luz
+slug: start-with-a-lightcms-template
 ---
 ¿Has leído 10 blogs diferentes sobre qué SSG elegir y por qué?
 

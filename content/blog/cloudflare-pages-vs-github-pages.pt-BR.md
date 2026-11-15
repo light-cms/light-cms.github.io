@@ -2,7 +2,7 @@
 title: "Cloudflare Pages vs GitHub Pages: Qual host Wins?"
 description: Cloudflare Pages e GitHub Pages comparados em relação à largura de banda, domínios personalizados, limites de compilação e facilidade de uso, com uma recomendação para blogs e sites de projeto.
 serial: 19
-date: 2026-10-14T14:00Z
+date: 2026-10-14T14:00:00Z
 draft: false
 keywords:
   - cloudflare páginas vs páginas do github

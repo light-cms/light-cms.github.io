@@ -2,7 +2,7 @@
 title: O que é Markdown? O formato de texto simples impulsionando a Web
 description: "Markdown explicou: o que é, por que ele durou, a sintaxe que você precisa, e como as ferramentas CMS baseadas em Git transformam texto simples em um formato de publicação."
 serial: 25
-date: 2026-10-14T15:00Z
+date: 2026-10-14T15:00:00Z
 draft: false
 keywords:
   - o que é markdown

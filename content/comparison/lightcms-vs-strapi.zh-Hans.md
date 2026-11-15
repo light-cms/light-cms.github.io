@@ -2,7 +2,7 @@
 title: "LightCMS vs Strapi: Open Source, Two Architures"
 description: "Strapi是一个开放源，数据库支持的无头CMS；LightCMS是一个开放源，基于 Git 的写作工作区。相同的许可证哲学，非常不同的存储。"
 serial: 50
-date: 2026-10-16T12:00:00
+date: 2026-10-16T12:00:00Z
 draft: false
 keywords:
   - 闪光灯对片段

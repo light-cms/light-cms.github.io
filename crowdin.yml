@@ -15,6 +15,7 @@ export_languages:
 files:
   - source: "/content/**/*.md"
     translation: "/%original_path%/%file_name%.%locale%.%file_extension%"
+    type: fm_md
     ignore:
       - "/content/**/*.*.md"
     excluded_front_matter_elements:

@@ -4,7 +4,7 @@ description: Leitfaden zum Selbst-Host LightCMS.
 serial: 4
 section: Los geht's
 badge: Deploy
-date: 18.09.20T01:45:00Z
+date: 2026-09-18T01:45:00Z
 draft: false
 tags:
   - selfhost

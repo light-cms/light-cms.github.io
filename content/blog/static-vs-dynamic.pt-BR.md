@@ -2,7 +2,7 @@
 title: "vs Sítios Estáticos: Qual escolher e quando?"
 description: "Uma comparação prática de sites estáticos e dinâmicos: desempenho, custo, segurança e quando um site estático com um CMS baseado no Git for a melhor escolha."
 serial: 7
-date: 2026-10-14T12:00Z
+date: 2026-10-14T12:00:00Z
 draft: false
 keywords:
   - site estático vs site dinâmico

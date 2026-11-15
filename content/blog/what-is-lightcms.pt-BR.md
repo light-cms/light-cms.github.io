@@ -2,7 +2,7 @@
 title: "O que é LightCMS? O Git based CMS para Sites Estáticos"
 description: "LightCMS é um Git baseado em CMS com um editor WYSIWYG visual. Ele compromete o Markdown simples no seu repositório e permite que seu CI/CD existente o faça."
 serial: 30
-date: 2026-10-16T09:00Z
+date: 2026-10-16T09:00:00Z
 draft: false
 keywords:
   - o que é luzes

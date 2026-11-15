@@ -2,7 +2,7 @@
 title: "更改您的草稿：用 [LightCMS]语音转到文本(https://lightcms.me)"
 description: "How [LightCMS](https://lightcms.me) turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
 serial: 33
-date: 2026-10-16T09:30Z
+date: 2026-10-16T09:30:00Z
 draft: false
 keywords:
   - 语音到文本Markdown
