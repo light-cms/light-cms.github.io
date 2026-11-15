@@ -1,34 +1,34 @@
 ---
-title: 'Start From a Template: The LightCMS Starter Library'
-description: LightCMS ships preconfigured starter templates on GitHub
+title: 'Commencer à partir d''un modèle : La bibliothèque de démarrage LightCMS'
+description: LightCMS fournit des modèles de démarrage préconfigurés sur GitHub
 serial: 35
 date: '2026-10-16T09:50:00.000Z'
 draft: false
 keywords:
-  - lightcms templates
-  - static site starter template
+  - Modèles lightcms
+  - modèle de démarrage du site statique
   - blog starter astro hugo
   - github template repository
-  - start a blog from template
+  - démarrer un blog à partir d'un modèle
 preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms
-    - templates
+    - Modèles
     - github
-    - static-sites
+    - sites statiques
 slug: start-with-a-lightcms-template
 ---
-Have you read 10 different blogs about which SSG to choose and why?
+Avez-vous lu 10 blogs différents sur lesquels SSG à choisir et pourquoi?
 
 [LightCMS](https://lightcms.me) Covers you all, by default lightcms is vendor neutral,
 and we provide a lot of starter templates to make your journey setting up smoother.
 
-## What a Starter Gives You
+## Quel débutant vous donne
 
-Every template in the [LightCMS GitHub organization](https://github.com/light-cms/) Is a complete, working site:
+Chaque modèle de l'organisation [LightCMS GitHub] (https://github.com/light-cms/) est un site complet de travail :
 
-- **A configured static site generator** (Astro, Hugo, SvelteKit, Jekyll, Next.js, Zola, or Eleventy, depending on the template) with a theme that is already rendering posts.
+- **Un générateur de site statique configuré** (Astro, Hugo, SvelteKit, Jekyll, Next.js, Zola, ou Eleventy, selon le modèle) avec un thème qui est déjà affiché.
 - **A content directory** With example Markdown files showing the exact front matter schema [LightCMS](https://lightcms.me) will read and write: title, description, date, tags, keywords, draft flag.
-- **A ready CI/CD workflow** All the templates are configured for GitHub pages and you are more than welcome to bring your own hosting.
-- LLM: lightcms comes with lightcms skills and comes with a llms.txt with all the necessary information required with which you can ask your favorite LLM to patch your existing static site workflow for you.
+- **Un workflow CI/CD prêt** Tous les modèles sont configurés pour les pages GitHub et vous êtes plus que bienvenu pour apporter votre propre hébergement.
+- LLM : lightcms est livré avec des compétences de lightcms et est livré avec un llms. xt avec toutes les informations nécessaires avec lesquelles vous pouvez demander à votre LLM préféré de patcher votre flux de travail statique existant pour vous.
