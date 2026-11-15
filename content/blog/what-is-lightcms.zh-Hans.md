@@ -1,104 +1,104 @@
 ---
-title: "What Is LightCMS? The Git based CMS for Static Sites"
-description: "LightCMS is a self-hosted, Git based CMS with a visual WYSIWYG editor. It commits plain Markdown to your repository and lets your existing CI/CD deploy it."
+title: "LightCMS是什么？基于 Git 的静态站点CMS"
+description: "LightCMS 是一个自托的 Git 基于 WYSIWYG 编辑器的 CMS。它将普通Markdown 提交给你的仓库，并允许你现有的 CI/CD 部署它。"
 serial: 30
 date: 2026-10-16T09:00:00Z
 draft: false
 keywords:
-  - what is lightcms
-  - lightcms
-  - Git based cms
+  - 什么是 Lightcms
+  - 闪光
+  - 基于 Git 的cms
   - markdown cms
-  - visual editor for markdown
+  - Markdown的视觉编辑器
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - cms
+    - 闪光
+    - 厘米
     - git
     - markdown
 ---
 
-**LightCMS** is a content management system that keeps your content in your Git repository as plain Markdown files.
+**LightCMS** 是一个内容管理系统，在您的 Git 仓库中将您的内容保存为普通Markdown文件。
 
-No database. No lock-in. Sign in with GitHub, pick a repository, write, and publish. [LightCMS](https://lightcms.me) commits the changes for you.
+没有数据库。没有锁定. 使用 GitHub 登录，选择一个仓库，写入和发布。 [LightCMS](https://lightcms.me) 为您提交变更。
 
-## The problem [LightCMS](https://lightcms.me) solves
+## 问题 [LightCMS](https://lightcms.me) 解决
 
-Static site generators make publishing fast, cheap, and secure. But writing a post in a code editor can feel difficult if you are not used to that workflow.
+静态场地发电机能够快速、便宜和安全地出版产品。但在代码编辑器中写一个帖子可能会感到很困难，如果你不被用于那个工作流。
 
-That workflow suits developers. It does not suit everyone who wants to write.
+此工作流程适合开发者。它不适合每一个想写作的人。
 
-[LightCMS](https://lightcms.me) removes that friction without removing Git. Developers keep content in the repository, and writers get a browser-based editor for drafting and publishing.
-
----
-
-## How [LightCMS](https://lightcms.me) works
-
-1. **Sign in with GitHub.** LightCMS uses GitHub OAuth, so you do not need a separate account system.
-2. **Connect a repository.** Choose any repo that contains Markdown content, including sites built with Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, or Next.js.
-3. **Write visually.** The TipTap-based editor supports headings, links, lists, tables, task lists, math, syntax-highlighted code, and drag-and-drop media.
-4. **Publish.** [LightCMS](https://lightcms.me) writes the file and front matter, then commits it directly or opens a pull request if you want review.
-5. **Deploy.** GitHub Actions, Cloudflare Pages, Vercel, or Netlify can rebuild and deploy your site. Writers stay in the browser, and maintainers keep their Git workflow.
-
-Step 4 creates a normal commit. If you stop using [LightCMS](https://lightcms.me), your site still builds because your content already lives in your repository.
+[LightCMS](https://lightcms.me) 在不移除Git的情况下移除摩擦。开发者将内容保留在仓库中，作者将获得一个基于浏览器的编辑器来起草和发布。
 
 ---
 
-## What makes it different
+## [LightCMS](https://lightcms.me) 如何工作
 
-There are several capable Git-based CMS options ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, Pages CMS), and [LightCMS](https://lightcms.me) takes a different approach in a few areas:
+1. **使用 GitHub 登录。** LightCMS 使用 GitHub OAutth，所以您不需要一个单独的帐户系统。
+2. **连接一个仓库。** 选择包含Markdown内容的任何仓库，包括通过 Astro、Hugo、Zola、Eleventy、Jekyl、SwelteKit 或 Next.js 构建的网站。
+3. **可视写入。** 基于 TipTapp 的编辑器支持标题、链接、列表、表格、任务列表、数学、语法高亮代码和拖放媒体。
+4. **发布。** [LightCMS](https://lightcms.me) 写入文件和前端，然后直接提交，或者打开拉取请求，如果您想要审核的话。
+5. **部署。** GitHub Actions, Cloudflare页面, Vercel, 或 Netlify 可以重建和部署您的网站。作者留在浏览器中，维护者保持他们的 Git 工作流程。
 
-|                   | [LightCMS](https://lightcms.me)                                                                 |
-| :---------------- | :---------------------------------------------------------------------------------------------- |
-| **Storage**       | Your GitHub repository (Markdown + YAML front matter)                                           |
-| **Editor**        | TipTap-based WYSIWYG editor with math (KaTeX), code highlighting, tables, task lists, and media |
-| **AI**            | Built-in copilot for outlines, rewrites, and grammar, using any OpenAI-compatible provider      |
-| **Voice**         | Whisper-powered dictation in the editor                                                         |
-| **Newsletters**   | Publish Markdown and send updates with Newsy from GitHub                                        |
-| **Hosting model** | Self-hosted, Apache 2.0 licensed, runs on any Node.js host                                      |
-| **Lock-in**       | None: your content stays in files you own                                                       |
-
-[LightCMS](https://lightcms.me) covers drafting, editing, publishing, and newsletter distribution without adding a separate database.
+步骤4创建正常提交。如果您停止使用 [LightCMS](https://lightcms.me)，您的网站仍然是构建的，因为您的内容已经存在于您的仓库中。
 
 ---
 
-## What [LightCMS](https://lightcms.me) is not
+## 是什么使它不同的
 
-- **It is not a database-first CMS.** If you need relational content, complex roles and permissions, or an app-shaped content API, a headless platform like [Payload](/comparison/lightcms-vs-payload-cms) may fit better.
-- **It is not a hosting service.** [LightCMS](https://lightcms.me) manages content; your host (Cloudflare Pages, Vercel, Netlify, GitHub Pages) serves the site. See [static site hosting compared](/misc/top-static-site-hosting).
-- **It is not a theme or a site generator.** It commits content into whatever static site generator you already run.
+有几个基于 Git的 CMS 选项 ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, 页面CMS和 [LightCMS](https://lightcms.me) 在几个领域采取不同的方法：
+
+|                 | [LightCMS](https://lightcms.me)                  |
+| :-------------- | :----------------------------------------------- |
+| **存储**          | 您的 GitHub 仓库(Markdown + YAML 前端事项)               |
+| **编辑**          | 基于 Tapp 的 WYSIWYG 编辑器包含数学(KaTeX)，代码高亮、表格、任务列表和媒体 |
+| **AI**          | 使用任何 OpenAI兼容的提供商，为大纲、重写和语法内置的 copilot           |
+| **语音**          | 编辑器中的由Whisper驱动的口述法                              |
+| **Newsletters** | 发布Markdown 并从GitHub 发送更新信息                       |
+| **托管模型**        | 自托管，Apache 2.0 许可，运行任意Node.js 主机                 |
+| **锁定**          | 无：您的内容留在您自己的文件中                                  |
+
+[LightCMS](https://lightcms.me) 涵盖起草、编辑、发布和通讯发布，而不添加一个单独的数据库。
 
 ---
 
-## Who it is for
+## [LightCMS](https://lightcms.me) 不是
 
-- **Solo writers and bloggers** who want to own their content without running extra infrastructure.
-- **Teams** where developers maintain the site and non-developers write and publish content.
-- **Static site projects** that have outgrown editing Markdown in a code editor but still want a Git-based workflow.
-
-If that sounds like you, you can [copy a starter template](/blog/start-with-a-lightcms-template/) to get a repository, build setup, and deployment workflow ready for your first post.
+- \*\*它不是数据库第一的 CMS。 \* 如果您需要关系内容、复杂的角色和权限，或应用程序形状的内容 API， 像 [Payload](/comparison/lightcms-vs-payload-cms) 这样的无头平台可能更好地适应。
+- **它不是托管服务。** [LightCMS](https://lightcms.me)管理内容；您的主机 (Cloudflare页面、Vercel、Netlify、GitHub 页面) 服务于网站。查看[静态站点主机比较](/misc/top-static-site-hosting)。
+- **它不是一个主题或站点生成器。** 它将内容提交到您已经运行的静态站点生成器中。
 
 ---
 
-## Frequently asked questions
+## 谁是
 
-### Is [LightCMS](https://lightcms.me) free?
+- **单人作家和博客** 想要拥有自己的内容而不需要额外的基础设施。
+- **团队** 由开发人员维护网站，非开发人员撰写和发布内容。
+- **静态站点项目** 在代码编辑器中编辑Markdown 但仍然需要基于 Git 的工作流。
 
-[LightCMS](https://lightcms.me) is open source under the Apache 2.0 license and designed to be self-hosted. You do not pay per seat, and you can host it wherever you run Node.js.
+如果你喜欢这个声音，你可以[复制一个启动模板](/blog/start-with-a-lightcms-template/)获取一个仓库， 构建设置，部署工作流程准备好为您的第一篇帖子。
 
-### Does [LightCMS](https://lightcms.me) work with Hugo and Astro?
+---
 
-Yes. Hugo and Astro read Markdown files with YAML front matter from a repository, which is what [LightCMS](https://lightcms.me) writes. The same applies to Zola, Eleventy, Jekyll, and SvelteKit.
+## 常见问题
 
-### Where does my content live?
+### [LightCMS](https://lightcms.me)是否免费？
 
-In your repository as `.md` files with front matter. There is no separate database and no export step.
+[LightCMS](https://lightcms.me) 是在 Apache 2.0 许可下开源的，并被设计为自动托管。你不支付每个座位的费用，你可以在运行Node.js的任何地方托管它。
 
-### Do writers need to know Git?
+### [LightCMS](https://lightcms.me)能够与 Hugo 和 Astro共用吗？
 
-No. Writers use the editor and publish button. Commits, branches, and pull requests happen in the background.
+是。 Hugo 和 Astro 从一个仓库读取带有YAML 前缀的 Markdown 文件，这是 [LightCMS](https://lightcms.me) 写的。 Zola、Eleventy、Jekyl和SvelteKit也是如此。
 
-### How is this different from WordPress?
+### 我的内容住在哪里？
 
-WordPress stores content in MySQL and renders pages with PHP at request time. [LightCMS](https://lightcms.me) writes static files that a CDN can serve. For a deeper comparison, see [static vs dynamic sites](/blog/static-vs-dynamic/) and [WordPress alternatives](/blog/wordpress-alternatives/).
+作为".md"文件存放在你的仓库里，有前缀。没有单独的数据库，也没有导出步骤。
+
+### 作者需要知道G吗？
+
+否。作者使用编辑器并发布按钮。提交、分支和拉取请求在后台发生。
+
+### 这与WordPress有何不同？
+
+WordPress 在 MySQL 中存储内容，请求时使用 PHP 打开页面。 [LightCMS](https://lightcms.me) 写入一个 CDN 可以服务的静态文件。 For a deeper comparison, see [static vs dynamic sites](/blog/static-vs-dynamic/) and [WordPress alternatives](/blog/wordpress-alternatives/).
