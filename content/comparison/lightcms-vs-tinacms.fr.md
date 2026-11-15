@@ -1,127 +1,127 @@
 ---
-title: "LightCMS vs TinaCMS: Standalone Workspace vs On-Page Editing"
-description: "Both commit Markdown to Git, but LightCMS is a standalone writing workspace and TinaCMS edits content on the rendered page. Which fits your workflow?"
+title: "LightCMS vs TinaCMS: Espace de travail autonome vs édition sur page"
+description: "Les deux commit Markdown to Git, mais LightCMS est un espace de travail d'écriture autonome et TinaCMS édite le contenu sur la page rendue. Qui correspond à votre flux de travail?"
 serial: 39
 date: 2026-10-16T10:30:00Z
 draft: false
 keywords:
   - lightcms vs tinacms
-  - tinacms alternatives
-  - tinacms self hosted
-  - on-page editing vs dashboard
-  - markdown cms comparison
+  - alternatives aux tinacms
+  - tinacms auto-hébergés
+  - édition sur page vs tableau de bord
+  - Comparaison de markdown cms
 preview: /og-image.webp
 taxonomies:
   tags:
     - lightcms
     - tinacms
     - cms
-    - comparison
+    - Comparaison
 ---
 
-TinaCMS made a compelling argument that most CMS dashboards get one thing backwards: instead of pulling content out of its context to edit it, you should **edit it where it lives**. Click a paragraph on the rendered page, change it, and commit.
+TinaCMS a fait un argument convaincant que la plupart des tableaux de bord CMS obtiennent une chose en arrière : au lieu d'extraire du contenu de son contexte pour l'éditer, vous devriez **l'éditer où il vite**. Cliquez sur un paragraphe sur la page affichée, modifiez-la et validez.
 
-LightCMS makes the opposite bet: long-form writing deserves a dedicated surface, separate from layout, where the document is the only thing on screen.
+LightCMS fait le pari inverse: l'écriture de forme longue mérite une surface dédiée, séparée de la mise en page, où le document est la seule chose à l'écran.
 
-Both commit clean Markdown to your repository. They disagree about where your hands should be.
-
----
-
-## Two Philosophies of "Visual"
-
-**TinaCMS: contextual editing.** You interact with content on the live page. What you edit is what you see rendered, which is the right fit for copy that sits inside a design: headlines, hero text, card titles, metadata next to its visual consequence.
-
-**LightCMS: document editing.** You interact with the article itself in a focused workspace. There is no layout to distract from structure, and no scrolling past the header image to reach paragraph fourteen.
-
-The distinction maps onto content type:
-
-- Page and landing copy → editing in place is faster and less error-prone.
-- Articles, docs, changelogs → a dedicated writing surface is calmer and more productive.
-
-Tina is optimized for the first case; LightCMS for the second.
+Les deux commit nettoient Markdown à votre dépôt. Ils ne sont pas d'accord sur ce que doivent être vos mains.
 
 ---
 
-## Comparison
+## Deux Philosophies de "Visuel"
 
-|                    | LightCMS                                            | TinaCMS                                             |
-| :----------------- | :-------------------------------------------------- | :-------------------------------------------------- |
-| **Editing model**  | Standalone document workspace                       | On-page, in-context editing                         |
-| **Content store**  | Your GitHub repository                              | GitHub (or Git based storage)                       |
-| **Content schema** | Configured in the app; front matter as a form       | Schema defined in code with Tina's content SDK      |
-| **Editor**         | TipTap WYSIWYG: tables, math, code, task lists      | Inline rich text tuned for page copy                |
-| **AI copilot**     | Built in (any OpenAI-compatible endpoint)           | Not bundled                                         |
-| **Voice-to-text**  | Built in (Whisper)                                  | Not bundled                                         |
-| **Newsletters**    | Built in via Newsy: GitHub-backed, no email service | Not bundled                                         |
-| **Deployment**     | Self-hosted Node.js service                         | Local workflow, hosted cloud option, or self-hosted |
-| **Licensing**      | Apache 2.0                                          | Open source core, with hosted services available    |
+**TinaCMS: édition contextuelle.** Vous interagissez avec le contenu de la page live. Ce que vous éditez est ce que vous voyez rendu, qui est la bonne pour la copie qui se trouve à l'intérieur d'un design: les titres, texte de héros, titres de carte, métadonnées à côté de ses conséquences visuelles.
 
-_(Verify current licensing and hosted-tier details against each project's docs before committing; both projects evolve quickly.)_
+**LightCMS: édition de documents.** Vous interagissez avec l'article lui-même dans un espace de travail ciblé. Il n'y a pas de mise en page pour distraire de la structure, et pas de défilement de l'image d'en-tête pour atteindre le paragraphe 14.
+
+La carte de distinction sur le type de contenu:
+
+- La page et la copie de destination → l'édition en place est plus rapide et moins source d'erreurs.
+- Articles, docs, changelogs → une surface d'écriture dédiée est plus calme et plus productive.
+
+Tina est optimisée pour le premier cas; LightCMS pour le second.
 
 ---
 
-## Where TinaCMS Wins
+## Comparaison
 
-- **Layout feedback.** Editing hero copy inside the hero tells you immediately when a sentence is too long for its box. No dashboard can show that.
-- **Developer ergonomics for app-like sites.** Tina's schema-in-code integrates naturally with component-driven frameworks and type-safe content collections.
-- **Live preview parity.** Because you are editing the rendered output, preview and result are the same thing by definition.
+|                         | LightCMS                                                        | TinaCMS                                                     |
+| :---------------------- | :-------------------------------------------------------------- | :---------------------------------------------------------- |
+| **Édition du modèle**   | Espace de travail de document autonome                          | Édition sur la page, dans le contexte                       |
+| **Boutique de contenu** | Your GitHub repository                                          | GitHub (ou stockage basé sur Git)                           |
+| **Schéma de contenu**   | Configuré dans l'application; face avant en tant que formulaire | Schéma défini dans le code avec le SDK de contenu de Tina   |
+| **Éditeur**             | TipTap WYSIWYG: tables, mathématiques, code, listes de tâches   | Texte riche en ligne réglé pour la copie de la page         |
+| **Copilote d'IA**       | Inclus (tous les terminaux compatibles OpenAI)                  | Non groupé                                                  |
+| **Voix contre texte**   | Inclus (Whisper)                                                | Non groupé                                                  |
+| **Newsletters**         | Intégrée via Newsy : GitHub-backed, aucun service de messagerie | Non groupé                                                  |
+| **Déploiement**         | Service Node.js auto-hébergé                                    | Flux de travail local, option cloud hébergé ou auto-hébergé |
+| **Licence**             | Apache 2.0                                                      | Noyau Open Source, avec services hébergés disponibles       |
 
-## Where LightCMS Wins
-
-- **Writing focus.** A blank page with headings, lists, code, and math, rather than a page you scroll to reach your prose.
-- **No schema-in-code step.** Adding a field does not require editing a TypeScript config, opening a pull request, and redeploying the site. Writers can manage front matter themselves.
-- **Distribution.** Drafting assistance, transcription, and newsletter dispatch are part of the product, not integrations you assemble.
-- **Full self-hosting.** Run the whole thing on infrastructure you control, with your own model endpoint.
+_(Vérifiez les détails de la licence actuelle et du niveau hébergé par rapport à la documentation de chaque projet avant de s'engager ; les deux projets évoluent rapidement.)_
 
 ---
 
-## The Schema Question, Specifically
+## Où TinaCMS gagne
 
-This is the difference teams underestimate:
+- **Réaction de mise en page.** La modification de la copie du héros dans le héros vous indique immédiatement quand une phrase est trop longue pour sa boîte. Aucun tableau de bord ne peut montrer cela.
+- **L'ergonomie des développeurs pour les sites ressemblant à des applications.** Le schéma en code de Tina s'intègre naturellement aux collections de contenu basées sur des composants et des collections de contenu sécurisées.
+- **Parité d'aperçu en direct.** Parce que vous éditez la sortie rendue, l'aperçu et le résultat sont la même chose par définition.
 
-With a code-defined schema, **content structure is a developer concern**. That is a feature for engineering teams who want strict typing and review, and a blocker for everyone else: a writer who needs one new field must file a request.
+## Où LightCMS gagne
 
-LightCMS treats structure as configuration: front matter fields are managed in the tool. The trade-off is less compile-time type safety; the gain is that metadata evolves at the speed of the editorial calendar.
+- **Concentration d'écriture.** Une page vide avec des en-têtes, des listes, du code et des mathématiques, plutôt qu'une page que vous faites défiler pour atteindre votre prose.
+- **Aucune étape de code du schéma.** L'ajout d'un champ ne nécessite pas la modification d'une configuration TypeScript, l'ouverture d'une requête de pull et le redéploiement du site. Les écrivains peuvent gérer eux-mêmes la première question.
+- **Distribution.** L'aide à l'ébauche, la transcription et l'envoi de la newsletter font partie du produit et non des intégrations que vous assemblez.
+- **Hébergement complet.** Exécutez le tout sur l'infrastructure que vous contrôlez, avec votre propre point de terminaison de modèle.
 
-Choose based on who is allowed to change the content model.
+---
+
+## La question du Schéma, en particulier
+
+Il s'agit de la sous-estimation des équipes différentes:
+
+Avec un schéma défini par code, **structure de contenu est une préoccupation du développeur**. C'est une fonctionnalité pour les équipes d'ingénierie qui veulent une saisie et une révision strictes, et un bloqueur pour tout le monde : un écrivain qui a besoin d'un nouveau champ doit remplir une requête.
+
+LightCMS traite la structure comme une configuration: les champs de la matière première sont gérés dans l'outil. Le compromis est moins de sécurité de type temps de compilation; le gain est que les métadonnées évoluent à la vitesse du calendrier éditorial.
+
+Choisissez en fonction de qui est autorisé à modifier le modèle de contenu.
 
 ---
 
 ## Migration
 
-Both write Markdown with YAML front matter into a repository, so the content itself moves without conversion. What changes is the schema layer: Tina's code configuration gives way to LightCMS's in-app fields, which takes an afternoon at most for a typical blog.
+Tous les deux écrivent Markdown avec le front de YAML dans un référentiel, de sorte que le contenu lui-même se déplace sans conversion. Ce qui change est la couche de schéma : la configuration de code de Tina laisse place aux champs de l'application LightCMS, qui prennent au maximum un après-midi pour un blog typique.
 
 ---
 
-## Which Should You Choose?
+## Que devriez-vous choisir?
 
-- **Choose TinaCMS** if your editing happens against layout (marketing pages, landing copy, component-driven sites) and your team is comfortable defining content structure in code.
-- **Choose LightCMS** if you publish articles, want a real writing environment, and need contributors to work without touching the codebase.
-
----
-
-## Frequently Asked Questions
-
-### Does LightCMS do on-page editing?
-
-No. LightCMS is a dedicated workspace rather than an embedded page editor, so it does not render your live theme while you write.
-
-### Is TinaCMS free?
-
-Tina has an open source core with hosted services around it. Check current pricing and licensing for your use case before choosing.
-
-### Can both be used on the same repository?
-
-Practically, no: two editing tools would compete over the same files and conventions. Pick one owner for the content workflow.
-
-### Which produces cleaner Markdown?
-
-Both produce clean, conventional Markdown and front matter. Editor output is a design choice, not a quality difference.
-
-### Do either require a database?
-
-LightCMS does not. Tina's hosted offering stores content in Git based storage; self-hosted arrangements vary by configuration.
+- **Choisissez TinaCMS** si votre édition se produit contre la mise en page (pages marketing, copie de destination, sites pilotés par composants) et votre équipe est à l'aise de définir la structure de contenu dans le code.
+- **Choisissez LightCMS** si vous publiez des articles, si vous voulez un véritable environnement d'écriture et si vous avez besoin de contributeurs pour travailler sans toucher au codebase.
 
 ---
 
-More comparisons: [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms).
+## Foire aux questions
+
+### Est-ce que LightCMS fait l'édition sur la page ?
+
+Non. LightCMS est un espace de travail dédié plutôt qu'un éditeur de page intégré, donc il ne rend pas votre thème en direct pendant que vous écrivez.
+
+### TinaCMS est-il gratuit ?
+
+Tina a un noyau open source avec des services hébergés autour de lui. Vérifiez les prix actuels et les licences pour votre cas d'utilisation avant de choisir.
+
+### Peut-on tous les deux être utilisés sur le même référentiel ?
+
+En pratique, non: deux outils d'édition rivaliseraient avec les mêmes fichiers et conventions. Choisissez un propriétaire pour le flux de travail de contenu.
+
+### Qui produit un Markdown plus propre ?
+
+Tous deux produisent des produits propres et conventionnels Markdown et des matières premières. La sortie de l'éditeur est un choix de conception, pas une différence de qualité.
+
+### Avez-vous besoin d'une base de données ?
+
+Ce n'est pas le cas de LightCMS. L'hébergement de Tina offrant des magasins de contenu dans le stockage Git ; les arrangements auto-hébergés varient en fonction de la configuration.
+
+---
+
+Plus de comparaisons : [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms).
