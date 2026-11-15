@@ -1,82 +1,82 @@
 ---
-title: "Cloudflare Pages vs GitHub Pages: Which Free Host Wins?"
-description: Cloudflare Pages and GitHub Pages compared on bandwidth, custom domains, build limits, and ease of use, with a recommendation for blogs and project sites.
+title: "Cloudflare Pages vs GitHub Pages: Qual host Wins?"
+description: Cloudflare Pages e GitHub Pages comparados em relação à largura de banda, domínios personalizados, limites de compilação e facilidade de uso, com uma recomendação para blogs e sites de projeto.
 serial: 19
 date: 2026-10-14T14:00:00Z
 draft: false
 keywords:
-  - cloudflare pages vs github pages
+  - cloudflare páginas vs páginas do github
   - github pages vs cloudflare
-  - free static site hosting
-  - github pages custom domain
-  - cloudflare pages free tier
+  - hospedagem gratuita de site estático
+  - domínio personalizado das páginas github
+  - páginas cloudFlare livres de tier
 preview: /og-image.webp
 taxonomies:
   tags:
-    - hosting
-    - cloudflare
+    - hospedagem
+    - sinalizador nuvens
     - github
     - jamstack
 ---
 
-Both will host your static site for free, forever, straight from a Git repository. But [Cloudflare Pages](https://pages.cloudflare.com)
-and [GitHub Pages](https://pages.github.com) are built with different philosophies,
-and the differences show up the moment your blog gets its first taste of traffic.
+Ambos hospedarão seu site estático gratuitamente, para sempre, diretamente de um repositório Git. Mas as filosofias diferentes (https://pages.cloudflare.com)
+e [GitHub Pages](https://pages.github.com) são construídas com diferentes filosofias,
+e as diferenças aparecem no momento em que o seu blog tem seu primeiro sabor de tráfego.
 
 ---
 
-## The Core Difference
+## A Diferença Principal
 
-**GitHub Pages** is a convenience feature of GitHub: push to a branch (or run a workflow), and your project gets a URL. It is tightly integrated with the GitHub experience and needs no separate account.
+O **GitHub Pages** é um recurso de conveniência do GitHub: faça push para um branch (ou execute um fluxo de trabalho) e seu projeto recebe uma URL. Ela está perfeitamente integrada com a experiência do GitHub e não precisa de uma conta separada.
 
-**Cloudflare Pages** is a dedicated hosting product: builds on Cloudflare's global edge network with unlimited free bandwidth, preview deployments for every branch, and an escape hatch into Pages Functions and Workers when you need server-side logic.
+**Cloudflare Pages** é um produto dedicado de hospedagem: compilações na rede global de arestas do Cloudflare com largura de banda ilimitada, pré-visualizar implantações para cada ramo e uma busca de fuga em Funções de Páginas e Trabalhadores quando você precisar de lógica no lado do servidor.
 
-## Head-to-Head
+## Cabeça
 
-|                     | Cloudflare Pages                 | GitHub Pages                      |
-| :------------------ | :------------------------------- | :-------------------------------- |
-| Bandwidth           | Unlimited on free tier           | Metered soft limits (~100 GB/mo)  |
-| Build source        | Git or direct upload             | Git push or Actions               |
-| Custom domains      | Free, automatic SSL              | Free, automatic Let's Encrypt SSL |
-| Preview deployments | Every branch and PR              | No (workflow workarounds exist)   |
-| Edge network        | 300+ cities                      | Fastly-backed, smaller footprint  |
-| Extras              | Workers, Pages Functions, KV, R2 | Native Actions ecosystem          |
+|                             | Páginas do Cloudflare                     | GitHub Pages                                  |
+| :-------------------------- | :---------------------------------------- | :-------------------------------------------- |
+| Banda                       | Ilimitado por nível livre                 | Limites de soft limitados (~100 GB/mês)       |
+| Fonte da compilação         | Git ou upload direto                      | Ações ou push Git                             |
+| Domínios personalizados     | SSL automático gratuito                   | Grátis, Let's Encrypt SSL automático          |
+| Pré-visualizar implantações | Cada branch e PR                          | Não (existem soluções para fluxo de trabalho) |
+| Rede da borda               | 300+ cidades                              | Pegada rápida e menor                         |
+| Extras                      | Trabalhadores, funções de páginas, KV, R2 | Ecossistema de ações nativas                  |
 
-## Where GitHub Pages Wins
+## Onde o GitHub Pages vence
 
-- Zero setup if your project already lives on GitHub: no new account, no dashboard.
-- Perfect for project documentation, portfolios, and README-linked demo sites.
-- Everything stays inside one platform, which is convenient for small projects.
+- Configuração zero se o seu projeto já vive no GitHub: sem nova conta, sem painel.
+- Perfeito para a documentação de projetos, portfólios e sites de demonstração vinculados ao LEIA.
+- Tudo permanece dentro de uma plataforma, o que é conveniente para projetos pequenos.
 
-## Where Cloudflare Pages Wins
+## Onde Vitórias no Cloudflare Páginas
 
-- **Unlimited bandwidth**: the decisive factor for blogs and content sites. A viral post on GitHub Pages can brush against usage limits; on Cloudflare Pages it is a non-event.
-- Preview URLs for every branch, out of the box.
-- Workers-based dynamic features (forms, redirects, APIs) without leaving the platform.
-- A larger, faster edge network for readers worldwide.
+- **Largura de banda ilimitada**: o fator decisivo para blogs e sites de conteúdo. Um post viral no GitHub Pages pode ignorar limites de uso; no CloudFlare Pages é um não-evento.
+- Visualize URLs para cada ramificação, fora da caixa.
+- Características dinâmicas baseadas em trabalhadores (formulários, redirecionamentos, APIs) sem sair da plataforma.
+- Uma rede de arestas maior e mais rápida para os leitores de todo o mundo.
 
-## The Verdict
+## O veredicto
 
-For a project page or small demo, GitHub Pages does the job. **For a blog, documentation site, or anything you expect people to read, Cloudflare Pages is the better free host.** Unlimited bandwidth alone decides it. The full field (including Vercel, Netlify, and Deno Deploy) is covered in [top static site hosting platforms](/misc/top-static-site-hosting/) and [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/).
+Para uma página do projeto ou uma pequena demonstração, o GitHub Pages faz o trabalho. **Para um blog, site de documentação, ou qualquer coisa que você espere que as pessoas lem, CloudFlare Pages é o melhor host gratuito.** A largura de banda ilimitada por si só decide. O campo completo (incluindo Vercel, Netlify, and Deno Deploy) é coberto nas [principais plataformas de hospedagem do site estático](/misc/top-static-site-hosting/) e [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/).
 
-Both integrate with the same Git based workflow: [LightCMS](/getting-started/) commits Markdown, the host rebuilds, the site updates. Setup is covered in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
+Ambos integram o mesmo fluxo de trabalho baseado no Git: [LightCMS](/getting-started/) commits Markdown, the host rebuilds, the site updates. A configuração está coberta pela [configuração do seu repositório e CI/CD](/blog/configuring-your-repository-cicd/).
 
 ---
 
-## Frequently Asked Questions
+## Perguntas Frequentes
 
-### Is GitHub Pages fast?
+### O GitHub Pages é rápido?
 
-Yes, for its class, but Cloudflare Pages' larger edge network typically delivers lower global latency.
+Sim, para sua classe, mas a rede mais ampla de Cloudflare Pages geralmente oferece menor latência global.
 
-### Can I use a custom domain on both?
+### Posso usar um domínio personalizado em ambos?
 
-Yes. Both provision free TLS certificates for custom domains; GitHub Pages uses CNAME records, Cloudflare Pages uses DNS on Cloudflare's network.
+Sim. Os certificados TLS gratuitos para domínios personalizados; O GitHub Pages usa registros CNME, o Cloudflare Pages usa o DNS na rede do Cloudflare.
 
-### Which is better for a blog?
+### O que é melhor para um blog?
 
-Cloudflare Pages: unlimited bandwidth removes the main anxiety of running a popular blog on a free tier.
+Páginas do Cloudflare: largura de banda ilimitada remove a principal ansiedade de executar um blog popular em um nível gratuito.
 
-### Can I switch hosts later?
+### Posso trocar de hosts mais tarde?
 
-Yes. Both build from the same repository; switching is a matter of pointing a new build at your repo. Your content and URLs stay identical.
+Sim. Ambas as compilações do mesmo repositório; mudar significa apontar uma nova compilação para o seu repositório. Seu conteúdo e URLs permanecem idênticos.
