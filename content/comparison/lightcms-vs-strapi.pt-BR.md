@@ -1,114 +1,114 @@
 ---
-title: "LightCMS vs Strapi: Open Source, Two Architectures"
-description: "Strapi is an open-source, database-backed headless CMS; LightCMS is an open-source, Git based writing workspace. Same license philosophy, very different storage."
+title: "LightCMS vs Strapi: Código Aberto, Duas Arquiteturas"
+description: "Strapi é uma CMS sem cabeçalho, apoiada em código-aberto; LightCMS é uma área de trabalho de escrita baseada em Git Mesma filosofia de licença, armazenamento muito diferente."
 serial: 50
 date: 2026-10-16T12:00:00Z
 draft: false
 keywords:
-  - lightcms vs strapi
-  - strapi alternatives
+  - lightcms vs correias
+  - alternativas de strapi
   - strapi vs git cms
-  - open source cms comparison
-  - strapi for blog
+  - comparação Cms de código aberto
+  - strapi para o blog
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - luzes
     - strapi
-    - cms
-    - comparison
-    - headless
+    - SMS
+    - comparação
+    - sem cabeça
 ---
 
-Strapi and LightCMS share the same starting values: open source, self-hostable, no vendor holding your content hostage. They diverge on the single decision everything else follows from: **where the content lives**.
+Strapi e LightCMS compartilham os mesmos valores iniciais: código aberto, auto-hospedeiro, nenhum fornecedor que segura o seu conteúdo como refém. Eles divergem sobre a única decisão de que todo o resto se segue: **de onde o conteúdo vive**.
 
-Strapi is a Node.js application with a database and an API. LightCMS is a Node.js application that commits Markdown to a repository. Everything else in this comparison is a consequence.
-
----
-
-## Side by Side
-
-|                   | LightCMS                          | Strapi                               |
-| :---------------- | :-------------------------------- | :----------------------------------- |
-| **Storage**       | Markdown files in your repository | SQL database (SQLite/Postgres/MySQL) |
-| **Delivery**      | Static build → CDN                | REST / GraphQL API at runtime        |
-| **Server**        | None at runtime                   | Node.js app, always on               |
-| **Content model** | Front matter fields               | Content types defined in admin       |
-| **Versioning**    | Git history, revert, blame        | Draft/publish + revisions in DB      |
-| **Editor**        | TipTap document editor            | Admin panel with form fields         |
-| **AI copilot**    | Built in                          | Plugin ecosystem                     |
-| **Voice-to-text** | Built in                          | Not bundled                          |
-| **Newsletters**   | Built in via Newsy                | Not bundled                          |
-| **License**       | Apache 2.0                        | MIT/EE (check current edition)       |
-| **Typical cost**  | Hosting only                      | Hosting + database operations        |
+Strapi é um aplicativo Node.js com um banco de dados e uma API. LightCMS é um aplicativo Node.js que commits Markdown em um repositório. Tudo o resto comparado é uma consequência.
 
 ---
 
-## Where Strapi Wins
+## Lado a lado
 
-- **A real content API.** Anything can consume it (apps, services, other sites) with REST or GraphQL out of the box.
-- **Relational content.** References between types, counters, nested structures: a database does this properly.
-- **Custom business logic.** Controllers, policies, and lifecycle hooks let Strapi act as a small backend as well as a CMS.
-- **Content types at scale.** Dozens of models with validation, managed in a UI, without a deploy per change.
-- **Database-backed workflows.** Instant saves, no build step, fine-grained roles and permissions.
-
-## Where LightCMS Wins
-
-- **No runtime to operate.** No Node process to keep warm and no database to back up, patch, and monitor. See [static vs dynamic sites](/blog/static-vs-dynamic/).
-- **Content you can read.** Files open in any editor forever; a database dump needs the schema that made it. [Content as code](/blog/content-as-code/).
-- **Version history for free.** Every edit is a commit with diff, author, and revert. Strapi's revision system is a feature; Git is an infrastructure.
-- **A writing surface, not a form.** Long-form articles are documents. Strapi's admin is excellent for structured entries and heavier for prose.
-- **The bundled extras.** [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletters](/blog/newsletter-email-automation/) come included rather than requiring plugins.
-- **Static performance.** Pages arrive pre-built from a CDN rather than assembled per request.
-
----
-
-## The Question Behind the Question
-
-Ask what your content _is_:
-
-- **Documents** (posts, docs, release notes, pages) → LightCMS's file model is simpler, cheaper, and more durable.
-- **Records with relationships** (products, courses, catalog entries, anything an app queries) → Strapi's database is the correct tool, and no amount of Markdown elegance changes that.
-
-A common hybrid: publications run Git based, product surfaces run on an API-backed CMS. The two do not have to compete for the same project.
+|                        | CMS                                  | Strapi                                           |
+| :--------------------- | :----------------------------------- | :----------------------------------------------- |
+| **Armazenamento**      | Arquivos Markdown no seu repositório | SQL database (SQLite/Postgres/MySQL)             |
+| **Entrega**            | Construção estática → CDN            | REST / API do GraphQL no tempo de execução       |
+| **Servidor**           | Nenhum em tempo de execução          | App Node.js, sempre ativo                        |
+| **Modelo de conteúdo** | Campos iniciais de matéria           | Tipos de conteúdo definidos no admin             |
+| **Versioning**         | Git history, revert, blame           | Rascunho/publicar + revisões no DB               |
+| **Editor**             | Dicas Editor de documento            | Painel de administração com campos de formulário |
+| **Escopiloto de IA**   | Construído em                        | Ecossistema de plugin                            |
+| **Voz-para-texto**     | Construído em                        | Não agrupado                                     |
+| **Boletins**           | Construído via Newsy                 | Não agrupado                                     |
+| **Licença**            | Apache 2.0                           | MIT/EE (verifique a edição atual)                |
+| **Custo normal**       | Somente hospedagem                   | Hospedagem + operações do banco de dados         |
 
 ---
 
-## Migration
+## Onde Strapi Vitórias
 
-Strapi exports content via its API or database dump. Converting entries to Markdown is straightforward when entries are article-shaped; relational structures need flattening. That is the same friction any database-to-files move incurs. Going the other way (files → Strapi) is an import script against a schema you define first.
+- **Uma API de conteúdo real.** Qualquer coisa pode consumi-la (apps, serviços, outros sites) com REST ou GraphQL a partir da caixa.
+- **Conteúdo relativo.** Referências entre tipos, contadores e estruturas aninhadas: um banco de dados faz isso corretamente.
+- **Lógica de negócios personalizada.** Controlers, políticas e ganchos de ciclo de vida deixam Strapi atuar como uma pequena backend e também como um CMS.
+- **Tipos de conteúdo em escala.** dezenas de modelos com validação, gerenciados em uma interface do usuário, sem uma implantação por mudança.
+- **Fluxos de trabalho apoiados pelo Banco de Dados.** Sanções instantâneas, nenhum passo de construção, papéis refinados e permissões.
 
----
+## Onde Vitórias no LightCMS
 
-## Which Should You Choose?
-
-- **Choose Strapi** when you need an API, relational content, or custom backend logic.
-- **Choose LightCMS** when you are publishing to a static site and want the lowest possible operational surface.
-
----
-
-## Frequently Asked Questions
-
-### Is Strapi free?
-
-Strapi is open source with an MIT core (and enterprise editions for advanced features). LightCMS is Apache 2.0, and both are free to run.
-
-### Can Strapi output a static site?
-
-Strapi is API-first; you would fetch from it at build time or runtime, which keeps the server dependency in the architecture.
-
-### Do I need a database with LightCMS?
-
-No. The repository is the store; your SSG reads files directly.
-
-### Which is better for a blog?
-
-For pure publishing: LightCMS, with document editing, free versioning, and static output. For a blog that is one face of a larger application: Strapi may already be doing that job.
-
-### Can both be self-hosted?
-
-Yes. That is a shared strength and a good reason either beats a hosted vendor for content you intend to keep.
+- **Sem tempo de execução para operar.** Nenhum processo de Node para se manter quente e sem banco de dados para fazer backup, patch, e monitor. Ver [estático vs sites dinâmicos](/blog/static-vs-dynamic/).
+- **Conteúdo que você pode ler.** Arquivos abrem em qualquer editor para sempre; um arquivo de banco de dados precisa do esquema que o fez. [Conteúdo como código](/blog/content-as-code/).
+- **Histórico de versões gratuitamente.** Cada edição é um commit com o diff, autor e reverte. O sistema de revisão de Strapi é uma funcionalidade; Git é uma infraestrutura.
+- **Uma superfície de escrita, não um formulário.** Artigos de forma longa são documentos. O administrador da palestra é excelente para entradas estruturadas e mais pesado para prova.
+- **O extrato empacotado.** [Esboço de IA](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), e [newsletters](/blog/newsletter-email-automation/) vêm inclusos, em vez de exigirem plugins.
+- **Desempenho estático.** Páginas chegam pré-construídas de um CDN em vez de serem montadas por solicitação.
 
 ---
 
-More: [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [Git based CMS explained](/blog/git-based-cms-explained/).
+## A pergunta por trás da Pergunta
+
+Pergunte qual é o seu conteúdo\*:
+
+- **Documentos** (postagens, documentos, notas de lançamento, páginas) → modelo de arquivo da LightCMS é mais simples, mais barato e mais durável.
+- **Registros com relacionamentos** (produtos, cursos, entradas de catálogo, Qualquer coisa que um aplicativo solicitar) → base de dados da strap é a ferramenta correta, e nenhuma quantidade de elegância do Markdown muda isso.
+
+Um híbrido comum: publicações executam Git baseado, superfícies de produto executadas em um CMS apoiado na API. Os dois não têm de competir pelo mesmo projecto.
+
+---
+
+## Migração
+
+Strapi exporta conteúdo através da sua API ou banco de dados. Converter entradas em Markdown é direta quando entradas são em forma de artigo; estruturas relacionais precisam de nivelamento. Essa é a mesma fricção que qualquer base de dados sobre ficheiros deslocam em casas. Indo da outra maneira (arquivos → Strapi) é um script de importação contra um esquema que você define primeiro.
+
+---
+
+## Qual você deveria escolher?
+
+- **Escolha Strapi** quando você precisar de uma lógica de API, relação ou backend personalizado.
+- **Escolha LightCMS** quando você estiver publicando em um site estático e queira a superfície operacional mais baixa possível.
+
+---
+
+## Perguntas Frequentes
+
+### Strapi é livre?
+
+Strapi é de código aberto com um núcleo MIT, (e edições empresariais para recursos avançados). O Light tCMS é Apache 2.0, e ambos são gratuitos para serem executados.
+
+### Pode Strapi produzir um site estático?
+
+Strapi é API primeiro; você obteria dela em tempo de compilação ou tempo de execução, o que mantém a dependência do servidor na arquitetura.
+
+### Preciso de um banco de dados com o LightCMS?
+
+Não. O repositório é a loja; seu SSG lê arquivos diretamente.
+
+### O que é melhor para um blog?
+
+Para publicação pura: LightCMS, com edição de documentos, versão gratuita e saída estática. Para um blog que é uma face de uma aplicação maior: Strapi pode já estar fazendo esse trabalho.
+
+### Os dois podem ser autoshospedados?
+
+Sim. Essa é uma força partilhada e uma boa razão para que um fornecedor hospedado para o conteúdo que pretende manter.
+
+---
+
+Mais: [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [Git based CMS explicado](/blog/git-based-cms-explained/).
