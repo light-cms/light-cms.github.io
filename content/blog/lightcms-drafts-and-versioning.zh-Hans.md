@@ -1,123 +1,123 @@
 ---
-title: "Drafts, Revisions, and Rollbacks: Version Control for Writers"
-description: "LightCMS turns Git history into an editorial workflow: drafts, commits, pull requests, and one-click rollback, without asking a writer to learn Git."
+title: "草稿，修订版和回滚：作者版本控制"
+description: "LightCMS将Git历史转换为编辑工作流程：草稿、提交、拉取请求和一次点击回滚，而不要求作者学习Git。"
 serial: 34
 date: 2026-10-16T09:40:00Z
 draft: false
 keywords:
   - git versioning content
-  - cms draft workflow
+  - cms 草稿工作流程
   - content rollback
-  - markdown version history
-  - lightcms drafts
+  - Markdown 版本历史记录
+  - lightcms 草稿
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - 闪光
     - git
-    - workflow
-    - collaboration
+    - 工作流
+    - 协作
 ---
 
-Version control is the best argument for a Git based CMS, and the one most badly explained. Writers do not want to hear about commits, fast-forwards, or trees. They want to know three things: **can I save this without publishing it, see what changed, and undo it if I got it wrong?**
+版本控制是基于 Git 的 CMS 的最佳论据，也是解释最差的。作者不想听到有关提交、快速转发或树木的信息。他们想知道三件事：**我可以在不发布它的情况下保存这件事。看看什么改变了，如果我发现错误它则撤销它？**
 
-Git answers all three without a writer learning Git.
-
----
-
-## The Draft Stays a Draft
-
-`draft: true` in the front matter is the whole mechanism. When you create or edit a post in [LightCMS](https://lightcms.me), the flag lives in the file's front matter, and your SSG skips it during build. The post sits in the repository, reviewable and safe, and never renders on the live site.
-
-Flip it to `false` on publish and the next build picks it up. No separate "drafts database" can drift from what sits in your repository, and a draft cannot leak because two systems disagree about its state.
-
-Because a draft is just a file, everything else works on it too: it can sit on a branch, live behind a pull request, be edited by someone else, and be diffed line by line before it goes live.
+Git解答所有三个都没有写作者学习Git。
 
 ---
 
-## Every Save Is a Commit
+## 草案仍然是草稿
 
-Each publish in [LightCMS](https://lightcms.me) creates a commit with a coherent message, which gives you:
+`草稿：`true\`是'是整个机制。当您在 [LightCMS](https://lightcms.me) 中创建或编辑一个帖子时， 旗帜生活在文件的前面，你的SSG在构建过程中跳过它。这个帖子位于仓库中，可审核且安全，不会在现场显示。
 
-- **Complete history.** Who changed what, and when. No plugin required.
-- **True diffs.** Markdown diffs are readable, unlike rows in a `post_content` column.
-- **Blame that means something.** You can ask when a paragraph changed and get an answer.
-- **Free backups.** Every clone of the repository is a full copy of your content.
+在发布时翻转到`false`，接下来的构建会把它拿出来。没有单独的“草稿数据库”可以偏离你的仓库中的位置，草稿不能泄露，因为两个系统对数据库的状态有不同意见。
 
-For a solo writer this is invisible infrastructure. For a team, it is the audit trail that most commercial CMSs charge for.
+因为草稿只是一个文件，其它一切也能起作用：它可以坐在一个分支， 生活在拉取请求背后, 由其他人编辑, 然后经过线切换才能存活。
 
 ---
 
-## Branches and Pull Requests: Editorial Review, Properly
+## 每次保存都是提交
 
-[LightCMS](https://lightcms.me) can publish in two modes, and choosing between them is choosing your editorial process:
+每个发布在 [LightCMS](https://lightcms.me) 中创建一个带有一致消息的提交，给您：
 
-| Mode              | Flow                                      | Best for                                        |
-| :---------------- | :---------------------------------------- | :---------------------------------------------- |
-| **Direct commit** | Publish → commit → CI builds → live       | Solo writers, low-risk edits, quick fixes       |
-| **Pull request**  | Publish → PR → review → merge → CI builds | Teams, drafts with oversight, sensitive changes |
+- **完成历史。** 谁改变了什么和什么时间。无需插件。
+- **True diff.** Markdown diffs是可读的，不同于`post_content`列中的行。
+- **指责这意味着某些东西。** 你可以问一个段落何时改变并获得答案。
+- **免费备份。** 每个仓库克隆都是您的完整内容。
 
-The pull request mode deserves the attention. It gives you a real editorial gate: a colleague reads the proposed Markdown, leaves a comment on the exact sentence they object to, and merges when it is right. That gate runs on GitHub's native review tools rather than a bespoke approval system that locks your content to one vendor.
-
-Turn on branch protection and "publish" means "submit for review." Turn it off and "publish" means "publish."
+对于一个单独写作者来说，这是不可见的基础设施。对于一个团队来说，这是大多数商业CMS收费的审计线索。
 
 ---
 
-## Rollback: The Feature People Forget to Ask For
+## 分支和拉取请求：编辑审核，正确
 
-Every CMS should answer one question fast: **something wrong is live, so how do I fix it?**
+[LightCMS](https://lightcms.me) 可以两种方式发布，选择两种方式是选择您的编辑过程：
 
-With Git based content the answer is a revert:
+| 模式       | 流                           | 最好的             |
+| :------- | :-------------------------- | :-------------- |
+| **直接提交** | 发布 → 提交 -> CI build-> 实时发布  | 单作者、低风险编辑、快速修复  |
+| **拉取请求** | 发布 -> PR → 复评 -> 合并 → CI 版本 | 团队，带有监督的草稿，敏感更改 |
 
-1. Open the file's history in GitHub (or [LightCMS](https://lightcms.me)).
-2. Choose the last good version.
+拉请求模式值得注意。它为你提供了一个真正的编辑门：一个同事读了提议的Markdown。 对他们反对的确切句子留下一个评论，并在正确时合并。这个大门运行在GitHub的原生审核工具上，而不是一个将您的内容锁定在一个供应商的定购审批系统。
+
+开启分支保护，“发布”表示“提交审核”。关闭它，而“发布”意味着“发布”。
+
+---
+
+## 回滚：特色人种忘记请求
+
+每个CMS都应该很快回答一个问题：**有点错，所以我如何修复它？**
+
+基于 Git 的内容，答案是反向的：
+
+1. 在 GitHub (或 [LightCMS](https://lightcms.me))中打开文件的历史记录。
+2. 选择最后一个良好版本。
 3. Revert.
 
-The correction commits like any other edit, your pipeline rebuilds, and the bad version is gone, usually within a minute on a modern host. Restoring a database backup at 2am also reverts every _other_ change made in between. With per-file history, you roll back one post, not the whole site.
+更正像任何其他编辑、你的管道重建以及坏版本已经消失，通常在一个现代主机上的一分钟之内提交。在 2 am 上还原数据库备份也会恢复间隔中的每一个 _其他_ 更改。使用每个文件的历史记录，你回滚一个帖子，而不是整个站点。
 
 ---
 
-## Why Not Just Use Word and Email?
+## 为什么不只是使用单词和电子邮件？
 
-Because that round trip loses content. The version in the attachment is not the version on the site, nobody knows which file is canonical, and eventually someone publishes `final-v3-USE-THIS.md`. A shared repository with a visual editor collapses the loop: one file, one history, one publish button.
-
----
-
-## A Practical Team Setup
-
-For a small team, the arrangement that tends to stick:
-
-- **Main branch is always deployable.** Only merges reach it.
-- **Features and drafts on branches.** Long-form work in progress stays off main without being hidden.
-- **Pull requests for anything editorially sensitive**, direct commits for typo fixes, because requiring review on a comma correction guarantees people will work around the process.
-- **Tag or milestone releases** if you publish on a schedule; a failed deploy can then be traced to a known set of changes.
-
-None of that is configured inside [LightCMS](https://lightcms.me). It is standard GitHub practice, which is the point: the CMS inherits a workflow your repository already has.
+因为这次往返失去了内容。附件中的版本不是网站上的版本，没有人知道哪个文件是可操作的，最终有人发布\`final-v3-USE-THIS.md'。一个具有视觉编辑器的共享仓库会折叠循环：一个文件，一个历史，一个发布按钮。
 
 ---
 
-## Frequently Asked Questions
+## 实用团队设置
 
-### Do writers need to learn Git?
+对于一个小团队来说，这种安排倾向于坚持：
 
-No. They use the editor and a publish button. Branches, commits, and pull requests exist underneath and are surfaced only when you choose to use them.
+- **主分支总是可以部署的。** 只能合并到达它。
+- **branches上的特征和草稿。** 正在进行的长期工作不会被隐藏。
+- **拉取对编辑敏感的任何请求**，直接提交类型修复，因为要求对逗号校正保证人们将在整个过程中工作。
+- **标签或里程碑版本发布** 如果您在计划中发布；部署失败后可以追踪到已知的一系列更改。
 
-### Can I restore an old version of a post?
-
-Yes. Reverting to a previous commit restores that file's content, and the next build publishes it.
-
-### Are drafts visible to the public?
-
-No. A post with `draft: true` is excluded from the build, so it never reaches the deployed site. It is visible to anyone with repository access, which is the point.
-
-### What happens if two people edit the same post?
-
-The second commit conflicts, and Git flags it explicitly rather than silently overwriting. For most teams, publishing to a branch and reviewing with a pull request removes the problem before it happens.
-
-### Does [LightCMS](https://lightcms.me) keep its own copy of my content?
-
-No. The repository is the source of truth, the same [zero lock-in principle](/blog/what-is-lightcms/) that makes the approach worth choosing.
+[LightCMS](https://lightcms.me)中没有配置这个内容。这是标准的 GitHub 做法，这是关键所在：CMS 继承您已经拥有的工作流。
 
 ---
 
-See [starting from a starter template](/blog/start-with-a-lightcms-template/) to set up a repository with this workflow already wired, or [the editor tour](/blog/lightcms-editor-tour/) to see the writing side of it.
+## 常见问题
+
+### 作者需要学习Git？
+
+否。他们使用编辑器和发布按钮。分支、提交和合并请求存在于下面，只有当您选择使用它们时才会显示出来。
+
+### 我可以还原旧版本的帖子吗？
+
+是。还原到以前的提交，恢复该文件的内容，下次构建会发布该文件。
+
+### 公众是否能看到草稿？
+
+否。一个带有“草稿：true”的帖子被排除在建筑之外，所以它从未到达部署的场地。它对任何拥有仓库存取权限的人来说都是可见的，这是关键所在。
+
+### 如果两个人编辑相同的帖子会发生什么情况？
+
+第二个问题是冲突问题，它明确地标示它，而不是沉默地推翻它。对于大多数团队来说，发布到分支并使用拉取请求复核会在问题发生之前移除问题。
+
+### [LightCMS](https://lightcms.me)保留自己的内容副本吗？
+
+否。仓库是真理的来源，也是[零锁定原则](/blog/what-is-lightcms/)，这种方法值得选择。
+
+---
+
+请参阅[从启动模板开始](/blog/start-with-a-lightcms-template/) 以此工作流已经有线的方式设置仓库， 或 [编辑器巡视](/blog/lightcms-editor-tour/) 查看其书写部分。
