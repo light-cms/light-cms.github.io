@@ -1,5 +1,5 @@
 +++
-title = "Guides"
-description = "Long form guides on static hosting, deployment, and running a publication on a static stack."
+title = "Guías"
+description = "Guías de largo formato sobre alojamiento estático, despliegue y ejecución de una publicación en una pila estática."
 sort_by = "date"
 +++
