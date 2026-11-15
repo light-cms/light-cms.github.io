@@ -53,7 +53,7 @@ taxonomies:
 
 - **Der Artikel ist ein Dokument.** Überschriften, Blockquote, Tabellen, Aufgabenlisten, Syntax-hervorgehobener Code, KaTeX math, und Drag-and-Drop-Medien, bearbeitet an Ort und serialisiert, um Markdown zu bereinigen. Ein Formular mit einem kleinen Textbereich kann dem nicht für Langformschreibung entsprechen.
 - \*\*Metadaten ohne YAML. \* Front-Match-Felder werden in der App konfiguriert statt in einer Konfigurationsdatei deklariert so dass das Hinzufügen eines Feldes niemals bedeutet, die Konfiguration zu bearbeiten und neu zu verteilen.
-- \*\*Die Extras sind der Punkt. \* Das Entwerfen von Unterstützung, Diktatur und ein von GitHub unterstützter Newsletter verwandeln ein Inhaltswerkzeug in eine Publikations-Pipeline, ohne dass ein Abonnement von Drittanbietern angeschlagen wird.
+- \* Das Entwerfen von Unterstützung, Diktatur und ein von GitHub unterstützter Newsletter verwandeln ein Inhaltswerkzeug in eine Publikations-Pipeline, ohne dass ein Abonnement von Drittanbietern angeschlagen wird.
 - **Selbstgehostetes Ende bis Ende.** Apache 2.0, deine Infrastruktur, dein API-Schlüssel, deine Daten.
 
 ---
