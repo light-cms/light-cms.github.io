@@ -1,108 +1,108 @@
 ---
-title: Top Netlify CMS (Decap) Alternatives in 2026
-description: The best Netlify CMS and Decap CMS alternatives, including LightCMS, Pages CMS, TinaCMS, Keystatic, Sveltia CMS, and GitCMS, compared on editing experience, setup, and price.
+title: 2026 年顶级Netlify CMS (去除) 替代物
+description: 最好的 Netlify CMS 和 Decap CMS 替代品，包括LightCMS、Pages CMS、TinaCMS、Keystati、Sweltia CMS和GitCMS，与编辑经验、设置和价格相比较。
 serial: 13
 date: 2026-10-14T13:00:00Z
 draft: false
 keywords:
-  - netlify cms alternatives
-  - decap cms alternatives
+  - netlife cms替代物
+  - 十ap cms替代物
   - netlify cms vs
   - best git cms 2026
-  - decap cms replacement
+  - 十ap cms 替换
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
-    - decap
-    - netlify-cms
+    - 厘米
+    - 十瓦
+    - netlife-cms
     - git
 ---
 
-[Netlify CMS](https://decapcms.org) still powers many Jamstack sites, and since its rename to **Decap CMS** many teams have taken the opportunity to weigh alternatives. The reasons vary: an aging editing UI, YAML first configuration, or editors who want a real writing experience. But the Git based CMS category is stronger than it has ever been. Here are the best Netlify CMS alternatives in 2026.
+[Netlify CMS](https://decapcms.org) 仍然授权许多Jamstack站点，并且自其重命名为 **Decap CMS** 以来，许多团队都利用机会权衡了替代品。原因不同：老化编辑界面、 YAML 第一个配置，或想要真正写入体验的编辑。但基于Git的CMS类别比以往任何时候都更强。这是2026年最好的 Netlify CMS 替代品。
 
 ---
 
-## Why Look Beyond Netlify CMS?
+## 为什么超越Netlife CMS？
 
-Decap CMS remains free and capable, but it was built for developers configuring collections in `config.yml`. Teams that include non-technical writers often outgrow it quickly: there is no AI assistance, media handling is basic, and the admin UI has changed little in years.
+Decap CMS仍然是免费和能够的，但它是为开发人员在`config.yml`中配置收藏而构建的。包括非技术作家在内的团队往往会迅速壮大：没有AI 援助。 媒体处理是基本的，管理界面多年来几乎没有变化。
 
-Every alternative below keeps the core promise (**content as Markdown in your own GitHub repository**) while improving some part of the experience.
+下面的每个备选方案都保持核心承诺(\*\*内容在你自己的GitHub 仓库中作为Markdown \*\*)，同时改进部分体验。
 
-## The Alternatives at a Glance
+## 四.脱氧核糖核酸替代物
 
-| Alternative     | Best For                                            | Self-Hosted | Price                  |
-| :-------------- | :-------------------------------------------------- | :---------- | :--------------------- |
-| **LightCMS**    | A full writing workspace with AI and newsletters    | Yes         | Free (Apache 2.0)      |
-| **Pages CMS**   | Simple form-based editing for any team member       | Yes         | Free (MIT)             |
-| **TinaCMS**     | Visual editing directly on the live page            | Yes         | Free tier available    |
-| **Keystatic**   | Local-first files with strong schema validation     | Yes         | Free (MIT)             |
-| **Sveltia CMS** | A lightweight browser editor with zero backend      | Yes         | Free                   |
-| **GitCMS**      | AI-built sites needing reviewable, agent-safe edits | Yes         | Free tier / paid plans |
+| 备选办法            | 最好的                                           | 自我托管的 | 价格                |
+| :-------------- | :-------------------------------------------- | :---- | :---------------- |
+| **LightCMS**    | 一个完整的写作工作区与 AI 和新闻通讯                          | 否     | Free (Apache 2.0) |
+| **页面CMS**       | 任何团队成员简单的表格编辑                                 | 否     | Free (MIT)        |
+| **TinaCMS**     | 直接在直播页面进行视觉编辑                                 | 否     | 免费级别可用            |
+| **Keystatic**   | 本地第一个文件具有强大的schema验证                          | 否     | Free (MIT)        |
+| **Sveltia CMS** | 一个零后端的轻量浏览器编辑器                                | 否     | 免费的               |
+| **GitCMS**      | AI builded site need review, agent-safe edits | 否     | 免费等级/付费计划         |
 
 ---
 
 ## 1. LightCMS
 
-[LightCMS](/getting-started/) is a self-hosted, Apache 2.0 licensed Git based workspace built around a TipTap WYSIWYG editor: math, syntax-highlighted code, tables, task lists, and drag-and-drop media, all serialized to clean Markdown. What sets it apart from Decap is everything bundled around the editor: an AI copilot for drafting, Whisper voice-to-text transcription, and newsletter dispatch through [Newsy](/blog/newsletter-email-automation/), which uses GitHub itself as the backend with no email service involved. You can [self-host it](/blog/selfhost/) on any Node.js host in minutes.
+[LightCMS](/getting-started/) 是一个自主的 Apache 2。 基于 Git 的授权工作区围绕着一个 TipTap WYSIWYG 编辑器构建：数学、语法高亮的代码、表格、任务列表和拖放媒体，所有这些都被序列化为清理Markdown。除了Decap之外，什么设置是围绕编辑器捆绑的一切：一个用于起草的 AI 副本，Whisper语音对文本抄录， 并通过 [Newsy](/blog/newsletter-email-automation/发送通讯。它使用GitHub 本身作为后端，没有电子邮件服务。您可以在几分钟内在任意Node.js主机上[自行主办它](/blog/selfhost/)。
 
-**Choose it if** you want the "WordPress feeling" without a database: one-click publishing, rich formatting, and extras Decap never shipped.
+**如果** 你想要“WordPress感觉”没有数据库：一次点击发布、丰富格式化和扩展Decap永远不会发货。
 
-## 2. Pages CMS
+## 2. 页面CMS
 
-[Pages CMS](/comparison/pagescms/) offers a polished, form-based dashboard over your GitHub repository, hosted at app.pagescms.org or self-hosted. It is MIT licensed and completely free, with built in media management and far less configuration than Decap's YAML-first setup.
+[Pages CMS](/comparison/pagescms/) 在您的 GitHub 仓库上提供一个基于虚拟表格的控制面板，托管在app.pagescms.org 或自主机上。它是MIT许可和完全免费的，可以建立在媒体管理中，其配置远远低于Decap的YAML第一次设置。
 
-**Choose it if** your priority is the simplest possible editor for non-technical teammates.
+**如果** 您的优先级是非技术团队成员最简单的编辑器。
 
 ## 3. TinaCMS
 
-TinaCMS edits content **inline, on the live page**: you click on the headline and type, rather than working in a separate admin app. It commits Markdown to your repository and has a generous free tier for individuals.
+TinaCMS 编辑内容**在直播页面**行内\*\*：您点击标题和类型，而不是在单独的管理员应用程序中工作。它将Markdown 提交给你的仓库，并且对个人有慷慨的免费级别。
 
-**Choose it if** on-page visual editing matters more to you than a traditional CMS dashboard.
+**如果** 页面视觉编辑事项多于传统的 CMS 仪表盘，请选择它。
 
-## 4. Keystatic
+## 4. 静态键
 
-From the Thinkmill team, Keystatic is local-first: content is files in your repository, managed through React forms with excellent schema validation. It is a natural fit for Next.js and Astro projects.
+从 Thinkmill 团队，关键静态是本地第一个：内容是你的仓库中的文件，通过优质模式验证的React 表单管理。它是适合Next.js和Astro项目的自然项目。
 
-**Choose it if** you are a developer who wants typed, validated content with no hosted dependency.
+\*\*如果你是一个想要输入、验证内容且没有托管依赖的开发者，请选择它。
 
 ## 5. Sveltia CMS
 
-A free, open source admin UI that runs entirely in the browser and commits through the GitHub API. Deploy one HTML file and you have an editor.
+一个完全在浏览器运行并通过 GitHub API提交的免费开源管理界面。部署一个 HTML 文件，你有一个编辑器。
 
-**Choose it if** you want something lighter than Decap with almost no setup.
+\*\*如果你想要比Decap 更轻一点但几乎没有设置，请选择它。
 
 ## 6. GitCMS
 
-[GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/) targets AI-built websites: it keeps human and AI-agent edits in one reviewable place, with editorial workflows on top of your repository.
+[GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/) 针对的 AI-builded 网站：它将人类和 AI-agent 编辑放在一个可查看的地方，编辑工作流放在您的资源库之上。
 
-**Choose it if** AI agents write code or content in your repo and you need governance around their commits.
-
----
-
-## How to Choose
-
-- Want the richest all-in-one writing workspace? **LightCMS**
-- Want dead-simple forms for any editor? **Pages CMS**
-- Want to edit on the page itself? **TinaCMS**
-- Want local-first typed files? **Keystatic**
-- Want the lightest possible setup? **Sveltia CMS**
-- Want AI-agent-safe publishing? **GitCMS**
-
-For the longer treatment of each, see [Git CMS platforms compared](/comparison/top-git-cms/) and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+**如果**AI 代理人在您的仓库中写入代码或内容，请选择它，您需要围绕他们的承诺进行治理。
 
 ---
 
-## Frequently Asked Questions
+## 如何选择
 
-### Is Netlify CMS dead?
+- 想要最丰富的全套写作工作区吗？ **LightCMS**
+- 想要任何编辑器的简单表格？**页面CMS**
+- 想要编辑页面本身？ **TinaCMS**
+- 想要本地第一种类型的文件吗？ **Keystatic**
+- 想要最轻松的设置吗？ **Sveltia CMS**
+- 想要AI-agent-安全发布吗？ **GitCMS**
 
-No. It lives on as Decap CMS, actively maintained. But its development pace and editing experience have led many teams to evaluate alternatives.
+每个平台的处理时间较长，请参阅[Git CMS 平台比较](/comparison/top-git-cms/) 和 [Git 基于 CMS 对传统CMS](/blog/git-cms-vs-traditional-cms/)。
 
-### What is the best free Netlify CMS alternative?
+---
 
-Pages CMS, Sveltia CMS, and LightCMS are all completely free and open source. LightCMS bundles the most functionality (AI copilot, transcription, newsletters) at no cost.
+## 常见问题
 
-### Can I migrate from Netlify CMS without changing my content?
+### Netlife CMS 是否已经死亡？
 
-Yes. All of these tools read the same Markdown files with YAML front matter, so migration is mostly a matter of repointing the editor and adapting front matter conventions.
+否。它是作为Decap CMS而存在的，得到了积极维护。但它的发展速度和编辑经验使许多小组对替代品进行了评估。
+
+### 什么是最免费的 Netlify CMS 替代方案？
+
+CMS、Sweltia CMS和LightCMS都是完全免费和开源的。 LightCMS免费将最大的功能(AI copilot、transcription、newsletter)。
+
+### 我可以从Netlify CMS迁移而不改变我的内容吗？
+
+是。所有这些工具都使用YAML前端读取了相同的 Markdown 文件， 因此，移徙主要是指向编辑和调整前沿公约的问题。
