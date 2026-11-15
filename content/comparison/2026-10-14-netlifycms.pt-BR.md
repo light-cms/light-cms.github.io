@@ -1,108 +1,108 @@
 ---
-title: Top Netlify CMS (Decap) Alternatives in 2026
-description: The best Netlify CMS and Decap CMS alternatives, including LightCMS, Pages CMS, TinaCMS, Keystatic, Sveltia CMS, and GitCMS, compared on editing experience, setup, and price.
+title: Alternativas do Top Netlify CMS (Decap) em 2026
+description: As melhores alternativas para Netlify CMS e Decap, incluindo LightCMS, TinaCMS, TinaCMS, Keystatic, Sveltia CMS e GitCMS, comparado com a edição de experiência, configuração e preço.
 serial: 13
 date: 2026-10-14T13:00:00Z
 draft: false
 keywords:
-  - netlify cms alternatives
-  - decap cms alternatives
+  - netlify cms alternativas
+  - decap cms alternativas
   - netlify cms vs
   - best git cms 2026
-  - decap cms replacement
+  - delimitar substituição de cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
+    - SMS
     - decap
     - netlify-cms
     - git
 ---
 
-[Netlify CMS](https://decapcms.org) still powers many Jamstack sites, and since its rename to **Decap CMS** many teams have taken the opportunity to weigh alternatives. The reasons vary: an aging editing UI, YAML first configuration, or editors who want a real writing experience. But the Git based CMS category is stronger than it has ever been. Here are the best Netlify CMS alternatives in 2026.
+[Netlify CMS](https://decapcms.org) ainda potencializa muitos sites Jamstack, e desde a sua renomeação para **Decap CMS** muitas equipes aproveitaram a oportunidade para ponderar alternativas. As razões variam: uma idosa configuração de edição de interface do usuário, a primeira configuração YAML, ou os editores que querem uma experiência de escrita real. Mas a categoria CMS baseada em Git é mais forte do que nunca. Aqui estão as melhores alternativas do Netlify CMS em 2026.
 
 ---
 
-## Why Look Beyond Netlify CMS?
+## Por que olhar além do CMS Netlify?
 
-Decap CMS remains free and capable, but it was built for developers configuring collections in `config.yml`. Teams that include non-technical writers often outgrow it quickly: there is no AI assistance, media handling is basic, and the admin UI has changed little in years.
+O Decap CMS permanece gratuito e capaz, mas foi construído para desenvolvedores que configuram coleções em `config.yml`. Equipas que incluem escritores não técnicos muitas vezes o superam rapidamente: não há ajuda à IA, manipulação de mídia é básico, e a interface de usuário administrativa mudou pouco em anos.
 
-Every alternative below keeps the core promise (**content as Markdown in your own GitHub repository**) while improving some part of the experience.
+Cada alternativa abaixo mantém a promessa central (**conteúdo como Markdown no seu próprio repositório GitHub**) e melhora parte da experiência.
 
-## The Alternatives at a Glance
+## As alternativas a olhar de frente
 
-| Alternative     | Best For                                            | Self-Hosted | Price                  |
-| :-------------- | :-------------------------------------------------- | :---------- | :--------------------- |
-| **LightCMS**    | A full writing workspace with AI and newsletters    | Yes         | Free (Apache 2.0)      |
-| **Pages CMS**   | Simple form-based editing for any team member       | Yes         | Free (MIT)             |
-| **TinaCMS**     | Visual editing directly on the live page            | Yes         | Free tier available    |
-| **Keystatic**   | Local-first files with strong schema validation     | Yes         | Free (MIT)             |
-| **Sveltia CMS** | A lightweight browser editor with zero backend      | Yes         | Free                   |
-| **GitCMS**      | AI-built sites needing reviewable, agent-safe edits | Yes         | Free tier / paid plans |
+| Alternativo         | Melhor para                                                                      | Auto-Hospedar | Quantidade                    |
+| :------------------ | :------------------------------------------------------------------------------- | :------------ | :---------------------------- |
+| **LightCMS**        | Um espaço de trabalho de escrita completo com IA e boletins informativos         | sim           | Free (Apache 2.0)             |
+| **CMS das páginas** | Edição simples baseada em formulário para qualquer membro da equipe              | sim           | Free (MIT)                    |
+| **TinaCMS**         | Edição visual diretamente na página ao vivo                                      | sim           | Faixa livre disponível        |
+| **Keystatic**       | Arquivos de primeira localidade com uma validação de esquema forte               | sim           | Free (MIT)                    |
+| **Sveltia CMS**     | Um editor de navegador leve com zero backend                                     | sim           | Gratuito                      |
+| **GitCMS**          | Sites construídos por AR precisando de edições revisáveis e seguras para agentes | sim           | Nível gratuito / planos pagos |
 
 ---
 
-## 1. LightCMS
+## 1. CMS
 
-[LightCMS](/getting-started/) is a self-hosted, Apache 2.0 licensed Git based workspace built around a TipTap WYSIWYG editor: math, syntax-highlighted code, tables, task lists, and drag-and-drop media, all serialized to clean Markdown. What sets it apart from Decap is everything bundled around the editor: an AI copilot for drafting, Whisper voice-to-text transcription, and newsletter dispatch through [Newsy](/blog/newsletter-email-automation/), which uses GitHub itself as the backend with no email service involved. You can [self-host it](/blog/selfhost/) on any Node.js host in minutes.
+[LightCMS](/getting-started/) é um auto-hospedado, Apache 2. espaço de trabalho com base no Git licenciado construído em torno de um editor WYSIWYG: matemática, código destacado de sintaxe, tabelas, listas de tarefas e mídia de arrastar e soltar, tudo serializado para limpar a marcação. O que distingue o Decap é tudo agrupado em torno do editor: um copiloto de AI para redacção, sussurro de transcrição de voz-para-texto, e envio de boletim informativo através do [Newsy](/blog/newsletter-email-automation/), que usa o próprio GitHub como o backend sem nenhum serviço de e-mail envolvido. Você pode [auto-hospedeiro](/blog/selfhost/) em qualquer host de Node.js em minutos.
 
-**Choose it if** you want the "WordPress feeling" without a database: one-click publishing, rich formatting, and extras Decap never shipped.
+\*\*Escolha se você quer o "Sentimento WordPress" sem um banco de dados: um clique de publicação, formatação rica e extras Decap nunca foram enviados.
 
-## 2. Pages CMS
+## 2. CMS das Páginas
 
-[Pages CMS](/comparison/pagescms/) offers a polished, form-based dashboard over your GitHub repository, hosted at app.pagescms.org or self-hosted. It is MIT licensed and completely free, with built in media management and far less configuration than Decap's YAML-first setup.
+[Pages CMS](/comparison/pagescms/) oferece um painel polido e baseado em formulário no repositório do GitHub, hospedado em app.pagescms.org ou auto-hospedado. É licenciado pelo MIT e completamente gratuito, com gerenciamento de mídia integrado e muito menos configuração que a configuração YAML da Decap.
 
-**Choose it if** your priority is the simplest possible editor for non-technical teammates.
+\*\*Escolha se a sua prioridade for o editor mais simples possível para colegas de equipe não técnicos.
 
 ## 3. TinaCMS
 
-TinaCMS edits content **inline, on the live page**: you click on the headline and type, rather than working in a separate admin app. It commits Markdown to your repository and has a generous free tier for individuals.
+TinaCMS edita o conteúdo **inline, na página ao vivo**: você clica no título e digito, em vez de trabalhar em um aplicativo de administração separado. Ele se compromete com o Markdown no seu repositório e tem um nível gratuito generoso para os indivíduos.
 
-**Choose it if** on-page visual editing matters more to you than a traditional CMS dashboard.
+Escolha se a edição visual na página é mais importante para você do que um painel CMS tradicional.
 
-## 4. Keystatic
+## 4. Keystatica
 
-From the Thinkmill team, Keystatic is local-first: content is files in your repository, managed through React forms with excellent schema validation. It is a natural fit for Next.js and Astro projects.
+Da equipe Thinkmill, Keystatic é o primeiro local: o conteúdo é arquivos no repositório, gerenciado através de formulários React com excelente validação de esquema. É um equipamento natural para os projetos do Next.js e do Astro
 
-**Choose it if** you are a developer who wants typed, validated content with no hosted dependency.
+**Escolha se** você é um desenvolvedor que quer o tipo de conteúdo validado sem dependência hospedado.
 
 ## 5. Sveltia CMS
 
-A free, open source admin UI that runs entirely in the browser and commits through the GitHub API. Deploy one HTML file and you have an editor.
+Uma interface de administração de código aberto e gratuita que roda inteiramente no navegador e se submete através da API do GitHub. Instale um arquivo HTML e você tem um editor.
 
-**Choose it if** you want something lighter than Decap with almost no setup.
+\*\*Escolha se você quiser algo mais claro do que um Decap, com quase nenhuma configuração.
 
 ## 6. GitCMS
 
-[GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/) targets AI-built websites: it keeps human and AI-agent edits in one reviewable place, with editorial workflows on top of your repository.
+[GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/) visa sites construídos por AI: mantém edições humanas e agente de IAR em um local revisável, com fluxos de trabalho editoriais acima do seu repositório.
 
-**Choose it if** AI agents write code or content in your repo and you need governance around their commits.
-
----
-
-## How to Choose
-
-- Want the richest all-in-one writing workspace? **LightCMS**
-- Want dead-simple forms for any editor? **Pages CMS**
-- Want to edit on the page itself? **TinaCMS**
-- Want local-first typed files? **Keystatic**
-- Want the lightest possible setup? **Sveltia CMS**
-- Want AI-agent-safe publishing? **GitCMS**
-
-For the longer treatment of each, see [Git CMS platforms compared](/comparison/top-git-cms/) and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+**Escolha se** agentes de IA escrevem código ou conteúdo no seu repositório e você precisa de governança em torno de seus commits.
 
 ---
 
-## Frequently Asked Questions
+## Como escolher
 
-### Is Netlify CMS dead?
+- Quer a área de trabalho mais rica em um inteiro? **LightCMS**
+- Quer formulários simples e mortais para qualquer editor? **CMS das páginas**
+- Quer editar na própria página? **TinaCMS**
+- Quer arquivos digitados localmente? **Keystatic**
+- Quer a instalação mais leve possível? **Sveltia CMS**
+- Quer publicação dos agentes AI? **GitCMS**
 
-No. It lives on as Decap CMS, actively maintained. But its development pace and editing experience have led many teams to evaluate alternatives.
+Para um tratamento mais longo de cada um, consulte [Git CMS platforms comparadas](/comparison/top-git-cms/) e [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
 
-### What is the best free Netlify CMS alternative?
+---
 
-Pages CMS, Sveltia CMS, and LightCMS are all completely free and open source. LightCMS bundles the most functionality (AI copilot, transcription, newsletters) at no cost.
+## Perguntas Frequentes
 
-### Can I migrate from Netlify CMS without changing my content?
+### O Netlify CMS está morto?
 
-Yes. All of these tools read the same Markdown files with YAML front matter, so migration is mostly a matter of repointing the editor and adapting front matter conventions.
+Não. Continua a ser activamente mantido como Decap CMS. Mas o seu ritmo de desenvolvimento e a sua experiência de edição levaram muitas equipas a avaliar alternativas.
+
+### Qual é a melhor alternativa gratuita para o CMS do Netlify?
+
+CMS, Sveltia CMS e LightCMS são todas completamente grátis e de código aberto. O LightCMS empacota a maior funcionalidade (copiloto, transcrição, boletins informativos) sem nenhum custo.
+
+### Posso migrar do Netlify CMS sem alterar meu conteúdo?
+
+Sim. Todas essas ferramentas leem os mesmos arquivos Markdown com a página inicial YAML, Assim, a migração é sobretudo uma questão de reorientação do editor e de adaptação das convenções de vanguarda.
