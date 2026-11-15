@@ -1,81 +1,81 @@
 ---
-title: What Is the Jamstack? Why It Still Matters in 2026
-description: "The Jamstack explained: pre-rendered pages, decoupled APIs, and Git-driven deploys. Why the architecture outlived the hype, and how Git based CMS tools fit in."
+title: Что такое Jamstack? Почему это все еще имеет место в 2026 году
+description: "Jamstack объяснил: предварительно проработанные страницы, разбитые API и развертывание на Git. Почему архитектура устарела и как работают инструменты CMS на основе Git."
 serial: 20
 date: 2026-10-14T14:10:00Z
 draft: false
 keywords:
-  - what is jamstack
-  - jamstack explained
-  - jamstack vs traditional
+  - что такое Jamstack
+  - разъяснено jamstack
+  - jamstack против традиционных
   - jamstack 2026
-  - headless architecture
+  - безголовная архитектура
 preview: /og-image.webp
 taxonomies:
   tags:
     - jamstack
-    - architecture
-    - static-sites
+    - архитектура
+    - статические сайты
     - api
 ---
 
-"Jamstack" peaked as a buzzword around 2020, became insufferable for a while, and then won. In 2026 the JAM (JavaScript, APIs, Markup) describes how a large share of the modern web gets built, even among teams that would never say the word out loud. If you are choosing an architecture for a blog, documentation site, or company web presence, the term still matters.
+"Джамштак" достиг своего пика около 2020 года, стал страшным на некоторое время, а затем выиграл. В 2026 году JAM (JavaScript, APIs, Markup) описывает, как большая доля современного веб-сайта строится, даже среди команд, которые никогда не будут громко говорить. Если вы выбираете архитектуру для блога, сайта документации или присутствия компании в Интернете, то этот термин все еще важен.
 
 ---
 
-## The Definition
+## Определение
 
-**Jamstack** is an architecture with three ingredients:
+**Jamstack** — это архитектура с тремя компонентами:
 
-- **Markup**: Pages are pre-rendered as static files or cached responses rather than assembled per request from a database.
-- **APIs**: Dynamic capabilities (search, forms, accounts, commerce) come from services and APIs called from the client or edge, not from the page's own server render.
-- **JavaScript**: Interactivity is added deliberately on top of the served markup, rather than being the delivery mechanism for the content itself.
+- **markup**: Страницы предварительно отображаются как статические файлы или кэшированные ответы, а не собираются по запросу из базы данных.
+- **API**: Динамические возможности (поиск, формы, учетные записи, коммерция) получены от сервисов и API, вызванных от клиента или края, а не от собственного серверного рендера.
+- **JavaScript**: Интерактивность добавляется сознательно поверх разметки, а не является механизмом доставки самого контента.
 
-The original shorthand ("static sites with benefits") is still the most accurate one-liner.
+Первоначальный короткий ("статические сайты с выгодами") по-прежнему является наиболее точным однолинейным.
 
-## Why It Outlived the Hype
+## Почему она вышла из Hype
 
-Buzzwords fade; architectures with structural advantages do not. The Jamstack properties map directly to outcomes everyone wants:
+Затухание слов, архитектуры со структурными преимуществами не угасают. Карта свойств Jamstack напрямую исходит от каждого:
 
-- **Performance**: Pre-rendered, CDN-served pages score well on Core Web Vitals.
-- **Security**: No production database or admin runtime is exposed on the serving path.
-- **Cost**: Content sites fit inside free hosting tiers.
-- **Resilience**: Static files do not crash under load; traffic spikes are a CDN's natural state.
-- **Sustainability**: Cached, compute-free page serving emits far less energy per view (see [Static Sites and CO2](/blog/greener-web-static-sites/)).
-- **Portability**: Markup is files; files can move.
+- **Производительность**: Предварительно обработанные страницы, которые обслуживались CDN, дают оценку базовым веб-виталам.
+- **Безопасность**: На пути не отображается производственная база данных или администраторское время.
+- **Стоимость**: Контентные сайты помещаются внутри бесплатных хостинговых уровней.
+- **Устойчивость**: Статические файлы не падают при загрузке; шипы трафика являются естественным состоянием CDN.
+- **Устойчивость**: Кэшированная, не работающая на вычислениях страница выделяет гораздо меньше энергии за вид (см. [Статические сайты и CO2](/blog/greener-web-static-sites/)).
+- **Portability**: Разметка — это файлы; файлы могут перемещаться.
 
-## What Changed Since the Hype
+## Что было изменено с Hype
 
-Two honest evolutions:
+Два честных эволюции:
 
-1. **The "static" part got pragmatic.** Frameworks like SvelteKit and Astro prerender by default but can render dynamically where a page needs it. That is the hybrid model.
-2. **The content problem got solved.** The Jamstack's original weakness was editing: writers did not want Git. Git based CMS platforms ([LightCMS](/getting-started/), [Decap CMS](/comparison/netlifycms/), [Pages CMS](/comparison/pagescms/), [TinaCMS](/comparison/top-git-cms/)) now provide visual editing that commits clean Markdown, closing the gap that once sent everyone back to WordPress.
+1. **"статичная" часть получила прагматические.** Такие фреймворки, как преренрендер SvelteKit и Astro по умолчанию, но могут динамически визуализировать там, где страница нужна. Это гибридная модель.
+2. **Проблема с контентом решена.** Первоначальная слабость Джамстака редактировала: писатели не хотели Git. Платформы на основе GMS ([LightCMS](/getting-started/), [Decap CMS](/comparison/netlifycms/), [Страницы CMS](/comparison/pagescms/), [TinaCMS](/comparison/top-git-cms/)) теперь предоставляет визуальное редактирование, которое фиксирует чистый Markdown, закрывая пробел, который после отправки всех в WordPress.
 
-## The Jamstack Recipe in Practice
+## Рецепт Джамстека на практике
 
-1. Pick a generator: [Astro, Hugo, or friends](/blog/best-static-site-generators/).
-2. Store content as Markdown in GitHub, edited through a Git based CMS ([why it beats a database](/blog/git-cms-vs-traditional-cms/)).
-3. Host on an edge platform: [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) or the [full hosting roundup](/misc/top-static-site-hosting/).
-4. Add dynamic features only where they earn their place: forms, functions, and APIs.
+1. Выберите генератор: [Astro, Hugo, или друзей](/blog/best-static-site-generators/).
+2. Хранить контент как Markdown в GitHub, отредактирован через Git основанный на CMS ([почему он пробивает базу данных](/blog/git-cms-vs-traditional-cms/)).
+3. Хост на краевой платформе: [Страницы с фланцем облаков против Vercel](/blog/cloudflare-pages-vs-vercel/) или [Разкругление полного хостинга](/misc/top-static-site-hosting/).
+4. Добавляйте динамические функции только там, где они зарабатывают свое место: формы, функции и API.
 
-That stack is free to start, fast by default, and greener than anything database-first, which is why it is still the recommendation.
+Этот стек свободен для начала, быстро по умолчанию, и зеленье, чем все базы данных, во-первых, поэтому это еще рекомендация.
 
 ---
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### Is Jamstack dead?
+### Является ли Jamstack мертвым?
 
-No. The term cooled; the architecture won. Most new content sites are built Jamstack style whether or not anyone uses the label.
+Нет. The term cooked ; the architecture won. Большинство новых сайтов контента построены Jamstack стиль независимо от того, использует ли кто-либо этикетку.
 
-### Is Jamstack the Same as a Static Site?
+### Является ли Jamstack таким же, как статический сайт?
 
-A static site is the Markup piece; Jamstack adds the API and JavaScript layers for dynamic features without giving up pre-rendered delivery.
+Статическим сайтом является объект Markup; Jamstack добавляет API и JavaScript-слои для динамических функций без отказа от предварительно отображаемой поставки.
 
-### Can a Jamstack site be dynamic?
+### Может ли сайт Jamstack быть динамичным?
 
-Yes, through client-side data fetching, edge functions, and hybrid rendering. Pre-render by default and go dynamic by exception.
+Да, с помощью извлечения клиентской информации, кровельных функций и гибридного рендеринга. Предварительный рендеринг по умолчанию и идти динамически по исключению.
 
-### What CMS does a Jamstack site use?
+### Какие CMS использует сайт Jamstack?
 
-A Git based CMS: content lives as Markdown in your repository, and publishing is a commit that triggers the build.
+Основанная на Git: контент живет как Markdown в вашем репозитории, и публикация является фиксацией сборки.
