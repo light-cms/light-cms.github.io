@@ -1,119 +1,119 @@
 ---
-title: "LightCMS vs Storyblok: Visual Page-Editing vs Document Writing"
-description: "Storyblok's visual, component-based editor is built for marketing pages; LightCMS is a Git based document editor. Where each one fits, and how they store content."
+title: "LightCMS vs Storyblok: Edição Visual de Página vs Escrita de Documentos"
+description: "Editor visual do Storyblok, baseado em componentes, é construído para páginas de marketing; LightCMS é um editor de documento baseado em Git Onde cada um se ajusta e como eles armazenam conteúdo."
 serial: 51
 date: 2026-10-16T12:10:00Z
 draft: false
 keywords:
-  - lightcms vs storyblok
-  - storyblok alternatives
-  - visual editor cms
-  - storyblok pricing alternative
-  - component based cms
+  - luzes vs storyblok
+  - alternativas de storyblok
+  - cms do editor visual
+  - alternativa de preço storyblok
+  - componente baseado em cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - luzes
     - storyblok
-    - cms
-    - comparison
-    - headless
+    - SMS
+    - comparação
+    - sem cabeça
 ---
 
-[Storyblok](https://www.storyblok.com) built its reputation on one good idea: edit the page while looking at the page. Its visual editor, with drag-and-drop blocks and live preview, is a strong fit for component-driven marketing sites.
+[Storyblok](https://www.storyblok.com) construiu a sua reputação em uma boa idéia: edite a página enquanto olha para a página. Seu editor visual, com blocos de arrastar e soltar e pré-visualização ao vivo, é de grande capacidade para sites de marketing orientados por componentes.
 
-LightCMS shares the "visual" ambition but applies it to a different object: the document. Where Storyblok edits composed pages, LightCMS edits prose.
-
----
-
-## What Each Tool Does
-
-**Storyblok** is a hosted headless CMS with a component (block) system. Content is modeled as nested stories made of blocks, edited in a visual editor with live preview, delivered through an API, and billed by plan and usage.
-
-**LightCMS** is a self-hosted, Git based workspace. Content is Markdown files with front matter in your repository, edited in a WYSIWYG document editor, delivered as static HTML by your build.
-
-|                   | LightCMS                       | Storyblok                       |
-| :---------------- | :----------------------------- | :------------------------------ |
-| **Storage**       | Files in your repository       | Storyblok cloud (hosted)        |
-| **Delivery**      | Static build → CDN             | Content API at request time     |
-| **Editing model** | Document (prose-first)         | Visual, component/block-based   |
-| **Content model** | Front matter fields            | Nested block schemas            |
-| **Preview**       | The rendered post after build  | Live in-editor preview          |
-| **Pricing**       | Free (Apache 2.0), self-hosted | Plan-based SaaS                 |
-| **Portability**   | Clone the repository           | Export required                 |
-| **Extras**        | AI copilot, voice, newsletters | Visual editor, marketplace apps |
+O CMS tem a ambição "visual", mas aplica-se a um objeto diferente: o documento. Onde o Storyblok edita páginas compostas, o prosa de edições LightCMS.
 
 ---
 
-## Where Storyblok Wins
+## O que cada ferramenta faz
 
-- **Editing composed pages visually.** Drag a hero, a grid, and a CTA into place and see the result immediately. For landing pages built from components, this is the correct interface.
-- **Live preview with no build.** What you see is the story as rendered by their preview API, updated as you type.
-- **Marketer-friendly autonomy.** Non-technical teams rearrange page sections without touching a developer.
-- **Hosted and managed.** No infrastructure to run, with a support organization behind it.
-- **Component reuse** across pages, with schema validation on every block.
+**Storyblok** é um CMS hospedado com um sistema de componentes (block). O conteúdo é modelado como histórias aninhadas feitas de blocos, editadas em um editor visual com visualização ao vivo, entregue por meio de uma API, e faturado por plano e uso.
 
-## Where LightCMS Wins
+**LightCMS** é um espaço de trabalho auto-hospedado, com base em Git Conteúdo é arquivos Markdown com questão frontal em seu repositório, editado em um editor de documento WYSIWYG, entregue como HTML estático por sua compilação.
 
-- **No bill that scales with success.** Free software, your host, your CDN.
-- **Content ownership.** The repository is the source of truth; nothing needs exporting. See [content as code](/blog/content-as-code/).
-- **Built for long-form.** Articles, docs, and changelogs are documents (headings, lists, tables, code, math) edited directly. A block tree is a poor surface for 2,000 words.
-- **Static output.** Pre-rendered pages from a CDN score better on [Core Web Vitals](/blog/static-vs-dynamic/) than API-assembled ones.
-- **The extras are bundled.** [AI drafting](/blog/lightcms-ai-copilot/), [voice dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/).
-
----
-
-## The Telling Test
-
-Take a real task: publish a 1,500-word article with a table, three screenshots, and a code block.
-
-- In Storyblok you assemble it from blocks, one field group at a time, inside a preview pane.
-- In LightCMS you write it, drop the images in, and publish.
-
-Now take the opposite task: rebuild a landing page from a hero, feature grid, and testimonial carousel.
-
-- Storyblok does it visually, in minutes.
-- LightCMS does not attempt it: page composition belongs to your templates and components, not to your content tool.
-
-The right answer is usually "both, for different jobs." Publications tend to need more of the second task's opposite than they admit.
+|                        | CMS                                  | Storyblok                               |
+| :--------------------- | :----------------------------------- | :-------------------------------------- |
+| **Armazenamento**      | Arquivos no seu repositório          | Nuvem do Storyblok (hospedada)          |
+| **Entrega**            | Construção estática → CDN            | API de conteúdo no tempo de solicitação |
+| **Editando modelo**    | Documento (prose-primeiro)           | Visual, componente/bloco baseado        |
+| **Modelo de conteúdo** | Campos iniciais de matéria           | Esquemas de blocos aninhados            |
+| **Pré-visualização**   | O post renderizado após a compilação | Visualização no editor                  |
+| **Preços**             | Livre (Apache 2.0), auto-hospedado   | SaaS baseado em plano                   |
+| **Portabilidade**      | Clonar o repositório                 | Exportação necessária                   |
+| **Extras**             | Copiloto, voz, boletins informativos | Editor visual, aplicativos de mercado   |
 
 ---
 
-## Migration
+## Vitórias no Modo Storyblok
 
-Storyblok exports stories as JSON. Flattening nested blocks into Markdown with front matter is mechanical for blog-shaped content and lossy for heavily composed pages. Those are page designs, and they belong in your frontend anyway.
+- **Edição de páginas compostas visualmente.** Arraste um herói, uma grade e um CTA para o lugar e veja o resultado imediatamente. Para páginas de destino construídas a partir de componentes, esta é a interface correta.
+- **Visualização ao vivo sem construção.** O que você vê é a história renderizada pela API de pré-visualização, atualizada conforme você digita.
+- **Autonomia amigável.** Equipes não técnicas reorganizam seções de páginas sem tocar em um desenvolvedor.
+- **Hospedado e gerenciado.** Nenhuma infraestrutura para funcionar, com uma organização de suporte atrás dela.
+- **Reutilização de componente** nas páginas, com validação de esquema em cada bloco.
 
----
+## Onde Vitórias no LightCMS
 
-## Which Should You Choose?
-
-- **Choose Storyblok** for component-driven marketing pages edited by a non-technical team that needs hosted, managed infrastructure.
-- **Choose LightCMS** for a content-heavy static publication written by people who care about prose.
-
----
-
-## Frequently Asked Questions
-
-### Is Storyblok free?
-
-Storyblok offers a free tier for small projects; production plans are subscription-based. LightCMS is Apache 2.0 with no seats or tiers.
-
-### Does LightCMS support page builders?
-
-No, and deliberately so. LightCMS manages content; layout lives in your templates and components.
-
-### Can Storyblok serve static pages?
-
-You can pre-render from Storyblok at build time, but the hosted platform remains the source of record and the bill remains.
-
-### Which is better for SEO?
-
-Both work. Static pre-rendered output has the easier path on speed metrics; content quality decides rankings. See [best CMS for static sites](/blog/best-cms-for-static-sites/).
-
-### Can I self-host Storyblok?
-
-No, it is a hosted service. Self-hosting is a LightCMS advantage, and a Git based one.
+- **Nenhuma conta que escale com sucesso.** Software gratuito, seu anfitrião, seu CDN.
+- **Propriedade de conteúdo.** O repositório é a fonte da verdade; nada precisa ser exportado. Veja [conteúdo como código](/blog/content-as-code/).
+- **Construído para forma longa.** Artigos, documentos e changelogs são documentos (títulos, listas, tabelas, código, matemática) editados diretamente. Uma árvore de bloco é uma superfície pobre por 2.000 palavras.
+- **Saída estática.** Páginas pré-renderizadas de um ponto CDN melhor em [Vitais Web Core](/blog/static-vs-dynamic/) do que as páginas montadas na API.
+- **Os extras estão agregados.** [Esboçamento de IA](/blog/lightcms-ai-copilot/), [ditado de voz](/blog/lightcms-voice-to-text/), e [despacho da newsletter](/blog/newsletter-email-automation/).
 
 ---
 
-More: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Sanity](/comparison/lightcms-vs-sanity), [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
+## Teste Contador
+
+Faça uma tarefa real: publique um artigo de 1.500 palavras com uma tabela, três capturas de tela e um bloco de código.
+
+- No Storyblok você o monta a partir de blocos, um grupo de campos de cada vez, dentro de um painel de pré-visualização.
+- No LightCMS você escreve, arraste e publique as imagens.
+
+Agora pegue a tarefa oposta: reconstruir uma página inicial de um herói, rede de recursos e carrossel, testemunho de carrossel.
+
+- Storyblok o faz visualmente, em minutos.
+- O LightCMS não tenta isso: a composição da página pertence aos seus modelos e componentes, não à sua ferramenta de conteúdo.
+
+A resposta certa é normalmente "ambos, para diferentes trabalhos". As publicações tendem a precisar de mais da segunda tarefa do que admitem.
+
+---
+
+## Migração
+
+Storyblok exporta histórias como JSON. Nivelar blocos aninhados em Markdown com questão frontal é mecânico para conteúdo em forma de blog e perdas para páginas fortemente compostas. Esses são desenhos de páginas, e eles pertencem ao seu frontend mesmo assim.
+
+---
+
+## Qual você deveria escolher?
+
+- **Escolha Storyblok** para páginas de marketing orientadas por componentes editadas por uma equipe não técnica que precisa de infraestrutura gerenciada e hospedada.
+- **Escolha LightCMS** para uma publicação estática com conteúdo pesado escrita por pessoas que se preocupam com a prosa.
+
+---
+
+## Perguntas Frequentes
+
+### O Storyblok é livre?
+
+A Storyblok oferece um nível gratuito para pequenos projetos; os planos de produção têm base em assinaturas. LightCMS é Apache 2.0 sem assentos ou níveis.
+
+### Os construtores de páginas de suporte do LightCMS?
+
+Não, e deliberadamente. O layout gerencia o conteúdo do LightCMS e está presente em seus modelos e componentes.
+
+### O Storyblok pode servir páginas estáticas?
+
+Você pode pré-renderizar do Storyblok no tempo de construção, mas a plataforma hospedada permanece a fonte do registro e a conta permanece.
+
+### Qual é melhor para SEO?
+
+Ambos trabalham. A saída pré-renderizada estática tem o caminho mais fácil nas métricas de velocidade; a qualidade do conteúdo decide os rankings. Veja [best CMS para sites estáticos](/blog/best-cms-for-static-sites/).
+
+### Posso auto-sediar o Storyblok?
+
+Não, é um serviço hospedado. Auto-hospedagem é uma vantagem do LightCMS e baseada em Git.
+
+---
+
+Mais: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Sanity](/comparison/lightcms-vs-sanity), [headless vs Git Baseado em CMS](/blog/headless-vs-git-based-cms/).
