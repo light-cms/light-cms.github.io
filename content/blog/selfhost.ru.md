@@ -1,60 +1,60 @@
 ---
-title: Self Hosting LightCMS
-description: Guide to self host LightCMS.
+title: Самохостинг LightCMS
+description: Руководство по самому хосту LightCMS.
 serial: 4
-section: Get Started
-badge: Deploy
+section: Начать работу
+badge: Развертывание
 date: 2026-09-18T01:45:00Z
 draft: false
 tags:
   - selfhost
-  - lightcms
+  - молнии
   - postgresql
-  - deployment
+  - развертывание
 keywords:
-  - lightcms
-  - probot
-  - self-hosting
+  - молнии
+  - пробот
+  - самохостинг
   - github_app
-  - vercel
+  - вершина
   - sveltekit
 preview: /og-image.png
 canonical: https://www.lightcms.me/docs
 ---
 
-Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
+Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) это [SvelteKit](https://svelte.dev) приложение, поэтому оно может быть развернуто где угодно, поддерживается базой данных postgre и GitHub App(octokit). Ваш контент никогда не оставляет свои репозитории на GitHub.
 
-This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
-PostgreSQL, configuring environment variables, and deploying.
+Это руководство рассказывает о том, что вам нужно запустить свой собственный экземпляр: создание GitHub приложения, подготовка
+PostgreSQL, настройка переменных среды и развертывание.
 
-## How the Pieces Fit Together
+## Как все фигуры укладываются вместе
 
-| Component             | Purpose                                                                       | Required                     |
-| --------------------- | ----------------------------------------------------------------------------- | ---------------------------- |
-| PostgreSQL            | Stores users, sessions, passkeys and GitHub installations                     | Yes                          |
-| GitHub App            | Reads and writes content in your repositories, and signs users in with GitHub | Yes                          |
-| SMTP provider         | Sends magic-link sign-in emails                                               | Yes, for magic-link sign-in  |
-| OpenAI-compatible API | Powers the AI Copilot                                                         | Optional                     |
-| Speech-to-text API    | Powers voice dictation                                                        | Optional                     |
-| Image CDN             | Hosts images uploaded in the editor                                           | Optional                     |
-| PostHog               | Product analytics and AI observability                                        | Required in development only |
+| Компонент              | Цель                                                                                           | Требуется                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------- |
+| PostgreSQL             | Хранит пользователей, сеансов, паролей и установок GitHub                                      | Да                               |
+| GitHub App             | Читает и записывает содержимое в ваши репозитории и подписывает пользователей с помощью GitHub | Да                               |
+| SMTP провайдер         | Отправлять сообщения о входе в систему                                                         | Да, для входа в волшебную ссылку |
+| OpenAI-совместимый API | Усиляет копилот ИИ                                                                             | Опционально                      |
+| API речи               | Усиляет диктовку голоса                                                                        | Опционально                      |
+| CDN изображения        | Изображения узлов, загруженных в редактор                                                      | Опционально                      |
+| Постхог                | Аналитика продуктов и наблюдение ИИ                                                            | Требуется только для развития    |
 
-## Prerequisites
+## Предпосылки
 
-- **[mise](https://mise.jdx.dev)**: installs and managing tasks dependencies. I will be assuming you have it installed.
-- **PostgreSQL**: a database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
-  [Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
+- **[mise](https://mise.jdx.dev)**: устанавливает и управляет зависимостями задач. Я буду предполагать, что вы установили его.
+- **PostgreSQL**: база данных, которая принимает TLS соединения. Облачные поставщики, такие как [Neon](https://neon.tech),
+  [Supabase](https://supabase.com) или [Nile](https://thenile.dev) работают хорошо. See
   [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
-- **GitHub account**: needed to register the GitHub App.
-- **SMTP provider** (for magic links): If you have a domain then [Resend](https://resend.com) will be having an awesome experience,
-  if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
+- **GitHub аккаунт**: необходимо для регистрации GitHub.
+- **SMTP провайдер** (для волшебных ссылок): Если у вас есть домен, то [Resend](https://resend.com) будет иметь потрясающий опыт,
+  если нет, то [Zoho Mail](https://www.zoho.com/mail) не забудьте создать пароль приложения.
 
-> **TLS is mandatory.** The application connects to PostgreSQL with `ssl: "require"`. A local PostgreSQL instance
-> without TLS enabled will be rejected, so use a hosted database or configure TLS on your own server.
+> **TLS является обязательным.** Приложение подключается к PostgreSQL с помощью `ssl: "require"`. Локальная копия PostgreSQL
+> без TLS будет отклонена, поэтому используйте размещенную базу данных или настройте TLS на вашем собственном сервере.
 
-## 1. Fork the repository and install dependencies
+## 1. Форкнуть репозиторий и установить зависимости
 
-Clone the repository and install dependencies:
+Клонировать репозиторий и установить зависимости:
 
 ```bash
 cd lightcms
@@ -63,87 +63,87 @@ mise deps
 mise run install
 ```
 
-Install the toolchain and the project dependencies:
+Установите инструментальную цепь и зависимости проекта:
 
 ```bash
 mise trust
-mise deps
+deps
 mise run install
 ```
 
 ## 2. Create the GitHub App
 
-[LightCMS](https://lightcms.me) uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
-through installations. You can create it with the built in Probot setup wizard, or by hand.
+[LightCMS](https://lightcms.me) использует GitHub для двух вещей: вход пользователей в GitHub (OAuth) и выполнение от вашего имени
+через установки. Вы можете создать его с помощью встроенного мастера настройки Пробота или вручную.
 
-### Option A: Probot setup wizard
+### Вариант А: Мастер установки Пробота
 
-start the bot with:
+начать бот:
 
 ```bash
-mise run bot
+пропущенный бот
 ```
 
-With no credentials in `.env`, Probot starts a setup server at `http://localhost:3000`:
+Не имея учётных данных в `.env`, Пробот запускает установочный сервер в `http://localhost:3000`:
 
-1. Open `http://localhost:3000` and click **Register GitHub App**.
-2. Choose your personal account or an organization.
-3. Confirm. Probot creates the app and writes its credentials to your `.env` file.
+1. Откройте `http://localhost:3000` и нажмите **Register GitHub App**.
+2. Выберите свой личный аккаунт или организацию.
+3. Подтвердить. Пробот создает приложение и записывает его учетные данные в ваш файл `.env`.
 
-The wizard sets the app's webhook URL to a Smee channel (or `http://localhost:3000/`), not to [LightCMS](https://lightcms.me)'s webhook
-endpoint. Update it in the GitHub App settings before going live (see [Production deployment](#6-production-deployment)).
+Мастер устанавливает URL-адрес веб-хука приложения на канал Smee (или `http://localhost:3000/`), а не на [LightCMS](https://lightcms.mewebhook
+конечную точку. Обновите его в настройках приложения GitHub перед началом эксплуатации (см. [Установка производства](#6-production-deployment)).
 
-### Option B: Manual setup
+### Вариант В: Ручная настройка
 
-Create the app in **GitHub Settings → Developer settings → GitHub Apps → New GitHub App** with these values:
+Создайте приложение в **GitHub Settings → Настройки разработчика → GitHub Apps → New GitHub App** с этими значениями:
 
-| Setting        | Value                                                           |
-| -------------- | --------------------------------------------------------------- |
-| Homepage URL   | `https://<your-domain>`                                         |
-| Callback URL   | `https://<your-domain>/api/auth/callback/github`                |
-| Setup URL      | `https://<your-domain>/github/setup`                            |
-| Webhook URL    | `https://<your-domain>/api/github/webhook`                      |
-| Webhook secret | A random secret (see [Generating secrets](#generating-secrets)) |
+| Настройка            | Значение                                                         |
+| -------------------- | ---------------------------------------------------------------- |
+| URL главной страницы | `https://<your-domain>`                                          |
+| Callback URL         | `https://<your-domain>/api/auth/callback/github`                 |
+| Setup URL            | `https://<your-domain>/github/setup`                             |
+| URL вебхука          | `https://<your-domain>/api/github/webhook`                       |
+| Секрет Webhook       | Случайный секрет (см. [Генерация секретов](#generating-secrets)) |
 
-**Repository permissions**
+**Разрешения репозитория**
 
-| Permission        | Access         | Used for                                    |
-| ----------------- | -------------- | ------------------------------------------- |
-| `Contents`        | Read and write | Reading and committing content files        |
-| `Issues`          | Read and write | Review comments and labels on pull requests |
-| `Pull requests`   | Read-only      | Listing the files changed in a pull request |
-| `Commit statuses` | Read and write | Reporting content validation on pushes      |
-| `Metadata`        | Read-only      | Mandatory for every GitHub App              |
+| Разрешение          | Доступ          | Используется для                              |
+| ------------------- | --------------- | --------------------------------------------- |
+| `Содержимое`        | Чтение и запись | Чтение и фиксация файлов содержимого          |
+| `Проблемы`          | Чтение и запись | Просмотр комментариев и меток pull-request'ов |
+| `Pull requests`     | Только чтение   | Список файлов изменен в Pull Request          |
+| `Фиксация статусов` | Чтение и запись | Отчеты об валидации содержимого на pushes     |
+| «Метаданные»        | Только чтение   | Обязательный для каждого приложения GitHub    |
 
-**Subscribe to events:** `Push` and `Pull request`. Installation events are delivered to GitHub Apps automatically.
+**Подпишитесь на события:** `Push` и `Pull request`. События по установке автоматически передаются в GitHub приложения.
 
-After creating the app, note the **App ID**, generate a **client secret**, and generate and download a **private key**
+После создания приложения, обратите внимание на **App ID**, сгенерируйте **клиентский секрет**, и скачайте **приватный ключ**
 (`.pem`).
 
-## 3. Configure environment variables
+## 3. Настройка переменных окружения
 
-Create a `.env` file in the project root. The repository does not ship a usable example file, so use the reference below.
+Создайте файл `.env` в корне проекта. Репозиторий не предоставляет пригодный для использования пример файл, поэтому используйте ссылку ниже.
 
-### Required
+### Требуется
 
 ```bash
-# ---------------------------------------------------------------------------
-# Authentication (Better Auth)
+# -----------------------------------------------------------------------------------
+# Аутентификация (Better Auth)
 # ---------------------------------------------------------------------------
 BETTER_AUTH_SECRET="<output of: openssl rand -hex 32>"
-# Public URL of this instance. Must match the URL users visit.
+# публичный URL этого экземпляра. Должен совпадать с посещаемым пользователем URL-адресом.
 BETTER_AUTH_URL="http://localhost:5173"
 
-# ---------------------------------------------------------------------------
-# Database (PostgreSQL, TLS required)
-# ---------------------------------------------------------------------------
-DATABASE_URL="postgresql://user:password@host:5432/lightcms?sslmode=require"
+# -------------------------------------------------------------------------------------------
+# База данных (PostgreSQL, TLS необходимая)
+# -----------------------------------------------------------------------------------
+DATABASE_URL="postgresql://user:password@host:5432/lightcms? slmode=require"
 
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
 # GitHub App
-# ---------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------
 GITHUB_APP_ID="123456"
-GITHUB_CLIENT_ID="Iv1.xxxxxxxxxxxx"
+GITHUB_CLIENT_ID="Iv1. xxxxxxxxx"
 GITHUB_CLIENT_SECRET="<github-app-client-secret>"
 GITHUB_WEBHOOK_SECRET="<webhook-secret>"
 GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
@@ -151,37 +151,37 @@ GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
 -----END RSA PRIVATE KEY-----"
 ```
 
-`GITHUB_PRIVATE_KEY` is the full PEM contents. Keep the line breaks and wrap the value in double quotes, which is how
-the Probot wizard writes it.
+`GITHUB_PRIVATE_KEY` — полное содержимое PEM. Держите строку разрыва и оберните значение в двойные кавычки, вот как
+пишет её мастером.
 
-### Required for development
+### Требуется для разработки
 
-[LightCMS](https://lightcms.me) reports analytics and errors to [PostHog](https://posthog.com). When the keys are missing, the app **throws in development** to stop events being silently dropped. In production they are optional, and telemetry is skipped when they are unset.
+[LightCMS](https://lightcms.me) сообщает аналитику и ошибки [PostHog](https://posthog.com). Когда ключи отсутствуют, приложение **бросает в разработку** для того, чтобы остановить события молчания. В производстве они являются необязательными, а телеметрия пропускается, когда они отключены.
 
 ```bash
-PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxx"
+PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxx"
 PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
 ```
 
-### Email: required for magic-link sign-in
+### E-mail: требуется для входа в систему magic-link
 
-Magic links are sent over SMTP with [Nodemailer](https://nodemailer.com). Sending fails with a configuration error when
-`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` or `MAIL_FROM` is missing.
+Магические ссылки отправляются через SMTP с помощью [Nodemailer](https://nodemailer.com). Отправка не удалась с ошибкой конфигурации, когда отсутствует файл
+`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` или `MAIL_FROM`.
 
 ```bash
 MAIL_HOST="smtp.resend.com"
-# Defaults to 587 when omitted
+# По умолчанию до 587 при пропускании
 MAIL_PORT="465"
-# "true", "1", "yes" or "on" enables implicit TLS. When omitted, TLS is enabled only for port 465.
+# "true", "1", "да" или "в" позволяет неявным TLS. Когда omitted, TLS включен только для порта 465.
 MAIL_SECURE="1"
 MAIL_USER="resend"
 MAIL_PASS="<smtp-password-or-api-key>"
 MAIL_FROM="LightCMS <noreply@yourdomain.com>"
 ```
 
-### Optional: AI Copilot
+### Необязательно: AI Copilot
 
-The Copilot uses any OpenAI-compatible chat completions API. All three variables are needed for it to work.
+Copilot использует любой API дополнений OpenAI-совместимого чата. Все три переменные необходимы для работы.
 
 ```bash
 OPEN_AI_ENDPOINT="https://api.openai.com/v1"
@@ -189,89 +189,89 @@ OPEN_AI_APIKEY="sk-..."
 OPEN_AI_MODEL="gpt-4o-mini"
 ```
 
-Any provider that exposes an OpenAI-compatible API works, for example [OpenAI](https://platform.openai.com),
-[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) or [NVIDIA NIM](https://build.nvidia.com).
+Любой поставщик, который открывает совместимый с OpenAI, работает, например, [OpenAI](https://platform.openai.com),
+[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) или [NVIDIA NIM](https://build.nvidia.com).
 
-### Optional: speech-to-text dictation
+### Необязательно: диктование речи к тексту
 
-[LightCMS](https://lightcms.me) supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
+[LightCMS](https://lightcms.me) поддерживает два транскрипта. При настройке используется OpenAI-совместимый бэкэнд.
 
-**OpenAI-compatible transcription.** It is selected when `SPEECH_API_KEY` is set, and also needs `SPEECH_MODEL`:
+**OpenAI-совместимые транскрипции.** Выбрано, когда установлен файл `SPEECH_API_KEY`, а также требуется `SPEECH_MODEL`:
 
 ```bash
 SPEECH_API_KEY="<api-key>"
 SPEECH_MODEL="whisper-1"
-# Base URL of the provider. Omit it to use the OpenAI default.
+# Базовый URL-адрес провайдера. Или используйте OpenAI по умолчанию.
 SPEECH_ENDPOINT="https://api.openai.com/v1"
 ```
 
-Point `SPEECH_ENDPOINT` at any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` to a
-model that provider offers. A trailing `/audio/transcriptions` in the endpoint is stripped automatically.
+Наведите `SPEECH_ENDPOINT` на любого поставщика, который реализует API `/audio/transcriptions`, и установите модель `SPEECH_MODEL` на
+модель, предлагаемую поставщиком. В конечной точке автоматически удаляется завершающая `/audio/transcriptions`.
 
-**[Wit.ai](https://wit.ai)** is used when `SPEECH_API_KEY` is not set:
+**[Wit.ai](https://wit.ai)** используется, когда не установлен `SPEECH_API_KEY`:
 
 ```bash
 WIT_AI_TOKEN="<wit-ai-server-access-token>"
 ```
 
-If neither is configured, dictation is unavailable.
+Если ни один из них не настроен, продиктование недоступно.
 
-### Optional: image uploads (CDN)
+### Опционально: загрузка изображений (CDN)
 
-Images pasted or uploaded in the editor are sent to a [Chevereto](https://chevereto.com)-compatible upload API.
-Hosted options include [FreeImage.host](https://freeimage.host) and [ImgBB](https://imgbb.com), or you can run
-your own Chevereto instance.
+Изображения, вставленные или загруженные в редактор, отправляются на [Chevereto](https://chevereto.com)-совместимый API для загрузки файлов.
+Размещенные опции включают [FreeImage.host](https://freeimage.host) и [ImgBB](https://imgbb.com), или вы можете запустить
+свой собственный экземпляр Chevereto.
 
 ```bash
 CDN_URL="https://freeimage.host/api/1/upload"
 CDN_KEY="<cdn-api-key>"
 ```
 
-`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the
-variables are unset, [LightCMS](https://lightcms.me) falls back to embedding the image in the document as a base64 `data:` URL. This works,
-but it makes your Markdown files much larger, so configure a CDN for real use.
+`CDN_KEY` передается в качестве параметра запроса `key`, если `CDN_URL` уже содержит параметр. Если загрузка не удалась, или переменные
+не заданы, [LightCMS](https://lightcms.me) возвращается к встраиванию изображения в документ как `data:` URL. Это работает,
+но делает файлы Markdown значительно больше, поэтому настройте CDN для реального использования.
 
-### Local webhook forwarding (development only)
+### Переадресация веб-хуков (только для разработки)
 
 ```bash
-WEBHOOK_PROXY_URL="https://smee.io/<your-channel>"
+WEBHOOK_PROXY_URL="https://smee.io/<your-channel>
 ```
 
-This is read by Probot, not by the SvelteKit app. See [Testing webhooks locally](#testing-webhooks-locally).
+Это читается Probot, а не приложением SvelteKit. См. [Тестирование вебхуков](#testing-webhooks-locally).
 
-### Generating secrets
+### Генерация секретов
 
-Use any of these to generate `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET`:
+Используйте любой из них для генерации `BETTER_AUTH_SECRET` и `GITHUB_WEBHOOK_SECRET`:
 
 ```bash
 openssl rand -hex 32
-# or
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+# или
+узел -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
-## 4. Set up the database
+## 4. Настройка базы данных
 
-[LightCMS](https://lightcms.me) uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
-are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
+[LightCMS](https://lightcms.me) использует [Ворот ORM](https://orm.drizzle.team). Схема живет в `src/lib/server/db/schema.ts`, а миграция
+генерируется в каталог `drizzle`. С `DATABASE_URL` выполните миграцию:
 
 ```bash
 bun run db:migrate
 ```
 
-During local development you can instead push the schema straight to the database, without migration files:
+Во время локального развития вы можете вместо этого отправлять схему прямо в базу данных, без миграционных файлов:
 
 ```bash
 bun run db:push
 ```
 
-Other database scripts:
+Другие скрипты базы данных:
 
-| Command               | Description                                   |
-| --------------------- | --------------------------------------------- |
-| `bun run db:generate` | Generate a migration after editing the schema |
-| `bun run db:studio`   | Browse and edit your data in Drizzle Studio   |
+| Команда               | Описание                                          |
+| --------------------- | ------------------------------------------------- |
+| `bun run db:generate` | Генерировать миграцию после редактирования схемы  |
+| `bun run db:studio`   | Просмотр и редактирование данных в Drizzle Studio |
 
-## 5. Run locally
+## 5. Локальный запуск
 
 ```bash
 bun run dev
@@ -279,57 +279,57 @@ bun run dev
 
 ![imagebot](https://i.ibb.co/Jw1bjLrr/image.png)
 
-![permissions detailed](https://i.ibb.co/0p7tk88V/image.png)
+![подробные права](https://i.ibb.co/0p7tk88V/image.png)
 
-[LightCMS](https://lightcms.me) is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
+[LightCMS](https://lightcms.me) теперь доступен по адресу `http://localhost:5173`. Установите на этот адрес `BETTER_AUTH_URL` и впервые войдите в GitHub.
 
-### Testing webhooks locally
+### Тестирование вебхуков локально
 
-GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io](https://smee.io):
+GitHub не может доставлять веб-хуки в `localhost`, поэтому пересылайте их через [smee.io](https://smee.io):
 
-1. Create a channel at [smee.io](https://smee.io) and copy its URL.
-2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL.
-3. Set the **Webhook URL** in your GitHub App settings to the same URL.
-4. Run the bot in a second terminal:
+1. Создайте канал на [smee.io](https://smee.io) и скопируйте его URL.
+2. Установите `WEBHOOK_PROXY_URL` в `.env` в `.env`.
+3. Установил **URL-адрес вебхука** в настройках приложения на GitHub.
+4. Запустите бота во втором терминале:
 
    ```bash
    bun run bot:start
    ```
 
-The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
-labels on `pull_request`, and `installation` logging.
+Бот регистрирует те же обработчики, что и конечная точка продукта: проверка содержимого на `push`, комментарии к рассмотрению и
+метки в журнале `pull_request`, и `installation`.
 
-## 6. Production deployment
+## 6. Направление производства
 
-The project is configured with sveltekit which is very vendor agnostic, so
-[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) all are supported deployment targets out of the box.
+Проект сконфигурирован с sveltekit, очень вендор агностик, so
+[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) are supported deployment targets from the box.
 
-1. Import your Git repository into deployment platform.
-2. Add every environment variable from [step 3](#3-configure-environment-variables) in **Project Settings → Environment
-   Variables**. Set `BETTER_AUTH_URL` to your production URL.
-3. Deploy.
+1. Импортируйте ваш Git-репозиторий в платформу установки.
+2. Добавьте каждую переменную окружения из [шаг 3](#3-configure-environment-variables) в **Настройки проекта → Окружающая среда
+   переменных**. Установите `BETTER_AUTH_URL` в ваш URL-адрес продукта.
+3. Развертывание.
 
-To verify the production build locally:
+Для проверки производительности сборки локально:
 
 ```bash
 bun run build
-bun run preview
+bun preview
 ```
 
-## Troubleshooting
+## Устранение проблем
 
-Make a account with [Wit.ai](https://wit.ai/) it's a free service by meta |
-And any openai compatible API for transcription. |
-One can use [groq](https://groq.com/) or [assemblyai](https://assemblyai.com/) or |
-[elevenlabs](https://elevenlabs.io/) or [deepgram](https://deepgram.com/) or [sarvam](https://sarvam.ai/). |
+Создайте учетную запись с [Wit.ai](https://wit.ai/) это бесплатный сервис meta |
+И любой openai совместимый API для транскрипции. |
+Один может использовать [groq](https://groq.com/) или [assemblyai](https://assemblyai.com/) или |
+[elevenlabs](https://elevenlabs.io/) или [deepgram](https://deepgram.com/) или [sarvam](https://sarvam.ai/). |
 
-## For development purpose you can use the following credentials for posthog
+## Для разработки используйте следующие полномочия для posthog
 
-PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
+PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
 PUBLIC_POSTHOG_URL = "https://us.i.posthog.com"
 
 ```bash
-PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
+PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
 PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
@@ -338,8 +338,8 @@ https://wit.ai
 ![wit.ai](https://i.ibb.co/MySskPTt/image.png)
 
 ```bash
-WIT_AI_TOKEN="Server access token"
-WIT_AI_CLIENT_TOKEN="Client access token"
+WIT_AI_TOKEN="Код доступа к серверу"
+WIT_AI_CLIENT_TOKEN="Токен доступа к клиенту"
 ```
 
 ```bash
@@ -376,4 +376,4 @@ WIT_AI_CLIENT_TOKEN=
 WIT_AI_TOKEN=
 ```
 
-![configuration for the bot](https://i.ibb.co/jP5tgcJH/image.png)
+![конфигурация для бота](https://i.ibb.co/jP5tgcJH/image.png)
