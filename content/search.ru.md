@@ -1,6 +1,6 @@
 +++
-title = "Search"
-description = "Search the LightCMS blog and documentation"
+title = "Искать"
+description = "Поиск в блоге LightCMS и документации"
 template = "search.html"
 in_search_index = false
 +++
