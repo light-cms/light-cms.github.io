@@ -1,6 +1,6 @@
 +++
-title = "Gallery"
-description = "Visual showcase of LightCMS features, editor workspace, AI copilot, and Git-native workflows."
+title = "相册"
+description = "LightCMS功能、编辑器工作空间、AI 拷贝和 Git-本机工作流程的视觉展示。"
 sort_by = "weight"
 template = "gallery.html"
 +++
