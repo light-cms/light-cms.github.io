@@ -1,111 +1,111 @@
 ---
-title: "LightCMS vs Sanity: Files in Git vs a Hosted Content Platform"
-description: "Sanity is a structured content platform with a hosted content lake; LightCMS writes Markdown into your repository. Where each approach wins for blogs and static sites."
+title: "LightCMS x Sanção: Arquivos no Git vs uma Plataforma de Conteúdo Hospedada"
+description: "Sanity é uma plataforma de conteúdo estruturada com um laboratório de conteúdo hospedado; LightCMS escreve Markdown no seu repositório. Cada abordagem ganha para blogs e sites estáticos."
 serial: 48
 date: 2026-10-16T11:40:00Z
 draft: false
 keywords:
-  - lightcms vs sanity
-  - sanity alternatives
-  - sanity cms pricing alternatives
-  - git based cms vs sanity
-  - sanity for blogs
+  - lightcms versus sanidade
+  - alternativas de sanidade
+  - alternativas de preços sanidade cms
+  - git baseado em cms e sanidade
+  - sanidade para blogs
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - sanity
-    - cms
-    - comparison
-    - headless
+    - luzes
+    - sanidade
+    - SMS
+    - comparação
+    - sem cabeça
 ---
 
 [Sanity](https://www.sanity.io) is one of the strongest headless platforms available: a flexible schema, GROQ queries, a customizable React Studio, real-time collaboration, and a hosted content lake that serves any frontend you point at it.
 
-LightCMS solves an adjacent but different problem: publishing documents to a static site from a repository you own. The comparison only makes sense once you separate what each architecture is optimized for.
+LightCMS resolve um problema adjacente mas diferente: publicação de documentos em um site estático a partir de um repositório que você possui. A comparação só faz sentido depois que cada arquitetura é otimizada.
 
 ---
 
-## The Architectural Difference
+## A diferença arquitetônica
 
-**Sanity** stores content as structured documents in Sanity's cloud (Content Lake), queried at runtime through GROQ and delivered via their CDN. Your frontend fetches content; Sanity runs the infrastructure.
+**Sanity** armazena conteúdo como documentos estruturados na nuvem do Papai Noel (Content Lake), consultado em tempo de execução através do GROQ e entregue através de sua CDN. Seu frontend compra conteúdo; O Santo é a infraestrutura.
 
-**LightCMS** stores content as Markdown files with YAML front matter in your GitHub repository. Your static site generator reads them at build time and emits HTML.
+**LightCMS** armazena o conteúdo como arquivos Markdown com a página inicial YAML no seu repositório GitHub. Seu gerador de site estático lê-los em tempo de compilação e emite HTML.
 
-|                   | LightCMS                               | Sanity                                  |
-| :---------------- | :------------------------------------- | :-------------------------------------- |
-| **Storage**       | Your Git repository                    | Sanity Content Lake (hosted)            |
-| **Delivery**      | Pre-rendered static HTML               | API at request time (GROQ)              |
-| **Content model** | Documents + front matter               | Custom schemas in code                  |
-| **Runtime**       | None: build + CDN                      | Client app + API                        |
-| **Billing**       | Free (Apache 2.0), self-hosted         | Usage/seat based hosted service         |
-| **Portability**   | Clone the repository                   | Export and convert                      |
-| **Editor**        | TipTap document editor                 | Customizable Studio                     |
-| **Extras**        | AI copilot, voice-to-text, newsletters | Ecosystem apps, real-time collaboration |
-
----
-
-## Where Sanity Wins
-
-- **Multi-channel delivery.** One content source feeding a website, an app, and an integration, with real-time queries, is Sanity's home turf.
-- **Custom content modeling.** Schemas defined in code give you validation, references, and conditional fields that file-based content cannot express.
-- **Real-time collaboration.** Multiple editors on the same document, live. Git gives you review, not simultaneity.
-- **Instant updates.** Content changes are live without waiting for a build.
-- **A rich app ecosystem** and strong developer tooling around Studio.
-
-## Where LightCMS Wins
-
-- **No per-seat, per-API-call billing.** The tool is free and self-hosted; your only cost is the host you already have.
-- **No vendor in the content path.** Content sits in your repository, readable, forkable, and portable in ten years. Hosted content lives where the vendor says it does.
-- **Zero runtime.** No API to query per request, no rate limits, no outage on someone else's status page. See [static vs dynamic sites](/blog/static-vs-dynamic/).
-- **Built for writing.** A full document editor with [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/), where Sanity's Studio is configured for content modeling rather than long-form authoring.
-- **Setup measured in minutes.** Connect a repository and write; there is no schema design phase before your first post.
+|                        | CMS                                   | Sanidade                                              |
+| :--------------------- | :------------------------------------ | :---------------------------------------------------- |
+| **Armazenamento**      | Seu repositório Git                   | Lago Conteúdo do Santo (hospedado)                    |
+| **Entrega**            | HTML estático pré-renderizado         | API ao tempo da solicitação (GROQ)                    |
+| **Modelo de conteúdo** | Documentos + primeira matéria         | Esquemas personalizados no código                     |
+| **Executar**           | Nenhum: compilação + CDN              | Aplicativo cliente + API                              |
+| **Cobrança**           | Livre (Apache 2.0), auto-hospedado    | Uso/assento com base no serviço hospedado             |
+| **Portabilidade**      | Clonar o repositório                  | Exportar e converter                                  |
+| **Editor**             | Dicas Editor de documento             | Estúdio personalizável                                |
+| **Extras**             | Copiloto, voz-para-texto, newsletters | Aplicativos de ecossistema, colaboração em tempo real |
 
 ---
 
-## The Cost Shape, Concretely
+## onde o Sanity vence
 
-Sanity's free tier is generous, and pricing scales with usage and seats, a good deal until traffic and team size grow. Static output from a Git repository costs the same at one reader and one million: build minutes (already paid for by your CI) and CDN bandwidth (near zero).
+- **Multipli-channel delivery.** Uma fonte de conteúdo alimentando um site, um aplicativo e uma integração, com consultas em tempo real, é o turno principal de Sany.
+- **modelagem de conteúdo personalizada.** Esquemas definidos no código dão validação, referências e campos condicionais que conteúdo baseado em arquivos não pode expressar.
+- **Colaboração em tempo real.** Vários editores no mesmo documento, ao vivo. O Git dá a você uma avaliação, não simultânea.
+- **Atualizações instantâneas.** As alterações de conteúdo são realizadas sem esperar por uma compilação.
+- **Um ecossistema rico de aplicativo** e fortes ferramentas de desenvolvimento pelo Studio.
 
-For a publication, that is a structurally cheaper curve. For a funded product with multi-channel content needs, Sanity's spend buys genuine capability.
+## Onde Vitórias no LightCMS
 
----
-
-## Migration
-
-Sanity exports to JSON/NDJSON; converting documents to Markdown with front matter is a script, with references and custom block types needing manual attention. The reverse (pushing Markdown into structured documents) is usually the harder direction. Both paths exist; the closer your content is to plain prose, the cheaper the move to files.
-
----
-
-## Which Should You Choose?
-
-- **Choose Sanity** when content is structured, multi-channel, and queried at runtime by applications.
-- **Choose LightCMS** when the output is a static site, the content is documents, and ownership plus cost control matter.
+- **Nenhuma conta por lugar, por faturação de chamadas de API.** A ferramenta é gratuita e auto-hospedada; seu único custo é o hospedeiro que você já tem.
+- **Nenhum fornecedor no caminho do conteúdo.** O conteúdo está sentado no seu repositório, legível, forkable e portátil em dez anos. O conteúdo hospedado vive onde o vendedor diz que vive.
+- **Zero runtime.** Sem API para consultar por solicitação, sem limites de taxa, sem interrupção na página de status de outra pessoa. Ver [estático vs sites dinâmicos](/blog/static-vs-dynamic/).
+- \*\*Feito para escrever. \* Um editor de documentos completo com [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), e [newsletter despacho](/blog/newsletter-email-automation/), onde o Sanity Studio está configurado para modelagem de conteúdo em vez de um formulário de autoria longo.
+- **Configuração medida em minutos.** Conecte um repositório e escreva; não há fase de design do esquema antes de seu primeiro post.
 
 ---
 
-## Frequently Asked Questions
+## A Forma de Custo, Concretamente
 
-### Is Sanity free?
+O nível livre do Papai Noel é generoso e os preços escalam com uso e assentos, um bom negócio até que o tráfego e o tamanho da equipe cresçam. Saída estática de um repositório Git custa o mesmo em um leitor e um milhão: construir minutos (já pagos pelo CI) e banda CDN (quase zero).
 
-Sanity offers a free tier with limits, then usage-based pricing. LightCMS is Apache 2.0 licensed and self-hosted, so there is no license fee at any scale.
-
-### Can LightCMS do real-time collaboration?
-
-No. LightCMS optimizes for focused single-writer sessions plus Git based review. Concurrent live co-editing is a Sanity strength.
-
-### Does Sanity generate static sites?
-
-You can pre-fetch from Sanity at build time (the architecture works either way), but Sanity remains the hosted source of record, and its pricing still applies.
-
-### Can I self-host Sanity?
-
-Sanity is a hosted service; self-hosting is not the supported model. That is a meaningful difference if data residency or cost ceilings matter.
-
-### Which is better for SEO?
-
-Both can rank equally well; static output tends to help Core Web Vitals. See [best CMS for static sites](/blog/best-cms-for-static-sites/).
+Para uma publicação, trata-se de uma curva estruturalmente mais barata. Para um produto financiado com necessidades de conteúdo em vários canais, o Papai Noel compra uma capacidade genuína.
 
 ---
 
-More: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
+## Migração
+
+Exportações salgadas para JSON/NDJSON; converter documentos para Markdown com front-matter é um script, com referências e tipos de blocos personalizados que precisam de atenção manual. A inversão (empurrando o Markdown para documentos estruturados) geralmente é a direção mais difícil. Ambos os caminhos existem; quanto mais perto o seu conteúdo expira, mais barato será o movimento para arquivos.
+
+---
+
+## Qual você deveria escolher?
+
+- **Escolha a Série** quando o conteúdo é estruturado, multicanal e consultado em tempo de execução pelos aplicativos.
+- **Escolher LightCMS** quando a saída é um site estático, o conteúdo é documentos e a propriedade mais matéria de controle de custo.
+
+---
+
+## Perguntas Frequentes
+
+### O Papai Noel é gratuito?
+
+A Sanity oferece um nível gratuito, com limites, e depois preços baseados no uso. O LightCMS é licenciado e auto-hospedado no Apache 2.0, portanto não há taxa de licença em qualquer escala.
+
+### O LightCMS pode fazer colaboração em tempo real?
+
+Não. O LightCMS otimiza sessões de escritor único focadas mais uma revisão baseada em Git. Coedição ao vivo simultânea é uma força de sanidade.
+
+### O Sanity gera sites estáticos?
+
+Você pode pré-buscar do Sanity no tempo de construção (a arquitetura funciona de qualquer forma), mas o Sanity continua a ser a fonte hospedada do registo e os seus preços ainda se aplicam.
+
+### Posso auto-hospedar o Sanito?
+
+Sanity é um serviço hospedado; auto-hospedeiro não é o modelo suportado. Trata-se de uma diferença significativa se os limites máximos de residência ou de custo forem importantes.
+
+### Qual é melhor para SEO?
+
+Ambos podem se classificar igualmente bem; a saída estática tende a ajudar os Core Vitals. Veja [best CMS para sites estáticos](/blog/best-cms-for-static-sites/).
+
+---
+
+Mais: [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/), [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms), [headless vs Git Baseado em CMS](/blog/headless-vs-git-based-cms/).
