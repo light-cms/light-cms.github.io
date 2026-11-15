@@ -1,79 +1,79 @@
 ---
-title: What Is a Headless CMS? (And Why Git Based Ones Matter)
-description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git based CMS tools."
+title: 什么是无头的 CMS？(和为什么基于 Git 的问题)
+description: "无头的 CMS 解释了：在传统的无头平台短暂的情况下，如何解开内容交付，以及为什么开发人员喜欢基于 Git 的 CMS 工具。"
 serial: 26
 date: 2026-10-14T15:10:00Z
 draft: false
 keywords:
-  - what is headless cms
-  - headless cms explained
-  - headless cms vs traditional
-  - git based headless cms
-  - headless cms examples
+  - 什么是无头cms
+  - 无头笼已解释
+  - 无头cms vs 传统的
+  - git 基于无头cms
+  - 无头cms示例
 preview: ./
 taxonomies:
   tags:
-    - cms
-    - headless
+    - 厘米
+    - 头像
     - api
     - jamstack
 ---
 
-A **headless CMS** is a content system with no front end of its own: it stores and structures content, then delivers it through an API to any consumer (a website, an app, a kiosk, a newsletter). The "head" (the website) is severed from the "body" (the content store). It is how most modern content stacks are built. It is also where an important distinction gets lost: **not all headless CMSs store content the same way**.
+**无头CMS** 是一个没有前端的内容系统：它储存和结构内容。 然后通过 API 将其发送给任何消费者(一个网站，一个应用，一个亭，一个新闻通讯)。 “head”（网站）与“body”（内容存储）分开。这是大多数现代内容堆栈的构建方式。它也是在一个重要的区别被丢失的地方：**并非所有无头的 CMS 都以相同的方式存储内容**。
 
 ---
 
-### How a Traditional CMS Works
+### 传统CMS是如何工作的
 
-WordPress renders pages itself: content in MySQL, templates in PHP, output assembled per request on the same server. Presentation and content are welded together. That is powerful, but the site's performance, security, and uptime all ride on that runtime.
+WordPress 渲染页面本身：MySQL中的内容，PHP中的模板，每个请求在同一服务器上组合。演示文稿和内容一起焊接。这是强大的，但这个场地的性能、安全和在那个跑步上的时刻都能乘坐。
 
-### How a Headless CMS Works
+### 无头CMS如何工作
 
-A headless platform decouples the two:
+一个无头的平台将两者分解：
 
-1. Editors write in the platform's admin interface.
-2. Content sits as structured data in the provider's database.
-3. Frontends fetch it via API (REST or GraphQL) at build time or runtime.
-4. The same content can feed a website, a mobile app, and an IoT screen simultaneously.
+1. 编辑器在平台管理界面中写入。
+2. 内容作为结构化数据在提供者的数据库中。
+3. 前端在构建时间或运行时间通过 API (REST 或 GraphQL) 获取。
+4. 相同的内容可以同时提供网站、移动应用程序和IOT屏幕。
 
-This is the model behind Contentful, Sanity, Strapi, and Prismic. For multi-channel, application-heavy organizations, it is the right model.
+这是精英、仁慈、Strapi和Prismic背后的模式。对于多渠道、应用程序繁重的组织，它是正确的模式。
 
-### The Trade-offs Developers Discovered
+### 发现的权衡开发者
 
-Headless solved WordPress's problems but introduced new ones:
+无头解决的 WordPress 问题，但引入了新问题：
 
-- **Content lock-in**: your articles live in a proprietary database behind an API. Leaving means exporting and reformatting everything.
-- **Per-seat pricing**: costs scale with editors, not value.
-- **A second infrastructure**: the CMS becomes a SaaS dependency between your writers and your site, with outages, plan limits, and schema migrations of its own.
-- **Build-time fetching complexity**: the frontend must model content as API data rather than files.
+- **Content lock-in** ：您的文章生活在一个 API 背后的专有数据库中。离开意味着导出和重新格式化一切。
+- **允许价格**：成本比额表与编辑器，而不是价值。
+- **第二个基础结构**：CMS变成你的作者和你的网站之间的 SaaS 依赖关系，并且有自己的外壳、计划限制和图表迁移。
+- **生成时间获取复杂性**: 前端必须将内容格式化为 API 数据而不是文件。
 
-### The Git based Headless CMS
+### 基于 Git 的无头CMS
 
-A Git based CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: as Markdown files with YAML front matter in your own repository.
+基于 Git 的 CMS 提供时没有头部：任何静态站点生成器都可以消耗其输出。但它存储开发者想要它的内容：作为Markdown文件的 YAML 前缀在您自己的仓库中。
 
-- No lock-in: the content is a folder of plain-text files you own.
-- No per-seat SaaS bill: self-hosted and open source options like [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/), and [Decap CMS](/comparison/netlifycms/).
-- The publishing pipeline is the same everywhere: commit → CI/CD → CDN.
-- Version history, review, and rollback, because it is Git.
+- 没有锁：内容是你拥有的纯文本文件的文件夹。
+- 无每个位置的 SaaS 账单：自托管和开源选项，如 [LightCMS](/getting-started/), [CMS](/comparison/pagescms/), 和 [Decap CMS](/comparison/netlifycms/)。
+- 出版管道在任何地方都是一样的：提交 → CI/CD → CDN。
+- 版本历史，评论和回退，因为它是Git。
 
-For the full field, see [Git based CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).
+对于完整字段，请参阅[Git 基于 CMS 平台比较](/comparison/top-git-cms/)；关于架构，请参阅它所源的 [什么是Jamstack](/blog/what-is-jamstack/)。
 
 ---
 
-### Frequently Asked Questions
+### 常见问题
 
-#### Is a headless CMS better than WordPress?
+#### 是否比WordPress更好的无头CMS？
 
-For new projects, usually. Decoupled delivery is faster, safer, and more flexible. The remaining question is where the content itself is stored.
+就新项目而言，通常是这样。分解交货更快、更安全和更灵活。剩下的问题是内容本身存储在哪里。
 
-#### What is the best headless CMS for developers?
+#### 对于开发者来说，什么是最好的无头的 CMS ？
 
-Depends on the trade-off you want: hosted API platforms (Contentful, Sanity) for multi-channel SaaS; Git based CMSs (LightCMS, Pages CMS, TinaCMS) for ownership and zero lock-in.
+取决于您想要的交易：多声道的 API 平台 (内容、 卫生)； 基于 Git 的 CMS (LightCMS，Pages CMS，TinaCMS) 所有权和零锁定。
 
-#### Does a headless CMS need an API?
+#### 无头CMS是否需要一个 API？
 
-A hosted headless CMS serves content via API. A Git based one serves content as static files from your CDN, often the fastest "API" there is, since it's just a cached HTTP request.
+一个无头CMS通过API为内容服务。基于 Git 的 Git 服务于您的 CDN 的静态文件，通常是那里最快的 "API"，因为它只是一个缓存的 HTTP 请求。
 
-#### Can I move from a hosted headless CMS to a Git based one?
+#### 我可以从一个无头的 CMS 移动到一个基于 Git 的 Git 吗？
 
-Yes. Export to Markdown, commit to a repository, and point your generator at the files. The migration typically removes a monthly bill.
+是。导出到Markdown，提交到仓库，并将生成器指向文件。这种移徙通常是取消每月账单。
