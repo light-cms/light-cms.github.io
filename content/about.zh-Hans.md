@@ -1,17 +1,17 @@
 ---
-title: About
-description: 'Content managed with: lightcms.me'
+title: 关于
+description: '内容管理于lightcms.me'
 draft: false
 weight: 0
 keywords:
-  - about lightcms
-  - lightcms blog
-  - git backed cms blog
-  - static site writing
+  - 关于 lightcms
+  - lightcms 博客
+  - git 支持cms 博客
+  - 静态站点写入
 tags:
-  - about
-  - lightcms
-  - opensource
+  - 关于
+  - 闪光
+  - 打开源
   - sveltekit
 isCJKLanguage: false
 headless: false
@@ -20,33 +20,33 @@ date: '2026-11-08T21:20:01.403Z'
 extra:
   comments: false
 ---
-## What we write here
+## 我们在这里写什么
 
-We write about what we learn while building [LightCMS](https://lightcms.me/), and about the problems it aims to solve.
+我们写了我们在Building [LightCMS](https://lightcms.me/)时学到的东西，以及我们想要解决的问题。
 
-New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exists](/blog/why-this).
+新建在这里？开始于 [LightCMS 是什么](/blog/what-is-lightcms/) 或 [为什么它存在](/blog/why-this)。
 
 ---
 
-## Who we are
+## 我们是谁的
 
-We are building [LightCMS](https://lightcms.me/). We want writing to feel straightforward and publishing to feel simple.
+我们正在建设 [LightCMS](https://lightcms.me/)。我们想要写信，直截了当并发表文章以感到简单。
 
-Static site generators can produce fast, lightweight websites, but they often ask writers to work like developers. With LightCMS, we want more people to publish on the web with static sites, without needing to learn a developer workflow first.
+静态网站发电机可以快速生成轻量级网站，但是他们常常要求作家像开发者一样工作。通过 LightCMS，我们想要更多的人在网站上发布静态站点，而不需要先学习开发者的工作流。
 
-## Where to find us
+## 找到我们的位置
 
-- **Website:** [lightcms.me](https://www.lightcms.me/)
-- **Main source code:** [github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
+- **网站：** [lightcms.me](https://www.lightcms.me/)
+- **主要源代码:** [github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
 - **Starter templates:** [github.com/light-cms](https://github.com/light-cms/)
-- **Newsletter tool:** [Newsy](https://github.com/light-cms/newsy)
-- **X (Twitter):** [@LightCms5](https://x.com/LightCms5)
+- **通讯工具：** [Newsy](https://github.com/light-cms/newsy)
+- **X (Twitter)：** [@LightCms5](https://x.com/LightCms5)
 - **Bluesky:** [@lightcms.bsky.social](https://bsky.app/profile/lightcms.bsky.social)
 - **Discord:** [https://discord.gg/HwNd6SufRT](https://discord.gg/HwNd6SufRT)
-- **Message us:** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
+- **消息我们：** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
 
-We manage this site's content with [LightCMS](https://lightcms.me/).
+我们使用 [LightCMS](https://lightcms.me/)管理这个网站的内容。
 
-## Get in touch
+## 取得联系
 
-Have a correction, a comparison we have not written, or a workflow you would like covered? Open an issue or send a pull request. We welcome contributions.
+是否有更正、 我们没有写过的比较、 或您想要覆盖的工作流？打开一个问题或发送拉取请求。我们欢迎作出贡献。
