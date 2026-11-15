@@ -1,110 +1,110 @@
 ---
-title: "LightCMS vs Contentful: Enterprise SaaS vs a Repository You Own"
-description: "Contentful is an enterprise SaaS headless CMS; LightCMS is a self-hosted editor that commits Markdown to Git. Compare cost, lock-in, and writing experience."
+title: "LightCMS vs Contentful: Enterprise SaaS vs 一个你自己的仓库"
+description: "内容丰富的是一个 SaaS 无头的 CMS 企业；LightCMS 是一个自我托管的编辑器，它将Markdown to Git 比较成本、锁定和写入体验。"
 serial: 49
 date: 2026-10-16T11:50:00Z
 draft: false
 keywords:
-  - lightcms vs contentful
-  - contentful alternatives
-  - contentful pricing alternative
-  - headless cms for blogs
-  - cms without vendor lock in
+  - 闪光灯与精彩的
+  - 内容丰富的备选方案
+  - 含蓄的定价选项
+  - 博客的无头cms
+  - cms without Provider lock in
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - contentful
-    - cms
-    - comparison
-    - headless
+    - 闪光
+    - 精彩的
+    - 厘米
+    - 比较
+    - 头像
 ---
 
-[Contentful](https://www.contentful.com) is the enterprise default in the headless CMS category: a mature SaaS platform with spaces and environments, roles and approvals, a content model editor, and CDN-delivered content APIs. Large teams ship real products on it.
+[Contentful](https://www.contentful.com是企业在无头的 CMS 类别中的默认值：一个拥有空间和环境的成熟的 SaaS 平台。 角色和批准、 内容模型编辑器和 CDN 交付的内容 API。大型团队将实际产品运到该船上。
 
-It's also a paid platform with a substantial bill, built for organizations whose content powers applications rather than articles. That gap is where this comparison lives.
-
----
-
-## Two Business Models
-
-**Contentful** is a vendor relationship. Content lives in their cloud, is edited in their web app, and is served through their APIs under a subscription that scales with usage, seats, and environments. You get SLAs, support, and enterprise features, along with a monthly cost that grows with your success.
-
-**LightCMS** is software you run. Content lives in your repository, is edited in a self-hosted app, and is served as static files by your host. You get portability and a cost line near zero, with no vendor to negotiate with when priorities change.
-
-|                         | LightCMS                       | Contentful                     |
-| :---------------------- | :----------------------------- | :----------------------------- |
-| **Model**               | Self-hosted Git workspace      | SaaS headless platform         |
-| **Storage**             | Markdown in your repository    | Contentful cloud               |
-| **Delivery**            | Static build → CDN             | Content API at request time    |
-| **Content model**       | Front matter fields            | Custom content types in UI     |
-| **Pricing**             | Free (Apache 2.0)              | Subscription, usage/seat based |
-| **Enterprise features** | Git review, branch protection  | Roles, approvals, workflows    |
-| **Lock-in**             | None                           | Export required to leave       |
-| **Extras**              | AI copilot, voice, newsletters | Ecosystem, SDKs, app framework |
+它也是一个带有大量账单的付费平台，是为其内容权限应用而不是文章的组织构建的。这一差距就是这种比较的地方。
 
 ---
 
-## Where Contentful Wins
+## 两个业务模式
 
-- **Governance.** Granular roles, approvals, localization workflows, and environments are enterprise requirements that a repository cannot replicate on its own.
-- **Multi-surface delivery.** One content set serving websites, apps, and kiosks through a documented API.
-- **Non-technical modeling.** Content types are defined in a UI by anyone, with validation and references.
-- **Operations handled.** Uptime, scaling, and security are their problem, and that is a real benefit with a real price.
-- **Localization** as a first-class feature across locales and fields.
+**Contentful** 是一个供应商关系。内容生活在他们的云端，是在他们的 web 应用程序中编辑的， 通过他们的 API 提供服务，订阅时使用、 座位和环境。您可以获得SLA、支持和企业功能，以及随着您的成功而增加的每月成本。
 
-## Where LightCMS Wins
+**LightCMS** 是您运行的软件。内容生活在您的仓库中，在一个自托管的应用程序中被编辑，由您的主机作为静态文件。您可以携带，成本线靠近零，在优先次序发生变化时没有供应商可以谈判。
 
-- **Price.** No seats, no plan tiers, no usage cliff when a post goes viral.
-- **Ownership.** Content in your own repository is not a tenant relationship; see [content as code](/blog/content-as-code/).
-- **Static output.** No API round trip in the page load; the [performance and SEO case](/blog/static-vs-dynamic/) is structural.
-- **The writing experience.** A full editor with [AI assistance](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) rather than a field-by-field content form.
-- **No migration cliff.** You are never four years into a content model that costs a fortune to export.
-
----
-
-## The Honest Caveat
-
-If you are choosing for a company with compliance requirements, multiple brands, and a content operations team, Contentful's cost buys things LightCMS deliberately does not attempt: workflow governance, localization at scale, and contractual support. Recommending a free self-hosted editor in that context would be bad advice.
-
-The comparison is sharp when the project is a **publication**: a blog, docs site, changelog, or marketing pages. That is where enterprise pricing buys nothing you need, and where a document editor beats a content-modeling console.
+|                   | LightCMS                          | 有内容                     |
+| :---------------- | :-------------------------------- | :---------------------- |
+| **Model**         | 自我托管的 Git 工作区                     | SaaS 无头平台               |
+| **存储**            | 在你的资源库中Markdown                   | 有内容的云                   |
+| **送货**            | 静态build-> CDN                     | 请求时间的内容 API             |
+| **内容模型**          | 前台事项字段                            | 用户界面中的自定义内容类型           |
+| **定价**            | Free (Apache 2.0)                 | 基于订阅、使用/座位的             |
+| **Enterprise 特性** | Git 审核、分支保护                       | 角色、批准、 工作流              |
+| **锁定**            | 无                                 | 导出离开所需文件                |
+| **Extras**        | AI copilot, voice and newsletters | Ecosystem, SDKs, 应用程序框架 |
 
 ---
 
-## Migration
+## 有内容的胜利次数
 
-Contentful exports entries as JSON via its API or CLI. Converting entries to Markdown files is mechanical for article-shaped content and harder for component trees nested several levels deep. Plan for a script plus a cleanup pass; the direction is well-trodden because many teams have moved editorial content _off_ SaaS platforms for cost reasons.
+- **治理.** 微型角色、核准、本地化工作流程和环境是一个仓库不能独自复制的企业要求。
+- **多表面送货。** 一个内容通过记录的 API 设置了服务网站、应用和报亭。
+- **非技术模型。** 内容类型由任何人在一个用户界面中定义，并具有验证和引用。
+- **操作已经处理。** 升级、升级和安全是他们的问题，这是一个真正的好处，有实际的价格。
+- **本地化** 作为横跨本地化和字段的一流功能。
+
+## LightCMS赢得的地方
+
+- **价格。** 没有座位，没有计划层级，在帖子病毒时没有使用悬挂。
+- **所有者。** 你自己的仓库中的内容不是租户关系；请参阅[内容作为代码](/blog/content-as-code/)。
+- **静态输出。** 页面加载中没有 API 往返旅行；[性能和 SEO 案例](/blog/static-vs-dynamic/) 是结构性的。
+- \*\*写入体验。 \* 拥有[AI assistance](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), 和 [通讯发送](/blog/newsletter-email-automation/)的完整编辑器，而不是一个按字段填写的内容表格。
+- **没有迁移片段。** 你从来没有四年进入一个耗费了财富出口的内容模型。
 
 ---
 
-## Which Should You Choose?
+## 诚实的告诫者
 
-- **Choose Contentful** for multi-channel product content with governance, localization, and budget behind it.
-- **Choose LightCMS** for a static publication where cost, ownership, and writing quality decide the outcome.
+如果您选择符合要求的公司，多个品牌和一个内容操作团队， 内容成本购买LightCMS有意购买的物品并不试图：工作流程管理、规模本地化和合同支持。在这种情况下推荐一位免费的自助编辑将是不好的建议。
+
+当项目是一个 **出版物**：博客、文档网站、更新日志或营销页面时，比较会非常尖锐。这是企业定价无需购买的地方，文档编辑器对内容建模控制台。
 
 ---
 
-## Frequently Asked Questions
+## 移 民
 
-### Is Contentful free?
+通过 API 或 CLI 导出内容为 JSON 条目。将条目转换为 Markdown 文件对于文章形状的内容来说是机械式的，对于组件树嵌套的几个层次更加困难。脚本计划加上清理通道；方向很宽松，因为许多团队因成本原因已将编辑内&#x5BB9;_&#x5173;&#x95ED;_&#x53;aaS平台移动。
 
-There is a free tier with limits; production use is a paid plan. LightCMS has no license fee and no per-seat cost.
+---
 
-### Does LightCMS have an API?
+## 您应该选择哪个？
 
-Not as a content API: the output is static HTML from your build. LightCMS's interface is the writing surface plus Git itself.
+- **选择内容** 用于包含治理、本地化和预算的多渠道产品内容。
+- **选择 LightCMS** 用于静态发布，其中成本、所有权和写入质量决定结果。
 
-### Can Contentful serve a static site?
+---
 
-Yes, by fetching at build time or client-side. Either way the runtime dependency on their API remains.
+## 常见问题
 
-### Which is better for a small blog?
+### 内容免费吗？
 
-A free, self-hosted, Git based editor. You get a better writing experience with no bill and no lock-in.
+有一种有限制的免费等级；生产使用是一种付费计划。 LightCMS没有许可证费，也没有每个座位的费用。
 
-### Can I move off Contentful later?
+### LightCMS有一个 API？
 
-Yes, with an export and a conversion script. The cost of leaving is why platforms charge less at the start and more later.
+不作为内容 API: 输出来自您的构建的静态HTML。 LightCMS的接口是书写表面加上Git本身。
+
+### 可以为静态站点提供内容丰富的服务吗？
+
+是的，通过在构建时间或客户端获取。任何一种方式都保持对他们的 API 的依赖。
+
+### 哪个样子对一个小博客更好？
+
+一个基于Git的免费自动编辑器。您可以在没有账单和无锁的情况下获得更好的写入体验。
+
+### 我可以稍后移除内容丰富？
+
+是的，带有导出和转换脚本。离开的费用正是平台在开始时和晚些时候收取更多费用的原因。
 
 ---
 
