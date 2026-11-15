@@ -1,81 +1,81 @@
 ---
-title: "Hugo vs Jekyll: Which Static Site Generator Should You Use?"
-description: Hugo and Jekyll compared on build speed, templating, themes, plugins, and GitHub Pages integration, with a recommendation for new projects in 2026.
+title: "Hugo vs Jekyll: Quel générateur de site statique devriez-vous utiliser?"
+description: Hugo et Jekyll ont comparé la vitesse de construction, les modèles, les thèmes, les plugins et l'intégration des pages GitHub, avec une recommandation pour de nouveaux projets en 2026.
 serial: 21
 date: 2026-10-14T14:20:00Z
 draft: false
 keywords:
   - hugo vs jekyll
   - jekyll vs hugo
-  - hugo or jekyll for blog
-  - static site generator comparison
-  - fastest ssg
+  - hugo ou jekyll pour le blog
+  - Comparaison du générateur de site statique
+  - ssg le plus rapide
 preview: /og-image.webp
 taxonomies:
   tags:
     - hugo
-    - jekyll
+    - Joyau
     - ssg
-    - static-sites
+    - sites statiques
 ---
 
-Hugo vs Jekyll is the oldest matchup in the static site world: Jekyll started the modern SSG era in 2008, and Hugo showed up in 2013 promising to do everything faster.
-A decade later the question is settled for new projects, but Jekyll still has a loyal (and reasonable) camp.
-
----
-
-## Build Speed
-
-This is the headline difference, and it is not close. **Hugo builds in milliseconds to seconds**, even for sites with thousands of pages; it ships as a single Go binary. **Jekyll is comparatively slow**, Ruby-powered, and noticeably sluggish on large sites without aggressive caching.
-
-For a small blog, both are fine. For documentation or a large publication, Hugo's speed compounds every time you publish.
-
-## Templating and Themes
-
-- **Hugo** uses Go template syntax with shortcodes, partials, and a powerful (if quirky) configuration system. The theme marketplace is the largest in the category.
-- **Jekyll** uses Liquid templates, easier for many people to learn, with a mature theme ecosystem and GitHub Pages heritage.
-
-Developers coming from JavaScript often find neither templating language thrilling; both are more pleasant when paired with a good starter theme.
-
-## Plugins and Ecosystem
-
-Jekyll historically leaned on its Ruby gem ecosystem for functionality. Hugo deliberately has **no plugin system**; features either exist in core or live as shortcodes and build steps. In practice both cover everything a content site needs, and the static CMS ecosystem does not care which you pick.
-
-## GitHub Pages Native Support
-
-Jekyll runs natively on GitHub Pages: push Markdown, and it builds with zero configuration. Hugo works there too via GitHub Actions, which gives you the full Hugo binary and any theme.
-
-## Content and CMS Compatibility
-
-Both generators consume the standard content currency of the modern web: **Markdown files with YAML front matter**. Any Git based CMS ([LightCMS](/getting-started/), Decap CMS, Pages CMS) commits equally well to either. Neither has an advantage here.
-
-For the broader picture, see [best static site generators](/blog/best-static-site-generators/) and the detailed [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) matchup.
+Hugo vs Jekyll est la rencontre la plus ancienne dans le monde du site statique : Jekyll a commencé l'ère moderne de la SSG en 2008, et Hugo se présenta en 2013 en promettant de tout faire plus rapidement.
+Une décennie plus tard, la question est réglée pour de nouveaux projets, mais Jekyll a toujours un camp loyal (et raisonnable).
 
 ---
 
-## Which Should You Choose?
+## Vitesse de Construction
 
-- **Choose Hugo** for speed, large sites, and active development. It is the default recommendation for new projects in 2026.
-- **Choose Jekyll** if you already have a Jekyll site that works, you prefer Liquid templates, or you want the classic GitHub Pages zero-config experience.
+Il s'agit de la grande différence, et elle n'est pas proche. **Hugo construit en millisecondes en secondes**, même pour les sites avec des milliers de pages; il est livré en un seul binaire Go. **Jekyll est relativement lent**, alimenté par la rue, et visiblement lente sur les grands sites sans mise en cache agressive.
 
-Either way, pair it with a static host ([Cloudflare Pages vs GitHub Pages](/blog/cloudflare-pages-vs-github-pages/)) and a Git based CMS for editing, and you have the full modern publishing stack.
+Pour un petit blog, les deux sont bien. Pour la documentation ou une grande publication, les compacts de vitesse de Hugo chaque fois que vous publiez.
+
+## Templating et Thèmes
+
+- **Hugo** utilise la syntaxe du modèle Go avec les shortcodes, les partiels, et un système de configuration puissant (si quirky). La place de marché du thème est la plus grande de la catégorie.
+- **Jekyll** utilise des modèles Liquid, plus facile à apprendre pour beaucoup de gens, avec un écosystème de thème mature et l'héritage des Pages GitHub.
+
+Les développeurs venant de JavaScript ne trouvent souvent ni le langage templating thrilling; les deux sont plus agréables lorsqu'ils sont jumelés avec un bon thème de démarrage.
+
+## Plugins et écosystème
+
+Jekyll s'est historiquement appuyé sur son écosystème de gemmes Ruby pour la fonctionnalité. Hugo n'a délibérément **aucun système de plugins**; les fonctionnalités existent dans le coeur ou en live en tant que shortcodes et étapes de construction. Dans la pratique, les deux couvrent tout ce dont un site de contenu a besoin, et l'écosystème CMS statique ne se soucie pas de ce que vous choisirez.
+
+## Support natif des pages GitHub
+
+Jekyll fonctionne nativement sur GitHub Pages: push Markdown, et il se construit avec une configuration zéro. Hugo y travaille également via GitHub Actions, ce qui vous donne le binaire Hugo complet et n'importe quel thème.
+
+## Compatibilité contenu et CMS
+
+Les deux générateurs consomment la monnaie de contenu standard du Web moderne : **les fichiers Markdown avec la première question YAML**. N'importe quel CMS Git basé sur les Git ([LightCMS](/getting-started/), Decap CMS, Pages CMS ) ne communique pas non plus de la même manière. Aucun des deux n'a d'avantage à cet égard.
+
+Pour une image plus large, voir [les meilleurs générateurs de sites statiques](/blog/best-static-site-generators/) et la correspondance détaillée [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/).
 
 ---
 
-## Frequently Asked Questions
+## Que devriez-vous choisir?
 
-### Is Hugo Faster than Jekyll?
+- **Choisissez Hugo** pour la vitesse, les grands sites et le développement actif. C'est la recommandation par défaut pour les nouveaux projets en 2026.
+- **Choisissez Jekyll** si vous avez déjà un site Jekyll qui fonctionne, vous préférez les modèles Liquid, ou vous voulez l'expérience de configuration zéro des pages GitHub.
 
-Significantly. Hugo's Go binary builds large sites in seconds; Jekyll's Ruby toolchain takes proportionally longer.
+Dans les deux cas, associez-la à un hôte statique ([Pages de Cloudflare vs Pages GitHub](/blog/cloudflare-pages-vs-github-pages/)) et un CMS Git pour l'édition, et vous avez toute la pile de publication moderne.
 
-### Should I Migrate Jekyll to Hugo?
+---
 
-Only if build times or theme maintenance bother you. A working Jekyll site is not broken. Both produce identical quality output.
+## Foire aux questions
 
-### Is Jekyll Still Maintained?
+### Hugo est-il plus rapide que Jekyll?
 
-Yes, but development is slower than Hugo's and Astro's. New projects usually start elsewhere.
+De manière significative. Les binaires de Hugo Go construisent de grands sites en quelques secondes; la chaîne de compilation de Jekyll pour Ruby prend proportionnellement plus de temps.
 
-### Do Both Work with a Git based CMS?
+### Devrais-je migrer Jekyll à Hugo ?
 
-Yes. Both read Markdown with YAML front matter from your repository, so any Git based CMS publishes to either.
+Seulement si les temps de construction ou la maintenance du thème vous dérangent. Un site Jekyll fonctionnel n'est pas cassé. Tous deux produisent des résultats de qualité identiques.
+
+### Jekyll est-il toujours maintenu ?
+
+Oui, mais le développement est plus lent que celui d'Hugo et d'Astro. Les nouveaux projets commencent généralement ailleurs.
+
+### Est-ce que les deux fonctionnent avec un CMS basé sur Git ?
+
+« Oui. » Tous deux lisent Markdown avec YAML en front de votre référentiel, donc n'importe quel CMS basé sur Git ne publie à aucun de ces deux éléments.
