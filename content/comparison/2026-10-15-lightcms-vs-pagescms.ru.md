@@ -1,117 +1,117 @@
 ---
-title: "LightCMS vs Pages CMS: Rich Writing vs a Clean Form Over GitHub"
-description: "LightCMS gives writers a full visual editor with AI, dictation, and newsletters. A complete package."
+title: "LightCMS против страниц CMS: богатые написание против чистых форм над GitHub"
+description: "LightCMS предоставляет авторам полный визуальный редактор с помощью AI, дикторов и информационных бюллетеней. Полный пакет."
 serial: 41
 date: 2026-10-15T20:09:55Z
 draft: false
 keywords:
-  - lightcms vs pages cms
-  - pages cms alternatives
-  - pages cms review
-  - github cms comparison
-  - best cms for markdown
+  - lightcms против страниц cms
+  - страницы cms альтернативы
+  - обзор страниц cms
+  - сравнение github cms
+  - лучшие смс для markdown
 preview: /og-image.png
 taxonomies:
   tags:
-    - lightcms
-    - pages-cms
-    - cms
-    - comparison
+    - молнии
+    - страниц-см
+    - смс
+    - сравнение
 ---
 
-[Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well-designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
+[Страницы CMS](/comparison/pagescms) заслужили свою репутации чисто делая одно дело: он помещает хорошо разработанную форму поверх репозитория GitHub, и скрывает Git от человека, использующего его. Для команд, которые хотели "CMS для нашего repo" без работы инфраструктуры, этого было достаточно.
 
-[LightCMS](https://lightcms.me) starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **what the person publishing actually experiences**.
-
----
-
-## Comparison
-
-|                   | LightCMS                                            | Pages CMS                            |
-| :---------------- | :-------------------------------------------------- | :----------------------------------- |
-| **Model**         | Self-hosted writing workspace                       | Git based dashboard                  |
-| **Content store** | Your GitHub repository                              | Your GitHub repository               |
-| **Editing**       | Full TipTap WYSIWYG document editor                 | Form-based fields per content type   |
-| **Front matter**  | Managed as a validated form                         | Defined in a YAML config in the repo |
-| **Media**         | Drag-and-drop into the document                     | Media library with field assignment  |
-| **AI copilot**    | Built in: outline, rephrase, expand, grammar        | Not bundled                          |
-| **Voice-to-text** | Built in (Whisper)                                  | Not bundled                          |
-| **Newsletters**   | Built in via Newsy: GitHub-backed, no email service | Not bundled                          |
-| **Hosting**       | Self-host on any Node.js host                       | Hosted app or self-hosted            |
-| **Licensing**     | Apache 2.0                                          | Open source                          |
+[LightCMS](https://lightcms.me) начинается с той же цели и проталкивается к самой записи. Сравнение меньше по поводу хранилища (как фиксации файлов), так и по поводу **того, что пользователь публикует на самом деле**.
 
 ---
 
-## Where Pages CMS Wins
+## Сравнение
 
-- **Speed to first edit.** Connect the repository, and the generated forms are usable almost immediately, with no content modeling conversation required.
-- **Structured records.** If your content is directories, events, or product entries, a field-per-value form is the correct interface, and prose editing is irrelevant.
-- **Familiarity.** A CMS-shaped dashboard needs no explanation for anyone who has used one before.
-- **Minimal surface area.** Fewer moving parts means less to configure and less to maintain.
-
-## Where LightCMS Wins
-
-- **The article is a document.** Headings, blockquotes, tables, task lists, syntax-highlighted code, KaTeX math, and drag-and-drop media, edited in place and serialized to clean Markdown. A form with a small text area cannot match this for long-form writing.
-- **Metadata without YAML.** Front matter fields are configured in the app rather than declared in a config file, so adding a field never means editing configuration and redeploying.
-- **The extras are the point.** Drafting assistance, dictation, and a GitHub-backed newsletter turn a content tool into a publishing pipeline, with no third-party subscriptions bolted on.
-- **Self-hosted end to end.** Apache 2.0, your infrastructure, your API key, your data.
-
----
-
-## The Telling Difference
-
-Open both tools and write the same 1,200-word article.
-
-In Pages CMS, you are completing a structured entry: paste or type Markdown into the body field, fill the metadata fields above and below it, save. It works, and for a field editor, it is a good one.
-
-In LightCMS, you write. You pick a heading level from a menu, drag in a screenshot, and insert a table. You can dictate a paragraph when tired or ask the copilot to tighten the intro. All the while, front matter stays valid because it is a form rather than a fragile text file.
-
-The difference compounds. Publishing frequency is a function of how much friction each post costs, and writers respond to that friction more than to any other variable in the stack.
+|                        | LightCMS                                                     | Страницы CMS                                   |
+| :--------------------- | :----------------------------------------------------------- | :--------------------------------------------- |
+| **Модель**             | Собственный проект для записи                                | Панель на основе Git                           |
+| **Контент-магазин**    | Your GitHub repository                                       | Your GitHub repository                         |
+| **Редактирование**     | Full TipTap WYSIWYG редактор документов                      | Формальные поля для каждого типа содержимого   |
+| **Математика передня** | Управляется как проверенная форма                            | Определяется в конфигурации YAML в репозитории |
+| **Медиа**              | Перетащите в документ                                        | Медиабиблиотека с назначением полей            |
+| **Копилот AI**         | Встроенный в: контур, перефразу, расширение, грамматика      | Не в комплекте                                 |
+| **Голосование**        | Встроенный в (Шепошёл)                                       | Не в комплекте                                 |
+| **Рассылка новостей**  | Встроенный через Newsy: GitHub-backed, нет почтового сервиса | Не в комплекте                                 |
+| **Хостинг**            | Само-хост на любом узле Node.js                              | Размещенное приложение или самохостинг         |
+| **Лицензирование**     | Apache 2.0                                                   | Открытый код                                   |
 
 ---
 
-## When Pages CMS Is the Right Call
+## Где страницы побеждает CMS
 
-- Your content is **field-shaped records** rather than prose.
-- You want the smallest possible tool with no additional services running.
-- Your team already works comfortably with Markdown and only needs a GUI for file access.
+- **Скорость первого редактирования.** Подключите репозиторий, и создаваемые формы будут использоваться почти сразу, без необходимости моделирования контента.
+- **Структурированные записи.** Если ваш контент является каталогом, событиями или записями продукта, то форма значения для каждого продукта является правильным интерфейсом, и прозорное редактирование не имеет значения.
+- **Знание.** Панель инструментов в форме CMS не нуждается в объяснении для тех, кто раньше использовал её.
+- **Минимальная поверхность.** Меньше подвижных частей означает меньше для настройки и меньше для поддержки.
 
-## When [LightCMS](https://lightcms.me) Is the Right Call
+## Где LightCMS побеждает
 
-- The core output is **articles, docs, or newsletters**.
-- Contributors are writers rather than developers.
-- You want drafting, transcription, and distribution inside one self-hosted tool.
-
----
-
-## Migration
-
-Both write Markdown with YAML front matter to GitHub, so moving between them is a configuration change rather than a data migration: connect the repository, map the fields, and your archive comes with you. The existing content in Pages CMS's YAML config becomes [LightCMS's](https://lightcms.me) in app field definitions, typically an afternoon's work.
+- **Статья — это документ.** Заголовки, блокаты, таблицы, списки, подсвеченные синтаксисом коды, KaTeX math, и drag-and-drop медиа, отредактированные на месте и сериализованные для очистки Markdown. Форма с небольшой текстовой областью не может совпадать с длинным написанием.
+- \*\*Метаданные без YAML. \* Поля фронт-сервера настроены в приложении, а не объявлены в конфигурационном файле, поэтому добавление поля никогда не означает редактирования конфигурации и переустановки.
+- \*\*Дополнительно — это точка. \* Редакционная помощь, диктатура и поддерживаемая GitHub-информационным бюллетенем превращают инструмент контента в издательский трубопровод, при этом никаких сторонних подписок смещено.
+- **Самохостинг заканчивается до конца.** Apache 2.0, инфраструктура, ключ API, ваши данные.
 
 ---
 
-## Frequently Asked Questions
+## Разница в диктовке
 
-### Does [LightCMS](https://lightcms.me) store content outside my repository?
+Откройте оба инструмента и напишите одну и ту же серию из 200-слов.
 
-No. The repository is the source of truth; [LightCMS](https://lightcms.me) commits like any other contributor.
+В Pages CMS, вы заполняете структурированную запись: вставьте или введите Markdown в поле тела, заполните поля метаданных выше и под ним, сохранить. Она работает, и для редактора полей это хорошо.
 
-### Is Pages CMS free?
+В LightCMS вы пиште. Вы выбираете уровень заголовка из меню, перетащите скриншот и вставьте таблицу. Вы можете диктовать параграф при усталости или попросить копилота, чтобы затянуть ввод. Все время, передние вопросы остаются действительными, поскольку это форма, а не хрупкий текстовый файл.
 
-It has an open source core with hosted options. Confirm current licensing and pricing against its documentation before deciding.
-
-### Can I self-host both?
-
-Yes. LightCMS runs on any Node.js host, and Pages CMS supports self-hosted deployment.
-
-### Which is better for a non-technical writer?
-
-LightCMS, because the primary interface is a document rather than a schema-shaped form.
-
-### Do either affect my site's performance?
-
-No. Both produce static files that your SSG builds; performance is decided by your generator, theme, and host.
+Соединения разницы. Частота публикации зависит от того, сколько трат на каждый пост на трение, и писатели отвечают на это трение больше, чем на любую другую переменную стека.
 
 ---
 
-Related: [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic), and [top Git based CMS platforms](/comparison/top-git-cms).
+## Когда CMS является правой Звонок
+
+- Ваш контент - **поля-формы** вместо профиля.
+- Вы хотите, чтобы был максимально возможный инструмент без работы дополнительных сервисов.
+- Ваша команда уже удобно работает с Markdown и требует только графического интерфейса для доступа к файлу.
+
+## Когда [LightCMS](https://lightcms.me) Правый звонок
+
+- Основной вывод - **статьи, документы или информационные бюллетени**.
+- Авторы являются не разработчиками, а авторами.
+- Вы хотите черновик, транскрипцию и распространение внутри одного инструмента для самостоятельного хостинга.
+
+---
+
+## Миграция
+
+Запись Markdown в GitHub с помощью переднего дела YAML, так что перемещение между ними - это изменение конфигурации, а не миграция данных: соедините репозиторий, сопоставьте поля и ваш архив с вами. Существующее содержимое в конфигурации YAML страниц CMS становится [LightCMS's](https://lightcms.me) в определениях приложений, как правило, в работе дня.
+
+---
+
+## Часто задаваемые вопросы
+
+### Хранит ли содержимое [LightCMS](https://lightcms.me) за пределами моего репозитория?
+
+Нет. Репозиторий является источником истины; [LightCMS](https://lightcms.me) совершает как и любой другой участник репозитория.
+
+### CMS бесплатно?
+
+У него есть ядро с открытым исходным кодом с размещенными опциями. Подтвердите текущее лицензирование и цену с документацией до принятия решения.
+
+### Могу ли я самостоятельно владеть и самим собой?
+
+Да. LightCMS работает на любом хост-узле Node.js, а страницы CMS поддерживают развертывание самостоятельно.
+
+### Что лучше для нетехнического писателя?
+
+LightCMS, так как основной интерфейс - это скорее документ, чем форма схемы.
+
+### Влияют ли они на производительность моего сайта?
+
+Нет. Оба файла производят статические файлы, которые ваши сборки SSG; производительность определяется генератором, темой и хостингом.
+
+---
+
+Относится к [LightCMS против Decap CMS](/comparison/lightcms-vs-decap-cms), [LightCMS против Keystatic](/comparison/lightcms-vs-keystatic), и [лучшие платформы на Git] (/comparison/top-git-cms).
