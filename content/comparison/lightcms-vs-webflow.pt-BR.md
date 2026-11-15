@@ -1,108 +1,108 @@
 ---
-title: "LightCMS vs Webflow: Visual Building vs Markdown in Git"
+title: "LightCMS vs Webflow: Construção Visual vs Markdown no Git"
 description: >-
-  Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based editor for developer-owned sites. Where each approach wins for content teams.
+  Webflow é um construtor de site visual com uma CMS hospedada; LightCMS é um editor baseado em Git para sites de desenvolvedores. Onde cada abordagem ganha para as equipes de conteúdo.
 serial: 57
 date: '2026-10-16T13:10:00.000Z'
 draft: false
 keywords:
   - 'lightcms vs webflow'
   - 'webflow'
-  - 'webflow limitations'
-  - 'webflow vs static site generator'
-  - 'webflow pricing alternatives'
+  - 'limitações de webflow'
+  - 'webflow vs gerador de site estático'
+  - 'preços via webflow alternativas'
 preview: /og-image.png
 # taxonomies: []
 slug: lightcms-vs-webflow
 ---
 
-[Webflow](https://webflow.com) is built for a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that can be a strong fit.
+[Webflow](https://webflow.com) foi construído para uma promessa específica: projete um site visualmente, hospede-o e deixe uma equipe editar o conteúdo sem tocar no código. Para equipas de marketing sem engenheiros, isso pode ser uma boa opção.
 
-[LightCMS](https://lightcms.me) starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
-
----
-
-## Different jobs
-
-**Webflow** is a design tool with a CMS attached. It gives you a visual canvas, generates CSS from your interactions, stores content in hosted collections, and publishes on Webflow's infrastructure.
-
-**LightCMS** assumes the frontend already exists in a repository and is built by your pipeline. It gives writers a visual editor for publishing Markdown without asking them to work in code.
-
-|                     | LightCMS                      | Webflow                             |
-| :------------------ | :---------------------------- | :---------------------------------- |
-| **Design**          | Your code, your templates     | Visual canvas, exported CSS         |
-| **Content storage** | Markdown in your repository   | Webflow's hosted CMS                |
-| **Output**          | Static files on your host     | Static files on Webflow             |
-| **Editing**         | Document editor → Markdown    | Form fields bound to collections    |
-| **Version control** | Git history, diffs, PR review | Version history, no Git             |
-| **Lock-in**         | None: files you own           | Design and content inside Webflow   |
-| **Cost**            | Hosting only                  | Site plans by tier and traffic      |
-| **Code ownership**  | Complete                      | Exportable, but designed in Webflow |
+[LightCMS](https://lightcms.me) começa a partir de uma restrição diferente: os desenvolvedores possuem o código e os escritores possuem o conteúdo. Ele se concentra no lado do conteúdo daquele fluxo de trabalho.
 
 ---
 
-## Where Webflow Wins
+## Trabalhos diferentes
 
-- **Visual design freedom without code.** Interactions, breakpoints, and layouts designed directly, a real substitute for front-end work.
-- **One tool for design and content.** No build pipeline, no repository, no CI to understand.
-- **Instant publishing.** Content changes go live immediately, with no build step.
-- **Polished hosting and preview** With a CMS the whole marketing team can learn in an afternoon.
-- **Design-to-content binding:** editors see the field that feeds the component.
+**Webflow** é uma ferramenta de design com um CMS anexado. Ele lhe dá uma tela visual, gera CSS de suas interações, armazena conteúdo em coleções hospedadas e publica na infraestrutura do Webflow.
 
-## Where LightCMS Wins
+**LightCMS** assume que o frontend já existe em um repositório e é construído por seu pipeline. Ele dá aos escritores um editor visual para publicar o Markdown sem pedir que trabalhem no código.
 
-- **No design lock-in.** Templates are code you own, in any framework; Webflow's design lives in Webflow.
-- **Git history for content.** Diffs, blame, revert, and pull request review on every article. See [version control for writers](/blog/lightcms-drafts-and-versioning/).
-- **A writing surface.** Webflow's CMS is field-based (title, slug, rich text field); LightCMS is a full document editor with [AI drafting](/blog/lightcms-ai-copilot/) and [dictation](/blog/lightcms-voice-to-text/).
-- **Cost at scale.** Webflow plans are tiered by features and traffic; a static site on a generous free host costs nearly nothing regardless.
-- **Portability.** Markdown files move to any generator or host tomorrow.
-
----
-
-## The Decision Test
-
-Ask who owns the frontend:
-
-- **Designers and marketers own it, and there is no developer** → Webflow is likely the right call. Do not adopt a build pipeline you will not maintain.
-- **Developers own it, writers fill it** → LightCMS fits: engineers keep the repository and the pipeline, writers get an editor, and neither side works in the other's tool.
-
-A hybrid is common: Webflow for the marketing site, a Git based static blog or docs site where content volume and technical writing make code ownership worthwhile.
+|                               | CMS                                    | Fluxo                                       |
+| :---------------------------- | :------------------------------------- | :------------------------------------------ |
+| **Desenho**                   | Seu código, seus modelos               | Tela visual, CSS exportado                  |
+| **Armazenamento de conteúdo** | Markdown no seu repositório            | CMS hospedado do Webflow.                   |
+| **Saída**                     | Arquivos estáticos em seu host         | Arquivos estáticos no Webflow               |
+| **Editando**                  | Editor de documentos → Markdown        | Campos de formulário vinculados às coleções |
+| **Controle de versão**        | Histórico do Git, diffs, revisão de PR | Histórico de versões, nenhum Git            |
+| **Bloqueado**                 | Nenhum: arquivos que você possui       | Design e conteúdo dentro do Webflow         |
+| **Custo**                     | Somente hospedagem                     | Planos de sites por nível e tráfego         |
+| **Propriedade do código**     | Complete                               | Exportável, mas projetada no fluxo web      |
 
 ---
 
-## Migration
+## Onde Vitórias no Webflow
 
-Webflow exports HTML/CSS for design, and CMS items can be exported to CSV. Moving articles to Markdown is straightforward; moving the _design_ means rebuilding it in templates, the expensive part of any Webflow exit. Content-only moves (design already in code) are quick.
+- **Liberdade de design visual sem código.** Interações, pontos de interrupção e layouts projetados diretamente, um substituto real para o trabalho front-end.
+- **Uma ferramenta para design e conteúdo.** Sem pipeline de compilação, sem repositório, sem CI para entender.
+- **Publicação instantânea.** As mudanças de conteúdo aparecerão ao vivo imediatamente, sem nenhuma etapa de construção.
+- **Hospedagem e visualização polida** Com um CMS, toda a equipe de marketing pode aprender em uma tarde.
+- **Combinação de design-to-conteúdo:** os editores veem o campo que alimenta o componente.
+
+## Onde Vitórias no LightCMS
+
+- **Sem controle de design.** Os modelos são códigos que você possui, em qualquer framework; o design do Webflow vive no Webflow.
+- **Histórico do Git para conteúdo.** Diff , culpa, reverte e faça uma revisão em pull request em cada artigo. Veja [controle de versão para escritores](/blog/lightcms-drafts-and-versioning/).
+- \*\*Uma superfície escrita. \* O CMS do Webflow é baseado no campo (título, slug, rich text field); LightCMS é um editor de documentos completo com [esboço de inteligência](/blog/lightcms-ai-copilot/) e [dictation](/blog/lightcms-voice-to-text/).
+- **Custo em escala.** Os planos de Webflow são fixados por recursos e tráfego; um site estático em um host generoso e gratuito não custa quase nada independentemente disso.
+- **Portabilidade.** Os arquivos Markdown se movem para qualquer gerador ou host amanhã.
 
 ---
 
-## Which Should You Choose?
+## O Teste da Decisão
 
-- **Choose Webflow** When visual design and instant publishing matter more than code ownership.
-- **Choose LightCMS** When the site is code you own and content is what changes daily.
+Pergunte quem é o dono do frontend:
+
+- **Designers e comerciantes possuem isso, e não há nenhum desenvolvedor** → Webflow é provavelmente a chamada correta. Não adote um gasoduto de construção que não irá manter.
+- **Desenvolvedores possuem-no, os escritores preenchem** → LightCMS fits: Os engenheiros mantêm o repositório e a conduta, os escritores obtêm um editor e nenhuma das partes trabalha na ferramenta da outra.
+
+Um híbrido é comum: Webflow para o site de marketing, um blog estático ou site de documentos baseados no Git onde o volume de conteúdo e a escrita técnica fazem com que a propriedade de código valha a pena.
 
 ---
 
-## Frequently Asked Questions
+## Migração
 
-### Is Webflow a CMS?
+Webflow exporta HTML/CSS para design, e itens CMS podem ser exportados para CSV. Mover artigos para Markdown é direto; mover o _desenho_ significa reconstruí-lo em templates, a parte cara de qualquer saída do Webflow. Movimentos somente conteúdo (design já está no código) são rápidos.
 
-Yes. Webflow includes a hosted CMS with collections and fields alongside its design tool.
+---
 
-### Is LightCMS a website builder?
+## Qual você deveria escolher?
 
-1. LightCMS manages content for a site built with a static site generator; design lives in your templates.
+- **Escolha Webflow** Quando o design visual e a publicação instantânea mais do que a propriedade de código.
+- **Escolha LightCMS** Quando o site é o código que você possui e o conteúdo muda diariamente.
 
-### Can I export from Webflow?
+---
 
-Designs export as HTML/CSS and CMS items as CSV, but the visual editor and interactions do not transfer.
+## Perguntas Frequentes
 
-### Which is better for SEO?
+### O Webflow é uma CMS?
 
-Both produce static, fast pages. The difference is content quality and site structure, not the platform.
+Sim. Webflow inclui um CMS hospedado com coleções e campos ao lado de sua ferramenta de design.
 
-### Do I need a developer with LightCMS?
+### O LightCMS é um construtor de sites?
 
-Once, to set up the repository and build. After that, publishing is a browser activity.
+1. LightCMS gerencia o conteúdo de um site construído com um gerador de site estático; o design vive em seus modelos.
 
-More: [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [best static site generators](/blog/best-static-site-generators/), [static site hosting compared](/misc/top-static-site-hosting/).
+### Posso exportar do Webflow?
+
+Designa a exportação como itens HTML/CSS e CMS como CSV, mas o editor visual e as interações não transferem.
+
+### Qual é melhor para SEO?
+
+Ambos produzem páginas estáticas e rápidas. A diferença é a qualidade do conteúdo e estrutura do site, não a plataforma.
+
+### Eu preciso de um desenvolvedor com o LightCMS?
+
+Uma vez, para configurar o repositório e compilar. Depois disso, a publicação é uma atividade de navegador.
+
+Mais: [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [melhores geradores de site estáticos](/blog/best-static-site-generators/), [local estático de hospedagem comparada](/misc/top-static-site-hosting/).
