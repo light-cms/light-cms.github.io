@@ -1,21 +1,21 @@
 ---
-title: 'Content as Code: Treating Writing Like Source Code'
+title: '内容为代码：将写入视为源代码'
 description: >-
-  Content as code means storing writing as plain text in a repository, reviewed and deployed like software, with the workflow benefits and the real limitations.
+  作为代码的内容意味着将纯文本写入存储库，像软件一样经过审核和部署，并带有工作流效益和实际限制。
 date: '2026-11-04T19:22:00Z'
 draft: false
 keywords:
-  - content as code
-  - docs as code
-  - content in git
-  - markdown workflow
-  - version controlled content
+  - 内容为代码
+  - 文档为代码
+  - git 内容
+  - 标记工作流程
+  - 版本控制的内容
 tags:
-  - Content
+  - 内容
   - Frontmatter
-  - Docs
+  - 文档
   - Markdown
-  - Lightcms
+  - 浅厘米
 isCJKLanguage: false
 headless: false
 serial: 47
@@ -23,118 +23,118 @@ preview: /og-image.png
 taxonomies:
   tags:
     - git
-    - workflow
-    - cms
-    - explainers
+    - 工作流
+    - 厘米
+    - 解释
 ---
-**Content as code** is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
+**内容作为代码**是保存开发者存储源的方式的做法：在仓库中纯文本文件， 在合并请求中进行了审查，通过自动检查进行验证，并通过管道部署。
 
-"Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
-
----
-
-## The Three Commitments
-
-Content as code comes down to three choices:
-
-1. **Plain text is the format.** Markdown or AsciiDoc, YAML or TOML front matter, UTF-8 files. Nothing proprietary, nothing that needs the original tool to open.
-2. **The repository is the system of record.** Not a database, not a wiki, not a shared drive. If it is not in Git, it does not exist.
-3. **The pipeline treats content like a build.** Linters check links and style, previews render every pull request, and merging deploys.
-
-Once those hold, most of the benefits follow automatically.
+“文档作为代码”是旧名称。技术文献小组开始工作，它已经传播到博客、更新日志， 营销副本，以及任何曾经生活在wiki或CMS数据库中的其他东西。
 
 ---
 
-### What You Inherit From Software Practice
+## 三项承诺
 
-### Review that means something
+作为代码的内容可到三个选项：
 
-A pull request on a document gives line-level comments on the exact sentence, an explicit approve, and a merge. Editorial review happens in the pull request instead of an email thread with attachments.
+1. **纯文本是格式。** Markdown 或 AsciiDoc, YAML 或 TOML 前缀，UTF-8 文件。没有特有的东西，没有任何东西需要原始工具打开.
+2. **存储库是记录系统。** 不是一个数据库，不是一个wiki，不是一个共享驱动器。如果它不在Git中，它就不存在。
+3. **管道将内容视为构建。** Linters 检查链接和样式，预览每个合并请求和合并部署。
 
-### History that answers questions
-
-`git log` on a file shows every change, author, and timestamp. "When did we change the pricing claim?" is a search, not an investigation.
-
-### Automation
-
-Spelling, link checking, style rules, front matter validation, and preview builds all run on the same CI that builds code. Broken metadata fails the pipeline instead of the live site.
-
-### Parallel work
-
-Two writers on two files merge cleanly. Conflicts are rare by construction, because the unit of content is a file.
-
-### Backup and portability
-
-Every clone is a complete copy. Moving platforms is a `git clone` away from succeeding.
-
-### Where It Gets Hard
-
-The honest list, because this is not free:
-
-- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git based CMS tools fill.
-- **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
-- **Structure is limited.** Files do not join. When content becomes relational, a database earns its complexity.
-- **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
-- **Search and preview need tooling.** A wiki gives you search instantly; a static site needs an index step.
-
-None of these are disqualifying for a publication. All of them are real for other shapes of work.
+一旦持有这些资产，大部分好处就自动跟踪。
 
 ---
 
-## The Practical Stack
+### 您从软件练习中获得了什么
 
-A typical content-as-code setup for a publication looks like this:
+### 审查这意味着某些内容
+
+在文档上的拉取请求会对确切的句子提供行一级的评论、明确的批准和合并。编辑审核发生在拉取请求中，而不是包含附件的电子邮件线程。
+
+### 回答问题的历史
+
+文件中的`git log`显示每个变化、作者和时间戳。“我们何时改变定价要求？”是一种搜寻，而不是调查。
+
+### 自动化
+
+拼写，链接检查，样式规则，前事项验证，以及预览构建在相同的 CI 上的构建代码。损坏的元数据使管道而不是实时站点失败。
+
+### 平行工作
+
+两个文件上的两位作者完全合并。冲突在构造中是罕见的，因为内容的单位是一个文件。
+
+### 备份和可携带性
+
+每个克隆都是完整的副本。移动平台是一个远离成功的“git clone”。
+
+### 它获取硬件的位置
+
+诚实的名单，因为这不是免费的：
+
+- **非技术作者需要一个接口。** 生Git 是一个客户端。当你将仓库配对为隐藏提交的编辑工具时，作为代码的内容实际上能够起作用， 它是基于 Git 的 CMS 工具填充的空白。
+- **丰富的媒体是clumsier。** 图像和文档意味着存储库中的二进制文件：较大的克隆、厌烦的差异、偶尔的LFS文件。
+- **结构有限。** 文件不加入。当内容变成相互关系时，数据库就会获得其复杂性。
+- **合并冲突仍然存在。** 当文件为单独文件时，请在两个人编辑同一长文件时疼痛。
+- **搜索和预览需要工具。** 维基给您即时搜索；静态站点需要索引步骤。
+
+所有这些都没有取消出版资格。所有这些对其他形式的工作都是真实的。
+
+---
+
+## 实用应用
+
+一个典型的发布内容即时代码设置看起来就像这样：
 
 ```text
 content/
-├── posts/
-│   ├── 2026-10-16-shipping-notes.md
-│   └── 2026-10-02-release-1-4.md
-├── pages/
-│   └── about.md
-└── _index.md
+* -- - posts/
+circum. - - 2026-10-16-shipping-notes.md
+edicy--- 2026-10-02-release-1-4.md
+lease---- pages/
+textension: - about.md
+interest - _index.md
 ```
 
-- **Files** carry Markdown and front matter.
-- **CI** validates front matter, checks links, and builds previews per pull request.
-- **A CMS tool** provides the writing surface for anyone who is not comfortable in an editor.
-- **Deploy** publishes the built output on merge.
+- **文件** 带有Markdown and front matter。
+- **CI** 验证前事项，核对链接和构建每个合并请求的预览。
+- **一个 CMS 工具** 为编辑器中不舒服的任何人提供书签。
+- **部署** 在合并时发布内建输出。
 
-The repository stays recognizable to a developer and invisible to a writer. That balance is the whole trick.
+版本库仍然可以被开发者识别，对作家不可见。这种平衡是一种花招。
 
 ---
 
-## Why It Lasts
+## 为什么它会持续下去。
 
-Content as code wins on time. Databases need their schema, their server version, and their vendor. Wikis need their vendor. Proprietary documents need their vendor.
+内容作为代码按时获胜。数据库需要他们的架构、服务器版本和供应商。 Wikis需要他们的供应商。专有文件需要供应商。
 
-A directory of Markdown files needs a text editor, and it will still open in one in twenty years, regardless of what happens to any tool in the chain. For content meant to outlive the platform it was written on, that is risk management rather than nostalgia.
+Markdown 文件目录需要一个文本编辑器，它仍将在 20 年内打开. 不论该链中任何工具会发生什么情况。对于那些旨在超越其写入的平台的内容，这就是风险管理而不是鼻子基。
 
-The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
+相同的前提运行于每个基于 Git 的 CMS: [LightCMS](/blog/what-is-lightcms/) 添加写入表面，且存储库保持永久性。 See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
 
-#### Frequently Asked Questions
+#### 常见问题
 
-## Frequently Asked Questions
+## 常见问题
 
-### Is content as code the same as a Git based CMS?
+### 内容是否与基于 Git 的 CMS 相同？
 
-It is the philosophy; a Git based CMS is one implementation. You can practice content as code with nothing but an editor, and a Git based CMS gives non-developers a way in.
+这是一种哲学；基于《全球养护移栖物种公约》是一种执行。您可以练习内容作为代码，只有一个编辑器，基于 Git 的 CMS 为非开发者提供了一种方式。
 
-### Do writers need to learn Git?
+### 作者需要学习Git？
 
-Not if the tooling is right. Writers should see an editor and a publish button; commits, branches, and reviews happen underneath.
+如果配刀是正确的。作者应该看到编辑器和发布按钮；提交、分支和评论会在下方发生。
 
-### Where does content as code fail?
+### 内容作为代码失败在哪里？
 
-Content with heavy relationships, real-time collaborative editing needs, or very large binary assets. Those workloads belong in a database-backed system.
+内容与重型关系、实时协作编辑需要或非常大的二进制资产。这些工作负荷属于数据库支持的系统。
 
-### How do you handle images?
+### 如何处理图像？
 
-Either committed to the repository or stored in an asset bucket with references in front matter. The second keeps the repository lean.
+要么致力于存储库，要么存储在一个带有前面引用的资源桶中。第二种是保存存储库。
 
-### Can I adopt it incrementally?
+### 我能逐渐采用它吗？
 
-Yes. Start with one content directory and one pipeline. The format does not require a flag day migration.
+是。从一个内容目录和一个管道开始。格式不需要标志日期迁移。
 
 ---
 
