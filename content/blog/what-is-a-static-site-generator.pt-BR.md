@@ -1,125 +1,125 @@
 ---
-title: "What Is a Static Site Generator?"
-description: "A static site generator builds pages ahead of time from templates and content files."
+title: "O que é um Gerador do Site Estático?"
+description: "Um gerador de site estático compila páginas antes do tempo de templates e arquivos de conteúdo."
 serial: 46
 date: 2026-10-16T11:20:00Z
 draft: false
 keywords:
-  - what is a static site generator
-  - static site generator
-  - ssg explained
-  - how static sites work
-  - pre rendered html
+  - o que é um gerador de site estático
+  - gerador de site estático
+  - Explicação ssg
+  - como funcionam os sites estáticos
+  - HTML pré-renderizado
 preview: /og-image.webp
 taxonomies:
   tags:
-    - static-sites
+    - estático-sítios
     - ssg
-    - explainers
-    - web
+    - explicadores
+    - Web
 ---
 
-A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
+Um **gerador estático do site (SSG)** é um programa que recebe conteúdo e modelos e produz um site completo como HTML simples, CSS, e arquivos JavaScript, antes de qualquer pessoa visitar.
 
-Instead of assembling a page per request, the work happens once, at build time. What ships to the reader is the finished artifact.
+Em vez de montar uma página por pedido, o trabalho acontece uma vez, no horário de compilação. O que navios para o leitor é o artefato acabado.
 
 ---
 
-## The Model in One Diagram
+## O Modelo em um Diagrama
 
 ```text
-Content (Markdown + front matter)   ┐
-Templates (HTML / JSX / Go templates)├─> SSG build ─> public/ ─> CDN ─> Browser
-Configuration, data, styles          ┘
+Conteúdo (Markdown + questão frontal) ((
+Templates (HTML / JSX / Go templates)─> SSG build ─> public/ ─> CDN ─> Browser
+Configuração, dados, estilos +
 ```
 
-Run the build, and a `public/` directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
+Executa a compilação e um diretório `public/` aparece contendo todas as páginas do site. Implantar esse diretório em qualquer lugar que possa servir arquivos e o site está ao vivo.
 
 ---
 
-## What the Build Actually Does
+## O que a Build realmente faz
 
-1. **Reads content.** Markdown files with [front matter](/blog/what-is-front-matter/): titles, dates, tags, draft flags.
-2. **Applies templates.** Each content type maps to a layout: post page, listing, tag index, home page.
-3. **Generates every page.** Article pages, paginated lists, tag archives, RSS feeds, and sitemaps, all pre-rendered.
-4. **Copies assets.** Images, fonts, styles, scripts.
-5. **Emits `public/`.** A folder of files with no runtime attached.
+1. **Lê conteúdo.** Arquivos Markdown com [questão frontal](/blog/what-is-front-matter/): títulos, datas, tags, rascunho de bandeiras.
+2. **Aplica templates.** Cada tipo de conteúdo mapeia para um layout: página de postagem, listagem, índice de tags, página inicial.
+3. **Gera cada página.** páginas de artigos, listas paginadas, arquivos de tags, feeds RSS e sites pré-renderizados.
+4. **Copia ativos.** Imagens, fontes, estilos, scripts.
+5. **Emite `public/`.** Uma pasta de arquivos sem tempo de execução anexado.
 
-Some generators do this in milliseconds; some in seconds. None of it happens while a reader is waiting.
-
----
-
-## Why the Difference Matters
-
-A dynamic site (WordPress, Rails, most server rendered frameworks) does work on every request: run code, query a database, assemble HTML, respond. A static site did that work already.
-
-The consequences are structural:
-
-- **Speed.** The nearest CDN edge already has the page. There is no query, no render, no cold start.
-- **Security.** No server-side code executes per request, no database listening on a port, no admin login to brute-force. The attack surface is a folder of files.
-- **Reliability.** Nothing to crash at 3 a.m. The most common failure mode is a bad deploy, which is undone by redeploying the previous one.
-- **Cost.** Bandwidth is cheap; always-on compute is not. Static sites cost a rounding error at almost any traffic level.
-- **Longevity.** Files stay readable. The build tooling may age, but the output does not rot.
-
-There is also an environmental argument worth taking seriously: serving cached files close to the reader uses a fraction of the energy of executing code per view. [Static sites and CO₂](/blog/greener-web-static-sites/) goes into the numbers.
+Alguns geradores fazem isso em milissegundos; alguns em segundos. Nada disso acontece enquanto um leitor está esperando.
 
 ---
 
-## What SSGs Are Good At, and Where They Struggle
+## Por que a diferença é importante
 
-**Excellent for:** blogs, documentation, landing pages, portfolios, and any site where content changes occasionally and reading happens constantly.
+Um site dinâmico (WordPress, Rails, a maioria dos frameworks renderizados pelo servidor) funciona em cada solicitação: executar código, consultar um banco de dados, montar HTML, responder. Um site estático já fez isso funcionar.
 
-**Awkward for:** content that must update on data change. (can be done with partial hydration)
+As consequências são estruturais:
 
-Interactivity is not off-limits. The modern pattern pre-renders everything and attaches small islands of JavaScript where needed (forms, search, dark-mode toggles), the idea behind [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and similar tools.
+- **Velocidade.** A borda CDN mais próxima já tem a página. Não há consulta, não há renderização, não há início frio.
+- **Segurança.** Nenhum código no lado do servidor é executado por solicitação, nenhum banco de dados ouvindo em uma porta, nenhum login de administrador para brute-force. A superfície de ataque é uma pasta de arquivos.
+- **Responsabilidade.** Nada para quebrar às 3 da manhã. O modo de falha mais comum é um deploy ruim, que foi desfeito reimplantando o anterior.
+- **Custo.** Largura de banda é barata; computação sempre ativa não é. Sites estáticos custam um erro de arredondamento em quase qualquer nível de tráfego.
+- **Longe.** Os arquivos permanecem legíveis. A ferramenta de ferramentas de compilação pode envelhecer, mas a saída não apodrece.
 
----
-
-## The Options in Brief
-
-| Generator               | Language / templating      | Signature strength                        |
-| :---------------------- | :------------------------- | :---------------------------------------- |
-| **Hugo**                | Go templates               | Raw build speed, huge theme ecosystem     |
-| **Astro**               | `.astro` components        | Islands architecture, content collections |
-| **Eleventy**            | Nunjucks, Liquid, and more | Zero-JS minimalism, full control          |
-| **Jekyll**              | Liquid                     | GitHub Pages heritage, simplicity         |
-| **Zola**                | Tera                       | Single binary, batteries included         |
-| **SvelteKit / Next.js** | React/Svelte               | Sites that grow into applications         |
-
-The full survey is in [best static site generators](/blog/best-static-site-generators/). All of them consume the same input: Markdown with front matter.
+Há também um argumento ambiental que vale a pena levar a sério: servir arquivos em cache próximos do leitor utiliza uma fracção da energia de execução do código por view. [Sites estáticos e CO2](/blog/greener-web-static-sites/) vai para os números.
 
 ---
 
-## Where the CMS Fits
+## O que os SSIG são bons At, e onde eles lutam
 
-An SSG solves _rendering_; it says nothing about _authoring_. Left alone, publishing means editing files in a code editor and pushing commits: workable for developers, a barrier for everyone else.
+**Excelente para:** blogs, documentação, páginas inicial, portfólios e qualquer site onde alterações de conteúdo ocasionalmente e leitura acontecem constantemente.
 
-A Git backed CMS fills that gap: it writes Markdown and front matter into the repository through a visual editor, and the SSG does what it always did. The generator never changes; the writer's experience does. That is the whole premise behind [LightCMS](/blog/what-is-lightcms/), and the fastest way to see it is to [copy a starter template](/blog/start-with-a-lightcms-template/) with the build already configured.
+**Prêmio:** conteúdo que deve ser atualizado sobre a alteração de dados. (pode ser feito com hidratação parcial)
 
----
-
-## Frequently Asked Questions
-
-### Is an SSG the same as a framework?
-
-No. A framework handles requests at runtime; a generator runs at build time and produces files. Some tools blur the line: SvelteKit and Next.js can do both.
-
-### Do static sites support comments, forms, or search?
-
-Yes, through third-party services or client-side JavaScript: form endpoints, comment providers, and browser-side search indexes are all common.
-
-### How often do I need to rebuild?
-
-Only when content or code changes. A typical blog builds on every publish, a process measured in seconds.
-
-### Is a static site good for SEO?
-
-Very. Fast load, strong Core Web Vitals, clean crawlable HTML, and no duplicate-rendering issues.
-
-### Can a static site handle high traffic?
-
-Yes. Traffic is served from cache, so spikes are cheap. A dynamic site works the other way, where spikes cost money.
+A interatividade não está fora dos limites. O padrão moderno pré-renderiza tudo e anexa as ilhas pequenas de JavaScript onde necessário (formas, pesquisa, modo escuro alterna), a ideia atrás de [Astro](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) e ferramentas similares.
 
 ---
 
-Related: [static vs dynamic sites](/blog/static-vs-dynamic/), [what is the Jamstack?](/blog/what-is-jamstack/), and [where to host a static site](/misc/top-static-site-hosting/).
+## As Opções em Breve
+
+| Gerador                 | Idioma / modelo         | Força da assinatura                                        |
+| :---------------------- | :---------------------- | :--------------------------------------------------------- |
+| **Hugo**                | Ir modelos              | Velocidade de construção bruta, grande ecossistema de tema |
+| **Astro**               | Componentes `.astro`    | Arquitetura em ilhas, coleções de conteúdo                 |
+| **Elevação**            | Nunjucks, Liquid e mais | Minimalismo Zero-JS, controle total                        |
+| **Jekyll**              | Líquido                 | GitHub Pages heritage, simplicity                          |
+| **Zola**                | Tera                    | binário único, baterias incluídas                          |
+| **SvelteKit / Next.js** | React/Svelte            | Sites que crescem em aplicativos                           |
+
+A pesquisa completa está em [melhores geradores de site estáticos](/blog/best-static-site-generators/). Todos eles consomem o mesmo input: Markdown com front matter.
+
+---
+
+## Onde o CMS cabe
+
+Um SSG resolve _renderização_; não diz nada sobre _autor_. Deixado sozinho, publicação significa edição de arquivos em um editor de código e envio de commits: praticável para desenvolvedores, uma barreira para todos os outros.
+
+Um Git backCMS preenche que lacuna: escreve Markdown e front matter no repositório através de um editor visual, e o SSG faz o que sempre fez. O gerador nunca muda; a experiência do escritor muda. Essa é toda a premissa atrás de [LightCMS](/blog/what-is-lightcms/), e o jeito mais rápido de vê-lo é [copiar um modelo inicial](/blog/start-with-a-lightcms-template/) com a compilação já configurada.
+
+---
+
+## Perguntas Frequentes
+
+### Um SSG é o mesmo que um framework?
+
+Não. Um framework lida com solicitações em tempo de execução; um gerador é executado no tempo de compilação e produz arquivos. Algumas ferramentas desfocam a linha: SvelteKit e Next.js podem fazer as duas.
+
+### Os sites estáticos suportam comentários, formulários ou pesquisar?
+
+Sim, através de serviços de terceiros ou de JavaScript do lado do cliente: endpoints, provedores de comentários e índices de pesquisa do lado do navegador são comuns.
+
+### Com que frequência eu preciso reconstruir?
+
+Somente quando conteúdo ou código muda. Um típico blog baseia-se em cada publicação, um processo medido em segundos.
+
+### Um site estático é bom para SEO?
+
+Very. Carregamento rápido, fortes Web Vitais, HTML rastejante e sem problemas de renderização duplicada.
+
+### Um site estático consegue lidar com alto tráfego?
+
+Sim. Tráfego é servido do cache, portanto espinhos são baratos. Um sítio dinâmico funciona do outro modo, onde picos custam dinheiro.
+
+---
+
+Relacionado: [static vs dinâmicos sites](/blog/static-vs-dynamic/), [quanto é a Jamstack?](/blog/what-is-jamstack/), e [onde hospedar um site estático](/misc/top-static-site-hosting/).
