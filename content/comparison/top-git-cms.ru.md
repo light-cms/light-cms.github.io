@@ -1,105 +1,105 @@
 ---
-title: Top Git-Based CMS Platforms Compared
-description: "A comparison of the best Git based CMS options: Decap CMS, TinaCMS, Keystatic, Pages CMS, Sveltia CMS, CloudCannon, and LightCMS, with a decision matrix."
+title: Лучшие платформы CMS на основе Git-Based по сравнению
+description: "Сравнение лучших вариантов CMS: Decap CMS, TinaCMS, Keystatic, Pages CMS, Sveltia CMS, CloudCannon и LightCMS, с матрицей решений."
 serial: 11
 date: 2026-10-14T12:40:00Z
 draft: false
 keywords:
-  - git based cms
+  - git на основе cms
   - best git cms
-  - decap cms alternatives
+  - decap cms альтернативы
   - tinacms vs keystatic
-  - file based cms
+  - cms на основе файла
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
-    - comparison
+    - смс
+    - сравнение
     - git
     - jamstack
 ---
 
-The Git based CMS category has matured quickly. A decade ago the options were "edit Markdown in VS Code"; today there are half a dozen polished platforms that commit clean content files to your repository from a visual editor. This comparison covers the ones developers evaluate, and where LightCMS fits among them.
+Быстро созрела категория на основе Git. Десять лет назад опции были "edit Markdown in VS Code"; сегодня есть полдюжины проверенных платформ, которые фиксируют чистые файлы содержимого в ваше хранилище из визуального редактора. Это сравнение описывает работу разработчиков, и где LightCMS подходит для них.
 
 ---
 
-## Comparison Matrix
+## Матрица сравнения
 
-| CMS                                  | Model                      | Editor               | Best For                                |
-| :----------------------------------- | :------------------------- | :------------------- | :-------------------------------------- |
-| **Decap CMS** (formerly Netlify CMS) | Git based app              | React admin UI       | Classic Netlify/Cloudflare setups       |
-| **TinaCMS**                          | Visual editing on the site | Inline WYSIWYG       | Content edited directly in the page     |
-| **Keystatic**                        | Local-first Git files      | React forms          | Next.js/Astro teams wanting local files |
-| **Pages CMS**                        | Git based dashboard        | Form-based           | Teams wanting a familiar CMS layout     |
-| **Sveltia CMS**                      | Browser-hosted Git editor  | Lightweight admin UI | Quick, free, zero-backend editing       |
-| **CloudCannon**                      | Managed Git CMS            | Visual editing       | Agencies managing client sites          |
-| **LightCMS**                         | Self-hosted Git workspace  | TipTap WYSIWYG       | Writers who want one-click publishing   |
+| CMS                               | Модель                                    | Редактор                        | Лучше для                                                |
+| :-------------------------------- | :---------------------------------------- | :------------------------------ | :------------------------------------------------------- |
+| **Decap CMS** (ранее Netlify CMS) | Приложение на основе Git                  | React admin UI                  | Классическая настройка Netlify/Cloudflare                |
+| **TinaCMS**                       | Визуальное редактирование на сайте        | Inline WYSIWYG                  | Содержание отредактировано непосредственно на странице   |
+| **Кейстатик**                     | Локальные Git файлы                       | Реакционные формы               | Next.js/Astro команды, желающие получить локальные файлы |
+| **Страницы CMS**                  | Панель на основе Git                      | Формат                          | Команды, желающие иметь знакомый CMS макет               |
+| **Sveltia CMS**                   | Редактор Git на базе браузера             | Легкий интерфейс администратора | Чистый, свободный, нулевой backend редактирование        |
+| **CloudCannon**                   | Управляемый Git CMS                       | Визуальное изменение            | Учреждения, управляющие сайтами клиентов                 |
+| **LightCMS**                      | Рабочая область Git собственного хостинга | TipTap WYSIWYG                  | Писатели, которые хотят публиковать в один клик          |
 
 ---
 
-## The Contenders
+## Контенты
 
-### Decap CMS
+### Разрезать CMS
 
-The long-running open source standard (originally Netlify CMS, now maintained under the Decap name). A React admin app you deploy alongside your site, configured with a YAML file describing your collections. Enormous ecosystem, though the editing experience shows its age.
+Давно работающий стандарт с открытым исходным кодом (изначально Netlify CMS, теперь поддерживается под названием Decap). Приложение React admin вы развертываете вместе с вашим сайтом, настроенное с YAML файлом, описывающим ваши коллекции. Огромная экосистема, хотя опыт редактирования показывает свой возраст.
 
 ### TinaCMS
 
-Unique for inline, on-page visual editing: you edit content where it lives rather than in a separate dashboard. Strong Markdown support and a generous free tier for individuals; newer self-hosted workflows are less turnkey.
+Уникальное для встроенного, on-page визуальное редактирование: вы редактируете контент, в котором он живет, а не в отдельной панели управления. Сильная поддержка Markdown и щедрый свободный уровень для индивидуумов; новые рабочие потоки самостоятельно размещаются менее явно.
 
-### Keystatic
+### Ключевая статика
 
-A local-first approach from the Thinkmill team: content is files in your repository, managed through React-based forms that run locally or on the cloud. Excellent schema validation and a natural fit for Next.js and Astro projects.
+Локальный подход команды Thinkmill: контент - это файлы в вашем репозитории, управляемый через React-основанные формы, которые работают локально или в облаке. Отличная схема проверки и естественной пригодности для Next.js и Astro проектов.
 
-### Pages CMS
+### Страницы CMS
 
-A polished, form-based dashboard that connects to your GitHub repository with sensible media handling. Positioning itself as the "CMS anyone on the team can use" without touching Git concepts.
+Отполированная, формальная панель, которая соединяется с репозиторием GitHub с разумной обработкой медиафайлов. Расположение себя как "CMS любой человек на команде может использовать", не коснувшись концепций Git.
 
 ### Sveltia CMS
 
-A lightweight, open source admin UI that runs entirely in the browser and commits via the GitHub API. Free and easy to self-host, though it trades configuration depth for simplicity.
+Легкий и открытый интерфейс администрирования с открытым исходным кодом, который полностью работает в браузере и совершает коммиты через GitHub API. Бесплатно и легко самому узлу, хотя он торгует глубины конфигурации для простоты.
 
-### CloudCannon
+### Облачная Пушка
 
-A managed, commercial Git CMS with strong visual editing and workflow features, popular with agencies. Powerful, but priced as a service rather than self-hosted software.
+Управляющий, коммерческий Git CMS с сильными визуальными редакторами и рабочими процессами, популярный среди агентств. Мощный, но ценен как сервис, а не самохостинг.
 
 ### LightCMS
 
-Self-hosted and Apache 2.0 licensed. LightCMS pairs a TipTap-based WYSIWYG editor (math, code highlighting, tables, task lists, drag-and-drop media) with direct GitHub commits and built in extras the others do not bundle: an AI copilot for drafting, Whisper voice-to-text transcription, and newsletter dispatch via Newsy, running on GitHub instead of a newsletter platform. Your content is plain Markdown in your repository; the instance runs on any Node.js host.
+Самохостинг и Apache 2.0 лицензированы. LightCMS пара WYSIWYG редактор на основе TipTapa (математика, подсветка кода, таблицы, списки задач, перетащите медиа-носитель) с прямыми коммитами GitHub и построены не так как другие не связаны: копилот AI для черновика, Отключенные голосовые сообщения и рассылка новостей через Новости, запущенные на GitHub, а не на платформе рассылки. Ваш контент является простым Markdown в вашем репозитории; экземпляр запускается на любом узле Node.js.
 
 ---
 
-## How to Choose
+## Как выбрать
 
-- Want **inline editing on the live page**? TinaCMS.
-- Want **local-first files with strong schemas**? Keystatic.
-- Want a **familiar dashboard for non-technical editors**? Pages CMS or CloudCannon.
-- Want a **free, minimal browser editor**? Sveltia CMS.
-- Want a **self-hosted workspace with AI assistance and newsletters built in**? LightCMS.
+- Хотите **inline-редактировать на живой странице**? TinaCMS.
+- Хотите получить **локальные первые файлы с прочными схемами**? Ключевая статика.
+- Хотите **знакомый рабочий стол для нетехнических редакторов**? Страницы CMS или CloudCannon.
+- Хотите **бесплатный, минимальный редактор браузера**? Sveltia CMS.
+- Хотите создать \*\*самостоятельную рабочую среду с помощью ИИ и новостными бюллетенями из \*\*? LightCMS.
 
-Whatever you choose, the architectural promise is the same: your content stays as Markdown in your own repository.
+Все, что вы выбрали, архитектурное обещание то же самое: ваш контент остается как Markdown в вашем собственном репозитории.
 
-- [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) explains why the model matters.
-- Individual reviews: [Decap CMS (Netlify CMS)](/comparison/netlifycms/), [Pages CMS](/comparison/pagescms/), and [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/).
-- [Getting started with LightCMS](/getting-started/) covers the full workflow.
-- [Self-hosting LightCMS](/blog/selfhost/) walks through running your own instance.
+- [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) объясняет, почему эта модель важна.
+- Отдельные отзывы: [Decap CMS (Netlify CMS)](/comparison/netlifycms/), [страницы CMS](/comparison/pagescms/) и [GitCMS](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites/).
+- [Начало работы с LightCMS](/getting-started/) охватывает весь рабочий процесс.
+- [Самохостинг LightCMS](/blog/selfhost/) проходит через запуск собственного экземпляра.
 
 ---
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### What is the best free Git based CMS?
+### Какова лучшая бесплатная CMS?
 
-Decap CMS and Sveltia CMS are the best-known free options. LightCMS is free and open source (Apache 2.0) as well, and is self-hosted with AI and newsletter features included.
+Decap CMS и Sveltia CMS являются наиболее известные свободные варианты. LightCMS является бесплатным и с открытым исходным кодом (Apache 2.0), и включает в себя функции информационного бюллетеня.
 
-### Are Git based CMS platforms SEO-friendly?
+### Является ли платформа на основе Git удобной для SEO?
 
-Yes. They publish static, fast-loading pages with full control over semantic HTML and structured data, ideal for search rankings.
+Да. Они публикуют статичные, быстро загружаемые страницы с полным контролем над семантическими HTML и структурированными данными, идеально подходящими для поисковых рейтингов.
 
-### Can I switch Git CMS platforms later?
+### Могу ли я позже переключить платформы Git CMS?
 
-Yes. Because every platform commits the same Markdown and front matter files, switching is mostly a matter of re-pointing the editor, not migrating a database.
+Да. Поскольку каждая платформа совершает одни и те же файлы Markdown и front, переключение в основном является вопросом перенаправления редактора, а не переноса базы данных.
 
-### Do Git based CMS platforms support media uploads?
+### Поддерживает ли Git платформа загрузку медиафайлов?
 
-Yes. All of the platforms above upload images either to your repository or to a media CDN, with LightCMS supporting any Chevereto compatible image endpoint.
+Да. Все платформа, описанные выше, загружают изображения либо в хранилище, либо на медиа CDN, с LightCMS поддерживает любой Chevereto совместимый образ конечной точки.
