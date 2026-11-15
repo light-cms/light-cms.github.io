@@ -1,149 +1,151 @@
 ---
-title: "What Is a Git-Based CMS? Architecture, Workflow, and Trade-Offs"
-description: "A Git based CMS stores content as files in a repository and commits edits like code: the architecture, the workflow, and when it beats a database."
+title: "基于 Git 的 CMS 是什么？构造、工作流和贸易关闭"
+description: "基于 Git 的 CMS 将内容作为存储库中的文件存储，并且提交了类似代码：架构， 工作流，当它被打扰数据库时。"
 serial: 43
 date: 2026-10-16T10:50:00Z
 draft: false
 keywords:
-  - what is a git based cms
-  - git based cms
+  - 什么是基于 git 的 cms
+  - 基于 git 的 cms
   - git cms
-  - file based cms
-  - cms with version control
+  - 基于文件的 cms
+  - 带有版本控制的cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
+    - 厘米
     - git
-    - static-sites
-    - explainers
+    - 静态站点
+    - 解释
 ---
 
-A **Git based CMS** is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
+基于 **Git 的 CMS** 是一个内容管理系统，在Git 仓库中将内容存储为文件，而不是数据库中的行。编辑发生在视觉界面；保存为提交。网站构建读取这些文件并生成页面。
 
-That single design choice (files, not rows) cascades into everything else about how these tools behave: versioning, portability, cost, security, and who can use them.
+这个单一的设计选项(文件，而不是行) 将它们传递到关于这些工具如何运作的所有其他方面：版本、可移动性、成本、安全性以及谁可以使用它们。
 
 ---
 
-## The Architecture
+## 结构
 
-A Git based CMS sits between a writer and a repository, and touches nothing else:
+基于 Git 的 CMS 在作者和存储库之间的位置，并且不触及其他：
 
 ```text
-Writer ──> Visual editor ──> commit (.md + front matter)
-                                   │
-                                   ▼
-                          Git repository (source of truth)
-                                   │
-                                   ▼
-                     CI/CD build (Astro, Hugo, Zola, …)
-                                   │
-                                   ▼
-                        Static output ──> CDN ──> Reader
+Writer --- > Visual editor --- > committed (. d + 前置事项)
+                                   A
+                                   
+
+                          Git 存储库 (真理源)
+
+
+                     CI/CD build(Astro, 胡戈，索拉 …
+
+                                   
+
+                        静态输出 - > CDN - > 阅读器
 ```
 
-Three properties define the category:
+三个属性定义类别：
 
-1. **The repository is the database.** There is no second copy of the content. If it is not committed, it does not exist; if it is committed, it is backed up by every clone.
-2. **The build is the runtime.** Pages are assembled at build time and served as files. Nothing renders content per request.
-3. **The CMS is a client, not a host.** It writes to the repository and can be replaced without touching the content.
+1. **存储库是数据库** 没有第二份内容。如果不作出承诺，就不存在；如果作出承诺，则由每个部族支持。
+2. **构建是运行时间。** 页面是在构建时间组装并作为文件提供的。没有任何内容按请求提供。
+3. **CMS是客户端，而不是主机**它写入仓库，可以在不触及内容的情况下被替换。
 
-Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) works through the comparison.
+与传统的 CMS相对照：MySQL 中的内容，PHP 中的模板集合在每个请求，通过为网站服务的同一应用程序进行管理。 [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) works through the comparison.
 
 ---
 
-## What a Commit Does
+## 提交的内容
 
-When a writer hits publish, the CMS serializes the document to Markdown with YAML front matter and commits it:
+当作家发布时，CMS会将文档序列化为 Markdown 的 YAML 前端，并提交它：
 
 ```markdown
 ---
-title: Shipping the New Dashboard
-date: 2026-10-16T09:00:00Z
-draft: false
-tags:
-  - product
----
+标题：送货新仪表板
+日期：2026-10-16T09:00:00:00:00Z
+草稿：false
+标签：
+  - 产品
+-
 
-Body text begins here...
+正文文本在此开始...
 ```
 
-That commit is doing several jobs at once:
+这项承诺正在同时做几项工作：
 
-- **It is the save.** The content is persisted in the repository.
-- **It is the audit entry.** Author, timestamp, and message recorded automatically.
-- **It is the backup.** Every clone contains the full history.
-- **It is the deploy trigger.** CI picks it up, builds, and ships.
+- **它是保存的。** 内容在仓库中持续存在。
+- **它是审计条目。** 作者、时间戳和消息自动记录。
+- **它是备份。** 每个克隆都包含完整的历史。
+- **它是部署的触发器。** CI 抓住它、建造和船只。
 
-One write replaces four separate systems in a conventional stack.
-
----
-
-## The Workflow Properties You Get Free
-
-### Version history with real diffs
-Markdown diffs are legible. "Who changed this sentence, and when" is a one-line `git log`, not a plugin or a database query.
-
-### Rollback per file
-Revert one post without touching anything else. Restoring a database backup rolls back the whole site, usually silently.
-
-### Branches and pull requests as editorial review
-Write on a branch, submit a PR, take line-level comments on the exact paragraph, merge when approved. GitHub's native review tools become an editorial workflow.
-
-### Portable content
-The content is plain text. Move generators, move hosts, move CMS tools: the archive walks out with you.
+一份文件取代了常规堆栈中的四个单独系统。
 
 ---
 
-## The Trade-Offs (Stated Honestly)
+## 您免费的工作流属性
 
-Git based is not a universal win:
+### 有真正差异的版本历史记录
+Markdown 差异是可以辨别的。“谁改变了这句话，什么时候”是一个单行的`git log`，而不是一个插件或数据库查询。
 
-- **No queries.** You cannot join content at request time; the build must produce whatever pages are needed. Relational content fits poorly.
-- **Rebuild latency.** A change is live after a build, not after a save. Modern builds are fast, but "instant" is measured in seconds to minutes.
-- **Merge conflicts.** Two people editing the same file create a real conflict. Well-designed CMS tools scope this (one post per file), but it exists.
-- **Coarse access control.** Repository access is not per-field permissions. If you need granular role enforcement, a database-backed admin is the better tool.
-- **Non-technical onboarding.** Raw Git is hostile to writers, which is the gap a Git based CMS fills: it hides the commits while keeping the benefits.
+### 每个文件回滚一次
+还原一个帖子而不触摸任何其他内容。正在恢复数据库备份回滚整个站点，通常是静默的。
 
-That last point is where most evaluations land. The architecture is usually right for a publication; the question is which tool makes it usable for the people publishing.
+### 作为编辑评论的分支和拉取请求
+在一个分支上写入，提交PR，对确切的段落采取行级评论，在批准后合并。 GitHub 的原生审核工具成为编辑工作流程。
 
----
-
-## What to Look For in One
-
-- **Editor quality.** Writers will live in it. Form fields versus a real document editor is the biggest practical difference between tools.
-- **Front matter handling.** Malformed metadata breaks builds; a good tool validates it.
-- **Publish model.** Direct commit, or pull request with review.
-- **Provider support.** GitHub, GitLab, Bitbucket: whichever you use.
-- **Hosting model.** Self-hosted (you run it) versus hosted (they run it).
-- **Exit cost.** It should be zero. If the tool disappeared tomorrow, your repository should still build.
-
-[LightCMS](https://lightcms.me) is built around those criteria; see [what LightCMS is](/blog/what-is-lightcms/). The wider field is surveyed in [top Git based CMS platforms](/comparison/top-git-cms).
+### 便携式内容
+内容是纯文本。移动生成器，移动主机，移动CMS工具：与您一起移除归档。
 
 ---
 
-## Frequently Asked Questions
+## 贸易优惠(诚实)
 
-### Is a Git based CMS the same as a headless CMS?
+基于吉特的吉特并不是一种普遍的胜利：
 
-No. Headless describes _how content reaches a frontend_ (through an API); Git based describes _where content lives_ (files in a repository). The two ideas overlap in practice; see [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
+- **没有查询。** 您不能在请求时加入内容；构建必须生成任何需要的页面。相关内容很适合。
+- **重建延迟。** 一个更改在构建后生效，而不是在保存之后。现代构建是快速的，但“实例”是以秒到分钟的时间来测量的。
+- **合并冲突。** 两个人编辑同一文件会造成实际冲突。精心设计的 CMS 工具可以将此定义(每个文件一个帖子)，但它是存在的。
+- **粗化的访问控制。** 仓库访问不是每个字段的权限。如果您需要细分角色的强制执行，数据库支持的管理器是更好的工具。
+- **非技术挂载。** 生Git 对作者怀有敌意，这是基于 Git 的 CMS 填充的空白：它在保留福利的同时隐藏提交内容。
 
-### Do I need to know Git to use one?
-
-No. You need Git if you want to inspect history or manage branches yourself; the editor handles the commits.
-
-### Can a Git based CMS handle a large site?
-
-Yes. Generators build thousands of pages quickly, and the repository handles content volume comfortably. Build time is the practical ceiling, not storage.
-
-### Does it work with my static site generator?
-
-If your generator reads Markdown files with front matter (Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js), yes.
-
-### Where does media go?
-
-Typically to a directory in the repository or an asset bucket referenced from front matter. Either way, the reference lives with the content.
+最后一点是大多数评价的降落。这种结构通常对出版物是正确的；问题是哪一种工具可以供人们出版使用。
 
 ---
 
-Next: [headless vs Git based CMS](/blog/headless-vs-git-based-cms/) if you're still weighing architectures, or [what front matter is](/blog/what-is-front-matter/) if the metadata layer is new to you.
+## 在一个中查找什么
+
+- **编辑品质** 作者将生活在其中。表单字段相对于真正的文档编辑器是工具之间最大的实际差别。
+- **Front matter处理。** 错误的元数据损坏构建；一个很好的工具验证它。
+- **发布模型。** 直接提交或通过审核拉取请求。
+- **提供者支持。** GitHub 、 GitLab、 Bitbucket：无论您使用哪里。
+- **托管模型。** 自托管(你运行它)相对于托管(他们运行它)。
+- **退出成本** 它应该为零。如果这个工具明天消失，那么你的资源库仍然应该构建。
+
+[LightCMS](https://lightcms.me) 是围绕这些标准构建的；查看[LightCMS 是什么](/blog/what-is-lightcms/)。范围更广的字段在[基于 Git 的顶级CMS 平台](/comparison/top-git-cms) 中被调查。
+
+---
+
+## 常见问题
+
+### 基于 Git 的 CMS 是否与无头的 CMS相同？
+
+否。无头描&#x8FF0;_&#x5185;容如何达到前端_(通过 API)； 基于Git 描&#x8FF0;_&#x5185;容在哪里存在_(存储库中的文件)。这两种想法在实践中相互重叠；见[无头对Git的 CMS](/blog/headless-vs-git-based-cms/)。
+
+### 我需要知道Git才能使用它吗？
+
+否。如果你想检查历史记录或自己管理分支，你需要Git；编辑器处理提交。
+
+### 基于 Git 的 CMS 能处理一个大站点吗？
+
+是。生成器快速构建数千页，并且存储库可以轻松地处理内容音量。建造时间是实用的上限，而不是储存时间。
+
+### 它是否与我的静态站点生成器兼容？
+
+如果你的生成器读取Markdown 文件的前题(Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js), 是的。
+
+### 媒体去哪里？
+
+通常到仓库中的目录或从前面事项中引用的素材桶。无论是哪种方式，参考内容都与内容相吻合。
+
+---
+
+下一步：如果你仍在权重架构中，[头部和基于 Git 的 CMS](/blog/headless-vs-git-based-cms/) 或者如果元数据层对您是新的，[事前事项](/blog/what-is-front-matter/)。
