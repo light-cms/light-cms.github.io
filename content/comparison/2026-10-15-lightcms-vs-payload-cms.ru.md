@@ -1,116 +1,116 @@
 ---
-title: "LightCMS vs Payload CMS: Files in Git vs a Database-First Headless CMS"
-description: "Payload CMS is a powerful headless CMS built on a database; LightCMS writes static Markdown into your repository. Two content architectures, two very different use cases."
+title: "LightCMS против полезной нагрузки CMS: Файлы в Git против базы данных первого Headless CMS"
+description: "Payload CMS - мощный инструмент для работы с базами данных. LightCMS записывает статический Markdown в ваш репозиторий. Две архитектуры контента, два очень разных варианта использования."
 serial: 42
 date: 2026-10-15T20:10:16Z
 draft: false
 keywords:
-  - lightcms vs payload
-  - payload cms alternatives
-  - headless cms vs git based cms
-  - cms without database
-  - static site cms
+  - lightcms против полезной нагрузки
+  - альтернативы полезной нагрузки cms
+  - бесголовные cms против git на основе cms
+  - смс без базы данных
+  - статический сайт cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
-    - payload
-    - cms
-    - comparison
-    - headless
+    - молнии
+    - полезная нагрузка
+    - смс
+    - сравнение
+    - без головы
 ---
 
-This comparison starts with an admission: **[Payload CMS](https://payloadcms.com) and LightCMS are not competing for the same job.** Payload is a serious, TypeScript-native headless CMS with a database, an admin panel, access control, and API endpoints. LightCMS is a Git based writing workspace that commits Markdown to your repository.
+Это сравнение начинается с admission: \*\*[Payload CMS](https://payloadcms.com) и LightCMS не конкурируют за ту же работу. \* Payload — это серьезная система, TypeScript-native CMS с базой данных, панелью администрирования, системой контроля доступа и конечными точками API. LightCMS — это рабочая область, основанная на Git, которая фиксирует Markdown в вашем репозитории.
 
-Knowing which architecture your project actually needs is more useful than a feature matrix, so that is where this starts.
-
----
-
-## The Architectural Split
-
-**Database-first (Payload).** Content lives in structured records (MongoDB or Postgres) behind an admin panel, served through REST or GraphQL. Pages are assembled at request time, or fetched into a framework at build time. Relations, drafts, versions, and access control are first-class because the data model is first-class.
-
-**File-first (LightCMS).** Content lives as Markdown files with YAML front matter in your repository. Your static site generator reads them at build time and emits HTML to a CDN. There is no runtime, no query layer, and no content API, because the site does not need one.
-
-The consequences are structural:
-
-| Concern              | Payload CMS                              | LightCMS                               |
-| :------------------- | :--------------------------------------- | :------------------------------------- |
-| **Storage**          | Postgres or MongoDB                      | Your Git repository                    |
-| **Serving**          | Node.js server + database                | Static files on a CDN                  |
-| **Scaling cost**     | Scales with runtime + DB load            | Scales with CDN pricing (near zero)    |
-| **Security surface** | API, auth, DB, dependencies              | None at runtime                        |
-| **Versioning**       | Document versions in the DB              | Git history, diffs, revert, blame      |
-| **Portability**      | Export and convert                       | Clone the repository                   |
-| **Editing**          | Polished admin panel                     | TipTap document editor                 |
-| **Extras**           | Hooks, jobs, blocks, field-level control | AI copilot, voice-to-text, newsletters |
+Знание того, какую архитектуру вашему проекту на самом деле нужно, более полезно, чем матрицу свойств, так что именно там начинается.
 
 ---
 
-## When Payload Is the Right Answer
+## Архитектурный сплит
 
-Choose Payload when your project is an _application_ rather than a publication:
+**Database-first (Payload).** Содержимое живет в структурированных записях (MongoDB или Postgres) за панелью администратора, обслуживаемой через REST или GraphQL. Страницы собираются по запросу или загружаются в рамку во время сборки. Отношения, черновики, версии и управление доступом являются первоклассными, так как модель данных является первоклассной.
 
-- Content has **relationships**: products to variants, authors to books, episodes to seasons.
-- You need a **content API** consumed by something other than a website: a mobile app, an IoT display, a personalization engine.
-- **Roles and permissions** must be enforced per field and per operation.
-- Content changes must appear **instantly without a rebuild**, or the admin needs live workflows, approvals, and localization.
-- You want the content model and admin UI defined in TypeScript alongside your application code.
+**Сначала файл (LightCMS).** Содержимое живет как Markdown файлы с передним YAML в вашем репозитории. Ваш генератор сайтов читает их во время сборки и выводит HTML на CDN. Нет времени выполнения, нет уровня запроса и нет API контента, потому что сайт не нуждается в одном.
 
-For those requirements, a file-based tool is the wrong shape, and no amount of editor polish changes that.
+Последствия носят структурный характер:
 
-## When LightCMS Is the Right Answer
-
-Choose LightCMS when your project is a _site that publishes_:
-
-- A blog, docs site, changelog, portfolio, or marketing pages built on Astro, Hugo, Zola, Eleventy, or similar.
-- The content is **documents**, not relational records.
-- You want **zero runtime**: no server to patch, no database to back up, no per-request compute.
-- Contributors should publish **without a developer**, while content stays in a repository you own.
-- Longevity matters: in ten years, plain Markdown files still open in any text editor, while a database dump needs the exact schema that produced it.
-
-This is the same reasoning behind [static vs dynamic sites](/blog/static-vs-dynamic/), applied to where the content itself lives.
+| Озабоченность                 | Нагрузка CMS                                    | LightCMS                               |
+| :---------------------------- | :---------------------------------------------- | :------------------------------------- |
+| **Хранилище**                 | Postgres or MongoDB                             | Ваш Git-репозиторий                    |
+| **Служение**                  | Node.js сервер + база данных                    | Статические файлы на CDN               |
+| **Стоимость масштабирования** | Масштабы с рабочим временем + нагрузкой БД      | Масштабы с ценами на CDN (около нуля)  |
+| **Поверхность безопасности**  | API, auth, DB, зависимости                      | Нет во время выполнения                |
+| **Versioning**                | Версии документов в БД                          | История Git меняется, виноват, виноват |
+| **Портуализация**             | Экспортировать и конвертировать                 | Клонировать репозиторий                |
+| **Редактирование**            | Отличная панель администратора                  | Редактор документов TipTap             |
+| **Extras**                    | Хуки, работы, блоки, управление полевым уровнем | AI копилот, голос в текст, бюллетени   |
 
 ---
 
-## The Cost Difference Nobody Prices In
+## Когда полезная нагрузка является правильным ответом
 
-Database-first architectures accumulate operational cost: the hosting tier that keeps a Node process warm, the managed database, the backups, the security patches, the monitoring, the outage at 3am.
+Выберите полезную нагрузку, когда ваш проект является _приложением_, а не публикацией:
 
-Static-plus-CDN output accumulates none of it. A build runs on push, the output is cacheable forever, and traffic spikes cost approximately nothing. For a publication, where traffic is spiky and the content is mostly written rather than queried, that is a structurally cheaper shape. See [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) and the wider [hosting comparison](/misc/top-static-site-hosting/) for what that looks like in practice.
+- Содержание имеет **отношения**: продукты вариантам, авторам книг, эпизодам к сезонам.
+- Вам понадобится **контент-API**, который используется другим способом: мобильным приложением, IoT дисплеем, движком персонализации.
+- **Роли и разрешения** должны быть принудительными в каждом поле и за каждую операцию.
+- Изменения контента должны появиться **мгновенно без пересборки**, или администратор нуждается в реальных рабочих процессах, утверждениях и локализации.
+- Вы хотите указать в TypeScript модель контента и пользовательский интерфейс, наряду с вашим кодом приложения.
 
----
+Для этих требований инструмент на основе файлов является неправильной формой и нет количества редактора polish изменения.
 
-## The Counter-Argument, Fairly Stated
+## Когда LightCMS является правильным ответом
 
-File-based content has real limits: no joins, awkward partial updates, rebuilds to reflect changes, and coarser collaboration when many editors touch the same files. If two hundred editors publish concurrently across thirty content types, Git will feel like the wrong database, because it is.
+Выберите LightCMS когда ваш проект является _сайтом, который публикует_:
 
-LightCMS's answer is scope: it is built for publications, not for platforms. If you recognize your project in the Payload column above, use Payload. If you recognize it in the LightCMS column, a database is overhead you are paying for nothing.
+- Блог, docs сайт, changelog, портфолио, или маркетинговые страницы, построенные на Astro, Hugo, Zola, Eleventy, или аналогичные.
+- Содержимое **документов**, не реляционных записей.
+- Вы хотите **ноль runtime**: нет сервера для патча, нет базы данных для резервного копирования, нет компьютера на каждый запрос.
+- Авторы должны публиковать **без разработчика**, пока контент остается в собственном репозитории.
+- Долгосрочные вопросы: через десять лет простые файлы Markdown все еще открыты в любом текстовом редакторе, в то время как дамп базы данных требует точной схемы, которая ее создала.
 
----
-
-## Frequently Asked Questions
-
-### Is LightCMS a headless CMS?
-
-Not in the usual sense. There is no content API to query: the output is static HTML generated by your SSG. LightCMS is the authoring layer in front of that build.
-
-### Can Payload build a static site?
-
-Yes. Payload can be used as a source that renders static output, but it still requires the server and database to exist. The runtime cost does not disappear.
-
-### Which is better for SEO?
-
-Both can produce excellent SEO. Static output tends to help: fast, cacheable pages with no render-blocking server work.
-
-### Can I migrate from Payload to LightCMS?
-
-You can export Payload content to Markdown and commit it. The work is in flattening relational structure into documents, since the two models express content differently.
-
-### Does LightCMS handle versions and drafts?
-
-Yes, via Git. Drafts are `draft: true` in front matter, history is commit history, and rollback is a revert.
+Это такое же рассуждение за [статические и динамические сайты](/blog/static-vs-dynamic/), применимо к месту проживания самого содержимого.
 
 ---
 
-More comparisons: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [headless CMS explained](/blog/headless-cms-explained/), and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+## Разница в стоимости Никто в
+
+Первые архитектуры базы данных накапливают стоимость работы: уровень хостинга, который держит узел тепла, управляемая база данных, резервные копии, патчи безопасности, мониторинг, отказ в 3:00.
+
+Статико-плюс-CDN не накапливает ни одного из них. Конструкция работает на push, выход навсегда кэшируется, а шипы траффика почти ничего не стоит. Для публикации, где трафик шип и содержание в основном написано, а не запрошен, это структурно более дешевая форма. Смотрите [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) и более широкое [сравнение хостинга](/misc/top-static-site-hosting/) на практике.
+
+---
+
+## КонтрАргумент Справедливо
+
+Контент на основе файлов имеет реальные ограничения: нет стыковки, неудобные обновления, перестроен для отражения изменений и сотрудничество с грубым сервером, когда многие редакторы прикасаются к тем же файлам. Если двухсот редакторов публикуют одновременно тридцати типов контента, Git будет чувствовать как неправильную базу данных, потому что она есть.
+
+Ответ LightCMS - это рамка: он создан для публикаций, а не для платформ. Если вы распознаете ваш проект в колонке Payload выше, используйте Payload. Если вы узнаете его в колонке LightCMS - база данных является накладной, которую вы платите за ничего.
+
+---
+
+## Часто задаваемые вопросы
+
+### LightCMS бесконечная CMS?
+
+Не в обычном смысле. Нет API контента для запроса: вывод статических HTML, сгенерированных вашим SSG. LightCMS является авторским слоем перед этой сборкой.
+
+### Можно ли построить статический сайт?
+
+Да. полезная нагрузка может быть использована в качестве источника, который отображает статический вывод, но он все еще требует наличия сервера и базы данных. Стоимость взлетно-посадочной работы не исчезает.
+
+### Что лучше для SEO?
+
+Оба могут производить отличный SEO. Статический вывод обычно помогает: быстрая и кэшируемая страница без блокирующего сервера работает.
+
+### Могу ли я мигрировать с полезной нагрузки на LightCMS?
+
+Вы можете экспортировать Payload-контент в Markdown и зафиксировать его. Работа заключается в выравнивании реляционной структуры в документах, поскольку обе модели выражают содержание по-разному.
+
+### Является ли обработка версий LightCMS и черновиками?
+
+Да, с помощью Git. Черновики - это `черновик: true` перед темой, история фиксации - история отката - это обратный ответ.
+
+---
+
+Больше сравнений: [LightCMS против страниц CMS](/comparison/lightcms-vs-pagescms), [LightCMS против Decap CMS](/comparison/lightcms-vs-decap-cms), [описано без заголовков](/blog/headless-cms-explained/), и [основанные на Git CMS и традиционные CMS](/blog/git-cms-vs-traditional-cms/).
