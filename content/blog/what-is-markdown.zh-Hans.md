@@ -1,59 +1,59 @@
 ---
-title: What Is Markdown? The Plain-Text Format Powering the Web
-description: "Markdown explained: what it is, why it has lasted, the syntax you need, and how Git based CMS tools turn plain text into a publishing format."
+title: Markdown是什么？纯文本格式增强Web
+description: "Markdown 解释了：这是什么，为什么它已经存在，你需要的语法。 和 Git 基于 CMS 工具如何将纯文本变成一个发布格式。"
 serial: 25
 date: 2026-10-14T15:00:00Z
 draft: false
 keywords:
-  - what is markdown
-  - markdown tutorial
-  - markdown syntax guide
-  - why use markdown
-  - markdown for writers
+  - 什么是Markdown
+  - Markdown 教程
+  - Markdown 语法指南
+  - 为什么使用Markdown
+  - 对作者进行标记
 preview: /og-image.webp
 taxonomies:
   tags:
     - markdown
-    - writing
-    - content
+    - 写入
+    - 内容
 ---
 
-Markdown is plain text with a small set of formatting symbols. John Gruber created it in 2004 as the simplest way to write formatted documents. Two decades later it has become the lingua franca of the web: documentation, README files, notes, newsletters, and millions of sites keep their content in it.
+Markdown 是带少量格式符号的纯文本。约翰·格鲁贝尔于2004年创立了这个网站，以此作为编写格式化文件的最简单方式。二十年后，它已成为网站的通用语言：文献。 README 文件、笔记、通讯和数以百万计的网站将其内容保存在其中。
 
 ---
 
-## Why Markdown Won
+## 为什么Markdown Won
 
-- **It does not rot**. A `.md` file from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
-- **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git based CMS stores content as Markdown.
-- **It is easy to learn**. The core syntax takes five minutes.
-- **It separates content from presentation**. Write structure; let the theme handle looks.
-- **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
+- **它没有旋转**。从2004年开始的一个`.md`文件仍然在任何文本编辑器中打开。专有文档格式过期；纯文本不。
+- **美丽的差异**。因为它是文本，Git可以跟踪每一个变化，这就是为什么基于Git的CMS将内容储存为Markdown的原因。
+- **很容易学习**。核心语法需要五分钟。
+- **它将内容与演示文稿分开**。写入结构；让主题处理外观。
+- **它在所有地方**。 GitHub, 节点导出, 静态站点生成器和 AI 工具都会说它。
 
-## The Syntax You Need
+## 您需要的语法
 
-````markdown
-# Heading 1
-## Heading 2
+```markdown
+# 标题1
+## 标题2
 
-A paragraph with **bold** and *italic* text.
+A 段落与 **粗体** 和 *斜体* 文本。
 
-- A bullet point
-- Another one
+- 一个小点
+- 另一个
 
-1. A numbered list
-2. And the next item
+1。 编号列表
+2。下一个项目
 
-> A blockquote for asides.
+> 区块引用。
 
-[A link](https://example.com)
-![An image](/images/photo.jpg)
+[链接](https://example.com)
+![一张图片](/images/photo.jpg)
 
-`inline code` and fenced code blocks:
+`inline code` 和围栏代码块：
 
-```js
+``js
 console.log("hello, web");
-````
+```
 ````
 
 That covers the vast majority of real-world writing. Tables, task lists, and footnotes round out the extended syntax that GitHub-flavored Markdown adds.
@@ -73,30 +73,30 @@ tags:
 The article begins here.
 ````
 
-This YAML front matter is where the CMS lives: titles, dates, drafts, and taxonomies ride along with the Markdown body.
+这个YAML前事物是CMS居住的地方：标题、日期、草案和分类法与Markdown body一起乘坐。
 
-## Writing Markdown Without the Syntax
+## 在没有语法的情况下写入 Markdown
 
-**You do not have to write Markdown by hand anymore.** Modern Git based editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
+\*\*你不再需要手写Markdown \* 基于 Git 的现代编辑器， [LightCMS](/getting-started/)，给您一个完整的图像视觉编辑器， 表单和格式化快捷键，然后序列化您的写作以清理下方Markdown。您可以轻松的写作体验，获得纯文本耐久性。
 
-That combination (visual editing on top of Markdown in Git) is what powers the whole [Git based CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
+这个组合(在 Git中Markdown 顶部的视觉编辑)是整个[Git 基于 CMS 类别](/blog/git-cms-vs-traditional-cms/) 的权力。 并且它是如何获得[最佳静态站点生成器](/blog/best-static-site-generators/)中的静态站点内容的。
 
 ---
 
-## Frequently Asked Questions
+## 常见问题
 
-### Is Markdown dead?
+### Markdown死了吗？
 
-The opposite. After 20+ years it is more central than ever. It is the content format of GitHub, documentation toolchains, and AI-era writing.
+恰恰相反。 20多年后，它比以往任何时候都更加重要。它是GitHub、文档工具链和 AI时代写入的内容格式。
 
-### What is the difference between Markdown and HTML?
+### Markdown 和 HTML之间有什么区别？
 
-Markdown is the authoring format (plain text, human-writable); HTML is the rendering format (what browsers display). Generators convert the former into the latter.
+Markdown 是作者的格式 (纯文本，可写)；HTML 是渲染格式 (浏览器显示的内容)。生成器将前者转换为后者。
 
-### Do I need to learn Markdown to blog?
+### 我需要学习Markdown 到博客吗？
 
-Not with a visual Git based CMS: you write normally, and the tool produces Markdown for you. Learning the basics still helps for quick edits.
+不具有基于 Git 的 CMS：您正常写，工具为您生成Markdown 学习基础知识仍然有助于快速编辑。
 
-### Where is Markdown stored?
+### Markdown存储在哪里？
 
-As `.md` files, ideally in a Git repository, which gives you version history, review, and portable ownership of everything you write.
+作为 ".md" 文件，最好是在 Git 仓库中，它能让你的版本历史记录、 评论和手动拥有你写的一切。
