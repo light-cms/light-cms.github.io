@@ -21,7 +21,7 @@ Du kannst die gehostete Instanz unter [https://newsy.lightcms.me](https://newsy.
 
 Verwende deine eigene Kopie auf Vercel:
 
-[![Verteile mit Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy\&env=DATABASE_URL\&project-name=newsy\&repository-name=newsy)
+[![Verteile mit Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy\\&env=DATABASE_URL\\&project-name=newsy\\&repository-name=newsy)
 
 Die gehostete Instanz läuft auf Vercels Hobby Ebene, daher können Uptime und Funktion
 Invokationsbeschränkungen gelten.
