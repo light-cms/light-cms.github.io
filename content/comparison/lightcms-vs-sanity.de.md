@@ -14,7 +14,7 @@ preview: /og-image.webp
 taxonomies:
   tags:
     - hellcms
-    - sanft
+    - Vernunft
     - cms
     - vergleichen
     - kopffrei
@@ -32,7 +32,7 @@ LightCMS löst ein angrenzendes, aber anderes Problem: Dokumente auf einer stati
 
 **LightCMS** speichert Inhalte als Markdown Dateien mit YAML Frontmatter in deinem GitHub Repository. Ihr statischer Site-Generator liest sie zur Build-Zeit und sendet HTML aus.
 
-|                   | LightCMS                               | Vernunft                                  |
+|                   | LightCMS                               | sanft                                     |
 | :---------------- | :------------------------------------- | :---------------------------------------- |
 | **Speicher**      | Ihr Git-Repository                     | Sanity Content Lake (gehostet)            |
 | **Lieferung**     | Vorgerendertes statisches HTML         | API bei Abfragezeit (GROQ)                |
@@ -58,7 +58,7 @@ LightCMS löst ein angrenzendes, aber anderes Problem: Dokumente auf einer stati
 - **Keine Sitzung, pro API-Abrechnung.** Das Tool ist kostenlos und selbstgehostet; deine einzigen Kosten sind der Gastgeber, den du bereits besitzt.
 - **Kein Anbieter im Inhaltspfad.** Inhalt sitzt in deinem Repository, lesbar, forkable und tragbar in zehn Jahren. Gehostete Inhalte leben dort, wo der Verkäufer sagt, dass sie es tun.
 - **Null Laufzeit.** Keine API pro Anfrage, keine Kursgrenzen, keine Ausfälle auf der Statusseite eines anderen. Siehe [static vs dynamic sites](/blog/static-vs-dynamic/).
-- \*\*Zum Schreiben erstellt. \* Ein vollständiger Dokumenteneditor mit [AI Drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), und [Newsletter dispatch](/blog/newsletter-email-automation/), wobei Sanity's Studio eher für Inhaltsmodellierung als für Langform-Authoring konfiguriert ist.
+- \* Ein vollständiger Dokumenteneditor mit [AI Drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), und [Newsletter dispatch](/blog/newsletter-email-automation/), wobei Sanity's Studio eher für Inhaltsmodellierung als für Langform-Authoring konfiguriert ist.
 - **Einrichtung in Minuten gemessen.** Verbinden Sie ein Repository und Schreiben; es gibt keine Schema-Design-Phase vor Ihrem ersten Beitrag.
 
 ---
