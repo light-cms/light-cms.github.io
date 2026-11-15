@@ -1,118 +1,118 @@
 ---
-title: "LightCMS vs Storyblok: Visual Page-Editing vs Document Writing"
-description: "Storyblok's visual, component-based editor is built for marketing pages; LightCMS is a Git based document editor. Where each one fits, and how they store content."
+title: "LightCMS vs Storyblok: 视觉页面编辑与文档写入"
+description: "Storyblok基于组件的视觉编辑器是为营销页面构建的；LightCMS是基于 Git 的文档编辑器。每个人都适合哪里，以及他们如何存储内容。"
 serial: 51
 date: 2026-10-16T12:10:00Z
 draft: false
 keywords:
   - lightcms vs storyblok
-  - storyblok alternatives
-  - visual editor cms
-  - storyblok pricing alternative
-  - component based cms
+  - 故事蓝宝石选项
+  - 可视化编辑器cms
+  - storyblok定价选项
+  - 基于组件的 cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - 闪光
     - storyblok
-    - cms
-    - comparison
-    - headless
+    - 厘米
+    - 比较
+    - 头像
 ---
 
-[Storyblok](https://www.storyblok.com) built its reputation on one good idea: edit the page while looking at the page. Its visual editor, with drag-and-drop blocks and live preview, is a strong fit for component-driven marketing sites.
+[Storyblok](https://www.storyblok.com) 建立在一个好主意上：在查看页面时编辑页面。其直观编辑带有拖放块和实时预览的影视编辑非常适合组件驱动的营销地点。
 
-LightCMS shares the "visual" ambition but applies it to a different object: the document. Where Storyblok edits composed pages, LightCMS edits prose.
-
----
-
-## What Each Tool Does
-
-**Storyblok** is a hosted headless CMS with a component (block) system. Content is modeled as nested stories made of blocks, edited in a visual editor with live preview, delivered through an API, and billed by plan and usage.
-
-**LightCMS** is a self-hosted, Git based workspace. Content is Markdown files with front matter in your repository, edited in a WYSIWYG document editor, delivered as static HTML by your build.
-
-|                   | LightCMS                       | Storyblok                       |
-| :---------------- | :----------------------------- | :------------------------------ |
-| **Storage**       | Files in your repository       | Storyblok cloud (hosted)        |
-| **Delivery**      | Static build → CDN             | Content API at request time     |
-| **Editing model** | Document (prose-first)         | Visual, component/block-based   |
-| **Content model** | Front matter fields            | Nested block schemas            |
-| **Preview**       | The rendered post after build  | Live in-editor preview          |
-| **Pricing**       | Free (Apache 2.0), self-hosted | Plan-based SaaS                 |
-| **Portability**   | Clone the repository           | Export required                 |
-| **Extras**        | AI copilot, voice, newsletters | Visual editor, marketplace apps |
+LightCMS 共享“视觉”宏伟目标，但将其应用于另一个对象：文档。 Storyblok编辑其组成页面时，LightCMS编辑其原理。
 
 ---
 
-## Where Storyblok Wins
+## 每个工具做什么
 
-- **Editing composed pages visually.** Drag a hero, a grid, and a CTA into place and see the result immediately. For landing pages built from components, this is the correct interface.
-- **Live preview with no build.** What you see is the story as rendered by their preview API, updated as you type.
-- **Marketer-friendly autonomy.** Non-technical teams rearrange page sections without touching a developer.
-- **Hosted and managed.** No infrastructure to run, with a support organization behind it.
-- **Component reuse** across pages, with schema validation on every block.
+**Storyblok** 是一个托管的无头CMS，有一个组件(区块)系统。内容被编译成由方块制作的嵌套故事，并在直观预览的视觉编辑器中编辑 通过 API 交付，通过计划和使用计费。
 
-## Where LightCMS Wins
+**LightCMS** 是一个基于Git的自控工作区。内容是Markdown 文件和你的仓库中的前事项，在WYSIWYG 文档编辑器中编辑，由你的构建发送为静态HTML。
 
-- **No bill that scales with success.** Free software, your host, your CDN.
-- **Content ownership.** The repository is the source of truth; nothing needs exporting. See [content as code](/blog/content-as-code/).
-- **Built for long-form.** Articles, docs, and changelogs are documents (headings, lists, tables, code, math) edited directly. A block tree is a poor surface for 2,000 words.
-- **Static output.** Pre-rendered pages from a CDN score better on [Core Web Vitals](/blog/static-vs-dynamic/) than API-assembled ones.
-- **The extras are bundled.** [AI drafting](/blog/lightcms-ai-copilot/), [voice dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/).
-
----
-
-## The Telling Test
-
-Take a real task: publish a 1,500-word article with a table, three screenshots, and a code block.
-
-- In Storyblok you assemble it from blocks, one field group at a time, inside a preview pane.
-- In LightCMS you write it, drop the images in, and publish.
-
-Now take the opposite task: rebuild a landing page from a hero, feature grid, and testimonial carousel.
-
-- Storyblok does it visually, in minutes.
-- LightCMS does not attempt it: page composition belongs to your templates and components, not to your content tool.
-
-The right answer is usually "both, for different jobs." Publications tend to need more of the second task's opposite than they admit.
+|                 | LightCMS                          | Storyblok       |
+| :-------------- | :-------------------------------- | :-------------- |
+| **存储**          | 存储库中的文件                           | Storyblok 云(主机) |
+| **送货**          | 静态build-> CDN                     | 请求时间的内容 API     |
+| **编辑模型**        | 文档 (优先)                           | 视觉，组件/块基于       |
+| **内容模型**        | 前台事项字段                            | 嵌套区块方案          |
+| **预览**          | 生成后呈现的帖子                          | 实时编辑器预览         |
+| **定价**          | 免费(Apache 2.0)，自主机                | 以计划为基础的SaaS     |
+| **Portability** | 复制资源库                             | 需要导出            |
+| **Extras**      | AI copilot, voice and newsletters | 视觉编辑，市场应用       |
 
 ---
 
-## Migration
+## 故事布洛克胜利的地方
 
-Storyblok exports stories as JSON. Flattening nested blocks into Markdown with front matter is mechanical for blog-shaped content and lossy for heavily composed pages. Those are page designs, and they belong in your frontend anyway.
+- **编辑页面可视化。** 将一个英雄、一个网格和一个CTA拖到现场，立即查看结果。对于从组件生成的登陆页面，这是正确的接口。
+- **在线预览没有构建。** 你看到的是他们通过预览API呈现的故事，按你的类型更新。
+- **适合市场的自主。** 非技术团队在不触及开发者的情况下重新排列页面部分。
+- **托管和管理。** 没有基础设施运行，支持组织支持它。
+- **组件在页面上重复使用**，每个块都有模式验证。
+
+## LightCMS赢得的地方
+
+- \*\*没有成功的账单。\*\*免费软件、您的主机、 您的 CDN
+- **内容所有权** 存储库是真实性的来源。没有需要导出。查看[内容为代码](/blog/content-as-code/)。
+- **构建长形式。** 文章、文档和更新日志是直接编辑文档(标题、列表、表格、代码、数学)。一个区块树是一个2 000字的很差的表面。
+- **静态输出。** 预渲染的 CDN 页面比API组装的 API 页面更好的 [Core Web Vitals](/blog/static-vs-dynamic/)。
+- **扩展已捆绑。** [AI 正在起草](/blog/lightcms-ai-copilot/), [voice diction](/blog/lightcms-voice-to-text/), 和 [通讯发送](/blog/newsletter-email-automation/)。
 
 ---
 
-## Which Should You Choose?
+## 传输测试
 
-- **Choose Storyblok** for component-driven marketing pages edited by a non-technical team that needs hosted, managed infrastructure.
-- **Choose LightCMS** for a content-heavy static publication written by people who care about prose.
+真正执行任务：发布一个包含一个表格、三个屏幕截图和一个代码块的1 500个单词文章。
+
+- 在 Storyblok 中，你从块里、一个字段组、一次在预览面板里组合。
+- 在 LightCMS 中，您写它，丢弃图像并发布。
+
+现在执行相反的任务：从英雄、功能网格和作证车上重建一个登陆页。
+
+- Storyblok以几分钟的时间进行直观操作。
+- LightCMS 不尝试它：页面组成属于您的模板和组件，而不是您的内容工具。
+
+正确的答案通常是“两者兼而有之的工作。”出版物往往比他们承认的更需要第二项任务。
 
 ---
 
-## Frequently Asked Questions
+## 移 民
 
-### Is Storyblok free?
+Storyblok导出故事为 JSON 将嵌套区块平整成Markdown 并放置前缀，对于博客形状的内容是机械的，对于大量组成的页面是有损耗的。这些都是页面设计，它们属于你的前端。
 
-Storyblok offers a free tier for small projects; production plans are subscription-based. LightCMS is Apache 2.0 with no seats or tiers.
+---
 
-### Does LightCMS support page builders?
+## 您应该选择哪个？
 
-No, and deliberately so. LightCMS manages content; layout lives in your templates and components.
+- **选择 Storyblok** 用于组件驱动的营销页面，这些页面是由需要主机管理的基础设施的非技术团队编辑的。
+- **选择 LightCMS** 查看由关心pro的人编写的内容重量静态出版物。
 
-### Can Storyblok serve static pages?
+---
 
-You can pre-render from Storyblok at build time, but the hosted platform remains the source of record and the bill remains.
+## 常见问题
 
-### Which is better for SEO?
+### 故事是否免费？
 
-Both work. Static pre-rendered output has the easier path on speed metrics; content quality decides rankings. See [best CMS for static sites](/blog/best-cms-for-static-sites/).
+Storyblok为小型项目提供免费等级；生产计划是基于订阅的。 LightCMS 是 Apache 2.0 , 没有座位或层次。
 
-### Can I self-host Storyblok?
+### LightCMS是否支持页面生成器？
 
-No, it is a hosted service. Self-hosting is a LightCMS advantage, and a Git based one.
+没有，故意如此。 LightCMS管理内容；布局存在于您的模板和组件中。
+
+### Storyblok服务于静态页面吗？
+
+您可以在构建时从Storyblok预付，但是托管平台仍然是记录的来源，账单仍然存在。
+
+### 哪一种方法对SEO更好？
+
+这两项工作都在进行。静态预渲染输出在速度度量上有更容易的路径；内容质量决定排名。查看[静态站点的最佳CMS](/blog/best-cms-for-static-sites/)。
+
+### 我可以自己主宰故事吗？
+
+不，它是一种托管服务。自托管是 LightCMS 的优势，基于 Git 的优势。
 
 ---
 
