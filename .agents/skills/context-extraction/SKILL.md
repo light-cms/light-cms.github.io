@@ -68,7 +68,7 @@ Neither input changes the safety rules below - still edit only `ai_context`.
 
 ### Editing procedure
 
-Single-string (1–5 lines): Use StrReplace scoped to the exact line. Target the `"ai_context":""` substring (or the full current value if already set):
+Single string (1–5 lines): Use StrReplace scoped to the exact line. Target the `"ai_context":""` substring (or the full current value if already set):
 
 ```
 old: "ai_context":""

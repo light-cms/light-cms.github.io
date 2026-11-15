@@ -1,0 +1,12 @@
+{%- if page is defined and page.extra.card is defined -%}
+	{{ get_url(path=page.colocated_path ~ page.extra.card) }}
+{%- elif section is defined and section.extra.card is defined -%}
+	{{ get_url(path=section.colocated_path ~ section.extra.card) }}
+{%- elif page is defined and page.extra.banner is defined -%}
+	{%- set card = resize_image(path=page.colocated_path ~ page.extra.banner, width=1200, height=628, op="fill") -%}
+	{{ card.url }}
+{%- elif config.extra.og_image is defined -%}
+	{{ get_url(path=config.extra.og_image) }}
+{%- else -%}
+	{{ get_url(path="og-image.png") }}
+{%- endif -%}

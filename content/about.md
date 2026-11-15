@@ -15,14 +15,13 @@ tags:
   - sveltekit
 isCJKLanguage: false
 headless: false
-slug: about
 date: '2026-11-08T21:20:01.403Z'
 extra:
   comments: false
 ---
 ## What we write here
 
-We write about what we learn while building [LightCMS](https://lightcms.me/), and about the problems it aims to solve.
+We write about what we learn while building [LightCMS](https://www.lightcms.me/), and about the problems it aims to solve.
 
 New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exists](/blog/why-this).
 
@@ -30,7 +29,7 @@ New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exis
 
 ## Who we are
 
-We are building [LightCMS](https://lightcms.me/). We want writing to feel straightforward and publishing to feel simple.
+We are building [LightCMS](https://www.lightcms.me/). We want writing to feel straightforward and publishing to feel simple.
 
 Static site generators can produce fast, lightweight websites, but they often ask writers to work like developers. With LightCMS, we want more people to publish on the web with static sites, without needing to learn a developer workflow first.
 

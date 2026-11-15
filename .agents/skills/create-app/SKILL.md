@@ -109,7 +109,7 @@ Three things a frontend-only app genuinely cannot do:
 | They asked for | Give them |
 |---|---|
 | A weekly email digest | The page itself, which they open when they need it, plus a pointer to Crowdin's own notification settings. Say the email part is not possible in this kind of app |
-| A third-party engine or key | Crowdin's own settings for that integration when the key must work for people who should not see it. When everyone using it may also know it, [Crowdin Storage](#when-the-app-needs-to-remember-something) holds it with `secret: true`: `kv.user.*` for a personal key, a restricted module's `module:` prefix for a team key |
+| A third party engine or key | Crowdin's own settings for that integration when the key must work for people who should not see it. When everyone using it may also know it, [Crowdin Storage](#when-the-app-needs-to-remember-something) holds it with `secret: true`: `kv.user.*` for a personal key, a restricted module's `module:` prefix for a team key |
 | A huge file processed | The same work on a size that fits, with the limit agreed up front |
 
 Only when nothing useful survives, say so and offer to hand it to a developer. Never end a user's run with npm package names as their next step.
@@ -118,9 +118,9 @@ Only when nothing useful survives, say so and offer to hand it to a developer. N
 
 ### 0. Preflight
 
-Node `^22.19 || ^24` and pnpm. `npx` implies Node, so pnpm is the usual gap: `corepack enable pnpm`. If Node itself is missing, say it plainly - this needs one install first - and help rather than turning it into a requirement they must satisfy alone.
+Node `^22.19 || ^24` and pnpm. `npx` implies Node, so pnpm is the usual gap: `corepack enable pnpm`. If Node itself is missing, say it plainly this needs one install first and help rather than turning it into a requirement they must satisfy alone.
 
-Probe auth with a read-only call:
+Probe auth with a read only call:
 
 ```bash
 npx @crowdin/serverless-apps-cli@latest list --json
