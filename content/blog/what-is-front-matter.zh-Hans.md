@@ -1,31 +1,31 @@
 ---
-title: "What Is Front Matter? The Metadata Block at the Top of Your Content"
-description: "Front matter is the YAML or TOML block at the top of a Markdown file that tells your site its title, date, tags, and draft status, with examples."
+title: "什么是前台事物？您内容顶部的元数据块"
+description: "前面的事项是 YAML 或 TOML 块，它位于一个Markdown 文件的顶部，这个文件告诉你网站的标题。 日期、 标签和草案状态及示例。"
 serial: 45
 date: 2026-10-16T11:10:00Z
 draft: false
 keywords:
-  - what is front matter
-  - front matter markdown
-  - yaml front matter
-  - static site metadata
+  - 什么是首要事项
+  - 前面的Markdown
+  - Yaml 前缀
+  - 静态站点元数据
   - markdown metadata
 preview: /og-image.webp
 taxonomies:
   tags:
     - markdown
-    - explainers
-    - static-sites
-    - cms
+    - 解释
+    - 静态站点
+    - 厘米
 ---
 
-**Front matter** is the block of metadata at the top of a content file, fenced off from the article itself. It is where a Markdown file declares what it _is_ (title, date, tags, author, draft status), so that your site generator can render, sort, and filter it.
+**Front matter** 是内容文件顶部的元数据块，从文章本身处围着。 Markdown 文件在哪里宣布它是 \*(标题、日期、标签、作者) 网站生成器可以进行渲染、排序和过滤。
 
-If Markdown is the body of a post, front matter is its label.
+如果Markdown 是帖子的主体，前面的问题就是它的标签。
 
 ---
 
-## What It Looks Like
+## 看起来像什么
 
 ```markdown
 ---
@@ -45,88 +45,88 @@ preview: /og-image.webp
 The article body starts here, after the closing `---`.
 ```
 
-Three things are worth noticing:
+有三件事值得注意：
 
-1. **The fences.** A line of three dashes opens and closes the block. Everything between belongs to metadata; everything after belongs to the article.
-2. **The format.** That example is YAML, the default for most generators. TOML (`+++`) and JSON (`{...}`) are also used; Zola accepts all three, for instance.
-3. **The fields.** Standard keys like `title` and `date` are understood by generators; custom keys like `keywords` or `preview` are available to your templates.
-
----
-
-## What Front Matter Actually Does
-
-Each field drives a concrete behavior in the build:
-
-| Field                 | Effect                                      |
-| :-------------------- | :------------------------------------------ |
-| `title`               | Page `<title>`, headings, and lists         |
-| `description`         | Meta description, cards, list summaries     |
-| `date`                | Sorting, "published on" display, feeds      |
-| `tags` / `categories` | Taxonomy pages and cross-linking            |
-| `draft`               | Excluded from the build when `true`         |
-| `slug`                | Overrides the URL derived from the filename |
-| `template`            | Chooses which layout renders the page       |
-| `weight`              | Manual ordering within a section            |
-
-This is why a typo in front matter can break a build: `date: 2026-13-45` or a stray tab under `tags:` is invalid YAML, and the generator fails before it writes a single page.
+1. **Fences.** 一条由三根破折号组成的直线打开并关闭方块。两者之间的一切都属于元数据；此后的一切都属于该篇文章。
+2. **格式。** 这个例子是 YAML，大多数生成器的默认值。 TOML (`+++`) and JSON (`{...}`) are also used; Zola accepts all three, for instance.
+3. **字段。** 诸如`title`和`date`等标准密钥为生成器所理解；诸如`keywords`或`preview`等自定义密钥可用于您的模板。
 
 ---
 
-## Why Front Matter Exists
+## 真实行为的前台行为
 
-Static site generators cannot ask a database "what is this page?" because there is no database. They need metadata to live **with** the content in a form both a machine and a human can read. Front matter solves that:
+每个字段驱动构建中的水泥行为：
 
-- **Self-describing files.** A post carries everything needed to render it. Move the file, and its identity moves with it.
-- **Diffable metadata.** Changing a title is a one-line commit you can review and revert like any other change.
-- **Tool-friendly.** Editors, linters, and CI scripts can validate metadata before the build.
-- **Portable.** The same block works across generators, with minor key differences.
+| 字段                    | 效果              |
+| :-------------------- | :-------------- |
+| `title`               | 第<title>页，标题和列表 |
+| `描述`                  | 元描述，卡片，列表摘要     |
+| `date`                | 排序，"发布在"显示中，供稿中 |
+| `tags` / `categories` | 分类页面和交叉链接       |
+| `draft`               | `true`时从构建中排除   |
+| `slug`                | 覆盖源自文件名的 URL    |
+| `模板`                  | 选择哪个布局显示页面      |
+| `权重`                  | 手动排序在一个版块中      |
 
----
-
-## Common Conventions
-
-Enough conventions exist that consistency is worth more than cleverness:
-
-- **Dates in ISO 8601**: `2026-10-16T09:00:00Z`. Unambiguous across locales, sorts correctly.
-- **Tags as a list**, not a comma-separated string, so a tag containing a space does not split in half.
-- **Slugs lowercase with hyphens.** Filenames become URLs, so `my-great-post` beats `My Great Post.md`.
-- **`draft: true` for unfinished work.** The safe way to save without publishing.
-- **A real `description`.** The one field most often left empty and then regretted when the link gets shared.
+这就是为什么前面的类型可能会破坏一个构建: `date: 2026-13-45` 或 `tags:` 下的一个字符串选项卡无效的 YAML, 并且生成器在写入单一页面之前失败。
 
 ---
 
-## Where a CMS Fits
+## 为什么前台事务存在
 
-Front matter is the part of Markdown that non-technical writers should not have to see. It is syntax with sharp edges: indentation matters, quotes matter, date formats matter.
+静态站点生成器无法询问数据库"此页面是什么?"因为没有数据库。他们需要元数据才能在 **以一个机器和一个人能读到的形式使用** 的内容。前沿问题解决：
 
-A Git based CMS handles it as a **form** (fill in the title, pick the date, click tags) and serializes valid YAML on save. Writers never think about the fence; the repository still receives what the generator expects. That single feature eliminates one of the most common failure modes in static-site publishing.
-
-LightCMS, for example, validates front matter as you type and writes it on commit (see [the editor tour](/blog/lightcms-editor-tour/)), so metadata stays correct no matter who is publishing.
-
----
-
-## Frequently Asked Questions
-
-### Is front matter required?
-
-For pages in a date-sorted section, yes: generators expect at least a title and a date. The exact requirements depend on your generator's schema.
-
-### YAML vs TOML vs JSON: which should I use?
-
-Whichever your generator defaults to. Consistency inside a repository matters more than the format itself.
-
-### Can front matter contain lists and objects?
-
-Yes. Nested maps and lists are normal: image galleries, authors with roles, and alternate titles all fit.
-
-### How long should the description be?
-
-Aim for roughly 140–160 characters: long enough to make sense in search results, short enough not to be truncated.
-
-### Does front matter affect SEO?
-
-Directly: it is where the title and meta description come from, so it is one of the most valuable small things in a static site.
+- **自我描述文件** 一个帖子带有渲染它所需的一切。移动文件和它的身份与它一起移动。
+- **可分割的元数据** 更改标题是一个单行提交，您可以审查并恢复任何其他更改。
+- **工具友好。** 编辑器、linters和CI 脚本可以在构建前验证元数据。
+- **Portable.** 相同的块在生成器之间运行，密钥有较小的差异。
 
 ---
 
-Related: [what is Markdown?](/blog/what-is-markdown/), [the LightCMS editor](/blog/lightcms-editor-tour/), and [what a static site generator does](/blog/what-is-a-static-site-generator/).
+## 共同公约
+
+已有足够的公约规定，一致性的价值比以往更加明晰：
+
+- **ISO 8601**：`2026-10-16T09:00:00Z`. 区域间的明确无误排序。
+- **标签作为列表**，而不是逗号分隔的字符串，所以含有空格的标签不会分割成一半。
+- **与连字符混合的斜角小写。** 文件名变成URL，所以`my-great-post` 会打`My Great Post.md`。
+- **`草稿：true`用于未完成的工作。** 安全保存方式不需要发布。
+- **一个真正的`描述`。** 一个字段最常留空，然后在链接共享时表示遗憾。
+
+---
+
+## CMS 适合的地方
+
+前沿问题是Markdown的一部分，非技术性作者不必看到。它是带有尖锐边缘的语法：缩进事项，引用事项和日期格式问题。
+
+基于 Git 的 CMS 处理它为 **form** (在标题中，选择日期，点击标签) 并且在保存时序列化有效的 YAML 。作家们从来没有想过围栏；仓库仍然收到发电机的期望。这一特征消除了静态网站出版中最常见的故障模式。
+
+例如，LightCMS在您键入并提交时写入前事项时验证前事项(见[编辑旅行](/blog/lightcms-editor-tour/))。 所以元数据不论是谁发布都是正确的。
+
+---
+
+## 常见问题
+
+### 是否需要前台？
+
+对于日期排序部分中的页面来说，是: 发电机至少需要一个标题和日期。准确的要求取决于你的生成器方案。
+
+### YAML vs TOML vs JSON: 我应该使用哪个？
+
+不论你的生成器是否默认。存储库内的一致性不仅仅关系到格式本身。
+
+### 前面是否可以包含列表和对象？
+
+是。嵌套地图和列表是正常的：图像画廊、具有角色的作者和备用标题都是适合的。
+
+### 描述应该有多长时间？
+
+目标是大约140-160个字符：长度足以在搜索结果中有意义，短度不足以被截断。
+
+### 前事项是否影响SEO？
+
+直接：它是标题和元描述的来源，所以它是静态站点中最宝贵的小东西之一。
+
+---
+
+相关: [[什么是Markdown？](/blog/what-is-markdown/), [LightCMS 编辑器](/blog/lightcms-editor-tour/), 和 [一个静态站点生成器是什么](/blog/what-is-a-static-site-generator/)。
