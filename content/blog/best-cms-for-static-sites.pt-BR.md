@@ -1,128 +1,128 @@
 ---
-title: "Best CMS for Static Sites in 2026: 8 Options Compared"
-description: "The best CMS options for a static site in 2026: Git based and headless platforms compared on editor quality, lock in, price, and setup effort."
+title: "Melhor CMS para Sites Estáticos em 2026: 8 Opções Comparadas"
+description: "As melhores opções de CMS para um site estático em 2026: Git baseado em plataformas baseadas em bits e sem cabeça comparadas com a qualidade do editor, bloqueio, preço e esforço de instalação."
 serial: 36
 date: 2026-10-16T10:00:00Z
 draft: false
 keywords:
-  - best cms for static sites
-  - static site cms
-  - cms for static site generator
-  - git based cms comparison
-  - cms without database
+  - melhores cms para sites estáticos
+  - site estático cms
+  - cms para gerador de site estático
+  - comparação git baseado em cms
+  - cms sem banco de dados
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
-    - static-sites
-    - comparison
+    - SMS
+    - estático-sítios
+    - comparação
     - git
 ---
 
-A static site solves delivery: no runtime, no database, no per-request computation, globally cached. It leaves one question open: **authoring**. Someone types the words before the build turns them into HTML.
+Um site estático resolve a entrega: sem tempo de execução, sem banco de dados, sem computação por requisição, globalmente em cache. Deixa uma questão aberta: **autor**. Alguém digita as palavras antes da construção transformá-las em HTML.
 
-The answers get crowded in 2026. The list below sorts the options by what each one optimizes for.
-
----
-
-## The Shortlist
-
-| CMS             | Model                    | Editor              | Self-host | Best for                              |
-| :-------------- | :----------------------- | :------------------ | :-------- | :------------------------------------ |
-| **LightCMS**    | Git based workspace      | TipTap WYSIWYG      | ✅         | Writers who want one-click publishing |
-| **Decap CMS**   | Git based admin app      | Form-based React UI | ✅         | Classic multi-provider setups         |
-| **TinaCMS**     | On-page visual editing   | Inline WYSIWYG      | Partial   | Editing content where it renders      |
-| **Keystatic**   | Local-first files        | React forms         | ✅         | Developers in the Next/Astro world    |
-| **Pages CMS**   | Git based dashboard      | Form-based          | ✅         | A familiar CMS layout over GitHub     |
-| **Sveltia CMS** | Browser Git editor       | Lightweight UI      | ✅         | Zero-backend, zero-cost editing       |
-| **CloudCannon** | Managed Git based CMS    | Visual editing      | ❌         | Agencies with paying clients          |
-| **Payload CMS** | Headless, database-first | Admin panel         | ✅         | Apps that need relational content     |
+As respostas são lotadas em 2026. A lista abaixo ordena as opções de acordo com o que cada um otimiza.
 
 ---
 
-## How to Choose
+## Lista de atalhos
 
-Four questions eliminate most of the field:
-
-**1. Do you want content in a database or in files?**
-Database-first tools (Payload, most proprietary headless platforms) give you queries, relationships, and an API. File-based tools give you portability, readable diffs, and free version history. For a publication (blog, docs, marketing site), files win; for an application with relational data, the database does.
-
-**2. Who will write?**
-If it is only you, any option works. Once a non-technical contributor joins, the writing surface becomes the deciding factor. A form full of fields is not a writing experience.
-
-**3. How much setup are you willing to do?**
-Some tools need a config file, a schema, a backend, and an afternoon. Others start at "copy the repository and sign in."
-
-**4. What is the exit?**
-Read the storage model, not the pricing page. Content in your repository can be moved by anyone, forever. Content in a vendor's database requires an export, a conversion, and eventually a migration.
+| SGC                     | Modelo                                     | Editores                               | Auto-hospedeiro | Melhor para                                    |
+| :---------------------- | :----------------------------------------- | :------------------------------------- | :-------------- | :--------------------------------------------- |
+| **LightCMS**            | Espaço de trabalho baseado em Git          | TipTap WYSIWYG                         | ✅               | Escritores que querem publicação com um clique |
+| **Decapitar CMS**       | Aplicativo de administrador baseado no Git | Interface React baseada em formulários | ✅               | Configurações multiprovedores clássicas        |
+| **TinaCMS**             | Edição visual na página                    | Inline WYSIWYG                         | Parcial         | Editando conteúdo onde ele renderiza           |
+| **Keystatic**           | Arquivos local-first                       | Formulários React                      | ✅               | Desenvolvedores no mundo Próximo/Astro         |
+| **CMS das páginas**     | Painel baseado em Git                      | Formulários                            | ✅               | Um layout CMS familiar sobre o GitHub          |
+| **Sveltia CMS**         | Editor do navegador Git                    | Interface leve                         | ✅               | Zero-backend, edição de custo zero             |
+| **CloudCannon**         | CMS baseado em Git gerenciado              | Edição visual                          | ❌               | Agências com clientes pagantes                 |
+| **CMS de carregamento** | Headless, database-first                   | Painel de administração                | ✅               | Apps que precisam de conteúdo relacional       |
 
 ---
 
-## The Picks
+## Como escolher
 
-### Best overall for publishing: [LightCMS](https://lightcms.me)
+Quatro questões eliminam a maior parte do campo:
 
-A self-hosted, Apache 2.0 workspace that commits plain Markdown to GitHub, with a TipTap WYSIWYG editor (math, code highlighting, tables, task lists, drag-and-drop media), an [AI copilot](/blog/lightcms-ai-copilot/), [voice dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) through Newsy, with no email service involved. This is the only option here that treats writing, publishing, and distribution as one loop, and storage stays in your repository. See [what LightCMS is](/blog/what-is-lightcms/) for the full picture.
+**1. Você quer conteúdo em um banco de dados ou em arquivos?**
+Ferramentas de primeira base de dados (Payload, plataformas mais proprietárias sem cabeçalho) lhe dão dúvidas, relacionamentos e uma API. Ferramentas baseadas em arquivos lhe oferecem portabilidade, diffs legíveis e histórico de versão gratuito. Para uma publicação (blog, documentação, site de marketing), arquivos vence; para um aplicativo com dados relacionais, o banco de dados faz.
 
-### Best track record: Decap CMS
+**2. Quem vai escrever?**
+Se for apenas você, qualquer opção funciona. Uma vez que um colaborador não técnico se junta, a superfície de escrita torna-se o fator decisivo. Um formulário cheio de campos não é uma experiência de escrita.
 
-The veteran (formerly Netlify CMS): a React admin app configured by YAML, supporting GitHub, GitLab, and Bitbucket. Mature ecosystem, aging interface. Full analysis in [Decap CMS explained](/comparison/netlifycms).
+**3. Quanta configuração você está disposto a fazer?**
+Algumas ferramentas precisam de um arquivo de configuração, um esquema, um backend e uma tarde. Outros começam em "copie o repositório e faça o login."
 
-### Best for on-page editing: TinaCMS
-
-Click the element on the rendered page and edit it there. Excellent for reviewing layout and copy together; a separate dashboard is better for long-form drafting.
-
-### Best for developers: Keystatic
-
-Local-first files with schema validation and React forms, from the Thinkmill team. Excellent if you live in code and want content to feel like code; less ideal for contributors who do not.
-
-### Best familiar dashboard: Pages CMS
-
-A clean form-based view over GitHub that hides Git completely. Good floor, modest ceiling. Compare it in [Pages CMS alternatives](/comparison/pagescms).
-
-### Best free lightweight option: Sveltia CMS
-
-A browser-hosted editor committing through the GitHub API. Fast to adopt, easy to outgrow.
-
-### Best managed service: CloudCannon
-
-Paid, polished, agency oriented. You are buying someone else's operations.
-
-### Best when you need a database: Payload CMS
-
-A modern headless CMS with real relational content and a powerful admin panel: the right call for application shaped projects and the wrong one for a static publication.
-See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
+**4. Qual é a saída?**
+Leia o modelo de armazenamento, não a página de preços. O conteúdo no repositório pode ser movido por qualquer pessoa, para sempre. Conteúdo na base de dados de um fornecedor requer uma exportação, uma conversão e, eventualmente, uma migração.
 
 ---
 
-## One Architectural Note
+## As Escolhas
 
-Every option in the file based half of this table shares one advantage: **the build is the only runtime.** No database listener to patch, no PHP version to upgrade, no plugin supply chain to audit. The CMS produces files; the site remains files. That keeps the category growing. Static sites got cheap and fast, and the tooling for writing them has caught up.
+### Melhor geral para publicação: [LightCMS](https://lightcms.me)
+
+Um auto-hospedado, Apache 2. espaço de trabalho que compromete Markdown ao GitHub, com um editor de TipTap WYSIWYG (matemática, destaque de código, tabelas, listas de tarefas, mídia de arrastar-e-soltar), um [Anúncio de inteligência](/blog/lightcms-ai-copilot/), [ditado de voz](/blog/lightcms-voice-to-text/), e [newsletter despacho](/blog/newsletter-email-automation/) através do Newsy, sem serviço de e-mail envolvido. Esta é a única opção aqui que trata a escrita, publicação e distribuição como um loop, e o armazenamento permanece no seu repositório. Veja [o que o LightCMS é](/blog/what-is-lightcms/) para a imagem completa.
+
+### Melhor registro: Decapitar CMS
+
+O veterano (anteriormente Netlify CMS): uma app de administração do React configurado por YAML, suportando GitHub, GitLab e Bitbucket. Ecossistema adulto, interface envelhecida. Análise completa em [Decap CMS explicado](/comparison/netlifycms).
+
+### Melhor para edição na página: TinaCMS
+
+Clique no elemento na página renderizada e edite-o lá. Excelente para revisar o layout e copiar juntos; um painel separado é melhor para rascunhos de longa forma.
+
+### Melhor para desenvolvedores: Keystatis
+
+Arquivos de primeiro local com formulários de esquema de validação e de React, da equipe Thinkmill. Excelente se você vive no código e quer que o conteúdo se sinta como código; menos ideal para contribuidores que não.
+
+### Painel mais familiar: Páginas CMS
+
+Uma visualização de formulário limpo sobre GitHub que esconde completamente o Git. Bom chão, tecto modesto. Compare-o em [Páginas CMS alternativas](/comparison/pagescms).
+
+### Opção leve e gratuita: Sveltia CMS
+
+Um editor hospedado pelo navegador que envia a API do GitHub. Rápido para adotar, fácil de superar.
+
+### Melhor gerenciado: CloudCannon
+
+Assistência, polida, agência orientada. Você está comprando operações de outra pessoa.
+
+### Melhor quando você precisar de um banco de dados: Payload CMS
+
+Um moderno CMS sem cabeças, com um conteúdo relativo real e um poderoso painel de administração: a chamada certa para projetos em forma de aplicação e a solicitação errada para uma publicação estática.
+Veja [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
 
 ---
 
-## Frequently Asked Questions
+## Uma nota arquitetônica
 
-### Can I use a CMS with a static site generator?
-
-Yes. That is what Git based CMS tools do. The CMS writes Markdown into your repository; your SSG builds it; your host serves it.
-
-### What costs money in a free CMS?
-
-Self hosted, open source options like [LightCMS](https://lightcms.me), Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
-
-### Do I need a database for a blog?
-
-No. A blog is an append mostly collection of documents, which is the best possible case for files.
-
-### Which CMS is easiest for non technical writers?
-
-One with a real editor rather than a field form. Writers should see a document, not a schema.
-
-### Can I switch CMS later?
-
-With file based content, yes: the repository is the interface. Point a different tool at the same content directory and the archive survives.
+Cada opção no arquivo baseado na metade dessa tabela compartilha uma vantagem: \*\*a compilação é o único tempo de execução. \* Nenhum ouvinte de banco de dados para patch, nenhuma versão PHP para atualizar, nenhum plugin para auditar. O CMS produz arquivos; o site permanece arquivos. Isto mantém a categoria em crescimento. Os sítios estáticos ficaram baratos e rápidos, e o instrumento para os escrever recuperou.
 
 ---
 
-Related: [top Git based CMS platforms compared](/comparison/top-git-cms), [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/), and [content as code](/blog/content-as-code/).
+## Perguntas Frequentes
+
+### Posso usar um CMS com um gerador de site estático?
+
+Sim. Isso é o que as ferramentas CMS baseadas em Git fazem. O CMS escreve Markdown no seu repositório; seus SSG constroem o repositório; seu host o serve.
+
+### O que custa dinheiro numa CMS gratuita?
+
+Opções auto-hospedadas, de código aberto, como [LightCMS](https://lightcms.me), Decap CMS e Keystatia, não custam nada nas taxas de licença. Você ainda paga por hospedagem e, opcionalmente, por um ponto de extremidade de IA ou transcrição se usar esses recursos.
+
+### Eu preciso de um banco de dados para um blog?
+
+Não. Um blog é uma coleção principalmente de documentos, o que é o melhor caso possível para arquivos.
+
+### Qual CMS é mais fácil para escritores não técnicos?
+
+Um com um verdadeiro editor, em vez de uma forma de campo. Os autores devem ver um documento, não um esquema.
+
+### Posso trocar o CMS mais tarde?
+
+Com o conteúdo baseado em arquivo, sim: o repositório é a interface. Aponte uma ferramenta diferente para o mesmo diretório de conteúdo e os sobreviventes do arquivo.
+
+---
+
+Relacionado: [top Git based CMS platforms compared](/comparison/top-git-cms), [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/), e [conteúdo como código](/blog/content-as-code/).
