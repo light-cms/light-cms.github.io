@@ -1,36 +1,36 @@
 ---
-title: "Headless CMS vs Git-Based CMS: Two Architectures Compared"
-description: "Headless CMS stores content in a database behind an API; Git based CMS stores it as files in a repository. How each works, where each wins, and how to choose."
+title: "CMS sin Headless vs CMS basado en Git: Dos Archivos Comparados"
+description: "CMS sin cabeceras almacena contenido en una base de datos detrás de una API; el CMS basado en Git lo almacena como archivos en un repositorio. Cómo funciona cada uno, donde gana cada uno y cómo elegir."
 serial: 44
 date: 2026-10-16T11:00:00Z
 draft: false
 keywords:
-  - headless cms vs git based cms
-  - headless cms
-  - git based cms
-  - file based cms vs headless
-  - cms architecture
+  - cms sin cabeza vs git basado en cms
+  - cms sin cabeza
+  - git basado en cms
+  - basado en cms vs sin cabecera
+  - arquitectura cms
 preview: /og-image.webp
 taxonomies:
   tags:
     - cms
-    - headless
+    - sin cabeza
     - git
-    - explainers
+    - explicadores
 ---
 
-"Headless" and "Git based" get used as if they were rival categories. They are not; they answer different questions:
+"Sin cabeza" y "Git based" se utilizan como si fueran categorías rivales. No lo son; responden a diferentes preguntas:
 
-- **Headless** answers: _how does content reach the frontend?_ (Through an API, decoupled from presentation.)
-- **Git based** answers: _where does content live?_ (As files in a repository.)
+- Respuestas **sin cabeza**: _¿Cómo llega el contenido al frente?_ (a través de una API, desacoplada de la presentación.)
+- Respuestas **basadas en Git**: _¿dónde vive el contenido?_ (Como archivos en un repositorio.)
 
-A tool can be both, either, or neither. Sorting out the two ideas lets you compare architectures instead of feature lists.
+Una herramienta puede ser ambas o ninguna de ellas. Ordenar las dos ideas le permite comparar arquitecturas en lugar de listas de características.
 
 ---
 
-## Headless CMS: Content Behind an API
+## CMS sin cabeza: Contenido Behind a API
 
-A headless CMS is a content database with an admin panel and an API. The editor writes; the frontend fetches.
+Un CMS sin cabeceras es una base de datos de contenido con un panel de administración y una API. El editor escribe; la interfaz se obtiene.
 
 ```text
 Editor ──> Headless CMS (database + admin)
@@ -39,111 +39,111 @@ Editor ──> Headless CMS (database + admin)
         Website · Mobile app · Watch face · Anything
 ```
 
-Typical properties:
+Propiedades típicas:
 
-- **Content is relational.** Entries, references, localizations, workflows.
-- **Delivery is API-driven.** Any number of consumers pull the same content.
-- **Changes are immediate.** No build step between save and read.
-- **Operations are ongoing.** A server, a database, backups, patches, and an uptime obligation.
+- **El contenido es una relación.** Entradas, referencias, localizaciones, flujos de trabajo.
+- **La entrega es de unidad API.** Cualquier número de consumidores extraen el mismo contenido.
+- **Los cambios son inmediatos.** No hay paso de compilación entre guardar y leer.
+- **Las operaciones están en curso.** Un servidor, una base de datos, copias de seguridad, parches y una obligación de actualización.
 
-This is the right shape when content must serve several surfaces at once, when relationships matter, or when publishing must take effect instantly without a rebuild. Popular examples include Contentful, Sanity, Strapi, and [Payload](/comparison/lightcms-vs-payload-cms).
+Esta es la forma correcta cuando el contenido debe servir varias superficies a la vez, cuando las relaciones importan, o cuando la publicación debe tener efecto instantáneamente sin una reconstrucción. Ejemplos populares incluyen Contentful, Sanity, Strapi y [Payload](/comparison/lightcms-vs-payload-cms).
 
-## Git based CMS: Content as Files
+## CMS basado en Git: Contenido como Archivos
 
-A Git based CMS is an editing surface over a repository. The editor writes; the build reads.
+Un CMS basado en Git es una superficie de edición sobre un repositorio. El editor escribe; la compilación lee.
 
 ```text
-Editor ──> commit to repository ──> CI build ──> static output ──> CDN
+Editor n.> commit para el repositorio n.> CI build n.> salida estática > CDN
 ```
 
-Typical properties:
+Propiedades típicas:
 
-- **Content is documents.** Markdown files with front matter.
-- **Delivery is the build.** Pages are assembled ahead of time and served as files.
-- **Versioning is Git history.** Diffs, blame, revert, pull requests.
-- **Operations are minimal.** There is no content runtime to keep alive.
+- **El contenido es documentos.** Archivos Markdown con materia frontal.
+- **La entrega es la construcción.** Las páginas se ensamblan con antelación y sirven como archivos.
+- **Versionar es el historial de Git.** Diferencias, culpa, revierte, solicitudes de extracción.
+- **Las operaciones son mínimas.** No hay tiempo de ejecución de contenido para mantenerlas vivas.
 
-This is the right shape when the consumer is a website, the content is prose, and "no server" is a feature. Decap CMS, TinaCMS, Keystatic, Pages CMS, and [LightCMS](/blog/what-is-lightcms/) live here.
-
----
-
-## Side by Side
-
-|                      | Headless CMS                           | Git based CMS                 |
-| :------------------- | :------------------------------------- | :---------------------------- |
-| **Storage**          | Database                               | Files in a repository         |
-| **Delivery**         | API at request time                    | Build to static files         |
-| **Change latency**   | Instant                                | Next build                    |
-| **Versioning**       | Plugin or built in revisions           | Git history for free          |
-| **Portability**      | Export and convert                     | Clone the repository          |
-| **Content model**    | Relational, strongly typed             | Document-oriented             |
-| **Access control**   | Granular, per role/field               | Repository-level              |
-| **Runtime cost**     | Server + database, always on           | Build only                    |
-| **Security surface** | API, auth layer, DB, dependencies      | Nothing at runtime            |
-| **Best for**         | Multi-channel apps and complex content | Publications and static sites |
+Esta es la forma correcta cuando el consumidor es un sitio web, el contenido es proso, y "ningún servidor" es una función. Decap CMS, TinaCMS, Keystatic, Pages CMS y [LightCMS](/blog/what-is-lightcms/) viven aquí.
 
 ---
 
-## Where Each One Wins
+## Lado por lado
 
-### Choose headless when:
-
-- One body of content feeds **several consumers**: a website, an app, and an integration.
-- Content has **relationships**: products and variants, episodes and seasons, articles and authors.
-- Editors need **instant publication** with no build in the path, plus approvals and granular permissions.
-- Your frontend is an application, not a document.
-
-### Choose Git based when:
-
-- The output is a **website or publication**: blog, docs, changelog, marketing site.
-- Content is **documents**, and the natural tool for documents is a writing surface.
-- You want **zero runtime**: no server to patch, no database to bill, no per-request compute.
-- **Ownership and longevity** matter: plain files remain readable for decades, independent of any vendor.
-
-That last point deserves weight. Database content is portable only if someone writes the export and the importer survives; file content is portable on its own terms.
+|                             | CMS sin cabeza                               | CMS basado en Git                |
+| :-------------------------- | :------------------------------------------- | :------------------------------- |
+| **Almacenamiento**          | Base de datos                                | Archivos en un repositorio       |
+| **Entrega**                 | API en tiempo de solicitud                   | Construir a archivos estáticos   |
+| **Cambiar latencia**        | Instantáneo                                  | Siguiente compilación            |
+| **Versioning**              | Plugin o revisiones incorporadas             | Historial de Git gratis          |
+| **Portabilidad**            | Exportar y convertir                         | Clonar el repositorio            |
+| **Modelo contenido**        | Relacional, fuertemente escrito              | Orientado a documentos           |
+| **Control de acceso**       | Granular, por rol o campo                    | Nivel de repositorio             |
+| **Coste de ejecución**      | Servidor + base de datos, siempre encendido  | Construir sólo                   |
+| **Superficie de seguridad** | API, capa de autor, DB, dependencias         | Nada en tiempo de ejecución      |
+| **Mejor para**              | Aplicaciones multicanal y contenido complejo | Publicaciones y sitios estáticos |
 
 ---
 
-## The Overlap: Static Export and Hybrid Setups
+## Donde cada uno gana
 
-The categories blend in practice:
+### Elegir cabecera cuando:
 
-- A headless CMS with a static export step becomes Git-adjacent, but you still operate the database.
-- A Git based CMS that exposes an API for previews behaves headlessly, but the source of truth is still files.
-- Many teams run **Git based for the publication** and a **headless service for the application**, choosing per surface rather than per ideology.
+- Un cuerpo de contenido da a **varios consumidores**: un sitio web, una aplicación y una integración.
+- El contenido tiene **relaciones**: productos y variantes, episodios y temporadas, artículos y autores.
+- Las ediciones necesitan **publicación instantánea** sin compilación en el camino, además de aprobaciones y permisos granulares.
+- Su interfaz es una aplicación, no un documento.
 
-The pragmatic rule: decide where the source of truth should live for _this_ project, not which philosophy you endorse.
+### Elegir Git basado cuando:
 
----
+- La salida es un **sitio web o publicación**: blog, docs, changelog, sitio de marketing.
+- El contenido es **documentos**, y la herramienta natural para documentos es una superficie de escritura.
+- Quieres **tiempo de ejecución cero**: no hay servidor para parchear, no hay base de datos para facturar, no hay cálculo por solicitud.
+- Las **propiedades** son importantes: los archivos llanos siguen siendo legibles durante décadas, independientemente de cualquier proveedor.
 
-## A Note on Cost Shapes
-
-Headless pricing usually scales with API calls, seats, or bandwidth: consumption that grows with success. Git based costs are build minutes and hosting, which for static output is close to zero regardless of traffic. For a publication with spiky readership, that difference compounds. See [static vs dynamic sites](/blog/static-vs-dynamic/) for the underlying argument.
-
----
-
-## Frequently Asked Questions
-
-### Is a Git based CMS headless?
-
-Not usually. Its output is static HTML from a build rather than API-delivered content, so the "headless" framing does not quite apply, though it is equally decoupled from presentation.
-
-### Which is better for SEO?
-
-Either works. Static Git based output tends to score better on Core Web Vitals by default because there is no server work in the page load.
-
-### Which is easier for non-technical editors?
-
-Both can be easy. What matters is the editor itself: a document editor versus a field form matters more than the storage layer underneath.
-
-### Can I switch between them later?
-
-Yes, but with different costs. Git to headless means importing files into a schema; headless to Git means exporting entries to Markdown. Plan the migration before the content model gets complicated.
-
-#### Do I need a developer for a Git based CMS?
-
-Once, to connect the repository and confirm the build. After that, publishing is a browser activity.
+Este último punto merece nuestro peso. El contenido de la base de datos es portable sólo si alguien escribe la exportación y el importador sobrevive; el contenido del archivo es portable en sus propios términos.
 
 ---
 
-Related: [What is a Git based CMS?](/blog/git-based-cms-explained/), [what is a headless CMS?](/blog/headless-cms-explained/), and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+## La Global: Exportación Estática y Configuración de Hybrid
+
+Las categorías se mezclan en la práctica:
+
+- Un CMS sin cabeza con un paso estático de exportación se convierte en Git-adiger, pero usted todavía opera la base de datos.
+- Un CMS basado en Git que expone una API para previsualizaciones se comporta sin cabeza, pero la fuente de la verdad sigue siendo los archivos.
+- Muchos equipos ejecutan **Git basado en la publicación** y un **servicio sin cabeceras para la aplicación**, eligiendo por superficie en lugar de por ideología.
+
+La regla pragmática: decide dónde debe vivir la fuente de la verdad para _este_ proyecto, no qué filosofía apoyas.
+
+---
+
+## Una nota en formas de costo
+
+Los precios sin cabeza suelen escalar con llamadas API, asientos o ancho de banda: consumo que crece con éxito. Los costos basados en Git son minutos de construcción y alojamiento, que para la salida estática es cercano a cero sin importar el tráfico. Para una publicación con lectores puntiagudos, esa diferencia compuesta. Ver [sitios dinámicos vs estáticos] (/blog/static-vs-dynamic/) para el argumento subyacente.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Es un CMS basado en Git sin cabeza?
+
+No es habitual. Su salida es HTML estático de una compilación en lugar de contenido entregado por API. por lo que el marco "sin cabeza" no es del todo aplicable, aunque se desacopla igualmente de la presentación.
+
+### ¿Qué es mejor para SEO?
+
+Cualquiera funciona. La salida estática basada en Git tiende a puntuar mejor en las Vitales Web Principales por defecto porque no hay ningún servidor en la carga de la página.
+
+### ¿Qué es más fácil para los editores no técnicos?
+
+Ambos pueden ser fáciles. Lo que importa es el propio editor: un editor de documentos versus un formulario de campo importa más que la capa de almacenamiento debajo.
+
+### ¿Puedo cambiar entre ellos más tarde?
+
+Sí, pero con costos diferentes. Git a headless significa importar archivos en un esquema; sin cabeceras a Git significa exportar entradas a Markdown. Planificar la migración antes de que el modelo de contenido se complique.
+
+#### ¿Necesito un desarrollador para un CMS basado en Git?
+
+Una vez, para conectar el repositorio y confirmar la compilación. Después de eso, publicar es una actividad del navegador.
+
+---
+
+Relacionado: [¿Qué es un CMS basado en Git?](/blog/git-based-cms-explained/), [¿Qué es un CMS sin cabeza?](/blog/headless-cms-explained/), y [CMS basado en Git vs CMS tradicional](/blog/git-cms-vs-traditional-cms/).
