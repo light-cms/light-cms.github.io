@@ -66,7 +66,7 @@ So oder so, koppeln Sie es mit einem statischen Host ([Cloudflare Seiten vs GitH
 
 ### Ist Hugo schneller als Jekyll?
 
-Bezeichnenderweise Hugo's Go-Binärdatei baut große Standorte in Sekunden; Jekyls Ruby Toolchain dauert proportional länger.
+Bezeichnenderweise Bezeichnenderweise Hugo's Go-Binärdatei baut große Standorte in Sekunden; Jekyls Ruby Toolchain dauert proportional länger.
 
 ### Soll ich Jekyll nach Hugo migrieren?
 
