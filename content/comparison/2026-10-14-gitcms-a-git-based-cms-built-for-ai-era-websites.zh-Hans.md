@@ -1,83 +1,83 @@
 ---
-title: "GitCMS: A Git Based CMS Built for AI-Era Websites"
-description: What GitCMS is, how it keeps human and AI edits reviewable in your repository, how it compares with Pages CMS, and when to choose it.
+title: "GitCMS：基于 Git 的 CMS 构建适用于 AI-Era 网站"
+description: GitCMS是什么，它如何使人和 AI 在你的仓库中编辑可以审查的内容，它如何与页面CMS进行比较，以及何时选择它。
 serial: 15
 date: 2026-10-14T13:20:00Z
 draft: false
 keywords:
   - gitcms
   - gitcms vs pages cms
-  - ai cms for websites
-  - git based cms
-  - cms for ai built sites
+  - 网站的 ai cms
+  - 基于 git 的 cms
+  - 开源站点的cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
+    - 厘米
     - gitcms
     - ai
     - git
 ---
 
-[GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built with AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
+[GitCMS](https://gitcms.dev) 接受基于 Git 的 CMS 模型，目标是一个非常2026 问题：网站越来越多地\*\*与AI 代理人建立起来\* 团队需要一个安全的地方，人类和代理人可以编辑、审查和发布更改，然后才能进入故障。它保持与每个Git CMS相同的基础(内容生活在您的仓库中)，但增加编辑结构和 AI 工作流。
 
 ---
 
-## The Idea Behind GitCMS
+## GitCMS背后的概念
 
-The pitch: your AI coding agent (or your client's agent) writes the site; GitCMS gives everyone (team, clients, and agents) a governed place to make changes afterward. Instead of an agent's edits landing as raw, unreviewed commits, changes flow through a CMS layer where they can be reviewed and published deliberately.
+pitch：您的 AI 编码代理(或您的客户代理) 写入网站； GitCMS让每个人(团队、客户和代理人)有一个有管理的地方来随后进行更改。未经审核的承诺，而不是代理人的编辑着陆，而是经过CMS层的更改，可以审慎审查和公布。
 
-That positioning distinguishes it from the rest of the category, which mostly optimizes for human writers:
+这种定位使它有别于该类别的其他部分，后者主要优化人类作者：
 
 - **Pages CMS** optimizes for simplicity: free forms over a GitHub repo ([full review](/comparison/pagescms/)).
-- **Decap CMS** optimizes for configuration: collections defined in YAML ([full review](/comparison/netlifycms/)).
-- **GitCMS** optimizes for governance: AI-assisted changes that stay reviewable and human-approved.
+- **Decap CMS** 优化配置：在 YAML 定义的收藏 ([完全审核](/comparison/netlifycms/))。
+- **GitCMS** 优化治理：由AI协助的更改，可随时审查和获得人类批准。
 
-## How It Works
+## 如何工作
 
-GitCMS connects to your repository and layers a richer editor, editorial workflows, and AI-assisted editing over your existing files. Content and code changes remain commits in your repo (nothing is trapped in a proprietary store), and publishing stays compatible with your normal CI/CD pipeline.
+GitCMS连接到您的资源库和图层，一个更丰富的编辑器，编辑工作流，以及AI协助编辑您现有的文件。内容和代码更改仍然在您的仓库中提交 (没有被困在专有仓库里)，并且发布与您的正常CI/CD 管道兼容。
 
-## Strengths
+## 长度：
 
-- Designed around **AI-agent workflows**, a problem the older Git CMS tools do not address.
-- Richer editing experience and editorial structure compared with form-only tools.
-- Keeps the core Git based promise: your repository remains the source of truth.
+- 围绕**AI-agent workflows**设计，这是一个老的 Git CMS 工具没有解决的问题。
+- 与只有形式的工具相比，有丰富的编辑经验和编辑结构。
+- 保持基于核心Git的许诺：你的仓库仍然是真理的来源。
 
-## Limitations
+## 限制
 
-- A younger product with a smaller ecosystem than Decap CMS.
-- Paid plans beyond the free tier, unlike the fully open-source options below.
-- Best suited to teams actually using AI agents; solo writers may not need the governance layer.
+- 一种比Decap CMS更小的生态系统的较年轻的产品。
+- 与下面完全开放源码选项不同的是，付费计划超越自由等级。
+- 最适合于实际使用AI 代理的团队；独作家可能不需要管理层。
 
-## How It Compares
+## 如何Compares
 
-|         | GitCMS                 | Pages CMS    | LightCMS                               |
-| :------ | :--------------------- | :----------- | :------------------------------------- |
-| Focus   | AI-safe publishing     | Simple forms | Full writing workspace                 |
-| Editor  | Rich, AI-assisted      | Form-based   | TipTap WYSIWYG                         |
-| Extras  | Agent workflows        | None         | AI copilot, voice-to-text, newsletters |
-| License | Free tier + paid plans | Free (MIT)   | Free (Apache 2.0)                      |
+|        | GitCMS    | 页面CMS      | LightCMS                        |
+| :----- | :-------- | :--------- | :------------------------------ |
+| 聚焦点    | AI安全发布    | 简易形式       | 完整写入工作区                         |
+| 编辑器    | 富，AI助的    | 基于表单       | TipTap WYSIWYG                  |
+| Extras | 代理工作流     | 无          | AI copilot, voice to text, news |
+| 许可协议   | 免费级别+付费计划 | Free (MIT) | Free (Apache 2.0)               |
 
-- [Pages CMS vs alternatives](/comparison/pagescms/) covers the simple end of the category.
+- [CMS vs alternatives](/comparison/pagescms/) 包含该类别的简单结尾。
 - [Top Git based CMS platforms](/comparison/top-git-cms/) is the full survey.
-- [LightCMS](/getting-started/) bundles AI drafting and [newsletter distribution](/blog/newsletter-email-automation/) for solo publishers and teams.
+- [LightCMS](/getting-started/) 捆绑了AI 起草版和[通讯发行](/blog/newsletter-email-automation/)，供单独出版商和团队使用。
 
 ---
 
-## Frequently Asked Questions
+## 常见问题
 
-### What Is GitCMS?
+### GitCMS是什么？
 
-A Git based CMS positioned for code-first and AI-built websites: it gives teams, clients, and AI agents one reviewable place to edit and publish changes that stay in your repository.
+一个基于 Git 的CMS，能够用于代码-I 和 AI-builded 网站：它提供团队、客户端， 和 AI 代理人一个可审核的地方来编辑和发布存放在您的仓库中的更改。
 
-### Is GitCMS Free?
+### GitCMS 是否免费？
 
-There is a free tier for a single site, with paid plans for more. Fully free, open-source alternatives include Pages CMS, Decap CMS, and LightCMS.
+单个站点有免费层级，付费计划更多。完全免费的开放源码备选方案包括Pages CMS、Decap CMS和LightCMS。
 
-### How Is GitCMS Different from Pages CMS?
+### GitCMS 如何不同于页面CMS？
 
-Pages CMS is a minimal, free form editor over GitHub. GitCMS adds a richer editor, editorial workflows, and AI-agent governance on the same Git based model.
+Pages CMS 是 GitHub 上的最小免费表单编辑器。 GitCMS在同一个基于 Git 的模式上添加了一个更丰富的编辑、编辑工作流程和AI代理治理。
 
-### Do I Need AI Agents to Use GitCMS?
+### 我需要AI 代理才能使用 GitCMS 吗？
 
-No. But if AI agents regularly commit to your site's repository, the review layer is the main reason to choose it.
+否。但是，如果AI 代理人定期承诺到您的站点仓库，审核层是选择它的主要原因。
