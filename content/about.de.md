@@ -1,6 +1,6 @@
 ---
 title: Über
-description: 'Inhalt verwaltet mit: lightcms.me'
+description: 'Inhalte verwaltet mit: lightcms.me'
 draft: false
 weight: 0
 keywords:
@@ -15,7 +15,7 @@ tags:
   - sveltekit
 isCJKLanguage: false
 headless: false
-slug: über
+slug: about
 date: '2026-11-08T21:20:01.403Z'
 extra:
   comments: false
