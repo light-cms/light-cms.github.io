@@ -1,82 +1,82 @@
 ---
-title: Why LightCMS?
-description: "The philosophy behind LightCMS: why writing should be frictionless, why Git based content matters, and why complexity stays away from the writer."
+title: Почему LightCMS?
+description: "Философия LightCMS: почему написание должно быть бессмысленным, почему контент на Git имеет важное значение, и почему сложность остается от писателя."
 serial: 2
 date: 2026-09-18T00:41:00Z
 draft: false
 keywords:
-  - why lightcms
-  - gitbacked cms
-  - static sites
-  - carbon footprint
+  - почему лампы
+  - сцепленные смс
+  - статические сайты
+  - углеродный след
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
-    - philosophy
-    - lightcms
+    - смс
+    - философия
+    - молнии
 ---
 
-I’ve tried dozens of CMSs over the years, and most felt a little pale. They worked, but they often missed the mark on the human experience of writing and managing a publication.
+Я пробовал десятки CMSs на протяжении многих лет, и наиболее чувствовал себя немного пальца. Они работали, но часто упускали из виду человеческий опыт написания и управления публикацией.
 
-The closest thing I found to a pleasant developer workflow was Front Matter in VS Code. It makes managing content files easier, but the barrier remains: opening a whole code editor, pulling remote Git branches, resolving formatting conflicts, and debugging local tools is a lot of friction for a three-paragraph reflection.
+Самое близкое что я нашел для приятного разработчика рабочий процесс Front Matter в VS Code. Управление файлами контента упрощается, но барьер остается: открытие всего редактора кода, получение удаленных Git ветвей, разрешение конфликтов форматирования и отладки локальных инструментов очень много трения для отражения в трех абзацах.
 
-Writing should be the easy part.
-
----
-
-## The Imperative to Share
-
-There is real value in owning your publishing space on the web:
-
-1. **If you learned something over the years, share it.**
-2. **If you built something intriguing, write about it.**
-3. **If you solved a tricky bug that took you three days to understand, document it.** Six months from now, someone will search for that exact error and find your solution.
-
-Everyone deserves their own little corner of the internet. Publishing essays and technical insights shouldn't depend on proprietary social platforms that manipulate reach or lock your content behind algorithmic walls.
-
-Yet getting started shouldn't require you to be a senior DevOps engineer or full-stack web developer.
+Написание должно быть простой частью.
 
 ---
 
-## The Static Site Paradox
+## Императив для отправки
 
-Static sites are the simplest, fastest, and most durable way to publish content on the web:
+Есть реальная ценность в вашем издательском пространстве в Интернете:
 
-- **Fast**: Pre-rendered HTML and CSS served globally from edge CDNs.
-- **Secure**: No server-side runtime or vulnerable database listeners exposed to the public.
-- **Eco-Friendly**: Minimal computational overhead and zero database queries per page view reduce digital carbon emissions (tools like [Website Carbon](https://www.websitecarbon.com/) measure the difference).
+1. **Если вы научились чему-то на протяжении многих лет, поделитесь ими.**
+2. **Если вы что-то построили, напишите об этом.**
+3. \*\*Если вы решили сложную ошибку, которая ушла вам три дня, сообщите об этом. \* Через шесть месяцев кто-то будет искать точную ошибку и найти ваше решение.
 
-There is no shortage of capable static site generators: [Astro](https://astro.build), [Hugo](https://gohugo.io), [Jekyll](https://jekyllrb.com), [SvelteKit](https://svelte.dev), and [Eleventy](https://www.11ty.dev).
+Каждый заслуживает своего маленького угла интернета. Публикация эссе и технических идей не должны зависеть от собственных социальных платформ, которые манипулируют достижением или блокируют содержимое за алгоритмическими стенами.
 
-**The paradox is that while running a static site is simple, managing it is not.**
-
-You shouldn't need to understand Git rebase flags, Markdown terminal linters, front matter YAML schema validators, or GitHub token scopes to publish your thoughts. Asking a non-technical writer or a tired developer to navigate VS Code at midnight is too much friction.
+Тем не менее, вы не должны требовать быть старшим инженером DevOps или полноштатным веб-разработчиком.
 
 ---
 
-## A Greener Web Is a Static Web
+## Парадокс Статического Сайта
 
-Static publishing wins on energy. A dynamic site burns electricity on every request; a static site does the work once and serves the result from cache, close to the reader, at a fraction of the energy. No always-on database, no per-view computation, no runtime shipped to the visitor's battery.
+Статические сайты являются простым, быстрым и наиболее прочным способом опубликования содержания в Интернете:
 
-Durable content is sustainable content, too: plain Markdown files in your own repository remain readable and rebuildable for decades, while platforms shut down and WordPress installs rot. Every blog that moves from database-driven hosting to a static architecture is a permanent, measurable reduction in its carbon footprint.
+- **Fast**: Предварительно отображаемые HTML и CSS сервисы по всему миру с самых современных CDNs.
+- **Безопасно**: Никаких запусков или уязвимых слушателей баз данных не подвергались воздействию общественности.
+- **Удобные для здоровья**: Минимальные накладные расходы и нулевые запросы к базе данных на одну страницу снижают выброс цифровых углерода (такие инструменты как [Карбон веб-сайта](https://www.websitecarbon.com/) измеряют разницу).
 
-More: [Static Sites and CO2: Building a Greener Web](/blog/greener-web-static-sites/).
+Нет недостатка способных статических генераторов сайта: [Astro](https://astro.build), [Hugo](https://gohugo.io), [Jekyll](https://jekyllrb.com), [SvelteKit](https://svelte.dev) и [Eleventy](https://www.11ty.dev).
+
+**Парадокс в том, что при запуске статического сайта он прост, управляйте им нет.**
+
+Вам не нужно понимать флаги Git, linters терминалов Markdown, валидаторы схемы YAML или области действия токена GitHub для публикации ваших мыслей. Запросить нетехнического писателя или уставного разработчика для навигации по VS Code в полночь слишком много трений.
 
 ---
 
-## A CMS That Stays Out of Your Way
+## Greener Web - это статическая веб
 
-[LightCMS](https://lightcms.me) aims to make writing and publishing simple without sacrificing the benefits of modern developer tooling:
+Статическая публикация выигрывает на энергию. Динамичное устройство сжигает электричество по любой заявке; статический сайт выполняет работу раз и служит в результате кэша, близко к читателю, на долю энергии. База данных не всегда доступна, нет вычислений на просмотр, время работы не отгружается на батарею посетителя.
 
-- **Content Lives in Git**: Your articles remain pure Markdown in your own GitHub repository.
-- **Automated CI/CD**: Your existing build pipelines (GitHub Actions, Vercel, Cloudflare Pages) continue to build and deploy your site automatically.
-- **Frictionless Writing**: The author opens a distraction-free visual editor in their browser, writes, formats, and hits publish.
+Прочный контент является устойчивым и содержимым: простые файлы Markdown в вашем собственном репозитории остаются читаемыми и восстанавливаемыми десятилетиями, в то время как платформы выключены, а WordPress инсталлирует гниль. Каждый блог, который переходит от хостинга базы данных к статической архитектуре, является постоянным, измеримым сокращением его углеродного следа.
 
-You get all the auditability, rollback safety, and ownership of a Git based repository, while the author gets a distraction-free environment built for writing.
+Более того: [Статические сайты и CO2: Создание Greener Web](/blog/greener-web-static-sites/).
+
+---
+
+## CMS пребывает вне вашего пути
+
+[LightCMS](https://lightcms.me) нацелена на простоту написания и публикации без ущерба для современных инструментов разработчика:
+
+- **Контент живет в Git**: Ваши статьи остаются чистыми Markdown в вашем собственном репозитории GitHub.
+- **Automated CI/CD**: Ваши существующие трубопроводы (GitHub Actions, Vercel, Cloudflare Pages) продолжают создавать и развертывать ваш сайт автоматически.
+- **Беспроводная запись**: Автор открывает в браузере визуальный редактор без отвлекающих слов, пишет, форматов и хитов публикации.
+
+Вы получаете всю аудиторию, защиту отката и владение репозиторием на основе Git, в то время как автор получает сборку с отвлекающим окружением.
 
 ---
 
 ## TL;DR
 
-Writing a blog post should not feel like a high-stakes engineering task. Getting your ideas into words should be the easy part.
+Написание записи в блоге не должно чувствовать себя высокопоставленными инженерными задачами. Познакомьтесь со своими идеями в словах должно быть легкой частью.
