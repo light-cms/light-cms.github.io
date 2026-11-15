@@ -1,17 +1,17 @@
 ---
-title: About
-description: 'Content managed with: lightcms.me'
+title: À propos de
+description: 'Contenu géré avec : lightcms.me'
 draft: false
 weight: 0
 keywords:
-  - about lightcms
-  - lightcms blog
-  - git backed cms blog
-  - static site writing
+  - à propos de lightcms
+  - blog lightcms
+  - blog cms supporté par git
+  - écriture statique du site
 tags:
-  - about
+  - à propos de
   - lightcms
-  - opensource
+  - Source opensource
   - sveltekit
 isCJKLanguage: false
 headless: false
@@ -20,33 +20,33 @@ date: '2026-11-08T21:20:01.403Z'
 extra:
   comments: false
 ---
-## What we write here
+## Ce que nous avons écrit ici
 
-We write about what we learn while building [LightCMS](https://lightcms.me/), and about the problems it aims to solve.
+Nous écrivons sur ce que nous apprenons en construisant [LightCMS](https://lightcms.me/), et sur les problèmes qu'il vise à résoudre.
 
-New here? Start with [what LightCMS is](/blog/what-is-lightcms/) or [why it exists](/blog/why-this).
+Nouveau ici? Commencez par [ce qu'est LightCMS](/blog/what-is-lightcms/) ou [pourquoi il existe] (/blog/why-this).
 
 ---
 
-## Who we are
+## Qui nous sommes
 
-We are building [LightCMS](https://lightcms.me/). We want writing to feel straightforward and publishing to feel simple.
+Nous construisons [LightCMS](https://lightcms.me/). Nous voulons que l'écriture se sente simple et que l'édition se sente simple.
 
-Static site generators can produce fast, lightweight websites, but they often ask writers to work like developers. With LightCMS, we want more people to publish on the web with static sites, without needing to learn a developer workflow first.
+Les générateurs de sites statiques peuvent produire des sites Web rapides et légers, mais ils demandent souvent aux écrivains de travailler comme des développeurs. Avec LightCMS, nous voulons que plus de gens publient sur le web avec des sites statiques, sans avoir à apprendre un workflow développeur d'abord.
 
-## Where to find us
+## Où nous trouver
 
-- **Website:** [lightcms.me](https://www.lightcms.me/)
-- **Main source code:** [github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
+- **Site Web:** [lightcms.me](https://www.lightcms.me/)
+- **Code source principal :** [github.com/light-cms/lightcms](https://github.com/light-cms/lightcms)
 - **Starter templates:** [github.com/light-cms](https://github.com/light-cms/)
-- **Newsletter tool:** [Newsy](https://github.com/light-cms/newsy)
-- **X (Twitter):** [@LightCms5](https://x.com/LightCms5)
+- **Outil de newsletter :** [Newsy](https://github.com/light-cms/newsy)
+- **X (Twitter) :** [@LightCms5](https://x.com/LightCms5)
 - **Bluesky:** [@lightcms.bsky.social](https://bsky.app/profile/lightcms.bsky.social)
 - **Discord:** [https://discord.gg/HwNd6SufRT](https://discord.gg/HwNd6SufRT)
-- **Message us:** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
+- **Envoyez-nous un message :** [https://app.youform.com/forms/smwrhikc](https://app.youform.com/forms/smwrhikc)
 
-We manage this site's content with [LightCMS](https://lightcms.me/).
+Nous gérons le contenu de ce site avec [LightCMS](https://lightcms.me/).
 
-## Get in touch
+## Contacter
 
-Have a correction, a comparison we have not written, or a workflow you would like covered? Open an issue or send a pull request. We welcome contributions.
+Ayez une correction, une comparaison que nous n'avons pas écrite, ou un workflow que vous aimeriez couvrir? Ouvrir un ticket ou envoyer une pull request. Nous saluons les contributions.
