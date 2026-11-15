@@ -1,109 +1,109 @@
 ---
-title: "LightCMS vs Joomla: Traditional CMS vs Git based Publishing"
-description: "Joomla is a classic self-hosted CMS with an admin panel and database; LightCMS stores content as Markdown in Git and ships static pages. A clear-eyed comparison."
+title: "LightCMS vs Joomla: Publicación basada en CMS tradicional vs Git"
+description: "Joomla es un CMS clásico autoalojado con un panel de administración y base de datos; LightCMS almacena contenido como Markdown en Git y barca páginas estáticas. Una comparación clara."
 serial: 56
 date: 2026-10-16T13:00:00Z
 draft: false
 keywords:
-  - lightcms vs joomla
-  - joomla alternatives
-  - joomla vs static site
-  - joomla migration
-  - modern cms for blogs
+  - faros vs joomla
+  - alternativas de joomla
+  - joomla vs sitio estático
+  - migración de joomla
+  - modernos cms para blogs
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - luces
     - joomla
     - cms
-    - comparison
+    - comparación
 ---
 
-[Joomla](https://www.joomla.org) has been a credible open-source CMS for two decades: a PHP application with an admin panel, extensions, templates, and a database, the middle path between WordPress's ubiquity and Drupal's weight.
+[Joomla](https://www.joomla.org) ha sido un CMS de código abierto creíble durante dos décadas: una aplicación PHP con un panel de administración, extensiones, plantillas y una base de datos, el camino medio entre la ubicuidad de Wordpress y el peso de Drupal.
 
-If you are evaluating it in 2026 for a publication, the interesting question is not Joomla vs LightCMS feature-for-feature. It is whether you want a _server-rendered application_ or _files in a repository_ for content that mostly gets read.
-
----
-
-## The Two Models
-
-**Joomla** runs on your server: PHP executes per request, MySQL or PostgreSQL serves queries, extensions add behavior, and templates control output. Everything is dynamic by default and the whole stack is yours to maintain.
-
-**LightCMS** writes files: Markdown with front matter into Git, a static build, and a CDN. Nothing executes at request time, and there is no admin login to protect.
-
-|                      | LightCMS                        | Joomla                           |
-| :------------------- | :------------------------------ | :------------------------------- |
-| **Storage**          | Markdown files in Git           | SQL database                     |
-| **Rendering**        | Pre-built static HTML           | PHP per request                  |
-| **Admin**            | Browser document editor         | Admin panel + extensions         |
-| **Versioning**       | Git history and revert          | Version history in database      |
-| **Extensions**       | External services / build steps | Large extension directory        |
-| **Maintenance**      | None at runtime                 | Core, extension, and PHP updates |
-| **Security posture** | No runtime to attack            | Patching + hardening             |
-| **Portability**      | Clone the repository            | Database export                  |
+Si lo está evaluando en 2026 para una publicación, la pregunta interesante no es Joomla vs LightCMS feature-for-feature-feature-feature. Es si desea una _aplicación renderizada por servidor_ o _archivos en un repositorio_ para contenido que en su mayoría sea leído.
 
 ---
 
-## Where Joomla Wins
+## Los dos modelos
 
-- **Dynamic features.** Forms, memberships, forums, e-commerce, and anything requiring server-side logic.
-- **Extensions for everything.** Two decades of components and modules cover edge cases that a static stack would need services for.
-- **Familiar administration.** A traditional CMS dashboard that content teams already understand.
-- **Server-side rendering flexibility** without a build step.
+**Joomla** se ejecuta en tu servidor: PHP se ejecuta por solicitud, MySQL o PostgreSQL sirve consultas, extensiones agregan comportamiento, y plantillas de salida de control. Todo es dinámico por defecto y toda la pila es tuya para mantener.
 
-## Where LightCMS Wins
+**LightCMS** escribe archivos: Markdown con materia frontal en Git, una construcción estática y un CDN. Nada se ejecuta cuando se solicita, y no hay ningún login de administrador para proteger.
 
-- **No patch cycle.** No PHP version to upgrade, no extension advisories to monitor, no admin surface to brute-force.
-- **Performance without tuning.** Static files from a CDN win on speed by architecture, not by caching configuration.
-- **Cost shape.** Traffic spikes do not mean server upgrades. See [static site hosting compared](/misc/top-static-site-hosting/).
-- **Content durability.** Files survive any tool; a Joomla database needs a compatible version to restore into.
-- **Writer-first editing.** A document editor with [AI assistance](/blog/lightcms-ai-copilot/) and [dictation](/blog/lightcms-voice-to-text/) rather than an article form in an admin panel.
-
----
-
-## When Joomla Still Makes Sense
-
-If the project needs membership areas, dynamic queries, or extension-driven functionality, Joomla is a reasonable, battle-tested choice, especially for organizations already invested in it. The migration cost of leaving is the main reason to stay, and that is legitimate.
-
-For a new publishing project, though, you would be adopting a runtime you do not need to publish text.
+|                          | LightCMS                                   | Joomla                                     |
+| :----------------------- | :----------------------------------------- | :----------------------------------------- |
+| **Almacenamiento**       | Archivos Markdown en Git                   | Base de datos SQL                          |
+| **Renderizando**         | HTML estático precompilado                 | PHP por solicitud                          |
+| **Administrador**        | Editor de documentos del navegador         | Panel de administración + extensiones      |
+| **Versioning**           | Historial de Git y revertir                | Historial de versiones en la base de datos |
+| **Extensiones**          | Servicios externos / pasos de construcción | Directorio de extensiones grande           |
+| **Mantenimiento**        | Ninguno en tiempo de ejecución             | Actualizaciones de núcleo, extensión y PHP |
+| **Postura de seguridad** | No hay tiempo de ejecución para atacar     | Parcheo + endurecimiento                   |
+| **Portabilidad**         | Clonar el repositorio                      | Exportar base de datos                     |
 
 ---
 
-## Migration
+## Donde gana Joomla
 
-Joomla content can be exported via its native exporter or extensions like J2XML, and tools exist to convert articles to Markdown. Images need pulling from the media library into your asset directory. Blog-shaped content converts cleanly; menu and module structures become templates in the new stack.
+- **Características dinámicas.** Formos, membresías, foros, comercio electrónico y cualquier cosa que requiera lógica del lado del servidor.
+- **Extensiones para todo.** Dos décadas de componentes y módulos cubren casos de bordes para los que una pila estática necesitaría servicios.
+- **Administración familiar.** Un tablero CMS tradicional que los equipos de contenido ya entienden.
+- **flexibilidad de renderizado del lado del servidor** sin un paso de construcción.
 
----
+## Donde LightCMS gana
 
-## Which Should You Choose?
-
-- **Choose Joomla** when you need dynamic, extension-driven functionality on a server you control.
-- **Choose LightCMS** when the site is a publication and you want files, a build, and a CDN.
-
----
-
-## Frequently Asked Questions
-
-### Is Joomla still maintained?
-
-Yes, it is an active open-source project. Verify current release and support cycles before committing.
-
-### Is Joomla better than WordPress?
-
-Different trade-offs: Joomla offers more configuration out of the box; WordPress offers a larger ecosystem. Both are database-backed applications.
-
-### Can LightCMS do what Joomla does?
-
-For publishing, yes. For dynamic applications, no, and it does not try to be. See [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
-
-### How hard is it to move from Joomla to Markdown?
-
-Article content converts well; extensions and module layouts do not translate. Budget time for structure as well as text.
-
-### Will a static site rank better than Joomla?
-
-Both can rank. Static pages typically load faster with less tuning, which helps Core Web Vitals.
+- **Ciclo de parche.** No hay versión de PHP para actualizar, no hay avisos de extensión para monitor, no hay superficie de administración para fuerza bruta.
+- **Rendimiento sin sintonizar.** Archivos estáticos de un CDN ganan velocidad por arquitectura, no por la configuración de caché.
+- **Forma de costo.** Los picos no significan actualizaciones del servidor. Ver [sitio estático de alojamiento comparado](/misc/top-static-site-hosting/).
+- **Durabilidad del contenido.** Los archivos sobreviven a cualquier herramienta; una base de datos de Joomla necesita una versión compatible para restaurar.
+- **Edición por primera vez del escritor.** Un editor de documentos con [asistencia de IA](/blog/lightcms-ai-copilot/) y [dictation](/blog/lightcms-voice-to-text/) en lugar de un formulario de artículo en un panel de administración.
 
 ---
 
-More: [LightCMS vs Drupal](/comparison/lightcms-vs-drupal), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [Git based CMS explained](/blog/git-based-cms-explained/).
+## Cuando Joomla sigue teniendo sentido
+
+Si el proyecto necesita áreas de membresía, consultas dinámicas o funcionalidad impulsada por extensiones, Joomla es una opción razonable, probada por la batalla, especialmente para organizaciones ya invertidas en él. El coste de la emigración es la principal razón para quedarse, y eso es legítimo.
+
+Para un nuevo proyecto de publicación, sin embargo, usted estaría adoptando un tiempo de ejecución que no necesita publicar texto.
+
+---
+
+## Migración
+
+El contenido de Joomla se puede exportar a través de su exportador nativo o extensiones como J2XML, y existen herramientas para convertir artículos a Markdown. Las imágenes necesitan retirarse de la biblioteca de medios a su directorio de activos. El contenido en forma de blogs se convierte limpiamente; las estructuras de menús y módulos se convierten en plantillas en la nueva pila.
+
+---
+
+## ¿Qué debería elegir?
+
+- **Elige Joomla** cuando necesitas una funcionalidad dinámica y basada en extensiones en un servidor que controles.
+- **Elige LightCMS** cuando el sitio es una publicación y quieres archivos, una compilación y un CDN.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Sigue manteniéndose Joomla?
+
+Sí, es un proyecto de código abierto activo. Verifique la versión actual y los ciclos de soporte antes de confirmar.
+
+### ¿Es Joomla mejor que WordPress?
+
+Diferentes compensaciones: Joomla ofrece más configuración de la caja; WordPress ofrece un ecosistema más grande. Ambas son aplicaciones respaldadas por base de datos.
+
+### ¿Puede LightCMS hacer lo que Joomla hace?
+
+Por publicar, sí. Para aplicaciones dinámicas, no, y no lo intenta. Ver [CMS sin cabeza vs Git basado en CMS](/blog/headless-vs-git-based-cms/).
+
+### ¿Cuán difícil es pasar de Joomla a Markdown?
+
+El contenido del artículo se convierte bien; las extensiones y los diseños de módulos no se traducen. Tiempo presupuestario tanto para la estructura como para el texto.
+
+### ¿Será un sitio estático mejor que Joomla?
+
+Ambos pueden clasificarse. Las páginas estáticas normalmente cargan más rápido con menos sintonización, lo que ayuda a Core Web Vitals.
+
+---
+
+Más: [LightCMS vs Drupal](/comparison/lightcms-vs-drupal), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), [Git based CMS explained](/blog/git-based-cms-explained/).
