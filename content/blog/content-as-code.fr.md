@@ -1,19 +1,19 @@
 ---
-title: 'Content as Code: Treating Writing Like Source Code'
+title: 'Contenu comme code : Traiter l''écriture comme code source'
 description: >-
-  Content as code means storing writing as plain text in a repository, reviewed and deployed like software, with the workflow benefits and the real limitations.
+  Le contenu en tant que code signifie stocker en texte brut dans un référentiel, révisé et déployé comme un logiciel, avec les avantages du flux de travail et les limites réelles.
 date: '2026-11-04T19:22:00Z'
 draft: false
 keywords:
-  - content as code
-  - docs as code
-  - content in git
-  - markdown workflow
-  - version controlled content
+  - contenu en tant que code
+  - docs comme code
+  - contenu dans git
+  - Markdown workflow
+  - contenu contrôlé par la version
 tags:
-  - Content
+  - Contenus
   - Frontmatter
-  - Docs
+  - Documents
   - Markdown
   - Lightcms
 isCJKLanguage: false
@@ -23,119 +23,120 @@ preview: /og-image.png
 taxonomies:
   tags:
     - git
-    - workflow
+    - flux de travail
     - cms
-    - explainers
+    - expliqueurs
 ---
-**Content as code** is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
+**Contenu en tant que code** est la pratique de stocker l'écriture de la façon dont les développeurs stockent la source: les fichiers en texte brut dans un référentiel, vérifié dans les pull requests, validé par des vérifications automatisées et déployé par un pipeline.
 
-"Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
-
----
-
-## The Three Commitments
-
-Content as code comes down to three choices:
-
-1. **Plain text is the format.** Markdown or AsciiDoc, YAML or TOML front matter, UTF-8 files. Nothing proprietary, nothing that needs the original tool to open.
-2. **The repository is the system of record.** Not a database, not a wiki, not a shared drive. If it is not in Git, it does not exist.
-3. **The pipeline treats content like a build.** Linters check links and style, previews render every pull request, and merging deploys.
-
-Once those hold, most of the benefits follow automatically.
+"Docs as code" est le nom plus ancien. Les équipes de documentation technique l'ont commencé, et il s'est propagé aux blogs, aux changelogs, copie marketing, et tout ce qui était utilisé pour vivre dans un wiki ou une base de données CMS.
 
 ---
 
-### What You Inherit From Software Practice
+## Les trois engagements
 
-### Review that means something
+Le contenu sous forme de code se résume à trois choix :
 
-A pull request on a document gives line-level comments on the exact sentence, an explicit approve, and a merge. Editorial review happens in the pull request instead of an email thread with attachments.
+1. **Le texte brut est le format.** Les fichiers Markdown ou AsciiDoc, YAML ou TOML, UTF-8. Rien de propriétaire, rien qui ait besoin de l'outil original pour s'ouvrir.
+2. **Le dépôt est le système d'enregistrement.** Pas une base de données, pas un wiki, pas un lecteur partagé. Si elle n'est pas dans Git, elle n'existe pas.
+3. **Le pipeline traite le contenu comme une construction.** Les Linters vérifient les liens et le style, les aperçus rendent chaque demande de pull et les déploiements de fusion.
 
-### History that answers questions
-
-`git log` on a file shows every change, author, and timestamp. "When did we change the pricing claim?" is a search, not an investigation.
-
-### Automation
-
-Spelling, link checking, style rules, front matter validation, and preview builds all run on the same CI that builds code. Broken metadata fails the pipeline instead of the live site.
-
-### Parallel work
-
-Two writers on two files merge cleanly. Conflicts are rare by construction, because the unit of content is a file.
-
-### Backup and portability
-
-Every clone is a complete copy. Moving platforms is a `git clone` away from succeeding.
-
-### Where It Gets Hard
-
-The honest list, because this is not free:
-
-- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git based CMS tools fill.
-- **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
-- **Structure is limited.** Files do not join. When content becomes relational, a database earns its complexity.
-- **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
-- **Search and preview need tooling.** A wiki gives you search instantly; a static site needs an index step.
-
-None of these are disqualifying for a publication. All of them are real for other shapes of work.
+Une fois celles-ci conservées, la plupart des avantages suivent automatiquement.
 
 ---
 
-## The Practical Stack
+### Ce que vous héritez de la pratique logicielle
 
-A typical content-as-code setup for a publication looks like this:
+### Réviser cela signifie quelque chose
+
+Une pull request sur un document donne des commentaires au niveau de la ligne sur la phrase exacte, une approbation explicite et une fusion. La revue éditoriale se produit dans la demande d'ajout au lieu d'un message contenant des pièces jointes.
+
+### Historique qui répond aux questions
+
+`git log` sur un fichier montre chaque changement, auteur et horodatage. « Quand avons-nous modifié la demande de prix ? » est une recherche et non une enquête.
+
+### Automatisation
+
+L'orthographe, la vérification des liens, les règles de style, la validation de la première matière et l'aperçu compilent toutes les versions exécutées sur la même CI que celles qui compilent du code. Les métadonnées brisées échouent dans le pipeline au lieu du site en direct.
+
+### Travail parallèle
+
+Deux auteurs sur deux fichiers fusionnent proprement. Les conflits sont rares par construction, car l'unité de contenu est un fichier.
+
+### Sauvegarde et portabilité
+
+Chaque clone est une copie complète. Déplacer des plates-formes est un `clone git` loin de réussir.
+
+### Là où il y a du mal
+
+La liste honnête, parce que ce n'est pas libre:
+
+- **Les écrivains non techniques ont besoin d'une interface.** Git brut est une falaise. Le contenu en tant que code fonctionne en pratique lorsque vous associez le référentiel à un outil d'édition qui masque les commits, qui est le remplissage des outils CMS basés sur Git.
+- **Rich media est maladroit.** Les images et les documents signifient des fichiers binaires dans le référentiel : clones plus grands, diffs maladroits, LFS occasionnels.
+- **La structure est limitée.** Les fichiers ne se joignent pas. Lorsque le contenu devient relationnel, une base de données gagne sa complexité.
+- **Les conflits de fusion existent toujours.** Rare quand les fichiers sont par document, douloureux quand deux personnes modifient le même fichier long.
+- **La recherche et la prévisualisation nécessitent un outil.** Un wiki vous permet de rechercher instantanément ; un site statique a besoin d'une étape d'index.
+
+Aucun de ces éléments n'est disqualifiant pour une publication. Elles sont toutes réelles pour d'autres formes de travail.
+
+---
+
+## La pile pratique
+
+Une configuration typique de content-as-code pour une publication ressemble à ceci :
 
 ```text
-content/
-├── posts/
-│   ├── 2026-10-16-shipping-notes.md
-│   └── 2026-10-02-release-1-4.md
-├── pages/
-│   └── about.md
-└── _index.md
+contenu/
+── posts/
+── 2026-10-16-shipping-notes.md
+文<unk> ─ 2026-10-02-release-1-4.md
+── pages/
+文<unk> ─ about.md
+<unk> ─ _index.md 
+ <unk> ─ _index.md
 ```
 
-- **Files** carry Markdown and front matter.
-- **CI** validates front matter, checks links, and builds previews per pull request.
-- **A CMS tool** provides the writing surface for anyone who is not comfortable in an editor.
-- **Deploy** publishes the built output on merge.
+- Les **fichiers** emportent Markdown et la première affaire.
+- **CI** valide la matière première, vérifie les liens et construit les aperçus par pull request.
+- **Un outil CMS** fournit la surface d'écriture pour tous ceux qui ne sont pas à l'aise dans un éditeur.
+- **Déployer** publie la sortie construite lors de la fusion.
 
-The repository stays recognizable to a developer and invisible to a writer. That balance is the whole trick.
-
----
-
-## Why It Lasts
-
-Content as code wins on time. Databases need their schema, their server version, and their vendor. Wikis need their vendor. Proprietary documents need their vendor.
-
-A directory of Markdown files needs a text editor, and it will still open in one in twenty years, regardless of what happens to any tool in the chain. For content meant to outlive the platform it was written on, that is risk management rather than nostalgia.
-
-The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
-
-#### Frequently Asked Questions
-
-## Frequently Asked Questions
-
-### Is content as code the same as a Git based CMS?
-
-It is the philosophy; a Git based CMS is one implementation. You can practice content as code with nothing but an editor, and a Git based CMS gives non-developers a way in.
-
-### Do writers need to learn Git?
-
-Not if the tooling is right. Writers should see an editor and a publish button; commits, branches, and reviews happen underneath.
-
-### Where does content as code fail?
-
-Content with heavy relationships, real-time collaborative editing needs, or very large binary assets. Those workloads belong in a database-backed system.
-
-### How do you handle images?
-
-Either committed to the repository or stored in an asset bucket with references in front matter. The second keeps the repository lean.
-
-### Can I adopt it incrementally?
-
-Yes. Start with one content directory and one pipeline. The format does not require a flag day migration.
+Le dépôt reste reconnaissable à un développeur et invisible pour un écrivain. Cet équilibre est tout à fait la peine.
 
 ---
 
-Related: [what is a Git based CMS?](/blog/git-based-cms-explained/), [front matter explained](/blog/what-is-front-matter/), and [version control for writers](/blog/lightcms-drafts-and-versioning/).
+## Pourquoi ça dure
+
+Le contenu en tant que code gagne à temps. Les bases de données ont besoin de leur schéma, de leur version serveur et de leur vendeur. Les Wikis ont besoin de leur vendeur. Les documents propriétaires ont besoin de leur vendeur.
+
+Un répertoire de fichiers Markdown a besoin d'un éditeur de texte, et il sera toujours ouvert dans un dans vingt ans peu importe ce qui arrive à n'importe quel outil de la chaîne. Pour le contenu destiné à survivre à la plate-forme sur laquelle il a été écrit, il s'agit de la gestion des risques plutôt que de la nostalgie.
+
+Le même local traverse chaque CMS basé sur Git : [LightCMS](/blog/what-is-lightcms/) ajoute la surface d'écriture et le dépôt conserve la permanence. Voir [brouillons, révisions et annulations] (/blog/lightcms-drafts-and-versioning/) pour le workflow en détail.
+
+#### Foire aux questions
+
+## Foire aux questions
+
+### Le contenu en tant que code est-il le même qu'un CMS basé sur Git ?
+
+C'est la philosophie, un CMS basé sur Git est une implémentation. Vous pouvez pratiquer le contenu en tant que code avec rien d'autre qu'un éditeur, et un CMS basé sur Git donne un moyen aux non-développeurs.
+
+### Les écrivains ont-ils besoin d'apprendre Git ?
+
+Pas si l'outillage est correct. Les écrivains devraient voir un éditeur et un bouton de publication; les commits, les branches et les revues se produisent en dessous.
+
+### Où le contenu en tant que code échoue-t-il ?
+
+Contenu avec des relations lourdes, des besoins d'édition collaborative en temps réel ou de très gros actifs binaires. Ces charges de travail appartiennent à un système soutenu par une base de données.
+
+### Comment gérez-vous les images ?
+
+Soit commis dans le référentiel soit stocké dans un bucket d'actif avec des références en face de page. La seconde garde le référentiel sous tension.
+
+### Puis-je l'adopter progressivement ?
+
+« Oui. » Commencez par un répertoire de contenu et un pipeline. Le format ne nécessite pas de migration journalière du drapeau.
+
+---
+
+Relatif : [qu'est-ce qu'un CMS basé sur Git ?](/blog/git-based-cms-explained/), [question frontale expliquée](/blog/what-is-front-matter/), et [contrôle de version pour les écrivains](/blog/lightcms-drafts-and-versioning/).
