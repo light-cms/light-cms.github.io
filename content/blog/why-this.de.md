@@ -31,7 +31,7 @@ Es ist ein echter Wert Ihren Publishing-Raum im Web zu besitzen:
 
 1. **Wenn du über die Jahre etwas gelernt hast, teile es mit.**
 2. **Wenn du etwas Interessantes gebaut hast, schreib darüber nach.**
-3. \*\*Wenn du einen heiklen Fehler gelöst hast, der drei Tage dauerte, um ihn zu verstehen, dokumentiere ihn. \* In sechs Monaten wird jemand nach genau diesem Fehler suchen und Ihre Lösung finden.
+3. \* In sechs Monaten wird jemand nach genau diesem Fehler suchen und Ihre Lösung finden.
 
 Jeder verdient seine eigene kleine Ecke des Internets. Veröffentlichungsaufsätze und technische Einsichten sollten nicht von proprietären sozialen Plattformen abhängen, die die Reichweite manipulieren oder Ihren Inhalt hinter algorithmischen Wänden sperren.
 
