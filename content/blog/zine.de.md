@@ -34,7 +34,7 @@ slug: zine
 - \*\*Geschrieben in Zig, von Grund auf. \* Keine JavaScript-Laufzeit, keine Ruby, keine Go-Bibliothek Komfortzone: der Markdown Renderer, Template-Engine und Orchestrierung sind alle eigens gebaut. Bauzeiten sind effektiv sofortig.
 - **Seine eigene Template-Sprach-Skript.** Zine verwendet SuperHTML und SuperMD: und Skript-Template-System, das für das Projekt entwickelt wurde und nicht von einem Ökosystem ausgeliehen wurde.
 - **Scripty**, seine Skriptebene, fügt programmierbare Logik hinzu, wo Vorlagen allein nicht ausreichen.
-- \*\*Inhalt als Sammlung von Dateien und Layouts. \* Zine verwandelt Inhaltsdateien in HTML, wendet Ihre Layouts an und kopiert das Ergebnis in ein Ausgabeverzeichnis, das klassische statische Modell läuft schnell.
+- \* Zine verwandelt Inhaltsdateien in HTML, wendet Ihre Layouts an und kopiert das Ergebnis in ein Ausgabeverzeichnis, das klassische statische Modell läuft schnell.
 - **Extras erster Klasse**: Mehrsprachige Websites (i18n), Editorunterstützung und dokumentierte Deploy-Ziele: GitHub Seiten, Cloudflare Seiten, Codeberg Seiten und Quellhüttenseiten.
 
 ## Der ehrlichste Handel
