@@ -1,26 +1,26 @@
 ---
-title: Video Walkthrough
-description: A video guide to the greenfield (local) setup.
+title: Прохождение видео
+description: Видеогид по настройке зеленого поля.
 date: '2026-09-12T01:07:00Z'
 draft: false
 weight: 0
 tags:
-  - video
+  - видео
   - youtube
-  - newsy
-  - newsletter
+  - новость
+  - рассылка
 isCJKLanguage: false
 headless: false
 ---
 
-Prefer to learn by watching? This walkthrough covers the setup process, from cloning the repository to launching the bot.
+Предпочитайте учиться за наблюдением? Это руководство описывает процесс установки, от клонирования хранилища до запуска бота.
 
-## New method with multitenancy support
+## Новый метод с поддержкой мультипликации
 
-[![Newsy setup walkthrough](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
+[![Установка Ньюси сквозь](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
 
-## Earlier walkthrough
+## Ранее прогулки
 
-The previous video is still available for reference:
+Предыдущее видео все еще доступно для справки:
 
-[![Earlier Newsy walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
+[![Ранее Ньюси ходил](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
