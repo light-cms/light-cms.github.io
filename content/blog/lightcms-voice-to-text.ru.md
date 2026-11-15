@@ -1,95 +1,95 @@
 ---
-title: "Dictate Your Drafts: Voice to Text in [LightCMS](https://lightcms.me)"
-description: "How [LightCMS](https://lightcms.me) turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
+title: "Восстанавливайте свои черновики: голос к тексту в [LightCMS](https://lightcms.me)"
+description: "Как [LightCMS](https://lightcms.me) превращает произношённые идеи в структурированный Markdown с субтитрами: записывайте и редактируйте диктованный пост, не покидая браузер."
 serial: 33
 date: 2026-10-16T09:30:00Z
 draft: false
 keywords:
-  - voice to text markdown
-  - dictation blogging
-  - whisper transcription cms
-  - speech to text writing
-  - lightcms voice
+  - голос к тексту markdown
+  - диктовое ведение блогов
+  - шепчет транскрипции cms
+  - речь о написании текста
+  - молния голос
 preview: null
 taxonomies:
   tags:
-    - lightcms
-    - writing
-    - workflow
-    - accessibility
+    - молнии
+    - запись
+    - рабочий процесс
+    - доступность
 ---
-Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.
+Печать - это узкое место в любом количестве. Разговорный оратор расценивает 150 wpm и хороший типик 40-60. После 15 минут в должности, когда она все еще скользкая, говорить в три раза быстрее, чем печать.
 
-[LightCMS](https://lightcms.me) features dictation. Hit record, speak, and your words are written to your draft.
-
----
-
-How It Works
-
-1. Open your application in the editor. Browser prompt for microphone permission.
-2. Just Speak. Pauses are okay; you are just spit balling, not reading.
-3. Stop. [LightCMS](https://lightcms.me) is feeding the audio into a Whisper transcription endpoint on Groq, and placing the returned text into the cursor.
-4. The transcript appears as plain old Markdown in the page: still your words, still fully editable, still only pushed when you publish.
-
-The transcript is not an attachment or a separate piece. It's a component of a post as soon as it comes in, so the next pass is just common editing: cut the rambling, put in the order, insert the headings.
+[LightCMS](https://lightcms.me) features dictation. Нажмите на запись, произносите, и ваши слова записываются в ваш черновик.
 
 ---
 
-Why Whisper, Specifically
+Как это работает
 
-Speech to Text has been made smarter – but individual transcriptions are not guaranteed to be the same. Given the sinking of weaker systems by prose, Whisper:
+1. Откройте приложение в редакторе. Запрос на доступ к микрофону браузера
+2. Просто произносите. Пауки нормальны; вы просто спите шарик, не читаете.
+3. Стоп. [LightCMS](https://lightcms.me) кормит аудио в конечную точку транскрипции Whisper на Groq, и помещает возвращаемый текст в курсор.
+4. Транскрипт отображается на странице как обычный старый Markdown: все еще ваши слова, все еще полностью редактируемые, но только при публикации.
 
-- punctuation and case, so the output looks like prose instead of a caption file.
-- Domain vocabulary: by which I mean library names, framework names, API terminology etc. come through far better than I experienced with older dictation engines.
-- Disfluency tolerance: With editing, you are able to pick up a sentence in the middle of a thought and not patch up false starts in the transcript.
-
-Having it on Groq's inference hardware is fast enough that the round trip is short enough that dictation is almost as quick as writing.
-
----
-
-The Most Effective Workflow
-
-There is a bit of pattern to this; dictation favors a bit of form. The most productive structure:
-
-- Maybe talk first, structure second. Say it all in the first draft, doesn't get bogged down in sections.
-- Stop and read it back What you've spoken will be full of repetition that seemed right at the time. Remove it before it gets stuck in the draft.
-- Name down the new section where the thought changed. Now let's talk about deployment. Promote to ## heading by adding # before it. The transcript has already told you where the sections are.
-- > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
-
-10 mins of talking, 10 mins of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
+Транскрипт не является вложением или отдельной фигурой. Это компонент записи, как только она будет добавлена, так что следующий пасс является обычным редактированием: вырезать рамбл, положить в порядке, вставить заголовки.
 
 ---
 
-Dictation as an Accessibility Feature
+Почему Шепот, в частности,
 
-It's not just about time. For the one-too-many carpal tunnel suffers and/or weary-fingered scribes, voice input means the decision – or lack of it – on publication. The default visual-editor output, raw MD, means the entire pipeline (record, transcribe, edit, publish) can be done without getting your fingers on the keyboard.
+Речь о тексте сделана более удобной – но отдельные транскрипции не гарантированы. С учетом улавливания более слабых систем по прозам, шепчел:
+
+- знаки пунктуации и случая, поэтому вывод выглядит как prose вместо файла подписи.
+- Доменный словарь: в котором я имею в виду имена библиотек, фреймворки, API терминологии и т.д.
+- Допуск на разницу: с редактированием, вы можете забрать предложение в середине мысли и не исправлять ложь начинается в субтитрах.
+
+Имея его в виду аппаратное обеспечение Groq, достаточно быстро, что круговая поездка достаточно короткая, что диктовать почти так быстро, как писать.
 
 ---
 
-What Happens to the Audio?
+Наиболее эффективный рабочий процесс
 
-[LightCMS](https://lightcms.me) transmits the recording for transcription and provides your text back. The audio never touches your repository: what goes into git is the Markdown, just like any other edit. Your writing is stored as files in your repository, which is the same promise that the rest of [LightCMS](https://lightcms.me) makes: zero lock-in, zero database.
+Это немного узора, диктация благоприятствует некоторой форме. Наиболее продуктивная структура:
 
-## A Word on the Review
+- Может говорить первым, структура второй. Скажи все это в первом черновике, не попадает в разделы.
+- Остановите и прочитайте обратно То, что вы говорили, будет полно повторов, которые казались прямо сейчас. Удалите его перед тем, как он застрял в черновике.
+- Назовите новый раздел, где была изменена мысль. Теперь давайте поговорим о развертывании. Повысить до ## заголовка, добавив # перед ним. Транскрипт уже говорил вам, где находятся секции.
+- > Выполните передачу форматирования в конце. Списки, ссылки, код и блоки кода быстрее добавляются после завершения записи.
 
-The transcription is great, but not perfect. Homophones, noisy environments and long strange names should still be checked by a person, especially for a post that will be indexed and read for years. Use the transcript as a quick first draft, not the final; editing is mandatory, only shorter than starting from scratch.
+10 минут разговора, 10 минут редакции, каждый из вас, обычно делает более полные чертежи по сравнению с другим человеком, сидящим самостоятельно на клавиатуре в течение 30 минут, в тишине.
 
-Frequently Asked Questions:-
+---
 
-## Do I need a separate transcription subscription?
+Диктограмма как функция специальных возможностей
 
-No. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) instance, in the same way as the AI copilot - bring-your-own-endpoint model.
+Это не просто время от времени. Для одно- и очень многих карпатских туннелей страдают и/или изношенные рукописи, ввод голоса означает, что решение – или его отсутствие – по публикации. Визуальный редактор по умолчанию, raw MD, означает, что весь конвейер (запись, транскрипция, редактирование, публикация) может быть сделан без получения пальцев на клавиатуре.
 
-## Is it effective in other languages?
+---
 
-Whisper supports multilingualism. Quality varies according to model and your endpoint so try a quick sample in your language before going on to the workflow.
+Что происходит с Аудио?
 
-## Is it possible to Dictate into an Existing Post?
+[LightCMS](https://lightcms.me) передает запись для транскрипции и возвращает ваш текст. Аудио никогда не затрагивает ваш репозиторий: что попадает в git Markdown, так же, как и любые другие редактирования. Ваша запись хранится в виде файлов в вашем хранилище, это то же обещание, что остальная часть [LightCMS](https://lightcms.me) производит: нулевая локализация, нулевая база данных.
 
-Yes. Put the cursor anywhere within your document and start typing. The transcript will appear as the cursor.
+## Слово о отзыве
 
-## Will the microphone continue recording?
+Транскрипция отлична, но не совершенна. Хомоны, шумные окружения и длинные странные имена по-прежнему должны проверяться человеком, особенно для должности, которая будет индексироваться и читаться на протяжении многих лет. Использовать субтитры как быстрый первый черновик, а не финал; редактирование является обязательным, только короче, чем начиная с нуля.
 
-No. It is quite explicit: you record it and then you stop recording.
+Часто задаваемые вопросы: -
 
-Next: what happens once we get the words on the page.
+## Нужна ли мне отдельная подписка?
+
+Нет. Транскрипция направляется в конечную точку Whisper, сконфигурированную для вашей [LightCMS](https://lightcms.me) таким же образом, как и копилот AI - bring-ваш-собственная модель конечной точки.
+
+## Эффективно ли это на других языках?
+
+Шепот поддерживает многоязычие. Качество варьируется в зависимости от модели и вашей конечной точки, поэтому попробуйте быстрый пример на вашем языке, прежде чем перейти к рабочему процессу.
+
+## Можно ли Dictate в существующий пост?
+
+Да. Поместите курсор в любом месте в документ и начните печатать. Транскрипт появится в курсоре.
+
+## Продолжается ли запись микрофона?
+
+Нет. Это вполне явно: вы записываете его и потом останавливаете запись.
+
+Далее: что происходит после того, как мы получим слова на странице.
