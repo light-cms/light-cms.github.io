@@ -1,87 +1,87 @@
 ---
-title: "Git-Based CMS vs Traditional CMS: Which Is Right for You?"
-description: How Git based CMS platforms compare with WordPress, Ghost, and Contentful on security, ownership, cost, and workflow, and why static publishing is shifting to Git.
+title: "CMS basado en Git vs CMS tradicional: ¿Cuál es el ideal para usted?"
+description: Cómo las plataformas basadas en Git CMS se comparan con WordPress, Ghost, y Contentful en seguridad, propiedad, costo y flujo de trabajo, y por qué la publicación estática está cambiando a Git.
 serial: 10
 date: 2026-10-14T12:30:00Z
 draft: false
 keywords:
-  - git based cms
+  - git basado en cms
   - git cms
-  - headless cms vs git cms
-  - traditional cms vs static cms
-  - cms without database
+  - cms sin cabeza vs git cms
+  - cms tradicionales vs cms estáticos
+  - cms sin base de datos
 preview: /og-image.webp
 taxonomies:
   tags:
     - cms
     - git
-    - architecture
+    - arquitectura
     - jamstack
 ---
 
-A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
+Un CMS tradicional (WordPress, Drupal, Ghost) almacena contenido en una base de datos y representa páginas en un servidor. Un **CMS basado en Git** (también llamado CMS basado en archivos) almacena contenido como archivos Markdown con materia frontal en un repositorio Git, y su generador estático de sitios convierte esos archivos en páginas en tiempo de construcción. La diferencia arquitectónica es pequeña; las consecuencias prácticas no lo son.
 
 ---
 
-## How a Git based CMS Works
+## Cómo funciona un CMS basado en Git
 
-1. An author writes in a visual editor in the browser.
-2. The CMS commits the finished article as a Markdown file with YAML front matter to your GitHub repository.
-3. Your CI/CD pipeline (GitHub Actions, Cloudflare Pages, Vercel) rebuilds the site.
-4. The updated static site deploys globally within minutes.
+1. Un autor escribe en un editor visual en el navegador.
+2. El CMS compromete el artículo terminado como un archivo Markdown con la materia principal YAML a su repositorio de GitHub.
+3. Su pipeline de CI/CD (Acciones de GitHub, Páginas de Cloudflare, Vercel) reconstruye el sitio.
+4. El sitio estático actualizado despliegue globalmente en cuestión de minutos.
 
-The repository is the single source of truth: every edit is a commit, every revision is inspectables, and rollback is a Git operation.
+El repositorio es la única fuente de la verdad: cada edición es un commit, cada revisión es inspectable, y la cancelación es una operación Git.
 
-## Security
+## Seguridad
 
-This is the biggest practical difference. A traditional CMS exposes a database, an admin login, and a plugin runtime to the public internet: the attack surface behind most website compromises.
+Esta es la mayor diferencia práctica. Un CMS tradicional expone una base de datos, un inicio de sesión de administrador y un tiempo de ejecución de plugin a la Internet pública: la superficie de ataque detrás de la mayoría de los compromisos del sitio web.
 
-A Git based architecture exposes nothing at runtime. There is no production database, no login panel, no PHP. Content lives in Git; the deployed site is plain files on a CDN.
+Una arquitectura basada en Git no expone nada en tiempo de ejecución. No hay ninguna base de datos de producción, no hay panel de inicio de sesión, no hay PHP. El contenido vive en Git; el sitio desplegado es archivos llanos en un CDN.
 
-## Ownership and Portability
+## Propiedad y portabilidad
 
-With a traditional hosted CMS, your content lives in someone else's database, and exporting it is a project of its own. With a Git based CMS, your content is a folder of Markdown files in your own repository. You can switch generators, hosts, or editors without a migration.
+Con un CMS alojado tradicional, tu contenido vive en la base de datos de otra persona, y exportarlo es un proyecto propio. Con un CMS basado en Git, su contenido es una carpeta de archivos Markdown en su propio repositorio. Usted puede cambiar generadores, anfitriones o editores sin migración.
 
-## Cost
+## Costo
 
-Traditional CMS hosting requires servers, databases, and often premium plugins. Static sites served from Git deploys fit comfortably in free hosting tiers, and the CMS itself can be open source. [LightCMS](https://lightcms.me) is licensed under Apache 2.0, so the core is free forever.
+El alojamiento tradicional CMS requiere servidores, bases de datos y, a menudo, plugins premium. Los sitios estáticos servidos desde los implementos de Git caben cómodamente en los niveles de alojamiento gratis, y el CMS en sí mismo puede ser de código abierto. [LightCMS](https://lightcms.me) está licenciado bajo Apache 2.0, así que el núcleo es gratuito para siempre.
 
-## The Editing Experience Objection
+## Objeto de la experiencia de edición
 
-The historical weakness of "just edit the Markdown files" was the editing experience, and it is a fair objection. Pulling branches at midnight is not writing.
+La debilidad histórica de "sólo editar los archivos Markdown" fue la experiencia de edición, y es una objeción justa. Llevar ramas a medianoche no es escribir.
 
-A Git based CMS with a proper visual editor resolves it: writers get drag-and-drop formatting, image uploads, and front matter forms, while Git receives clean, reviewable Markdown underneath. TipTap-based editors like the one in [LightCMS](https://lightcms.me) even handle math, code highlighting, and task lists while preserving semantic Markdown.
-
----
-
-## When a Traditional CMS Still Makes Sense
-
-- You need non-technical editors working entirely inside a database-driven admin with no Git concept at all
-- Your site is a heavy application (membership portals, e-commerce) rather than a publication
-- Instant, per-character database edits matter more than reviewability
-
-For blogs, documentation, marketing sites, and publications, the Git based model now wins on security, cost, and ownership.
-
-- [Why LightCMS exists](/blog/why-this/) covers the philosophy in depth.
-- [Getting started](/getting-started/) shows the full workflow.
-- [Git based CMS options compared](/comparison/top-git-cms/) surveys the platforms in this space.
+Un CMS basado en Git con un editor visual adecuado lo resuelve: los escritores tienen formato de arrastre y soltar, subidas de imágenes, y formas de la materia delantera, mientras que Git recibe un Markdown limpio y revisable. Los editores basados en trucos como el de [LightCMS](https://lightcms.me) incluso manejan las matemáticas, el resaltado de código y las listas de tareas, al tiempo que preservan el Markdown semántico.
 
 ---
 
-## Frequently Asked Questions
+## Cuando un CMS tradicional sigue teniendo sentido
 
-### What is a Git based CMS?
+- Necesitas editores no técnicos que trabajen completamente dentro de un administrador basado en base de datos sin ningún concepto de Git
+- Su sitio es una aplicación pesada (portales de membresía, comercio electrónico) en lugar de una publicación
+- Las ediciones de base de datos instantáneas por personaje importan más que la capacidad de revisión
 
-A CMS that stores your content as files (usually Markdown with YAML front matter) in a Git repository instead of in a database, and publishes by committing to that repository.
+Para blogs, documentación, sitios de marketing y publicaciones, el modelo basado en Git ahora gana en seguridad, costo y propiedad.
 
-### Is WordPress a Git based CMS?
+- [Por qué LightCMS existe](/blog/why-this/) cubre la filosofía en profundidad.
+- [Empezando](/getting-started/) muestra el flujo de trabajo completo.
+- [Opciones de CMS basadas en Git comparadas](/comparison/top-git-cms/) encuesta las plataformas en este espacio.
 
-No. WordPress stores content in MySQL or MariaDB. Plugins can sync WordPress with Git, but the core architecture is database-driven.
+---
 
-### Do I need to know Git to use a Git based CMS?
+## Preguntas frecuentes
 
-No. The whole point of a visual Git based editor is that authors never touch the command line; the CMS handles commits, branches, and pull requests for them.
+### ¿Qué es un CMS basado en Git?
 
-### Is a Git based CMS good for SEO?
+Un CMS que almacena su contenido como archivos (normalmente Markdown con YAML frontal) en un repositorio Git en lugar de en una base de datos, y publica comprometiéndose con ese repositorio.
 
-Yes. Git based sites are usually static, which produces fast load times, clean semantic HTML, and strong Core Web Vitals, all direct ranking factors.
+### ¿Es WordPress un CMS basado en Git?
+
+No. WordPress almacena contenido en MySQL o MariaDB. Plugins pueden sincronizar WordPress con Git, pero el núcleo de la arquitectura es unidad de base de datos.
+
+### ¿Necesito saber Git para usar un CMS basado en Git?
+
+No. El objetivo de un editor visual basado en Git es que los autores nunca toquen la línea de comandos; el CMS maneja confirmaciones, sucursales y pull requests para ellos.
+
+### ¿Es un CMS basado en Git bueno para SEO?
+
+Sí. Los sitios basados en Git suelen ser estáticos, lo que produce tiempos de carga rápidos, HTML semántico limpio y Vitales Web Principales fuertes, todos los factores de clasificación directa.
