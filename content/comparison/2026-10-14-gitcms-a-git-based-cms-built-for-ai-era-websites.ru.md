@@ -1,83 +1,83 @@
 ---
-title: "GitCMS: A Git Based CMS Built for AI-Era Websites"
-description: What GitCMS is, how it keeps human and AI edits reviewable in your repository, how it compares with Pages CMS, and when to choose it.
+title: "GitCMS: Git Based CMS Built for AI-Era Websites"
+description: Что такое GitCMS как он хранит человека и ИИ редактирует его в вашем хранилище, как он сравнивается с Pages CMS, и когда его выбирать.
 serial: 15
 date: 2026-10-14T13:20:00Z
 draft: false
 keywords:
   - gitcms
-  - gitcms vs pages cms
-  - ai cms for websites
-  - git based cms
-  - cms for ai built sites
+  - gitcms и страницы cms
+  - ai cms для веб-сайтов
+  - git на основе cms
+  - cms для сайтов, построенных на ai
 preview: /og-image.webp
 taxonomies:
   tags:
-    - cms
+    - смс
     - gitcms
     - ai
     - git
 ---
 
-[GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built with AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
+[GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built with AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. Она поддерживает ту же основу, что и все Git CMS (контент живет в вашем репозитории), но добавляет редакционную структуру и ИИ рабочие процессы сверху.
 
 ---
 
-## The Idea Behind GitCMS
+## Идея за GitCMS
 
-The pitch: your AI coding agent (or your client's agent) writes the site; GitCMS gives everyone (team, clients, and agents) a governed place to make changes afterward. Instead of an agent's edits landing as raw, unreviewed commits, changes flow through a CMS layer where they can be reviewed and published deliberately.
+Питча: ваш Агент ИИ (или агент вашего клиента) пишет сайт; GitCMS предоставляет всем (команде, клиентам и агентам) управляемое место для последующего внесения изменений. Вместо правок агента в виде непроверенных коммитов, изменения происходят через слой CMS, где они могут быть проверены и опубликованы намеренно.
 
-That positioning distinguishes it from the rest of the category, which mostly optimizes for human writers:
+Это положение отличает его от остальной категории, которая в основном оптимизирует человеческих писателей:
 
-- **Pages CMS** optimizes for simplicity: free forms over a GitHub repo ([full review](/comparison/pagescms/)).
-- **Decap CMS** optimizes for configuration: collections defined in YAML ([full review](/comparison/netlifycms/)).
-- **GitCMS** optimizes for governance: AI-assisted changes that stay reviewable and human-approved.
+- **Страницы CMS** оптимизируют для простоты: бесплатные формы над репозиторием GitHub ([полный обзор](/comparison/pagescms/)).
+- **Decap CMS** оптимизирует конфигурацию: коллекции, определенные в YAML ([полный обзор](/comparison/netlifycms/)).
+- **GitCMS** оптимизирует управление: внесенные с помощью AI изменения, которые остаются проверяемыми и одобрены человеком.
 
-## How It Works
+## Как это работает
 
-GitCMS connects to your repository and layers a richer editor, editorial workflows, and AI-assisted editing over your existing files. Content and code changes remain commits in your repo (nothing is trapped in a proprietary store), and publishing stays compatible with your normal CI/CD pipeline.
+GitCMS подключается к вашему репозиторию и слоям более богатый редактор, редакционные процессы и редактирование существующих файлов при помощи AI. Изменения содержимого и кода остаются в вашем репозитории (ничто не попадает в проприетарный магазин), и публикация остается совместимой с вашим обычным трубопроводом CI/CD.
 
-## Strengths
+## Преимущества
 
-- Designed around **AI-agent workflows**, a problem the older Git CMS tools do not address.
-- Richer editing experience and editorial structure compared with form-only tools.
-- Keeps the core Git based promise: your repository remains the source of truth.
+- Разработанные вокруг **AI-agent workflows**, проблемы с старыми Git CMS инструментами не рассматриваются.
+- Опыт редактирования и редакционная структура по сравнению с формами инструментов.
+- Сохраняет базовый Git обещание: ваш репозиторий остается источником истины.
 
-## Limitations
+## Ограничения
 
-- A younger product with a smaller ecosystem than Decap CMS.
-- Paid plans beyond the free tier, unlike the fully open-source options below.
-- Best suited to teams actually using AI agents; solo writers may not need the governance layer.
+- Более молодой продукт с меньшей экосистемой, чем Decap CMS.
+- Платные планы выходят за рамки бесплатного уровня, в отличие от всех опций с открытым исходным кодом ниже.
+- Лучше всего подходит для команд, использующих агентов AI; авторам соло может не понадобиться управленческий уровень.
 
-## How It Compares
+## Как он сравнивает
 
-|         | GitCMS                 | Pages CMS    | LightCMS                               |
-| :------ | :--------------------- | :----------- | :------------------------------------- |
-| Focus   | AI-safe publishing     | Simple forms | Full writing workspace                 |
-| Editor  | Rich, AI-assisted      | Form-based   | TipTap WYSIWYG                         |
-| Extras  | Agent workflows        | None         | AI copilot, voice-to-text, newsletters |
-| License | Free tier + paid plans | Free (MIT)   | Free (Apache 2.0)                      |
+|          | GitCMS                             | Страницы CMS  | LightCMS                             |
+| :------- | :--------------------------------- | :------------ | :----------------------------------- |
+| Фокус    | Безопасная публикация AI           | Простые формы | Полная запись проекта                |
+| Редактор | Бог, помощник AI                   | Формат        | TipTap WYSIWYG                       |
+| Extras   | Рабочие потоки Агента              | Нет           | AI копилот, голос в текст, бюллетени |
+| Лицензия | Бесплатный уровень + платные планы | Free (MIT)    | Free (Apache 2.0)                    |
 
-- [Pages CMS vs alternatives](/comparison/pagescms/) covers the simple end of the category.
-- [Top Git based CMS platforms](/comparison/top-git-cms/) is the full survey.
-- [LightCMS](/getting-started/) bundles AI drafting and [newsletter distribution](/blog/newsletter-email-automation/) for solo publishers and teams.
+- [Страницы CMS против альтернативы](/comparison/pagescms/) охватывает простой конец категории.
+- [Лучшие платформы CMS на основе Git](/comparison/top-git-cms/) — полный опрос.
+- [LightCMS](/getting-started/) Разработчики ИИ и [распространение информационного бюллетеня](/blog/newsletter-email-automation/) для сольных издателей и команд.
 
 ---
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### What Is GitCMS?
+### Что такое GitCMS?
 
-A Git based CMS positioned for code-first and AI-built websites: it gives teams, clients, and AI agents one reviewable place to edit and publish changes that stay in your repository.
+CMS основанный на Git, позиционируется для кодовых и AI-созданных сайтов: он дает командам, клиентам, и AI агентов одно проверяемое место для редактирования и публикации изменений, которые остаются в вашем репозитории.
 
-### Is GitCMS Free?
+### Бесплатно ли GitCMS?
 
-There is a free tier for a single site, with paid plans for more. Fully free, open-source alternatives include Pages CMS, Decap CMS, and LightCMS.
+Существует бесплатный уровень для одного сайта, с платными планами на больше. Полностью бесплатные, альтернативы с открытым исходным кодом включают в себя Pages CMS, Decap CMS и LightCMS.
 
-### How Is GitCMS Different from Pages CMS?
+### Каким образом GitCMS отличается от страниц CMS?
 
-Pages CMS is a minimal, free form editor over GitHub. GitCMS adds a richer editor, editorial workflows, and AI-agent governance on the same Git based model.
+CMS - минимальный, свободный редактор форм на GitHub. GitCMS добавляет более богатый редактор, редакционные рабочие процессы и управление AI-агентами на основе той же модели Git.
 
-### Do I Need AI Agents to Use GitCMS?
+### Нужны ли агенты AI для использования GitCMS?
 
-No. But if AI agents regularly commit to your site's repository, the review layer is the main reason to choose it.
+Нет. Но если агенты AI регулярно принимают обязательства в хранилище вашего сайта, уровень обзора является главной причиной его выбора.
