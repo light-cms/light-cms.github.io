@@ -1,30 +1,30 @@
 ---
-title: Roadmap
-description: Roadmap
+title: Дорожная карта
+description: Дорожная карта
 date: '1111-11-11T11:11:00Z'
 draft: false
 weight: 0
 tags:
-  - newsy
-  - newsletter
+  - новость
+  - рассылка
 isCJKLanguage: false
 headless: false
 ---
 
-Newsy already supports a shared instance and stores only the installation ID in its database.
+Newsy уже поддерживает общий экземпляр и сохраняет в базе данных только установочный ID.
 
-## Use the hosted instance
+## Использовать пример хостинга
 
-You can try the hosted instance at [https://newsy.lightcms.me](https://newsy.lightcms.me).
+Вы можете попробовать экземпляр сервера на [https://newsy.lightcms.me](https://newsy.lightcms.me).
 
-## Deploy your own instance
+## Разверните свой собственный экземпляр
 
-Deploy your own copy on Vercel:
+Разместите свою собственную копию на Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy\&env=DATABASE_URL\&project-name=newsy\&repository-name=newsy)
+[![Развертывание с помощью Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy\&env=DATABASE_URL\&project-name=newsy\&repository-name=newsy)
 
-The hosted instance runs on Vercel's hobby tier, so uptime and function
-invocation limits may apply.
+На сервере запускается хобби Vercel, поэтому могут применяться ограничения времени и функции
+вызова.
 
 If Newsy has been useful, starring the [repository](https://github.com/light-cms/newsy) helps.
 
