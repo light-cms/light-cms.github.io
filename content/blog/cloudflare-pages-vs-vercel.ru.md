@@ -1,76 +1,76 @@
 ---
-title: "Cloudflare Pages vs Vercel: Which Is Better for Static Sites?"
-description: Cloudflare Pages and Vercel compared on bandwidth, build minutes, pricing, edge network, and framework support, so you can pick the right free hosting tier.
+title: "Облачные страницы против Vercel: Что лучше для статических сайтов?"
+description: Страницы Cloudflare и Vercel по сравнению с пропускной способностью, минутами сборки, ценой, передовой сетью и поддержкой фреймворка, так что вы можете выбрать правильный бесплатный уровень хостинга.
 serial: 9
 date: 2026-10-14T12:20:00Z
 draft: false
 keywords:
-  - cloudflare pages vs vercel
-  - vercel vs cloudflare pages
-  - best free static site hosting
-  - cloudflare pages pricing
-  - vercel free tier
+  - страницы с флешкой и версель
+  - версель против облачных страниц
+  - лучший бесплатный статический хостинг
+  - цены на страницы в облаке
+  - бесплатный уровень vercel
 preview: /og-image.webp
 taxonomies:
   tags:
-    - hosting
-    - cloudflare
-    - vercel
+    - хостинг
+    - фонарь из облака
+    - вершина
     - jamstack
 ---
 
-[Cloudflare Pages](https://pages.cloudflare.com) and [Vercel](https://vercel.com) are the two most common answers to "where do I host my static site for free?" Both deploy from Git, provision free SSL, and serve from a global edge network. The differences show up in **bandwidth policy, framework integration, and what happens when your project grows**.
+[Страницы с Флажками](https://pages.cloudflare.com) и [Vercel](https://vercel.com) — два наиболее часто встречающихся ответа на "где я размещаю сайт бесплатно?" Оба развертывания из Git, обеспечение свободного SSL, и служить из глобальной сети краев. Различия появляются в **политике пропускной способности, интеграции фреймворка и в том, что происходит, когда ваш проект растет**.
 
 ---
 
-## What Is Cloudflare Pages?
+## Что такое "Страницы с Облаком"?
 
-Cloudflare Pages is a static site hosting platform that deploys from your Git repository to a global edge network. The free tier includes unlimited bandwidth, making it attractive for blogs and documentation sites that may go viral. Beyond static hosting, it offers Pages Functions (serverless functions), KV (key-value storage), and R2 (object storage), all within the same Cloudflare ecosystem.
+Страницы Cloudflare - это статическая хостинг-платформа, которая размещается из репозитория Git в глобальную краевую сеть. Свободный уровень включает неограниченную пропускную способность, что делает его привлекательным для блогов и документации сайтов, которые могут стать вирусными. Помимо статического хостинга, он предлагает страницы Функции (безсерверные функции), KV (хранилище ключевой ценности) и R2 (хранилище объектов), все в рамках одной экосистемы Cloudflare.
 
-## What Is Vercel?
+## Что такое Vercel?
 
-Vercel is the company behind Next.js and offers hosting optimized for its framework. It provides zero-configuration deployments for Next.js, SvelteKit, Astro, Nuxt, and Vite projects. The platform is known for polished preview deployments for every pull request, inline comments on deployments, and a developer-friendly dashboard.
+Vercel является компанией, стоящей за Next.js и предлагает хостинг, оптимизированный для своего фреймворка. It provides zero-configuration deployment for Next.js, SvelteKit, Astro, Nuxt and Vite projects Платформа известна за то, что была размещена в режиме предварительного просмотра для каждого запроса, встроенные комментарии к развертыванию и удобное для разработчиков приборную панель.
 
-## Bandwidth: Unlimited vs Metered
+## Пропускная способность: Неограниченное и измеренное
 
-- **Cloudflare Pages**: unlimited bandwidth on the free tier, the single biggest differentiator for content-heavy or unexpectedly viral sites.
-- **Vercel**: the hobby tier includes generous but metered bandwidth, with overages a real consideration for high-traffic sites.
+- **Страницы с флангом**: неограниченная ширина полосы пропускания на свободном уровне, самый большой дифференциатор для контент-тяжелых или неожиданно вирусных сайтов.
+- **Версел**: хобби уровень включает в себя щедрую, но ограниченную пропускную способность, при этом над сайтами с высокой посещаемостью.
 
-Build limits also differ: Cloudflare offers hundreds of builds per month on the free tier, while Vercel meters build minutes. Both are ample for personal sites and small teams.
+Ограничения на сборку также отличаются: Облачный фланец предлагает сотни строений в месяц на свободном уровне, в то время как измерения Vercel строят минуты. Оба они достаточно для персональных сайтов и небольших команд.
 
-## Developer Experience
+## Опыт разработчика
 
-Vercel's preview URLs for every pull request, inline comments on deployments, and framework-aware build settings make it a strong fit for team workflows. Cloudflare Pages also provides preview deployments, and its tight integration with Workers, Pages Functions, KV, and R2 gives it an edge for lightweight dynamic features.
+Предварительный просмотр URL-адресов Vercel, встроенные комментарии к развертыванию, а также настройки построения делают его хорошим подспорьем для командных рабочих процессов. Страницы Cloudflare также обеспечивают предварительный просмотр развертывания, и его тесная интеграция с Рабочими, Функции Страниц, KV и R2 дает ему край легких динамических функций.
 
-## Lock-in and Portability
+## Блокировка и переносимость
 
-Both platforms build from the same Git repository, so your content and code stay portable. Vercel's framework optimizations and Cloudflare's Workers runtime each create some ecosystem gravity, but because your site is just static output plus a build command, switching hosts is a configuration change, not a rewrite.
-
----
-
-## Which Should You Choose?
-
-- Choose **Cloudflare Pages** for blogs, documentation, and content sites where unlimited bandwidth and minimal cost matter most.
-- Choose **Vercel** for application-like projects, team preview workflows, and deep framework integration.
-
-For a full comparison including GitHub Pages, Netlify, and Deno Deploy, see [top static site hosting platforms](/misc/top-static-site-hosting/). And once your host is chosen, [configure your repository and CI/CD](/blog/configuring-your-repository-cicd/) so every published post deploys automatically.
+Обе платформы построены из одного Git репозитория, поэтому ваш контент и код остаются переносимыми. Оптимизация фреймворка Vercel, оптимизация рабочего времени Cloudflare, каждый из которых создает некоторую гравитацию экосистем, но потому, что ваш сайт просто выводит статический вывод плюс команда сборки, переключение узлов - это изменение конфигурации, а не перезапись.
 
 ---
 
-## Frequently Asked Questions
+## Что Вы выбираете?
 
-### Is Cloudflare Pages Unlimited?
+- Выберите **Облачные страницы** для блогов, документации и контентных сайтов, где неограниченная пропускная способность и минимальная стоимость важнее всего.
+- Выберите **Vercel** для проектов, похожих на приложения, процессов предпросмотра команд и глубокой интеграции фреймворков.
 
-Yes. The free tier does not meter bandwidth, which makes it the safest default for sites that may go viral.
+Для полного сравнения, включая GitHub страницы, Netlify, и Deno Deploy, смотрите [лучшие статические платформы хостинга сайтов](/misc/top-static-site-hosting/). И как только ваш хост будет выбран, [настройте ваш репозиторий и CI/CD](/blog/configuring-your-repository-cicd/) поэтому каждый опубликованный пост развертывается автоматически.
 
-### Is Vercel Free for Static Sites?
+---
 
-Yes, the hobby tier covers personal static sites generously, though bandwidth and build minutes are metered.
+## Часто задаваемые вопросы
 
-### Which Is Faster?
+### Неограниченно ли количество страниц в облаке?
 
-Both serve from global edge networks with excellent performance. Cloudflare's network is larger; Vercel's framework-aware builds can produce more optimized output for its supported frameworks.
+Да. Свободный уровень не измеряет полосу пропускания, что делает его самым безопасным по умолчанию для сайтов, которые могут быть вирусными.
 
-### Can I Move Between Them Later?
+### Свободно ли Vercel для статических сайтов?
 
-Yes. Both deploy from your Git repository with a build command and output directory, so switching is a matter of configuration rather than migration.
+Да, хобби уровень покрывает персональные статические сайты щедро несмотря на то, что пропускная способность и строительные минуты оплачиваются.
+
+### Что быстрее?
+
+Оба служат из глобальных кронштейновых сетей с отличной производительностью. Сеть Cloudflare: сборки Vercel, работающие на фреймворке, могут производить более оптимизированный вывод для поддерживаемых фреймворков.
+
+### Могу ли я перемещаться между ними позже?
+
+Да. Оба развёрнутые из Git репозитория с командой build и выходной директорией, поэтому переключение является вопросом конфигурации, а не миграцией.
