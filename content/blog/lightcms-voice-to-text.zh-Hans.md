@@ -1,95 +1,95 @@
 ---
-title: "Dictate Your Drafts: Voice to Text in [LightCMS](https://lightcms.me)"
+title: "更改您的草稿：用 [LightCMS]语音转到文本(https://lightcms.me)"
 description: "How [LightCMS](https://lightcms.me) turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
 serial: 33
 date: 2026-10-16T09:30:00Z
 draft: false
 keywords:
-  - voice to text markdown
-  - dictation blogging
-  - whisper transcription cms
-  - speech to text writing
-  - lightcms voice
+  - 语音到文本Markdown
+  - 字典博客
+  - 白色转码cms
+  - 语音写入文本
+  - 闪电之声
 preview: null
 taxonomies:
   tags:
-    - lightcms
-    - writing
-    - workflow
-    - accessibility
+    - 闪光
+    - 写入
+    - 工作流
+    - 可访问性
 ---
-Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.
+输入是一个瓶颈，没有一个人定量。谈话发言者评分为150wm，优秀打字师40-60。在帖子中15分钟后，当它仍然滑动时，说话比输入快三倍。
 
-[LightCMS](https://lightcms.me) features dictation. Hit record, speak, and your words are written to your draft.
-
----
-
-How It Works
-
-1. Open your application in the editor. Browser prompt for microphone permission.
-2. Just Speak. Pauses are okay; you are just spit balling, not reading.
-3. Stop. [LightCMS](https://lightcms.me) is feeding the audio into a Whisper transcription endpoint on Groq, and placing the returned text into the cursor.
-4. The transcript appears as plain old Markdown in the page: still your words, still fully editable, still only pushed when you publish.
-
-The transcript is not an attachment or a separate piece. It's a component of a post as soon as it comes in, so the next pass is just common editing: cut the rambling, put in the order, insert the headings.
+[LightCMS](https://lightcms.me) 功能词典。点击记录、发言和您的单词已写入您的草稿。
 
 ---
 
-Why Whisper, Specifically
+如何工作
 
-Speech to Text has been made smarter – but individual transcriptions are not guaranteed to be the same. Given the sinking of weaker systems by prose, Whisper:
+1. 在编辑器中打开您的应用程序。麦克风权限浏览器提示。
+2. 刚才发言。暂停没问题。你只是拼接球，而不是阅读。
+3. Stop。 [LightCMS](https://lightcms.me) 正在将音频输入格罗克的一个Whisper 翻译端口，并将返回的文本放入光标。
+4. 字幕在页面中显示为普通旧Markdown：仍然是您的单词，仍然可以完全编辑，仍然只有当您发布时才被推送。
 
-- punctuation and case, so the output looks like prose instead of a caption file.
-- Domain vocabulary: by which I mean library names, framework names, API terminology etc. come through far better than I experienced with older dictation engines.
-- Disfluency tolerance: With editing, you are able to pick up a sentence in the middle of a thought and not patch up false starts in the transcript.
-
-Having it on Groq's inference hardware is fast enough that the round trip is short enough that dictation is almost as quick as writing.
-
----
-
-The Most Effective Workflow
-
-There is a bit of pattern to this; dictation favors a bit of form. The most productive structure:
-
-- Maybe talk first, structure second. Say it all in the first draft, doesn't get bogged down in sections.
-- Stop and read it back What you've spoken will be full of repetition that seemed right at the time. Remove it before it gets stuck in the draft.
-- Name down the new section where the thought changed. Now let's talk about deployment. Promote to ## heading by adding # before it. The transcript has already told you where the sections are.
-- > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
-
-10 mins of talking, 10 mins of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
+字幕不是附件或单独的部分。它是帖子的一个组成部分，一旦被加入， 这样下一个通行证只是常见的编辑方式：切断斜坡，按顺序排列，插入标题。
 
 ---
 
-Dictation as an Accessibility Feature
+为什么具体说是Whisper？
 
-It's not just about time. For the one-too-many carpal tunnel suffers and/or weary-fingered scribes, voice input means the decision – or lack of it – on publication. The default visual-editor output, raw MD, means the entire pipeline (record, transcribe, edit, publish) can be done without getting your fingers on the keyboard.
+对文本的语音已变得更聪明——但个人的语音不保证是一样的。鉴于较弱的系统因prose而沉没，Whisper：
+
+- 标点符号和大小写，所以输出看起来像prose而不是字幕文件。
+- 域名词汇：我指的是图书馆名称、框架名称、API术语等等，远远超过我使用较旧口述引擎的经验。
+- 扰动容忍度：编辑， 你能够在思想的中间拿起句子，而不是在文字记录中补丁虚假开始。
+
+在Groq的推断硬件上安装的速度足够快，回程旅行时间足够短，口述几乎像书面一样快捷。
 
 ---
 
-What Happens to the Audio?
+最有效的工作流程
 
-[LightCMS](https://lightcms.me) transmits the recording for transcription and provides your text back. The audio never touches your repository: what goes into git is the Markdown, just like any other edit. Your writing is stored as files in your repository, which is the same promise that the rest of [LightCMS](https://lightcms.me) makes: zero lock-in, zero database.
+这有点格局；口述倾向于某种形式。最具生产力的结构：
 
-## A Word on the Review
+- 也许首先谈论结构，其次谈论。在第一稿中说它是所有的，不会在章节里陷入僵局。
+- 停止并读回你所说的话将是重复的，当时似乎是正确的。在草案中被卡住之前删除它。
+- 给思维改变的新章节命名。现在让我们谈谈部署问题。通过在前面添加 # 来提升到## 标题。字幕已经告诉您章节在哪里。
+- > 在结尾处执行格式化通行证。 List、链接、代码和代码块在写入完成后添加得更快。
 
-The transcription is great, but not perfect. Homophones, noisy environments and long strange names should still be checked by a person, especially for a post that will be indexed and read for years. Use the transcript as a quick first draft, not the final; editing is mandatory, only shorter than starting from scratch.
+10分钟的谈话，10分钟的编辑，你们每个人。 通常比坐在钥匙板上的另一个人默哀30分钟，更全面地提出草案。
 
-Frequently Asked Questions:-
+---
 
-## Do I need a separate transcription subscription?
+作为辅助功能的迭代功能
 
-No. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) instance, in the same way as the AI copilot - bring-your-own-endpoint model.
+这不仅仅是时间问题。对于太多的胡萝卜隧道患者和/或手指的动词，语音输入意味着在发布时的决定 — — — 或缺少它。默认的可视化编辑器输出、原始MD表示整个管道(记录、transcribe、编辑、发布)可以在不在键盘上获取您的手指的情况下完成。
 
-## Is it effective in other languages?
+---
 
-Whisper supports multilingualism. Quality varies according to model and your endpoint so try a quick sample in your language before going on to the workflow.
+音频是什么样的焦点？
 
-## Is it possible to Dictate into an Existing Post?
+[LightCMS](https://lightcms.me) 传输录制文件并提供您的文本。音频永远不会碰到你的资源库：进入git的是标记，就像其他编辑一样。您的写入已作为文件存储在您的存储库中 它与其他 [LightCMS](https://lightcms.me)的承诺相同：零锁，零数据库。
 
-Yes. Put the cursor anywhere within your document and start typing. The transcript will appear as the cursor.
+## 评论单词
 
-## Will the microphone continue recording?
+翻译是巨大的，但并非十全十美。一个人仍然应该检查自制的、噪音环境和长时间奇怪的名字。 尤其是一个将被编入索引和阅读多年的帖子。使用字幕作为快速的第一稿，而不是最后草稿；编辑是强制性的，仅比从头开始要短。
 
-No. It is quite explicit: you record it and then you stop recording.
+常见问题: -
 
-Next: what happens once we get the words on the page.
+## 我需要一个单独的文字订阅吗？
+
+否。翻译指向了为您的 [LightCMS](https://lightcms.me) 配置的 Whisper端点 与 AI 拷贝-您自己的端点模型相同的方式。
+
+## 它在其他语言中是否有效？
+
+他们支持使用多种语文。质量因模型和您的端点而异，因此在开始工作流程之前，请尝试使用您的语言进行快速采样。
+
+## 是否可以将图标变成现有的帖子？
+
+是。将光标放在您的文档的任何位置并开始输入。字幕将显示为光标。
+
+## 麦克风是否会继续录音？
+
+否。它很明确：你记录它，然后你停止录制。
+
+下一步：我们收到页面上的单词后会发生什么情况。
