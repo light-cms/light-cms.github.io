@@ -1,132 +1,132 @@
 ---
-title: "What Is Front Matter? The Metadata Block at the Top of Your Content"
-description: "Front matter is the YAML or TOML block at the top of a Markdown file that tells your site its title, date, tags, and draft status, with examples."
+title: "Qu’est-ce qui compte au premier plan? Le bloc de métadonnées en haut de votre contenu"
+description: "La question principale est le bloc YAML ou TOML en haut d'un fichier Markdown qui indique à votre site son titre, date, tags, et statut brouillon, avec des exemples."
 serial: 45
 date: 2026-10-16T11:10:00Z
 draft: false
 keywords:
-  - what is front matter
-  - front matter markdown
-  - yaml front matter
-  - static site metadata
+  - quelle est la première question
+  - markdown de la matière première
+  - matière frontale du yaml
+  - métadonnées statiques du site
   - markdown metadata
 preview: /og-image.webp
 taxonomies:
   tags:
     - markdown
-    - explainers
-    - static-sites
+    - expliqueurs
+    - sites statiques
     - cms
 ---
 
-**Front matter** is the block of metadata at the top of a content file, fenced off from the article itself. It is where a Markdown file declares what it _is_ (title, date, tags, author, draft status), so that your site generator can render, sort, and filter it.
+**La première matière** est le bloc de métadonnées en haut d'un fichier de contenu, clôturé de l'article lui-même. C'est là où un fichier Markdown déclare ce qu'il _est_ (titre, date, tags, auteur, l'état brouillon), afin que votre générateur de site puisse le rendre, le trier et le filtrer.
 
-If Markdown is the body of a post, front matter is its label.
+Si Markdown est le corps d'un poste, la matière première est son étiquette.
 
 ---
 
-## What It Looks Like
+## Ce qui ressemble à
 
 ```markdown
 ---
-title: Notes on Static Site Generators
-description: A short summary used for SEO and social cards.
+title: Notes sur les générateurs de site statiques
+description: Un court résumé utilisé pour le référencement et les cartes sociales.
 date: 2026-10-16T09:00:00Z
 draft: false
 tags:
   - static-sites
   - tooling
-keywords:
+keywords :
   - static site generators
   - ssg comparison
-preview: /og-image.webp
+preview: /og-image. ebp
 ---
 
-The article body starts here, after the closing `---`.
+Le corps de l'article commence ici, après la fermeture `---`.
 ```
 
-Three things are worth noticing:
+Il convient de noter trois choses:
 
-1. **The fences.** A line of three dashes opens and closes the block. Everything between belongs to metadata; everything after belongs to the article.
-2. **The format.** That example is YAML, the default for most generators. TOML (`+++`) and JSON (`{...}`) are also used; Zola accepts all three, for instance.
-3. **The fields.** Standard keys like `title` and `date` are understood by generators; custom keys like `keywords` or `preview` are available to your templates.
-
----
-
-## What Front Matter Actually Does
-
-Each field drives a concrete behavior in the build:
-
-| Field                 | Effect                                      |
-| :-------------------- | :------------------------------------------ |
-| `title`               | Page `<title>`, headings, and lists         |
-| `description`         | Meta description, cards, list summaries     |
-| `date`                | Sorting, "published on" display, feeds      |
-| `tags` / `categories` | Taxonomy pages and cross-linking            |
-| `draft`               | Excluded from the build when `true`         |
-| `slug`                | Overrides the URL derived from the filename |
-| `template`            | Chooses which layout renders the page       |
-| `weight`              | Manual ordering within a section            |
-
-This is why a typo in front matter can break a build: `date: 2026-13-45` or a stray tab under `tags:` is invalid YAML, and the generator fails before it writes a single page.
+1. **Les clôtures.** Une ligne de trois tirets s'ouvre et ferme le bloc. Tout ce qui se trouve entre les métadonnées; tout ce qui suit appartient à l'article.
+2. **Le format.** Cet exemple est YAML, par défaut pour la plupart des générateurs. TOML (`+++`) et JSON (`{...}`) sont également utilisés; Zola accepte les trois, par exemple.
+3. **Les champs.** Les clés standard comme `title` et `date` sont comprises par les générateurs; les clés personnalisées comme `keywords` ou `preview` sont disponibles pour vos modèles.
 
 ---
 
-## Why Front Matter Exists
+## Ce qui compte le plus en ce moment
 
-Static site generators cannot ask a database "what is this page?" because there is no database. They need metadata to live **with** the content in a form both a machine and a human can read. Front matter solves that:
+Chaque champ conduit un comportement concret dans la construction :
 
-- **Self-describing files.** A post carries everything needed to render it. Move the file, and its identity moves with it.
-- **Diffable metadata.** Changing a title is a one-line commit you can review and revert like any other change.
-- **Tool-friendly.** Editors, linters, and CI scripts can validate metadata before the build.
-- **Portable.** The same block works across generators, with minor key differences.
+| Champ                 | Effet                                         |
+| :-------------------- | :-------------------------------------------- |
+| `title`               | Page `<title>`, en-têtes et listes            |
+| `description`         | Meta description, cartes, résumés de la liste |
+| `date`                | Tri de l'affichage, "publié sur", flux        |
+| `tags` / `categories` | Pages de taxonomie et liens croisés           |
+| `brouillon`           | Exclus de la compilation lorsque `true`       |
+| `slug`                | Remplace l'URL dérivée du nom du fichier      |
+| `template`            | Choisit quelle mise en page rend la page      |
+| `poids`               | Tri manuel dans une section                   |
 
----
-
-## Common Conventions
-
-Enough conventions exist that consistency is worth more than cleverness:
-
-- **Dates in ISO 8601**: `2026-10-16T09:00:00Z`. Unambiguous across locales, sorts correctly.
-- **Tags as a list**, not a comma-separated string, so a tag containing a space does not split in half.
-- **Slugs lowercase with hyphens.** Filenames become URLs, so `my-great-post` beats `My Great Post.md`.
-- **`draft: true` for unfinished work.** The safe way to save without publishing.
-- **A real `description`.** The one field most often left empty and then regretted when the link gets shared.
+C'est pourquoi une faute de frappe en avant peut briser une construction: `date: 2026-13-45` ou un onglet errant sous `tags:` est invalide YAML, et le générateur échoue avant d'écrire une seule page.
 
 ---
 
-## Where a CMS Fits
+## Pourquoi la matière première existe-t-elle
 
-Front matter is the part of Markdown that non-technical writers should not have to see. It is syntax with sharp edges: indentation matters, quotes matter, date formats matter.
+Les générateurs de sites statiques ne peuvent pas demander à une base de données "quelle est cette page?" parce qu'il n'y a pas de base de données. Ils ont besoin de métadonnées pour vivre **avec** le contenu sous une forme qu'une machine et un humain peuvent lire. La question frontale résout ceci:
 
-A Git based CMS handles it as a **form** (fill in the title, pick the date, click tags) and serializes valid YAML on save. Writers never think about the fence; the repository still receives what the generator expects. That single feature eliminates one of the most common failure modes in static-site publishing.
-
-LightCMS, for example, validates front matter as you type and writes it on commit (see [the editor tour](/blog/lightcms-editor-tour/)), so metadata stays correct no matter who is publishing.
-
----
-
-## Frequently Asked Questions
-
-### Is front matter required?
-
-For pages in a date-sorted section, yes: generators expect at least a title and a date. The exact requirements depend on your generator's schema.
-
-### YAML vs TOML vs JSON: which should I use?
-
-Whichever your generator defaults to. Consistency inside a repository matters more than the format itself.
-
-### Can front matter contain lists and objects?
-
-Yes. Nested maps and lists are normal: image galleries, authors with roles, and alternate titles all fit.
-
-### How long should the description be?
-
-Aim for roughly 140–160 characters: long enough to make sense in search results, short enough not to be truncated.
-
-### Does front matter affect SEO?
-
-Directly: it is where the title and meta description come from, so it is one of the most valuable small things in a static site.
+- **Des fichiers qui décrivent soi-même.** Un message contient tout ce dont vous avez besoin pour le rendre. Déplacez le fichier et son identité se déplace avec lui.
+- **Métadonnées Difficiles.** Changer un titre est un commit à une ligne que vous pouvez revoir et annuler comme tout autre changement.
+- Les scripts **outils** et les scripts CI peuvent valider les métadonnées avant la compilation.
+- **Portable.** Le même bloc fonctionne entre les générateurs, avec de petites différences de clés.
 
 ---
 
-Related: [what is Markdown?](/blog/what-is-markdown/), [the LightCMS editor](/blog/lightcms-editor-tour/), and [what a static site generator does](/blog/what-is-a-static-site-generator/).
+## Conventions communes
+
+Il existe suffisamment de conventions pour que la cohérence soit plus que intelligente :
+
+- **Dates en ISO 8601**: `2026-10-16T09:00:00Z`. Unambiguous à travers les régions, trie correctement.
+- **Tags comme une liste**, pas une chaîne séparée par des virgules, donc une balise contenant un espace ne se divise pas en deux.
+- **Slugs minuscules avec des traits d'union.** Les noms de fichiers deviennent des URL, donc `my-great-post` bat `My Great Post.md`.
+- **`draft: true` pour les travaux non terminés.** La façon sûre de sauvegarder sans publier.
+- **Une vraie `description`.** Le champ le plus souvent laissé vide puis regretté quand le lien est partagé.
+
+---
+
+## Où un CMS s'adapte
+
+La question de front est la partie de Markdown que les écrivains non techniques ne devraient pas voir. Il s'agit d'une syntaxe avec des bords pointus : l'indentation est importante, les guillemets sont importants, les formats de date.
+
+Un CMS basé sur Git le gère comme un **formulaire** (remplissez le titre, choisissez la date, cliquez sur les balises) et sérialise le YAML valide à la sauvegarde. Les écrivains ne pensent jamais à la clôture; le référentiel reçoit toujours ce que le générateur attend. Cette fonctionnalité unique élimine l'un des modes d'échec les plus courants dans la publication statique des sites.
+
+LightCMS, par exemple, valide la première question lorsque vous tapez et l'écrit sur commit (voir [la visite de l'éditeur](/blog/lightcms-editor-tour/)), donc les métadonnées restent correctes, peu importe qui est en train de publier.
+
+---
+
+## Foire aux questions
+
+### La question préliminaire est-elle nécessaire?
+
+Pour les pages dans une section triée par date, oui : les générateurs attendent au moins un titre et une date. Les exigences exactes dépendent du schéma de votre générateur.
+
+### YAML vs TOML vs JSON : que dois-je utiliser ?
+
+Quelle que soit la valeur par défaut de votre générateur. La cohérence à l'intérieur d'un référentiel est plus importante que le format lui-même.
+
+### La matière première peut-elle contenir des listes et des objets ?
+
+« Oui. » Les cartes imbriquées et les listes sont normales : galeries d’images, auteurs avec rôles, et titres alternatifs sont adaptés.
+
+### Combien de temps doit être la description ?
+
+Visez approximativement 140 à 160 caractères: assez long pour avoir un sens dans les résultats de recherche, assez court pour ne pas être tronqué.
+
+### Le front important affecte-t-il le référencement ?
+
+Directement : c'est d'où viennent le titre et la méta description, donc c'est l'une des petites choses les plus précieuses dans un site statique.
+
+---
+
+Relatif : [qu'est-ce que Markdown?](/blog/what-is-markdown/), [l'éditeur LightCMS](/blog/lightcms-editor-tour/), et [ce qu'un générateur de site statique] (/blog/what-is-a-static-site-generator/).
