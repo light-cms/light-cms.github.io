@@ -1,90 +1,90 @@
 ---
-title: Best Static Site Generators in 2026
-description: "The best static site generators of 2026: Astro, Hugo, Eleventy, SvelteKit, Jekyll, Lume, and Zine, compared on speed, templating, and ideal use cases."
+title: Melhores Geradores Estáticos do Site em 2026
+description: "Os melhores geradores de site estáticos de 2026: Astro, Hugo, Eleventy, SvelteKit, Jekyll, Lume e Zine, comparados em casos de velocidade, template e uso ideal."
 serial: 18
 date: 2026-10-14T13:50:00Z
 draft: false
 keywords:
-  - best static site generator
-  - static site generators 2026
+  - melhor gerador de site estático
+  - geradores de site estáticos 2026
   - astro vs hugo vs eleventy
-  - ssg comparison
-  - fastest static site generator
+  - Comparação ssg
+  - gerador de site estático mais rápido
 preview: /og-image.webp
 taxonomies:
   tags:
     - ssg
-    - static-sites
-    - astro
+    - estático-sítios
+    - Astro
     - hugo
 ---
 
-Static site generators had their renaissance and never gave it back. In 2026, the best SSGs produce sites that serve from the CDN edge in milliseconds, cost nothing to host, emit a fraction of the carbon of dynamic alternatives, and ship with no admin panel to attack. Picking one takes five minutes once you know the options.
+Geradores locais estáticos tiveram seu renascimento e nunca o devolveu. Em 2026, os melhores SSGs produzem sites que servem a partir da borda CDN em milissegundos, não custam nada para hospedar, emite uma fração do carbono das alternativas dinâmicas e nave sem painel de administração para atacar. Escolher um leva cinco minutos depois que você conhece as opções.
 
 ---
 
-## The Shortlist
+## Lista de atalhos
 
-| Generator     | Language         | Known For                    | Best For                    |
-| :------------ | :--------------- | :--------------------------- | :-------------------------- |
-| **Astro**     | JS/TS (`.astro`) | Content collections, islands | New blogs and content sites |
-| **Hugo**      | Go templates     | Builds in seconds            | Large publications, docs    |
-| **Eleventy**  | JS templates     | Zero-JS minimalism           | Developers who want control |
-| **SvelteKit** | Svelte           | App-like sites               | Interactive hybrids         |
-| **Jekyll**    | Ruby/Liquid      | GitHub Pages native          | Legacy and simple blogs     |
-| **Lume**      | Deno/TS          | Format flexibility           | Deno-native developers      |
-| **Zine**      | Zig              | Raw speed                    | Minimalist personal sites   |
+| Gerador       | IDIOMA           | Conhecido Por                     | Melhor para                         |
+| :------------ | :--------------- | :-------------------------------- | :---------------------------------- |
+| **Astro**     | JS/TS (`.astro`) | Coleções de conteúdo, ilhas       | Novos blogs e sites de conteúdo     |
+| **Hugo**      | Ir modelos       | Construções em segundos           | Grandes publicações, documentos     |
+| **Elevação**  | JS templates     | Minimalismo Zero-JS               | Desenvolvedores que querem controle |
+| **SvelteKit** | Svelte           | Sites semelhantes aos aplicativos | Híbridos interativos                |
+| **Jekyll**    | Rubricar/Líquido | GitHub Pages nativo               | Blog legado e simples               |
+| **Lumo**      | Deno/TS          | Formatar flexibilidade            | Desenvolvedores Deno-nativos        |
+| **Zine**      | Zig              | Velocidade bruta                  | Sites pessoais minimalistas         |
 
-## 1. Astro
+## 1. Espaço
 
-The default recommendation for new content sites. Astro ships zero JavaScript by default, validates your front matter with typed content collections, and lets you drop React/Svelte/Vue components in as islands when you need interactivity. More: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/).
+A recomendação padrão para novos sites de conteúdo. Astro envia JavaScript zero por padrão, valida sua frente com coleções de conteúdo digitadas, e permite que você solte componentes React/Svelte/Vue como ilhas quando você precisar de interatividade. Mais: [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/).
 
 ## 2. Hugo
 
-Still the fastest builder in the category: thousands of pages build in seconds. Go templates have a learning curve, but on large documentation and publication sites nothing keeps up. Its theme ecosystem is the largest in the category.
+Ainda o construtor mais rápido da categoria: milhares de páginas são construídas em segundos. Ir os modelos tem uma curva de aprendizagem, mas em grandes documentos e sites de publicação nada faz continuidade. O seu ecossistema de tema é o maior da categoria.
 
-## 3. Eleventy
+## 3. Elevativo
 
-JavaScript templates, no client-side framework required, complete control over output. Popular with developers who want a generator that stays out of the way.
+Modelos JavaScript, nenhum framework do lado do cliente é obrigatório, controle completo sobre a saída. Popular com desenvolvedores que querem um gerador que fique fora de caminho.
 
 ## 4. SvelteKit
 
-Not a "pure" static generator: it prerenders like one but can grow into a full application. Pick it when your site may need real interactivity later.
+Não é um gerador estático puro: ele se rende como um, mas pode crescer em uma aplicação completa. Escolha quando o site precisar de interatividade real mais tarde.
 
 ## 5. Jekyll
 
-The original modern SSG, native to GitHub Pages. Still fine for simple blogs; most new projects choose Astro or Eleventy instead.
+O SSG moderno original, nativo do GitHub Pages. Ainda muito bem para blogs simples; a maioria dos novos projetos escolhem Astro ou Eleventy em vez disso.
 
 ## 6. Lume
 
-The Deno ecosystem's answer: fast, composable, and format-flexible, with Markdown, JSX, YAML, and TypeScript in one pipeline. Full profile: [Lume for Deno](/comparison/lume-the-static-site-generator-for-deno/).
+A resposta do ecossistema de Deno: rápido, composto e flexível, com Markdown, JSX, YAML e TypeScript em uma pipeline. Perfil completo: [Lume para Deno](/comparison/lume-the-static-site-generator-for-deno/).
 
 ## 7. Zine
 
-A young, Zig-powered generator with its own Super templating language and near-instant builds, built for minimalist personal sites. Full profile: [Zine explained](/blog/zine/).
+Um gerador jovem e movido a Zig, com sua própria linguagem Super de template e compilações quase instantâneas, construídas para sites pessoais minimalistas. Perfil completo: [Zine explicado](/blog/zine/).
 
-## What All of Them Share
+## O que todos eles compartilham
 
-Every generator on this list reads **Markdown files with YAML front matter** from your repository. That common denominator is why the CMS layer is swappable: a Git based editor like [LightCMS](/getting-started/) commits content to any of them, and your [hosting choice](/blog/cloudflare-pages-vs-vercel/) is independent too.
+Cada gerador nessa lista lê **arquivos Markdown com a questão frontal YAML** do seu repositório. Esse denominador comum é por que a camada CMS é trocável: um editor baseado em Git como [LightCMS](/getting-started/) envia o conteúdo para qualquer uma delas, e a sua [escolha de hospedagem](/blog/cloudflare-pages-vs-vercel/) também são independentes.
 
-And because the output is plain cached files, every generator here plugs directly into the green publishing stack described in [Static Sites and CO2](/blog/greener-web-static-sites/).
+E porque a saída é arquivos em cache simples, cada gerador aqui pluga diretamente na pilha de publicação verde descrita em [Sites estáticos e CO2](/blog/greener-web-static-sites/).
 
 ---
 
-## Frequently Asked Questions
+## Perguntas Frequentes
 
-### What is the fastest static site generator?
+### Qual é o gerador de site estático mais rápido?
 
-Hugo, by a wide margin at build time. Both Hugo and Astro produce equally fast pages for visitors.
+Hugo, por uma ampla margem no tempo de construção. Tanto Hugo como Astro produzem páginas igualmente rápidas para os visitantes.
 
-### Which SSG is best for blogs in 2026?
+### Qual SSG é melhor para blogs em 2026?
 
-Astro, for most people: content collections, type-safe front matter, and an easy authoring story. Hugo wins for very large publications.
+Astro, para a maioria das pessoas: coleções de conteúdo, matéria de primeira ordem de tipos e uma história de autoria fácil. O Hugo ganha para publicações muito grandes.
 
-### Do static site generators work with a Git based CMS?
+### Os geradores de site estáticos funcionam com uma CMS baseada em GI?
 
-Yes. Markdown is their native content model. Any Git based CMS commits Markdown into the generator's content directory and triggers the build.
+Sim. Markdown é o seu modelo de conteúdo nativo. Qualquer texto CMS baseado no Git commits Markdown no diretório de conteúdo do gerador e aciona a compilação.
 
-### Are static site generators free?
+### Os geradores de site estáticos são gratuitos?
 
-All of the generators listed here are free and open source. Hosting is free too on platforms like Cloudflare Pages and GitHub Pages.
+Todos os geradores listados aqui são de código livre e aberto. Hospedagem também é gratuita em plataformas como Cloudflare Pages e GitHub Pages.
