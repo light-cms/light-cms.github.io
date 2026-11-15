@@ -1,26 +1,26 @@
 ---
-title: Video Walkthrough
-description: A video guide to the greenfield (local) setup.
+title: Vídeo Walkthrough
+description: Um guia de vídeo para a configuração greenfield (local).
 date: '2026-09-12T01:07:00Z'
 draft: false
 weight: 0
 tags:
-  - video
+  - Vídeo
   - youtube
-  - newsy
-  - newsletter
+  - noticiário
+  - boletim
 isCJKLanguage: false
 headless: false
 ---
 
-Prefer to learn by watching? This walkthrough covers the setup process, from cloning the repository to launching the bot.
+Prefere aprender assistindo? Este passo a passo abrange o processo de instalação, desde clonar o repositório até a inicialização do bot.
 
-## New method with multitenancy support
+## Novo método com suporte multitenancy
 
-[![Newsy setup walkthrough](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
+[![Nova etapa de configuração](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
 
-## Earlier walkthrough
+## Anteriormente Passou
 
-The previous video is still available for reference:
+O vídeo anterior ainda está disponível para referência:
 
-[![Earlier Newsy walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
+[![Desenho novato anteriormente](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
