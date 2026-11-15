@@ -1,94 +1,94 @@
 ---
-title: "The LightCMS AI Copilot: Drafting Help That Stays in Your Repository"
-description: "The built in AI copilot drafts outlines, rewrites paragraphs, and fixes grammar inside LightCMS, running on any OpenAI-compatible provider you choose."
+title: "LightCMS AI Copilot: Помощь создания, которая остаётся в вашем репозитории"
+description: "AI copilot черновиков, перезаписывает абзацы и исправляет грамматику в LightCMS, работая на любом OpenAI-совместимом провайдере вы выбираете."
 serial: 32
 date: 2026-10-16T09:20:00Z
 draft: false
 keywords:
   - ai cms
-  - ai writing assistant markdown
+  - ai письменный помощник markdown
   - lightcms ai copilot
-  - openai compatible cms
-  - ai content workflow
+  - совместимые с openai cms
+  - рабочий процесс ai
 preview: /og-image.webp
 taxonomies:
   tags:
-    - lightcms
+    - молнии
     - ai
-    - writing
-    - workflow
+    - запись
+    - рабочий процесс
 ---
 
-The quickest way to make a writing tool unpopular is to fill it with generated text you did not ask for. The [LightCMS](https://lightcms.me) AI copilot works differently: the model helps, and you keep ownership of the draft.
+Самый быстрый способ сделать непопулярным инструмент записи - это заполнить сгенерированный текст, который вы не запрашивали. [LightCMS](https://lightcms.me) Копилот AI работает по-разному: модель помогает и вы сохраняете за собой право собственности на черновик.
 
-It is not a chat window. It is a set of actions that work with the text you are already editing.
+Это не окно чата. Это набор действий, которые работают с редактируемым текстом.
 
-## What it does
+## Что он делает
 
-Select a paragraph, or select nothing, and the copilot gives you four options:
+Выберите абзац, или выберите ничего, и copilot дает вам четыре варианта:
 
-- **Outline**: Turn a topic into a structure you can accept, reorder, or delete.
-- **Rephrase**: Rewrite the same idea in a different tone. You can tighten a long sentence, make a note more formal, or soften a harsh line.
-- **Expand**: Turn a short idea into a fuller draft when you know what to say but not how much to write.
-- **Fix grammar**: Clean up punctuation, grammar, and typos before you publish.
+- **Очертание**: превращайте тему в структуру, которую можно принять, изменить порядок или удалить.
+- **Перефраза**: Перепишите ту же идею в другой звук. Вы можете затянуть длинное предложение, сделать запись более формальной, или смягчить суровую линию.
+- **Расширение**: Превратите краткую идею в более полный черновик, если вы знаете, что сказать, но не сколько писать.
+- **Исправьте грамматику**: очистите пунктуальность, грамматику и опечатки перед публикацией.
 
-Every result appears in the document as editable text. You can accept it, change it, or undo it. Nothing is saved until you publish, and nothing is published until you have read it.
+Каждый результат отображается в документе как редактируемый текст. Вы можете принять его, изменить или отменить его. Ничего не сохраняется, пока вы не опубликуете и ничего не опубликовано, пока вы не прочитаете его.
 
-## Bring your own model
+## Создайте свою модель
 
-LightCMS works with any OpenAI-compatible endpoint.
+LightCMS работает с любой конечной точкой, совместимой с OpenAI.
 
-| Provider       | Why people choose it                                          |
-| :------------- | :------------------------------------------------------------ |
-| **OpenAI**     | Familiar models with broad capability                         |
-| **OpenRouter** | One key for many models, with easy switching                  |
-| **Groq**       | Fast inference and a free tier                                |
-| **NVIDIA NIM** | Endpoints you can run yourself, including GPU-friendly setups |
+| Поставщик      | Почему люди выбирают                                                              |
+| :------------- | :-------------------------------------------------------------------------------- |
+| **OpenAI**     | Знаменитые модели с широкими возможностями                                        |
+| **OpenRouter** | Один ключ для многих моделей с простым переключением                              |
+| **Грок**       | Быстрое упоминание и свободный уровень                                            |
+| **NVIDIA NIM** | Конечные точки, которые вы можете запустить самостоятельно, включая настройки GPU |
 
-Because LightCMS uses the standard `/v1/chat/completions` format, other compatible endpoints can work too. That includes a local model behind an OpenAI-compatible proxy, a private gateway, or a company endpoint.
+Поскольку LightCMS использует стандартный формат `/v1/chat/completions`, другие совместимые конечные точки тоже могут работать. Это включает в себя локальную модель за OpenAI-совместимым прокси, частный шлюз или конечную точку компании.
 
-Your API key stays in your LightCMS instance. The text you send for a copilot action goes to the provider you configured. For a self-hosted, Apache-licensed tool, that control matters.
+Ваш ключ API остается в вашем экземпляре LightCMS. Текст, который вы отправляете для действия copilot передается поставщику, который вы настроены. Для самостоятельного приложения Apache-лицензированный инструмент, который контролирует немало.
 
-## Why it lives in the editor
+## Почему он живет в редакторе
 
-A chat can produce long, generic text that you still need to paste, format, and rewrite. Contextual actions avoid that problem.
+Чат может создавать длинный, универсальный текст, который по-прежнему нуждается в вставке, формате и перезаписи. Контекстные действия исключают эту проблему.
 
-- **Small scope**: Rephrasing a paragraph has a clear result. "Write me a blog post" does not.
-- **Formatting stays intact**: The copilot works inside the editor, so lists stay lists and front matter stays untouched.
-- **Fast iteration**: If you do not like the result, regenerate the selected text instead of the whole document.
+- **Маленькая область охвата**: изменение формулировки абзаца имеет четкий результат. "Напишите мне запись в блоге" нет.
+- **Форматирование остаётся нетронутым**: Копилот работает внутри редактора, поэтому перечисляет оставшиеся списки и нетронутые остатки переднего дела.
+- **Быстрая итерация**: Если вам не нравится результат, создайте выделенный текст вместо всего документа.
 
-This makes AI feel like a set of small edits, closer to how a copy editor works.
+Это заставляет AI чувствовать себя как небольшой набор правок ближе к тому, как работает редактор копий.
 
-## Use it responsibly
+## Ответственно использовать
 
-- **Write the voice yourself**: Use outlines and expansions as starting points, then keep the sentences that sound like you.
-- **Check the facts**: The model does not know your codebase, your product, or your numbers.
-- **Keep secrets out of prompts**: Anything you send to a provider is visible to that provider.
+- **Напишите свой голос**: Используйте контуры и расширения в качестве отправных пунктов, а затем сохраните предложения, которые звучат так.
+- **Проверьте факты**: модель не знает вашу кодовую базу, продукт или ваши номера.
+- **Не забывайте секреты о запросах**: все, что вы отправляете провайдеру, видно этому провайдеру.
 
-LightCMS saves only what you approve. It does not generate content in the background, store drafts on LightCMS servers, or use your drafts for training.
+LightCMS сохраняет только то, что вы принимаете. Он не генерирует контент в фоновом режиме, не хранит черновики на серверах LightCMS или использует ваши черновики для обучения.
 
-## When it helps most
+## Когда это больше всего помогает
 
-- **Getting started**: An outline turns a blank page into a draft you can react to.
-- **Rewriting at the end**: Tighten the introduction after you know what the post says.
-- **Final cleanup**: Run a grammar pass in the last few minutes before publishing.
+- **Начало работы**: Контур превращает пустую страницу в черновик, на который вы можете реагировать.
+- **Переписывайтесь в конце**: Расширьте введение после того, как вы узнаете, что говорит пост.
+- **Окончательная очистка**: Запустите грамматику за последние несколько минут до публикации.
 
-## Frequently Asked Questions
+## Часто задаваемые вопросы
 
-### Do I need an API key?
+### Нужен ли мне ключ API?
 
-Yes, to use the copilot you need to configure a provider in your LightCMS instance. Everything else in the editor works without an API key.
+Да, для использования copilot вам необходимо настроить провайдера в своем экземпляре LightCMS . Все остальное в редакторе работает без ключа API.
 
-### Will my content be used to train models?
+### Будет ли мой контент использоваться для обучения моделей?
 
-No. LightCMS sends only the text you select for an action to the endpoint you configured. It does not send your repository or drafts anywhere else.
+Нет. LightCMS посылает только текст, который вы выбираете для действия на ту конечную точку, которую вы указали. Он не отправляет ваш репозиторий или черновики нигде.
 
-### Can I use a local model?
+### Могу ли я использовать местную модель?
 
-Yes. If the model exposes an OpenAI-compatible API, point LightCMS at that endpoint and the copilot works the same way.
+Да. Если модель раскрывает OpenAI-совместимый API, то наведите точку LightCMS на эту концу, и copilot работает таким же образом.
 
-### Will it change my front matter?
+### Будут ли изменения в моем переднем виде?
 
-No. Copilot actions affect only the content you select.
+Нет. Действия Copilot влияют только на выбранный вами контент.
 
 Paired with [voice-to-text](/blog/lightcms-voice-to-text/), the copilot helps with both sides of drafting: getting words down quickly and shaping them into a publishable post.
