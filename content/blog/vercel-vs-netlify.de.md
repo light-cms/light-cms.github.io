@@ -35,7 +35,7 @@ Vercel vs Netlify ist die am längsten laufende Debatte im Jamstack-Hosting: Die
 | :---------------------- | :------------------------ | :----------------------- |
 | Statische Bandbreite    | Großzügige, gemessene     | Großzügige, gemessene    |
 | Serverlose Funktionen   | Beinhaltet (Meter)        | Beinhaltet (Meter)       |
-| Build Minuten           | Gemesselt                 | Gemesselt                |
+| Build Minuten           | Beinhaltet (Meter)        | Beinhaltet (Meter)       |
 | Bereitstellungsvorschau | Ja                        | Ja                       |
 | Kommerzielle Nutzung    | Beschränkt auf Hobbystufe | Erlaubt auf freier Stufe |
 
