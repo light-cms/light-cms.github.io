@@ -1,97 +1,97 @@
 ---
-title: "Static vs Dynamic Sites: Which one to choose and when?"
-description: "A practical comparison of static and dynamic websites: performance, cost, security, and when a static site with a Git based CMS is the better choice."
+title: "Статическая против динамических сайтов: какой из них выбрать и когда?"
+description: "Практическое сравнение статических и динамических веб-сайтов: производительность, стоимость, безопасность, а также когда выбор статического сайта с Git основан на CMS."
 serial: 7
 date: 2026-10-14T12:00:00Z
 draft: false
 keywords:
-  - static site vs dynamic site
-  - static website vs dynamic website
-  - static site advantages
+  - статический сайт против динамического сайта
+  - статические сайты по динамическим сайтам
+  - преимущества статического сайта
   - jamstack vs dynamic
-  - static site cms
+  - статический сайт cms
 preview: /og-image.webp
 taxonomies:
   tags:
-    - static-sites
-    - architecture
+    - статические сайты
+    - архитектура
     - jamstack
 ---
 
-Choosing between a static site and a dynamic site is one of the first architectural decisions you will make for a blog, documentation site, or company website. The short version: **static wins on speed, cost, security, and durability**. Dynamic rendering still has a place, a smaller one than it had ten years ago.
+Выбор между статическим сайтом и динамичным сайтом - одно из первых архитектурных решений, которые вы будете делать для блога, сайт документации, или сайт компании. Короткая версия: **статическая победа на скорости, стоимости, безопасности и прочности**. Динамическая рендеринг все еще имеет место, меньше, чем десять лет назад.
 
 ---
 
-## What Is a Static Site?
+## Что такое Статический Сайт?
 
-A static site is a collection of pre-rendered HTML, CSS, JavaScript, and media files. The pages are generated once, at build time, and served as they are. Every visitor receives the same bytes, typically from a global CDN edge node close to them.
+Статический сайт - это набор предварительно обработанных файлов HTML, CSS, JavaScript, а также медиафайлов. Страницы генерируются один раз, во время сборки и обслуживаются как есть. Каждый посетитель получает одни и те же байты, как правило, от глобального узла CDN рядом с ними.
 
-Popular static site generators include [Astro](https://astro.build), [Hugo](https://gohugo.io), [Eleventy](https://www.11ty.dev), [Jekyll](https://jekyllrb.com), and [SvelteKit](https://svelte.dev). [zine](https://zine-ssg.io) is a new static site generator that combines the speed of static sites with the editing experience of a CMS.
+Популярные статические генераторы сайтов включают [Astro](https://astro.build), [Hugo](https://gohugo.io), [Eleventy](https://www.11ty.dev), [Jekyll](https://jekyllrb.com) и [SvelteKit](https://svelte.dev). [zine](https://zine-ssg.io) — это новый генератор статических сайтов, сочетающий скорость работы статических сайтов с возможностью редактирования CMS.
 
-## What Is a Dynamic Site?
+## Что такое динамический сайт?
 
-A dynamic site renders each request on the server (or in a function/edge worker), often querying a database first. Content management systems like WordPress power this model: PHP executes, a database responds, and the final HTML is assembled per visit.
-
----
-
-## Head-to-Head Comparison
-
-| Factor           | Static Site                                 | Dynamic Site                                                  |
-| :--------------- | :------------------------------------------ | :------------------------------------------------------------ |
-| Performance      | Pre-rendered, CDN-served, near-instant      | Depends on server load and database latency                   |
-| Security         | No database or admin runtime exposed        | Constant patching, plugin vulnerabilities, SQL injection risk |
-| Cost             | Free tiers easily cover most sites          | Servers, databases, and scaling costs                         |
-| Scalability      | Scales by CDN replication                   | Requires vertical or horizontal scaling                       |
-| Durability       | Files outlive frameworks and vendors        | Tied to a runtime, database, and host                         |
-| Content updates  | Rebuild in seconds via CI/CD                | Instant, but with a heavier operational surface               |
-| Dynamic features | Added via forms, functions, or edge workers | Native, at the cost of complexity                             |
+Динамический сайт предоставляет каждый запрос на сервере (или в функции/рабочей среде), часто запрашивая базу данных. Системы управления контентом, как WordPress питание этой модели: PHP выполняет, БД, ответы, и окончательный HTML собирается за визит.
 
 ---
 
-## Where Static Sites Win
+## Сравнение головы и головы
 
-- **Speed**: Pre-rendered HTML served from the edge gives strong Core Web Vitals scores, which search engines reward directly.
-- **Security**: There is no production database, no login panel exposed to the internet, and far fewer attack surfaces.
-- **Cost**: A personal blog or documentation site fits comfortably inside free tiers of modern hosting platforms.
-- **Simplicity of operations**: Your "server" is a folder of files. If your host disappears, you can serve the same files anywhere.
-- **Lower emissions**: Serving a cached static file uses a fraction of the energy of rendering a page on demand, with no always-on database and no per-request computation. See [Static Sites and CO2](/blog/greener-web-static-sites/) for the full picture.
-
-## Where Dynamic Sites Still Make Sense
-
-- Heavily personalized pages (dashboards, account areas)
-- Content that must change millisecond-by-millisecond (trading dashboards, live auctions)
-- Applications where every page is a unique database query
-
-Even then, the common modern pattern is a **static frontend with dynamic islands**: a static site plus serverless functions, databases, or third-party APIs used only where needed.
+| Фактор                 | Статический сайт                                               | Динамический сайт                                              |
+| :--------------------- | :------------------------------------------------------------- | :------------------------------------------------------------- |
+| Производительность     | Предварительно обработанный, CDN-сервируемый, почти мгновенный | Зависит от нагрузки сервера и задержки базы данных             |
+| Безопасность           | Не найдено ни базы данных, ни администрирования                | Постоянное исправление, уязвимость плагинов, риск инъекции SQL |
+| Затраты                | Бесплатные уровни легко охватывают большинство сайтов          | Расходы на серверы, базы данных и масштабирование              |
+| Масштабирование        | Масштабы по репликации CDN                                     | Требуется вертикальное или горизонтальное масштабирование      |
+| Прочность              | Файлы устаревших фреймворков и поставщиков                     | Привязано к runtime, базе данных и хосту                       |
+| Обновления содержимого | Восстановление в секундах через CI/CD                          | Мгновенный, но с более тяжелой эксплуатационной поверхностью   |
+| Динамические функции   | Добавляется через формы, функции или передние рабочие          | Native, at the cost of complexity                              |
 
 ---
 
-## The Missing Piece: Editing Static Content
+## Где побеждают статические сайты
 
-The historical complaint about static sites was editing, not performance. Asking writers to pull Git branches and hand-edit Markdown files is friction most people will not accept.
+- **Speed**: Предварительно обработанный HTML, предоставленный с края, дает сильные результаты Веб Виталия, которые поисковые системы напрямую вознаграждают.
+- **Безопасность**: Нет производственной базы данных, нет ни одной панели входа в Интернет, а также гораздо меньше поверхности атаки.
+- **Цена**: Персональный блог или сайт документации удобно помещается внутри бесплатных этапов современных хостинговых платформ.
+- **Простота операций**: Ваш "сервер" - это папка файлов. Если ваш хост исчезнет, вы можете обслуживать те же файлы в любом месте.
+- **Низкие выбросы**: Предоставление кэшированных статических файлов использует часть энергии для отображения страницы по требованию, не всегда базы данных и нет вычислений для каждого запроса. Смотрите [Статические сайты и CO2](/blog/greener-web-static-sites/) для полной картины.
 
-A Git based CMS closes that gap: authors write in a visual editor, and the CMS commits clean Markdown and front matter back to your repository. Your CI/CD pipeline rebuilds and redeploys the site automatically. You keep the static architecture; writers get a normal editing experience.
+## Где Динамические сайты все еще имеют под собой
 
-- [Why Git based publishing works](/blog/why-this/) explains the philosophy behind this model.
-- [Getting started with LightCMS](/getting-started/) walks through the workflow end to end.
-- [Top static site hosting platforms](/misc/top-static-site-hosting/) compares where to serve your static site.
+- Персонализированные страницы (доски, зоны счетов)
+- Контент, который должен менять миллисекунды за миллисекунды (торговые приборные панели, прямые аукционы)
+- Приложения, где каждая страница является уникальным запросом к базе данных
+
+Даже тогда, как обычный современный рисунок представляет собой **статический фронтэнд с динамическими островами**: статический сайт плюс безсерверные функции, или сторонние API используются только там, где это необходимо.
 
 ---
 
-## Frequently Asked Questions
+## Отсутствующая часть: Редактирование статического контента
 
-### Are static sites good for SEO?
+Историческая жалоба по статическим сайтам была редактирования, а не исполнения. Попросив писателей тянуть ветки Git и вручную редактировать файлы Markdown это трение, большинство людей не будут принимать.
 
-Yes. Static sites typically load faster and have better Core Web Vitals than dynamically rendered sites, both of which are ranking factors. They also make clean semantic HTML and structured data easy to control.
+Основанный на Git CMS закрывает этот пробел: авторы пишут в визуальном редакторе, и CMS совершает чистые Markdown и обратную сторону обратно в ваш репозиторий. CI/CD конвейер перестроит и перезагрузит сайт автоматически. Вы держите статическую архитектуру; писатели получают нормальный опыт редактирования.
 
-### Can a static site have a contact form or comments?
+- [Почему издательские работы на основе Git](/blog/why-this/) объясняют философию этой модели.
+- [Начало работы с LightCMS](/getting-started/) проходит через конец рабочего процесса.
+- [Лучшие статические платформы хостинга сайта](/misc/top-static-site-hosting/) сравниваются с где обслуживать ваш статический сайт.
 
-Yes. Client-side JavaScript, serverless functions, or third-party services handle forms and interactivity, and the page itself stays static.
+---
 
-### Is a Static Site Cheaper to Run?
+## Часто задаваемые вопросы
 
-For content-driven sites, almost always. Static files can be served from free hosting tiers with generous bandwidth, while dynamic sites need running servers and managed databases.
+### Хорошо ли статические сайты для SEO?
 
-### Do Static Sites Need a CMS?
+Да. Статические сайты обычно загружаются быстрее и лучше Core Web Vitals чем динамически отображаемые сайты, которые являются факторами ранжирования. Они также облегчают управление чистыми семантическими HTML и структурированными данными.
 
-Not necessarily, but if more than one person publishes, or you want to write from your phone, a Git based CMS gives you the editing experience of WordPress with the architecture of a static site.
+### Может ли статический сайт иметь форму контакта или комментарии?
+
+Да. JavaScript, безсерверные функции или сторонние сервисы обрабатывают формы и интерактивность, а сама страница остается статичной.
+
+### Является ли запуск статического сайта Дешёвым сайтом?
+
+Для сайтов с контентом почти всегда. Статические файлы могут быть переданы от бесплатных хостингов с щедрой пропускной способностью, в то время как динамические сайты нуждаются в работающих серверах и управляемых базах данных.
+
+### Нужны ли статические сайты для CMS?
+
+Не обязательно, но если более одного человека публикует или вы хотите писать с вашего телефона, Git основанный CMS дает вам опыт редактирования WordPress с архитектурой статического сайта.
