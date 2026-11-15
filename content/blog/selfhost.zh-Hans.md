@@ -1,130 +1,130 @@
 ---
-title: Self Hosting LightCMS
-description: Guide to self host LightCMS.
+title: 自我托管的 LightCMS
+description: 自我主机 LightCMS 指南。
 serial: 4
-section: Get Started
-badge: Deploy
+section: 开始
+badge: 部署
 date: 2026-09-18T01:45:00Z
 draft: false
 tags:
   - selfhost
-  - lightcms
+  - 闪光
   - postgresql
-  - deployment
+  - 部署
 keywords:
-  - lightcms
+  - 闪光
   - probot
-  - self-hosting
+  - 自主机
   - github_app
-  - vercel
+  - 脊椎骨
   - sveltekit
 preview: /og-image.png
 canonical: https://www.lightcms.me/docs
 ---
 
-Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
+想要 [LightCMS](https://lightcms.me)完全在您的控制下吗？ [LightCMS](https://lightcms.me) 是一个 [SvelteKit](https://svelte.dev)应用程序，因此它可以在任何地方部署。 得到一个邮政数据库和一个GitHub App(octokit)的支持。您的内容永远不会离开您自己的 GitHub 仓库。
 
-This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
-PostgreSQL, configuring environment variables, and deploying.
+本指南使您走遍运行自己实例所需的一切：创建 GitHub 应用程序，提供
+PostgreSQL，配置环境变量和部署。
 
-## How the Pieces Fit Together
+## 区块如何一起适合的
 
-| Component             | Purpose                                                                       | Required                     |
-| --------------------- | ----------------------------------------------------------------------------- | ---------------------------- |
-| PostgreSQL            | Stores users, sessions, passkeys and GitHub installations                     | Yes                          |
-| GitHub App            | Reads and writes content in your repositories, and signs users in with GitHub | Yes                          |
-| SMTP provider         | Sends magic-link sign-in emails                                               | Yes, for magic-link sign-in  |
-| OpenAI-compatible API | Powers the AI Copilot                                                         | Optional                     |
-| Speech-to-text API    | Powers voice dictation                                                        | Optional                     |
-| Image CDN             | Hosts images uploaded in the editor                                           | Optional                     |
-| PostHog               | Product analytics and AI observability                                        | Required in development only |
+| 组件            | 目的                           | 必填          |
+| ------------- | ---------------------------- | ----------- |
+| PostgreSQL    | 存储用户、会话、密钥和 GitHub 安装        | 否           |
+| GitHub App    | 读取和写入你的仓库中的内容，并使用GitHub 签署用户 | 否           |
+| SMTP 提供商      | 发送魔法链接登录邮件                   | 是的，用于魔法链接登录 |
+| OpenAI兼容的 API | 授权 AI 复制器                    | 可选的         |
+| 语音到文本 API     | 授权语音听音                       | 可选的         |
+| 图像 CDN        | 上传到编辑器中的主机图像                 | 可选的         |
+| Posthog       | 产品分析和 AI 可观测性                | 仅在开发中需要     |
 
-## Prerequisites
+## 必备条件
 
-- **[mise](https://mise.jdx.dev)**: installs and managing tasks dependencies. I will be assuming you have it installed.
-- **PostgreSQL**: a database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
-  [Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
-  [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
-- **GitHub account**: needed to register the GitHub App.
+- **[mise](https://mise.jdx.dev)**：安装和管理任务依赖关系。我将假定你已经安装了。
+- **PostgreSQL**：接受TLS连接的数据库。云端提供商如 [Neon](https://neon.tech),
+  [Supabase](https://supabase.com) 或 [Nile](https://thenile.dev) 运作良好。请参阅
+  [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) 免费选项。
+- **GitHub 帐户**: 需要注册 GitHub 应用程序。
 - **SMTP provider** (for magic links): If you have a domain then [Resend](https://resend.com) will be having an awesome experience,
   if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
 
-> **TLS is mandatory.** The application connects to PostgreSQL with `ssl: "require"`. A local PostgreSQL instance
-> without TLS enabled will be rejected, so use a hosted database or configure TLS on your own server.
+> **TLS 是强制性的。** 应用程序连接到 PostgreSQL 与 \`ssl : "require"。没有启用TLS的本地PostgreSQL 实例
+> 将被拒绝，因此使用托管数据库或在您自己的服务器上配置TL。
 
-## 1. Fork the repository and install dependencies
+## 1. 解锁仓库并安装依赖项
 
-Clone the repository and install dependencies:
+复制仓库并安装依赖：
 
 ```bash
 cd lightcms
 mise trust
 mise deps
-mise run install
+mise 运行安装
 ```
 
-Install the toolchain and the project dependencies:
+安装工具链和项目依赖：
 
 ```bash
-mise trust
+mise support
 mise deps
-mise run install
+mise 运行安装
 ```
 
 ## 2. Create the GitHub App
 
-[LightCMS](https://lightcms.me) uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
-through installations. You can create it with the built in Probot setup wizard, or by hand.
+[LightCMS](https://lightcms.me) 使用一个 GitHub 应用来处理两件事：使用 GitHub (OAuth) 签名用户，通过安装
+来代表您行事。您可以使用Probot 安装向导或手工创建它。
 
-### Option A: Probot setup wizard
+### 备选案文A：Probot 安装向导
 
-start the bot with:
+启动机器人：
 
 ```bash
-mise run bot
+mise 运行机器人
 ```
 
-With no credentials in `.env`, Probot starts a setup server at `http://localhost:3000`:
+在`.env`中没有凭据，Probot在`http://localhost:3000`上启动一个设置服务器：
 
-1. Open `http://localhost:3000` and click **Register GitHub App**.
-2. Choose your personal account or an organization.
-3. Confirm. Probot creates the app and writes its credentials to your `.env` file.
+1. 打开 `http://localhost:3000` 并点击 **注册 GitHub 应用程序**。
+2. 选择您的个人帐户或组织。
+3. 确认. 无人机创建应用并将其凭据写入你的 `.env` 文件。
 
-The wizard sets the app's webhook URL to a Smee channel (or `http://localhost:3000/`), not to [LightCMS](https://lightcms.me)'s webhook
-endpoint. Update it in the GitHub App settings before going live (see [Production deployment](#6-production-deployment)).
+向导将应用的 webhook URL 设置为 Smee 频道 (或`http://localhost:3000/`)，不是 [LightCMS](https://lightcms.me)的 webhook
+端点。在运行前在 GitHub 应用程序设置中更新它 (见[生产部署](#6-production-deployment))。
 
-### Option B: Manual setup
+### 选项B：手动设置
 
-Create the app in **GitHub Settings → Developer settings → GitHub Apps → New GitHub App** with these values:
+在 **GitHub 设置 -> 开发者设置 -> GitHub 应用程序 -> 新 GitHub 应用程序** 中创建应用程序，带有这些值：
 
-| Setting        | Value                                                           |
-| -------------- | --------------------------------------------------------------- |
-| Homepage URL   | `https://<your-domain>`                                         |
-| Callback URL   | `https://<your-domain>/api/auth/callback/github`                |
-| Setup URL      | `https://<your-domain>/github/setup`                            |
-| Webhook URL    | `https://<your-domain>/api/github/webhook`                      |
-| Webhook secret | A random secret (see [Generating secrets](#generating-secrets)) |
+| 设置           | 值                                                |
+| ------------ | ------------------------------------------------ |
+| 主页 URL       | `https:///<your-domain>`                         |
+| Callback URL | `https://<your-domain>/api/auth/callback/github` |
+| Setup URL    | `https://<your-domain>/github/setup`             |
+| Webhook URL  | `https://<your-domain>/api/github/webhook`       |
+| Webhook 密钥   | 随机私密(见[生成密钥](#generating-secrets))               |
 
-**Repository permissions**
+**仓库权限**
 
-| Permission        | Access         | Used for                                    |
-| ----------------- | -------------- | ------------------------------------------- |
-| `Contents`        | Read and write | Reading and committing content files        |
-| `Issues`          | Read and write | Review comments and labels on pull requests |
-| `Pull requests`   | Read-only      | Listing the files changed in a pull request |
-| `Commit statuses` | Read and write | Reporting content validation on pushes      |
-| `Metadata`        | Read-only      | Mandatory for every GitHub App              |
+| 权限         | 访问权限 | 用于：               |
+| ---------- | ---- | ----------------- |
+| `Contents` | 读写   | 读取和提交内容文件         |
+| `Issues`   | 读写   | 查看合并请求的评论和标签      |
+| `Pull 请求`  | 只读   | 在拉取请求中列出更改的文件     |
+| `提交状态`     | 读写   | 推送时报告内容验证         |
+| `Metadata` | 只读   | 每个GitHub 应用程序的必填性 |
 
-**Subscribe to events:** `Push` and `Pull request`. Installation events are delivered to GitHub Apps automatically.
+**订阅事件：** `推送` 和 `Pull request` 。安装事件自动发送至 GitHub 应用程序。
 
-After creating the app, note the **App ID**, generate a **client secret**, and generate and download a **private key**
-(`.pem`).
+在创建应用后，注意**App ID**，生成**客户端密钥**，生成并下载**私有密钥**
+(.pem\`)。
 
-## 3. Configure environment variables
+## 3. 配置环境变量
 
-Create a `.env` file in the project root. The repository does not ship a usable example file, so use the reference below.
+在项目根创建一个 `.env` 文件。版本库不会装载可用的示例文件，因此请使用下面的引用。
 
-### Required
+### 必填
 
 ```bash
 # ---------------------------------------------------------------------------
@@ -151,22 +151,22 @@ GITHUB_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
 -----END RSA PRIVATE KEY-----"
 ```
 
-`GITHUB_PRIVATE_KEY` is the full PEM contents. Keep the line breaks and wrap the value in double quotes, which is how
+`GITHUB_PRIVATE_KEY` 是PEM 的全部内容。 Keep the line breaks and wrap the value in double quotes, which is how
 the Probot wizard writes it.
 
-### Required for development
+### 开发所需的
 
-[LightCMS](https://lightcms.me) reports analytics and errors to [PostHog](https://posthog.com). When the keys are missing, the app **throws in development** to stop events being silently dropped. In production they are optional, and telemetry is skipped when they are unset.
+[LightCMS](https://lightcms.me) 报告分析和错误到 [PostHog](https://posthog.com)。当密钥丢失时，应用程序**扔进开发中** 以停止事件被静默丢弃。在生产过程中，它们是可选的，当它们未设定时，它们会跳过遥测。
 
 ```bash
-PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxx"
-PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
+PUBLIC_POSTHOG_KEY="phc_xxxxxxxxxxxxxxxxxxxxxx"
+PUBLIC_POSTHOST="https://us.i.posthog.com"
 ```
 
-### Email: required for magic-link sign-in
+### 电邮：魔法链接登录需要
 
-Magic links are sent over SMTP with [Nodemailer](https://nodemailer.com). Sending fails with a configuration error when
-`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` or `MAIL_FROM` is missing.
+通过SMTP发送魔法链接并使用 [Nodemailer](https://nodemailer.com)。当
+`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` 或 `MAIL_FROM` 丢失时，发送失败.
 
 ```bash
 MAIL_HOST="smtp.resend.com"
@@ -179,9 +179,9 @@ MAIL_PASS="<smtp-password-or-api-key>"
 MAIL_FROM="LightCMS <noreply@yourdomain.com>"
 ```
 
-### Optional: AI Copilot
+### 可选：AI 复制器
 
-The Copilot uses any OpenAI-compatible chat completions API. All three variables are needed for it to work.
+Copilot 使用任何 OpenAI兼容的聊天完成 API。所有这三个变量都是使其发挥作用所需要的。
 
 ```bash
 OPEN_AI_ENDPOINT="https://api.openai.com/v1"
@@ -189,14 +189,14 @@ OPEN_AI_APIKEY="sk-..."
 OPEN_AI_MODEL="gpt-4o-mini"
 ```
 
-Any provider that exposes an OpenAI-compatible API works, for example [OpenAI](https://platform.openai.com),
-[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) or [NVIDIA NIM](https://build.nvidia.com).
+显示一个 OpenAI-compatible API 工作的任何提供商，例如 [OpenAI](https://platform.openai.com),
+[OpenRouter](https://openrouter.ai) (`https://openrouter.ai/api/v1`) 或 [NVIDIA NIM](https://build.nvidia.com)。
 
-### Optional: speech-to-text dictation
+### 可选：语音字幕
 
-[LightCMS](https://lightcms.me) supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
+[LightCMS](https://lightcms.me) 支持两个翻译后端。当两者都被配置时，将使用OpenAI兼容的后端。
 
-**OpenAI-compatible transcription.** It is selected when `SPEECH_API_KEY` is set, and also needs `SPEECH_MODEL`:
+**OpenAI兼容的抄本。** 它是在`SPEECH_API_KEY`设置时选择的，并且也需要 `SPEECH_MODEL`：
 
 ```bash
 SPEECH_API_KEY="<api-key>"
@@ -205,131 +205,130 @@ SPEECH_MODEL="whisper-1"
 SPEECH_ENDPOINT="https://api.openai.com/v1"
 ```
 
-Point `SPEECH_ENDPOINT` at any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` to a
-model that provider offers. A trailing `/audio/transcriptions` in the endpoint is stripped automatically.
+在实现`/audio/transcriptions`API，并将 `SPEECH_MODEL` 设置为提供商提供的
+模型的任何提供商上，点`SPEECH_ENDPOINT` 指向这些提供商。端点的尾随`/audio/transcriptions`会被自动擦除。
 
-**[Wit.ai](https://wit.ai)** is used when `SPEECH_API_KEY` is not set:
+**[Wit.ai](https://wit.ai)** 未设置 `SPEECH_API_KEY` 时使用：
 
 ```bash
 WIT_AI_TOKEN="<wit-ai-server-access-token>"
 ```
 
-If neither is configured, dictation is unavailable.
+如果两者均未配置，则口述不可用。
 
-### Optional: image uploads (CDN)
+### 可选：图像上传 (CDN)
 
-Images pasted or uploaded in the editor are sent to a [Chevereto](https://chevereto.com)-compatible upload API.
-Hosted options include [FreeImage.host](https://freeimage.host) and [ImgBB](https://imgbb.com), or you can run
-your own Chevereto instance.
+粘贴或上传到编辑器中的图像被发送到一个 [Chevereto](https://chevereto.com)-兼容的上传 API。托管的选项包括 [FreeImage.host](https://freeimage.host) 和 [ImgBB](https://imgbb.com)，或您可以运行
+您自己的Cheverto 实例。
 
 ```bash
 CDN_URL="https://freeimage.host/api/1/upload"
-CDN_KEY="<cdn-api-key>"
+CDN_KEY="<cdn-api-key>
 ```
 
-`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the
-variables are unset, [LightCMS](https://lightcms.me) falls back to embedding the image in the document as a base64 `data:` URL. This works,
-but it makes your Markdown files much larger, so configure a CDN for real use.
+`CDN_KEY`被作为`key`查询参数发送，除非`CDN_URL`已经包含一个。如果上传失败或
+变量未设置。 [LightCMS](https://lightcms.me) 返回到将图像嵌入到文件中作为Base64 `data:` URL。此作品，
+但它使得您的Markdown文件更大，所以配置一个 CDN 供真正使用。
 
-### Local webhook forwarding (development only)
+### 本地Web 钩子转发(仅开发)
 
 ```bash
-WEBHOOK_PROXY_URL="https://smee.io/<your-channel>"
+WEBHOOK_PROXY_URL="https://sme.io/<your-channel>"
 ```
 
-This is read by Probot, not by the SvelteKit app. See [Testing webhooks locally](#testing-webhooks-locally).
+这是由 Probot 而不是 SwelteKit 应用程序读取的。请参阅[本地测试Webhooks](#testing-webhooks-locally)。
 
-### Generating secrets
+### 正在生成密钥
 
-Use any of these to generate `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET`:
+使用其中任何一种生成`BETTER_AUTH_SECRET`和`GITHUB_WEBHOOK_SECRET`：
 
 ```bash
 openssl rand -hex 32
-# or
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+# 或
+节点 -e "console.log(require('crypto').randomBytes(32).toString('hex')"
 ```
 
-## 4. Set up the database
+## 4. 设置数据库
 
-[LightCMS](https://lightcms.me) uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
-are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
+[LightCMS](https://lightcms.me) 使用 [细雨矿物](https://orm.drizzle.team)。 schema位于`src/lib/server/db/schema.ts`，迁移
+生成到 `drizzle` 目录。使用 "DATABASE_URL" 设置，应用迁移：
 
 ```bash
-bun run db:migrate
+bun 运行 db:迁移
 ```
 
-During local development you can instead push the schema straight to the database, without migration files:
+在本地开发过程中，您可以直接将架构推送到数据库，而无需迁移文件：
 
 ```bash
-bun run db:push
+bun 运行 db:put
 ```
 
-Other database scripts:
+其他数据库脚本：
 
-| Command               | Description                                   |
-| --------------------- | --------------------------------------------- |
-| `bun run db:generate` | Generate a migration after editing the schema |
-| `bun run db:studio`   | Browse and edit your data in Drizzle Studio   |
+| 命令                   | 描述                         |
+| -------------------- | -------------------------- |
+| `bun 运行 db:generate` | 编辑schema后生成迁移              |
+| `bun 运行 db:studio`   | 在 Drizzle Studio 浏览并编辑您的数据 |
 
-## 5. Run locally
+## 5. 本地运行
 
 ```bash
-bun run dev
+bun 运行开发
 ```
 
 ![imagebot](https://i.ibb.co/Jw1bjLrr/image.png)
 
 ![permissions detailed](https://i.ibb.co/0p7tk88V/image.png)
 
-[LightCMS](https://lightcms.me) is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
+[LightCMS](https://lightcms.me现在可在 `http://localhost:5173`上查找。设置 `BETTER_AUTH_URL` 为此地址，并首次使用 GitHub 登录。
 
-### Testing webhooks locally
+### 本地测试网络钩子
 
-GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io](https://smee.io):
+GitHub 无法将 webhooks 传输到 `localhost` ，所以请通过 [smee.io](https://smee.io)：
 
-1. Create a channel at [smee.io](https://smee.io) and copy its URL.
-2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL.
-3. Set the **Webhook URL** in your GitHub App settings to the same URL.
-4. Run the bot in a second terminal:
+1. 在 [smee.io](https://smee.io创建频道并复制其URL。
+2. 设置`.env`中的`WEBHOOK_PROXY_URL`为该URL。
+3. 在您的 GitHub 应用程序设置中设置**Webhook URL** 到相同的URL。
+4. 在第二个终端运行机器人：
 
    ```bash
-   bun run bot:start
+   运行bun bot :start
    ```
 
-The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
-labels on `pull_request`, and `installation` logging.
+机器人注册了与生产端点相同的处理程序：`pub`, 审阅`pull_request`, 和 `installation`日志`上的内容验证，`pull_request\`上的
+标签。
 
-## 6. Production deployment
+## 6. 生产部署
 
-The project is configured with sveltekit which is very vendor agnostic, so
-[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) all are supported deployment targets out of the box.
+这个项目是用svelteket配置的，它很有供应商的耐久性。 所以
+[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [云端工人](https://www.cloudflare.com/) 所有的部署目标都被支持在方框中使用
 
-1. Import your Git repository into deployment platform.
-2. Add every environment variable from [step 3](#3-configure-environment-variables) in **Project Settings → Environment
-   Variables**. Set `BETTER_AUTH_URL` to your production URL.
-3. Deploy.
+1. 将您的Git仓库导入到部署平台。
+2. 在 **Project 设置 -> Environment
+   变量**中添加每个环境变量 [步骤 3] (#3-configure-environment-variables) 设置`BETTER_AUTH_URL`为您的生产URL。
+3. 2\. 痛惜。
 
-To verify the production build locally:
+要验证本地生产版本：
 
 ```bash
-bun run build
-bun run preview
+bun 运行 building
+bun 运行预览
 ```
 
-## Troubleshooting
+## 故障排除
 
-Make a account with [Wit.ai](https://wit.ai/) it's a free service by meta |
-And any openai compatible API for transcription. |
-One can use [groq](https://groq.com/) or [assemblyai](https://assemblyai.com/) or |
-[elevenlabs](https://elevenlabs.io/) or [deepgram](https://deepgram.com/) or [sarvam](https://sarvam.ai/). |
+使用 [Wit.ai](https://wit.ai/创建帐户是免费的服务 |
+和任何兼容的 API 来翻译。 |
+可以使用 [groq](https://groq.com/) 或 [assemblyai](https://assemblyai.com/) 或 |
+[elevenlabs](https://elevenlabs.io/) 或 [deepgram](https://deepgram.com/) 或 [sarvam](https://sarvam.ai/)。 |
 
-## For development purpose you can use the following credentials for posthog
+## 为了开发目的，您可以使用以下凭据进行后台操作
 
-PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
+PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
 PUBLIC_POSTHOG_URL = "https://us.i.posthog.com"
 
 ```bash
-PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
+PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
 PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
@@ -338,8 +337,8 @@ https://wit.ai
 ![wit.ai](https://i.ibb.co/MySskPTt/image.png)
 
 ```bash
-WIT_AI_TOKEN="Server access token"
-WIT_AI_CLIENT_TOKEN="Client access token"
+WIT_AI_TOKEN="服务器访问令牌"
+Wit_AI_CLIENT_TOKEN="客户端访问令牌"
 ```
 
 ```bash
@@ -376,4 +375,4 @@ WIT_AI_CLIENT_TOKEN=
 WIT_AI_TOKEN=
 ```
 
-![configuration for the bot](https://i.ibb.co/jP5tgcJH/image.png)
+![box的配置](https://i.ibb.co/jP5tgcJH/image.png)
