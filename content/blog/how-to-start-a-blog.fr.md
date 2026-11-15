@@ -1,113 +1,113 @@
 ---
-title: "How to Start a Blog in 2026: The Markdown & Static Site Guide"
-description: How to start a fast, cheap, durable blog with Markdown, a static site generator, and a Git based CMS, with no hosting bills and no lock-in.
+title: "Comment démarrer un blog en 2026 : le Guide du site Markdown & Static"
+description: Comment démarrer un blog rapide, bon marché et durable avec Markdown, un générateur de site statique, et un CMS basé sur Git, sans facture d'hébergement et sans verrouillage.
 serial: 12
 date: 2026-10-14T12:50:00Z
 draft: false
 keywords:
-  - how to start a blog
-  - start a blog for free
-  - markdown blog
-  - static site blog
-  - best way to start a blog 2026
+  - comment démarrer un blog
+  - démarrer un blog gratuitement
+  - Blogue markdown
+  - blog du site statique
+  - la meilleure façon de commencer un blog 2026
 preview: /og-image.webp
 taxonomies:
   tags:
     - blogging
-    - static-sites
+    - sites statiques
     - markdown
-    - getting-started
+    - débutant
 ---
 
-Starting a blog in 2026 is considerably easier and cheaper than it used to be. You do not need WordPress hosting, a page builder, or a monthly platform fee. The modern recipe is **Markdown files, a static site generator, free hosting, and a Git based CMS for editing**. Total cost: zero dollars. Every page is served from CDN cache, so it loads in milliseconds.
+Commencer un blog en 2026 est beaucoup plus facile et moins cher qu'il ne l'était autrefois. Vous n'avez pas besoin d'hébergement WordPress, d'un constructeur de pages ou de frais mensuels de plateforme. La recette moderne est **les fichiers Markdown, un générateur de site statique, un hébergement gratuit et un CMS Git pour l'édition**. Coût total : zéro dollars. Chaque page est servie à partir du cache CDN, donc elle se charge en millisecondes.
 
 ---
 
-## Step 1: Pick a Static Site Generator
+## Étape 1 : Choisissez un générateur de site statique
 
-Your generator turns Markdown files into a fast static website. The three most popular choices for blogs:
+Votre générateur transforme les fichiers Markdown en un site web statique rapide. Les trois choix les plus populaires pour les blogs :
 
 - **[Astro](https://astro.build)**: component-driven, typesafe content collections, and the lowest friction on-ramp for new bloggers.
-- **[Hugo](https://gohugo.io)**: thousands of pages built in seconds, ideal for large publications.
+- **[Hugo](https://gohugo.io)**: des milliers de pages construites en secondes, idéales pour de grandes publications.
 - **[Eleventy](https://www.11ty.dev)**: minimal, flexible, framework-optional.
 
-Read the full comparison in [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/), or start from [static sites vs dynamic sites](/blog/static-vs-dynamic/) if you want to understand why this architecture wins.
+Lire la comparaison complète dans [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/), ou démarrez à partir de [sites statiques vs sites dynamiques] (/blog/static-vs-dynamic/) si vous voulez comprendre pourquoi cette architecture gagne.
 
-## Step 2: Write Content in Markdown
+## Étape 2 : Écrire du contenu dans Markdown
 
-Every post is a `.md` file with a small front matter header:
+Chaque message est un fichier `.md` avec un petit en-tête de la matière première:
 
 ```markdown
 ---
-title: My First Post
+title: Ma première publication
 date: 2026-10-14T10:00:00Z
-draft: false
-tags:
+brouillon : faux
+tags :
   - blogging
 ---
 
-Hello world. This is my first post.
+Bonjour le monde. C'est mon premier poste.
 ```
 
-Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git based CMS bridges that gap: you write visually and it produces the Markdown for you.
+Markdown est un texte simple : il ne pourrit pas, ne peut pas être piégé dans une base de données propriétaire, et évite tout outil que vous utilisez pour l'écrire. Si vous écrivez déjà dans Notion ou Google Docs, un pont CMS basé sur Git qui fait foi: vous écrivez visuellement et il produit le Markdown pour vous.
 
-## Step 3: Deploy for Free
+## Étape 3 : Déployer gratuitement
 
-Push your repository to GitHub and connect it to a static host:
+Envoyez votre dépôt vers GitHub et connectez-le à un hôte statique :
 
-- **[Cloudflare Pages](https://pages.cloudflare.com)**: unlimited free bandwidth.
-- **[Vercel](https://vercel.com)**: the smoothest dashboard and preview deployments.
-- **[GitHub Pages](https://pages.github.com)**: zero additional accounts required.
+- **[Pages Cloudflare](https://pages.cloudflare.com)**: bande passante gratuite illimitée.
+- **[Vercel](https://vercel.com)** : le tableau de bord et les déploiements de prévisualisation.
+- **[Pages GitHub](https://pages.github.com)**: aucun compte supplémentaire n'est requis.
 
-Every push rebuilds and republishes your blog in under a minute. Compare your options in [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) and [the full hosting roundup](/misc/top-static-site-hosting/).
+Chaque push reconstruit et republie votre blog en moins d'une minute. Comparez vos options dans [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) et [the full hosting roundup](/misc/top-static-site-hosting/).
 
-## Step 4: Edit Without the Command Line
+## Étape 4 : Modifier sans ligne de commande
 
-This is the step most guides skip. If publishing requires opening a terminal, you will stop writing.
+Il s'agit de l'étape que la plupart des guides ignorent. Si la publication nécessite l'ouverture d'un terminal, vous arrêterez d'écrire.
 
-A **Git based CMS** like [LightCMS](https://lightcms.me) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
+Un **CMS basé sur Git** comme [LightCMS](https://lightcms.me) vous donne un éditeur visuel basé sur le navigateur (images, images...). formatting, front-matter) et communique chaque publication dans votre référentiel sous la forme de Markdown propre. Votre pipeline CI/CD fait le reste. Voir [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) pour savoir pourquoi cela bat la route WordPress.
 
-## Step 5: Grow It
+## Étape 5 : Développer
 
-The work that compounds:
+Le travail qui compte:
 
-- Publish on a schedule. Search rewards steady output.
-- Write the posts you once searched for yourself; specific problems rank best.
-- Fast pages and good Core Web Vitals (built in with the static setup) are direct ranking factors.
-- Turn posts into a newsletter so readers can follow you without an algorithm in between, which [automated newsletters with Newsy](/blog/newsletter-email-automation/) covers.
-
----
-
-## What It Costs
-
-| Item                                     | Cost                      |
-| :--------------------------------------- | :------------------------ |
-| Static site generator                    | Free (open source)        |
-| Hosting (Cloudflare Pages, GitHub Pages) | Free tier                 |
-| Git based CMS (LightCMS, self-hosted)    | Free (Apache 2.0)         |
-| Custom domain                            | ~$10–15 / year (optional) |
-
-You can run a serious publication for the price of a domain name.
-
-There is a fourth column nobody lists: energy. A static blog served from cached edge nodes emits a fraction of the CO2 of a database driven site, so publishing on a shoestring and publishing sustainably turn out to be the same decision.
-More in [Static Sites and CO2](/blog/greener-web-static-sites/).
+- Publier sur un horaire. Recherche de résultats stables.
+- Écrivez les messages que vous avez recherchés une fois ; les problèmes spécifiques sont mieux classés.
+- Les pages rapides et le bon Noyau Web Vitals (inclus dans la configuration statique) sont des facteurs de classement direct.
+- Transformez les messages en newsletter pour que les lecteurs puissent vous suivre sans algorithme entre les deux, ce que couvre [les newsletters automatisées avec Newsy](/blog/newsletter-email-automation/).
 
 ---
 
-## Frequently Asked Questions
+## Ce que cela coûte
 
-### Is starting a blog still worth it in 2026?
+| Élément                                      | Coûts                      |
+| :------------------------------------------- | :------------------------- |
+| Générateur de site statique                  | Gratuit (open source)      |
+| Hébergement (Cloudflare Pages, Pages GitHub) | Niveau gratuit             |
+| CMS basé sur Git (LightCMS, auto-hébergé)    | Free (Apache 2.0)          |
+| Domaine personnalisé                         | ~10 $-15 / an (facultatif) |
 
-Yes. A blog you own is durable in a way a social profile is not. Static blogs are fast, cheap to run, and decades away from "this platform shut down."
+Vous pouvez lancer une publication sérieuse au prix d'un nom de domaine.
 
-### Do I need to know how to code?
+Il y a une quatrième colonne que personne ne répertorie: l'énergie. Un blog statique servi à partir de nœuds de bord mis en cache émet une fraction du CO2 d'un site piloté par une base de données, de sorte que la publication sur une chaussure et la publication durable se révèle être la même décision.
+En savoir plus dans [Static Sites and CO2](/blog/greener-web-static-sites/).
 
-No. The generator is set up once (many one-click starters exist); after that, publishing happens through a visual CMS editor.
+---
 
-### Can I start a blog for free?
+## Foire aux questions
 
-Yes. Generator, hosting, and a self-hosted CMS are all free. Only a custom domain costs money, and even that is optional on free subdomains.
+### Commencer un blog vaut toujours la peine en 2026?
 
-### WordPress or static for a new blog?
+« Oui. » Un blog que vous possédez est durable d'une manière qui n'est pas un profil social. Les blogs statiques sont rapides, bon marché à courir, et des décennies de "fermer" cette plate-forme est fermée.
 
-Static, unless you need plugins and membership features. You get better speed, security, and zero maintenance, and [LightCMS](/getting-started/) provides the friendly editing layer WordPress users expect.
+### Dois-je savoir comment coder ?
+
+Non. Le générateur est configuré une fois (il existe plusieurs démarrages en un seul clic); après cela, la publication se fait par un éditeur de CMS visuel.
+
+### Puis-je commencer un blog gratuitement ?
+
+« Oui. » Générateur, hébergement, et un CMS auto-hébergé sont tous gratuits. Seul un domaine personnalisé coûte de l'argent, et même cela est facultatif sur les sous-domaines gratuits.
+
+### WordPress ou statique pour un nouveau blog?
+
+Statistique, sauf si vous avez besoin de plugins et de fonctionnalités d'adhésion. Vous obtenez une meilleure vitesse, sécurité et aucune maintenance, et [LightCMS](/getting-started/) fournit la couche d'édition conviviale attendue par les utilisateurs WordPress.
