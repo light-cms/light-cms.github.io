@@ -20,7 +20,7 @@ description = "Learn how the Git-native workflow works with LightCMS."
 1. **Sign in** with your GitHub account.
 2. **Choose a repository.** Install the LightCMS app on the repo that holds your site. It works with static site generators that use front matter in Markdown files.
 3. **Write.** The editor handles formatting and uploads images as you add them.
-4. **Publish.** [LightCMS](https://www.lightcms.me) commits the change to your repository. 
+4. **Publish.** [LightCMS](https://www.lightcms.me) commits the change to your repository.
 Your CI/CD pipeline builds and deploys the site to the host you choose, such as GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh](https://surge.sh), or any S3-compatible object storage.
 
 ### Read next
