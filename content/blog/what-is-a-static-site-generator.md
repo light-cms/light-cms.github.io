@@ -1,8 +1,9 @@
 ---
-title: "What Is a Static Site Generator?"
-description: "A static site generator builds pages ahead of time from templates and content files."
-serial: 46
-date: 2026-10-16T11:20:00Z
+title: What Is Static Site Generator?
+description: >-
+  A static site generator builds pages ahead of time from templates and content
+  files.
+date: '2026-11-16T08:58:17.908Z'
 draft: false
 keywords:
   - what is a static site generator
@@ -17,9 +18,9 @@ taxonomies:
     - ssg
     - explainers
     - web
+slug: what-is-a-static-site-generator
 ---
-
-A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
+A **static site generator (SSG)** Is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
 
 Instead of assembling a page per request, the work happens once, at build time. What ships to the reader is the finished artifact.
 
@@ -33,13 +34,13 @@ Templates (HTML / JSX / Go templates)├─> SSG build ─> public/ ─> CDN ─
 Configuration, data, styles          ┘
 ```
 
-Run the build, and a `public/` directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
+Run the build, and a `public/` Directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
 
 ---
 
 ## What the Build Actually Does
 
-1. **Reads content.** Markdown files with [front matter](/blog/what-is-front-matter/): titles, dates, tags, draft flags.
+1. **Reads content.** Markdown files with [front matter](/blog/what-is-front-matter/): Titles, dates, tags, draft flags.
 2. **Applies templates.** Each content type maps to a layout: post page, listing, tag index, home page.
 3. **Generates every page.** Article pages, paginated lists, tag archives, RSS feeds, and sitemaps, all pre-rendered.
 4. **Copies assets.** Images, fonts, styles, scripts.
@@ -77,14 +78,16 @@ Interactivity is not off-limits. The modern pattern pre-renders everything and a
 
 ## The Options in Brief
 
-| Generator | Language / templating | Signature strength |
-| :--- | :--- | :--- |
-| **Hugo** | Go templates | Raw build speed, huge theme ecosystem |
-| **Astro** | `.astro` components | Islands architecture, content collections |
-| **Eleventy** | Nunjucks, Liquid, and more | Zero-JS minimalism, full control |
-| **Jekyll** | Liquid | GitHub Pages heritage, simplicity |
-| **Zola** | Tera | Single binary, batteries included |
-| **SvelteKit / Next.js** | React/Svelte | Sites that grow into applications |
+
+| Generator               | Language / templating      | Signature strength                        |
+| :----------------------- | :-------------------------- | :----------------------------------------- |
+| **Hugo**                | Go templates               | Raw build speed, huge theme ecosystem     |
+| **Astro**               | `.astro` components        | Islands architecture, content collections |
+| **Eleventy**            | Nunjucks, Liquid, and more | Zero-JS minimalism, full control          |
+| **Jekyll**              | Liquid                     | GitHub Pages heritage, simplicity         |
+| **Zola**                | Tera                       | Single binary, batteries included         |
+| **SvelteKit / Next.js** | React/Svelte               | Sites that grow into applications         |
+
 
 The full survey is in [best static site generators](/blog/best-static-site-generators/). All of them consume the same input: Markdown with front matter.
 
@@ -102,7 +105,7 @@ A Git backed CMS fills that gap: it writes Markdown and front matter into the re
 
 ### Is an SSG the same as a framework?
 
-No. A framework handles requests at runtime; a generator runs at build time and produces files. Some tools blur the line: SvelteKit and Next.js can do both.
+1. A framework handles requests at runtime; a generator runs at build time and produces files. Some tools blur the line: SvelteKit and Next.js can do both.
 
 ### Do static sites support comments, forms, or search?
 
