@@ -16,7 +16,6 @@ tags:
   - lightcms
 isCJKLanguage: false
 headless: false
-serial: 28
 preview: /og-image.webp
 taxonomies:
   tags:
@@ -24,7 +23,6 @@ taxonomies:
     - zine
     - zig
     - static-sites
-slug: zine
 ---
 
 [Zine](https://zine-ssg.io) Is a new static site generator Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
@@ -50,14 +48,14 @@ For a personal website with a blog (the project's stated comfort zone), Zine is 
 
 Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git-based CMS workflow does not apply directly.
 
-Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/Pratyay360/md2smd) can help convert between [CommonMark](https://commonmark.org/) and Zine's formats.
+Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/light-cms/md2smd) can help convert between [CommonMark](https://commonmark.org/) and Zine's formats.
 
 ![Zine build pipeline](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png)
 
 You need two repositories: one for the frontend and one for the content.
 
-- [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_site), the frontend repository
-- [https://github.com/light-cms/blogs\_md](https://github.com/light-cms/blogs_md), the content repository
+- [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_template), the frontend repository
+- [https://github.com/light-cms/blogs\_md](https://github.com/light-cms/zine_content), the content repository
 
 Trigger a repository dispatch when new content is pushed to the content repository.
 

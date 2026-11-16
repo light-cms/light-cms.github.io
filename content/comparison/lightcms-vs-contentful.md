@@ -1,7 +1,6 @@
 ---
 title: "LightCMS vs Contentful: Enterprise SaaS vs a Repository You Own"
-description: "Contentful is an enterprise SaaS headless CMS; LightCMS is a self-hosted editor that commits Markdown to Git. Compare cost, lock-in, and writing experience."
-serial: 49
+description: "Contentful is an enterprise grade headless CMS; LightCMS is a self hosted editor that commits Markdown to Git. Compare cost, vendor dependency, and writing experience."
 date: 2026-10-16T11:50:00Z
 draft: false
 keywords:

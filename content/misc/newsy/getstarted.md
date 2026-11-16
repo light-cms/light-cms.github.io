@@ -18,7 +18,7 @@ isCJKLanguage: false
 Introducing [Newsy](https://newsy.lightcms.me), an open-source newsletter platform powered by GitHub.
 
 Newsy is heavily inspired by tools like Utterances, Giscus, and Gitalk, which reimagined commenting for static sites using GitHub Issues. 
-Newsy takes the same GitHub-driven approach and brings it to newsletters:
+Newsy takes the same GitHub driven approach and brings it to newsletters:
 instead of relying on external services or maintaining a separate mailing list,
 your newsletter lives right alongside your code in your GitHub repository.
 
