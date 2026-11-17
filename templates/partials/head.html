@@ -195,6 +195,12 @@
 	}
 	</script>
 	{%- elif current_path is defined and (current_path == "/" or current_path == "/" ~ lang ~ "/") %}
+	<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WL6BJCCQ"></script>
+	<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+	</script>
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",

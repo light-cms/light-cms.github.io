@@ -19,7 +19,7 @@ taxonomies:
     - comparison
 ---
 
-[Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well-designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
+[Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
 
 [LightCMS](https://lightcms.me) starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **what the person publishing actually experiences**.
 
