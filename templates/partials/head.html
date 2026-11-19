@@ -7,11 +7,16 @@
 	{%- elif section is defined and section.description -%}{%- set meta_description = section.description -%}{%- endif -%}
 	{%- set meta_description = meta_description | striptags | trim -%}
 	{%- set meta_url = config.base_url ~ "/" -%}
-	{%- if current_url is defined and current_url -%}{%- set meta_url = current_url -%}{%- endif -%}
+	{%- if current_url is defined and current_url -%}{%- set meta_url = current_url -%}{%- endif %}
+	{%- if page is defined and page.extra?.canonical -%}{%- set meta_url = page.extra.canonical -%}{%- endif %}
 	{%- set og_type = "website" -%}
-	{%- if page is defined and page.date -%}{%- set og_type = "article" -%}{%- endif -%}
+	{%- if page is defined and page.date -%}{%- set og_type = "article" -%}{%- endif %}
 	<meta name="description" content="{{ meta_description }}" />
+	{%- if page is defined and page.extra?.noindex -%}
+	<meta name="robots" content="noindex, follow" />
+	{%- else -%}
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+	{%- endif %}
 	<meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
 	{%- if config.extra.accent_color_dark is defined %}
 	<meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />

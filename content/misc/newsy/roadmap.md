@@ -1,15 +1,18 @@
 ---
-
-title: Roadmap
-description: Roadmap
+title: Newsy Roadmap
+description: 'The Newsy roadmap: the hosted instance, self-hosting on Vercel, and what the GitHub backed newsletter bot supports today.'
+keywords:
+  - newsy
+  - newsletter roadmap
+  - github newsletter
+  - self hosted newsletter
 draft: false
 weight: 0
-tags:
-- newsy
-- newsletter
-isCJKLanguage: false
-headless: false
-
+preview: /og-image.webp
+taxonomies:
+  tags:
+    - newsy
+    - newsletter
 ---
 
 Newsy already supports a shared instance and stores only the installation ID in its database.

@@ -1,6 +1,6 @@
 ---
 title: About
-description: 'Content managed with: lightcms.me'
+description: 'About the LightCMS Journal: who writes it, what we cover — Git based CMS, static sites, and content workflows — and how the site itself runs on LightCMS.'
 draft: false
 weight: 0
 keywords:
@@ -8,11 +8,13 @@ keywords:
   - lightcms blog
   - git backed cms blog
   - static site writing
-tags:
-  - about
-  - lightcms
-  - opensource
-  - sveltekit
+preview: /og-image.png
+taxonomies:
+  tags:
+    - about
+    - lightcms
+    - opensource
+    - sveltekit
 isCJKLanguage: false
 headless: false
 date: '2026-11-08T21:20:01.403Z'

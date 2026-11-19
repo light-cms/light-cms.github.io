@@ -12,6 +12,7 @@ keywords:
   - whisper transcription cms
   - speech to text writing
   - lightcms voice
+preview: /og-image.webp
 slug: lightcms-voice-to-text
 ---
 Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.

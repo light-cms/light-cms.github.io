@@ -1,6 +1,6 @@
 ---
 title: 'Zine: The Static Site Generator'
-description: 'What Zine is: a fast, young static site generator written in Zig'
+description: 'Zine is a fast, young static site generator written in Zig, with its own Super templating language and near-instant builds — a profile of the minimalist SSG.'
 draft: false
 keywords:
   - zine static site generator
@@ -8,12 +8,6 @@ keywords:
   - zig static site generator
   - zine ssg vs hugo
   - fastest ssg zig
-tags:
-  - zine
-  - zig
-  - ziggy
-  - ssg
-  - lightcms
 isCJKLanguage: false
 headless: false
 preview: /og-image.webp

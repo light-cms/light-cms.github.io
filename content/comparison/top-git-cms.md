@@ -1,6 +1,6 @@
 ---
 title: Top Git-Based CMS Platforms Compared
-description: "A comparison of the best Git based CMS options: Decap CMS, TinaCMS, Keystatic, Pages CMS, Sveltia CMS, CloudCannon, and LightCMS, with a decision matrix."
+description: "A comparison of the best Git based CMS options: Decap CMS, TinaCMS, Keystatic, Pages CMS, Sveltia CMS, CloudCannon, and LightCMS"
 serial: 11
 date: 2026-10-14T12:40:00Z
 draft: false

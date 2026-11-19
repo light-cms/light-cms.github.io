@@ -21,7 +21,7 @@ taxonomies:
 
 [Drupal](https://www.drupal.org) is the serious end of open-source content management: a PHP framework with a content model, permissions, views, and an ecosystem built for universities, governments, and large organizations with real governance requirements.
 
-Comparing it to LightCMS is almost unfair: they sit at opposite ends of the complexity spectrum. The comparison is still useful, because plenty of teams ask whether they need Drupal's weight for a publishing site.
+Comparing it to [LightCMS](https://www.lightcms.me) is almost unfair: they sit at opposite ends of the complexity spectrum. The comparison is still useful, because plenty of teams ask whether they need Drupal's weight for a publishing site.
 
 ---
 

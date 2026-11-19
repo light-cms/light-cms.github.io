@@ -34,7 +34,7 @@ LightCMS is configured around **the document**. You open a post and see the post
 Neither approach is wrong, but they produce different days:
 
 - In Decap, you are *operating a form* over a content record.
-- In LightCMS, you are *writing a document* that happens to be stored in Git.
+- In [LightCMS](https://www.lightcms.me), you are *writing a document* that happens to be stored in Git.
 
 For structured content (event listings, product pages, directories), Decap's field model is the right shape. For articles, essays, release notes, and docs, a document beats a form every time.
 

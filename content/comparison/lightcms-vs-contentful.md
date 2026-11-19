@@ -27,9 +27,9 @@ It's also a paid platform with a substantial bill, built for organizations whose
 
 ## Two Business Models
 
-**Contentful** is a vendor relationship. Content lives in their cloud, is edited in their web app, and is served through their APIs under a subscription that scales with usage, seats, and environments. You get SLAs, support, and enterprise features, along with a monthly cost that grows with your success.
+Contentful is a vendor relationship. Content lives in their cloud, is edited in their web app, and is served through their APIs under a subscription that scales with usage, seats, and environments. You get SLAs, support, and enterprise features, along with a monthly cost that grows with your success.
 
-**LightCMS** is software you run. Content lives in your repository, is edited in a self-hosted app, and is served as static files by your host. You get portability and a cost line near zero, with no vendor to negotiate with when priorities change.
+**LightCMS** is software you run. Content lives in your repository, is edited in a self-hostable app, and is served as static files by your host. You get portability and a cost line near zero, with no vendor to negotiate with when priorities change.
 
 | | LightCMS | Contentful |
 | :--- | :--- | :--- |

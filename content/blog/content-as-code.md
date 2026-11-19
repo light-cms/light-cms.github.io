@@ -12,12 +12,6 @@ keywords:
   - content in git
   - markdown workflow
   - version controlled content
-tags:
-  - Content
-  - Frontmatter
-  - Docs
-  - Markdown
-  - Lightcms
 isCJKLanguage: false
 headless: false
 serial: 47

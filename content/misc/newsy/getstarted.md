@@ -1,15 +1,20 @@
 ---
-title: 'Getting Started with Newsy: GitHub Powered Newsletter platform'
-description: 'Newsy, a serverless newsletter platform powered entirely by Github for free'
-tags:
+title: 'Getting Started with Newsy: A GitHub Powered Newsletter Platform'
+description: 'Newsy is a serverless, GitHub powered newsletter platform: subscribers and issues live in your repository, with no mailing list service, SMTP, or database to run.'
+keywords:
   - newsy
-  - newsletter
-  - modern solution
-  - free newsletter
-  - github
-  - golang
-  - webassembly
-isCJKLanguage: false
+  - github newsletter
+  - serverless newsletter
+  - newsletter platform
+  - github issues newsletter
+preview: /og-image.webp
+taxonomies:
+  tags:
+    - newsy
+    - newsletter
+    - github
+    - golang
+    - webassembly
 slug: getstarted
 date: '2026-11-19T10:59:17.693Z'
 ---
@@ -36,7 +41,7 @@ Publishing should be accessible to everyone. There is no need to pay a heavy fee
 - Deploys on server less (e.g., Vercel, AWS Lambda) for production.
 - Web Assembly support: Compile the Go binary to Web Assembly with [TinyGo](https://tinygo.org/) and run it on server less platforms that support JavaScript or Type Script runtime.
 
-A video walkthrough of the local setup is available in the [video guide](/content/misc/newsy/video.md).
+A video walkthrough of the local setup is available in the [video guide](/misc/newsy/video/).
 
 ## Self Host Your Bot
 
@@ -82,7 +87,7 @@ ssh -R 80:localhost:3000 localhost.run
 
 [![newsy a github issues backed newsletter platform](https://markdown-videos-api.jorgenkh.no/youtube/sfjo6ZVgC9w.gif?duration=600)](https://youtu.be/sfjo6ZVgC9w)
 
-*(If you run into issues, refer to the [video guide](/guides/newsy/video/) or try an alternative tunneling provider.)*
+*(If you run into issues, refer to the [video guide](/misc/newsy/video/) or try an alternative tunneling provider.)*
 
 4. Choose an **App name** (preferably unique).
 5. Paste the tunnel URL into the **Webhook URL** field and submit.
@@ -157,4 +162,4 @@ You can customize and style the button using [Primer CSS](https://cdnjs.com/libr
 
 ![](https://i.ibb.co/8nKjyvXD/screenshot-2026-10-24-160916-png.png)
 
-For further details on permissions, refer to the [required permissions](/guides/newsy/list-of-all-permission/) documentation.
+For further details on permissions, refer to the [required permissions](/misc/newsy/list-of-all-permission/) documentation.

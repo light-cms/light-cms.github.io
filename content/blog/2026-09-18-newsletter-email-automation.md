@@ -1,8 +1,8 @@
 ---
-title: Newsletter Automation Without a paid subscription
+title: Newsletter Automation Without a Paid Subscription
 description: >-
-  Run your blog newsletter straight from Git no mailing list, SMTP api's or SaaS
-  fees.
+  Run your blog newsletter straight from Git: no mailing list, no SMTP API, no
+  SaaS fees.
 date: '2026-09-18T01:50:00.000Z'
 draft: false
 keywords:
@@ -17,11 +17,11 @@ taxonomies:
     - newsy
     - github
     - publishing
-slug: 2026-09-18-newsletter-email-automation
+slug: newsletter-email-automation
 ---
 Email is one of the most effective ways to build a dedicated audience. The traditional way of doing it, though, has become cumbersome and expensive.
 
-[LightCMS](https://lightcms.me) takes a different route: **Git driven newsletters** powered by [Newsy](https://github.com/light-cms/newsy), where the repository you already have is The backend, so you can drop the newsletter service entirely.
+[LightCMS](https://www.lightcms.me) takes a different route, Git driven newsletters powered by [Newsy](https://github.com/light-cms/newsy), where the repository you already have is The backend, so you can drop the newsletter service entirely.
 
 ---
 
@@ -31,7 +31,7 @@ With conventional platforms like Mailchimp, Substack, or Brevo, your workflow ty
 
 1. Signing up for an external service with rigid subscription tiers.
 2. Managing fragmented mailing lists across third party dashboards.
-3. Manually copying and pasting your blog post into proprietary rich text email builders.
+3. Manually copying and pasting your blog post into email builders.
 4. Dealing with bloated tracking scripts, cookies, and privacy compliance requirements.
 5. Paying substantial monthly fees as your subscriber count grows.
 

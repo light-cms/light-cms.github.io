@@ -1,6 +1,6 @@
 +++
 title = "Getting Started with LightCMS"
-description = "Learn how the Git-native workflow works with LightCMS."
+description = "A practical journal on Git based CMS, static site generators, and modern publishing workflows: write in Markdown, keep your content in Git, and deploy anywhere."
 +++
 
 ## [LightCMS](https://www.lightcms.me) is a Git based content management system for static sites

@@ -19,15 +19,15 @@ taxonomies:
     - lightcms
 ---
 
-Connecting your static site to [LightCMS](https://lightcms.me) requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
+Connecting your static site to [LightCMS](https://www.lightcms.me) requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
 
-Follow this guide to structure your repository, install the [LightCMS](https://lightcms.me) GitHub App, and set up automated deployments.
+Follow this guide to structure your repository, install the [LightCMS](https://www.lightcms.me) GitHub App, and set up automated deployments.
 
 ---
 
 ## 1. Structure Your Content Repository
 
-[LightCMS](https://lightcms.me) works natively with any static site generator (SSG) that stores content as Markdown (`.md` or `.mdx`) files with YAML front matter.
+[LightCMS](https://www.lightcms.me) works natively with any static site generator (SSG) that stores content as Markdown (`.md` or `.mdx`) files with YAML front matter.
 
 A typical repository layout looks like this:
 

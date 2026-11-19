@@ -1,6 +1,6 @@
 ---
 title: 'Start From a Template: The LightCMS Starter Library'
-description: LightCMS ships preconfigured starter templates on GitHub
+description: LightCMS starter templates for Astro, Hugo, SvelteKit, Jekyll, Next.js, Zola, and Eleventy — fork a preconfigured repository and publish with the visual editor.
 serial: 35
 date: '2026-10-16T09:50:00.000Z'
 draft: false

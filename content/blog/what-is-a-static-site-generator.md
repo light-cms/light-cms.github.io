@@ -1,8 +1,9 @@
 ---
-title: What Is Static Site Generator?
+title: What Is a Static Site Generator?
 description: >-
-  A static site generator builds pages ahead of time from templates and content
-  files.
+  A static site generator builds every page ahead of time from templates and
+  Markdown content. Here is how SSGs work, what they are good at, and where
+  they struggle.
 date: '2026-11-16T08:58:17.908Z'
 draft: false
 keywords:
@@ -20,7 +21,7 @@ taxonomies:
     - web
 slug: what-is-a-static-site-generator
 ---
-A **static site generator (SSG)** Is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
+A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
 
 Instead of assembling a page per request, the work happens once, at build time. What ships to the reader is the finished artifact.
 
@@ -34,7 +35,7 @@ Templates (HTML / JSX / Go templates)├─> SSG build ─> public/ ─> CDN ─
 Configuration, data, styles          ┘
 ```
 
-Run the build, and a `public/` Directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
+Run the build, and a `public/` directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
 
 ---
 
