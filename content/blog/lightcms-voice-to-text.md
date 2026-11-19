@@ -16,7 +16,7 @@ slug: lightcms-voice-to-text
 ---
 Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.
 
-[LightCMS](https://lightcms.me) features dictation. Hit record, speak, and your words are written to your draft.
+[LightCMS](https://lightcms.me) Features dictation. Hit record, speak, and your words are written to your draft.
 
 ---
 
@@ -24,7 +24,7 @@ How It Works
 
 1. Open your application in the editor. Browser prompt for microphone permission.
 2. Just Speak. Pauses are okay; you are just spit balling, not reading.
-3. Stop. [LightCMS](https://lightcms.me) is feeding the audio into a Whisper transcription endpoint on Groq, and placing the returned text into the cursor.
+3. Stop. [LightCMS](https://lightcms.me) Is feeding the audio into a Whisper transcription endpoint on Groq, and placing the returned text into the cursor.
 4. The transcript appears as plain old Markdown in the page: still your words, still fully editable, still only pushed when you publish.
 
 The transcript is not an attachment or a separate piece. It's a component of a post as soon as it comes in, so the next pass is just common editing: cut the rambling, put in the order, insert the headings.
