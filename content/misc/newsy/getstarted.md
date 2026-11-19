@@ -33,8 +33,8 @@ Why GitHub?
 
 Publishing should be accessible to everyone. There is no need to pay a heavy fee to a SaaS platform or spend hours wrestling with email infrastructure just to share updates with your readers.
 
-- Deploys on serverless (e.g., Vercel, AWS Lambda) for production.
-- WebAssembly support: Compile the Go binary to WebAssembly with [TinyGo](https://tinygo.org/) and run it on serverless platforms that support JavaScript or TypeScript runtimes.
+- Deploys on server less (e.g., Vercel, AWS Lambda) for production.
+- Web Assembly support: Compile the Go binary to Web Assembly with [TinyGo](https://tinygo.org/) and run it on server less platforms that support JavaScript or TypeScript runtimes.
 
 A video walkthrough of the local setup is available in the [video guide](/content/misc/newsy/video.md).
 
