@@ -75,7 +75,7 @@ Frequently Asked Questions:-
 
 ## Do I need a separate transcription subscription?
 
-1. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) instance, in the same way as the AI copilot - bring-your-own-endpoint model.
+1. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) Instance, in the same way as the AI copilot - bring-your-own-endpoint model.
 
 ## Is it effective in other languages?
 
