@@ -53,7 +53,7 @@ There is a bit of pattern to this; dictation favors a bit of form. The most prod
 - 
   > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
 
-10 mins of talking, 10 mins of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
+10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---
 
