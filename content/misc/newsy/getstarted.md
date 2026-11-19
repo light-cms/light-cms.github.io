@@ -153,8 +153,8 @@ You can customize and style the button using [Primer CSS](https://cdnjs.com/libr
 > \[!TIP\]
 > **Security tip:** After the bot publishes its first newsletter message, lock the conversation to prevent any unintended behavior.
 
-![Locking the conversation](/static/newsy-lock.png)
+![](https://i.ibb.co/nsjMkY9v/screenshot-2026-10-24-160830-png.png)
 
-![newsy unlock](/static/newsy-unlock.png)
+![](https://i.ibb.co/8nKjyvXD/screenshot-2026-10-24-160916-png.png)
 
 For further details on permissions, refer to the [required permissions](/guides/newsy/list-of-all-permission/) documentation.
