@@ -1,8 +1,10 @@
 ---
-title: "Dictate Your Drafts: Voice to Text in [LightCMS](https://lightcms.me)"
-description: "How [LightCMS](https://lightcms.me) turns spoken ideas into structured Markdown with Whisper transcription: record, review, and edit a dictated post without leaving the browser."
-serial: 33
-date: 2026-10-16T09:30:00Z
+title: 'Dictate Your Drafts: Voice to Text in LightCMS'
+description: >-
+  How LightCMS turns spoken ideas into structured Markdown with Whisper
+  transcription: record, review, and edit a dictated post without leaving the
+  browser.
+date: '2026-10-16T09:30:00.000Z'
 draft: false
 keywords:
   - voice to text markdown
@@ -10,13 +12,7 @@ keywords:
   - whisper transcription cms
   - speech to text writing
   - lightcms voice
-preview: null
-taxonomies:
-  tags:
-    - lightcms
-    - writing
-    - workflow
-    - accessibility
+slug: lightcms-voice-to-text
 ---
 Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.
 
@@ -54,7 +50,8 @@ There is a bit of pattern to this; dictation favors a bit of form. The most prod
 - Maybe talk first, structure second. Say it all in the first draft, doesn't get bogged down in sections.
 - Stop and read it back What you've spoken will be full of repetition that seemed right at the time. Remove it before it gets stuck in the draft.
 - Name down the new section where the thought changed. Now let's talk about deployment. Promote to ## heading by adding # before it. The transcript has already told you where the sections are.
-- > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
+- 
+  > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
 
 10 mins of talking, 10 mins of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
@@ -70,7 +67,6 @@ What Happens to the Audio?
 
 [LightCMS](https://lightcms.me) transmits the recording for transcription and provides your text back. The audio never touches your repository: what goes into git is the Markdown, just like any other edit. Your writing is stored as files in your repository, which is the same promise that the rest of [LightCMS](https://lightcms.me) makes: zero lock-in, zero database.
 
-
 ## A Word on the Review
 
 The transcription is great, but not perfect. Homophones, noisy environments and long strange names should still be checked by a person, especially for a post that will be indexed and read for years. Use the transcript as a quick first draft, not the final; editing is mandatory, only shorter than starting from scratch.
@@ -79,7 +75,7 @@ Frequently Asked Questions:-
 
 ## Do I need a separate transcription subscription?
 
-No. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) instance, in the same way as the AI copilot - bring-your-own-endpoint model.
+1. Transcription is directed to the Whisper endpoint that is configured for your [LightCMS](https://lightcms.me) instance, in the same way as the AI copilot - bring-your-own-endpoint model.
 
 ## Is it effective in other languages?
 
@@ -91,6 +87,6 @@ Yes. Put the cursor anywhere within your document and start typing. The transcri
 
 ## Will the microphone continue recording?
 
-No. It is quite explicit: you record it and then you stop recording.
+1. It is quite explicit: you record it and then you stop recording.
 
 Next: what happens once we get the words on the page.
