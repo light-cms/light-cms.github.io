@@ -64,11 +64,9 @@ It is also free in the way static hosting is free: open source, self hostable (G
 
 1. Install the **Newsy GitHub App** on the repository you publish from: [github.com/apps/newsletter-newsy](https://github.com/apps/newsletter-newsy/installations/select_target).
 2. Push a new post, from [LightCMS](https://lightcms.me) or your terminal.
-3. Generate the Subscribe button at [newsy.lightcms.me](https://newsy.lightcms.me) and paste it into your site.
+3. Generate the Subscribe button at [newsy.lightcms.me](https://newsy.lightcms.me) And paste it into your site.
 
 Readers land on the announcement issue and subscribe there; every future post reaches them automatically.
-
----
 
 ## Further Reading
 
