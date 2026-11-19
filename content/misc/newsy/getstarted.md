@@ -51,7 +51,7 @@ cd newsy
 
 #### 2. Set Up the Environment
 
-We use [mise](https://mise.jdx.dev) to keep the development environment
+We use [mise](https://mise.jdx.dev) To keep the development environment
 consistent and easy to manage:
 
 ```bash
