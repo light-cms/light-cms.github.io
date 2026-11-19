@@ -5,10 +5,7 @@ biome = "latest"
 "npm:pagefind" = "latest"
 "npm:@crowdin/cli" = "latest"
 "npm:@posthog/cli" = "latest"
-markdownlint-cli2 = "latest"
-marksman = "latest"
 harper-cli = "latest"
-
 
 [tasks]
 start = "zola serve"
