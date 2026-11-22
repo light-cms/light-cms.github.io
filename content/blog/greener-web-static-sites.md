@@ -43,7 +43,7 @@ You cannot improve what you do not measure:
 - [**Ecograder**](https://ecograder.com/) Gives a comparable estimate, alongside performance and accessibility scoring.
 - Real-user metrics matter too: Largest Contentful Paint and total bytes transferred correlate directly with energy per view.
 
-The [LightCMS](https://lightcms.me) site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
+The [LightCMS](https://lightcms.me) Site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
 
 ## How to Build a Greener Web
 
