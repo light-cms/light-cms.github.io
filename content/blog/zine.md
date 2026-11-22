@@ -1,8 +1,10 @@
 ---
-title: 'Zine: The Static Site Generator'
-description: 'Zine is a fast, young static site generator written in Zig, with its own Super templating language and near-instant builds — a profile of the minimalist SSG.'
+title: 'Zine, The zig based Static Site Generator'
+description: >-
+  Zine is a fast, young static site generator written in Zig, with its own Super
+  templating language and near-instant builds — a profile of the minimalist SSG.
 draft: false
-keywords:
+tags:
   - zine static site generator
   - zine ssg
   - zig static site generator
@@ -11,14 +13,9 @@ keywords:
 isCJKLanguage: false
 headless: false
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - ssg
-    - zine
-    - zig
-    - static-sites
+slug: zine
+date: '2026-11-22T12:05:23.705Z'
 ---
-
 [Zine](https://zine-ssg.io) Is a new static site generator Zine is fast, opinionated, and refreshingly unconventional. It is a young project that already handles personal sites and blogs with ease, and it rewards authors willing to learn its own way of doing things.
 
 ## What Makes Zine Different
@@ -30,7 +27,7 @@ Zine stands out from other static site generators in several ways:
 - **Scripty**, its scripting layer, adds programmable logic where templates alone fall short.
 - **Content as a collection of files and layouts.** Zine turns content files into HTML, applies your layouts, and copies the result into an output directory, the classic static model run fast.
 - **First-class extras**: Multilingual websites (i18n), editor support, and documented deploy targets: GitHub Pages, Cloudflare Pages, Codeberg Pages, and source hut pages.
--
+- 
 
 ## The Honest Tradeoff
 
