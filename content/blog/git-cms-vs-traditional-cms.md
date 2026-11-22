@@ -56,9 +56,9 @@ A Git based CMS with a proper visual editor resolves it: writers get drag-and-dr
 
 For blogs, documentation, marketing sites, and publications, the Git based model now wins on security, cost, and ownership.
 
-- [Why LightCMS exists](/blog/why-this/) covers the philosophy in depth.
-- [Getting started](/getting-started/) shows the full workflow.
-- [Git based CMS options compared](/comparison/top-git-cms/) surveys the platforms in this space.
+- [Why LightCMS exists](/blog/why-this/) Covers the philosophy in depth.
+- [Getting started](/getting-started/) Shows the full workflow.
+- [Git based CMS options compared](/comparison/top-git-cms/) Surveys the platforms in this space.
 
 ---
 
