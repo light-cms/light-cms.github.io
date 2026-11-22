@@ -38,7 +38,7 @@ Editor ──> Headless CMS (database + admin)
 
 Typical properties:
 
-- **Content is relational.** Entries, references, localizations, workflows.
+- **Content is relational.** Entries, references, localization, workflows.
 - **Delivery is API-driven.** Any number of consumers pull the same content.
 - **Changes are immediate.** No build step between save and read.
 - **Operations are ongoing.** A server, a database, backups, patches, and an uptime obligation.
@@ -60,9 +60,7 @@ Typical properties:
 - **Versioning is Git history.** Diffs, blame, revert, pull requests.
 - **Operations are minimal.** There is no content runtime to keep alive.
 
-This is the right shape when the consumer is a website, the content is prose, and "no server" is a feature. Decap CMS, TinaCMS, Keystatic, Pages CMS, and [LightCMS](/blog/what-is-lightcms/) live here.
-
----
+This is the right shape when the consumer is a website, the content is prose, and "no server" is a feature. Decap CMS, TinaCMS, Keystatic, Pages CMS, and [how](/blog/what-is-lightcms/) can Lightcms be compared with these.
 
 ## Side by Side
 
@@ -81,23 +79,21 @@ This is the right shape when the consumer is a website, the content is prose, an
 | **Best for**         | Multi-channel apps and complex content | Publications and static sites |
 
 
----
-
 ## Where Each One Wins
 
 ### Choose headless when:
 
-- One body of content feeds **several consumers**: a website, an app, and an integration.
-- Content has **relationships**: products and variants, episodes and seasons, articles and authors.
-- Editors need **instant publication** with no build in the path, plus approvals and granular permissions.
+- One body of content feeds **several consumers**: A website, an app, and an integration.
+- The content features relationships among entities, including products and their variants, episodes and seasons, as well as articles and their authors.
+- Editors need **instant publication** With no build in the path, plus approvals and granular permissions.
 - Your frontend is an application, not a document.
 
 ### Choose Git based when:
 
-- The output is a **website or publication**: blog, docs, changelog, marketing site.
+- The output is a **website or publication**: Blog, docs, changelog, marketing site.
 - Content is **documents**, and the natural tool for documents is a writing surface.
-- You want **zero runtime**: no server to patch, no database to bill, no per-request compute.
-- **Ownership and longevity** matter: plain files remain readable for decades, independent of any vendor.
+- You want **zero runtime**: No server to patch, no database to bill, no per-request compute.
+- **Ownership and longevity** Matter: plain files remain readable for decades, independent of any vendor.
 
 That last point deserves weight. Database content is portable only if someone writes the export and the importer survives; file content is portable on its own terms.
 
@@ -107,19 +103,17 @@ That last point deserves weight. Database content is portable only if someone wr
 
 The categories blend in practice:
 
-- A headless CMS with a static export step becomes Git-adjacent, but you still operate the database.
-- A Git based CMS that exposes an API for previews behaves headlessly, but the source of truth is still files.
+- A headless CMS with a static export step becomes Git adjacent, but you still operate the database.
+- A Git based CMS that exposes an API for previews behaves heedlessly, but the source of truth is still files.
 - Many teams run **Git based for the publication** and a **headless service for the application**, choosing per surface rather than per ideology.
 
-The pragmatic rule: decide where the source of truth should live for *this* project, not which philosophy you endorse.
+The pragmatic rule: decide where the source of truth should live for *this* Project, not which philosophy you endorse.
 
 ---
 
 ## A Note on Cost Shapes
 
-Headless pricing usually scales with API calls, seats, or bandwidth: consumption that grows with success. Git based costs are build minutes and hosting, which for static output is close to zero regardless of traffic. For a publication with spiky readership, that difference compounds. See [static vs dynamic sites](/blog/static-vs-dynamic/) for the underlying argument.
-
----
+Headless pricing usually scales with API calls, seats, or bandwidth: consumption that grows with success. Git based costs are build minutes and hosting, which for static output is close to zero regardless of traffic. For a publication with spiky readership, that difference compounds. See [static vs dynamic sites](/blog/static-vs-dynamic/) For the underlying argument.
 
 ## Frequently Asked Questions
 
@@ -131,7 +125,7 @@ Not usually. Its output is static HTML from a build rather than API-delivered co
 
 Either works. Static Git based output tends to score better on Core Web Vitals by default because there is no server work in the page load.
 
-### Which is easier for non-technical editors?
+### Which is easier for nontechnical editors?
 
 Both can be easy. What matters is the editor itself: a document editor versus a field form matters more than the storage layer underneath.
 
@@ -143,6 +137,4 @@ Yes, but with different costs. Git to headless means importing files into a sche
 
 Once, to connect the repository and confirm the build. After that, publishing is a browser activity.
 
----
-
-Related: [What is a Git based CMS?](/blog/git-based-cms-explained/), [what is a headless CMS?](/blog/headless-cms-explained/), and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
+Related: [What is a Git based CMS?](/blog/git-based-cms-explained/), [What is a headless CMS?](/blog/headless-cms-explained/), and [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/).
