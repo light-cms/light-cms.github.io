@@ -18,7 +18,7 @@ serial: 47
 preview: /og-image.png
 slug: content-as-code
 ---
-**Content as code** is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
+**Content as code** Is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
 
 "Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
 
@@ -44,7 +44,7 @@ A pull request on a document gives line-level comments on the exact sentence, an
 
 ### History that answers questions
 
-`git log` on a file shows every change, author, and timestamp. "When did we change the pricing claim?" is a search, not an investigation.
+`git log` On a file shows every change, author, and timestamp. "When did we change the pricing claim?" is a search, not an investigation.
 
 ### Automation
 
@@ -54,15 +54,15 @@ Spelling, link checking, style rules, front matter validation, and preview build
 
 Two writers on two files merge cleanly. Conflicts are rare by construction, because the unit of content is a file.
 
-### Backup and portability
+### Back up and portability
 
-Every clone is a complete copy. Moving platforms is a `git clone` away from succeeding.
+Every clone is a complete copy. Moving platforms is a `git clone` Away from succeeding.
 
 ### Where It Gets Hard
 
 The honest list, because this is not free:
 
-- **Non-technical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git based CMS tools fill.
+- **Nontechnical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git based CMS tools fill.
 - **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
 - **Structure is limited.** Files do not join. When content becomes relational, a database earns its complexity.
 - **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
@@ -86,10 +86,10 @@ content/
 └── _index.md
 ```
 
-- **Files** carry Markdown and front matter.
-- **CI** validates front matter, checks links, and builds previews per pull request.
-- **A CMS tool** provides the writing surface for anyone who is not comfortable in an editor.
-- **Deploy** publishes the built output on merge.
+- **Files** Carry Markdown and front matter.
+- **CI** Validates front matter, checks links, and builds previews per pull request.
+- **A CMS tool** Provides the writing surface for anyone who is not comfortable in an editor.
+- **Deploy** Publishes the built output on merge.
 
 The repository stays recognizable to a developer and invisible to a writer. That balance is the whole trick.
 
