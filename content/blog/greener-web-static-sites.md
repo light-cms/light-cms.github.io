@@ -16,7 +16,7 @@ tags:
 preview: /og-image.webp
 slug: greener-web-static-sites
 ---
-Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **static sites sit at the clean end**.
+Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **Static sites sit at the clean end**.
 
 ---
 
@@ -26,9 +26,9 @@ A dynamic site does work on every request: execute code, query a database, assem
 
 A static site does the work once, at build time. The finished HTML is copied to CDN edge nodes worldwide and served from cache:
 
-- **No compute per request**: serving a cached static file uses a tiny fraction of the energy of rendering a page on demand.
-- **No always-on database**: databases and application servers consume power continuously; static sites have neither.
-- **Cache-friendly by default**: a request that hits an edge cache barely moves electrons beyond the network hop.
+- **No compute per request**: Serving a cached static file uses a tiny fraction of the energy of rendering a page on demand.
+- **No always-on database**: Databases and application servers consume power continuously; static sites have neither.
+- **Cache-friendly by default**: A request that hits an edge cache barely moves electrons beyond the network hop.
 - **Tiny payloads**: Markdown-generated HTML is lean by construction, with no framework runtime shipped to the browser unless needed.
 
 Multiply that across every visitor, every month, for the life of the site, and the difference is not symbolic.
