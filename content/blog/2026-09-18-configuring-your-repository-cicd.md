@@ -68,13 +68,11 @@ To let LightCMS read your files and automatically commit new articles:
 4. Choose either **All repositories** or **Only selected repositories** To restrict access to just your blog repo.
 5. After authorizing, your repository will appear in the LightCMS dashboard.
 
----
-
 ## 3. Configure Automated CI/CD Deployments
 
-Every time you hit **Publish** or **Save** in [LightCMS](https://lightcms.me), the app commits the content as Markdown file directly to your Git repository. To turn those commits into live website updates, configure a GitHub Actions workflow.
+Each time you click **Publish** or **Save** in LightCMS, the platform automatically commits the content as a Markdown file to your Git repository. To convert those commits into live website updates, set up a GitHub Actions workflow.
 
-### Example a: Astro Deployment (GitHub Pages / Static Host)
+### Example A: Deploying an Astro Site to GitHub Pages (Static Host)
 
 Create `.github/workflows/deploy.yml` in your repository:
 
@@ -137,7 +135,7 @@ If you are using [Hugo](https://gohugo.io), platforms like **Cloudflare Pages**,
 1. Connect your GitHub repository directly to [Cloudflare Pages](https://pages.cloudflare.com) or [Vercel](https://vercel.com).
 2. Set the build command to `hugo --minify`.
 3. Set the build output directory to `public`.
-4. Whenever [LightCMS](https://lightcms.me) pushes a new post to `main`, the hosting platform automatically re-generates and deploys your site globally in seconds.
+4. Whenever [LightCMS](https://lightcms.me) pushes a new post to `main`, the hosting platform automatically regenerates and deploys your site globally in seconds.
 
 ---
 
@@ -145,7 +143,7 @@ If you are using [Hugo](https://gohugo.io), platforms like **Cloudflare Pages**,
 
 Several reliable platforms offer generous free tiers for hosting static sites:
 
-- [**Vercel**](https://vercel.com): Zero config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
+- [**Vercel**](https://vercel.com): Zero configuration deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
 - [**Cloudflare Pages**](https://pages.cloudflare.com): Global edge network in 300+ cities, unlimited bandwidth on the free tier.
 - [**Netlify**](https://www.netlify.com): Pioneer of Jamstack hosting with rich form and asset handling.
 - [**GitHub Pages**](https://pages.github.com): Direct built in hosting for open source and personal repositories.
@@ -157,7 +155,7 @@ Several reliable platforms offer generous free tiers for hosting static sites:
 
 Once your repository is configured and CI/CD is in place:
 
-1. Open your [LightCMS](https://lightcms.me) editor and create a new post.
+1. Open your [LightCMS](https://lightcms.me) Editor and create a new post.
 2. Add your content and click **Publish**.
-3. Check the **Actions** tab on your GitHub repository. Your CI/CD workflow runs on the [LightCMS](https://lightcms.me) commit.
+3. Check the **Actions** Tab on your GitHub repository. Your CI/CD workflow runs on the [LightCMS](https://lightcms.me) Commit.
 4. Within a minute or two, your new post is live on your website.
