@@ -19,13 +19,11 @@ slug: lightcms-vs-webflow
 
 [LightCMS](https://lightcms.me) Starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
 
----
-
 ## Different jobs
 
-**Webflow** is a design tool with a CMS attached. It gives you a visual canvas, generates CSS from your interactions, stores content in hosted collections, and publishes on Webflow's infrastructure.
+**Webflow** Is a design tool with a CMS attached. It gives you a visual canvas, generates CSS from your interactions, stores content in hosted collections, and publishes on Webflow's infrastructure.
 
-**LightCMS** assumes the frontend already exists in a repository and is built by your pipeline. It gives writers a visual editor for publishing Markdown without asking them to work in code.
+**LightCMS** Assumes the frontend already exists in a repository and is built by your pipeline. It gives writers a visual editor for publishing Markdown without asking them to work in code.
 
 
 |                     | LightCMS                      | Webflow                             |
@@ -48,7 +46,7 @@ slug: lightcms-vs-webflow
 - **One tool for design and content.** No build pipeline, no repository, no CI to understand.
 - **Instant publishing.** Content changes go live immediately, with no build step.
 - **Polished hosting and preview** With a CMS the whole marketing team can learn in an afternoon.
-- **Design-to-content binding:** editors see the field that feeds the component.
+- **Design-to-content binding:** Editors see the field that feeds the component.
 
 ## Where LightCMS Wins
 
