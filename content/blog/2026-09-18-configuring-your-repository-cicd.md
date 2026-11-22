@@ -1,33 +1,30 @@
 ---
-title: Configuring Your Repository & CI/CD
-description: Connect a static site repository (Hugo, Astro, Jekyll, SvelteKit) to LightCMS and automate deployments with CI/CD.
+title: Configuring Repository & CI/CD for Lightcms
+description: >-
+  Connect a Hugo, Astro, Jekyll, or SvelteKit repository to LightCMS, then
+  automate builds and deployments with CI/CD for a streamlined static site
+  publishing workflow.
 serial: 3
-date: 2026-09-18T01:42:00Z
+date: '2026-09-18T01:42:00.000Z'
 draft: false
-keywords:
+tags:
   - repository configuration
   - github actions
   - static site generator
   - astro
   - hugo
 preview: /og-image.png
-taxonomies:
-  tags:
-    - configuration
-    - github
-    - cicd
-    - lightcms
+slug: 2026-09-18-configuring-your-repository-cicd
 ---
-
-Connecting your static site to [LightCMS](https://www.lightcms.me) requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
+Connecting your static site to [LightCMS](https://www.lightcms.me) Requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
 
 Follow this guide to structure your repository, install the [LightCMS](https://www.lightcms.me) GitHub App, and set up automated deployments.
 
 ---
 
-## 1. Structure Your Content Repository
+## 1. Organize Your Content Repository
 
-[LightCMS](https://www.lightcms.me) works natively with any static site generator (SSG) that stores content as Markdown (`.md` or `.mdx`) files with YAML front matter.
+LightCMS integrates seamlessly with any static site generator (SSG) that manages content as Markdown (.md or .mdx) files using YAML front matter.
 
 A typical repository layout looks like this:
 
@@ -45,7 +42,7 @@ my-blog-repo/
 
 ### Standard Front Matter Header
 
-[LightCMS](https://lightcms.me) reads and writes YAML front matter metadata at the top of your Markdown files. A standard header includes:
+[LightCMS](https://lightcms.me) Reads and writes YAML front matter metadata at the top of your Markdown files. A standard header includes:
 
 ```markdown
 ---
@@ -61,17 +58,15 @@ tags:
 Your article content begins here...
 ```
 
----
+## 2. Install the LightCMS GitHub App
 
-## 2. Install the [LightCMS](https://lightcms.me) GitHub App
+To let LightCMS read your files and automatically commit new articles:
 
-To allow [LightCMS](https://lightcms.me) to read your files and commit newly written articles:
-
-1. Sign in to your [LightCMS](https://lightcms.me) instance using your GitHub account.
-2. Navigate to your dashboard and click **Connect Repository** (or **Install GitHub App**).
-3. GitHub will prompt you to select which account or organization to install the app on.
-4. You can grant access to **All repositories** or select **Only select repositories** to limit access strictly to your blog repo.
-5. Once authorized, your repository will appear in your [LightCMS](https://lightcms.me) dashboard.
+1. Sign in to your LightCMS instance using your GitHub account.
+2. In the dashboard, click **Connect Repository** (or **Install GitHub App**).
+3. GitHub will prompt you to choose the account or organization where you want to install the app.
+4. Choose either **All repositories** or **Only selected repositories** To restrict access to just your blog repo.
+5. After authorizing, your repository will appear in the LightCMS dashboard.
 
 ---
 
@@ -150,11 +145,11 @@ If you are using [Hugo](https://gohugo.io), platforms like **Cloudflare Pages**,
 
 Several reliable platforms offer generous free tiers for hosting static sites:
 
-- **[Vercel](https://vercel.com)**: Zero config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
-- **[Cloudflare Pages](https://pages.cloudflare.com)**: Global edge network in 300+ cities, unlimited bandwidth on the free tier.
-- **[Netlify](https://www.netlify.com)**: Pioneer of Jamstack hosting with rich form and asset handling.
-- **[GitHub Pages](https://pages.github.com)**: Direct built in hosting for open source and personal repositories.
-- **[Deno Deploy](https://deno.com/deploy)**: Lightweight edge hosting for JavaScript and static web assets.
+- [**Vercel**](https://vercel.com): Zero config deployments for modern JS frameworks, automatic SSL, preview URLs for draft pull requests.
+- [**Cloudflare Pages**](https://pages.cloudflare.com): Global edge network in 300+ cities, unlimited bandwidth on the free tier.
+- [**Netlify**](https://www.netlify.com): Pioneer of Jamstack hosting with rich form and asset handling.
+- [**GitHub Pages**](https://pages.github.com): Direct built in hosting for open source and personal repositories.
+- [**Deno Deploy**](https://deno.com/deploy): Lightweight edge hosting for JavaScript and static web assets.
 
 ---
 
