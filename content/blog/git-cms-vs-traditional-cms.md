@@ -1,8 +1,11 @@
 ---
-title: "Git-Based CMS vs Traditional CMS: Which Is Right for You?"
-description: How Git based CMS platforms compare with WordPress, Ghost, and Contentful on security, ownership, cost, and workflow, and why static publishing is shifting to Git.
+title: 'Git Based CMS vs Traditional CMS: Which Is Right for You?'
+description: >-
+  How Git based CMS platforms compare with WordPress, Ghost, and Contentful on
+  security, ownership, cost, and workflow, and why static publishing is shifting
+  to Git.
 serial: 10
-date: 2026-10-14T12:30:00Z
+date: '2026-10-14T12:30:00.000Z'
 draft: false
 keywords:
   - git based cms
@@ -17,8 +20,8 @@ taxonomies:
     - git
     - architecture
     - jamstack
+slug: git-cms-vs-traditional-cms
 ---
-
 A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
 
 ---
@@ -76,11 +79,11 @@ A CMS that stores your content as files (usually Markdown with YAML front matter
 
 ### Is WordPress a Git based CMS?
 
-No. WordPress stores content in MySQL or MariaDB. Plugins can sync WordPress with Git, but the core architecture is database-driven.
+1. WordPress stores content in MySQL or MariaDB. Plugins can sync WordPress with Git, but the core architecture is database-driven.
 
 ### Do I need to know Git to use a Git based CMS?
 
-No. The whole point of a visual Git based editor is that authors never touch the command line; the CMS handles commits, branches, and pull requests for them.
+1. The whole point of a visual Git based editor is that authors never touch the command line; the CMS handles commits, branches, and pull requests for them.
 
 ### Is a Git based CMS good for SEO?
 
