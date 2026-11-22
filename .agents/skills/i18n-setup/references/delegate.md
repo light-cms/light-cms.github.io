@@ -10,7 +10,7 @@ Phase 3 opens with this step. Read the `skills` block of `manifest-snapshot.json
 2. Run the snapshot's own install command yourself — `skills.install` (`npx skills add lingui/skills`). It installs into the user's skills directory, and it is exactly the dependency the manifest declares, not an improvisation. Re-probe when it finishes.
 3. When that command fails, is declined, or cannot run in this environment, stop and hand the user the install command — `skills.install`, plus the agent's own plugin-manager equivalent when it manages skills as plugins (`skills.installClaudeCode`, `/plugin marketplace add lingui/skills && /plugin install lingui@lingui-skills`, is the Claude Code one) — then wait, and re-probe before continuing.
 
-This is a hard gate, and the important half of it is what you must *not* do: **never substitute your own library guidance for a missing skill.** Not a summary of it, not "the general approach", not a best-effort config you are fairly confident about — improvised library instructions are stale the moment they're written. A missing dependency makes the correct outcome a paused run, never an improvised one. (A role whose manifest list names reference files rather than skills is satisfied by those files — the gate applies to named skills.)
+This is a hard gate, and the important half of it is what you must _not_ do: **never substitute your own library guidance for a missing skill.** Not a summary of it, not "the general approach", not a best-effort config you are fairly confident about — improvised library instructions are stale the moment they're written. A missing dependency makes the correct outcome a paused run, never an improvised one. (A role whose manifest list names reference files rather than skills is satisfied by those files — the gate applies to named skills.)
 
 The phase-2 probe recorded in `decisions.md` is advisory; a run resumed days later re-probes here rather than trusting it.
 
@@ -20,13 +20,13 @@ Before invoking anything, read the stack's adapter — `references.adapter` in t
 
 Pass these as constraints on the delegated skill's output, stated up front in the invocation — not as context it may weigh against its defaults:
 
-| Input | Value | Source |
-|---|---|---|
-| Locales | source + targets, in the decided code scheme | `decisions.md` |
-| Catalog path and directory shape | the matched row's `source` / `translation` | `manifest-snapshot.json` |
-| Catalog format | the row's `type` (`po` for the v1 stack) | `manifest-snapshot.json` |
-| Scope of the wrapping pass | `sourceDir` and the plan's `wrap_<path>` entries | `detection.json`, `plan.md` |
-| Context, not constraints | `framework`, `compiler`, `react`, `packageManager` — what was detected, handed over so the skill need not re-derive it, and overridden by its own findings if they disagree | `detection.json` |
+| Input                            | Value                                                                                                                                                                       | Source                      |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| Locales                          | source + targets, in the decided code scheme                                                                                                                                | `decisions.md`              |
+| Catalog path and directory shape | the matched row's `source` / `translation`                                                                                                                                  | `manifest-snapshot.json`    |
+| Catalog format                   | the row's `type` (`po` for the v1 stack)                                                                                                                                    | `manifest-snapshot.json`    |
+| Scope of the wrapping pass       | `sourceDir` and the plan's `wrap_<path>` entries                                                                                                                            | `detection.json`, `plan.md` |
+| Context, not constraints         | `framework`, `compiler`, `react`, `packageManager` — what was detected, handed over so the skill need not re-derive it, and overridden by its own findings if they disagree | `detection.json`            |
 
 This orchestrator, not the library, chooses the locale codes, because the Crowdin side has to agree with them; the delegated skill is told which codes to write, not asked to prefer a scheme. What proves the paths correct is gate three (`crowdin config translations`, phase 5), never the scheme by itself.
 

@@ -10,7 +10,7 @@ keywords:
   - lightcms ai copilot
   - openai compatible cms
   - ai content workflow
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -38,11 +38,11 @@ Every result appears in the document as editable text. You can accept it, change
 
 LightCMS works with any OpenAI-compatible endpoint.
 
-| Provider | Why people choose it |
-| :--- | :--- |
-| **OpenAI** | Familiar models with broad capability |
-| **OpenRouter** | One key for many models, with easy switching |
-| **Groq** | Fast inference and a free tier |
+| Provider       | Why people choose it                                          |
+| :------------- | :------------------------------------------------------------ |
+| **OpenAI**     | Familiar models with broad capability                         |
+| **OpenRouter** | One key for many models, with easy switching                  |
+| **Groq**       | Fast inference and a free tier                                |
 | **NVIDIA NIM** | Endpoints you can run yourself, including GPU-friendly setups |
 
 Because LightCMS uses the standard `/v1/chat/completions` format, other compatible endpoints can work too. That includes a local model behind an OpenAI-compatible proxy, a private gateway, or a company endpoint.

@@ -15,13 +15,13 @@ Reference: [README](https://raw.githubusercontent.com/crowdin/github-action/refs
 
 One step performs up to five operations, always in this fixed order, and each one is gated by its own input:
 
-| Order | Input | Runs |
-|---|---|---|
-| 1 | `upload_sources: true` *(default)* | `crowdin upload sources` |
-| 2 | `upload_translations: true` | `crowdin upload translations` |
-| 3 | `download_sources: true` | `crowdin download sources`, then the **git half** |
-| 4 | `download_translations: true` | `crowdin download`, then the **git half** |
-| 5 | `download_bundle: <id>` | `crowdin bundle download <id>`, then the **git half** |
+| Order | Input                              | Runs                                                  |
+| ----- | ---------------------------------- | ----------------------------------------------------- |
+| 1     | `upload_sources: true` _(default)_ | `crowdin upload sources`                              |
+| 2     | `upload_translations: true`        | `crowdin upload translations`                         |
+| 3     | `download_sources: true`           | `crowdin download sources`, then the **git half**     |
+| 4     | `download_translations: true`      | `crowdin download`, then the **git half**             |
+| 5     | `download_bundle: <id>`            | `crowdin bundle download <id>`, then the **git half** |
 
 The **git half** is a single unit of work: `git add .`, commit, force-push the localization branch, open the PR. Its parts are individually switchable (`push_translations`, `push_sources`, `create_pull_request`), and only rows 3–5 can reach it.
 
@@ -75,7 +75,7 @@ name: Crowdin
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -101,7 +101,7 @@ jobs:
 
           localization_branch_name: l10n_crowdin
           create_pull_request: true
-          pull_request_title: 'New Crowdin translations'
+          pull_request_title: "New Crowdin translations"
           pull_request_base_branch_name: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -138,21 +138,21 @@ Dispatching needs the human who holds the secrets; ask for the run's log rather 
 
 Read the step's log first: it prints `UPLOAD SOURCES`, `DOWNLOAD TRANSLATIONS`, `PUSH TO BRANCH`, `NOTHING TO COMMIT`, and `CREATE PULL REQUEST` as it goes, so the pipeline stage that failed is visible before you start guessing.
 
-| Symptom | Cause | Fix |
-|---|---|---|
-| Green run, no PR, log says `NOTHING TO COMMIT` | Downloaded translations are byte-identical to what's committed | Working as intended — nothing to do |
-| Green run, no PR, no download in the log | `download_translations` left at its `false` default | Set `download_translations: true` |
-| `ERROR: Either 'GITHUB_TOKEN' or 'GH_TOKEN' must be set` | Token missing from the step's `env:` | Add `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` |
-| `FAILED TO AUTHENTICATE WITH GITHUB`, or 403 on push | Job lacks write permissions, or the repo blocks Actions from creating PRs | Add the `permissions:` block **and** enable the repository setting (step 4) |
-| PR opens but no CI checks run on it | PRs from the default `GITHUB_TOKEN` don't trigger workflows | Use a GitHub App token or a PAT |
-| Checks restart on every sync run | The localization branch is force-pushed each time | Pass a PAT to `actions/checkout` so the pushes come from a user |
-| PR creation fails on a tag or release trigger | Base branch defaults to the triggering ref, which is `refs/tags/...` | Set `pull_request_base_branch_name` |
-| Later steps hit permission errors on downloaded files | The container runs as root, so the files it writes are root-owned | Add `user: auto` to detect the workspace owner |
-| `Another build is still in progress after waiting 10 minutes`, or a `409` on download | Parallel runs, or a long build started elsewhere, against one Crowdin project | Serialize with `concurrency`, or `max-parallel: 1` in a matrix |
-| Build artifacts in the translation PR | `git add .` commits the whole workspace | Move the Crowdin step before the build, or into its own job |
-| Nothing downloads, project is string-based | `download_translations` doesn't apply to string-based projects | Download a bundle: `download_bundle: <id>` |
-| `crowdin.yml` not found | The action looks in the repository root | `config: path/to/crowdin.yml`, no leading `/` |
-| Enterprise: 404 or auth failure from the CLI | Enterprise needs an organization-specific API host | `base_url: 'https://{organization}.api.crowdin.com'` |
+| Symptom                                                                               | Cause                                                                         | Fix                                                                         |
+| ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Green run, no PR, log says `NOTHING TO COMMIT`                                        | Downloaded translations are byte-identical to what's committed                | Working as intended — nothing to do                                         |
+| Green run, no PR, no download in the log                                              | `download_translations` left at its `false` default                           | Set `download_translations: true`                                           |
+| `ERROR: Either 'GITHUB_TOKEN' or 'GH_TOKEN' must be set`                              | Token missing from the step's `env:`                                          | Add `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`                             |
+| `FAILED TO AUTHENTICATE WITH GITHUB`, or 403 on push                                  | Job lacks write permissions, or the repo blocks Actions from creating PRs     | Add the `permissions:` block **and** enable the repository setting (step 4) |
+| PR opens but no CI checks run on it                                                   | PRs from the default `GITHUB_TOKEN` don't trigger workflows                   | Use a GitHub App token or a PAT                                             |
+| Checks restart on every sync run                                                      | The localization branch is force-pushed each time                             | Pass a PAT to `actions/checkout` so the pushes come from a user             |
+| PR creation fails on a tag or release trigger                                         | Base branch defaults to the triggering ref, which is `refs/tags/...`          | Set `pull_request_base_branch_name`                                         |
+| Later steps hit permission errors on downloaded files                                 | The container runs as root, so the files it writes are root-owned             | Add `user: auto` to detect the workspace owner                              |
+| `Another build is still in progress after waiting 10 minutes`, or a `409` on download | Parallel runs, or a long build started elsewhere, against one Crowdin project | Serialize with `concurrency`, or `max-parallel: 1` in a matrix              |
+| Build artifacts in the translation PR                                                 | `git add .` commits the whole workspace                                       | Move the Crowdin step before the build, or into its own job                 |
+| Nothing downloads, project is string-based                                            | `download_translations` doesn't apply to string-based projects                | Download a bundle: `download_bundle: <id>`                                  |
+| `crowdin.yml` not found                                                               | The action looks in the repository root                                       | `config: path/to/crowdin.yml`, no leading `/`                               |
+| Enterprise: 404 or auth failure from the CLI                                          | Enterprise needs an organization-specific API host                            | `base_url: 'https://{organization}.api.crowdin.com'`                        |
 
 ## `command` — running any CLI command
 
@@ -162,8 +162,8 @@ Read the step's log first: it prints `UPLOAD SOURCES`, `DOWNLOAD TRANSLATIONS`, 
 - name: Fail the build unless translations are complete
   uses: crowdin/github-action@v3
   with:
-    command: 'status translation'
-    command_args: '--fail-if-incomplete'
+    command: "status translation"
+    command_args: "--fail-if-incomplete"
   env:
     CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
     CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

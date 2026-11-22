@@ -30,7 +30,7 @@ Then show the user every term and stop. This is a real gate: the file is about t
 
 ## Upload
 
-Uploading without an id creates a *second* glossary rather than merging, so the `glossary list` result from the inputs decides the command:
+Uploading without an id creates a _second_ glossary rather than merging, so the `glossary list` result from the inputs decides the command:
 
 - **A glossary already exists.** Import into it: `crowdin glossary upload <file> --id <id>`, with the same `--scheme` and `--first-line-contains-header` as below. **`terms: 0` is the empty glossary Crowdin creates with every new project** - nothing to preserve, so import and move on. A **non-zero count is an asset somebody curated**: say plainly that the import merges into it, and let the user decline, which a project with a mature glossary usually should.
 - **No glossary exists.** Create one by uploading without `--id`, passing `--language` with the source locale's Crowdin language id:

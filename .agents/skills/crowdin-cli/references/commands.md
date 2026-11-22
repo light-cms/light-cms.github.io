@@ -20,17 +20,17 @@ Condensed from the generated command documentation (https://crowdin.github.io/cr
 
 **Global options** — accepted by every command and subcommand:
 
-| Option | Meaning |
-|---|---|
-| `-v, --verbose` | More information about command execution |
+| Option                | Meaning                                                                         |
+| --------------------- | ------------------------------------------------------------------------------- |
+| `-v, --verbose`       | More information about command execution                                        |
 | `-c, --config <path>` | Path to the configuration file (default: `crowdin.yml` / `crowdin.yaml` in cwd) |
-| `--identity <path>` | Path to user-specific credentials file |
-| `--no-colors` | Disable colors and styles |
-| `--no-progress` | Disable progress indicators |
-| `-o, --output <fmt>` | Output format: `json`, `toon`, `plain` |
-| `--debug` | Additional debugging information on errors (stack traces) |
-| `-h, --help` | Help for the command |
-| `-V, --version` | (root `crowdin` only) Print version and exit |
+| `--identity <path>`   | Path to user-specific credentials file                                          |
+| `--no-colors`         | Disable colors and styles                                                       |
+| `--no-progress`       | Disable progress indicators                                                     |
+| `-o, --output <fmt>`  | Output format: `json`, `toon`, `plain`                                          |
+| `--debug`             | Additional debugging information on errors (stack traces)                       |
+| `-h, --help`          | Help for the command                                                            |
+| `-V, --version`       | (root `crowdin` only) Print version and exit                                    |
 
 **Config option sets** — commands accept one of three tiers instead of repeating them below:
 
@@ -344,13 +344,13 @@ Print the shell completion script for the given shell (e.g. `source <(crowdin co
 
 ## Aliases, renames, and scope notes
 
-| Command | Notes |
-|---|---|
-| `crowdin push` | Alias of `upload` |
-| `crowdin pull` | Alias of `download` |
-| `auto-translate` | v4 `pre-translate`, renamed, **no alias** |
-| `init` | v4 `generate` |
-| `branch list` / `language list` / `file list` | v4 `list branches` / `list languages` / `list project` |
-| `config sources` / `config translations` / `config lint` | v4 `list sources` / `list translations` / `lint` |
+| Command                                                  | Notes                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------ |
+| `crowdin push`                                           | Alias of `upload`                                      |
+| `crowdin pull`                                           | Alias of `download`                                    |
+| `auto-translate`                                         | v4 `pre-translate`, renamed, **no alias**              |
+| `init`                                                   | v4 `generate`                                          |
+| `branch list` / `language list` / `file list`            | v4 `list branches` / `list languages` / `list project` |
+| `config sources` / `config translations` / `config lint` | v4 `list sources` / `list translations` / `lint`       |
 
 Enterprise-only: `download sources --reviewed`, `task add --workflow-step`. String-based projects only: `branch clone`, `branch merge`, `file upload --cleanup-mode`, `file upload --update-strings`.

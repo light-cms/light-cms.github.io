@@ -1,5 +1,5 @@
 ---
-title: "Lume: The Static Site Generator for Deno"
+title: "Lume The Static Site Generator for Deno"
 description: "Deno's static site generator, explained: supported formats, plugin architecture, how it compares to Jekyll, Hugo, and Eleventy, and how it fits a Git CMS workflow."
 serial: 29
 date: 2026-10-14T15:40:00Z
@@ -10,7 +10,7 @@ keywords:
   - lume vs eleventy
   - lume deno cms
   - lume land
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - ssg

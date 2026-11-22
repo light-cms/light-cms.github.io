@@ -6,10 +6,12 @@ A `compile-time-extraction` full-journey plan:
 
 ```markdown
 # i18n setup plan — js-ts-lingui
+
 Entry point: full journey · Mode: unguided · Source: en · Targets: uk, es-ES
 Catalog: lingui-po (compile-time-extraction) · References: from manifest-snapshot.json
 
 ## Phase 3 — Setup
+
 - [ ] verify_skill_dependencies — the snapshot's skills.setup / convert / recall are loadable
 - [ ] install_packages — library + compiler plugin, main thread
 - [ ] create_config — locales written per `decisions.md`'s decided scheme (Crowdin locale codes, the greenfield default here)
@@ -22,6 +24,7 @@ Catalog: lingui-po (compile-time-extraction) · References: from manifest-snapsh
 - [ ] commit_setup — commit config, provider wiring, catalogs, coding rules
 
 ## Phase 4 — Wrap
+
 - [ ] wrap_src_App_tsx — 7 candidates
 - [ ] wrap_src_components_PlanCard_tsx — 3 candidates
 - [ ] module_i18n_approach — decide once how an i18n instance reaches non-render code; governs the module below
@@ -34,6 +37,7 @@ Catalog: lingui-po (compile-time-extraction) · References: from manifest-snapsh
 - [ ] commit_wrap — commit the wrapped files and regenerated catalogs
 
 ## Phase 5 — Connect
+
 - [ ] create_project — optional; skip when the project id is known
 - [ ] write_crowdin_yml
 - [ ] config_lint
@@ -44,6 +48,7 @@ Catalog: lingui-po (compile-time-extraction) · References: from manifest-snapsh
 - [ ] commit_connect — commit crowdin.yml
 
 ## Phase 6 — Context
+
 - [ ] context_download
 - [ ] fill_ai_context
 - [ ] context_upload
@@ -53,6 +58,7 @@ Catalog: lingui-po (compile-time-extraction) · References: from manifest-snapsh
 - [ ] draft_translations — only when decisions.md records the draft-translations add-on; commits the drafted target catalogs
 
 ## Phase 7 — CI
+
 - [ ] write_workflow
 - [ ] commit_ci — commit the workflow file
 - [ ] set_secret_instruction

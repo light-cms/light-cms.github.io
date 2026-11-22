@@ -1,16 +1,16 @@
 ---
 title: "LightCMS vs Joomla: Traditional CMS vs Git based Publishing"
-description: "Joomla is a classic self-hosted CMS with an admin panel and database; LightCMS stores content as Markdown in Git and ships static pages. A clear-eyed comparison."
+description: "Joomla is a classic self-hosted CMS with an admin panel and database; LightCMS stores content as Markdown in Git and ships static pages. A clear comparison."
 serial: 56
 date: 2026-10-16T13:00:00Z
 draft: false
-keywords:
-  - lightcms vs joomla
+tags:
+  - lightcms
   - joomla alternatives
   - joomla vs static site
   - joomla migration
   - modern cms for blogs
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -21,7 +21,7 @@ taxonomies:
 
 [Joomla](https://www.joomla.org) has been a credible open-source CMS for two decades: a PHP application with an admin panel, extensions, templates, and a database, the middle path between WordPress's ubiquity and Drupal's weight.
 
-If you are evaluating it in 2026 for a publication, the interesting question is not Joomla vs LightCMS feature-for-feature. It is whether you want a *server-rendered application* or *files in a repository* for content that mostly gets read.
+If you are evaluating it in 2026 for a publication, the interesting question is not Joomla vs LightCMS feature-for-feature. It is whether you want a _server-rendered application_ or _files in a repository_ for content that mostly gets read.
 
 ---
 
@@ -31,16 +31,16 @@ If you are evaluating it in 2026 for a publication, the interesting question is 
 
 **LightCMS** writes files: Markdown with front matter into Git, a static build, and a CDN. Nothing executes at request time, and there is no admin login to protect.
 
-| | LightCMS | Joomla |
-| :--- | :--- | :--- |
-| **Storage** | Markdown files in Git | SQL database |
-| **Rendering** | Pre-built static HTML | PHP per request |
-| **Admin** | Browser document editor | Admin panel + extensions |
-| **Versioning** | Git history and revert | Version history in database |
-| **Extensions** | External services / build steps | Large extension directory |
-| **Maintenance** | None at runtime | Core, extension, and PHP updates |
-| **Security posture** | No runtime to attack | Patching + hardening |
-| **Portability** | Clone the repository | Database export |
+|                      | LightCMS                        | Joomla                           |
+| :------------------- | :------------------------------ | :------------------------------- |
+| **Storage**          | Markdown files in Git           | SQL database                     |
+| **Rendering**        | Pre-built static HTML           | PHP per request                  |
+| **Admin**            | Browser document editor         | Admin panel + extensions         |
+| **Versioning**       | Git history and revert          | Version history in database      |
+| **Extensions**       | External services / build steps | Large extension directory        |
+| **Maintenance**      | None at runtime                 | Core, extension, and PHP updates |
+| **Security posture** | No runtime to attack            | Patching + hardening             |
+| **Portability**      | Clone the repository            | Database export                  |
 
 ---
 

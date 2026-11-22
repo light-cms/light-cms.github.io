@@ -36,15 +36,22 @@ Same filters as `status`, plus `--dryrun`, and `--all`, which is required when n
 
 One JSON object per line:
 
-| Field | Meaning |
-|---|---|
-| `id` | String ID in Crowdin |
-| `key` | String key |
-| `text` | Source text |
-| `file` | Crowdin file path |
-| `context` | Existing source context |
-| `ai_context` | AI context to set |
+| Field        | Meaning                 |
+| ------------ | ----------------------- |
+| `id`         | String ID in Crowdin    |
+| `key`        | String key              |
+| `text`       | Source text             |
+| `file`       | Crowdin file path       |
+| `context`    | Existing source context |
+| `ai_context` | AI context to set       |
 
 ```json
-{"file":"/src/locales/en.po","ai_context":"","context":"#: src/App.tsx:54","id":3125833,"text":"Click on the Vite and React logos to learn more","key":"Click on the Vite and React logos to learn more"}
+{
+	"file": "/src/locales/en.po",
+	"ai_context": "",
+	"context": "#: src/App.tsx:54",
+	"id": 3125833,
+	"text": "Click on the Vite and React logos to learn more",
+	"key": "Click on the Vite and React logos to learn more"
+}
 ```

@@ -33,18 +33,18 @@ When one of them does hold, the rest of this phase is a conversation rather than
 
 Do not write workflow YAML from memory in its place — not a minimal version, not "the usual shape". A workflow that looks right and fails on its first run is worse than a phase that paused: the failure surfaces after the user has already been told the journey is finished, and it surfaces on GitHub rather than here. Phase 3's dependency gate exists for the same reason, and the reasoning carries over unchanged.
 
-State up front what the workflow has to come out as, so the delegated skill is deciding *how* rather than *whether*: every merge to the default branch pushes new source strings to Crowdin, finished translations come back as a pull request without anyone running a command, and the credentials the run needs are the ones phase 5 already established.
+State up front what the workflow has to come out as, so the delegated skill is deciding _how_ rather than _whether_: every merge to the default branch pushes new source strings to Crowdin, finished translations come back as a pull request without anyone running a command, and the credentials the run needs are the ones phase 5 already established.
 
 Then pass what that skill cannot know — this journey's own Crowdin decisions:
 
-| Input | Value | Source |
-|---|---|---|
-| Config on disk | `crowdin.yml` at the repository root, already verified through phase 5's four gates — it is the sync configuration, not a starting point to re-author | phase 5 |
-| Project identity | `project_id` is committed in that file, so the workflow needs no project-id secret and no `project_id_env` | phase 5's `crowdin.yml` |
-| Credential name | exactly `CROWDIN_PERSONAL_TOKEN`, as a repository secret — the name `api_token_env` points at | phase 5's `crowdin.yml` |
-| Default branch | resolve it now with `git ls-remote --symref origin HEAD`, whose first line names the branch `HEAD` points at | the remote, not `detection.json` |
+| Input            | Value                                                                                                                                                 | Source                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Config on disk   | `crowdin.yml` at the repository root, already verified through phase 5's four gates — it is the sync configuration, not a starting point to re-author | phase 5                          |
+| Project identity | `project_id` is committed in that file, so the workflow needs no project-id secret and no `project_id_env`                                            | phase 5's `crowdin.yml`          |
+| Credential name  | exactly `CROWDIN_PERSONAL_TOKEN`, as a repository secret — the name `api_token_env` points at                                                         | phase 5's `crowdin.yml`          |
+| Default branch   | resolve it now with `git ls-remote --symref origin HEAD`, whose first line names the branch `HEAD` points at                                          | the remote, not `detection.json` |
 
-The default branch comes from the remote and not from `detection.json`'s `git.branch`, which is a different thing wearing a similar name: phase 1 captures it with `git branch --show-current`, records it as informational, and rules it out as a basis for any decision. On a full journey it is the *working* branch by the time this phase runs, because phase 2 offers a new branch and that is the usual answer — so reading it here triggers the workflow on a feature branch, and does so silently. The remote is the source of truth, this phase already reaches it for the gate above, and `git ls-remote` needs neither local refs nor `gh` installed.
+The default branch comes from the remote and not from `detection.json`'s `git.branch`, which is a different thing wearing a similar name: phase 1 captures it with `git branch --show-current`, records it as informational, and rules it out as a basis for any decision. On a full journey it is the _working_ branch by the time this phase runs, because phase 2 offers a new branch and that is the usual answer — so reading it here triggers the workflow on a feature branch, and does so silently. The remote is the source of truth, this phase already reaches it for the gate above, and `git ls-remote` needs neither local refs nor `gh` installed.
 
 The keys phase 5 writes (`project_id`, `api_token_env`, `base_path`, `preserve_hierarchy`, the `files` patterns, and `languages_mapping` or `base_url` where they apply) mean the same thing to Crowdin CLI 4 and 5 alike, so whichever CLI the action bundles reads the committed config correctly — the version pin is safely the delegated skill's call.
 

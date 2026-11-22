@@ -38,14 +38,14 @@ The standalone `--plain` flag is gone; use the global `-o, --output` option:
 
 Many boolean options accepted both a positive and a `--no-` form in 4.x. In 5.0, only the form that changes the default behavior remains. Defaults are unchanged, so the removed form was always redundant — drop it:
 
-| Command | Removed form | Migration |
-|---|---|---|
-| `upload sources`, `file upload` | `--auto-update` | Drop it — source files are updated by default. Use `--no-auto-update` to disable updating. |
-| `file upload` | `--no-cleanup-mode`, `--no-update-strings` | Drop them — disabled is the default. |
-| `upload translations` | `--no-auto-approve-imported`, `--no-import-eq-suggestions`, `--no-translate-hidden` | Drop them — disabled is the default. |
-| `task add` | `--no-skip-assigned-strings`, `--no-include-pre-translated-strings-only` | Drop them — disabled is the default. |
-| `screenshot upload` | `--no-auto-tag` | Drop it — disabled is the default. |
-| `init` | `--preserve-hierarchy` | Drop it — the generated configuration already sets `preserve_hierarchy: true`. Use `--no-preserve-hierarchy` to generate `false` instead. |
+| Command                         | Removed form                                                                        | Migration                                                                                                                                 |
+| ------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `upload sources`, `file upload` | `--auto-update`                                                                     | Drop it — source files are updated by default. Use `--no-auto-update` to disable updating.                                                |
+| `file upload`                   | `--no-cleanup-mode`, `--no-update-strings`                                          | Drop them — disabled is the default.                                                                                                      |
+| `upload translations`           | `--no-auto-approve-imported`, `--no-import-eq-suggestions`, `--no-translate-hidden` | Drop them — disabled is the default.                                                                                                      |
+| `task add`                      | `--no-skip-assigned-strings`, `--no-include-pre-translated-strings-only`            | Drop them — disabled is the default.                                                                                                      |
+| `screenshot upload`             | `--no-auto-tag`                                                                     | Drop it — disabled is the default.                                                                                                        |
+| `init`                          | `--preserve-hierarchy`                                                              | Drop it — the generated configuration already sets `preserve_hierarchy: true`. Use `--no-preserve-hierarchy` to generate `false` instead. |
 
 Two commands intentionally keep both forms:
 
@@ -73,10 +73,10 @@ The deprecated `--export-mode` and `--file` options were removed — use `--bund
 
 Renamed to avoid clashing with the global config options and to match the underlying API fields:
 
-| Removed | Use instead |
-|---|---|
-| `--source` | `--source-pattern` |
-| `--ignore` | `--ignore-pattern` |
+| Removed         | Use instead        |
+| --------------- | ------------------ |
+| `--source`      | `--source-pattern` |
+| `--ignore`      | `--ignore-pattern` |
 | `--translation` | `--export-pattern` |
 
 ```diff

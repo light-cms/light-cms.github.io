@@ -10,7 +10,7 @@ keywords:
   - netlify cms alternative
   - decap cms editor
   - git cms comparison
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -33,8 +33,8 @@ LightCMS is configured around **the document**. You open a post and see the post
 
 Neither approach is wrong, but they produce different days:
 
-- In Decap, you are *operating a form* over a content record.
-- In [LightCMS](https://www.lightcms.me), you are *writing a document* that happens to be stored in Git.
+- In Decap, you are _operating a form_ over a content record.
+- In [LightCMS](https://www.lightcms.me), you are _writing a document_ that happens to be stored in Git.
 
 For structured content (event listings, product pages, directories), Decap's field model is the right shape. For articles, essays, release notes, and docs, a document beats a form every time.
 
@@ -42,17 +42,17 @@ For structured content (event listings, product pages, directories), Decap's fie
 
 ## Comparison
 
-| | LightCMS | Decap CMS |
-| :--- | :--- | :--- |
-| **Model** | Self-hosted writing workspace | Deployable React admin app |
-| **Content store** | Your GitHub repository | Your repository (GitHub, GitLab, Bitbucket) |
-| **Editor** | TipTap WYSIWYG: tables, math, code highlighting, task lists, media | Form fields with a compact Markdown toolbar |
-| **Configuration** | In-app, per repository | `config.yml` collections committed to the repo |
-| **AI copilot** | Built in: outline, rephrase, expand, grammar (any OpenAI-compatible endpoint) | None |
-| **Voice-to-text** | Built in (Whisper) | None |
-| **Newsletters** | Built in via Newsy: GitHub-backed, no email service | None (webhooks/hooks only) |
-| **Licensing** | Apache 2.0 | MIT |
-| **Multi-provider** | GitHub-focused | GitHub, GitLab, Bitbucket |
+|                    | LightCMS                                                                      | Decap CMS                                      |
+| :----------------- | :---------------------------------------------------------------------------- | :--------------------------------------------- |
+| **Model**          | Self-hosted writing workspace                                                 | Deployable React admin app                     |
+| **Content store**  | Your GitHub repository                                                        | Your repository (GitHub, GitLab, Bitbucket)    |
+| **Editor**         | TipTap WYSIWYG: tables, math, code highlighting, task lists, media            | Form fields with a compact Markdown toolbar    |
+| **Configuration**  | In-app, per repository                                                        | `config.yml` collections committed to the repo |
+| **AI copilot**     | Built in: outline, rephrase, expand, grammar (any OpenAI-compatible endpoint) | None                                           |
+| **Voice-to-text**  | Built in (Whisper)                                                            | None                                           |
+| **Newsletters**    | Built in via Newsy: GitHub-backed, no email service                           | None (webhooks/hooks only)                     |
+| **Licensing**      | Apache 2.0                                                                    | MIT                                            |
+| **Multi-provider** | GitHub-focused                                                                | GitHub, GitLab, Bitbucket                      |
 
 ---
 

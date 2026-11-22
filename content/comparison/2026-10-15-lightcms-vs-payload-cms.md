@@ -10,7 +10,7 @@ keywords:
   - headless cms vs git based cms
   - cms without database
   - static site cms
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -34,22 +34,22 @@ Knowing which architecture your project actually needs is more useful than a fea
 
 The consequences are structural:
 
-| Concern | Payload CMS | LightCMS |
-| :--- | :--- | :--- |
-| **Storage** | Postgres or MongoDB | Your Git repository |
-| **Serving** | Node.js server + database | Static files on a CDN |
-| **Scaling cost** | Scales with runtime + DB load | Scales with CDN pricing (near zero) |
-| **Security surface** | API, auth, DB, dependencies | None at runtime |
-| **Versioning** | Document versions in the DB | Git history, diffs, revert, blame |
-| **Portability** | Export and convert | Clone the repository |
-| **Editing** | Polished admin panel | TipTap document editor |
-| **Extras** | Hooks, jobs, blocks, field-level control | AI copilot, voice-to-text, newsletters |
+| Concern              | Payload CMS                              | LightCMS                               |
+| :------------------- | :--------------------------------------- | :------------------------------------- |
+| **Storage**          | Postgres or MongoDB                      | Your Git repository                    |
+| **Serving**          | Node.js server + database                | Static files on a CDN                  |
+| **Scaling cost**     | Scales with runtime + DB load            | Scales with CDN pricing (near zero)    |
+| **Security surface** | API, auth, DB, dependencies              | None at runtime                        |
+| **Versioning**       | Document versions in the DB              | Git history, diffs, revert, blame      |
+| **Portability**      | Export and convert                       | Clone the repository                   |
+| **Editing**          | Polished admin panel                     | TipTap document editor                 |
+| **Extras**           | Hooks, jobs, blocks, field-level control | AI copilot, voice-to-text, newsletters |
 
 ---
 
 ## When Payload Is the Right Answer
 
-Choose Payload when your project is an *application* rather than a publication:
+Choose Payload when your project is an _application_ rather than a publication:
 
 - Content has **relationships**: products to variants, authors to books, episodes to seasons.
 - You need a **content API** consumed by something other than a website: a mobile app, an IoT display, a personalization engine.
@@ -61,7 +61,7 @@ For those requirements, a file-based tool is the wrong shape, and no amount of e
 
 ## When LightCMS Is the Right Answer
 
-Choose LightCMS when your project is a *site that publishes*:
+Choose LightCMS when your project is a _site that publishes_:
 
 - A blog, docs site, changelog, portfolio, or marketing pages built on Astro, Hugo, Zola, Eleventy, or similar.
 - The content is **documents**, not relational records.

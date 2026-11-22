@@ -1,11 +1,11 @@
 ---
-title: 'Git Based CMS vs Traditional CMS: Which Is Right for You?'
+title: "Git Based CMS vs Traditional CMS: Which Is Right for You?"
 description: >-
   How Git based CMS platforms compare with WordPress, Ghost, and Contentful on
   security, ownership, cost, and workflow, and why static publishing is shifting
   to Git.
 serial: 10
-date: '2026-10-14T12:30:00.000Z'
+date: "2026-10-14T12:30:00.000Z"
 draft: false
 tags:
   - git based cms
@@ -13,12 +13,11 @@ tags:
   - headless cms vs git cms
   - traditional cms vs static cms
   - cms without database
-preview: /og-image.webp
+
 slug: git-cms-vs-traditional-cms
 ---
-A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
 
----
+A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
 
 ## How a Git based CMS Works
 

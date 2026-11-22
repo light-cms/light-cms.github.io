@@ -1,11 +1,11 @@
 ---
-title: 'Headless CMS vs Git Based CMS, Compared'
+title: "Headless CMS vs Git Based CMS, Compared"
 description: >-
   Compare headless and Git based CMSs, how each stores and delivers content,
   where each approach works best, and how to choose the right fit for your
   project.
 serial: 44
-date: '2026-10-16T11:00:00.000Z'
+date: "2026-10-16T11:00:00.000Z"
 draft: false
 tags:
   - headless cms vs git based cms
@@ -13,13 +13,14 @@ tags:
   - git based cms
   - file based cms vs headless
   - cms architecture
-preview: /og-image.webp
+
 slug: headless-vs-git-based-cms
 ---
+
 "Headless" and "Git based" get used as if they were rival categories. They are not; they answer different questions:
 
-- **Headless** answers: *How does content reach the frontend?* (Through an API, decoupled from presentation.)
-- **Git based** answers: *Where does content live?* (As files in a repository.)
+- **Headless** answers: _How does content reach the frontend?_ (Through an API, decoupled from presentation.)
+- **Git based** answers: _Where does content live?_ (As files in a repository.)
 
 A tool can be both, either, or neither. Sorting out the two ideas lets you compare architectures instead of feature lists.
 
@@ -64,9 +65,8 @@ This is the right shape when the consumer is a website, the content is prose, an
 
 ## Side by Side
 
-
 |                      | Headless CMS                           | Git based CMS                 |
-| :-------------------- | :-------------------------------------- | :----------------------------- |
+| :------------------- | :------------------------------------- | :---------------------------- |
 | **Storage**          | Database                               | Files in a repository         |
 | **Delivery**         | API at request time                    | Build to static files         |
 | **Change latency**   | Instant                                | Next build                    |
@@ -78,17 +78,16 @@ This is the right shape when the consumer is a website, the content is prose, an
 | **Security surface** | API, auth layer, DB, dependencies      | Nothing at runtime            |
 | **Best for**         | Multi-channel apps and complex content | Publications and static sites |
 
-
 ## Where Each One Wins
 
-### Choose headless when:
+### Choose headless when
 
 - One body of content feeds **several consumers**: A website, an app, and an integration.
 - The content features relationships among entities, including products and their variants, episodes and seasons, as well as articles and their authors.
 - Editors need **instant publication** With no build in the path, plus approvals and granular permissions.
 - Your frontend is an application, not a document.
 
-### Choose Git based when:
+### Choose Git based when
 
 - The output is a **website or publication**: Blog, docs, changelog, marketing site.
 - Content is **documents**, and the natural tool for documents is a writing surface.
@@ -107,7 +106,7 @@ The categories blend in practice:
 - A Git based CMS that exposes an API for previews behaves heedlessly, but the source of truth is still files.
 - Many teams run **Git based for the publication** and a **headless service for the application**, choosing per surface rather than per ideology.
 
-The pragmatic rule: decide where the source of truth should live for *this* Project, not which philosophy you endorse.
+The pragmatic rule: decide where the source of truth should live for _this_ Project, not which philosophy you endorse.
 
 ## A Note on Cost Shapes
 

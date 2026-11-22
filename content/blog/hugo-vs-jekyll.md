@@ -10,7 +10,7 @@ keywords:
   - hugo or jekyll for blog
   - static site generator comparison
   - fastest ssg
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - hugo
@@ -19,7 +19,7 @@ taxonomies:
     - static-sites
 ---
 
-Hugo vs Jekyll is the oldest matchup in the static site world: Jekyll started the modern SSG era in 2008, and Hugo showed up in 2013 promising to do everything faster. 
+Hugo vs Jekyll is the oldest matchup in the static site world: Jekyll started the modern SSG era in 2008, and Hugo showed up in 2013 promising to do everything faster.
 A decade later the question is settled for new projects, but Jekyll still has a loyal (and reasonable) camp.
 
 ---

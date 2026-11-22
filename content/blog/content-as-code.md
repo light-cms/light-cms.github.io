@@ -1,10 +1,10 @@
 ---
-title: Content as Code treating Writing Like a version controlled source code
+title: "Content as Code: Writing Like Code"
 description: >-
   Treat content like code, version it, review changes, and manage it alongside
   your projects. This post explores the benefits and practicalities of a content
   as code workflow.
-date: '2026-11-04T19:22:00Z'
+date: "2026-11-04T19:22:00Z"
 draft: false
 tags:
   - content as code
@@ -18,6 +18,7 @@ serial: 47
 preview: /og-image.png
 slug: content-as-code
 ---
+
 **Content as code** Is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
 
 "Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
@@ -31,8 +32,6 @@ Content as code comes down to three choices:
 3. **The pipeline treats content like a build.** Linters check links and style, previews render every pull request, and merging deploys.
 
 Once those hold, most of the benefits follow automatically.
-
----
 
 ### What You Inherit From Software Practice
 
@@ -68,8 +67,6 @@ The honest list, because this is not free:
 
 None of these are disqualifying for a publication. All of them are real for other shapes of work.
 
----
-
 ## The Practical Stack
 
 A typical content-as-code setup for a publication looks like this:
@@ -91,8 +88,6 @@ content/
 
 The repository stays recognizable to a developer and invisible to a writer. That balance is the whole trick.
 
----
-
 ## Why It Lasts
 
 Content as code wins on time. Databases need their schema, their server version, and their vendor. Wikis need their vendor. Proprietary documents need their vendor.
@@ -101,9 +96,7 @@ A directory of Markdown files needs a text editor, and it will still open in one
 
 The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) Adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) For the workflow in detail.
 
-#### Frequently Asked Questions
-
-## Frequently Asked Questions
+### Frequently Asked Questions
 
 ### Is content as code the same as a Git based CMS?
 

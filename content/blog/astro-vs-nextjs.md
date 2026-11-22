@@ -10,7 +10,7 @@ keywords:
   - astro or next for blog
   - astro vs nextjs for content site
   - which react framework 2026
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - astro
@@ -20,8 +20,6 @@ taxonomies:
 ---
 
 Astro vs Next.js comes down to what you're building. Astro optimizes for **content sites that must load instantly**; Next.js optimizes for **applications that happen to have pages**. Both render React-style components, both ship static output by default in 2026, and picking wrong costs you either performance you did not need or flexibility you did.
-
----
 
 ## The Rendering Models
 
@@ -47,8 +45,6 @@ Both consume **Markdown with YAML front matter** from your repository, so any Gi
 
 Next.js remains the most hire able frontend framework, with the largest ecosystem and the deepest Vercel integration. Astro is younger but widely used in the content and documentation space, with Starlight becoming the default docs template ([Hugo vs Starlight](/blog/hugo-vs-astro-starlight/)).
 
----
-
 ## The Verdict
 
 - **Blog, docs, marketing site, portfolio**: Astro. Static-by-default, content collections, minimal JavaScript.
@@ -56,8 +52,6 @@ Next.js remains the most hire able frontend framework, with the largest ecosyste
 - **Hybrid**: Astro islands handle "mostly content, some app" well, usually the better hybrid direction.
 
 For SSG-level context see [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and [best static site generators](/blog/best-static-site-generators/); for hosting both, [Vercel vs Netlify](/blog/vercel-vs-netlify/).
-
----
 
 ## Frequently Asked Questions
 

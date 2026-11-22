@@ -1,7 +1,9 @@
 # i18n setup plan — js-ts-lingui
+
 Entry point: full journey · Mode: unguided · Source: en · Targets: uk, es-ES Catalog: lingui-po (compile-time-extraction) · References: from manifest-snapshot.json
 
 ## Phase 3 — Setup
+
 - [ ] verify_skill_dependencies — lingui-framework-setup (setup); lingui-best-practices, enhanced-message-context (convert); find-unwrapped-strings (recall) all loadable
 - [ ] install_packages — @lingui/core, @lingui/react, @lingui/cli, @lingui/vite-plugin, @lingui/swc-plugin, @lingui/detect-locale; main thread
 - [ ] create_config — lingui.config.ts: sourceLocale en, locales [en, uk-UA, es-ES] (Crowdin locale codes)
@@ -14,6 +16,7 @@ Entry point: full journey · Mode: unguided · Source: en · Targets: uk, es-ES 
 - [ ] commit_setup — commit config, provider wiring, catalogs, coding rules
 
 ## Phase 4 — Wrap
+
 - [ ] wrap_src_App_tsx — 11 candidates
 - [ ] wrap_src_components_PlanCard_tsx — 2 candidates
 - [ ] module_i18n_approach — decide once how an i18n instance reaches non-render code; governs plans.ts below
@@ -26,6 +29,7 @@ Entry point: full journey · Mode: unguided · Source: en · Targets: uk, es-ES 
 - [ ] commit_wrap — commit the wrapped files and regenerated catalogs
 
 ## Phase 5 — Connect
+
 - [ ] write_crowdin_yml — project id 1 (known; no create_project step)
 - [ ] config_lint
 - [ ] config_sources
@@ -35,6 +39,7 @@ Entry point: full journey · Mode: unguided · Source: en · Targets: uk, es-ES 
 - [ ] commit_connect — commit crowdin.yml
 
 ## Phase 6 — Context
+
 - [ ] context_download
 - [ ] fill_ai_context
 - [ ] context_upload
@@ -43,6 +48,7 @@ Entry point: full journey · Mode: unguided · Source: en · Targets: uk, es-ES 
 - [ ] upload_glossary — after the user reviews the terms; glossary list first, then create or --id
 
 ## Phase 7 — CI
+
 - [ ] write_workflow
 - [ ] commit_ci — commit the workflow file
 - [ ] set_secret_instruction

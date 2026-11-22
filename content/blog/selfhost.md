@@ -1,6 +1,6 @@
 ---
 title: Self Hosting LightCMS
-description: 'How to self-host LightCMS: fork the repository, create the GitHub App, provision PostgreSQL, configure environment variables, and deploy to Vercel, Netlify, or Cloudflare.'
+description: "How to self-host LightCMS: fork the repository, create the GitHub App, provision PostgreSQL, configure environment variables, and deploy to Vercel, Netlify, or Cloudflare."
 serial: 4
 section: Get Started
 badge: Deploy

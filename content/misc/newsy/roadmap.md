@@ -1,6 +1,6 @@
 ---
 title: Newsy Roadmap
-description: 'The Newsy roadmap: the hosted instance, self-hosting on Vercel, and what the GitHub backed newsletter bot supports today.'
+description: "The Newsy roadmap: the hosted instance, self-hosting on Vercel, and what the GitHub backed newsletter bot supports today."
 keywords:
   - newsy
   - newsletter roadmap
@@ -8,7 +8,7 @@ keywords:
   - self hosted newsletter
 draft: false
 weight: 0
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - newsy
@@ -27,7 +27,7 @@ Deploy your own copy on Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flight-cms%2Fnewsy&env=DATABASE_URL&project-name=newsy&repository-name=newsy)
 
-The hosted instance runs on Vercel's hobby tier, so uptime and function 
+The hosted instance runs on Vercel's hobby tier, so uptime and function
 invocation limits may apply.
 
 If Newsy has been useful, starring the [repository](https://github.com/light-cms/newsy) helps.

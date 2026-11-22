@@ -8,26 +8,26 @@ What this page adds on top of the docs is the part that decides a run: where eac
 
 ## The table
 
-| Type | `prepare*` | Where the user sees it | Extra manifest fields | What `preview` can open |
-|---|---|---|---|---|
-| `project-integrations` | `prepareProjectIntegrations` | Project → Integrations | - | needs `--project` |
-| `project-tools` | `prepareProjectTools` | Project → Tools | - | needs `--project` |
-| `organization-menu` | `prepareOrganizationMenu` | Left sidebar, organization level | - | opens directly, **Enterprise only** |
-| `profile-resources-menu` | `prepareProfileResourcesMenu` | User profile → Resources | - | opens directly, **crowdin.com only** |
-| `editor-right-panel` | `prepareEditorRightPanel` | Translation editor, right-hand panel next to the string | `modes` | needs `--project` |
-| `modal` | `prepareModal` | A dialog opened by another module (usually a context-menu entry) | - | no page of its own |
-| `organization-settings-menu` | `prepareOrganizationSettingsMenu` | Organization settings | - | opens directly, **Enterprise only** |
-| `project-reports` | `prepareProjectReports` | Project → Reports, alongside the built-in reports | - | needs `--project` |
-| `context-menu` | `prepareContextMenu` | Right-click menu on a TM, glossary, language, screenshot, style guide or file | `options` | no page of its own |
-| `project-menu` | `prepareProjectMenu` | Project navigation, its own page | - | needs `--project` |
-| `profile-settings-menu` | `prepareProfileSettingsMenu` | User profile settings | - | opens directly, **crowdin.com only** |
-| `editor-translations-panel` | `prepareEditorTranslationsPanel` | Translation editor, translations area | `modes` | no link - open the editor by hand |
-| `editor-asset-panel` | `prepareEditorAssetPanel` | Translation editor, asset preview for matching files | `modes`, `fileNamePattern` | no link - open the editor by hand |
-| `editor-background-worker` | `prepareEditorBackgroundWorker` | Nothing visible: runs alongside the editor | `modes` | no link, nothing to see |
-| `navbar-extension` | `prepareNavbarExtension` | Top navigation bar | - | no page of its own |
-| `chat` | `prepareChat` | Chat surface | - | no page of its own |
-| `organization-menu-crowdsource` | `prepareOrganizationMenuCrowdsource` | Organization menu, crowdsourcing projects | - | opens directly, **Enterprise only** |
-| `project-menu-crowdsource` | `prepareProjectMenuCrowdsource` | Project menu, crowdsourcing projects | - | **Enterprise only**, needs a project that has a public URL |
+| Type                            | `prepare*`                           | Where the user sees it                                                        | Extra manifest fields      | What `preview` can open                                    |
+| ------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- | -------------------------- | ---------------------------------------------------------- |
+| `project-integrations`          | `prepareProjectIntegrations`         | Project → Integrations                                                        | -                          | needs `--project`                                          |
+| `project-tools`                 | `prepareProjectTools`                | Project → Tools                                                               | -                          | needs `--project`                                          |
+| `organization-menu`             | `prepareOrganizationMenu`            | Left sidebar, organization level                                              | -                          | opens directly, **Enterprise only**                        |
+| `profile-resources-menu`        | `prepareProfileResourcesMenu`        | User profile → Resources                                                      | -                          | opens directly, **crowdin.com only**                       |
+| `editor-right-panel`            | `prepareEditorRightPanel`            | Translation editor, right-hand panel next to the string                       | `modes`                    | needs `--project`                                          |
+| `modal`                         | `prepareModal`                       | A dialog opened by another module (usually a context-menu entry)              | -                          | no page of its own                                         |
+| `organization-settings-menu`    | `prepareOrganizationSettingsMenu`    | Organization settings                                                         | -                          | opens directly, **Enterprise only**                        |
+| `project-reports`               | `prepareProjectReports`              | Project → Reports, alongside the built-in reports                             | -                          | needs `--project`                                          |
+| `context-menu`                  | `prepareContextMenu`                 | Right-click menu on a TM, glossary, language, screenshot, style guide or file | `options`                  | no page of its own                                         |
+| `project-menu`                  | `prepareProjectMenu`                 | Project navigation, its own page                                              | -                          | needs `--project`                                          |
+| `profile-settings-menu`         | `prepareProfileSettingsMenu`         | User profile settings                                                         | -                          | opens directly, **crowdin.com only**                       |
+| `editor-translations-panel`     | `prepareEditorTranslationsPanel`     | Translation editor, translations area                                         | `modes`                    | no link - open the editor by hand                          |
+| `editor-asset-panel`            | `prepareEditorAssetPanel`            | Translation editor, asset preview for matching files                          | `modes`, `fileNamePattern` | no link - open the editor by hand                          |
+| `editor-background-worker`      | `prepareEditorBackgroundWorker`      | Nothing visible: runs alongside the editor                                    | `modes`                    | no link, nothing to see                                    |
+| `navbar-extension`              | `prepareNavbarExtension`             | Top navigation bar                                                            | -                          | no page of its own                                         |
+| `chat`                          | `prepareChat`                        | Chat surface                                                                  | -                          | no page of its own                                         |
+| `organization-menu-crowdsource` | `prepareOrganizationMenuCrowdsource` | Organization menu, crowdsourcing projects                                     | -                          | opens directly, **Enterprise only**                        |
+| `project-menu-crowdsource`      | `prepareProjectMenuCrowdsource`      | Project menu, crowdsourcing projects                                          | -                          | **Enterprise only**, needs a project that has a public URL |
 
 Only these 18 types exist in the manifest schema. Anything else (`custom-mt`, `custom-file-format`, `ai-provider`, `webhook`, `file-pre-import` and friends) belongs to classic apps with a backend, because Crowdin calls those over HTTP.
 
@@ -56,11 +56,9 @@ Plain module:
 
 ```json
 {
-  "modules": {
-    "project-tools": [
-      { "key": "label-manager", "name": "Label Manager" }
-    ]
-  }
+	"modules": {
+		"project-tools": [{ "key": "label-manager", "name": "Label Manager" }]
+	}
 }
 ```
 
@@ -68,15 +66,15 @@ Editor module - `modes` is required, and the enum is `translate`, `review`, `ass
 
 ```json
 {
-  "modules": {
-    "editor-right-panel": [
-      {
-        "key": "glossary-panel",
-        "name": "Glossary for this string",
-        "modes": ["translate", "review"]
-      }
-    ]
-  }
+	"modules": {
+		"editor-right-panel": [
+			{
+				"key": "glossary-panel",
+				"name": "Glossary for this string",
+				"modes": ["translate", "review"]
+			}
+		]
+	}
 }
 ```
 
@@ -84,16 +82,16 @@ Asset panel - additionally declares which files it handles:
 
 ```json
 {
-  "modules": {
-    "editor-asset-panel": [
-      {
-        "key": "psd-preview",
-        "name": "PSD preview",
-        "modes": ["assets"],
-        "fileNamePattern": "*.psd"
-      }
-    ]
-  }
+	"modules": {
+		"editor-asset-panel": [
+			{
+				"key": "psd-preview",
+				"name": "PSD preview",
+				"modes": ["assets"],
+				"fileNamePattern": "*.psd"
+			}
+		]
+	}
 }
 ```
 
@@ -101,22 +99,20 @@ Context menu - `options.module` names the target as a single `{"<module type>": 
 
 ```json
 {
-  "modules": {
-    "context-menu": [
-      {
-        "key": "sync-glossary",
-        "name": "Sync this glossary",
-        "options": {
-          "location": "glossary",
-          "type": "modal",
-          "module": { "modal": "sync-dialog" }
-        }
-      }
-    ],
-    "modal": [
-      { "key": "sync-dialog", "name": "Sync glossary" }
-    ]
-  }
+	"modules": {
+		"context-menu": [
+			{
+				"key": "sync-glossary",
+				"name": "Sync this glossary",
+				"options": {
+					"location": "glossary",
+					"type": "modal",
+					"module": { "modal": "sync-dialog" }
+				}
+			}
+		],
+		"modal": [{ "key": "sync-dialog", "name": "Sync glossary" }]
+	}
 }
 ```
 

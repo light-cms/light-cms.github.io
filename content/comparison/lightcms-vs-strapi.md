@@ -10,7 +10,7 @@ keywords:
   - strapi vs git cms
   - open source cms comparison
   - strapi for blog
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -28,19 +28,19 @@ Strapi is a Node.js application with a database and an API. LightCMS is a Node.j
 
 ## Side by Side
 
-| | LightCMS | Strapi |
-| :--- | :--- | :--- |
-| **Storage** | Markdown files in your repository | SQL database (SQLite/Postgres/MySQL) |
-| **Delivery** | Static build → CDN | REST / GraphQL API at runtime |
-| **Server** | None at runtime | Node.js app, always on |
-| **Content model** | Front matter fields | Content types defined in admin |
-| **Versioning** | Git history, revert, blame | Draft/publish + revisions in DB |
-| **Editor** | TipTap document editor | Admin panel with form fields |
-| **AI copilot** | Built in | Plugin ecosystem |
-| **Voice-to-text** | Built in | Not bundled |
-| **Newsletters** | Built in via Newsy | Not bundled |
-| **License** | Apache 2.0 | MIT/EE (check current edition) |
-| **Typical cost** | Hosting only | Hosting + database operations |
+|                   | LightCMS                          | Strapi                               |
+| :---------------- | :-------------------------------- | :----------------------------------- |
+| **Storage**       | Markdown files in your repository | SQL database (SQLite/Postgres/MySQL) |
+| **Delivery**      | Static build → CDN                | REST / GraphQL API at runtime        |
+| **Server**        | None at runtime                   | Node.js app, always on               |
+| **Content model** | Front matter fields               | Content types defined in admin       |
+| **Versioning**    | Git history, revert, blame        | Draft/publish + revisions in DB      |
+| **Editor**        | TipTap document editor            | Admin panel with form fields         |
+| **AI copilot**    | Built in                          | Plugin ecosystem                     |
+| **Voice-to-text** | Built in                          | Not bundled                          |
+| **Newsletters**   | Built in via Newsy                | Not bundled                          |
+| **License**       | Apache 2.0                        | MIT/EE (check current edition)       |
+| **Typical cost**  | Hosting only                      | Hosting + database operations        |
 
 ---
 
@@ -65,7 +65,7 @@ Strapi is a Node.js application with a database and an API. LightCMS is a Node.j
 
 ## The Question Behind the Question
 
-Ask what your content *is*:
+Ask what your content _is_:
 
 - **Documents** (posts, docs, release notes, pages) → LightCMS's file model is simpler, cheaper, and more durable.
 - **Records with relationships** (products, courses, catalog entries, anything an app queries) → Strapi's database is the correct tool, and no amount of Markdown elegance changes that.

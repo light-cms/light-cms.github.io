@@ -10,7 +10,7 @@ keywords:
   - free static site hosting
   - github pages custom domain
   - cloudflare pages free tier
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - hosting
@@ -19,11 +19,9 @@ taxonomies:
     - jamstack
 ---
 
-Both will host your static site for free, forever, straight from a Git repository. But [Cloudflare Pages](https://pages.cloudflare.com) 
+Both will host your static site for free, forever, straight from a Git repository. But [Cloudflare Pages](https://pages.cloudflare.com)
 and [GitHub Pages](https://pages.github.com) are built with different philosophies,
 and the differences show up the moment your blog gets its first taste of traffic.
-
----
 
 ## The Core Difference
 
@@ -33,14 +31,14 @@ and the differences show up the moment your blog gets its first taste of traffic
 
 ## Head-to-Head
 
-| | Cloudflare Pages | GitHub Pages |
-| :--- | :--- | :--- |
-| Bandwidth | Unlimited on free tier | Metered soft limits (~100 GB/mo) |
-| Build source | Git or direct upload | Git push or Actions |
-| Custom domains | Free, automatic SSL | Free, automatic Let's Encrypt SSL |
-| Preview deployments | Every branch and PR | No (workflow workarounds exist) |
-| Edge network | 300+ cities | Fastly-backed, smaller footprint |
-| Extras | Workers, Pages Functions, KV, R2 | Native Actions ecosystem |
+|                     | Cloudflare Pages                 | GitHub Pages                      |
+| :------------------ | :------------------------------- | :-------------------------------- |
+| Bandwidth           | Unlimited on free tier           | Metered soft limits (~100 GB/mo)  |
+| Build source        | Git or direct upload             | Git push or Actions               |
+| Custom domains      | Free, automatic SSL              | Free, automatic Let's Encrypt SSL |
+| Preview deployments | Every branch and PR              | No (workflow workarounds exist)   |
+| Edge network        | 300+ cities                      | Fastly-backed, smaller footprint  |
+| Extras              | Workers, Pages Functions, KV, R2 | Native Actions ecosystem          |
 
 ## Where GitHub Pages Wins
 
@@ -60,8 +58,6 @@ and the differences show up the moment your blog gets its first taste of traffic
 For a project page or small demo, GitHub Pages does the job. **For a blog, documentation site, or anything you expect people to read, Cloudflare Pages is the better free host.** Unlimited bandwidth alone decides it. The full field (including Vercel, Netlify, and Deno Deploy) is covered in [top static site hosting platforms](/misc/top-static-site-hosting/) and [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/).
 
 Both integrate with the same Git based workflow: [LightCMS](/getting-started/) commits Markdown, the host rebuilds, the site updates. Setup is covered in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
-
----
 
 ## Frequently Asked Questions
 

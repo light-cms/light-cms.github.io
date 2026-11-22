@@ -45,13 +45,13 @@ Prioritize these - skip strings that are already clear from `text` + `key` alone
 
 ### Examples
 
-| String | Key | Good `ai_context` |
-|--------|-----|-------------------|
-| `"Red"` | `color.red` | `"Color option label in a color picker. Refers to the color red as a selectable choice."` |
-| `"Blue"` | *(none)* | `"Color name used as a selectable option or status label. Clarify based on surrounding UI."` |
-| `"{count, plural, one {# month} other {# months}}"` | `duration.months` | `"Displays a duration in months. '#' is replaced by the numeric count."` |
-| `"Edit <0>src/App.tsx</0> and save to test HMR"` | *(none)* | `"Instructional UI message. The tagged portion is rendered as an inline code element highlighting a filename."` |
-| `"New"` | `button.new` | `"Label for a button that creates a new item. The exact entity depends on the current page context."` |
+| String                                              | Key               | Good `ai_context`                                                                                               |
+| --------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------- |
+| `"Red"`                                             | `color.red`       | `"Color option label in a color picker. Refers to the color red as a selectable choice."`                       |
+| `"Blue"`                                            | _(none)_          | `"Color name used as a selectable option or status label. Clarify based on surrounding UI."`                    |
+| `"{count, plural, one {# month} other {# months}}"` | `duration.months` | `"Displays a duration in months. '#' is replaced by the numeric count."`                                        |
+| `"Edit <0>src/App.tsx</0> and save to test HMR"`    | _(none)_          | `"Instructional UI message. The tagged portion is rendered as an inline code element highlighting a filename."` |
+| `"New"`                                             | `button.new`      | `"Label for a button that creates a new item. The exact entity depends on the current page context."`           |
 
 ## Orchestrated inputs (optional)
 

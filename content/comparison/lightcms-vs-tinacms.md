@@ -10,7 +10,7 @@ keywords:
   - tinacms self hosted
   - on-page editing vs dashboard
   - markdown cms comparison
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -44,19 +44,19 @@ Tina is optimized for the first case; LightCMS for the second.
 
 ## Comparison
 
-| | LightCMS | TinaCMS |
-| :--- | :--- | :--- |
-| **Editing model** | Standalone document workspace | On-page, in-context editing |
-| **Content store** | Your GitHub repository | GitHub (or Git based storage) |
-| **Content schema** | Configured in the app; front matter as a form | Schema defined in code with Tina's content SDK |
-| **Editor** | TipTap WYSIWYG: tables, math, code, task lists | Inline rich text tuned for page copy |
-| **AI copilot** | Built in (any OpenAI-compatible endpoint) | Not bundled |
-| **Voice-to-text** | Built in (Whisper) | Not bundled |
-| **Newsletters** | Built in via Newsy: GitHub-backed, no email service | Not bundled |
-| **Deployment** | Self-hosted Node.js service | Local workflow, hosted cloud option, or self-hosted |
-| **Licensing** | Apache 2.0 | Open source core, with hosted services available |
+|                    | LightCMS                                            | TinaCMS                                             |
+| :----------------- | :-------------------------------------------------- | :-------------------------------------------------- |
+| **Editing model**  | Standalone document workspace                       | On-page, in-context editing                         |
+| **Content store**  | Your GitHub repository                              | GitHub (or Git based storage)                       |
+| **Content schema** | Configured in the app; front matter as a form       | Schema defined in code with Tina's content SDK      |
+| **Editor**         | TipTap WYSIWYG: tables, math, code, task lists      | Inline rich text tuned for page copy                |
+| **AI copilot**     | Built in (any OpenAI-compatible endpoint)           | Not bundled                                         |
+| **Voice-to-text**  | Built in (Whisper)                                  | Not bundled                                         |
+| **Newsletters**    | Built in via Newsy: GitHub-backed, no email service | Not bundled                                         |
+| **Deployment**     | Self-hosted Node.js service                         | Local workflow, hosted cloud option, or self-hosted |
+| **Licensing**      | Apache 2.0                                          | Open source core, with hosted services available    |
 
-*(Verify current licensing and hosted-tier details against each project's docs before committing; both projects evolve quickly.)*
+_(Verify current licensing and hosted-tier details against each project's docs before committing; both projects evolve quickly.)_
 
 ---
 

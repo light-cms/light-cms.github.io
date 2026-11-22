@@ -28,12 +28,12 @@ Work top to bottom and stop at the first match.
 2. **The string sits inside a component but outside JSX** — an attribute, an `alert()`, a prop value → call `useLingui()` and tag it with `` t`...` ``.
 
    ✅ ``const { t } = useLingui(); <img alt={t`Company logo`} />``
-   ❌ ``<img alt="Company logo" />`` — the attribute stays a hardcoded literal in every locale, and no build error ever points at it
+   ❌ `<img alt="Company logo" />` — the attribute stays a hardcoded literal in every locale, and no build error ever points at it
 
 3. **The string is declared outside any component** — module scope, a constants object, a config array → describe it with `msg`, then resolve it with the reactive binding from `useLingui()` at the call site where it actually renders, not where it's declared.
 
    ✅ ``const PLAN_LABELS = { free: msg`Home barista`, pro: msg`Cafe pro` };``
-   ✅ ``function PlanCard({ plan }) { const { _ } = useLingui(); return <h3>{_(PLAN_LABELS[plan.id])}</h3>; }``
+   ✅ `function PlanCard({ plan }) { const { _ } = useLingui(); return <h3>{_(PLAN_LABELS[plan.id])}</h3>; }`
    ❌ ``const PLAN_LABELS = { free: t`Home barista`, pro: t`Cafe pro` };`` — evaluated once at import time and frozen in whatever locale was active then, so `PlanCard` stops updating when the user switches locale
 
 ## 3. Plurals
@@ -41,13 +41,17 @@ Work top to bottom and stop at the first match.
 Never branch on a count by hand — always use `<Plural>` so each target language's own plural rules apply instead of the source language's.
 
 ✅
+
 ```jsx
-<Plural value={count} one="# item" other="# items" />
+<Plural value={count} one="# item" other="# items" />;
 ```
 
 ❌
+
 ```jsx
-{count === 1 ? `${count} item` : `${count} items`}
+{
+	count === 1 ? `${count} item` : `${count} items`;
+}
 ```
 
 ## 4. What not to wrap

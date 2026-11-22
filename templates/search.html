@@ -7,9 +7,12 @@
 </header>
 
 <section id="search-container" aria-label="Site search">
-	<pagefind-input autofocus placeholder="{{ <translate key='search_for' default='Search for' language_strings /> }}…"></pagefind-input>
+	<pagefind-input
+		placeholder="{{ <translate key='search_for' default='Search for' language_strings /> }}…"></pagefind-input>
 	<pagefind-summary aria-live="polite"></pagefind-summary>
 	<pagefind-results></pagefind-results>
-	<noscript><p class="error-state">Search needs JavaScript. Use the Blog or Comparisons pages to browse the archive.</p></noscript>
+	<noscript>
+		<p class="error-state">Search needs JavaScript. Use the Blog or Comparisons pages to browse the archive.</p>
+	</noscript>
 </section>
 {% endblock content %}

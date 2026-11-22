@@ -3,14 +3,14 @@ title: Newsletter Automation Without a Paid Subscription
 description: >-
   Run your blog newsletter straight from Git: no mailing list, no SMTP API, no
   SaaS fees.
-date: '2026-09-18T01:50:00.000Z'
+date: "2026-09-18T01:50:00.000Z"
 draft: false
 keywords:
   - newsletter automation
   - github newsletter
   - newsy
   - static site newsletter
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - newsletter
@@ -19,6 +19,7 @@ taxonomies:
     - publishing
 slug: newsletter-email-automation
 ---
+
 Email is one of the most effective ways to build a dedicated audience. The traditional way of doing it, though, has become cumbersome and expensive.
 
 [LightCMS](https://www.lightcms.me) takes a different route, Git driven newsletters powered by [Newsy](https://github.com/light-cms/newsy), where the repository you already have is The backend, so you can drop the newsletter service entirely.

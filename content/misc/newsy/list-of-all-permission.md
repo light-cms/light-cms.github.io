@@ -6,16 +6,12 @@ author: light-cms
 created: 2026-08-22T07:28:38+00:00
 visibility: public
 fmContentType: default
-keywords:
+tags:
   - newsy
   - github app permissions
   - newsletter bot
   - github webhooks
-preview: /og-image.webp
-taxonomies:
-  tags:
-    - newsy
-    - github
+
 ---
 
 The Newsy GitHub App needs the following permissions to watch your content and create

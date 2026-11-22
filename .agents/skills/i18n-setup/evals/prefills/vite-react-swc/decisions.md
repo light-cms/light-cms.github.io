@@ -54,8 +54,8 @@ The unwrapped-string lint rule was asked at Decide and declined — recorded eit
 
 Probed for loadability in this environment. The real gate is `verify_skill_dependencies` at the top of phase 3, which re-probes rather than trusting this record — a user can install the plugin between plan approval and execution.
 
-| Role | Skill(s) | Probed here | Install command if missing |
-|---|---|---|---|
-| setup | `lingui-framework-setup` | not yet loaded | `npx skills add lingui/skills` (Claude Code: `/plugin marketplace add lingui/skills && /plugin install lingui@lingui-skills`) |
-| convert | `lingui-best-practices`, `enhanced-message-context` | not yet loaded | same as above |
-| recall | `find-unwrapped-strings` | not yet loaded | same as above |
+| Role    | Skill(s)                                            | Probed here    | Install command if missing                                                                                                    |
+| ------- | --------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| setup   | `lingui-framework-setup`                            | not yet loaded | `npx skills add lingui/skills` (Claude Code: `/plugin marketplace add lingui/skills && /plugin install lingui@lingui-skills`) |
+| convert | `lingui-best-practices`, `enhanced-message-context` | not yet loaded | same as above                                                                                                                 |
+| recall  | `find-unwrapped-strings`                            | not yet loaded | same as above                                                                                                                 |

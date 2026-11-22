@@ -10,7 +10,7 @@ keywords:
   - cms for static site generator
   - git based cms comparison
   - cms without database
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - cms
@@ -23,22 +23,18 @@ A static site solves delivery: no runtime, no database, no per-request computati
 
 The answers get crowded in 2026. The list below sorts the options by what each one optimizes for.
 
----
-
 ## The Shortlist
 
-| CMS | Model | Editor | Self-host | Best for |
-| :--- | :--- | :--- | :--- | :--- |
-| **LightCMS** | Git based workspace | TipTap WYSIWYG | ✅ | Writers who want one-click publishing |
-| **Decap CMS** | Git based admin app | Form-based React UI | ✅ | Classic multi-provider setups |
-| **TinaCMS** | On-page visual editing | Inline WYSIWYG | Partial | Editing content where it renders |
-| **Keystatic** | Local-first files | React forms | ✅ | Developers in the Next/Astro world |
-| **Pages CMS** | Git based dashboard | Form-based | ✅ | A familiar CMS layout over GitHub |
-| **Sveltia CMS** | Browser Git editor | Lightweight UI | ✅ | Zero-backend, zero-cost editing |
-| **CloudCannon** | Managed Git based CMS | Visual editing | ❌ | Agencies with paying clients |
-| **Payload CMS** | Headless, database-first | Admin panel | ✅ | Apps that need relational content |
-
----
+| CMS             | Model                    | Editor              | Self-host | Best for                              |
+| :-------------- | :----------------------- | :------------------ | :-------- | :------------------------------------ |
+| **LightCMS**    | Git based workspace      | TipTap WYSIWYG      | ✅        | Writers who want one-click publishing |
+| **Decap CMS**   | Git based admin app      | Form-based React UI | ✅        | Classic multi-provider setups         |
+| **TinaCMS**     | On-page visual editing   | Inline WYSIWYG      | Partial   | Editing content where it renders      |
+| **Keystatic**   | Local-first files        | React forms         | ✅        | Developers in the Next/Astro world    |
+| **Pages CMS**   | Git based dashboard      | Form-based          | ✅        | A familiar CMS layout over GitHub     |
+| **Sveltia CMS** | Browser Git editor       | Lightweight UI      | ✅        | Zero-backend, zero-cost editing       |
+| **CloudCannon** | Managed Git based CMS    | Visual editing      | ❌        | Agencies with paying clients          |
+| **Payload CMS** | Headless, database-first | Admin panel         | ✅        | Apps that need relational content     |
 
 ## How to Choose
 
@@ -55,8 +51,6 @@ Some tools need a config file, a schema, a backend, and an afternoon. Others sta
 
 **4. What is the exit?**
 Read the storage model, not the pricing page. Content in your repository can be moved by anyone, forever. Content in a vendor's database requires an export, a conversion, and eventually a migration.
-
----
 
 ## The Picks
 
@@ -90,16 +84,12 @@ Paid, polished, agency oriented. You are buying someone else's operations.
 
 ### Best when you need a database: Payload CMS
 
-A modern headless CMS with real relational content and a powerful admin panel: the right call for application shaped projects and the wrong one for a static publication. 
+A modern headless CMS with real relational content and a powerful admin panel: the right call for application shaped projects and the wrong one for a static publication.
 See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
-
----
 
 ## One Architectural Note
 
 Every option in the file based half of this table shares one advantage: **the build is the only runtime.** No database listener to patch, no PHP version to upgrade, no plugin supply chain to audit. The CMS produces files; the site remains files. That keeps the category growing. Static sites got cheap and fast, and the tooling for writing them has caught up.
-
----
 
 ## Frequently Asked Questions
 
@@ -122,7 +112,5 @@ One with a real editor rather than a field form. Writers should see a document, 
 ### Can I switch CMS later?
 
 With file based content, yes: the repository is the interface. Point a different tool at the same content directory and the archive survives.
-
----
 
 Related: [top Git based CMS platforms compared](/comparison/top-git-cms), [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/), and [content as code](/blog/content-as-code/).

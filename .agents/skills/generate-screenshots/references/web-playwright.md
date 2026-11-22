@@ -11,25 +11,25 @@ Reached from `SKILL.md`'s engine table for a web app. Playwright is the capture 
 The screenshot run gets its own config file, `playwright.crowdin.config.ts`, so the project's normal `npx playwright test` never runs the screenshot tests and the screenshot run never inherits a project matrix of browsers and devices. It matches one file and pins the framing:
 
 ```ts
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './e2e',
-  testMatch: 'crowdin-screenshots.ts',
-  workers: 1,
-  outputDir: '.crowdin/test-results',        // Playwright's run bookkeeping, out of the repo root
-  use: {
-    baseURL: 'http://localhost:3000',      // where the app's dev server listens
-    viewport: { width: 1440, height: 900 },  // one framing for every shot; a narrower app picks its own
-    colorScheme: 'light',
-    locale: 'en-US',                       // the project's source locale
-    storageState: '.crowdin/auth.json',    // see "Signing in"
-  },
-  webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
-    reuseExistingServer: true,             // the user's running dev server wins
-  },
+	testDir: "./e2e",
+	testMatch: "crowdin-screenshots.ts",
+	workers: 1,
+	outputDir: ".crowdin/test-results", // Playwright's run bookkeeping, out of the repo root
+	use: {
+		baseURL: "http://localhost:3000", // where the app's dev server listens
+		viewport: { width: 1440, height: 900 }, // one framing for every shot; a narrower app picks its own
+		colorScheme: "light",
+		locale: "en-US", // the project's source locale
+		storageState: ".crowdin/auth.json", // see "Signing in"
+	},
+	webServer: {
+		command: "npm run dev",
+		url: "http://localhost:3000",
+		reuseExistingServer: true, // the user's running dev server wins
+	},
 });
 ```
 
@@ -52,27 +52,27 @@ A browser opens; the user signs in and closes it; cookies and local storage land
 One file, `e2e/crowdin-screenshots.ts`, one test per screen in the agreed plan, each named after its screen and ending in a screenshot under the contract's name:
 
 ```ts
-import { test } from '@playwright/test';
+import { test } from "@playwright/test";
 
-const shots = '.crowdin/screenshots';
+const shots = ".crowdin/screenshots";
 
-test('dashboard', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('heading', { name: 'Dashboard' }).waitFor();
-  await page.screenshot({ path: `${shots}/dashboard.png` });
+test("dashboard", async ({ page }) => {
+	await page.goto("/");
+	await page.getByRole("heading", { name: "Dashboard" }).waitFor();
+	await page.screenshot({ path: `${shots}/dashboard.png` });
 });
 
-test('settings-profile', async ({ page }) => {
-  await page.goto('/settings');
-  await page.getByRole('tab', { name: 'Profile' }).click();
-  await page.screenshot({ path: `${shots}/settings-profile.png` });
+test("settings-profile", async ({ page }) => {
+	await page.goto("/settings");
+	await page.getByRole("tab", { name: "Profile" }).click();
+	await page.screenshot({ path: `${shots}/settings-profile.png` });
 });
 
-test('invite-dialog', async ({ page }) => {
-  await page.goto('/team');
-  await page.getByRole('button', { name: 'Invite' }).click();
-  await page.getByRole('dialog').waitFor();
-  await page.screenshot({ path: `${shots}/invite-dialog.png` });
+test("invite-dialog", async ({ page }) => {
+	await page.goto("/team");
+	await page.getByRole("button", { name: "Invite" }).click();
+	await page.getByRole("dialog").waitFor();
+	await page.screenshot({ path: `${shots}/invite-dialog.png` });
 });
 ```
 
@@ -85,13 +85,13 @@ Rules that the example shows and the plan relies on:
 
 What spoils a capture that still passed its test, and the line that keeps it out - put these in one `shoot` helper every test calls:
 
-| Spoiler | Guard |
-|---|---|
-| Fonts still loading, so the fallback face is in the image | `await page.evaluate(() => document.fonts.ready)` after navigation |
-| A dialog, menu or accordion caught mid-animation | wait for finite animations: `document.getAnimations()` filtered to those whose timing has no infinite iterations, then `await` their `finished` |
-| A hover state on the last thing clicked | `await page.mouse.move(0, 0)` before the shot |
-| An overlay the dev server mounts that is not part of the app (a framework's dev badge, devtools panels, a cookie banner the plan does not want) | `page.screenshot({ path, style: '<selector> { display: none !important }' })` - hidden for the image only |
-| Content scrolled to a heading sits under a fixed or sticky header | after `scrollIntoView`, `window.scrollBy(0, -(headerHeight + margin))`, with the height read from the app's own header |
+| Spoiler                                                                                                                                         | Guard                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fonts still loading, so the fallback face is in the image                                                                                       | `await page.evaluate(() => document.fonts.ready)` after navigation                                                                              |
+| A dialog, menu or accordion caught mid-animation                                                                                                | wait for finite animations: `document.getAnimations()` filtered to those whose timing has no infinite iterations, then `await` their `finished` |
+| A hover state on the last thing clicked                                                                                                         | `await page.mouse.move(0, 0)` before the shot                                                                                                   |
+| An overlay the dev server mounts that is not part of the app (a framework's dev badge, devtools panels, a cookie banner the plan does not want) | `page.screenshot({ path, style: '<selector> { display: none !important }' })` - hidden for the image only                                       |
+| Content scrolled to a heading sits under a fixed or sticky header                                                                               | after `scrollIntoView`, `window.scrollBy(0, -(headerHeight + margin))`, with the height read from the app's own header                          |
 
 ## Running it
 

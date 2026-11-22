@@ -8,14 +8,14 @@ Phase 1 is read-only. Everything below is a file read, a `git` query, or a grep 
 
 ## Inputs to read once, up front
 
-| Input | Used for |
-|---|---|
-| Root `package.json` | `framework`, `compiler`, `react`, `typescript`, `packageManager`, `existing.library` |
-| Lockfiles at root | `packageManager` |
-| `vite.config.*`, `next.config.*`, `tsconfig.json` | `framework`, `typescript` |
-| `manifest.json` → `catalogs[].detect` | `existing.library`, `existing.configured` |
-| `crowdin.yml` / `crowdin.yaml`, `.github/workflows/*` | `existing.crowdinYml`, `existing.workflow` |
-| Source tree under `sourceDir` | `candidateFiles`, `existing.stringsWrapped`, `localeSignals` |
+| Input                                                 | Used for                                                                             |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Root `package.json`                                   | `framework`, `compiler`, `react`, `typescript`, `packageManager`, `existing.library` |
+| Lockfiles at root                                     | `packageManager`                                                                     |
+| `vite.config.*`, `next.config.*`, `tsconfig.json`     | `framework`, `typescript`                                                            |
+| `manifest.json` → `catalogs[].detect`                 | `existing.library`, `existing.configured`                                            |
+| `crowdin.yml` / `crowdin.yaml`, `.github/workflows/*` | `existing.crowdinYml`, `existing.workflow`                                           |
+| Source tree under `sourceDir`                         | `candidateFiles`, `existing.stringsWrapped`, `localeSignals`                         |
 
 Throughout, **"in deps"** means present in `dependencies` or `devDependencies` of the root `package.json`. Merge the two before matching; the distinction never changes a detection outcome.
 
@@ -23,30 +23,30 @@ Throughout, **"in deps"** means present in `dependencies` or `devDependencies` o
 
 Every rule is first-match-wins in the order written.
 
-| Field | Rule |
-|---|---|
-| `language` | `"js-ts"` — this file was only reached because a root `package.json` exists. |
-| `framework` | `react-scripts` in deps → `"cra"`; else `next` in deps or a `next.config.*` at root → `"next"`; else `vite` in deps or a `vite.config.*` at root → `"vite"`; else `"unknown"`. Check `cra` first: it is the one value that ends the run. |
-| `compiler` | `@vitejs/plugin-react-swc` in deps → `"swc"`; else `@vitejs/plugin-react` in deps → `"babel"`; else `framework: "next"` → `"swc"` (Next 12+ compiles with SWC by default); else `null`. A Vite project with no React plugin, and any non-React project, is `null` — not `"babel"`. |
-| `react` | `react` in deps. |
-| `typescript` | `typescript` in deps, or a root `tsconfig.json` exists. |
-| `packageManager` | `packageManager` field in `package.json` → the name in it; else by lockfile: `pnpm-lock.yaml` → `"pnpm"`, `yarn.lock` → `"yarn"`, `bun.lockb` or `bun.lock` → `"bun"`, `package-lock.json` → `"npm"`; else `"npm"`. |
-| `sourceDir` | `"src"` when it exists; else `"app"` when it exists (Next app router without `src/`); else `"."`. |
-| `git` | `isRepo` from `git rev-parse --is-inside-work-tree`; `branch` from `git branch --show-current`; `remote` from `git remote get-url origin`, `null` when there is no remote. All three are informational — never gate a decision on them. |
-| `existing.crowdinYml` | `crowdin.yml` or `crowdin.yaml` exists at the repository root. A config nested in a subdirectory does not count; note it in the summary instead. |
-| `existing.workflow` | Any file under `.github/workflows/` whose contents mention `crowdin/github-action`. A workflow that only runs `crowdin` CLI commands directly counts too — record it as `true` and describe which it is. |
+| Field                 | Rule                                                                                                                                                                                                                                                                               |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `language`            | `"js-ts"` — this file was only reached because a root `package.json` exists.                                                                                                                                                                                                       |
+| `framework`           | `react-scripts` in deps → `"cra"`; else `next` in deps or a `next.config.*` at root → `"next"`; else `vite` in deps or a `vite.config.*` at root → `"vite"`; else `"unknown"`. Check `cra` first: it is the one value that ends the run.                                           |
+| `compiler`            | `@vitejs/plugin-react-swc` in deps → `"swc"`; else `@vitejs/plugin-react` in deps → `"babel"`; else `framework: "next"` → `"swc"` (Next 12+ compiles with SWC by default); else `null`. A Vite project with no React plugin, and any non-React project, is `null` — not `"babel"`. |
+| `react`               | `react` in deps.                                                                                                                                                                                                                                                                   |
+| `typescript`          | `typescript` in deps, or a root `tsconfig.json` exists.                                                                                                                                                                                                                            |
+| `packageManager`      | `packageManager` field in `package.json` → the name in it; else by lockfile: `pnpm-lock.yaml` → `"pnpm"`, `yarn.lock` → `"yarn"`, `bun.lockb` or `bun.lock` → `"bun"`, `package-lock.json` → `"npm"`; else `"npm"`.                                                                |
+| `sourceDir`           | `"src"` when it exists; else `"app"` when it exists (Next app router without `src/`); else `"."`.                                                                                                                                                                                  |
+| `git`                 | `isRepo` from `git rev-parse --is-inside-work-tree`; `branch` from `git branch --show-current`; `remote` from `git remote get-url origin`, `null` when there is no remote. All three are informational — never gate a decision on them.                                            |
+| `existing.crowdinYml` | `crowdin.yml` or `crowdin.yaml` exists at the repository root. A config nested in a subdirectory does not count; note it in the summary instead.                                                                                                                                   |
+| `existing.workflow`   | Any file under `.github/workflows/` whose contents mention `crowdin/github-action`. A workflow that only runs `crowdin` CLI commands directly counts too — record it as `true` and describe which it is.                                                                           |
 
 ## `existing.library`
 
 Match deps against the union of two sources: the library names below, and every `catalogs[].detect` block in `manifest.json` (each carries `deps` and `files`). The manifest is authoritative — when a catalog row is added there, this detection follows without an edit here.
 
-| Value | Signals |
-|---|---|
-| `"lingui"` | `@lingui/core` in deps, or `lingui.config.js` / `lingui.config.ts` at root |
-| `"next-intl"` | `next-intl` in deps |
-| `"vue-i18n"` | `vue-i18n` in deps |
-| `"i18next"` | `i18next` in deps (including via `react-i18next` or `next-i18next`) |
-| `"none"` | no signal above matched |
+| Value         | Signals                                                                    |
+| ------------- | -------------------------------------------------------------------------- |
+| `"lingui"`    | `@lingui/core` in deps, or `lingui.config.js` / `lingui.config.ts` at root |
+| `"next-intl"` | `next-intl` in deps                                                        |
+| `"vue-i18n"`  | `vue-i18n` in deps                                                         |
+| `"i18next"`   | `i18next` in deps (including via `react-i18next` or `next-i18next`)        |
+| `"none"`      | no signal above matched                                                    |
 
 If two libraries match, prefer the one whose catalog `source` path also has files on disk, and record the ambiguity in the detection summary — two i18n libraries in one project is a stop-and-ask for phase 2, not something to resolve silently.
 
@@ -56,13 +56,13 @@ If two libraries match, prefer the one whose catalog `source` path also has file
 
 `stringsWrapped` is a three-way judgement:
 
-| Value | Condition |
-|---|---|
-| `"no"` | `existing.library` is `"none"` — always, with no scanning. Also `"no"` when a library is present but zero call sites appear in the source tree. |
-| `"yes"` | Call sites are present and `candidateFiles` is empty or holds only skip-list residuals (SKUs, class names, keys). |
-| `"partial"` | Call sites are present and real candidate strings remain. |
+| Value       | Condition                                                                                                                                       |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"no"`      | `existing.library` is `"none"` — always, with no scanning. Also `"no"` when a library is present but zero call sites appear in the source tree. |
+| `"yes"`     | Call sites are present and `candidateFiles` is empty or holds only skip-list residuals (SKUs, class names, keys).                               |
+| `"partial"` | Call sites are present and real candidate strings remain.                                                                                       |
 
-Count call sites with a grep for the library's own entry points — `t\`` / `<Trans` / `i18n._(` for Lingui, `useTranslations(` / `getTranslations(` for next-intl, `$t(` / `useI18n(` for vue-i18n, `useTranslation(` / `t(` for i18next.
+Count call sites with a grep for the library's own entry points — `t\`` / `<Trans`/`i18n._(`for Lingui,`useTranslations(`/`getTranslations(`for next-intl,`$t(`/`useI18n(`for vue-i18n,`useTranslation(`/`t(` for i18next.
 
 ## `candidateFiles`
 
@@ -72,12 +72,12 @@ Scan `sourceDir` for `*.{js,jsx,ts,tsx,vue,svelte}`, excluding `node_modules/`, 
 
 Four match classes:
 
-| Class | Pattern shape | Example hit |
-|---|---|---|
-| JSX/template text | A text node between tags containing at least one letter and not purely an expression | `<h1>Track every brew you make</h1>` |
-| User-visible attributes | `placeholder=`, `aria-label=`, `title=`, `alt=`, `label=`, plus `content=` on meta tags | `placeholder="Search your brews…"` |
-| Display copy in data modules | A display-copy key assigned a string literal, in any exported object or array: `name`, `title`, `label`, `description`, `heading`, `subtitle`, `summary`, `message`, `text`, `tooltip`, `cta`, `error`, `body` | `name: 'Home barista'` in `src/data/plans.ts` |
-| String literals in copy helpers | Literal arguments to `toast(`, `alert(`, `confirm(`, `new Error(`, and similar user-facing helpers | `toast('Brew saved')` |
+| Class                           | Pattern shape                                                                                                                                                                                                  | Example hit                                   |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| JSX/template text               | A text node between tags containing at least one letter and not purely an expression                                                                                                                           | `<h1>Track every brew you make</h1>`          |
+| User-visible attributes         | `placeholder=`, `aria-label=`, `title=`, `alt=`, `label=`, plus `content=` on meta tags                                                                                                                        | `placeholder="Search your brews…"`            |
+| Display copy in data modules    | A display-copy key assigned a string literal, in any exported object or array: `name`, `title`, `label`, `description`, `heading`, `subtitle`, `summary`, `message`, `text`, `tooltip`, `cta`, `error`, `body` | `name: 'Home barista'` in `src/data/plans.ts` |
+| String literals in copy helpers | Literal arguments to `toast(`, `alert(`, `confirm(`, `new Error(`, and similar user-facing helpers                                                                                                             | `toast('Brew saved')`                         |
 
 The third class is the one that matters most, because it is where hand detection usually fails: copy lives in a plain `.ts` data module with no JSX anywhere in the file, so a JSX-only scan reports the file as clean. Match the key list against string literals regardless of quote style, including template literals.
 

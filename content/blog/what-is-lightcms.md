@@ -10,7 +10,7 @@ keywords:
   - Git based cms
   - markdown cms
   - visual editor for markdown
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -49,15 +49,15 @@ Step 4 creates a normal commit. If you stop using [LightCMS](https://lightcms.me
 
 There are several capable Git-based CMS options ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, Pages CMS), and [LightCMS](https://lightcms.me) takes a different approach in a few areas:
 
-| | [LightCMS](https://lightcms.me) |
-| :--- | :--- |
-| **Storage** | Your GitHub repository (Markdown + YAML front matter) |
-| **Editor** | TipTap-based WYSIWYG editor with math (KaTeX), code highlighting, tables, task lists, and media |
-| **AI** | Built-in copilot for outlines, rewrites, and grammar, using any OpenAI-compatible provider |
-| **Voice** | Whisper-powered dictation in the editor |
-| **Newsletters** | Publish Markdown and send updates with Newsy from GitHub |
-| **Hosting model** | Self-hosted, Apache 2.0 licensed, runs on any Node.js host |
-| **Lock-in** | None: your content stays in files you own |
+|                   | [LightCMS](https://lightcms.me)                                                                 |
+| :---------------- | :---------------------------------------------------------------------------------------------- |
+| **Storage**       | Your GitHub repository (Markdown + YAML front matter)                                           |
+| **Editor**        | TipTap-based WYSIWYG editor with math (KaTeX), code highlighting, tables, task lists, and media |
+| **AI**            | Built-in copilot for outlines, rewrites, and grammar, using any OpenAI-compatible provider      |
+| **Voice**         | Whisper-powered dictation in the editor                                                         |
+| **Newsletters**   | Publish Markdown and send updates with Newsy from GitHub                                        |
+| **Hosting model** | Self-hosted, Apache 2.0 licensed, runs on any Node.js host                                      |
+| **Lock-in**       | None: your content stays in files you own                                                       |
 
 [LightCMS](https://lightcms.me) covers drafting, editing, publishing, and newsletter distribution without adding a separate database.
 

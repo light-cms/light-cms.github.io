@@ -10,7 +10,7 @@ keywords:
   - best docs site generator
   - starlight documentation
   - documentation site framework
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - hugo
@@ -34,15 +34,15 @@ much of the docs experience you get out of the box.
 
 ## Out-of-the-Box Documentation Features
 
-| Feature | Hugo + docs theme | Astro Starlight |
-| :--- | :--- | :--- |
-| Auto sidebar navigation | Theme-dependent | Built in |
-| Full-text search | Add a service or theme feature | Pagefind, built in |
-| Versioned docs | Manual (multiple branches/sections) | Patterns via content collections |
-| MDX support | No (shortcodes instead) | Yes |
-| i18n | Theme-dependent | built in scaffolding |
-| Build speed | Sub-second (Go) | Fast (Vite-based) |
-| Custom UI components | Go templates | Any UI framework via islands |
+| Feature                 | Hugo + docs theme                   | Astro Starlight                  |
+| :---------------------- | :---------------------------------- | :------------------------------- |
+| Auto sidebar navigation | Theme-dependent                     | Built in                         |
+| Full-text search        | Add a service or theme feature      | Pagefind, built in               |
+| Versioned docs          | Manual (multiple branches/sections) | Patterns via content collections |
+| MDX support             | No (shortcodes instead)             | Yes                              |
+| i18n                    | Theme-dependent                     | built in scaffolding             |
+| Build speed             | Sub-second (Go)                     | Fast (Vite-based)                |
+| Custom UI components    | Go templates                        | Any UI framework via islands     |
 
 ## Where Hugo Wins
 

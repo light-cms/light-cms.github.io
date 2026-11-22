@@ -10,7 +10,7 @@ keywords:
   - vercel or netlify for react
   - jamstack hosting comparison
   - vercel pricing vs netlify
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - hosting
@@ -31,13 +31,13 @@ Vercel vs Netlify is the longest running debate in Jamstack hosting: the two pla
 
 ## Free Tiers and Limits
 
-| | Vercel Hobby | Netlify Free |
-| :--- | :--- | :--- |
-| Static bandwidth | Generous, metered | Generous, metered |
-| Serverless functions | Included (metered) | Included (metered) |
-| Build minutes | Metered | Metered |
-| Preview deployments | Yes | Yes |
-| Commercial use | Restricted on hobby tier | Allowed on free tier |
+|                      | Vercel Hobby             | Netlify Free         |
+| :------------------- | :----------------------- | :------------------- |
+| Static bandwidth     | Generous, metered        | Generous, metered    |
+| Serverless functions | Included (metered)       | Included (metered)   |
+| Build minutes        | Metered                  | Metered              |
+| Preview deployments  | Yes                      | Yes                  |
+| Commercial use       | Restricted on hobby tier | Allowed on free tier |
 
 Read the fine print on both: Vercel's hobby tier restricts commercial usage, while Netlify's free tier permits it, which is a real differentiator for side projects that earn money.
 

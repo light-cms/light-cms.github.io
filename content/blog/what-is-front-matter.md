@@ -10,7 +10,7 @@ keywords:
   - yaml front matter
   - static site metadata
   - markdown metadata
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - markdown
@@ -19,7 +19,7 @@ taxonomies:
     - cms
 ---
 
-**Front matter** is the block of metadata at the top of a content file, fenced off from the article itself. It is where a Markdown file declares what it *is* (title, date, tags, author, draft status), so that your site generator can render, sort, and filter it.
+**Front matter** is the block of metadata at the top of a content file, fenced off from the article itself. It is where a Markdown file declares what it _is_ (title, date, tags, author, draft status), so that your site generator can render, sort, and filter it.
 
 If Markdown is the body of a post, front matter is its label.
 
@@ -39,7 +39,7 @@ tags:
 keywords:
   - static site generators
   - ssg comparison
-preview: /og-image.webp
+
 ---
 
 The article body starts here, after the closing `---`.
@@ -57,16 +57,16 @@ Three things are worth noticing:
 
 Each field drives a concrete behavior in the build:
 
-| Field | Effect |
-| :--- | :--- |
-| `title` | Page `<title>`, headings, and lists |
-| `description` | Meta description, cards, list summaries |
-| `date` | Sorting, "published on" display, feeds |
-| `tags` / `categories` | Taxonomy pages and cross-linking |
-| `draft` | Excluded from the build when `true` |
-| `slug` | Overrides the URL derived from the filename |
-| `template` | Chooses which layout renders the page |
-| `weight` | Manual ordering within a section |
+| Field                 | Effect                                      |
+| :-------------------- | :------------------------------------------ |
+| `title`               | Page `<title>`, headings, and lists         |
+| `description`         | Meta description, cards, list summaries     |
+| `date`                | Sorting, "published on" display, feeds      |
+| `tags` / `categories` | Taxonomy pages and cross-linking            |
+| `draft`               | Excluded from the build when `true`         |
+| `slug`                | Overrides the URL derived from the filename |
+| `template`            | Chooses which layout renders the page       |
+| `weight`              | Manual ordering within a section            |
 
 This is why a typo in front matter can break a build: `date: 2026-13-45` or a stray tab under `tags:` is invalid YAML, and the generator fails before it writes a single page.
 

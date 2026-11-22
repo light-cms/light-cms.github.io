@@ -36,7 +36,7 @@ Read the existing glossary before mining: a term already in it is not a candidat
 
 A term qualifies when a translator, seeing it in one string with no other context, could reasonably get it wrong. In practice that is four kinds:
 
-- **Product and feature names.** Brand, plan, module and other named surfaces of the user's own product - usually the entries that say *do not translate this*. The most valuable kind and the one most often missing.
+- **Product and feature names.** Brand, plan, module and other named surfaces of the user's own product - usually the entries that say _do not translate this_. The most valuable kind and the one most often missing.
 - **Domain vocabulary the content leans on.** Words with a specific meaning in this product's world, particularly ones that recur.
 - **Words that are ambiguous out of context.** English noun/verb pairs are the classic case: on its own, a `Log` label could be a record or an action.
 - **Objects that must stay distinct.** When the content separates two similar things, translating both with one word collapses a distinction it depends on.

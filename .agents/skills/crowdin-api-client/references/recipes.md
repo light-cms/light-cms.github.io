@@ -31,36 +31,47 @@ Short multi-step flows that recur in Crowdin integrations, written against `@cro
 ## Helpers: wait, save, chunk
 
 ```ts
-import { writeFile } from 'node:fs/promises';
+import { writeFile } from "node:fs/promises";
 
-interface Trackable { status: string; progress: number }
+interface Trackable {
+	status: string;
+	progress: number;
+}
 
 /** Polls `check` until the operation reaches a terminal status; throws on failure or timeout. */
 export async function waitFor<T extends Trackable>(
-  check: () => Promise<{ data: T }>,
-  { done = ['finished'], failed = ['failed', 'canceled'], intervalMs = 2_000, timeoutMs = 30 * 60_000 } = {},
+	check: () => Promise<{ data: T }>,
+	{
+		done = ["finished"],
+		failed = ["failed", "canceled"],
+		intervalMs = 2_000,
+		timeoutMs = 30 * 60_000,
+	} = {},
 ): Promise<T> {
-  const deadline = Date.now() + timeoutMs;
-  for (;;) {
-    const { data } = await check();
-    if (done.includes(data.status)) return data;
-    if (failed.includes(data.status)) throw new Error(`Crowdin operation ${data.status}`);
-    if (Date.now() >= deadline) throw new Error('Timed out waiting for Crowdin operation');
-    await new Promise((resolve) => setTimeout(resolve, intervalMs));
-  }
+	const deadline = Date.now() + timeoutMs;
+	for (;;) {
+		const { data } = await check();
+		if (done.includes(data.status)) return data;
+		if (failed.includes(data.status))
+			throw new Error(`Crowdin operation ${data.status}`);
+		if (Date.now() >= deadline)
+			throw new Error("Timed out waiting for Crowdin operation");
+		await new Promise((resolve) => setTimeout(resolve, intervalMs));
+	}
 }
 
 /** Download links expire; fetch them right away. */
 export async function saveUrl(url: string, path: string): Promise<void> {
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`Download failed: HTTP ${response.status}`);
-  await writeFile(path, Buffer.from(await response.arrayBuffer()));
+	const response = await fetch(url);
+	if (!response.ok) throw new Error(`Download failed: HTTP ${response.status}`);
+	await writeFile(path, Buffer.from(await response.arrayBuffer()));
 }
 
 export function chunk<T>(items: T[], size: number): T[][] {
-  const out: T[][] = [];
-  for (let i = 0; i < items.length; i += size) out.push(items.slice(i, i + size));
-  return out;
+	const out: T[][] = [];
+	for (let i = 0; i < items.length; i += size)
+		out.push(items.slice(i, i + size));
+	return out;
 }
 ```
 
@@ -77,25 +88,36 @@ const { uploadStorageApi, sourceFilesApi } = client;
 
 /** Creates the file when nothing lives at `crowdinPath` yet, otherwise replaces its content and keeps translations. */
 export async function upsertSourceFile(
-  projectId: number,
-  crowdinPath: string, // e.g. '/locales/en.json'; Crowdin paths start with '/'
-  localPath: string,
-  directoryId?: number,
+	projectId: number,
+	crowdinPath: string, // e.g. '/locales/en.json'; Crowdin paths start with '/'
+	localPath: string,
+	directoryId?: number,
 ): Promise<number> {
-  const name = basename(crowdinPath);
-  const files = await sourceFilesApi.withFetchAll().listProjectFiles(projectId, { directoryId, filter: name });
-  const existing = files.data.map((f) => f.data).find((f) => f.path === crowdinPath);
+	const name = basename(crowdinPath);
+	const files = await sourceFilesApi
+		.withFetchAll()
+		.listProjectFiles(projectId, { directoryId, filter: name });
+	const existing = files.data
+		.map((f) => f.data)
+		.find((f) => f.path === crowdinPath);
 
-  const storage = await uploadStorageApi.addStorage(name, await readFile(localPath));
-  if (existing) {
-    await sourceFilesApi.updateOrRestoreFile(projectId, existing.id, {
-      storageId: storage.data.id,
-      updateOption: 'keep_translations_and_approvals',
-    });
-    return existing.id;
-  }
-  const created = await sourceFilesApi.createFile(projectId, { storageId: storage.data.id, name, directoryId });
-  return created.data.id;
+	const storage = await uploadStorageApi.addStorage(
+		name,
+		await readFile(localPath),
+	);
+	if (existing) {
+		await sourceFilesApi.updateOrRestoreFile(projectId, existing.id, {
+			storageId: storage.data.id,
+			updateOption: "keep_translations_and_approvals",
+		});
+		return existing.id;
+	}
+	const created = await sourceFilesApi.createFile(projectId, {
+		storageId: storage.data.id,
+		name,
+		directoryId,
+	});
+	return created.data.id;
 }
 ```
 
@@ -113,23 +135,53 @@ export async function upsertSourceFile(
 const { translationsApi } = client;
 
 /** Whole project (optionally some languages): build, wait, download the archive. */
-export async function downloadProjectTranslations(projectId: number, target: string, languageIds?: string[]): Promise<void> {
-  const build = await translationsApi.buildProject(projectId, { targetLanguageIds: languageIds, skipUntranslatedStrings: true });
-  await waitFor(() => translationsApi.checkBuildStatus(projectId, build.data.id));
-  const link = await translationsApi.downloadTranslations(projectId, build.data.id);
-  await saveUrl(link.data.url, target);
+export async function downloadProjectTranslations(
+	projectId: number,
+	target: string,
+	languageIds?: string[],
+): Promise<void> {
+	const build = await translationsApi.buildProject(projectId, {
+		targetLanguageIds: languageIds,
+		skipUntranslatedStrings: true,
+	});
+	await waitFor(() =>
+		translationsApi.checkBuildStatus(projectId, build.data.id),
+	);
+	const link = await translationsApi.downloadTranslations(
+		projectId,
+		build.data.id,
+	);
+	await saveUrl(link.data.url, target);
 }
 
 /** One file in one language: synchronous, nothing to poll. */
-export async function downloadFileTranslation(projectId: number, fileId: number, languageId: string, target: string): Promise<void> {
-  const link = await translationsApi.buildProjectFileTranslation(projectId, fileId, { targetLanguageId: languageId });
-  await saveUrl(link.data.url, target);
+export async function downloadFileTranslation(
+	projectId: number,
+	fileId: number,
+	languageId: string,
+	target: string,
+): Promise<void> {
+	const link = await translationsApi.buildProjectFileTranslation(
+		projectId,
+		fileId,
+		{ targetLanguageId: languageId },
+	);
+	await saveUrl(link.data.url, target);
 }
 
 /** A slice of the project (files, directories, branches or labels) in one language, also synchronous. */
-export async function exportLabeledStrings(projectId: number, languageId: string, labelIds: number[], target: string): Promise<void> {
-  const link = await translationsApi.exportProjectTranslation(projectId, { targetLanguageId: languageId, labelIds, format: 'xliff' });
-  await saveUrl(link.data.url, target);
+export async function exportLabeledStrings(
+	projectId: number,
+	languageId: string,
+	labelIds: number[],
+	target: string,
+): Promise<void> {
+	const link = await translationsApi.exportProjectTranslation(projectId, {
+		targetLanguageId: languageId,
+		labelIds,
+		format: "xliff",
+	});
+	await saveUrl(link.data.url, target);
 }
 ```
 
@@ -148,16 +200,28 @@ export async function exportLabeledStrings(projectId: number, languageId: string
 const { translationsApi } = client;
 
 export async function preTranslate(
-  projectId: number,
-  fileIds: number[],
-  languageIds: string[],
-  request: Pick<TranslationsModel.PreTranslateRequest, 'method' | 'engineId' | 'aiPromptId' | 'autoApproveOption'> = { method: 'tm' },
+	projectId: number,
+	fileIds: number[],
+	languageIds: string[],
+	request: Pick<
+		TranslationsModel.PreTranslateRequest,
+		"method" | "engineId" | "aiPromptId" | "autoApproveOption"
+	> = { method: "tm" },
 ): Promise<TranslationsModel.PreTranslationReport> {
-  // method 'mt' needs engineId, method 'ai' needs aiPromptId; string-based projects pass branchIds instead of fileIds
-  const op = await translationsApi.applyPreTranslation(projectId, { languageIds, fileIds, ...request });
-  await waitFor(() => translationsApi.preTranslationStatus(projectId, op.data.identifier));
-  const report = await translationsApi.getPreTranslationReport(projectId, op.data.identifier);
-  return report.data;
+	// method 'mt' needs engineId, method 'ai' needs aiPromptId; string-based projects pass branchIds instead of fileIds
+	const op = await translationsApi.applyPreTranslation(projectId, {
+		languageIds,
+		fileIds,
+		...request,
+	});
+	await waitFor(() =>
+		translationsApi.preTranslationStatus(projectId, op.data.identifier),
+	);
+	const report = await translationsApi.getPreTranslationReport(
+		projectId,
+		op.data.identifier,
+	);
+	return report.data;
 }
 ```
 
@@ -174,26 +238,43 @@ export async function preTranslate(
 const { sourceStringsApi, labelsApi, tasksApi } = client;
 
 /** Filter strings with CroQL, put them under one label, open a proofreading task for that label. */
-export async function labelAndAssign(projectId: number, croql: string, labelTitle: string, languageId: string): Promise<number> {
-  const strings = (await sourceStringsApi.withFetchAll().listProjectStrings(projectId, { croql })).data.map((s) => s.data);
-  if (strings.length === 0) throw new Error('The CroQL filter matched no strings');
+export async function labelAndAssign(
+	projectId: number,
+	croql: string,
+	labelTitle: string,
+	languageId: string,
+): Promise<number> {
+	const strings = (
+		await sourceStringsApi
+			.withFetchAll()
+			.listProjectStrings(projectId, { croql })
+	).data.map((s) => s.data);
+	if (strings.length === 0)
+		throw new Error("The CroQL filter matched no strings");
 
-  const labels = (await labelsApi.withFetchAll().listLabels(projectId)).data.map((l) => l.data);
-  const label = labels.find((l) => l.title === labelTitle) ?? (await labelsApi.addLabel(projectId, { title: labelTitle })).data;
+	const labels = (
+		await labelsApi.withFetchAll().listLabels(projectId)
+	).data.map((l) => l.data);
+	const label =
+		labels.find((l) => l.title === labelTitle) ??
+		(await labelsApi.addLabel(projectId, { title: labelTitle })).data;
 
-  for (const stringIds of chunk(strings.map((s) => s.id), 500)) {
-    await labelsApi.assignLabelToString(projectId, label.id, { stringIds }); // 500 strings per call
-  }
+	for (const stringIds of chunk(
+		strings.map((s) => s.id),
+		500,
+	)) {
+		await labelsApi.assignLabelToString(projectId, label.id, { stringIds }); // 500 strings per call
+	}
 
-  const request: TasksModel.CreateTaskRequest = {
-    type: TasksModel.Type.PROOFREAD,
-    title: `Proofread: ${labelTitle}`,
-    languageId,
-    fileIds: [...new Set(strings.map((s) => s.fileId))], // a task always scopes to files, branches or string ids
-    labelIds: [label.id], // ...and the label narrows it to the matched strings
-  };
-  const task = await tasksApi.addTask(projectId, request);
-  return task.data.id;
+	const request: TasksModel.CreateTaskRequest = {
+		type: TasksModel.Type.PROOFREAD,
+		title: `Proofread: ${labelTitle}`,
+		languageId,
+		fileIds: [...new Set(strings.map((s) => s.fileId))], // a task always scopes to files, branches or string ids
+		labelIds: [label.id], // ...and the label narrows it to the matched strings
+	};
+	const task = await tasksApi.addTask(projectId, request);
+	return task.data.id;
 }
 ```
 
@@ -211,15 +292,22 @@ export async function labelAndAssign(projectId: number, croql: string, labelTitl
 const { sourceStringsApi } = client;
 
 /** Rewrites context (or text) on many strings without dropping their translations. */
-export async function setStringContext(projectId: number, contextByStringId: Map<number, string>): Promise<void> {
-  const patches: PatchRequest[] = [...contextByStringId].map(([id, context]) => ({
-    op: 'replace',
-    path: `/${id}/context`, // '/<stringId>/text', '/<stringId>/isHidden', '/<stringId>/maxLength' work the same way
-    value: context,
-  }));
-  for (const batch of chunk(patches, 200)) {
-    await sourceStringsApi.stringBatchOperations(projectId, batch, { updateOption: 'keep_translations_and_approvals' });
-  }
+export async function setStringContext(
+	projectId: number,
+	contextByStringId: Map<number, string>,
+): Promise<void> {
+	const patches: PatchRequest[] = [...contextByStringId].map(
+		([id, context]) => ({
+			op: "replace",
+			path: `/${id}/context`, // '/<stringId>/text', '/<stringId>/isHidden', '/<stringId>/maxLength' work the same way
+			value: context,
+		}),
+	);
+	for (const batch of chunk(patches, 200)) {
+		await sourceStringsApi.stringBatchOperations(projectId, batch, {
+			updateOption: "keep_translations_and_approvals",
+		});
+	}
 }
 ```
 
@@ -236,15 +324,23 @@ export async function setStringContext(projectId: number, contextByStringId: Map
 const { uploadStorageApi, translationsApi } = client;
 
 /** Pushes a translated file for one language; the file must match the source file's format. */
-export async function uploadTranslationFile(projectId: number, fileId: number, languageId: string, localPath: string): Promise<void> {
-  const storage = await uploadStorageApi.addStorage(basename(localPath), await readFile(localPath));
-  await translationsApi.uploadTranslation(projectId, languageId, {
-    storageId: storage.data.id,
-    fileId,
-    importEqSuggestions: false, // skip translations identical to the source
-    autoApproveImported: false,
-    addToTm: true,
-  });
+export async function uploadTranslationFile(
+	projectId: number,
+	fileId: number,
+	languageId: string,
+	localPath: string,
+): Promise<void> {
+	const storage = await uploadStorageApi.addStorage(
+		basename(localPath),
+		await readFile(localPath),
+	);
+	await translationsApi.uploadTranslation(projectId, languageId, {
+		storageId: storage.data.id,
+		fileId,
+		importEqSuggestions: false, // skip translations identical to the source
+		autoApproveImported: false,
+		addToTm: true,
+	});
 }
 ```
 
@@ -262,15 +358,24 @@ export async function uploadTranslationFile(projectId: number, fileId: number, l
 const { projectsGroupsApi, translationStatusApi } = client;
 
 /** Every project the token can see, least complete first. Sequential on purpose: one progress call per project. */
-export async function progressAcrossProjects(): Promise<Array<{ name: string; percent: number }>> {
-  const projects = (await projectsGroupsApi.withFetchAll().listProjects()).data.map((p) => p.data);
-  const rows: Array<{ name: string; percent: number }> = [];
-  for (const project of projects) {
-    const languages = (await translationStatusApi.withFetchAll().getProjectProgress(project.id)).data.map((l) => l.data);
-    const percent = languages.length ? languages.reduce((sum, l) => sum + l.translationProgress, 0) / languages.length : 100;
-    rows.push({ name: project.name, percent: Math.round(percent) });
-  }
-  return rows.sort((a, b) => a.percent - b.percent);
+export async function progressAcrossProjects(): Promise<
+	Array<{ name: string; percent: number }>
+> {
+	const projects = (
+		await projectsGroupsApi.withFetchAll().listProjects()
+	).data.map((p) => p.data);
+	const rows: Array<{ name: string; percent: number }> = [];
+	for (const project of projects) {
+		const languages = (
+			await translationStatusApi.withFetchAll().getProjectProgress(project.id)
+		).data.map((l) => l.data);
+		const percent = languages.length
+			? languages.reduce((sum, l) => sum + l.translationProgress, 0) /
+				languages.length
+			: 100;
+		rows.push({ name: project.name, percent: Math.round(percent) });
+	}
+	return rows.sort((a, b) => a.percent - b.percent);
 }
 ```
 
@@ -287,31 +392,67 @@ export async function progressAcrossProjects(): Promise<Array<{ name: string; pe
 const { uploadStorageApi, translationMemoryApi, glossariesApi } = client;
 
 /** CSV/XLSX need a scheme mapping columns to languages, e.g. { en: 0, de: 1 }; TMX needs none. */
-export async function importTm(tmId: number, localPath: string, scheme?: TranslationMemoryModel.Scheme): Promise<void> {
-  const storage = await uploadStorageApi.addStorage(basename(localPath), await readFile(localPath));
-  const op = await translationMemoryApi.importTm(tmId, { storageId: storage.data.id, scheme, firstLineContainsHeader: true });
-  await waitFor(() => translationMemoryApi.checkImportStatus(tmId, op.data.identifier));
+export async function importTm(
+	tmId: number,
+	localPath: string,
+	scheme?: TranslationMemoryModel.Scheme,
+): Promise<void> {
+	const storage = await uploadStorageApi.addStorage(
+		basename(localPath),
+		await readFile(localPath),
+	);
+	const op = await translationMemoryApi.importTm(tmId, {
+		storageId: storage.data.id,
+		scheme,
+		firstLineContainsHeader: true,
+	});
+	await waitFor(() =>
+		translationMemoryApi.checkImportStatus(tmId, op.data.identifier),
+	);
 }
 
 export async function exportTm(tmId: number, target: string): Promise<void> {
-  const op = await translationMemoryApi.exportTm(tmId, { format: 'tmx' });
-  await waitFor(() => translationMemoryApi.checkExportStatus(tmId, op.data.identifier));
-  const link = await translationMemoryApi.downloadTm(tmId, op.data.identifier);
-  await saveUrl(link.data.url, target);
+	const op = await translationMemoryApi.exportTm(tmId, { format: "tmx" });
+	await waitFor(() =>
+		translationMemoryApi.checkExportStatus(tmId, op.data.identifier),
+	);
+	const link = await translationMemoryApi.downloadTm(tmId, op.data.identifier);
+	await saveUrl(link.data.url, target);
 }
 
 /** Scheme keys follow the glossary CSV header convention, e.g. { term_en: 0, description_en: 1, term_de: 2 }. */
-export async function importGlossary(glossaryId: number, localPath: string, scheme?: GlossariesModel.GlossaryFileScheme): Promise<void> {
-  const storage = await uploadStorageApi.addStorage(basename(localPath), await readFile(localPath));
-  const op = await glossariesApi.importGlossaryFile(glossaryId, { storageId: storage.data.id, scheme, firstLineContainsHeader: true });
-  await waitFor(() => glossariesApi.checkGlossaryImportStatus(glossaryId, op.data.identifier));
+export async function importGlossary(
+	glossaryId: number,
+	localPath: string,
+	scheme?: GlossariesModel.GlossaryFileScheme,
+): Promise<void> {
+	const storage = await uploadStorageApi.addStorage(
+		basename(localPath),
+		await readFile(localPath),
+	);
+	const op = await glossariesApi.importGlossaryFile(glossaryId, {
+		storageId: storage.data.id,
+		scheme,
+		firstLineContainsHeader: true,
+	});
+	await waitFor(() =>
+		glossariesApi.checkGlossaryImportStatus(glossaryId, op.data.identifier),
+	);
 }
 
-export async function exportGlossary(glossaryId: number, target: string): Promise<void> {
-  const op = await glossariesApi.exportGlossary(glossaryId, { format: 'csv' });
-  await waitFor(() => glossariesApi.checkGlossaryExportStatus(glossaryId, op.data.identifier));
-  const link = await glossariesApi.downloadGlossary(glossaryId, op.data.identifier);
-  await saveUrl(link.data.url, target);
+export async function exportGlossary(
+	glossaryId: number,
+	target: string,
+): Promise<void> {
+	const op = await glossariesApi.exportGlossary(glossaryId, { format: "csv" });
+	await waitFor(() =>
+		glossariesApi.checkGlossaryExportStatus(glossaryId, op.data.identifier),
+	);
+	const link = await glossariesApi.downloadGlossary(
+		glossaryId,
+		op.data.identifier,
+	);
+	await saveUrl(link.data.url, target);
 }
 ```
 
@@ -329,16 +470,21 @@ export async function exportGlossary(glossaryId: number, target: string): Promis
 const { translationStatusApi } = client;
 
 /** Counts open QA issues per language and category, e.g. 'de spellcheck' -> 42. */
-export async function qaIssueCounts(projectId: number, languageIds: string[]): Promise<Map<string, number>> {
-  const issues = (
-    await translationStatusApi.withFetchAll().listQaCheckIssues(projectId, { languageIds: languageIds.join(',') })
-  ).data.map((i) => i.data);
-  const counts = new Map<string, number>();
-  for (const issue of issues) {
-    const key = `${issue.languageId} ${issue.category}`;
-    counts.set(key, (counts.get(key) ?? 0) + 1);
-  }
-  return counts;
+export async function qaIssueCounts(
+	projectId: number,
+	languageIds: string[],
+): Promise<Map<string, number>> {
+	const issues = (
+		await translationStatusApi
+			.withFetchAll()
+			.listQaCheckIssues(projectId, { languageIds: languageIds.join(",") })
+	).data.map((i) => i.data);
+	const counts = new Map<string, number>();
+	for (const issue of issues) {
+		const key = `${issue.languageId} ${issue.category}`;
+		counts.set(key, (counts.get(key) ?? 0) + 1);
+	}
+	return counts;
 }
 ```
 
@@ -355,15 +501,35 @@ export async function qaIssueCounts(projectId: number, languageIds: string[]): P
 const { uploadStorageApi, screenshotsApi } = client;
 
 /** Uploads a screenshot and lets Crowdin tag the strings it recognizes; scope recognition to a file when you know it. */
-export async function uploadScreenshot(projectId: number, localPath: string, fileId?: number): Promise<number> {
-  const storage = await uploadStorageApi.addStorage(basename(localPath), await readFile(localPath), 'image/png');
-  const screenshot = await screenshotsApi.addScreenshot(projectId, { storageId: storage.data.id, name: basename(localPath), autoTag: true, fileId });
-  return screenshot.data.id;
+export async function uploadScreenshot(
+	projectId: number,
+	localPath: string,
+	fileId?: number,
+): Promise<number> {
+	const storage = await uploadStorageApi.addStorage(
+		basename(localPath),
+		await readFile(localPath),
+		"image/png",
+	);
+	const screenshot = await screenshotsApi.addScreenshot(projectId, {
+		storageId: storage.data.id,
+		name: basename(localPath),
+		autoTag: true,
+		fileId,
+	});
+	return screenshot.data.id;
 }
 
 /** Manual tagging when you know where the string is rendered. */
-export async function tagString(projectId: number, screenshotId: number, stringId: number, position: ScreenshotsModel.Position): Promise<void> {
-  await screenshotsApi.addTag(projectId, screenshotId, [{ stringId, position }]);
+export async function tagString(
+	projectId: number,
+	screenshotId: number,
+	stringId: number,
+	position: ScreenshotsModel.Position,
+): Promise<void> {
+	await screenshotsApi.addTag(projectId, screenshotId, [
+		{ stringId, position },
+	]);
 }
 ```
 
@@ -380,21 +546,42 @@ export async function tagString(projectId: number, screenshotId: number, stringI
 const { distributionsApi, bundlesApi } = client;
 
 /** Publishes the current translations to a distribution's CDN manifest. */
-export async function releaseDistribution(projectId: number, name: string): Promise<string> {
-  const distributions = (await distributionsApi.withFetchAll().listDistributions(projectId)).data.map((d) => d.data);
-  const distribution = distributions.find((d) => d.name === name);
-  if (!distribution) throw new Error(`No distribution named ${name}`);
-  await distributionsApi.createDistributionRelease(projectId, distribution.hash);
-  await waitFor(() => distributionsApi.getDistributionRelease(projectId, distribution.hash), { done: ['success'] });
-  return distribution.manifestUrl;
+export async function releaseDistribution(
+	projectId: number,
+	name: string,
+): Promise<string> {
+	const distributions = (
+		await distributionsApi.withFetchAll().listDistributions(projectId)
+	).data.map((d) => d.data);
+	const distribution = distributions.find((d) => d.name === name);
+	if (!distribution) throw new Error(`No distribution named ${name}`);
+	await distributionsApi.createDistributionRelease(
+		projectId,
+		distribution.hash,
+	);
+	await waitFor(
+		() => distributionsApi.getDistributionRelease(projectId, distribution.hash),
+		{ done: ["success"] },
+	);
+	return distribution.manifestUrl;
 }
 
 /** A bundle export is the API twin of "Download bundle" in the project's Translations tab. */
-export async function exportBundle(projectId: number, bundleId: number, target: string): Promise<void> {
-  const op = await bundlesApi.exportBundle(projectId, bundleId);
-  await waitFor(() => bundlesApi.checkBundleExportStatus(projectId, bundleId, op.data.identifier));
-  const link = await bundlesApi.downloadBundle(projectId, bundleId, op.data.identifier);
-  await saveUrl(link.data.url, target);
+export async function exportBundle(
+	projectId: number,
+	bundleId: number,
+	target: string,
+): Promise<void> {
+	const op = await bundlesApi.exportBundle(projectId, bundleId);
+	await waitFor(() =>
+		bundlesApi.checkBundleExportStatus(projectId, bundleId, op.data.identifier),
+	);
+	const link = await bundlesApi.downloadBundle(
+		projectId,
+		bundleId,
+		op.data.identifier,
+	);
+	await saveUrl(link.data.url, target);
 }
 ```
 
@@ -411,15 +598,22 @@ export async function exportBundle(projectId: number, bundleId: number, target: 
 const { reportsApi } = client;
 
 /** Any report follows this shape; only `name` and `schema` change. */
-export async function topMembersReport(projectId: number, dateFrom: string, dateTo: string, target: string): Promise<void> {
-  const request: ReportsModel.GenerateReportRequest = {
-    name: 'top-members',
-    schema: { unit: 'words', format: 'csv', dateFrom, dateTo },
-  };
-  const op = await reportsApi.generateReport(projectId, request);
-  await waitFor(() => reportsApi.checkReportStatus(projectId, op.data.identifier));
-  const link = await reportsApi.downloadReport(projectId, op.data.identifier);
-  await saveUrl(link.data.url, target);
+export async function topMembersReport(
+	projectId: number,
+	dateFrom: string,
+	dateTo: string,
+	target: string,
+): Promise<void> {
+	const request: ReportsModel.GenerateReportRequest = {
+		name: "top-members",
+		schema: { unit: "words", format: "csv", dateFrom, dateTo },
+	};
+	const op = await reportsApi.generateReport(projectId, request);
+	await waitFor(() =>
+		reportsApi.checkReportStatus(projectId, op.data.identifier),
+	);
+	const link = await reportsApi.downloadReport(projectId, op.data.identifier);
+	await saveUrl(link.data.url, target);
 }
 ```
 

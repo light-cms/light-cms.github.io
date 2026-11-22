@@ -10,7 +10,7 @@ keywords:
   - markdown blog
   - static site blog
   - best way to start a blog 2026
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - blogging
@@ -80,12 +80,12 @@ The work that compounds:
 
 ## What It Costs
 
-| Item | Cost |
-| :--- | :--- |
-| Static site generator | Free (open source) |
-| Hosting (Cloudflare Pages, GitHub Pages) | Free tier |
-| Git based CMS (LightCMS, self-hosted) | Free (Apache 2.0) |
-| Custom domain | ~$10–15 / year (optional) |
+| Item                                     | Cost                      |
+| :--------------------------------------- | :------------------------ |
+| Static site generator                    | Free (open source)        |
+| Hosting (Cloudflare Pages, GitHub Pages) | Free tier                 |
+| Git based CMS (LightCMS, self-hosted)    | Free (Apache 2.0)         |
+| Custom domain                            | ~$10–15 / year (optional) |
 
 You can run a serious publication for the price of a domain name.
 

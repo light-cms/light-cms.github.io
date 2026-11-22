@@ -25,8 +25,8 @@ The two directions have different rhythms: sources should reach Crowdin as soon 
 ```yaml
 on:
   push:
-    branches: [ main ]
-    paths: [ 'src/locales/en/**' ]
+    branches: [main]
+    paths: ["src/locales/en/**"]
 
 jobs:
   upload:
@@ -48,7 +48,7 @@ jobs:
 ```yaml
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -62,10 +62,10 @@ jobs:
       - uses: actions/checkout@v7
       - uses: crowdin/github-action@v3
         with:
-          upload_sources: false          # the default is true
+          upload_sources: false # the default is true
           download_translations: true
           localization_branch_name: l10n_crowdin
-          pull_request_title: 'New Crowdin translations'
+          pull_request_title: "New Crowdin translations"
           pull_request_base_branch_name: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -81,7 +81,7 @@ For a project with one source file and one translation pattern, the patterns can
 - uses: crowdin/github-action@v3
   with:
     upload_sources: true
-    source: src/locale/en.json                  # no leading /
+    source: src/locale/en.json # no leading /
     translation: src/locale/%android_code%.json
   env:
     CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
@@ -107,27 +107,27 @@ Pick one or the other: a `crowdin.yml` in the repository conflicts with these in
 The fix for "the translation PR has no CI checks": an App token is scoped, rotates itself, and — unlike the default `GITHUB_TOKEN` — its pull requests trigger workflows. Create an App with **Contents** and **Pull requests** write permissions, install it on the repository, then store the App ID as a variable and the private key as a secret.
 
 ```yaml
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          persist-credentials: false      # required, see below
+steps:
+  - uses: actions/checkout@v7
+    with:
+      persist-credentials: false # required, see below
 
-      - uses: actions/create-github-app-token@v3
-        id: app-token
-        with:
-          app-id: ${{ vars.CROWDIN_APP_ID }}
-          private-key: ${{ secrets.CROWDIN_APP_PRIVATE_KEY }}
-          permission-contents: write
-          permission-pull-requests: write
+  - uses: actions/create-github-app-token@v3
+    id: app-token
+    with:
+      app-id: ${{ vars.CROWDIN_APP_ID }}
+      private-key: ${{ secrets.CROWDIN_APP_PRIVATE_KEY }}
+      permission-contents: write
+      permission-pull-requests: write
 
-      - uses: crowdin/github-action@v3
-        with:
-          upload_sources: false
-          download_translations: true
-        env:
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+  - uses: crowdin/github-action@v3
+    with:
+      upload_sources: false
+      download_translations: true
+    env:
+      GH_TOKEN: ${{ steps.app-token.outputs.token }}
+      CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+      CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 ```
 
 `persist-credentials: false` is not optional: otherwise the default `GITHUB_TOKEN` that `actions/checkout` cached in `.git/config` takes precedence over `GH_TOKEN`, and the PR is created as the Actions bot anyway.
@@ -139,22 +139,22 @@ A classic PAT with the `repo` scope works too — pass it as `GITHUB_TOKEN` — 
 Turn off the git half when translations need post-processing — reformatting, a lint pass, regenerating a compiled locale bundle — before they are committed. The files land in the workspace and are yours to handle.
 
 ```yaml
-      - uses: crowdin/github-action@v3
-        with:
-          upload_sources: false
-          download_translations: true
-          push_translations: false
-          create_pull_request: false
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+- uses: crowdin/github-action@v3
+  with:
+    upload_sources: false
+    download_translations: true
+    push_translations: false
+    create_pull_request: false
+  env:
+    CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+    CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
-      - run: npm run i18n:format
+- run: npm run i18n:format
 
-      - uses: peter-evans/create-pull-request@v8
-        with:
-          branch: l10n_crowdin
-          title: 'New Crowdin translations'
+- uses: peter-evans/create-pull-request@v8
+  with:
+    branch: l10n_crowdin
+    title: "New Crowdin translations"
 ```
 
 This also side-steps `git add .`: the Crowdin step commits nothing, so a job that builds artifacts cannot leak them into the translation PR.
@@ -164,15 +164,15 @@ This also side-steps `git add .`: the Crowdin step commits nothing, so a job tha
 [Bundles](https://support.crowdin.com/bundles/) export strings in a chosen format regardless of the source format — and they are the **only** way to download translations from a string-based project, where `download_translations` does nothing.
 
 ```yaml
-      - uses: crowdin/github-action@v3
-        with:
-          upload_sources: false
-          download_translations: false
-          download_bundle: 1              # numeric bundle ID
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+- uses: crowdin/github-action@v3
+  with:
+    upload_sources: false
+    download_translations: false
+    download_bundle: 1 # numeric bundle ID
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+    CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 ```
 
 `crowdin_branch_name` is not applied to a bundle download — scope the bundle in Crowdin instead.
@@ -182,14 +182,14 @@ This also side-steps `git add .`: the Crowdin step commits nothing, so a job tha
 Upload → pre-translate → download, as **three** steps: a `command` step runs nothing but its command, so it cannot sit inside a step that also uploads or downloads. Upstream has the full workflow in [AI.md](https://raw.githubusercontent.com/crowdin/github-action/refs/heads/master/docs/AI.md), including the provider and prompt setup.
 
 ```yaml
-      - name: Pre-translate with AI
-        uses: crowdin/github-action@v3
-        with:
-          command: 'auto-translate'       # 'pre-translate' on the legacy v2 line
-          command_args: '--method ai --ai-prompt=${{ secrets.PROMPT_ID }}'
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+- name: Pre-translate with AI
+  uses: crowdin/github-action@v3
+  with:
+    command: "auto-translate" # 'pre-translate' on the legacy v2 line
+    command_args: "--method ai --ai-prompt=${{ secrets.PROMPT_ID }}"
+  env:
+    CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+    CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 ```
 
 AI output is only as good as the context it gets. Adding string context and screenshots before pre-translating raises quality far more than prompt tuning does. String context is written by an agent before the pipeline runs: the [context-extraction](../../context-extraction/SKILL.md) skill.
@@ -210,16 +210,16 @@ For GitHub Enterprise Server, point the git and API hosts at your instance with 
 
 Fetch [`docs/EXAMPLES.md`](https://raw.githubusercontent.com/crowdin/github-action/refs/heads/master/docs/EXAMPLES.md) — the maintainers keep it in step with each release — and read the section named below. Signed commits are in the [README](https://raw.githubusercontent.com/crowdin/github-action/refs/heads/master/README.md) instead.
 
-| Upstream section | Reach for it when |
-|---|---|
-| Create PR with the new translations | You want the reference workflow verbatim |
-| Translations export options configuration | Untranslated or unapproved strings should stay out of the repo |
-| Separate PRs for each target language | Each locale has its own reviewers. Keep `max-parallel: 1` — parallel runs collide on Crowdin's build |
-| Checking out multiple branches in a single workflow | A matrix of branches, or pushing somewhere other than the triggering branch — needs `skip_ref_checkout: true` |
-| Caching source files for faster uploads | Hundreds of source files; caches checksums in `.crowdin/` so only changed files upload |
-| Checking the translation progress | A release should block until translations are complete |
-| Outputs | Auto-merging the PR. The outputs are only set when *this* run opened it ([outputs](inputs.md#outputs)) |
-| Advanced Pull Request configuration | The translation PR should route itself — labels, assignees, reviewers |
-| Run test workflows on all commits of a PR | Force-pushes keep invalidating checks; pass a PAT to `actions/checkout` |
-| Triggers | Cron, manual, path-filtered, on release. A release or tag trigger needs `pull_request_base_branch_name` set, or the PR base resolves to a tag ref |
-| GitHub (Enterprise) configuration *(README)* | Signed commits — key email, GPG account email, and `github_user_email` all have to match |
+| Upstream section                                    | Reach for it when                                                                                                                                 |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Create PR with the new translations                 | You want the reference workflow verbatim                                                                                                          |
+| Translations export options configuration           | Untranslated or unapproved strings should stay out of the repo                                                                                    |
+| Separate PRs for each target language               | Each locale has its own reviewers. Keep `max-parallel: 1` — parallel runs collide on Crowdin's build                                              |
+| Checking out multiple branches in a single workflow | A matrix of branches, or pushing somewhere other than the triggering branch — needs `skip_ref_checkout: true`                                     |
+| Caching source files for faster uploads             | Hundreds of source files; caches checksums in `.crowdin/` so only changed files upload                                                            |
+| Checking the translation progress                   | A release should block until translations are complete                                                                                            |
+| Outputs                                             | Auto-merging the PR. The outputs are only set when _this_ run opened it ([outputs](inputs.md#outputs))                                            |
+| Advanced Pull Request configuration                 | The translation PR should route itself — labels, assignees, reviewers                                                                             |
+| Run test workflows on all commits of a PR           | Force-pushes keep invalidating checks; pass a PAT to `actions/checkout`                                                                           |
+| Triggers                                            | Cron, manual, path-filtered, on release. A release or tag trigger needs `pull_request_base_branch_name` set, or the PR base resolves to a tag ref |
+| GitHub (Enterprise) configuration _(README)_        | Signed commits — key email, GPG account email, and `github_user_email` all have to match                                                          |

@@ -1,6 +1,6 @@
 ---
 title: About
-description: 'About the LightCMS Journal: who writes it, what we cover — Git based CMS, static sites, and content workflows — and how the site itself runs on LightCMS.'
+description: "About the LightCMS Journal: who writes it, what we cover — Git based CMS, static sites, and content workflows — and how the site itself runs on LightCMS."
 draft: false
 weight: 0
 keywords:
@@ -17,10 +17,11 @@ taxonomies:
     - sveltekit
 isCJKLanguage: false
 headless: false
-date: '2026-11-08T21:20:01.403Z'
+date: "2026-11-08T21:20:01.403Z"
 extra:
   comments: false
 ---
+
 ## What we write here
 
 We write about what we learn while building [LightCMS](https://www.lightcms.me/), and about the problems it aims to solve.

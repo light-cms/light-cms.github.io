@@ -50,10 +50,10 @@ Import and push both say "update" in their names and point in opposite direction
 
 The sync settings hold two lists, one per `provider`:
 
-| `provider` | Direction | `files` shape |
-|---|---|---|
-| `integration` | Platform to Crowdin: these items are imported on schedule | Array of tree entries, each with `"schedule": true` |
-| `crowdin` | Crowdin to platform: these files' translations are pushed on schedule | Map of Crowdin file ID to languages, `{"1024": ["uk"]}` |
+| `provider`    | Direction                                                             | `files` shape                                           |
+| ------------- | --------------------------------------------------------------------- | ------------------------------------------------------- |
+| `integration` | Platform to Crowdin: these items are imported on schedule             | Array of tree entries, each with `"schedule": true`     |
+| `crowdin`     | Crowdin to platform: these files' translations are pushed on schedule | Map of Crowdin file ID to languages, `{"1024": ["uk"]}` |
 
 A sync-settings write **replaces the whole list** for its provider and turns on a sync schedule when none is set. The schedule's frequency is in the app settings, and a settings write replaces the whole settings object too: a change is sent as the full current settings plus the change, and the reference says which values the path can carry. When the app offers `new-integration-files` in its settings, turning it on adds new platform items to auto-sync as they appear; that is how "every new blog post" is expressed.
 

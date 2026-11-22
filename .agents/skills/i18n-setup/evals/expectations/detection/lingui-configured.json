@@ -1,16 +1,16 @@
 {
-  "match": {
-    "language": "js-ts",
-    "framework": "vite",
-    "compiler": "swc",
-    "react": true,
-    "typescript": true,
-    "packageManager": "npm",
-    "existing": {
-      "library": "lingui",
-      "configured": true,
-      "stringsWrapped": "yes"
-    }
-  },
-  "ignore": ["candidateFiles", "localeSignals", "git", "sourceDir"]
+	"match": {
+		"language": "js-ts",
+		"framework": "vite",
+		"compiler": "swc",
+		"react": true,
+		"typescript": true,
+		"packageManager": "npm",
+		"existing": {
+			"library": "lingui",
+			"configured": true,
+			"stringsWrapped": "yes"
+		}
+	},
+	"ignore": ["candidateFiles", "localeSignals", "git", "sourceDir"]
 }

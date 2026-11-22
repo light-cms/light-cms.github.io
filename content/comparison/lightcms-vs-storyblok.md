@@ -10,7 +10,7 @@ keywords:
   - visual editor cms
   - storyblok pricing alternative
   - component based cms
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -32,16 +32,16 @@ LightCMS shares the "visual" ambition but applies it to a different object: the 
 
 **LightCMS** is a self-hosted, Git based workspace. Content is Markdown files with front matter in your repository, edited in a WYSIWYG document editor, delivered as static HTML by your build.
 
-| | LightCMS | Storyblok |
-| :--- | :--- | :--- |
-| **Storage** | Files in your repository | Storyblok cloud (hosted) |
-| **Delivery** | Static build → CDN | Content API at request time |
-| **Editing model** | Document (prose-first) | Visual, component/block-based |
-| **Content model** | Front matter fields | Nested block schemas |
-| **Preview** | The rendered post after build | Live in-editor preview |
-| **Pricing** | Free (Apache 2.0), self-hosted | Plan-based SaaS |
-| **Portability** | Clone the repository | Export required |
-| **Extras** | AI copilot, voice, newsletters | Visual editor, marketplace apps |
+|                   | LightCMS                       | Storyblok                       |
+| :---------------- | :----------------------------- | :------------------------------ |
+| **Storage**       | Files in your repository       | Storyblok cloud (hosted)        |
+| **Delivery**      | Static build → CDN             | Content API at request time     |
+| **Editing model** | Document (prose-first)         | Visual, component/block-based   |
+| **Content model** | Front matter fields            | Nested block schemas            |
+| **Preview**       | The rendered post after build  | Live in-editor preview          |
+| **Pricing**       | Free (Apache 2.0), self-hosted | Plan-based SaaS                 |
+| **Portability**   | Clone the repository           | Export required                 |
+| **Extras**        | AI copilot, voice, newsletters | Visual editor, marketplace apps |
 
 ---
 

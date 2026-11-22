@@ -1,8 +1,8 @@
 ---
-title: 'Start From a Template: The LightCMS Starter Library'
+title: "Start From a Template: The LightCMS Starter Library"
 description: LightCMS starter templates for Astro, Hugo, SvelteKit, Jekyll, Next.js, Zola, and Eleventy — fork a preconfigured repository and publish with the visual editor.
 serial: 35
-date: '2026-10-16T09:50:00.000Z'
+date: "2026-10-16T09:50:00.000Z"
 draft: false
 keywords:
   - lightcms templates
@@ -10,7 +10,7 @@ keywords:
   - blog starter astro hugo
   - github template repository
   - start a blog from template
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -19,6 +19,7 @@ taxonomies:
     - static-sites
 slug: start-with-a-lightcms-template
 ---
+
 Have you read 10 different blogs about which SSG to choose and why?
 
 [LightCMS](https://lightcms.me) Covers you all, by default lightcms is vendor neutral,

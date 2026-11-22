@@ -8,12 +8,12 @@ Confirm the `generate-screenshots` skill is loadable first. It ships alongside t
 
 Then invoke it under its own invoked-by-another-workflow contract, passing what this journey already knows so it asks the user nothing twice:
 
-| Input | Value | Source |
-|---|---|---|
-| Connected project | `crowdin.yml` written and verified by phase 5's gates — the delegate does no connection work | phase 5 |
-| Capture locale | the source locale | `decisions.md` |
-| Workspace | `.crowdin/` already exists and is gitignored; the delegate keeps its batch folder at `.crowdin/screenshots/` | phase 1 |
-| Stack | `detection.json`'s framework and dev-server command, so the delegate's engine choice and `webServer` need no second detection | phase 1 |
+| Input             | Value                                                                                                                         | Source         |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| Connected project | `crowdin.yml` written and verified by phase 5's gates — the delegate does no connection work                                  | phase 5        |
+| Capture locale    | the source locale                                                                                                             | `decisions.md` |
+| Workspace         | `.crowdin/` already exists and is gitignored; the delegate keeps its batch folder at `.crowdin/screenshots/`                  | phase 1        |
+| Stack             | `detection.json`'s framework and dev-server command, so the delegate's engine choice and `webServer` need no second detection | phase 1        |
 
 What the delegate owns is not this journey's to shortcut: the engine choice and its install consent, the publish-only fallback when no engine can run, and the user's review of the screen plan before anything is written or captured — this journey never waives that gate on the user's behalf.
 

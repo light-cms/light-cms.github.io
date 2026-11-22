@@ -5,7 +5,7 @@ description: >-
   serving web pages, how to estimate your site’s carbon footprint, and what a
   greener web could look like.
 serial: 16
-date: '2026-10-14T13:30:00.000Z'
+date: "2026-10-14T13:30:00.000Z"
 draft: false
 tags:
   - low carbon website
@@ -13,18 +13,19 @@ tags:
   - greener web
   - sustainable web design
   - website carbon footprint
-preview: /og-image.webp
+
 slug: greener-web-static-sites
 ---
+
 Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **Static sites sit at the clean end**.
 
 Dynamic sites do work every time someone visits. They run code, talk to a database, and build the page. The servers have to stay on all the time, even when nobody is there.
 
 Static sites do that work just once, when they are built. The finished HTML files are put on CDN edge servers around the world and served from cache.
 
-- No work for each visit: Serving a stored file uses far less energy than creating a page on the spot.  
-- No always‑on database: Databases and app servers use power all the time; static sites don’t need them.  
-- Already cache‑friendly: If a request hits an edge cache, only a small network hop is needed.  
+- No work for each visit: Serving a stored file uses far less energy than creating a page on the spot.
+- No always‑on database: Databases and app servers use power all the time; static sites don’t need them.
+- Already cache‑friendly: If a request hits an edge cache, only a small network hop is needed.
 - Small files: HTML made from markdown is naturally small, and no extra JavaScript runtime is sent unless you add it.
 
 When you multiply these savings by every visitor, every month, for the whole life of the site, the energy difference is big.
@@ -61,8 +62,6 @@ The [LightCMS](https://lightcms.me) Site displays a live carbon rating in its fo
 - [Static sites vs dynamic sites](/blog/static-vs-dynamic/) Covers the architecture in depth.
 - [Top static site hosting platforms](/misc/top-static-site-hosting/) Compares where to host sustainably.
 - [Why LightCMS](/blog/why-this/) Explains the philosophy behind durable, lightweight publishing.
-
----
 
 ## Frequently Asked Questions
 

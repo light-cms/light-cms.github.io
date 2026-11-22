@@ -10,7 +10,7 @@ keywords:
   - wordpress vs static site
   - cms without database
   - open source cms 2026
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - cms
@@ -40,14 +40,14 @@ The modern answer inverts the model: **content lives as Markdown files in your G
 
 ## The Best WordPress Alternatives at a Glance
 
-| Alternative | Type | Best For | Cost |
-| :--- | :--- | :--- | :--- |
-| **LightCMS** | Git based CMS (self-hosted) | Writers wanting WordPress-like ease, static underneath | Free (Apache 2.0) |
-| **Ghost** | Traditional CMS, Node.js | Publications with paid memberships | Paid hosting |
-| **Drupal** | Traditional CMS | Large organizations with dev teams | Free, heavy to run |
-| **Decap CMS** | Git based CMS | Jamstack veterans | Free (MIT) |
-| **Pages CMS** | Git based CMS | Simple forms for any editor | Free (MIT) |
-| **TinaCMS** | Git based CMS | On-page visual editing | Free tier |
+| Alternative   | Type                        | Best For                                               | Cost               |
+| :------------ | :-------------------------- | :----------------------------------------------------- | :----------------- |
+| **LightCMS**  | Git based CMS (self-hosted) | Writers wanting WordPress-like ease, static underneath | Free (Apache 2.0)  |
+| **Ghost**     | Traditional CMS, Node.js    | Publications with paid memberships                     | Paid hosting       |
+| **Drupal**    | Traditional CMS             | Large organizations with dev teams                     | Free, heavy to run |
+| **Decap CMS** | Git based CMS               | Jamstack veterans                                      | Free (MIT)         |
+| **Pages CMS** | Git based CMS               | Simple forms for any editor                            | Free (MIT)         |
+| **TinaCMS**   | Git based CMS               | On-page visual editing                                 | Free tier          |
 
 ---
 

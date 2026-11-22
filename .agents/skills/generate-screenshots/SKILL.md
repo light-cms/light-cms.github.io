@@ -63,13 +63,13 @@ Deep-linkable screens come first - a URL or deep link is a one-line capture - an
 
 Pick by what the project already has, in this order, and read only that reference:
 
-| Project | Engine | Capture definition | Reference |
-|---|---|---|---|
-| Native iOS with an existing UI test target | XCUITest | a screenshot test in that target | [references/ios-xcuitest.md](references/ios-xcuitest.md) |
-| Expo or React Native already running screenmap | screenmap | its output folder, renamed into the contract | [references/expo-screenmap.md](references/expo-screenmap.md) |
-| Any mobile app - iOS, Android, React Native, Flutter | Maestro | YAML flows under `.maestro/crowdin/` | [references/mobile-maestro.md](references/mobile-maestro.md) |
-| Web | Playwright | a spec file, one test per screen | [references/web-playwright.md](references/web-playwright.md) |
-| A desktop app, a few one-off states, or no test code wanted - when the agent can drive the desktop | Computer use | none; the report carries the screen list | [references/computer-use.md](references/computer-use.md) |
+| Project                                                                                            | Engine       | Capture definition                           | Reference                                                    |
+| -------------------------------------------------------------------------------------------------- | ------------ | -------------------------------------------- | ------------------------------------------------------------ |
+| Native iOS with an existing UI test target                                                         | XCUITest     | a screenshot test in that target             | [references/ios-xcuitest.md](references/ios-xcuitest.md)     |
+| Expo or React Native already running screenmap                                                     | screenmap    | its output folder, renamed into the contract | [references/expo-screenmap.md](references/expo-screenmap.md) |
+| Any mobile app - iOS, Android, React Native, Flutter                                               | Maestro      | YAML flows under `.maestro/crowdin/`         | [references/mobile-maestro.md](references/mobile-maestro.md) |
+| Web                                                                                                | Playwright   | a spec file, one test per screen             | [references/web-playwright.md](references/web-playwright.md) |
+| A desktop app, a few one-off states, or no test code wanted - when the agent can drive the desktop | Computer use | none; the report carries the screen list     | [references/computer-use.md](references/computer-use.md)     |
 
 Maestro is the mobile default because one YAML dialect covers every mobile stack and a flow reads as the list of taps it is. A project that already drives its UI with something else - Detox, Espresso, Flutter integration tests - keeps it: any engine that writes named PNGs into the folder qualifies. Computer use is the one engine that leaves no definition behind, so it is offered after the others with that cost named. Installing an engine changes the project's dev dependencies: say what gets installed and get a yes, the same yes as the plan's.
 
@@ -87,8 +87,8 @@ When no engine can run here - no Node for Playwright, no simulator on this machi
 
 ## Failure modes
 
-| Situation | Do this |
-|---|---|
-| App won't start, or the session is signed out | Stop and ask. Nothing uploads from a broken session. |
-| Upload warns "auto tag is currently in progress" | The image landed; tags were skipped. Note it in the report; the next run's upload re-tags. |
+| Situation                                            | Do this                                                                                             |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| App won't start, or the session is signed out        | Stop and ask. Nothing uploads from a broken session.                                                |
+| Upload warns "auto tag is currently in progress"     | The image landed; tags were skipped. Note it in the report; the next run's upload re-tags.          |
 | Upload warns that several screenshots share the name | Duplicates predate this process; the CLI updates the oldest. Surface the warning and offer cleanup. |

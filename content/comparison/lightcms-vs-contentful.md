@@ -9,7 +9,7 @@ keywords:
   - contentful pricing alternative
   - headless cms for blogs
   - cms without vendor lock in
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -31,16 +31,16 @@ Contentful is a vendor relationship. Content lives in their cloud, is edited in 
 
 **LightCMS** is software you run. Content lives in your repository, is edited in a self-hostable app, and is served as static files by your host. You get portability and a cost line near zero, with no vendor to negotiate with when priorities change.
 
-| | LightCMS | Contentful |
-| :--- | :--- | :--- |
-| **Model** | Self-hosted Git workspace | SaaS headless platform |
-| **Storage** | Markdown in your repository | Contentful cloud |
-| **Delivery** | Static build → CDN | Content API at request time |
-| **Content model** | Front matter fields | Custom content types in UI |
-| **Pricing** | Free (Apache 2.0) | Subscription, usage/seat based |
-| **Enterprise features** | Git review, branch protection | Roles, approvals, workflows |
-| **Lock-in** | None | Export required to leave |
-| **Extras** | AI copilot, voice, newsletters | Ecosystem, SDKs, app framework |
+|                         | LightCMS                       | Contentful                     |
+| :---------------------- | :----------------------------- | :----------------------------- |
+| **Model**               | Self-hosted Git workspace      | SaaS headless platform         |
+| **Storage**             | Markdown in your repository    | Contentful cloud               |
+| **Delivery**            | Static build → CDN             | Content API at request time    |
+| **Content model**       | Front matter fields            | Custom content types in UI     |
+| **Pricing**             | Free (Apache 2.0)              | Subscription, usage/seat based |
+| **Enterprise features** | Git review, branch protection  | Roles, approvals, workflows    |
+| **Lock-in**             | None                           | Export required to leave       |
+| **Extras**              | AI copilot, voice, newsletters | Ecosystem, SDKs, app framework |
 
 ---
 
@@ -72,7 +72,7 @@ The comparison is sharp when the project is a **publication**: a blog, docs site
 
 ## Migration
 
-Contentful exports entries as JSON via its API or CLI. Converting entries to Markdown files is mechanical for article-shaped content and harder for component trees nested several levels deep. Plan for a script plus a cleanup pass; the direction is well-trodden because many teams have moved editorial content *off* SaaS platforms for cost reasons.
+Contentful exports entries as JSON via its API or CLI. Converting entries to Markdown files is mechanical for article-shaped content and harder for component trees nested several levels deep. Plan for a script plus a cleanup pass; the direction is well-trodden because many teams have moved editorial content _off_ SaaS platforms for cost reasons.
 
 ---
 

@@ -11,15 +11,15 @@ Load references lazily: read `manifest.json` when phase 2 starts, and read a ref
 
 ## The journey
 
-| Phase | Name | Produces | Credentials |
-|---|---|---|---|
-| 1 | Detect | `.crowdin/detection.json` | none |
-| 2 | Decide | `decisions.md`, `manifest-snapshot.json`, `plan.md` | none |
-| 3 | Setup | i18n library installed, configured, catalogs scaffolded, `.agents/crowdin-i18n-rules.md` rendered | none |
-| 4 | Wrap | every user-visible string wrapped, catalogs populated, build green | none |
-| 5 | Connect | `crowdin.yml`, verified config, sources uploaded | **token gate** |
-| 6 | Context | `ai_context` written for the new strings, a starting glossary uploaded, screenshots when opted in | token |
-| 7 | CI | sync workflow + the secret instruction for the user | token (as a CI secret) |
+| Phase | Name    | Produces                                                                                          | Credentials            |
+| ----- | ------- | ------------------------------------------------------------------------------------------------- | ---------------------- |
+| 1     | Detect  | `.crowdin/detection.json`                                                                         | none                   |
+| 2     | Decide  | `decisions.md`, `manifest-snapshot.json`, `plan.md`                                               | none                   |
+| 3     | Setup   | i18n library installed, configured, catalogs scaffolded, `.agents/crowdin-i18n-rules.md` rendered | none                   |
+| 4     | Wrap    | every user-visible string wrapped, catalogs populated, build green                                | none                   |
+| 5     | Connect | `crowdin.yml`, verified config, sources uploaded                                                  | **token gate**         |
+| 6     | Context | `ai_context` written for the new strings, a starting glossary uploaded, screenshots when opted in | token                  |
+| 7     | CI      | sync workflow + the secret instruction for the user                                               | token (as a CI secret) |
 
 Two entry points share this spine, and phase 2 decides which: the **full journey** runs all seven phases; **connect-only** — the project is already internationalized — omits phases 3–4 entirely rather than emitting no-op steps. Everything before phase 5 is offline; the token gate opens phase 5 — say so at the end of phase 2, so the user can authorize the CLI while phases 3–4 run.
 
@@ -47,7 +47,7 @@ Package installs always run on the main thread, never inside a worker — includ
 
 Rules for it:
 
-- **Create and ignore it on first run.** Add `.crowdin/` to the repo's `.gitignore`. If `.gitignore` already has content, show the one-line diff you intend to make before making it. The rules artifact is *outside* the workspace: `.agents/crowdin-i18n-rules.md` is a committed project file.
+- **Create and ignore it on first run.** Add `.crowdin/` to the repo's `.gitignore`. If `.gitignore` already has content, show the one-line diff you intend to make before making it. The rules artifact is _outside_ the workspace: `.agents/crowdin-i18n-rules.md` is a committed project file.
 - **Ticking checkboxes in `plan.md` is the progress protocol.** Check each step off as it completes — `- [ ]` becomes `- [x]`. In the default linear run that is the entire bookkeeping story, and it is enough to resume from. A `progress/` directory exists only when you actually dispatched parallel wrap workers; a serial run never creates one.
 - **Resume, don't silently re-plan.** If `plan.md` already exists when you start, report how far the previous run got (ticked versus unticked steps) and ask whether to resume from the first unticked step or restart from detection, which rewrites `detection.json` and `plan.md`. Unguided runs resume.
 - **Write atomically.** Every workspace file is written as `<name>.tmp` and then `mv`'d into place, so an interrupted run never leaves a half-written JSON file that the next run parses as truth.
@@ -59,12 +59,12 @@ Phase 1 writes exactly one file, `.crowdin/detection.json`, and touches nothing 
 
 Route by language on first match, then follow that language's rules file:
 
-| Signal at the repository root | `language` | Detection rules |
-|---|---|---|
-| `package.json` | `js-ts` | `references/detect/js-ts.md` |
-| *no row matches* | — | Stop: "This project's language isn't supported yet." Name what is (JavaScript/TypeScript today), and offer connect-only if translation catalogs already exist that Crowdin can take as-is. |
+| Signal at the repository root | `language` | Detection rules                                                                                                                                                                            |
+| ----------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `package.json`                | `js-ts`    | `references/detect/js-ts.md`                                                                                                                                                               |
+| _no row matches_              | —          | Stop: "This project's language isn't supported yet." Name what is (JavaScript/TypeScript today), and offer connect-only if translation catalogs already exist that Crowdin can take as-is. |
 
-Detection *rules* are in the per-language reference (adding a language family: `references/extending.md`).
+Detection _rules_ are in the per-language reference (adding a language family: `references/extending.md`).
 
 Emit this schema. The field names and the value sets are load-bearing: phase 2 matches `stacks[]` entries against these exact fields, and the collapse ladder reads these exact values. Renaming one silently breaks routing rather than failing loudly.
 
@@ -97,14 +97,14 @@ Everything in this phase is a decision, not an action. Nothing is installed and 
 
 **1. Resolve the entry point.** If `existing.library != "none" && existing.stringsWrapped != "no"`, the project is already internationalized: offer **connect-only as the default** and the full journey as the alternative (which would mean migrating libraries — a real ask, never a default). Otherwise the full journey is the default. An existing foreign i18n library is never a reason to refuse; it is the reason connect-only exists.
 
-**2. Check the hard stops.** First match wins, and this check happens *after* `detection.json` is on disk and *before* `plan.md` is created.
+**2. Check the hard stops.** First match wins, and this check happens _after_ `detection.json` is on disk and _before_ `plan.md` is created.
 
-| Condition | Verdict |
-|---|---|
+| Condition                                                                                                                                  | Verdict                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | A build toolchain that cannot be extended without ejecting from it — today that means `framework: "cra"` (`react-scripts` in dependencies) | **Stop.** Wrapping needs a build the setup delegation can add a transform to; a toolchain that forecloses that has no path in, and stopping before anything is installed beats a half-configured project. Use the message below. |
-| No `stacks[]` entry matches the detected stack **and** `existing.library` is `"none"` | **Stop.** There is no conversion pipeline for this stack and no catalogs to connect. List the stacks that are supported and the catalog formats connect-only accepts, so the user knows which of the two gaps to close. |
-| Native/hybrid shell signals (`react-native`, `expo`, `@capacitor/core`) next to a web entry point | **Not a stop.** Route the web path and say plainly that the native shell's own strings are out of scope for this run. |
-| `existing.library != "none"` | **Not a stop.** This is connect-only. |
+| No `stacks[]` entry matches the detected stack **and** `existing.library` is `"none"`                                                      | **Stop.** There is no conversion pipeline for this stack and no catalogs to connect. List the stacks that are supported and the catalog formats connect-only accepts, so the user knows which of the two gaps to close.          |
+| Native/hybrid shell signals (`react-native`, `expo`, `@capacitor/core`) next to a web entry point                                          | **Not a stop.** Route the web path and say plainly that the native shell's own strings are out of scope for this run.                                                                                                            |
+| `existing.library != "none"`                                                                                                               | **Not a stop.** This is connect-only.                                                                                                                                                                                            |
 
 A hard stop still writes `detection.json` — that file is the evidence for the refusal — and writes nothing else: no `plan.md`, no `crowdin.yml`, no installs, no change to `package.json`. Print the message, then stop. Do not offer to proceed anyway.
 
@@ -122,7 +122,7 @@ Say it in full rather than in initials, so the user can search for the toolchain
 
 **5. Confirm the remaining choices**, then freeze all of them in `decisions.md`: the app's one-line product description (phase 6 passes it to the context skill), the scope of files to wrap, whether to work on a new git branch, mode (**guided** — confirm at each phase boundary; **unguided** — run the approved plan to completion, stopping only on ambiguity or a hard stop), and add-ons. Add-ons are off by default, including `crowdin auto-translate`: never machine-translate a fresh project unasked, and when the user does opt in, `--method tm` only. A second add-on, **draft translations**, is never pitched here: it is recorded only when the user asks for translations during the journey, and it adds a `draft_translations` step to phase 6 that delegates to the `translate` skill.
 
-Two add-ons have to be *asked* rather than left off. The first is the **unwrapped-string lint rule**: phase 4's recall delegate installs it either way as a permanent dev dependency — its own skill recommends the install and treats the no-install path as the lesser one, so a plan that never raises it forces this orchestrator to answer a dependency question on the user's behalf, silently. Put it to them at Decide — the rule catches the next unwrapped string, the audit alone catches only today's — and record either answer, so phase 4 hands the delegate a decision instead of inheriting one.
+Two add-ons have to be _asked_ rather than left off. The first is the **unwrapped-string lint rule**: phase 4's recall delegate installs it either way as a permanent dev dependency — its own skill recommends the install and treats the no-install path as the lesser one, so a plan that never raises it forces this orchestrator to answer a dependency question on the user's behalf, silently. Put it to them at Decide — the rule catches the next unwrapped string, the audit alone catches only today's — and record either answer, so phase 4 hands the delegate a decision instead of inheriting one.
 
 The second is **screenshots**: phase 6 can delegate to the `generate-screenshots` skill, which writes a Playwright capture of the running app into the project and uploads the images to Crowdin tagged to the strings they show — the strongest context a translator can get, and the one step in the journey that needs the user's hands mid-run: the app started, themselves signed in. Silence is not consent for that, so ask; the plan carries `generate_screenshots` only on a yes.
 
@@ -130,7 +130,7 @@ The second is **screenshots**: phase 6 can delegate to the `generate-screenshots
 
 While the snapshot is open, probe whether the skills its `skills` block names are loadable here, and record the answer in `decisions.md` with the install command the user would need. This is a note, not a gate: **planning never blocks on skill availability** — the gate is `verify_skill_dependencies` at the top of phase 3; recording it now lets the plan warn the user in advance instead of stopping them later. In `plan.md` the warning rides the step's own line — `- [ ] context_download — crowdin-cli not loadable here; npx skills add crowdin/skills --skill crowdin-cli` — the step id and checkbox stay canonical, never replaced by a pause marker.
 
-**7. Emit `plan.md` as a strict checklist.** Every step is one line that *begins* with its id:
+**7. Emit `plan.md` as a strict checklist.** Every step is one line that _begins_ with its id:
 
 ```
 - [ ] step_id — short human-readable detail
@@ -142,20 +142,20 @@ The step vocabulary is keyed by the matched catalog's `model` from the snapshot.
 
 Shared by every stack:
 
-| Phase | Steps |
-|---|---|
-| 3 Setup | `verify_skill_dependencies` first, then `install_packages`, `create_config`, `provider_wiring`, `scaffold_catalogs`, `generate_coding_rules`, `install_coding_rules`, `build_verification`, `commit_setup` |
-| 4 Wrap | one `wrap_<path>` step per file (`wrap_src_App_tsx`) — non-component modules (data and util modules, API routes: files that render nothing) come last, behind a single `module_i18n_approach` step that decides once how an i18n instance reaches non-render code, because per-file improvisation here is how threading goes subtly wrong — then `build_check`, `recall_self_check`, `comment_review`, `commit_wrap` |
-| 5 Connect | `write_crowdin_yml`, `config_lint`, `config_sources`, `config_translations`, `upload_dryrun`, `upload_sources`, `commit_connect`, plus optional `create_project` |
-| 6 Context | `context_download`, `fill_ai_context`, `context_upload`, `context_status`, `generate_glossary`, `upload_glossary`, plus `draft_translations` only when the add-on is recorded, and `generate_screenshots` when the screenshots add-on was chosen |
-| 7 CI | `write_workflow`, `commit_ci`, `set_secret_instruction`, `prove_round_trip` |
+| Phase     | Steps                                                                                                                                                                                                                                                                                                                                                                                                                |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 Setup   | `verify_skill_dependencies` first, then `install_packages`, `create_config`, `provider_wiring`, `scaffold_catalogs`, `generate_coding_rules`, `install_coding_rules`, `build_verification`, `commit_setup`                                                                                                                                                                                                           |
+| 4 Wrap    | one `wrap_<path>` step per file (`wrap_src_App_tsx`) — non-component modules (data and util modules, API routes: files that render nothing) come last, behind a single `module_i18n_approach` step that decides once how an i18n instance reaches non-render code, because per-file improvisation here is how threading goes subtly wrong — then `build_check`, `recall_self_check`, `comment_review`, `commit_wrap` |
+| 5 Connect | `write_crowdin_yml`, `config_lint`, `config_sources`, `config_translations`, `upload_dryrun`, `upload_sources`, `commit_connect`, plus optional `create_project`                                                                                                                                                                                                                                                     |
+| 6 Context | `context_download`, `fill_ai_context`, `context_upload`, `context_status`, `generate_glossary`, `upload_glossary`, plus `draft_translations` only when the add-on is recorded, and `generate_screenshots` when the screenshots add-on was chosen                                                                                                                                                                     |
+| 7 CI      | `write_workflow`, `commit_ci`, `set_secret_instruction`, `prove_round_trip`                                                                                                                                                                                                                                                                                                                                          |
 
 Added by `model`:
 
-| `model` | Adds |
-|---|---|
+| `model`                   | Adds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `compile-time-extraction` | `extract_smoke` in phase 3 (prove extraction works before wrapping anything), then in phase 4, after every file is wrapped: `extract_clean`, then `catalogs_current` — the catalogs the app loads agree with the source catalog extraction just rewrote. `catalogs_current` is an outcome, not a command: some pipelines reach it through a compile step, others compile at import and reach it by doing nothing, and which one this project has is the setup skill's business, not a field in this manifest |
-| `runtime-catalog` | `verify_catalogs` in phase 4 instead of all three — nothing extracts, so nothing keeps the hand-authored catalog in step with the code. The check is that every key the code references resolves in the source catalog; `references/verify-catalogs.md` says what to compare, what a missing key costs once phase 5 has uploaded, and why the count of keys it could not resolve statically is part of the result |
+| `runtime-catalog`         | `verify_catalogs` in phase 4 instead of all three — nothing extracts, so nothing keeps the hand-authored catalog in step with the code. The check is that every key the code references resolves in the source catalog; `references/verify-catalogs.md` says what to compare, what a missing key costs once phase 5 has uploaded, and why the count of keys it could not resolve statically is part of the result                                                                                            |
 
 `verify_skill_dependencies` leads phase 3 because phases 3–4 are delegated to the ecosystem skills the snapshot names, and a plan that starts installing before confirming its dependencies are loadable can strand a half-configured project. Connect-only plans have no phases 3–4 and therefore never emit it — they delegate nothing.
 
@@ -208,19 +208,19 @@ Delegated, like phases 3–4. The **`github-action`** skill writes the workflow 
 
 `prove_round_trip` closes the journey, and it is the last step for the same reason `extract_smoke` is an early one: **every step before it can pass while the app still shows one language.** Translate a single string in the Crowdin project — one word is enough, by hand in the editor — let the sync bring it back, and see it render. That exercises the whole chain end to end: the catalog the workflow downloads, the path `%locale%` resolved to, the macro the setup phase wired, and the locale the app negotiates. Nothing else does; a green build, a full catalog, four passed gates and a written workflow are all compatible with a project that will never display a translation.
 
-It needs the user twice — they hold the token, and they own the translation — so it is a step to *ask for and wait on*, not one to report as done. When they would rather stop, say plainly what is unproven and leave the step unticked: an honest 12-of-13 beats a complete-looking plan over an untested pipeline.
+It needs the user twice — they hold the token, and they own the translation — so it is a step to _ask for and wait on_, not one to report as done. When they would rather stop, say plainly what is unproven and leave the step unticked: an honest 12-of-13 beats a complete-looking plan over an untested pipeline.
 
 ## Collapse ladder
 
 Re-running this skill on a repository it already touched must be safe and quiet. Each rung reads its condition from `detection.json`:
 
-| Already true | Do this instead |
-|---|---|
-| `existing.stringsWrapped: "yes"` | Skip phase 4. There is nothing to convert. |
-| `existing.configured: true` | Verify the config against the adapter's post-conditions and repair only what is wrong. Do not recreate it, and do not re-run the setup delegation over a working config. |
-| `existing.crowdinYml: true` | Run `config lint` plus the sources/translations gates against the existing file and fix mismatches. Do not regenerate it — and **the plan omits `write_crowdin_yml` entirely**, keeping the gate steps. A checklist line named for writing a file that nothing will write is a lie the executor of that plan may act on. |
-| `existing.workflow: true` | Leave the workflow alone; report its trigger set. **The plan omits `write_workflow`** for the same reason. |
-| All of the above | Still write `plan.md`, and still run `config_lint` (plus `config_sources` and `config_translations` where credentials are available) against the existing config as the verification that nothing has drifted, before reporting `crowdin status` and offering only the genuinely missing add-ons. "Change no files" means the *project's* files — planning and read-only verification are not project changes. |
+| Already true                     | Do this instead                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `existing.stringsWrapped: "yes"` | Skip phase 4. There is nothing to convert.                                                                                                                                                                                                                                                                                                                                                                     |
+| `existing.configured: true`      | Verify the config against the adapter's post-conditions and repair only what is wrong. Do not recreate it, and do not re-run the setup delegation over a working config.                                                                                                                                                                                                                                       |
+| `existing.crowdinYml: true`      | Run `config lint` plus the sources/translations gates against the existing file and fix mismatches. Do not regenerate it — and **the plan omits `write_crowdin_yml` entirely**, keeping the gate steps. A checklist line named for writing a file that nothing will write is a lie the executor of that plan may act on.                                                                                       |
+| `existing.workflow: true`        | Leave the workflow alone; report its trigger set. **The plan omits `write_workflow`** for the same reason.                                                                                                                                                                                                                                                                                                     |
+| All of the above                 | Still write `plan.md`, and still run `config_lint` (plus `config_sources` and `config_translations` where credentials are available) against the existing config as the verification that nothing has drifted, before reporting `crowdin status` and offering only the genuinely missing add-ons. "Change no files" means the _project's_ files — planning and read-only verification are not project changes. |
 
 ## Extension contract
 

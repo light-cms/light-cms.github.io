@@ -10,7 +10,7 @@ keywords:
   - content rollback
   - markdown version history
   - lightcms drafts
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -52,10 +52,10 @@ For a solo writer this is invisible infrastructure. For a team, it is the audit 
 
 [LightCMS](https://lightcms.me) can publish in two modes, and choosing between them is choosing your editorial process:
 
-| Mode | Flow | Best for |
-| :--- | :--- | :--- |
-| **Direct commit** | Publish → commit → CI builds → live | Solo writers, low-risk edits, quick fixes |
-| **Pull request** | Publish → PR → review → merge → CI builds | Teams, drafts with oversight, sensitive changes |
+| Mode              | Flow                                      | Best for                                        |
+| :---------------- | :---------------------------------------- | :---------------------------------------------- |
+| **Direct commit** | Publish → commit → CI builds → live       | Solo writers, low-risk edits, quick fixes       |
+| **Pull request**  | Publish → PR → review → merge → CI builds | Teams, drafts with oversight, sensitive changes |
 
 The pull request mode deserves the attention. It gives you a real editorial gate: a colleague reads the proposed Markdown, leaves a comment on the exact sentence they object to, and merges when it is right. That gate runs on GitHub's native review tools rather than a bespoke approval system that locks your content to one vendor.
 
@@ -73,7 +73,7 @@ With Git based content the answer is a revert:
 2. Choose the last good version.
 3. Revert.
 
-The correction commits like any other edit, your pipeline rebuilds, and the bad version is gone, usually within a minute on a modern host. Restoring a database backup at 2am also reverts every *other* change made in between. With per-file history, you roll back one post, not the whole site.
+The correction commits like any other edit, your pipeline rebuilds, and the bad version is gone, usually within a minute on a modern host. Restoring a database backup at 2am also reverts every _other_ change made in between. With per-file history, you roll back one post, not the whole site.
 
 ---
 

@@ -5,7 +5,7 @@ description: >-
   automate builds and deployments with CI/CD for a streamlined static site
   publishing workflow.
 serial: 3
-date: '2026-09-18T01:42:00.000Z'
+date: "2026-09-18T01:42:00.000Z"
 draft: false
 tags:
   - repository configuration
@@ -13,9 +13,10 @@ tags:
   - static site generator
   - astro
   - hugo
-preview: /og-image.png
+preview: og-image.png
 slug: 2026-09-18-configuring-your-repository-cicd
 ---
+
 Connecting your static site to [LightCMS](https://www.lightcms.me) Requires only two ingredients: a GitHub repository containing your content files and an automated CI/CD workflow that builds and deploys your website whenever changes are committed.
 
 Follow this guide to structure your repository, install the [LightCMS](https://www.lightcms.me) GitHub App, and set up automated deployments.

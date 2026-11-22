@@ -23,9 +23,9 @@ One file per screen in the agreed plan, under `.maestro/crowdin/`, named after t
 appId: com.example.app
 ---
 - launchApp
-- openLink: example://settings          # a deep link when the app has one
+- openLink: example://settings # a deep link when the app has one
 - extendedWaitUntil:
-    visible: "Notifications"            # the screen's own content, not the splash
+    visible: "Notifications" # the screen's own content, not the splash
     timeout: 10000
 - waitForAnimationToEnd
 - takeScreenshot: settings
@@ -38,7 +38,7 @@ appId: com.example.app
 - launchApp
 - tapOn: "Team"
 - tapOn:
-    id: "invite-button"                 # an accessibility id survives rewording
+    id: "invite-button" # an accessibility id survives rewording
 - extendedWaitUntil:
     visible: "Invite a teammate"
     timeout: 5000

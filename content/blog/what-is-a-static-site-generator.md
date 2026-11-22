@@ -4,7 +4,7 @@ description: >-
   A static site generator builds pages ahead of time from templates and
   Markdown. Learn how SSGs work, where they shine, and what trade offs to
   consider.
-date: '2026-11-16T08:58:17.908Z'
+date: "2026-11-16T08:58:17.908Z"
 draft: false
 tags:
   - what is a static site generator
@@ -12,9 +12,10 @@ tags:
   - ssg explained
   - how static sites work
   - pre rendered html
-preview: /og-image.webp
+
 slug: what-is-a-static-site-generator
 ---
+
 A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
 
 Instead of assembling a page per request, the work happens once, at build time. What ships to the reader is the finished artifact.
@@ -73,9 +74,8 @@ Interactivity is not off-limits. The modern pattern pre-renders everything and a
 
 ## The Options in Brief
 
-
 | Generator               | Language / templating      | Signature strength                        |
-| :----------------------- | :-------------------------- | :----------------------------------------- |
+| :---------------------- | :------------------------- | :---------------------------------------- |
 | **Hugo**                | Go templates               | Raw build speed, huge theme ecosystem     |
 | **Astro**               | `.astro` components        | Islands architecture, content collections |
 | **Eleventy**            | Nunjucks, Liquid, and more | Zero-JS minimalism, full control          |
@@ -83,14 +83,13 @@ Interactivity is not off-limits. The modern pattern pre-renders everything and a
 | **Zola**                | Tera                       | Single binary, batteries included         |
 | **SvelteKit / Next.js** | React/Svelte               | Sites that grow into applications         |
 
-
 The full survey is in [best static site generators](/blog/best-static-site-generators/). All of them consume the same input: Markdown with front matter.
 
 ---
 
 ## Where the CMS Fits
 
-An SSG solves *rendering*; it says nothing about *authoring*. Left alone, publishing means editing files in a code editor and pushing commits: workable for developers, a barrier for everyone else.
+An SSG solves _rendering_; it says nothing about _authoring_. Left alone, publishing means editing files in a code editor and pushing commits: workable for developers, a barrier for everyone else.
 
 A Git backed CMS fills that gap: it writes Markdown and front matter into the repository through a visual editor, and the SSG does what it always did. The generator never changes; the writer's experience does. That is the whole premise behind [LightCMS](/blog/what-is-lightcms/), and the fastest way to see it is to [copy a starter template](/blog/start-with-a-lightcms-template/) with the build already configured.
 

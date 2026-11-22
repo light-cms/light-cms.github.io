@@ -10,7 +10,7 @@ keywords:
   - netlify cms vs
   - best git cms 2026
   - decap cms replacement
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - cms
@@ -31,14 +31,14 @@ Every alternative below keeps the core promise (**content as Markdown in your ow
 
 ## The Alternatives at a Glance
 
-| Alternative | Best For | Self-Hosted | Price |
-| :--- | :--- | :--- | :--- |
-| **LightCMS** | A full writing workspace with AI and newsletters | Yes | Free (Apache 2.0) |
-| **Pages CMS** | Simple form-based editing for any team member | Yes | Free (MIT) |
-| **TinaCMS** | Visual editing directly on the live page | Yes | Free tier available |
-| **Keystatic** | Local-first files with strong schema validation | Yes | Free (MIT) |
-| **Sveltia CMS** | A lightweight browser editor with zero backend | Yes | Free |
-| **GitCMS** | AI-built sites needing reviewable, agent-safe edits | Yes | Free tier / paid plans |
+| Alternative     | Best For                                            | Self-Hosted | Price                  |
+| :-------------- | :-------------------------------------------------- | :---------- | :--------------------- |
+| **LightCMS**    | A full writing workspace with AI and newsletters    | Yes         | Free (Apache 2.0)      |
+| **Pages CMS**   | Simple form-based editing for any team member       | Yes         | Free (MIT)             |
+| **TinaCMS**     | Visual editing directly on the live page            | Yes         | Free tier available    |
+| **Keystatic**   | Local-first files with strong schema validation     | Yes         | Free (MIT)             |
+| **Sveltia CMS** | A lightweight browser editor with zero backend      | Yes         | Free                   |
+| **GitCMS**      | AI-built sites needing reviewable, agent-safe edits | Yes         | Free tier / paid plans |
 
 ---
 

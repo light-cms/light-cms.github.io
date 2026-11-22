@@ -74,10 +74,10 @@ The title is `[<type>] <component>: <short title>`, for example `[bug] api: tran
 
 Then, in this order:
 
-| Situation | Do this |
-|---|---|
-| A shell exists and `gh auth status` succeeds | `gh issue create --repo crowdin/skills --title "<title>" --body-file <draft path>` |
-| `gh` is missing or not authenticated, or there is no shell | Give the user a prefilled link: `https://github.com/crowdin/skills/issues/new?title=<url-encoded title>&body=<url-encoded body>`. They open it and press Submit. |
+| Situation                                                                           | Do this                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A shell exists and `gh auth status` succeeds                                        | `gh issue create --repo crowdin/skills --title "<title>" --body-file <draft path>`                                                                                                                |
+| `gh` is missing or not authenticated, or there is no shell                          | Give the user a prefilled link: `https://github.com/crowdin/skills/issues/new?title=<url-encoded title>&body=<url-encoded body>`. They open it and press Submit.                                  |
 | The encoded link would exceed 8000 bytes, or the user says the content is sensitive | Hand over the draft text and point to `https://github.com/crowdin/skills/issues/new`, or to Crowdin support at `https://crowdin.com/contacts` for anything they do not want public. Send nothing. |
 
 Encode the title and body fully; the one-to-three-line rule keeps ordinary drafts far below the 8000-byte ceiling.

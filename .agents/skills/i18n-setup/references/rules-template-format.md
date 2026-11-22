@@ -17,13 +17,13 @@ Both bridges are additive — they point at the generated file rather than dupli
 
 Every template opens with a YAML frontmatter block bounded by `---` lines. Five keys are recognized:
 
-| Key | Type | Meaning |
-|---|---|---|
-| `template` | string | Stable identifier for this template, e.g. the library or stack name. Echoed into the generated header. |
-| `templateVersion` | string/number | Version of this template's content. Bump it whenever the body or its variables change meaningfully; echoed into the generated header. |
-| `conditions` | array | Every condition key the body's `<!-- if: … -->` markers are allowed to reference. |
-| `values` | array | Every placeholder name the body's `<<name>>` tokens are allowed to reference. |
-| `budget` | object | Caps how large the *rendered* output may be. Should carry a `default` key giving the maximum rendered line count — the linter only warns if it's missing, the hard cap is enforced later, at render time. |
+| Key               | Type          | Meaning                                                                                                                                                                                                   |
+| ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `template`        | string        | Stable identifier for this template, e.g. the library or stack name. Echoed into the generated header.                                                                                                    |
+| `templateVersion` | string/number | Version of this template's content. Bump it whenever the body or its variables change meaningfully; echoed into the generated header.                                                                     |
+| `conditions`      | array         | Every condition key the body's `<!-- if: … -->` markers are allowed to reference.                                                                                                                         |
+| `values`          | array         | Every placeholder name the body's `<<name>>` tokens are allowed to reference.                                                                                                                             |
+| `budget`          | object        | Caps how large the _rendered_ output may be. Should carry a `default` key giving the maximum rendered line count — the linter only warns if it's missing, the hard cap is enforced later, at render time. |
 
 `conditions` and `values` are declarations, not documentation — they're checked in both directions. A condition key that appears in an `<!-- if -->` marker but isn't listed in `conditions` is an error, and a key listed in `conditions` that no marker in the body ever tests is equally an error. The same two-way rule applies to `values` against `<<name>>` placeholders: an undeclared placeholder in the body fails, and a declared name the body never uses fails too. The intent is that the frontmatter is a complete, exact inventory of every dynamic point in the template — nothing more, nothing less — so a template can be validated without evaluating it.
 
@@ -56,7 +56,7 @@ The delimiter is `<<` and `>>` because template bodies quote real application co
 A conforming renderer processes a template in this order:
 
 1. Resolve every condition key declared in the frontmatter to a concrete value for the current render.
-2. Delete each `<!-- if -->`/`<!-- else -->`/`<!-- /if -->` block's losing branch, along with *all* marker lines themselves — winning branches keep only their content, never the comments that guarded them.
+2. Delete each `<!-- if -->`/`<!-- else -->`/`<!-- /if -->` block's losing branch, along with _all_ marker lines themselves — winning branches keep only their content, never the comments that guarded them.
 3. Resolve values, but only for placeholders that survived step 2 — a `<<name>>` inside a branch that was deleted is never looked up.
 4. Substitute each surviving `<<name>>` with its resolved value.
 5. Strip the frontmatter block from the output.
@@ -70,11 +70,11 @@ Any failure at step 7 or step 8 means the render did not succeed — see Fail-cl
 
 Step 3 says values resolve for surviving placeholders; it doesn't say from where. By the time `generate_coding_rules` runs, every value a template can declare resolves from one of two places already on disk:
 
-| Value | Resolves from | Rendered form |
-|---|---|---|
-| `sourceLocale` | `decisions.md`'s frozen source locale | the locale as recorded, in the decided scheme — e.g. `en`, which is what a greenfield run records |
-| `targetLocales` | `decisions.md`'s frozen target locale list | the locales as recorded, in the decided scheme, joined per the list rule above — e.g. `uk-UA, es-ES`, which is what a greenfield run records |
-| `catalogPath` | the matched `catalogs[]` row carried in `manifest-snapshot.json` | the row's per-locale catalog layout, expressed in the library's own placeholder syntax rather than Crowdin's |
+| Value           | Resolves from                                                    | Rendered form                                                                                                                                |
+| --------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sourceLocale`  | `decisions.md`'s frozen source locale                            | the locale as recorded, in the decided scheme — e.g. `en`, which is what a greenfield run records                                            |
+| `targetLocales` | `decisions.md`'s frozen target locale list                       | the locales as recorded, in the decided scheme, joined per the list rule above — e.g. `uk-UA, es-ES`, which is what a greenfield run records |
+| `catalogPath`   | the matched `catalogs[]` row carried in `manifest-snapshot.json` | the row's per-locale catalog layout, expressed in the library's own placeholder syntax rather than Crowdin's                                 |
 
 `catalogPath` is the one that needs unpacking, because no single field of the row is what it means. The row's `source` names one file — the source locale only, not a per-locale pattern — and its `translation` pattern resolves through Crowdin's own language placeholder (`%locale%`, with `languages_mapping` rows for spellings it doesn't produce), which the rendered file's reader has no reason to recognize: `.agents/crowdin-i18n-rules.md` is read by developers working in the library's own code, not by `crowdin.yml`. So `catalogPath` is the row's layout re-expressed in that library's placeholder form — for `lingui-po`, `src/locales/{locale}/messages.po`, the same layout `lingui.config.ts`'s `catalogs` entry already gives in the stack's adapter. A renderer that cannot resolve a value this way has nothing to fall back to; per the fail-closed rule below, that is a stop, not a guess.
 

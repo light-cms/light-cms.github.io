@@ -4,7 +4,7 @@ description: >-
   LightCMS gives writers a full editor with AI, dictation, and newsletter. An
   editor which makes one a writer again
 serial: 41
-date: '2026-10-15T20:09:55.000Z'
+date: "2026-10-15T20:09:55.000Z"
 draft: false
 tags:
   - lightcms vs pages cms
@@ -15,15 +15,15 @@ tags:
 preview: /og-image.png
 slug: 2026-10-15-lightcms-vs-pagescms
 ---
+
 [Pages CMS](/comparison/pagescms) Earned its reputation by doing one thing cleanly: it puts a well designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
 
-[LightCMS](https://lightcms.me) Starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **What the person publishing actually experiences**.
+[LightCMS](https://www.lightcms.me) Starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **What the person publishing actually experiences**.
 
 ## Comparison
 
-
 |                   | LightCMS                                            | Pages CMS                            |
-| :----------------- | :--------------------------------------------------- | :------------------------------------ |
+| :---------------- | :-------------------------------------------------- | :----------------------------------- |
 | **Model**         | Self-hosted writing workspace                       | Git based dashboard                  |
 | **Content store** | Your GitHub repository                              | Your GitHub repository               |
 | **Editing**       | Full TipTap WYSIWYG document editor                 | Form-based fields per content type   |
@@ -34,9 +34,6 @@ slug: 2026-10-15-lightcms-vs-pagescms
 | **Newsletters**   | Built in via Newsy: GitHub-backed, no email service | Not bundled                          |
 | **Hosting**       | Self-host on any Node.js host                       | Hosted app or self-hosted            |
 | **Licensing**     | Apache 2.0                                          | Open source                          |
-
-
----
 
 ## Where Pages CMS Wins
 
@@ -52,8 +49,6 @@ slug: 2026-10-15-lightcms-vs-pagescms
 - **The extras are the point.** Drafting assistance, dictation, and a GitHub-backed newsletter turn a content tool into a publishing pipeline, with no third-party subscriptions bolted on.
 - **Self-hosted end to end.** Apache 2.0, your infrastructure, your API key, your data.
 
----
-
 ## The Telling Difference
 
 Open both tools and write the same 1,200-word article.
@@ -63,8 +58,6 @@ In Pages CMS, you are completing a structured entry: paste or type Markdown into
 In LightCMS, you write. You pick a heading level from a menu, drag in a screenshot, and insert a table. You can dictate a paragraph when tired or ask the copilot to tighten the intro. All the while, front matter stays valid because it is a form rather than a fragile text file.
 
 The difference compounds. Publishing frequency is a function of how much friction each post costs, and writers respond to that friction more than to any other variable in the stack.
-
----
 
 ## When Pages CMS Is the Right Call
 
@@ -78,19 +71,15 @@ The difference compounds. Publishing frequency is a function of how much frictio
 - Contributors are writers rather than developers.
 - You want drafting, transcription, and distribution inside one self-hosted tool.
 
----
-
 ## Migration
 
-Both write Markdown with YAML front matter to GitHub, so moving between them is a configuration change rather than a data migration: connect the repository, map the fields, and your archive comes with you. The existing content in Pages CMS's YAML config becomes [LightCMS's](https://lightcms.me) in app field definitions, typically an afternoon's work.
-
----
+Both write Markdown with YAML front matter to GitHub, so moving between them is a configuration change rather than a data migration: connect the repository, map the fields, and your archive comes with you. Lightcms is configuration independent.
 
 ## Frequently Asked Questions
 
-### Does [LightCMS](https://lightcms.me) store content outside my repository?
+### Does [LightCMS](https://lightcms.me) Store content outside my repository?
 
-1. The repository is the source of truth; [LightCMS](https://lightcms.me) commits like any other contributor.
+1. The repository is the source of truth; [LightCMS](https://lightcms.me) Commits like any other contributor.
 
 ### Is Pages CMS free?
 
@@ -100,14 +89,12 @@ It has an open source core with hosted options. Confirm current licensing and pr
 
 Yes. LightCMS runs on any Node.js host, and Pages CMS supports self-hosted deployment.
 
-### Which is better for a non-technical writer?
+### Which is better for a nontechnical writer?
 
 LightCMS, because the primary interface is a document rather than a schema-shaped form.
 
 ### Do either affect my site's performance?
 
-1. Both produce static files that your SSG builds; performance is decided by your generator, theme, and host.
-
----
+Both produce static files that your SSG builds; performance is decided by your generator, theme, and host.
 
 Related: [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic), and [top Git based CMS platforms](/comparison/top-git-cms).

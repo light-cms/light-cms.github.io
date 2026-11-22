@@ -10,7 +10,7 @@ keywords:
   - astro vs hugo vs eleventy
   - ssg comparison
   - fastest static site generator
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - ssg
@@ -21,19 +21,17 @@ taxonomies:
 
 Static site generators had their renaissance and never gave it back. In 2026, the best SSGs produce sites that serve from the CDN edge in milliseconds, cost nothing to host, emit a fraction of the carbon of dynamic alternatives, and ship with no admin panel to attack. Picking one takes five minutes once you know the options.
 
----
-
 ## The Shortlist
 
-| Generator | Language | Known For | Best For |
-| :--- | :--- | :--- | :--- |
-| **Astro** | JS/TS (`.astro`) | Content collections, islands | New blogs and content sites |
-| **Hugo** | Go templates | Builds in seconds | Large publications, docs |
-| **Eleventy** | JS templates | Zero-JS minimalism | Developers who want control |
-| **SvelteKit** | Svelte | App-like sites | Interactive hybrids |
-| **Jekyll** | Ruby/Liquid | GitHub Pages native | Legacy and simple blogs |
-| **Lume** | Deno/TS | Format flexibility | Deno-native developers |
-| **Zine** | Zig | Raw speed | Minimalist personal sites |
+| Generator     | Language         | Known For                    | Best For                    |
+| :------------ | :--------------- | :--------------------------- | :-------------------------- |
+| **Astro**     | JS/TS (`.astro`) | Content collections, islands | New blogs and content sites |
+| **Hugo**      | Go templates     | Builds in seconds            | Large publications, docs    |
+| **Eleventy**  | JS templates     | Zero-JS minimalism           | Developers who want control |
+| **SvelteKit** | Svelte           | App-like sites               | Interactive hybrids         |
+| **Jekyll**    | Ruby/Liquid      | GitHub Pages native          | Legacy and simple blogs     |
+| **Lume**      | Deno/TS          | Format flexibility           | Deno-native developers      |
+| **Zine**      | Zig              | Raw speed                    | Minimalist personal sites   |
 
 ## 1. Astro
 
@@ -68,8 +66,6 @@ A young, Zig-powered generator with its own Super templating language and near-i
 Every generator on this list reads **Markdown files with YAML front matter** from your repository. That common denominator is why the CMS layer is swappable: a Git based editor like [LightCMS](/getting-started/) commits content to any of them, and your [hosting choice](/blog/cloudflare-pages-vs-vercel/) is independent too.
 
 And because the output is plain cached files, every generator here plugs directly into the green publishing stack described in [Static Sites and CO2](/blog/greener-web-static-sites/).
-
----
 
 ## Frequently Asked Questions
 

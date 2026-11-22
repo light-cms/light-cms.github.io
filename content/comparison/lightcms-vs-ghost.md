@@ -10,7 +10,7 @@ keywords:
   - ghost vs static site
   - self hosted blogging platform
   - ghost pricing alternative
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -22,7 +22,7 @@ taxonomies:
 
 [Ghost](https://ghost.org) is the most convincing modern take on "publish and get paid": a fast Node.js publishing platform with a beautiful editor, memberships, newsletters, and payments in one package, self-hostable or hosted.
 
-LightCMS covers the writing half of that and none of the membership half. The choice comes down to whether your publication needs a *platform* or a *pipeline*.
+LightCMS covers the writing half of that and none of the membership half. The choice comes down to whether your publication needs a _platform_ or a _pipeline_.
 
 ---
 
@@ -32,17 +32,17 @@ LightCMS covers the writing half of that and none of the membership half. The ch
 
 **LightCMS** is a content tool: Markdown in your repository, a static build, and a CDN. Distribution beyond the site, such as [newsletters](/blog/newsletter-email-automation/), runs on GitHub rather than inside a member database.
 
-| | LightCMS | Ghost |
-| :--- | :--- | :--- |
-| **Storage** | Markdown in Git | MySQL database |
-| **Rendering** | Pre-built static HTML | Server-side / headless API |
-| **Members & payments** | Not built in | Native memberships, Stripe |
-| **Newsletters** | Newsy on GitHub (no email service) | Native email to members |
-| **Editor** | TipTap WYSIWYG → Markdown | Clean Markdown-based editor |
-| **AI copilot / voice** | Built in | Not bundled |
-| **Operations** | None at runtime | App + DB to run and patch |
-| **Cost** | Hosting only | Hosting, or Ghost(Pro) plans |
-| **Portability** | Clone the repository | Export members + content |
+|                        | LightCMS                           | Ghost                        |
+| :--------------------- | :--------------------------------- | :--------------------------- |
+| **Storage**            | Markdown in Git                    | MySQL database               |
+| **Rendering**          | Pre-built static HTML              | Server-side / headless API   |
+| **Members & payments** | Not built in                       | Native memberships, Stripe   |
+| **Newsletters**        | Newsy on GitHub (no email service) | Native email to members      |
+| **Editor**             | TipTap WYSIWYG → Markdown          | Clean Markdown-based editor  |
+| **AI copilot / voice** | Built in                           | Not bundled                  |
+| **Operations**         | None at runtime                    | App + DB to run and patch    |
+| **Cost**               | Hosting only                       | Hosting, or Ghost(Pro) plans |
+| **Portability**        | Clone the repository               | Export members + content     |
 
 ---
 

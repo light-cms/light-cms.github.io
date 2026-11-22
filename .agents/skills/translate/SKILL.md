@@ -48,12 +48,12 @@ Then recount the gaps and show a table per language. Strings a human translated 
 
 Only what the run needs, into `.crowdin/resources/` (gitignored — add `.crowdin/` to `.gitignore` if it is not there, showing the one-line diff first). Files already present are reused; the user asks for a refresh by saying so. [references/resources.md](references/resources.md) has the commands and the lookup pattern.
 
-| Resource | When | Why |
-|---|---|---|
-| The target catalog's own translations | Always | Same product, same language, same voice — the strongest consistency signal, and free. |
-| Glossary | Always | Small; a term decided once, everywhere. |
-| TM language pair | When the target catalog is thin (fewer than roughly fifty existing translations), or the user wants consistency with legacy content | Grepped for a phrase, a few rows at a time. |
-| Style guide | Always, when one is assigned to the project and covers the language | Tone, formality, formatting conventions. |
+| Resource                              | When                                                                                                                                | Why                                                                                   |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| The target catalog's own translations | Always                                                                                                                              | Same product, same language, same voice — the strongest consistency signal, and free. |
+| Glossary                              | Always                                                                                                                              | Small; a term decided once, everywhere.                                               |
+| TM language pair                      | When the target catalog is thin (fewer than roughly fifty existing translations), or the user wants consistency with legacy content | Grepped for a phrase, a few rows at a time.                                           |
+| Style guide                           | Always, when one is assigned to the project and covers the language                                                                 | Tone, formality, formatting conventions.                                              |
 
 ### 4. Draft
 

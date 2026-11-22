@@ -32,27 +32,27 @@ Do not code from memory when typings and docs disagree.
 
 ## Quick Reference
 
-| Scenario | Preferred Pattern |
-|---------|-------------------|
-| Multi-module flow | `new Client(credentials, options)` and destructure needed APIs |
-| Single narrow flow | Direct module API class is acceptable |
-| Full collection reads | `.withFetchAll()` |
-| Transient failures | `retryConfig` |
-| Bounded request duration | `{ httpRequestTimeout: 60_000 }` |
-| Uploads | `uploadStorageApi.addStorage` -> `sourceFilesApi.createFile` |
+| Scenario                                                                     | Preferred Pattern                                                                                                                                             |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Multi-module flow                                                            | `new Client(credentials, options)` and destructure needed APIs                                                                                                |
+| Single narrow flow                                                           | Direct module API class is acceptable                                                                                                                         |
+| Full collection reads                                                        | `.withFetchAll()`                                                                                                                                             |
+| Transient failures                                                           | `retryConfig`                                                                                                                                                 |
+| Bounded request duration                                                     | `{ httpRequestTimeout: 60_000 }`                                                                                                                              |
+| Uploads                                                                      | `uploadStorageApi.addStorage` -> `sourceFilesApi.createFile`                                                                                                  |
 | Long-running operations (builds, pre-translation, imports, exports, reports) | Poll the matching `check...Status` method with a delay; stop on `finished`, `failed` or `canceled` — [recipes](references/recipes.md#helpers-wait-save-chunk) |
-| Error branching | `CrowdinValidationError` before `CrowdinError` |
+| Error branching                                                              | `CrowdinValidationError` before `CrowdinError`                                                                                                                |
 
 ## Core Patterns
 
 ### Bootstrap
 
 ```ts
-import { Client, Credentials } from '@crowdin/crowdin-api-client';
+import { Client, type Credentials } from "@crowdin/crowdin-api-client";
 
 const credentials: Credentials = {
-  token: process.env.CROWDIN_PERSONAL_TOKEN!,
-  organization: process.env.CROWDIN_ORGANIZATION, // Crowdin Enterprise only
+	token: process.env.CROWDIN_PERSONAL_TOKEN!,
+	organization: process.env.CROWDIN_ORGANIZATION, // Crowdin Enterprise only
 };
 
 const client = new Client(credentials);
@@ -61,50 +61,55 @@ const client = new Client(credentials);
 ### Response Envelope Handling
 
 ```ts
-const listResponse = await client.tasksApi.withFetchAll().listTasks(projectId, options);
-const tasks = listResponse.data.map((entry) => entry.data); // ResponseList<T>
+const listResponse = await client.tasksApi
+	.withFetchAll()
+	.listTasks(projectId, options);
+const _tasks = listResponse.data.map((entry) => entry.data); // ResponseList<T>
 
 const createResponse = await client.tasksApi.addTask(projectId, request);
-const task = createResponse.data; // ResponseObject<T>
+const _task = createResponse.data; // ResponseObject<T>
 ```
 
 ### Typed Request Models
 
 ```ts
 const request: TasksModel.CreateTaskRequest = {
-  title: 'My Task',
-  languageId: 'de',
-  type: 0,
-  fileIds: [12],
+	title: "My Task",
+	languageId: "de",
+	type: 0,
+	fileIds: [12],
 };
 ```
 
 ### Error Handling
 
 ```ts
-import { CrowdinError, CrowdinValidationError } from '@crowdin/crowdin-api-client';
+import {
+	CrowdinError,
+	CrowdinValidationError,
+} from "@crowdin/crowdin-api-client";
 
 try {
-  // API call
+	// API call
 } catch (error) {
-  if (error instanceof CrowdinValidationError) throw error;
-  if (error instanceof CrowdinError) throw error;
-  throw error;
+	if (error instanceof CrowdinValidationError) throw error;
+	if (error instanceof CrowdinError) throw error;
+	throw error;
 }
 ```
 
 ## Common Mistakes
 
-| Mistake | Fix |
-|---------|-----|
-| Guessing endpoint methods from memory | Validate in local `index.d.ts` first |
-| Treating list response as object response | Check `ResponseList<T>` vs `ResponseObject<T>` and map accordingly |
-| Weakening or bypassing model typing | Use client `*Model` types in service signatures and fixtures |
-| Manual pagination loops by default | Prefer `.withFetchAll()` unless custom batching is required |
-| Uploading file directly to `createFile` | Create storage first, then pass `storageId` |
-| Catching all errors as generic | Branch `CrowdinValidationError` and `CrowdinError` explicitly |
+| Mistake                                                             | Fix                                                                                                       |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Guessing endpoint methods from memory                               | Validate in local `index.d.ts` first                                                                      |
+| Treating list response as object response                           | Check `ResponseList<T>` vs `ResponseObject<T>` and map accordingly                                        |
+| Weakening or bypassing model typing                                 | Use client `*Model` types in service signatures and fixtures                                              |
+| Manual pagination loops by default                                  | Prefer `.withFetchAll()` unless custom batching is required                                               |
+| Uploading file directly to `createFile`                             | Create storage first, then pass `storageId`                                                               |
+| Catching all errors as generic                                      | Branch `CrowdinValidationError` and `CrowdinError` explicitly                                             |
 | Polling a status endpoint in a tight loop, or only until `finished` | Sleep between checks and treat `failed` and `canceled` as terminal — see [recipes](references/recipes.md) |
-| Composing a multi-step flow from memory | Start from the matching recipe in [references/recipes.md](references/recipes.md) |
+| Composing a multi-step flow from memory                             | Start from the matching recipe in [references/recipes.md](references/recipes.md)                          |
 
 ## Verification Gate
 

@@ -21,20 +21,20 @@ A frontend-only React bundle that Crowdin loads into an iframe inside its own UI
 
 The platform gains module types, manifest fields, SDK methods and scopes over time. This skill cannot keep up with that, and neither can your training data - so for **what exists**, fetch the docs. They ship a machine-readable variant of every page: append `.md` to any documentation URL, or take the whole set at once.
 
-| Fetch this | For |
-|---|---|
-| [building-app/modules.md](https://crowdin.github.io/serverless-apps/building-app/modules.md) | The current module types and their `prepare*` functions |
-| [reference/manifest.md](https://crowdin.github.io/serverless-apps/reference/manifest.md) | Manifest fields, module shapes, permissions |
-| [reference/cli-commands.md](https://crowdin.github.io/serverless-apps/reference/cli-commands.md) | Commands and flags as released |
-| [building-app/crowdin-api.md](https://crowdin.github.io/serverless-apps/building-app/crowdin-api.md) | The tokenless API client |
-| [building-app/storage.md](https://crowdin.github.io/serverless-apps/building-app/storage.md) | Crowdin Storage - persisted shared, per-user and module-scoped records |
-| [building-app/context.md](https://crowdin.github.io/serverless-apps/building-app/context.md) | Context, theme, events |
-| [building-app/host-actions.md](https://crowdin.github.io/serverless-apps/building-app/host-actions.md) | Editor and host actions |
-| [building-app/user-interface.md](https://crowdin.github.io/serverless-apps/building-app/user-interface.md) | The UI kit |
-| [building-app/i18n.md](https://crowdin.github.io/serverless-apps/building-app/i18n.md) | Localization |
-| [development/troubleshooting.md](https://crowdin.github.io/serverless-apps/development/troubleshooting.md) | Known failures |
-| [understanding-scopes](https://support.crowdin.com/developer/understanding-scopes/) | What each scope grants |
-| [llms-full.txt](https://crowdin.github.io/serverless-apps/llms-full.txt) | Everything, one fetch |
+| Fetch this                                                                                                 | For                                                                    |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [building-app/modules.md](https://crowdin.github.io/serverless-apps/building-app/modules.md)               | The current module types and their `prepare*` functions                |
+| [reference/manifest.md](https://crowdin.github.io/serverless-apps/reference/manifest.md)                   | Manifest fields, module shapes, permissions                            |
+| [reference/cli-commands.md](https://crowdin.github.io/serverless-apps/reference/cli-commands.md)           | Commands and flags as released                                         |
+| [building-app/crowdin-api.md](https://crowdin.github.io/serverless-apps/building-app/crowdin-api.md)       | The tokenless API client                                               |
+| [building-app/storage.md](https://crowdin.github.io/serverless-apps/building-app/storage.md)               | Crowdin Storage - persisted shared, per-user and module-scoped records |
+| [building-app/context.md](https://crowdin.github.io/serverless-apps/building-app/context.md)               | Context, theme, events                                                 |
+| [building-app/host-actions.md](https://crowdin.github.io/serverless-apps/building-app/host-actions.md)     | Editor and host actions                                                |
+| [building-app/user-interface.md](https://crowdin.github.io/serverless-apps/building-app/user-interface.md) | The UI kit                                                             |
+| [building-app/i18n.md](https://crowdin.github.io/serverless-apps/building-app/i18n.md)                     | Localization                                                           |
+| [development/troubleshooting.md](https://crowdin.github.io/serverless-apps/development/troubleshooting.md) | Known failures                                                         |
+| [understanding-scopes](https://support.crowdin.com/developer/understanding-scopes/)                        | What each scope grants                                                 |
+| [llms-full.txt](https://crowdin.github.io/serverless-apps/llms-full.txt)                                   | Everything, one fetch                                                  |
 
 The division of labour: **the docs are authoritative on what exists, this skill on what order to do it in and what breaks.** When a list here disagrees with the docs, the docs win and the list here is stale - reach for a capability the docs describe even if it is absent from these pages. When something works but breaks in a way the docs do not mention, that is what this skill is for.
 
@@ -57,12 +57,12 @@ If they send nothing, the CLI's own state file holds the edition after login: `~
 
 ## Settle four things before scaffolding
 
-| Slot | Why it has to be settled early |
-|---|---|
-| **Name** | `create <name>` names the directory, registers the app, and labels the app and all its modules in the UI. Pass a short latin slug; if the user wants a human label, set `name` in the manifest afterwards and push it. |
-| **Placement** | Where it appears in the Crowdin UI. The most expensive to get wrong, and constrained by edition ([modules.md](references/modules.md)). |
-| **Logic** | What result they expect to see, which drives the UI, the API calls and therefore the `scopes`. |
-| **Who sees it** | `default_permissions`. Its default is `owner` only, which is wrong for most requests and cannot be widened after the fact - see [visibility](#8-close-the-loop-on-visibility). |
+| Slot            | Why it has to be settled early                                                                                                                                                                                         |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**        | `create <name>` names the directory, registers the app, and labels the app and all its modules in the UI. Pass a short latin slug; if the user wants a human label, set `name` in the manifest afterwards and push it. |
+| **Placement**   | Where it appears in the Crowdin UI. The most expensive to get wrong, and constrained by edition ([modules.md](references/modules.md)).                                                                                 |
+| **Logic**       | What result they expect to see, which drives the UI, the API calls and therefore the `scopes`.                                                                                                                         |
+| **Who sees it** | `default_permissions`. Its default is `owner` only, which is wrong for most requests and cannot be widened after the fact - see [visibility](#8-close-the-loop-on-visibility).                                         |
 
 ## Ask sparingly, and only in their words
 
@@ -86,11 +86,11 @@ Crowdin Storage is the app's own persisted key-value store, hosted by Crowdin pe
 
 The design decision is not how to store but **who each record belongs to**, and the key prefix is what enforces the answer:
 
-| The data is | Use | Because |
-|---|---|---|
-| One user's own - their filters, drafts, notes, a credential they entered | `kv.user.*` (the `user:` prefix) | The platform hides it: another user's records simply do not exist for the caller, in reads and listings alike |
-| Owned by one of the app's surfaces - team state, integration settings, a credential of that surface's team | a key under `module:{moduleKey}:` | The platform serves it only where the app runs as that module, to viewers allowed there - a managers-only module's records never reach the app's other surfaces |
-| Public to everyone the app reaches, or shared between the app's modules | a plain key | Nothing protects it: everyone who can use the app can read it - in a public project that includes anonymous visitors - and every signed-in viewer can **overwrite** it |
+| The data is                                                                                                | Use                               | Because                                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| One user's own - their filters, drafts, notes, a credential they entered                                   | `kv.user.*` (the `user:` prefix)  | The platform hides it: another user's records simply do not exist for the caller, in reads and listings alike                                                          |
+| Owned by one of the app's surfaces - team state, integration settings, a credential of that surface's team | a key under `module:{moduleKey}:` | The platform serves it only where the app runs as that module, to viewers allowed there - a managers-only module's records never reach the app's other surfaces        |
+| Public to everyone the app reaches, or shared between the app's modules                                    | a plain key                       | Nothing protects it: everyone who can use the app can read it - in a public project that includes anonymous visitors - and every signed-in viewer can **overwrite** it |
 
 Default to `user:` for anything about a person and `module:` for anything one surface's team owns, because both stay access-controlled by the platform; a plain shared key is for values anyone the app is visible to may legitimately see - and, signed in, change - including data the app's modules must share, since `module:` records never cross surfaces. One person is exempt from module narrowing: the app's installer sees every module's records on any surface - only other users' `user:` records stay hidden from them. The order matters because the failure is silent: a plain key behaves perfectly while one person tests the app, and leaks or gets clobbered only when the second user arrives.
 
@@ -106,11 +106,11 @@ Three things a frontend-only app genuinely cannot do:
 
 **A no is never the end of the run.** The user came with a real chore and cannot act on "this needs a backend". Deliver the part that works and name the trade-off in one plain sentence:
 
-| They asked for | Give them |
-|---|---|
-| A weekly email digest | The page itself, which they open when they need it, plus a pointer to Crowdin's own notification settings. Say the email part is not possible in this kind of app |
+| They asked for              | Give them                                                                                                                                                                                                                                                                                                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| A weekly email digest       | The page itself, which they open when they need it, plus a pointer to Crowdin's own notification settings. Say the email part is not possible in this kind of app                                                                                                                                                              |
 | A third party engine or key | Crowdin's own settings for that integration when the key must work for people who should not see it. When everyone using it may also know it, [Crowdin Storage](#when-the-app-needs-to-remember-something) holds it with `secret: true`: `kv.user.*` for a personal key, a restricted module's `module:` prefix for a team key |
-| A huge file processed | The same work on a size that fits, with the limit agreed up front |
+| A huge file processed       | The same work on a size that fits, with the limit agreed up front                                                                                                                                                                                                                                                              |
 
 Only when nothing useful survives, say so and offer to hand it to a developer. Never end a user's run with npm package names as their next step.
 
@@ -198,7 +198,7 @@ Before publishing, not after. `publish` moves only the bundle; `modules`, `scope
 npx crowdin-serverless-apps publish -y
 ```
 
-Builds, uploads `dist/bundle.zip`, and switches Crowdin to serving it. Do not start `dev`: it ties the app to your machine and forces the user to keep a terminal open, which defeats handing them something that just works. `dev` is the right tool when the *user* wants a fast local loop, in their own terminal. Say the trade-off out loud - every iteration is now a build plus an upload rather than an instant reload.
+Builds, uploads `dist/bundle.zip`, and switches Crowdin to serving it. Do not start `dev`: it ties the app to your machine and forces the user to keep a terminal open, which defeats handing them something that just works. `dev` is the right tool when the _user_ wants a fast local loop, in their own terminal. Say the trade-off out loud - every iteration is now a build plus an upload rather than an instant reload.
 
 ### 8. Close the loop on visibility
 
@@ -224,7 +224,7 @@ Seven of the eighteen types have no page to open - the three editor types other 
 
 Then verify, because nothing before this point proves the app renders: `typecheck`, `lint` and `publish` are all blind to a blank iframe, a 403, a clipped panel or an empty screen. If you can drive a browser, open the link, confirm the app draws and the console is clean. If you cannot, say plainly that it is unverified and ask the user to open it and tell you what they see. Never report success on the strength of a printed URL.
 
-Hand the link over as a clickable link in your message - `preview` opens a browser in *your* environment, which may not be the user's.
+Hand the link over as a clickable link in your message - `preview` opens a browser in _your_ environment, which may not be the user's.
 
 ## The auth handshake
 
@@ -240,27 +240,27 @@ Never ask for a token in chat. On a machine with no browser at all, `CROWDIN_PER
 
 ## When something goes wrong
 
-| What you see | What it means |
-|---|---|
-| `Not logged in. Run crowdin-serverless-apps login first.` | The auth handshake. |
-| The CLI hangs with no output on `create` | Missing `--template` or `--yes`; it waits on a picker. |
-| `This app declares 2 modules. Pass --module <key>` | The untouched scaffold. Delete the module that is dead on this edition, then pass the key. |
-| `Module type X only has a page on Crowdin Enterprise` / `only on crowdin.com` | Edition-locked placement. Pick one that exists on their edition. |
-| `Module type X has no page of its own` | One of the seven unopenable types. Expected: hand over navigation, not a link. |
-| Blank iframe, or the host reports the app did not start | Manifest type, `prepare*` and `context.app.type` disagree, or a registration is not at the top level, or two modules of one type without keys. |
-| App published but absent from the UI slot | `manifest push` skipped, or a string-based project without `stringBasedAvailable`. |
-| App opens but shows nothing | Empty data, or the first-project fallback landed somewhere with no glossary/TM/strings. Check before blaming the code. |
-| 403 `Endpoint isn't allowed for token scopes.` at runtime | A manifest scope. Run `manifest validate`: it names the call and the string to add. If validate is green, run `manifest status` - the scope is on disk but not pushed. If it printed `scope check skipped`, do what the note says first; a green run with that note has not looked at the scopes ([scopes.md](references/scopes.md)). |
-| Any other 403, or an empty list, all checks green | The viewer's own rights, not the manifest: calls run as whoever opened the app, and no check can see that. Build for what that person may do, or narrow the audience. |
-| Every storage call rejected | `application.storage` missing from the manifest `scopes` - `manifest validate` names the `createStorage()` call that needs it - or, if validate is green, the manifest change not pushed. |
-| `kv.user.*` throws while shared keys work | The viewer is anonymous - no user identity. Check `user.id` in the context before offering per-user features. |
-| A write under `module:...:` rejected | The key names a module other than the one the app is currently running as, or an unknown one. On reads the same situation is silent: `get` resolves `undefined`, listings skip the records. |
-| `You have no accessible projects to preview this module in.` | Either no project access, or a crowdsource module needing a public project. |
-| `Could not list your projects - this login may lack the project scope.` | Log in again to grant it. |
-| `GraphQL is not available to serverless apps` | The proxy is REST `/api/v2` only. |
-| `FormData bodies are not supported through AP.apiRequest` | Pass a raw `Blob`, `File` or `ArrayBuffer`. |
-| `manifest push` rejected by Crowdin | Run `manifest validate`; it names the offending path. |
-| `npx` fails on network or permissions | Your environment, not the CLI. Ask the user to allow it. |
+| What you see                                                                  | What it means                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Not logged in. Run crowdin-serverless-apps login first.`                     | The auth handshake.                                                                                                                                                                                                                                                                                                                   |
+| The CLI hangs with no output on `create`                                      | Missing `--template` or `--yes`; it waits on a picker.                                                                                                                                                                                                                                                                                |
+| `This app declares 2 modules. Pass --module <key>`                            | The untouched scaffold. Delete the module that is dead on this edition, then pass the key.                                                                                                                                                                                                                                            |
+| `Module type X only has a page on Crowdin Enterprise` / `only on crowdin.com` | Edition-locked placement. Pick one that exists on their edition.                                                                                                                                                                                                                                                                      |
+| `Module type X has no page of its own`                                        | One of the seven unopenable types. Expected: hand over navigation, not a link.                                                                                                                                                                                                                                                        |
+| Blank iframe, or the host reports the app did not start                       | Manifest type, `prepare*` and `context.app.type` disagree, or a registration is not at the top level, or two modules of one type without keys.                                                                                                                                                                                        |
+| App published but absent from the UI slot                                     | `manifest push` skipped, or a string-based project without `stringBasedAvailable`.                                                                                                                                                                                                                                                    |
+| App opens but shows nothing                                                   | Empty data, or the first-project fallback landed somewhere with no glossary/TM/strings. Check before blaming the code.                                                                                                                                                                                                                |
+| 403 `Endpoint isn't allowed for token scopes.` at runtime                     | A manifest scope. Run `manifest validate`: it names the call and the string to add. If validate is green, run `manifest status` - the scope is on disk but not pushed. If it printed `scope check skipped`, do what the note says first; a green run with that note has not looked at the scopes ([scopes.md](references/scopes.md)). |
+| Any other 403, or an empty list, all checks green                             | The viewer's own rights, not the manifest: calls run as whoever opened the app, and no check can see that. Build for what that person may do, or narrow the audience.                                                                                                                                                                 |
+| Every storage call rejected                                                   | `application.storage` missing from the manifest `scopes` - `manifest validate` names the `createStorage()` call that needs it - or, if validate is green, the manifest change not pushed.                                                                                                                                             |
+| `kv.user.*` throws while shared keys work                                     | The viewer is anonymous - no user identity. Check `user.id` in the context before offering per-user features.                                                                                                                                                                                                                         |
+| A write under `module:...:` rejected                                          | The key names a module other than the one the app is currently running as, or an unknown one. On reads the same situation is silent: `get` resolves `undefined`, listings skip the records.                                                                                                                                           |
+| `You have no accessible projects to preview this module in.`                  | Either no project access, or a crowdsource module needing a public project.                                                                                                                                                                                                                                                           |
+| `Could not list your projects - this login may lack the project scope.`       | Log in again to grant it.                                                                                                                                                                                                                                                                                                             |
+| `GraphQL is not available to serverless apps`                                 | The proxy is REST `/api/v2` only.                                                                                                                                                                                                                                                                                                     |
+| `FormData bodies are not supported through AP.apiRequest`                     | Pass a raw `Blob`, `File` or `ArrayBuffer`.                                                                                                                                                                                                                                                                                           |
+| `manifest push` rejected by Crowdin                                           | Run `manifest validate`; it names the offending path.                                                                                                                                                                                                                                                                                 |
+| `npx` fails on network or permissions                                         | Your environment, not the CLI. Ask the user to allow it.                                                                                                                                                                                                                                                                              |
 
 ## References
 

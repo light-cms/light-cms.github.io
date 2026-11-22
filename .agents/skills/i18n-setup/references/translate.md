@@ -8,11 +8,11 @@ Confirm the `translate` skill is loadable first. It ships alongside this one, so
 
 Then invoke it under its own invoked-by-another-workflow contract, passing what this journey already knows so it asks the user nothing twice:
 
-| Input | Value | Source |
-|---|---|---|
-| Target languages | every target locale, with its Crowdin language id | `decisions.md` |
-| Catalog paths | the matched row's resolved `source` and `translation` paths | `manifest-snapshot.json`, resolved on disk |
-| The go | the approved plan | phase 2 |
+| Input            | Value                                                       | Source                                     |
+| ---------------- | ----------------------------------------------------------- | ------------------------------------------ |
+| Target languages | every target locale, with its Crowdin language id           | `decisions.md`                             |
+| Catalog paths    | the matched row's resolved `source` and `translation` paths | `manifest-snapshot.json`, resolved on disk |
+| The go           | the approved plan                                           | phase 2                                    |
 
 The step runs after `upload_glossary`, so the glossary the drafts must respect already exists in the project. The delegate's own rules hold unchanged: it shows the per-language counts before uploading, never approves, never invents a glossary translation.
 

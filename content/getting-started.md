@@ -10,7 +10,7 @@ keywords:
   - connect github repository cms
   - publish markdown to git
   - visual markdown editor
-preview: /og-image.webp
+
 slug: getting-started
 tags:
   - lightcms
@@ -19,8 +19,9 @@ tags:
   - markdown
   - git
   - lightcms
-date: '2026-11-22T11:47:03.315Z'
+date: "2026-11-22T11:47:03.315Z"
 ---
+
 [LightCMS](https://www.lightcms.me) Is a Git based content management system for static sites. You edit Markdown in a visual editor, and LightCMS commits the files to your repository.
 
 ## What you get

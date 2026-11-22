@@ -13,7 +13,6 @@ keywords:
   - ai for content creation
   - writing with ai
   - ai blog tool
-preview: /og-image.webp
 taxonomies:
   tags:
     - ai
@@ -21,13 +20,12 @@ taxonomies:
     - blogging
     - workflow
 ---
+
 Two years into "AI writing tools," most blogs learned the same lesson: generating a full
 article and pressing publish produces content nobody finishes reading.
 The open question is **where** AI belongs in a writing workflow.
 
 Some tasks suit a model and some do not.
-
----
 
 ## Where AI Helps
 
@@ -51,8 +49,6 @@ Speech-to-text is the quiet win. Dictating a first draft at 150 words per minute
 
 Turning one long post into a newsletter edition, a thread, a summary paragraph, or a set of metadata descriptions is tedious work with a clear input. Automate the transform; keep editorial control over what ships.
 
----
-
 ## Where AI Does Not Help
 
 ### Facts
@@ -71,8 +67,6 @@ Knowing what to leave out, which framing is honest, and where the post should en
 
 People read a person or a team. A publication that outsources its thinking forfeits the only durable advantage small blogs have overlarge ones.
 
----
-
 ## A Workflow That Keeps the Balance
 
 A practical division of labor, in order:
@@ -86,8 +80,6 @@ A practical division of labor, in order:
 
 The pattern: AI touches structure and mechanics; humans hold facts, voice, and judgment. Every step where AI touches meaning is a step where the post becomes less yours.
 
----
-
 ## The Practical Infrastructure Question
 
 If AI is going to sit inside your workflow, it should sit inside your tooling rather than in a separate tab you copy between. Two things are worth demanding from any AI-enabled CMS:
@@ -95,9 +87,7 @@ If AI is going to sit inside your workflow, it should sit inside your tooling ra
 - **Bring your own provider.** Your key, your account, your choice of model, including a local endpoint. A tool that routes your unpublished drafts through its own proxy has made a decision about your content on your behalf.
 - **Nothing ships without you.** Generation lands as editable text in the document; publish remains a deliberate action you take.
 
-That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual actions inside the editor (outline, rephrase, expand, fix grammar) over any OpenAI-compatible endpoint, with commits you approve.
-
----
+That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual actions inside the editor (outline, rephrase, expand, fix grammar) over any OpenAI compatible endpoint, with commits you approve.
 
 ## Frequently Asked Questions
 
@@ -116,7 +106,5 @@ It can approximate style from samples you provide. It cannot invent the experien
 ### Is a Transcription Endpoint Safe for Private Drafts?
 
 Treat any external endpoint as a third party: send what you intend to send, to a provider you have chosen. Prefer self-hosted or bring-your-own-key configurations for sensitive material.
-
----
 
 Further reading: [the Lightcms copilot](/blog/lightcms-ai-copilot/), [voice-to-text dictation](/blog/lightcms-voice-to-text/), and [how to start a blog](/blog/how-to-start-a-blog/) if you are setting the whole thing up from scratch.

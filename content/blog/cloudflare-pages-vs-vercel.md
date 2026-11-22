@@ -1,5 +1,5 @@
 ---
-title: "Cloudflare Pages vs Vercel: Which Is Better for Static Sites?"
+title: "Cloudflare Pages vs Vercel: Best for Static Sites?"
 description: Cloudflare Pages and Vercel compared on bandwidth, build minutes, pricing, edge network, and framework support, so you can pick the right free hosting tier.
 serial: 9
 date: 2026-10-14T12:20:00Z
@@ -10,7 +10,7 @@ keywords:
   - best free static site hosting
   - cloudflare pages pricing
   - vercel free tier
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - hosting
@@ -20,8 +20,6 @@ taxonomies:
 ---
 
 [Cloudflare Pages](https://pages.cloudflare.com) and [Vercel](https://vercel.com) are the two most common answers to "where do I host my static site for free?" Both deploy from Git, provision free SSL, and serve from a global edge network. The differences show up in **bandwidth policy, framework integration, and what happens when your project grows**.
-
----
 
 ## What Is Cloudflare Pages?
 
@@ -46,16 +44,12 @@ Vercel's preview URLs for every pull request, inline comments on deployments, an
 
 Both platforms build from the same Git repository, so your content and code stay portable. Vercel's framework optimizations and Cloudflare's Workers runtime each create some ecosystem gravity, but because your site is just static output plus a build command, switching hosts is a configuration change, not a rewrite.
 
----
-
 ## Which Should You Choose?
 
 - Choose **Cloudflare Pages** for blogs, documentation, and content sites where unlimited bandwidth and minimal cost matter most.
 - Choose **Vercel** for application-like projects, team preview workflows, and deep framework integration.
 
 For a full comparison including GitHub Pages, Netlify, and Deno Deploy, see [top static site hosting platforms](/misc/top-static-site-hosting/). And once your host is chosen, [configure your repository and CI/CD](/blog/configuring-your-repository-cicd/) so every published post deploys automatically.
-
----
 
 ## Frequently Asked Questions
 

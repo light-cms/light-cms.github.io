@@ -10,7 +10,7 @@ keywords:
   - sanity cms pricing alternatives
   - git based cms vs sanity
   - sanity for blogs
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -32,16 +32,16 @@ LightCMS solves an adjacent but different problem: publishing documents to a sta
 
 **LightCMS** stores content as Markdown files with YAML front matter in your GitHub repository. Your static site generator reads them at build time and emits HTML.
 
-| | LightCMS | Sanity |
-| :--- | :--- | :--- |
-| **Storage** | Your Git repository | Sanity Content Lake (hosted) |
-| **Delivery** | Pre-rendered static HTML | API at request time (GROQ) |
-| **Content model** | Documents + front matter | Custom schemas in code |
-| **Runtime** | None: build + CDN | Client app + API |
-| **Billing** | Free (Apache 2.0), self-hosted | Usage/seat based hosted service |
-| **Portability** | Clone the repository | Export and convert |
-| **Editor** | TipTap document editor | Customizable Studio |
-| **Extras** | AI copilot, voice-to-text, newsletters | Ecosystem apps, real-time collaboration |
+|                   | LightCMS                               | Sanity                                  |
+| :---------------- | :------------------------------------- | :-------------------------------------- |
+| **Storage**       | Your Git repository                    | Sanity Content Lake (hosted)            |
+| **Delivery**      | Pre-rendered static HTML               | API at request time (GROQ)              |
+| **Content model** | Documents + front matter               | Custom schemas in code                  |
+| **Runtime**       | None: build + CDN                      | Client app + API                        |
+| **Billing**       | Free (Apache 2.0), self-hosted         | Usage/seat based hosted service         |
+| **Portability**   | Clone the repository                   | Export and convert                      |
+| **Editor**        | TipTap document editor                 | Customizable Studio                     |
+| **Extras**        | AI copilot, voice-to-text, newsletters | Ecosystem apps, real-time collaboration |
 
 ---
 

@@ -1,5 +1,5 @@
 base_url = "https://blogs.lightcms.me"
-title = "LightCMS - Git based CMS for static sites"
+title = "LightCMS Git based CMS for static sites"
 description = "LightCMS is a Git based CMS for static sites"
 theme = "duckquill"
 author = "light-cms"
@@ -9,7 +9,7 @@ compile_sass = true
 
 build_search_index = true
 generate_feeds = true
-feed_filenames = ["atom.xml"]
+feed_filenames = ["atom.xml", "rss.xml"]
 
 [[taxonomies]]
 name = "tags"

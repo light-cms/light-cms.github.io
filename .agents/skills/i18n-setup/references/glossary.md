@@ -8,12 +8,12 @@ Confirm the `glossary-terms-extraction` skill is loadable first. It ships alongs
 
 Then invoke it under its own invoked-by-another-workflow contract, passing what this journey already knows so it asks the user nothing twice:
 
-| Input | Value | Source |
-|---|---|---|
-| Source strings | the matched row's resolved `source` path — the same file phase 5 just uploaded | `manifest-snapshot.json`, resolved on disk |
-| Product description | the app's one-line description | `decisions.md` |
-| Draft path | `.crowdin/glossary.csv` — inside the gitignored workspace, so a rejected draft never lands in the repository | this file |
-| Source language | the source locale's Crowdin language id | `decisions.md` |
+| Input               | Value                                                                                                        | Source                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| Source strings      | the matched row's resolved `source` path — the same file phase 5 just uploaded                               | `manifest-snapshot.json`, resolved on disk |
+| Product description | the app's one-line description                                                                               | `decisions.md`                             |
+| Draft path          | `.crowdin/glossary.csv` — inside the gitignored workspace, so a rejected draft never lands in the repository | this file                                  |
+| Source language     | the source locale's Crowdin language id                                                                      | `decisions.md`                             |
 
 The two plan steps map onto its two stages: `generate_glossary` is done when the draft exists and the user has seen the terms; `upload_glossary` runs only after their explicit go. The review gate is that skill's own rule — this journey never waives it on the user's behalf.
 

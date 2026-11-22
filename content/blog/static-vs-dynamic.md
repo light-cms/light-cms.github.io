@@ -36,15 +36,15 @@ A dynamic site renders each request on the server (or in a function/edge worker)
 
 ## Head-to-Head Comparison
 
-| Factor | Static Site | Dynamic Site |
-| :--- | :--- | :--- |
-| Performance | Pre-rendered, CDN-served, near-instant | Depends on server load and database latency |
-| Security | No database or admin runtime exposed | Constant patching, plugin vulnerabilities, SQL injection risk |
-| Cost | Free tiers easily cover most sites | Servers, databases, and scaling costs |
-| Scalability | Scales by CDN replication | Requires vertical or horizontal scaling |
-| Durability | Files outlive frameworks and vendors | Tied to a runtime, database, and host |
-| Content updates | Rebuild in seconds via CI/CD | Instant, but with a heavier operational surface |
-| Dynamic features | Added via forms, functions, or edge workers | Native, at the cost of complexity |
+| Factor           | Static Site                                 | Dynamic Site                                                  |
+| :--------------- | :------------------------------------------ | :------------------------------------------------------------ |
+| Performance      | Pre-rendered, CDN-served, near-instant      | Depends on server load and database latency                   |
+| Security         | No database or admin runtime exposed        | Constant patching, plugin vulnerabilities, SQL injection risk |
+| Cost             | Free tiers easily cover most sites          | Servers, databases, and scaling costs                         |
+| Scalability      | Scales by CDN replication                   | Requires vertical or horizontal scaling                       |
+| Durability       | Files outlive frameworks and vendors        | Tied to a runtime, database, and host                         |
+| Content updates  | Rebuild in seconds via CI/CD                | Instant, but with a heavier operational surface               |
+| Dynamic features | Added via forms, functions, or edge workers | Native, at the cost of complexity                             |
 
 ---
 

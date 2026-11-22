@@ -6,8 +6,27 @@ biome = "latest"
 "npm:@crowdin/cli" = "latest"
 "npm:@posthog/cli" = "latest"
 harper-cli = "latest"
+superhtml = "latest"
+"npm:parcel" = "latest"
 
-[tasks]
-start = "zola serve"
-fetch = "crowdin pull"
-build = "bun scripts/normalize-translated-dates.ts && zola build && bunx -y pagefind --site public"
+
+[settings]
+experimental = true
+[env]
+SWC_NATIVE_BINDING_CACHE = false
+
+[tasks.build]
+run = "zola build && mise run search && bun install && bun run build"
+description = "Build the site with Zola, index it for search, and optimize all HTML"
+
+[tasks.search]
+run = "zola build && pagefind --site ./public"
+description = "Build, index and preview the site with search at http://localhost:1414"
+
+[tasks.serve]
+run = "zola serve"
+description = "Serve the site locally"
+
+[tasks.check]
+run = "zola check"
+description = "Check the site"

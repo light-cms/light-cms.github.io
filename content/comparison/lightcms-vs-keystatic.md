@@ -10,7 +10,7 @@ keywords:
   - keystatic cms
   - file based cms comparison
   - local first cms
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -40,18 +40,18 @@ If your evaluation starts and ends with "does it keep my content in Git," both p
 
 ## Comparison
 
-| | LightCMS | Keystatic |
-| :--- | :--- | :--- |
-| **Model** | Self-hosted writing workspace | Local-first files with generated forms |
-| **Content schema** | Managed in the app | Defined in code (TypeScript/JSX config) |
-| **Primary surface** | Document editor (TipTap WYSIWYG) | Form views generated from your schema |
-| **Runs where?** | Hosted by you; writers use a browser | Locally via CLI, or with cloud offering |
-| **Non-developer usability** | Designed for it | Requires the project and tooling set up first |
-| **AI copilot** | Built in (any OpenAI-compatible endpoint) | Not bundled |
-| **Voice-to-text** | Built in (Whisper) | Not bundled |
-| **Newsletters** | Built in via Newsy: GitHub-backed, no email service | Not bundled |
-| **MDX / rich content** | Markdown pass-through | Strong MDX support |
-| **Licensing** | Apache 2.0 | Open source (MIT) |
+|                             | LightCMS                                            | Keystatic                                     |
+| :-------------------------- | :-------------------------------------------------- | :-------------------------------------------- |
+| **Model**                   | Self-hosted writing workspace                       | Local-first files with generated forms        |
+| **Content schema**          | Managed in the app                                  | Defined in code (TypeScript/JSX config)       |
+| **Primary surface**         | Document editor (TipTap WYSIWYG)                    | Form views generated from your schema         |
+| **Runs where?**             | Hosted by you; writers use a browser                | Locally via CLI, or with cloud offering       |
+| **Non-developer usability** | Designed for it                                     | Requires the project and tooling set up first |
+| **AI copilot**              | Built in (any OpenAI-compatible endpoint)           | Not bundled                                   |
+| **Voice-to-text**           | Built in (Whisper)                                  | Not bundled                                   |
+| **Newsletters**             | Built in via Newsy: GitHub-backed, no email service | Not bundled                                   |
+| **MDX / rich content**      | Markdown pass-through                               | Strong MDX support                            |
+| **Licensing**               | Apache 2.0                                          | Open source (MIT)                             |
 
 ---
 

@@ -32,7 +32,7 @@ defines `nav.home` and `nav.brews`, not `nav`. Flatten every object to dotted pa
 Two shapes need care, and both are about what the scan cannot see:
 
 - **Scoped translators.** `useTranslations("nav")` followed by `t("home")` references `nav.home`, not `home`. Resolve the scope from the call that created the translator before matching, and when the scope isn't statically obvious, treat every key that function references as unresolvable rather than guessing a prefix.
-- **Computed keys.** `` t(`plan.${tier}.name`) `` names a family, not a key. There is no way to enumerate it from source, so do not try.
+- **Computed keys.** ``t(`plan.${tier}.name`)`` names a family, not a key. There is no way to enumerate it from source, so do not try.
 
 **4. Compare, in both directions, and count what you couldn't resolve.** The unresolvable count is part of the result, not a footnote to omit: a check that compared 40 of 120 call sites and reported "no missing keys" has said almost nothing, and the number is what tells the user which it was.
 
@@ -44,4 +44,4 @@ Two shapes need care, and both are about what the scan cannot see:
 
 ## What this step is not
 
-It is not a translation-completeness check — that is `crowdin status`, after the upload, and it answers a different question (are the *translations* done, not are the *strings* present). It is not a lint of the library's API — that is the library's own skills' job. And it is not a substitute for `recall_self_check`: this step compares keys that exist against keys that are used, while recall looks for user-visible strings that were never given a key at all. A connect-only run on a runtime catalog wants both.
+It is not a translation-completeness check — that is `crowdin status`, after the upload, and it answers a different question (are the _translations_ done, not are the _strings_ present). It is not a lint of the library's API — that is the library's own skills' job. And it is not a substitute for `recall_self_check`: this step compares keys that exist against keys that are used, while recall looks for user-visible strings that were never given a key at all. A connect-only run on a runtime catalog wants both.

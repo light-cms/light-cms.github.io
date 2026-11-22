@@ -4,19 +4,12 @@ description: What GitCMS is, how it keeps human and AI edits reviewable in your 
 serial: 15
 date: 2026-10-14T13:20:00Z
 draft: false
-keywords:
+
+tags:
+  - cms
   - gitcms
-  - gitcms vs pages cms
-  - ai cms for websites
-  - git based cms
-  - cms for ai built sites
-preview: /og-image.webp
-taxonomies:
-  tags:
-    - cms
-    - gitcms
-    - ai
-    - git
+  - ai
+  - git
 ---
 
 [GitCMS](https://gitcms.dev) takes the Git based CMS model and aims it at a very 2026 problem: websites are increasingly **built with AI agents**, and teams need one safe place where humans and agents can edit, review, and publish changes before the repository descends into chaos. It keeps the same foundation as every Git CMS (content lives in your repo) but adds editorial structure and AI workflows on top.
@@ -51,12 +44,12 @@ GitCMS connects to your repository and layers a richer editor, editorial workflo
 
 ## How It Compares
 
-| | GitCMS | Pages CMS | LightCMS |
-| :--- | :--- | :--- | :--- |
-| Focus | AI-safe publishing | Simple forms | Full writing workspace |
-| Editor | Rich, AI-assisted | Form-based | TipTap WYSIWYG |
-| Extras | Agent workflows | None | AI copilot, voice-to-text, newsletters |
-| License | Free tier + paid plans | Free (MIT) | Free (Apache 2.0) |
+|         | GitCMS                 | Pages CMS    | LightCMS                               |
+| :------ | :--------------------- | :----------- | :------------------------------------- |
+| Focus   | AI-safe publishing     | Simple forms | Full writing workspace                 |
+| Editor  | Rich, AI-assisted      | Form-based   | TipTap WYSIWYG                         |
+| Extras  | Agent workflows        | None         | AI copilot, voice-to-text, newsletters |
+| License | Free tier + paid plans | Free (MIT)   | Free (Apache 2.0)                      |
 
 - [Pages CMS vs alternatives](/comparison/pagescms/) covers the simple end of the category.
 - [Top Git based CMS platforms](/comparison/top-git-cms/) is the full survey.

@@ -4,7 +4,7 @@ description: >-
   Discover what Markdown is, how it works, its basic syntax, popular flavours,
   and why it has become an essential format for modern documentation, blogging,
   and static site generation.
-date: '2026-10-14T15:00:00.000Z'
+date: "2026-10-14T15:00:00.000Z"
 draft: false
 keywords:
   - what is markdown
@@ -12,9 +12,10 @@ keywords:
   - markdown syntax guide
   - why use markdown
   - markdown for writers
-preview: /og-image.webp
+
 slug: what-is-markdown
 ---
+
 Markdown is plain text with a small set of formatting symbols. John Gruber created it in 2004 as the simplest way to write formatted documents. Two decades later it has become the lingua franca of the web: documentation, README files, notes, newsletters, and millions of sites keep their content in it.
 
 ## Why Markdown Won
@@ -27,11 +28,12 @@ Markdown is plain text with a small set of formatting symbols. John Gruber creat
 
 ## The Syntax You Need
 
-```markdown
+````markdown
 # Heading 1
+
 ## Heading 2
 
-A paragraph with **bold** and *italic* text.
+A paragraph with **bold** and _italic_ text.
 
 - A bullet point
 - Another one
@@ -49,8 +51,9 @@ A paragraph with **bold** and *italic* text.
 ```js
 console.log("hello, web");
 ```
+````
 
-```
+````
 
 That covers the vast majority of real-world writing. Tables, task lists, and footnotes round out the extended syntax that GitHub-flavored Markdown adds.
 
@@ -67,7 +70,7 @@ tags:
 ---
 
 The article begins here.
-```
+````
 
 This YAML front matter is where the CMS lives: titles, dates, drafts, and taxonomies ride along with the Markdown body.
 

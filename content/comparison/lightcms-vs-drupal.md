@@ -10,7 +10,7 @@ keywords:
   - drupal vs static site
   - drupal for small sites
   - modern cms alternatives
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -31,16 +31,16 @@ Comparing it to [LightCMS](https://www.lightcms.me) is almost unfair: they sit a
 
 **LightCMS** is a content editor in front of a repository: Markdown files with front matter, a visual editor, and a static build. It models documents and nothing else.
 
-| | LightCMS | Drupal |
-| :--- | :--- | :--- |
-| **Stack** | Files + SSG + CDN | PHP + SQL database |
-| **Content model** | Front matter fields | Entities, fields, bundles |
-| **Permissions** | Repository access | Granular role/field permissions |
-| **Rendering** | Pre-built static | Server-side, cacheable |
-| **Themes** | Your SSG's templates | Drupal themes + preprocess |
-| **Maintenance** | Content changes only | Core/module updates, security advisories |
-| **Skill to run** | Browser for writers | Developers for nearly everything |
-| **Cost** | Hosting | Hosting + developer time |
+|                   | LightCMS             | Drupal                                   |
+| :---------------- | :------------------- | :--------------------------------------- |
+| **Stack**         | Files + SSG + CDN    | PHP + SQL database                       |
+| **Content model** | Front matter fields  | Entities, fields, bundles                |
+| **Permissions**   | Repository access    | Granular role/field permissions          |
+| **Rendering**     | Pre-built static     | Server-side, cacheable                   |
+| **Themes**        | Your SSG's templates | Drupal themes + preprocess               |
+| **Maintenance**   | Content changes only | Core/module updates, security advisories |
+| **Skill to run**  | Browser for writers  | Developers for nearly everything         |
+| **Cost**          | Hosting              | Hosting + developer time                 |
 
 ---
 

@@ -53,16 +53,16 @@ An app whose methods are not the shared set is driven through `crowdin app metho
 
 The CLI prints the app's own message when the app sends one. Exit codes are the CLI's usual ones (the `crowdin-cli` skill lists them).
 
-| What you see | Meaning | Next |
-|---|---|---|
-| `'<app>' returned 4xx: <message>` | The app rejected the request | Fix the request per the message |
-| `'<app>' returned 501: ... does not support syncing by entry ID` | The app cannot filter by entry ID | Send the `files` form (step 4) |
-| `Application '<app>' declares '<path>' for POST, not GET. Pass -X POST or --input` (exit 102) | The path is declared for another verb; a write sent without `-X POST` or `--input` goes out as GET | Add the flag the message names |
-| `Application '<app>' does not declare '<VERB> <path>'` (exit 102) | The app has no such path, usually a typo | Check the path against `crowdin app methods <app>` |
-| `Application '<app>' is not installed` (exit 102) | No installed app has that identifier | Check it against `crowdin app list` |
-| `Application '<app>' declares no GET job-info; --wait needs it` | The app has no shared job method | Follow the job through the app's own method (see "Discovery") |
-| Exit 103 | The token lacks `application.proxy` | A token with that scope |
-| `Request to '<app>' failed with status N` | The response carried no readable message | Report the status and the command; the app gave no details |
+| What you see                                                                                  | Meaning                                                                                            | Next                                                          |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `'<app>' returned 4xx: <message>`                                                             | The app rejected the request                                                                       | Fix the request per the message                               |
+| `'<app>' returned 501: ... does not support syncing by entry ID`                              | The app cannot filter by entry ID                                                                  | Send the `files` form (step 4)                                |
+| `Application '<app>' declares '<path>' for POST, not GET. Pass -X POST or --input` (exit 102) | The path is declared for another verb; a write sent without `-X POST` or `--input` goes out as GET | Add the flag the message names                                |
+| `Application '<app>' does not declare '<VERB> <path>'` (exit 102)                             | The app has no such path, usually a typo                                                           | Check the path against `crowdin app methods <app>`            |
+| `Application '<app>' is not installed` (exit 102)                                             | No installed app has that identifier                                                               | Check it against `crowdin app list`                           |
+| `Application '<app>' declares no GET job-info; --wait needs it`                               | The app has no shared job method                                                                   | Follow the job through the app's own method (see "Discovery") |
+| Exit 103                                                                                      | The token lacks `application.proxy`                                                                | A token with that scope                                       |
+| `Request to '<app>' failed with status N`                                                     | The response carried no readable message                                                           | Report the status and the command; the app gave no details    |
 
 ## Job results
 

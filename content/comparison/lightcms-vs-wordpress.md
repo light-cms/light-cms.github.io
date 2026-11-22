@@ -10,7 +10,7 @@ keywords:
   - wordpress without database
   - static site vs wordpress
   - switch from wordpress
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -28,18 +28,18 @@ LightCMS is not a WordPress competitor in the marketplace sense. It is an answer
 
 ## The Architecture, Side by Side
 
-| | LightCMS | WordPress |
-| :--- | :--- | :--- |
-| **Storage** | Markdown files in Git | MySQL database |
-| **Rendering** | Pre-built static HTML | PHP per request |
-| **Runtime** | None | PHP + web server + DB, always on |
-| **Versioning** | Git history, diffs, revert | Revisions plugin / post meta |
-| **Security** | Nothing to exploit at runtime | Core, plugin, and theme patching |
-| **Performance** | CDN cache hit | Rendered per request (cacheable) |
-| **Cost at scale** | Bandwidth only | Server tier rises with traffic |
-| **Editor** | WYSIWYG document editor | Block editor in admin |
-| **Ecosystem** | Small, focused | Enormous |
-| **Lock-in** | None: files you own | Database you must migrate |
+|                   | LightCMS                      | WordPress                        |
+| :---------------- | :---------------------------- | :------------------------------- |
+| **Storage**       | Markdown files in Git         | MySQL database                   |
+| **Rendering**     | Pre-built static HTML         | PHP per request                  |
+| **Runtime**       | None                          | PHP + web server + DB, always on |
+| **Versioning**    | Git history, diffs, revert    | Revisions plugin / post meta     |
+| **Security**      | Nothing to exploit at runtime | Core, plugin, and theme patching |
+| **Performance**   | CDN cache hit                 | Rendered per request (cacheable) |
+| **Cost at scale** | Bandwidth only                | Server tier rises with traffic   |
+| **Editor**        | WYSIWYG document editor       | Block editor in admin            |
+| **Ecosystem**     | Small, focused                | Enormous                         |
+| **Lock-in**       | None: files you own           | Database you must migrate        |
 
 ---
 

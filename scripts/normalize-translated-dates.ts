@@ -53,7 +53,9 @@ function parseFrontMatter(text: string): FrontMatter | null {
 	return null;
 }
 
-function splitKeyValue(line: string): { key: string; prefix: string; value: string } | null {
+function splitKeyValue(
+	line: string,
+): { key: string; prefix: string; value: string } | null {
 	const match = line.match(/^([A-Za-z_][\w.-]*)(\s*[:=]\s*)(.*)$/);
 	if (!match) return null;
 	return { key: match[1], prefix: `${match[1]}${match[2]}`, value: match[3] };
@@ -91,8 +93,10 @@ for (const translatedPath of await walk(contentDir)) {
 	const match = translatedPath.match(translatedNamePattern);
 	if (!match) continue;
 
-	const [, stem, locale] = match;
-	const sourcePath = join(translatedPath.slice(0, -`${locale}.md`.length) + "md");
+	const [, _stem, locale] = match;
+	const sourcePath = join(
+		`${translatedPath.slice(0, -`${locale}.md`.length)}md`,
+	);
 	const source = await readFile(sourcePath, "utf8").catch(() => null);
 	if (!source) continue;
 

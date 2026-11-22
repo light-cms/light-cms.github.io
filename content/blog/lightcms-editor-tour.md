@@ -10,7 +10,7 @@ keywords:
   - visual editor for markdown
   - tiptap editor
   - markdown wysiwyg
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - lightcms
@@ -42,18 +42,23 @@ You get the immediacy of a word processor with the durability of plain text. The
 ## What You Can Drop Into a Post
 
 ### Structured text
+
 Headings, block quotes, ordered and unordered lists, horizontal rules, and task lists: the full skeleton of a technical article, all keyboard-reachable.
 
 ### Code Blocks with Highlighting
+
 Insert a fenced block, pick the language, and the editor keeps the fence and language tag intact. Your published post renders with the same syntax highlighting your SSG already applies.
 
 ### Math with KaTeX
+
 Write inline math or display equations and see them typeset live. For technical publishing such as ML posts, physics notes, and algorithm write-ups, this removes the "compile to check the formula" loop.
 
 ### Tables
+
 Insert rows and columns visually. Markdown tables are miserable to author by hand; here they are just cells.
 
 ### Media
+
 Drag images onto the page. [LightCMS](https://lightcms.me) stores the file, generates the reference, and writes it into your content, so a screenshot goes from clipboard to published without a trip through your file system.
 
 ---

@@ -1,10 +1,10 @@
 ---
-title: 'Dictate Your Drafts: Voice to Text in LightCMS'
+title: "Dictate Your Drafts: Voice to Text in LightCMS"
 description: >-
   How LightCMS turns spoken ideas into structured Markdown with Whisper
   transcription: record, review, and edit a dictated post without leaving the
   browser.
-date: '2026-10-16T09:30:00.000Z'
+date: "2026-10-16T09:30:00.000Z"
 draft: false
 keywords:
   - voice to text markdown
@@ -12,9 +12,10 @@ keywords:
   - whisper transcription cms
   - speech to text writing
   - lightcms voice
-preview: /og-image.webp
+
 slug: lightcms-voice-to-text
 ---
+
 Typing is a bottleneck no one quantifies. A conversational speaker rates 150 wpm and a good typist 40-60. After 15 minutes in a post, when it's still slippery, speaking is three times faster than typing.
 
 [LightCMS](https://lightcms.me) Features dictation. Hit record, speak, and your words are written to your draft.
@@ -51,10 +52,9 @@ There is a bit of pattern to this; dictation favors a bit of form. The most prod
 - Maybe talk first, structure second. Say it all in the first draft, doesn't get bogged down in sections.
 - Stop and read it back What you've spoken will be full of repetition that seemed right at the time. Remove it before it gets stuck in the draft.
 - Name down the new section where the thought changed. Now let's talk about deployment. Promote to ## heading by adding # before it. The transcript has already told you where the sections are.
-- 
+-
   > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
-
-10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
+  > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---
 

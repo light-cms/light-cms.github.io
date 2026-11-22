@@ -13,7 +13,7 @@ Skip whatever the user's message already answered and ask only what is missing, 
 **Where terms land**, in priority order:
 
 1. What the user said - "add to Acme Glossary", "create a new glossary called X". It overrides everything below, including the glossary they are viewing.
-2. The glossary they are viewing, when they said nothing about placement. Use it and say so in one line ("Adding to *Acme Glossary*, the one you're viewing").
+2. The glossary they are viewing, when they said nothing about placement. Use it and say so in one line ("Adding to _Acme Glossary_, the one you're viewing").
 3. Otherwise, ask: an existing glossary (the project's attached ones first, then organization glossaries that look relevant), or a new one with `add_glossary` (its name and source language).
 
 A new glossary for a project in scope is attached with `edit_project` (`defaultGlossaryId`).
@@ -22,8 +22,8 @@ A new glossary for a project in scope is attached with `edit_project` (`defaultG
 
 **Pacing.** Ask, recommending rounds:
 
-- *Rounds* - the default. About ten candidates at a time: the user edits, you apply, repeat.
-- *Autonomous fill* - only when the user asks for it ("just go", "don't check every batch"). Mine everything, apply what meets the bar in one pass, report at the end. Even then, stop for a translation conflict in paired material and for a write failure that repeats across terms.
+- _Rounds_ - the default. About ten candidates at a time: the user edits, you apply, repeat.
+- _Autonomous fill_ - only when the user asks for it ("just go", "don't check every batch"). Mine everything, apply what meets the bar in one pass, report at the end. Even then, stop for a translation conflict in paired material and for a write failure that repeats across terms.
 
 ## 3. Mine
 
@@ -47,7 +47,7 @@ Questions that came up while mining - which pages of an index to follow, whether
 
 ## 5. Apply
 
-Crowdin separates the *concept* - the idea, shared across languages - from its *terms*, one per language. For each approved candidate:
+Crowdin separates the _concept_ - the idea, shared across languages - from its _terms_, one per language. For each approved candidate:
 
 1. `add_term(glossaryId, languageId: <source>, text: <dictionary form>, partOfSpeech, type, status: "preferred")`. The response carries the `conceptId`. Leave `description` empty unless there is a note specific to this language.
 2. `update_concept(glossaryId, conceptId, definition: <the approved definition>, subject?)` for every term. The concept's definition is what translators see, and a term without one is barely useful. For a do-not-translate entry, also set `translatable: false` here, and put "Do not translate" in the term's `note`.

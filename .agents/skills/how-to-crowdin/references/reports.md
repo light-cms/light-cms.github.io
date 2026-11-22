@@ -21,16 +21,16 @@ The rules behind Crowdin's built-in reports: Cost estimate, Translation cost, Au
 6. **Answer from the report's file**, and from the documentation for what step 5 found there: the rule first, then the user's case or numbers. When a rule depends on a setting, name the setting and its value in the archive or in the settings the user gave. When something is not counted at all, say so plainly. Done when every number or behavior the user asked about is tied to a named rule, and to the setting's value where the rule depends on one, or is named as depending on a setting whose value could not be read, or as something neither these files nor the documentation answers.
 7. **Say so rather than guess** when neither these files nor the documentation answers a question. These reports often behave differently from what their column names suggest, so a gap filled from intuition is usually wrong.
 
-| Report | File | Levels | API report name (project / workspace) | Archived |
-|---|---|---|---|---|
-| Cost estimate | `references/reports/cost-estimate.md` | project | `costs-estimation-pe` / none | yes |
-| Translation cost | `references/reports/translation-cost.md`; figures from it: `references/reports/translation-cost-figures.md` | project, workspace | `translation-costs-pe` / `group-translation-costs-pe` | yes |
-| Auto-Translation accuracy | `references/reports/auto-translation-accuracy.md` | project, workspace | `pre-translate-accuracy` / `group-pre-translate-accuracy` | yes |
-| Translator accuracy | `references/reports/translator-accuracy.md` | project, workspace | `translator-accuracy` / `group-translator-accuracy` | yes |
-| Task usage (Enterprise only) | `references/reports/task-usage.md` | project, workspace | `task-usage` / `group-task-usage` | no |
-| Time spent | `references/reports/time-spent.md` | project, workspace | `time-spent` / `group-time-spent` | yes |
-| Top members | `references/reports/top-members.md` | project, workspace | `top-members` / `group-top-members` | no |
-| AI usage | `references/reports/ai-usage.md` | organization (crowdin.com: the user's own account) | `tokens-usage-raw-data`, `costs-by-users` | no |
+| Report                       | File                                                                                                        | Levels                                             | API report name (project / workspace)                     | Archived |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------- | -------- |
+| Cost estimate                | `references/reports/cost-estimate.md`                                                                       | project                                            | `costs-estimation-pe` / none                              | yes      |
+| Translation cost             | `references/reports/translation-cost.md`; figures from it: `references/reports/translation-cost-figures.md` | project, workspace                                 | `translation-costs-pe` / `group-translation-costs-pe`     | yes      |
+| Auto-Translation accuracy    | `references/reports/auto-translation-accuracy.md`                                                           | project, workspace                                 | `pre-translate-accuracy` / `group-pre-translate-accuracy` | yes      |
+| Translator accuracy          | `references/reports/translator-accuracy.md`                                                                 | project, workspace                                 | `translator-accuracy` / `group-translator-accuracy`       | yes      |
+| Task usage (Enterprise only) | `references/reports/task-usage.md`                                                                          | project, workspace                                 | `task-usage` / `group-task-usage`                         | no       |
+| Time spent                   | `references/reports/time-spent.md`                                                                          | project, workspace                                 | `time-spent` / `group-time-spent`                         | yes      |
+| Top members                  | `references/reports/top-members.md`                                                                         | project, workspace                                 | `top-members` / `group-top-members`                       | no       |
+| AI usage                     | `references/reports/ai-usage.md`                                                                            | organization (crowdin.com: the user's own account) | `tokens-usage-raw-data`, `costs-by-users`                 | no       |
 
 crowdin.com capitalizes the page names (Cost Estimate, Top Members). Members who are neither managers nor language coordinators see Translation cost as My Contribution (crowdin.com) or My activity (Enterprise), and Cost estimate only by task: it covers all of the task's strings, not only their share. Auto-Translation accuracy archives saved before match scores existed show older metrics (Edit rate, Average Edit Distance), not covered here, under the same API name; `pre-translate-efficiency` is only a deprecated API alias that generates the current report.
 
@@ -63,15 +63,15 @@ A request for a figure from Crowdin data (what we spent, a price per word, a bre
 - The UI sends whole days in the viewer's time zone and defaults to the last 30 days (Cost estimate: since the project was created). Through the API an explicit offset (`+02:00`) is honoured and a date without one is UTC; without dates the period runs from the project's or workspace's creation to now. Both ends are included.
 - Each report decides with its own date:
 
-| Report | The date that puts something into the period |
-|---|---|
-| Cost estimate | the string was added or its source last changed |
-| Translation cost | the person's first save of a translation for that string; the approver's first approval |
-| Auto-Translation accuracy | the auto-translation was created, or last edited in place |
-| Translator accuracy | the person's translation was created, or last edited in place |
-| Task usage | the task was created; the Resolved line uses the task's resolved date (set when it is first marked Done or Closed, or entered on the task) |
-| Time spent | time was first logged on that task comment |
-| Top members | first translation, first approval, first vote; votes received use the voter's first vote on the string, and Winning the approver's first approval of it |
+| Report                    | The date that puts something into the period                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cost estimate             | the string was added or its source last changed                                                                                                         |
+| Translation cost          | the person's first save of a translation for that string; the approver's first approval                                                                 |
+| Auto-Translation accuracy | the auto-translation was created, or last edited in place                                                                                               |
+| Translator accuracy       | the person's translation was created, or last edited in place                                                                                           |
+| Task usage                | the task was created; the Resolved line uses the task's resolved date (set when it is first marked Done or Closed, or entered on the task)              |
+| Time spent                | time was first logged on that task comment                                                                                                              |
+| Top members               | first translation, first approval, first vote; votes received use the voter's first vote on the string, and Winning the approver's first approval of it |
 
 ### Rates and currency
 

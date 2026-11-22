@@ -1,5 +1,5 @@
 ---
-title: "Astro vs Hugo: Which Static Site Generator Should You Use in 2026?"
+title: "Astro vs Hugo: Which Static Site Generator Is Best?"
 description: Astro and Hugo compared on performance, content collections,
   templating languages, build speed, and authoring experience, with a
   recommendation for each use case.
@@ -11,7 +11,7 @@ keywords:
   - best static site generator
   - astro or hugo for blog
   - static site generator comparison
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - astro
@@ -20,6 +20,7 @@ taxonomies:
     - sites
     - ssg
 ---
+
 [Astro](https://astro.build) and [Hugo](https://gohugo.io) are two of the most popular static site generators in 2026. The search "Astro vs Hugo" hides a simple truth: **both ship fast static sites; they differ in who feels at home**. Hugo rewards Go templates and raw build speed; Astro rewards component-driven development with React, Svelte, Vue, or plain HTML.
 
 ---
@@ -42,10 +43,10 @@ taxonomies:
 
 ## Content Collections and Front Matter
 
-Both generators are built around Markdown files with YAML front matter, which means both work identically with any Git based CMS: 
-    your content stays in your repository as plain files, and publishing is just a commit.
+Both generators are built around Markdown files with YAML front matter, which means both work identically with any Git based CMS:
+your content stays in your repository as plain files, and publishing is just a commit.
 
-Astro adds content collection schemas that validate front matter at build time. That's a real advantage for teams: 
+Astro adds content collection schemas that validate front matter at build time. That's a real advantage for teams:
 a malformed `date` or missing `title` fails the build instead of silently rendering a broken page.
 
 ## Themes and Ecosystem

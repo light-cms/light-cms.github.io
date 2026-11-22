@@ -127,15 +127,15 @@ crowdin status -o toon
 
 Exit codes are stable and meaningful — branch on them rather than parsing error text:
 
-| Code | Meaning |
-|------|---------|
-| 0 | Success |
-| 1 | General error |
-| 2 | Validation error (bad config or arguments) |
-| 101 | Authorization error (bad/expired token) |
-| 102 | Not found |
-| 103 | Forbidden |
-| 129 | Rate limit exceeded |
+| Code | Meaning                                    |
+| ---- | ------------------------------------------ |
+| 0    | Success                                    |
+| 1    | General error                              |
+| 2    | Validation error (bad config or arguments) |
+| 101  | Authorization error (bad/expired token)    |
+| 102  | Not found                                  |
+| 103  | Forbidden                                  |
+| 129  | Rate limit exceeded                        |
 
 Mutating file commands accept `--dryrun` to preview what would happen. Add `-v/--verbose` when diagnosing; `--no-progress`/`--no-colors` clean up logs in CI (json/toon modes already imply this).
 
@@ -143,32 +143,32 @@ Mutating file commands accept `--dryrun` to preview what would happen. Add `-v/-
 
 24 top-level commands; most have subcommands. Full option-level reference: [references/commands.md](references/commands.md).
 
-| Command | Purpose |
-|---------|---------|
-| `upload` (`push`) | Upload sources / translations per crowdin.yml |
-| `download` (`pull`) | Download translations / sources per crowdin.yml |
-| `init` | Generate crowdin.yml interactively |
-| `login` | Authorize in the browser and save the token to `~/.crowdin.yml` |
-| `status` | Translation & proofreading progress |
-| `auto-translate` | Pre-fill translations via TM / MT / AI (status, list) |
-| `file` | Direct file ops without config patterns (list, upload, download, delete) |
-| `string` | Manage source strings (list, add, edit, delete; CroQL filters) |
-| `branch` | Manage branches (add, list, clone, merge, edit, delete) |
-| `task` | Create and list translation/proofreading tasks |
-| `tm` | Translation memories (list, upload, download; `list --assigned` scopes to the project) |
-| `glossary` | Glossaries (list, upload, download; `list --assigned` scopes to the project) |
-| `style-guide` | Style guides (list, download, upload, delete) |
-| `ai-prompt` | AI prompts (list; `--action pre_translate --assigned` finds the IDs `auto-translate --method ai` takes) |
-| `bundle` | Export bundles (list, add, download, clone, browse) |
-| `distribution` | Content distributions (add, list, edit, release) |
-| `screenshot` | Screenshots for context (list, upload a file or a directory, delete) |
-| `comment` | String comments and issues (list, add, resolve) |
-| `label` | Labels (list, add, delete) |
-| `language` | List project/supported languages; `--verbose` adds text direction and plural categories |
-| `project` | List, add, browse projects |
-| `config` | Validate config, preview matched sources/translations |
-| `app` | Installed apps: list, install, uninstall, and call their API methods (the import, push and jobs loop is `integration-sync`) |
-| `context` | AI context for strings: download, upload, coverage status, reset — see [references/context.md](references/context.md) |
+| Command             | Purpose                                                                                                                     |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `upload` (`push`)   | Upload sources / translations per crowdin.yml                                                                               |
+| `download` (`pull`) | Download translations / sources per crowdin.yml                                                                             |
+| `init`              | Generate crowdin.yml interactively                                                                                          |
+| `login`             | Authorize in the browser and save the token to `~/.crowdin.yml`                                                             |
+| `status`            | Translation & proofreading progress                                                                                         |
+| `auto-translate`    | Pre-fill translations via TM / MT / AI (status, list)                                                                       |
+| `file`              | Direct file ops without config patterns (list, upload, download, delete)                                                    |
+| `string`            | Manage source strings (list, add, edit, delete; CroQL filters)                                                              |
+| `branch`            | Manage branches (add, list, clone, merge, edit, delete)                                                                     |
+| `task`              | Create and list translation/proofreading tasks                                                                              |
+| `tm`                | Translation memories (list, upload, download; `list --assigned` scopes to the project)                                      |
+| `glossary`          | Glossaries (list, upload, download; `list --assigned` scopes to the project)                                                |
+| `style-guide`       | Style guides (list, download, upload, delete)                                                                               |
+| `ai-prompt`         | AI prompts (list; `--action pre_translate --assigned` finds the IDs `auto-translate --method ai` takes)                     |
+| `bundle`            | Export bundles (list, add, download, clone, browse)                                                                         |
+| `distribution`      | Content distributions (add, list, edit, release)                                                                            |
+| `screenshot`        | Screenshots for context (list, upload a file or a directory, delete)                                                        |
+| `comment`           | String comments and issues (list, add, resolve)                                                                             |
+| `label`             | Labels (list, add, delete)                                                                                                  |
+| `language`          | List project/supported languages; `--verbose` adds text direction and plural categories                                     |
+| `project`           | List, add, browse projects                                                                                                  |
+| `config`            | Validate config, preview matched sources/translations                                                                       |
+| `app`               | Installed apps: list, install, uninstall, and call their API methods (the import, push and jobs loop is `integration-sync`) |
+| `context`           | AI context for strings: download, upload, coverage status, reset — see [references/context.md](references/context.md)       |
 
 Shell completion: `source <(crowdin complete zsh)` (also `bash`, `fish`, `powershell`).
 

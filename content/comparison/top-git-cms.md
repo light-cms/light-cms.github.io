@@ -10,7 +10,7 @@ keywords:
   - decap cms alternatives
   - tinacms vs keystatic
   - file based cms
-preview: /og-image.webp
+
 taxonomies:
   tags:
     - cms
@@ -25,15 +25,15 @@ The Git based CMS category has matured quickly. A decade ago the options were "e
 
 ## Comparison Matrix
 
-| CMS | Model | Editor | Best For |
-| :--- | :--- | :--- | :--- |
-| **Decap CMS** (formerly Netlify CMS) | Git based app | React admin UI | Classic Netlify/Cloudflare setups |
-| **TinaCMS** | Visual editing on the site | Inline WYSIWYG | Content edited directly in the page |
-| **Keystatic** | Local-first Git files | React forms | Next.js/Astro teams wanting local files |
-| **Pages CMS** | Git based dashboard | Form-based | Teams wanting a familiar CMS layout |
-| **Sveltia CMS** | Browser-hosted Git editor | Lightweight admin UI | Quick, free, zero-backend editing |
-| **CloudCannon** | Managed Git CMS | Visual editing | Agencies managing client sites |
-| **LightCMS** | Self-hosted Git workspace | TipTap WYSIWYG | Writers who want one-click publishing |
+| CMS                                  | Model                      | Editor               | Best For                                |
+| :----------------------------------- | :------------------------- | :------------------- | :-------------------------------------- |
+| **Decap CMS** (formerly Netlify CMS) | Git based app              | React admin UI       | Classic Netlify/Cloudflare setups       |
+| **TinaCMS**                          | Visual editing on the site | Inline WYSIWYG       | Content edited directly in the page     |
+| **Keystatic**                        | Local-first Git files      | React forms          | Next.js/Astro teams wanting local files |
+| **Pages CMS**                        | Git based dashboard        | Form-based           | Teams wanting a familiar CMS layout     |
+| **Sveltia CMS**                      | Browser-hosted Git editor  | Lightweight admin UI | Quick, free, zero-backend editing       |
+| **CloudCannon**                      | Managed Git CMS            | Visual editing       | Agencies managing client sites          |
+| **LightCMS**                         | Self-hosted Git workspace  | TipTap WYSIWYG       | Writers who want one-click publishing   |
 
 ---
 
