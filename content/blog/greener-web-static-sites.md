@@ -1,24 +1,21 @@
 ---
-title: "Static Sites and CO2: Building a Greener Web"
-description: Why static sites emit less carbon than dynamic ones, how CDN caching cuts energy use, how to measure your website's footprint, and what a greener web looks like.
+title: Static Sites and carbon emission building a Greener Web
+description: >-
+  Explore how static sites and CDN caching can reduce the energy demands of
+  serving web pages, how to estimate your site’s carbon footprint, and what a
+  greener web could look like.
 serial: 16
-date: 2026-10-14T13:30:00Z
+date: '2026-10-14T13:30:00.000Z'
 draft: false
-keywords:
+tags:
   - low carbon website
   - static site co2
   - greener web
   - sustainable web design
   - website carbon footprint
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - sustainability
-    - static-sites
-    - green-web
-    - co2
+slug: greener-web-static-sites
 ---
-
 Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **static sites sit at the clean end**.
 
 ---
@@ -46,8 +43,8 @@ Owning your content as Markdown in Git is the durable, low-waste option.
 
 You cannot improve what you do not measure:
 
-- **[Website Carbon Calculator](https://www.websitecarbon.com/)**: estimates the grams of CO2 emitted per page view and compares your site to others.
-- **[Ecograder](https://ecograder.com/)** gives a comparable estimate, alongside performance and accessibility scoring.
+- [**Website Carbon Calculator**](https://www.websitecarbon.com/): estimates the grams of CO2 emitted per page view and compares your site to others.
+- [**Ecograder**](https://ecograder.com/) gives a comparable estimate, alongside performance and accessibility scoring.
 - Real-user metrics matter too: Largest Contentful Paint and total bytes transferred correlate directly with energy per view.
 
 The [LightCMS](https://lightcms.me) site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
