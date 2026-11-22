@@ -1,12 +1,12 @@
 ---
-title: 'Content as Code: Treating Writing Like Source Code'
+title: Content as Code treating Writing Like a version controlled source code
 description: >-
-  Content as code means storing writing as plain text in a repository, reviewed
-  and deployed like software, with the workflow benefits and the real
-  limitations.
+  Treat content like code, version it, review changes, and manage it alongside
+  your projects. This post explores the benefits and practicalities of a content
+  as code workflow.
 date: '2026-11-04T19:22:00Z'
 draft: false
-keywords:
+tags:
   - content as code
   - docs as code
   - content in git
@@ -16,12 +16,7 @@ isCJKLanguage: false
 headless: false
 serial: 47
 preview: /og-image.png
-taxonomies:
-  tags:
-    - git
-    - workflow
-    - cms
-    - explainers
+slug: content-as-code
 ---
 **Content as code** is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
 
