@@ -22,8 +22,6 @@ slug: content-as-code
 
 "Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
 
----
-
 ## The Three Commitments
 
 Content as code comes down to three choices:
