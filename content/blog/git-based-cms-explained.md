@@ -1,8 +1,10 @@
 ---
-title: "What Is a Git-Based CMS? Architecture, Workflow, and Trade-Offs"
-description: "A Git based CMS stores content as files in a repository and commits edits like code: the architecture, the workflow, and when it beats a database."
+title: What Is a Git Based CMS?
+description: >-
+  A Git based CMS stores content as files in a repository and commits edits like
+  code: the architecture, the workflow, and when it beats a database.
 serial: 43
-date: 2026-10-16T10:50:00Z
+date: '2026-10-16T10:50:00.000Z'
 draft: false
 keywords:
   - what is a git based cms
@@ -17,8 +19,8 @@ taxonomies:
     - git
     - static-sites
     - explainers
+slug: git-based-cms-explained
 ---
-
 A **Git based CMS** is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
 
 That single design choice (files, not rows) cascades into everything else about how these tools behave: versioning, portability, cost, security, and who can use them.
@@ -82,15 +84,19 @@ One write replaces four separate systems in a conventional stack.
 ## The Workflow Properties You Get Free
 
 ### Version history with real diffs
+
 Markdown diffs are legible. "Who changed this sentence, and when" is a one-line `git log`, not a plugin or a database query.
 
 ### Rollback per file
+
 Revert one post without touching anything else. Restoring a database backup rolls back the whole site, usually silently.
 
 ### Branches and pull requests as editorial review
+
 Write on a branch, submit a PR, take line-level comments on the exact paragraph, merge when approved. GitHub's native review tools become an editorial workflow.
 
 ### Portable content
+
 The content is plain text. Move generators, move hosts, move CMS tools: the archive walks out with you.
 
 ---
@@ -126,11 +132,11 @@ That last point is where most evaluations land. The architecture is usually righ
 
 ### Is a Git based CMS the same as a headless CMS?
 
-No. Headless describes *how content reaches a frontend* (through an API); Git based describes *where content lives* (files in a repository). The two ideas overlap in practice; see [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
+1. Headless describes *how content reaches a frontend* (through an API); Git based describes *where content lives* (files in a repository). The two ideas overlap in practice; see [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
 
 ### Do I need to know Git to use one?
 
-No. You need Git if you want to inspect history or manage branches yourself; the editor handles the commits.
+1. You need Git if you want to inspect history or manage branches yourself; the editor handles the commits.
 
 ### Can a Git based CMS handle a large site?
 
