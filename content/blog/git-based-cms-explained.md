@@ -132,7 +132,7 @@ Yes. Generators build thousands of pages quickly, and the repository handles con
 
 ### Does it work with my static site generator?
 
-Yes—if your generator can read Markdown files with front‑matter, such as Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, or Next.js.
+Yes if your generator can read Markdown files with front‑matter, such as Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, or Next.js.
 
 ### Where does media go?
 
