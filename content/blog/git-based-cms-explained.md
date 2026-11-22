@@ -46,8 +46,6 @@ Three properties define the category:
 
 Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) Works through the comparison.
 
----
-
 ## What a Commit Does
 
 When a writer hits publish, the CMS serializes the document to Markdown with YAML front matter and commits it:
@@ -81,7 +79,7 @@ One write replaces four separate systems in a conventional stack.
 
 Markdown diffs are legible. "Who changed this sentence, and when" is a one-line `git log`, not a plugin or a database query.
 
-### Rollback per file
+### Roll back per file
 
 Revert one post without touching anything else. Restoring a database backup rolls back the whole site, usually silently.
 
@@ -91,11 +89,11 @@ Write on a branch, submit a PR, take line-level comments on the exact paragraph,
 
 ### Portable content
 
-The content is plain text. Move generators, move hosts, move CMS tools: the archive walks out with you.
+The content is stored as plain text, enabling seamless migration across generators, hosts, and CMS platforms the archive moves with you.
 
 ---
 
-## The Trade-Offs (Stated Honestly)
+## The TradeOffs (Stated Honestly)
 
 Git based is not a universal win:
 
@@ -103,11 +101,9 @@ Git based is not a universal win:
 - **Rebuild latency.** A change is live after a build, not after a save. Modern builds are fast, but "instant" is measured in seconds to minutes.
 - **Merge conflicts.** Two people editing the same file create a real conflict. Well-designed CMS tools scope this (one post per file), but it exists.
 - **Coarse access control.** Repository access is not per-field permissions. If you need granular role enforcement, a database-backed admin is the better tool.
-- **Non-technical onboarding.** Raw Git is hostile to writers, which is the gap a Git based CMS fills: it hides the commits while keeping the benefits.
+- **Nontechnical onboarding.** Raw Git is hostile to writers, which is the gap a Git based CMS fills: it hides the commits while keeping the benefits.
 
 That last point is where most evaluations land. The architecture is usually right for a publication; the question is which tool makes it usable for the people publishing.
-
----
 
 ## What to Look For in One
 
@@ -115,12 +111,10 @@ That last point is where most evaluations land. The architecture is usually righ
 - **Front matter handling.** Malformed metadata breaks builds; a good tool validates it.
 - **Publish model.** Direct commit, or pull request with review.
 - **Provider support.** GitHub, GitLab, Bitbucket: whichever you use.
-- **Hosting model.** Self-hosted (you run it) versus hosted (they run it).
+- **Hosting model.** Self hosted (you run it) versus hosted (they run it).
 - **Exit cost.** It should be zero. If the tool disappeared tomorrow, your repository should still build.
 
 [LightCMS](https://lightcms.me) is built around those criteria; see [what LightCMS is](/blog/what-is-lightcms/). The wider field is surveyed in [top Git based CMS platforms](/comparison/top-git-cms).
-
----
 
 ## Frequently Asked Questions
 
@@ -128,9 +122,9 @@ That last point is where most evaluations land. The architecture is usually righ
 
 1. Headless describes *how content reaches a frontend* (through an API); Git based describes *where content lives* (files in a repository). The two ideas overlap in practice; see [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
 
-### Do I need to know Git to use one?
+### Do I need to know Git to use it?
 
-1. You need Git if you want to inspect history or manage branches yourself; the editor handles the commits.
+1. You don’t need to be familiar with Git to view history or manage branches; the editor handles all commit operations for you.
 
 ### Can a Git based CMS handle a large site?
 
@@ -138,12 +132,10 @@ Yes. Generators build thousands of pages quickly, and the repository handles con
 
 ### Does it work with my static site generator?
 
-If your generator reads Markdown files with front matter (Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, Next.js), yes.
+Yes—if your generator can read Markdown files with front‑matter, such as Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, or Next.js.
 
 ### Where does media go?
 
 Typically to a directory in the repository or an asset bucket referenced from front matter. Either way, the reference lives with the content.
 
----
-
-Next: [headless vs Git based CMS](/blog/headless-vs-git-based-cms/) if you're still weighing architectures, or [what front matter is](/blog/what-is-front-matter/) if the metadata layer is new to you.
+Next: [headless vs Git based CMS](/blog/headless-vs-git-based-cms/) if you're still weighing architectures, or [what front matter is](/blog/what-is-front-matter/) If the metadata layer is new to you.
