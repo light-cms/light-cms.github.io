@@ -2,11 +2,11 @@
 title: What Is a Static Site Generator?
 description: >-
   A static site generator builds every page ahead of time from templates and
-  Markdown content. Here is how SSGs work, what they are good at, and where
-  they struggle.
+  Markdown content. Here is how SSGs work, what they are good at, and where they
+  struggle.
 date: '2026-11-16T08:58:17.908Z'
 draft: false
-keywords:
+tags:
   - what is a static site generator
   - static site generator
   - ssg explained
