@@ -39,7 +39,7 @@ For a personal website with a blog (the project's stated comfort zone), Zine is 
 
 Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git-based CMS workflow does not apply directly.
 
-Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/light-cms/md2smd) can help convert between [CommonMark](https://commonmark.org/) and Zine's formats.
+Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/light-cms/md2smd) can help convert between [CommonMark](https://commonmark.org/) And Zine's formats.
 
 ![Zine build pipeline](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png)
 
