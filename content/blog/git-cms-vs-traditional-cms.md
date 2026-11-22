@@ -74,7 +74,7 @@ A CMS that stores your content as files (usually Markdown with YAML front matter
 
 ### Do I need to know Git to use a Git based CMS?
 
-1. The whole point of a visual Git based editor is that authors never touch the command line; the CMS handles commits, branches, and pull requests for them.
+The whole point of a visual Git based editor is that authors never touch the command line; the CMS handles commits, branches, and pull requests for them.
 
 ### Is a Git based CMS good for SEO?
 
