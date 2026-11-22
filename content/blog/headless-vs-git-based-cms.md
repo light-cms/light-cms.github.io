@@ -109,8 +109,6 @@ The categories blend in practice:
 
 The pragmatic rule: decide where the source of truth should live for *this* Project, not which philosophy you endorse.
 
----
-
 ## A Note on Cost Shapes
 
 Headless pricing usually scales with API calls, seats, or bandwidth: consumption that grows with success. Git based costs are build minutes and hosting, which for static output is close to zero regardless of traffic. For a publication with spiky readership, that difference compounds. See [static vs dynamic sites](/blog/static-vs-dynamic/) For the underlying argument.
