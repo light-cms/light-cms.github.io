@@ -15,9 +15,9 @@ tags:
 preview: /og-image.png
 slug: lightcms-vs-webflow
 ---
-[Webflow](https://webflow.com) is built for a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that can be a strong fit.
+[Webflow](https://webflow.com) Is built for a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that can be a strong fit.
 
-[LightCMS](https://lightcms.me) starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
+[LightCMS](https://lightcms.me) Starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
 
 ---
 
