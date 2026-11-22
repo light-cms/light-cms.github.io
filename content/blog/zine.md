@@ -26,8 +26,6 @@ Zine stands out from other static site generators in several ways:
 - **Its own templating language scripty.** Zine uses SuperHTML and SuperMD: and scripty templating system designed for the project rather than borrowed from an ecosystem.
 - **Scripty**, its scripting layer, adds programmable logic where templates alone fall short.
 - **Content as a collection of files and layouts.** Zine turns content files into HTML, applies your layouts, and copies the result into an output directory, the classic static model run fast.
-- **First-class extras**: Multilingual websites (i18n), editor support, and documented deploy targets: GitHub Pages, Cloudflare Pages, Codeberg Pages, and source hut pages.
-- 
 
 ## The Honest Tradeoff
 
@@ -37,7 +35,7 @@ For a personal website with a blog (the project's stated comfort zone), Zine is 
 
 ## Content and CMS compatibility
 
-Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git-based CMS workflow does not apply directly.
+Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git based CMS workflow does not apply directly.
 
 Zine expects its own content formats, including [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), and [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/light-cms/md2smd) can help convert between [CommonMark](https://commonmark.org/) And Zine's formats.
 
