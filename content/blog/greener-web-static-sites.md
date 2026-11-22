@@ -66,18 +66,14 @@ The [LightCMS](https://lightcms.me) Site displays a live carbon rating in its fo
 
 ## Frequently Asked Questions
 
-### How much CO2 does a typical website emit?
+**How much CO₂ does a typical website emit?**  
+A page view usually releases 0.1–1 g CO₂; heavy, un‑cached pages emit more. Static, cached pages are at the low end.
 
-Estimates vary by method, but a typical page view emits anywhere from a fraction of a gram to about a gram of CO2; heavy, poorly cached pages emit considerably more. Static, cached pages sit at the low end.
+**Does green hosting matter?**  
+Yes. Data‑center energy dominates a site’s footprint; renewable‑powered hosting cuts emissions substantially.
 
-### Does green hosting matter?
+**Is a static blog eco‑friendly?**  
+Yes. Cached files on an edge network, no always‑on database, and long‑lasting, rebuildable content make it one of the greenest options.
 
-Yes. Data-center energy is the dominant factor in a site's footprint; hosting on renewable-powered infrastructure reduces it substantially.
-
-### Is a static blog eco friendly?
-
-Among the greenest options available: cached files served from an edge network, no always-on database, and content that remains readable and rebuildable for decades.
-
-### What is sustainable web design?
-
-A practice of minimizing the energy cost of the web: lean pages, efficient code, renewable hosting, durable content, and measured impact. Static architecture is the foundation.
+**What is sustainable web by design?**  
+Design that minimizes web energy use: lean pages, efficient code, renewable hosting, durable content, and measured impact. Static architecture is the foundation.
