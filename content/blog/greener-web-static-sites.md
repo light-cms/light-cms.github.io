@@ -51,16 +51,16 @@ The [LightCMS](https://lightcms.me) site displays a live carbon rating in its fo
 2. **Choose green hosting**: Providers that power data centers with renewable energy (several major providers now publish their energy sourcing).
 3. **Ship less JavaScript**: Every kilobyte is parsed, executed, and paid for on the visitor's battery.
 4. **Compress and cache images**: media is usually the heaviest part of a page, so serve modern formats with long cache lifetimes.
-5. **Keep content durable**: plain Markdown and open formats mean a site never needs a rebuild from scratch.
-6. **Publish deliberately**: a small, high-value site that people return to beats a sprawling one nobody reads.
+5. **Keep content durable**: Plain Markdown and open formats mean a site never needs a rebuild from scratch.
+6. **Publish deliberately**: A small, high-value site that people return to beats a sprawling one nobody reads.
 
 ## Where [LightCMS](https://lightcms.me) Fits
 
-[LightCMS](https://lightcms.me) follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS runs only while you write. No production database serves readers; the CDN does.
+[LightCMS](https://lightcms.me) Follows these principles: it commits your content as Markdown to your own repository, a static site generator publishes it, and your host's edge network serves the result as cached files. The CMS runs only while you write. No production database serves readers; the CDN does.
 
-- [Static sites vs dynamic sites](/blog/static-vs-dynamic/) covers the architecture in depth.
-- [Top static site hosting platforms](/misc/top-static-site-hosting/) compares where to host sustainably.
-- [Why LightCMS](/blog/why-this/) explains the philosophy behind durable, lightweight publishing.
+- [Static sites vs dynamic sites](/blog/static-vs-dynamic/) Covers the architecture in depth.
+- [Top static site hosting platforms](/misc/top-static-site-hosting/) Compares where to host sustainably.
+- [Why LightCMS](/blog/why-this/) Explains the philosophy behind durable, lightweight publishing.
 
 ---
 
