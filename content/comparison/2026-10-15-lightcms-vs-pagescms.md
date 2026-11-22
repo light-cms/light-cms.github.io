@@ -1,24 +1,20 @@
 ---
-title: "LightCMS vs Pages CMS: Rich Writing vs a Clean Form Over GitHub"
-description: "LightCMS gives writers a full visual editor with AI, dictation, and newsletters. A complete package."
+title: LightCMS vs Pages CMS Rich Writing vs a Form Over GitHub
+description: >-
+  LightCMS gives writers a full editor with AI, dictation, and newsletter. An
+  editor which makes one a writer again
 serial: 41
-date: 2026-10-15T20:09:55Z
+date: '2026-10-15T20:09:55.000Z'
 draft: false
-keywords:
+tags:
   - lightcms vs pages cms
   - pages cms alternatives
   - pages cms review
   - github cms comparison
   - best cms for markdown
 preview: /og-image.png
-taxonomies:
-  tags:
-    - lightcms
-    - pages-cms
-    - cms
-    - comparison
+slug: 2026-10-15-lightcms-vs-pagescms
 ---
-
 [Pages CMS](/comparison/pagescms) earned its reputation by doing one thing cleanly: it puts a well designed form on top of a GitHub repository and hides Git from the person using it. For teams that wanted "a CMS for our repo" without running infrastructure, that was enough.
 
 [LightCMS](https://lightcms.me) starts from the same goal and pushes further into the writing itself. The comparison is less about storage (both commit files to your repository) and more about **what the person publishing actually experiences**.
@@ -27,18 +23,20 @@ taxonomies:
 
 ## Comparison
 
-| | LightCMS | Pages CMS |
-| :--- | :--- | :--- |
-| **Model** | Self-hosted writing workspace | Git based dashboard |
-| **Content store** | Your GitHub repository | Your GitHub repository |
-| **Editing** | Full TipTap WYSIWYG document editor | Form-based fields per content type |
-| **Front matter** | Managed as a validated form | Defined in a YAML config in the repo |
-| **Media** | Drag-and-drop into the document | Media library with field assignment |
-| **AI copilot** | Built in: outline, rephrase, expand, grammar | Not bundled |
-| **Voice-to-text** | Built in (Whisper) | Not bundled |
-| **Newsletters** | Built in via Newsy: GitHub-backed, no email service | Not bundled |
-| **Hosting** | Self-host on any Node.js host | Hosted app or self-hosted |
-| **Licensing** | Apache 2.0 | Open source |
+
+|                   | LightCMS                                            | Pages CMS                            |
+| :----------------- | :--------------------------------------------------- | :------------------------------------ |
+| **Model**         | Self-hosted writing workspace                       | Git based dashboard                  |
+| **Content store** | Your GitHub repository                              | Your GitHub repository               |
+| **Editing**       | Full TipTap WYSIWYG document editor                 | Form-based fields per content type   |
+| **Front matter**  | Managed as a validated form                         | Defined in a YAML config in the repo |
+| **Media**         | Drag-and-drop into the document                     | Media library with field assignment  |
+| **AI copilot**    | Built in: outline, rephrase, expand, grammar        | Not bundled                          |
+| **Voice-to-text** | Built in (Whisper)                                  | Not bundled                          |
+| **Newsletters**   | Built in via Newsy: GitHub-backed, no email service | Not bundled                          |
+| **Hosting**       | Self-host on any Node.js host                       | Hosted app or self-hosted            |
+| **Licensing**     | Apache 2.0                                          | Open source                          |
+
 
 ---
 
@@ -94,7 +92,7 @@ Both write Markdown with YAML front matter to GitHub, so moving between them is 
 
 ### Does [LightCMS](https://lightcms.me) store content outside my repository?
 
-No. The repository is the source of truth; [LightCMS](https://lightcms.me) commits like any other contributor.
+1. The repository is the source of truth; [LightCMS](https://lightcms.me) commits like any other contributor.
 
 ### Is Pages CMS free?
 
@@ -110,7 +108,7 @@ LightCMS, because the primary interface is a document rather than a schema-shape
 
 ### Do either affect my site's performance?
 
-No. Both produce static files that your SSG builds; performance is decided by your generator, theme, and host.
+1. Both produce static files that your SSG builds; performance is decided by your generator, theme, and host.
 
 ---
 
