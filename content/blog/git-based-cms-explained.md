@@ -15,7 +15,7 @@ tags:
 preview: /og-image.webp
 slug: git-based-cms-explained
 ---
-A **Git based CMS** is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
+A **Git based CMS** Is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
 
 That single design choice (files, not rows) cascades into everything else about how these tools behave: versioning, portability, cost, security, and who can use them.
 
@@ -44,7 +44,7 @@ Three properties define the category:
 2. **The build is the runtime.** Pages are assembled at build time and served as files. Nothing renders content per request.
 3. **The CMS is a client, not a host.** It writes to the repository and can be replaced without touching the content.
 
-Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) works through the comparison.
+Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) Works through the comparison.
 
 ---
 
