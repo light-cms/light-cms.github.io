@@ -29,7 +29,7 @@ Templates (HTML / JSX / Go templates)├─> SSG build ─> public/ ─> CDN ─
 Configuration, data, styles          ┘
 ```
 
-Run the build, and a `public/` directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
+Run the build, and a `public/` Directory appears containing every page of the site. Deploy that directory anywhere that can serve files, and the site is live.
 
 ---
 
