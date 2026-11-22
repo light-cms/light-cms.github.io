@@ -1,8 +1,11 @@
 ---
-title: "Headless CMS vs Git-Based CMS: Two Architectures Compared"
-description: "Headless CMS stores content in a database behind an API; Git based CMS stores it as files in a repository. How each works, where each wins, and how to choose."
+title: 'Headless CMS vs Git Based CMS, Compared'
+description: >-
+  Compare headless and Git based CMSs, how each stores and delivers content,
+  where each approach works best, and how to choose the right fit for your
+  project.
 serial: 44
-date: 2026-10-16T11:00:00Z
+date: '2026-10-16T11:00:00.000Z'
 draft: false
 keywords:
   - headless cms vs git based cms
@@ -17,8 +20,8 @@ taxonomies:
     - headless
     - git
     - explainers
+slug: headless-vs-git-based-cms
 ---
-
 "Headless" and "Git based" get used as if they were rival categories. They are not; they answer different questions:
 
 - **Headless** answers: *how does content reach the frontend?* (Through an API, decoupled from presentation.)
@@ -69,18 +72,20 @@ This is the right shape when the consumer is a website, the content is prose, an
 
 ## Side by Side
 
-| | Headless CMS | Git based CMS |
-| :--- | :--- | :--- |
-| **Storage** | Database | Files in a repository |
-| **Delivery** | API at request time | Build to static files |
-| **Change latency** | Instant | Next build |
-| **Versioning** | Plugin or built in revisions | Git history for free |
-| **Portability** | Export and convert | Clone the repository |
-| **Content model** | Relational, strongly typed | Document-oriented |
-| **Access control** | Granular, per role/field | Repository-level |
-| **Runtime cost** | Server + database, always on | Build only |
-| **Security surface** | API, auth layer, DB, dependencies | Nothing at runtime |
-| **Best for** | Multi-channel apps and complex content | Publications and static sites |
+
+|                      | Headless CMS                           | Git based CMS                 |
+| :-------------------- | :-------------------------------------- | :----------------------------- |
+| **Storage**          | Database                               | Files in a repository         |
+| **Delivery**         | API at request time                    | Build to static files         |
+| **Change latency**   | Instant                                | Next build                    |
+| **Versioning**       | Plugin or built in revisions           | Git history for free          |
+| **Portability**      | Export and convert                     | Clone the repository          |
+| **Content model**    | Relational, strongly typed             | Document-oriented             |
+| **Access control**   | Granular, per role/field               | Repository-level              |
+| **Runtime cost**     | Server + database, always on           | Build only                    |
+| **Security surface** | API, auth layer, DB, dependencies      | Nothing at runtime            |
+| **Best for**         | Multi-channel apps and complex content | Publications and static sites |
+
 
 ---
 
