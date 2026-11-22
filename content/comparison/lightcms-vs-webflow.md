@@ -1,22 +1,20 @@
 ---
-title: "LightCMS vs Webflow: Visual Building vs Markdown in Git"
+title: 'LightCMS vs Webflow: Visual Building vs Markdown in Git'
 description: >-
   Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based
   editor for developer-owned sites. Where each approach wins for content teams.
 serial: 57
 date: '2026-10-16T13:10:00.000Z'
 draft: false
-keywords:
-  - 'lightcms vs webflow'
-  - 'webflow'
-  - 'webflow limitations'
-  - 'webflow vs static site generator'
-  - 'webflow pricing alternatives'
+tags:
+  - lightcms vs webflow
+  - webflow
+  - webflow limitations
+  - webflow vs static site generator
+  - webflow pricing alternatives
 preview: /og-image.png
-# taxonomies: []
 slug: lightcms-vs-webflow
 ---
-
 [Webflow](https://webflow.com) is built for a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that can be a strong fit.
 
 [LightCMS](https://lightcms.me) starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
