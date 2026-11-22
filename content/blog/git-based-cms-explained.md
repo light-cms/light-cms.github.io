@@ -6,19 +6,13 @@ description: >-
 serial: 43
 date: '2026-10-16T10:50:00.000Z'
 draft: false
-keywords:
+tags:
   - what is a git based cms
   - git based cms
   - git cms
   - file based cms
   - cms with version control
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - cms
-    - git
-    - static-sites
-    - explainers
 slug: git-based-cms-explained
 ---
 A **Git based CMS** is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
