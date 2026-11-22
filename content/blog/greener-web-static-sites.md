@@ -47,9 +47,9 @@ The [LightCMS](https://lightcms.me) site displays a live carbon rating in its fo
 
 ## How to Build a Greener Web
 
-1. **Serve statically from a CDN**: the biggest lever for content sites.
-2. **Choose green hosting**: providers that power data centers with renewable energy (several major providers now publish their energy sourcing).
-3. **Ship less JavaScript**: every kilobyte is parsed, executed, and paid for on the visitor's battery.
+1. **Serve statically from a CDN**: The biggest lever for content sites.
+2. **Choose green hosting**: Providers that power data centers with renewable energy (several major providers now publish their energy sourcing).
+3. **Ship less JavaScript**: Every kilobyte is parsed, executed, and paid for on the visitor's battery.
 4. **Compress and cache images**: media is usually the heaviest part of a page, so serve modern formats with long cache lifetimes.
 5. **Keep content durable**: plain Markdown and open formats mean a site never needs a rebuild from scratch.
 6. **Publish deliberately**: a small, high-value site that people return to beats a sprawling one nobody reads.
