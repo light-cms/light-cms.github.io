@@ -13,12 +13,6 @@ tags:
   - how static sites work
   - pre rendered html
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - static-sites
-    - ssg
-    - explainers
-    - web
 slug: what-is-a-static-site-generator
 ---
 A **static site generator (SSG)** is a program that takes content and templates and produces a complete website as plain HTML, CSS, and JavaScript files, before anyone visits.
