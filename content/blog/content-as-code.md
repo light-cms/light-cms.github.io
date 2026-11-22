@@ -111,22 +111,6 @@ The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-ligh
 
 It is the philosophy; a Git based CMS is one implementation. You can practice content as code with nothing but an editor, and a Git based CMS gives non-developers a way in.
 
-### Do writers need to learn Git?
+Should writers be familiar with Git?
 
 Not if the tooling is right. Writers should see an editor and a publish button; commits, branches, and reviews happen underneath.
-
-### Where does content as code fail?
-
-Content with heavy relationships, real-time collaborative editing needs, or very large binary assets. Those workloads belong in a database-backed system.
-
-### How do you handle images?
-
-Either committed to the repository or stored in an asset bucket with references in front matter. The second keeps the repository lean.
-
-### Can I adopt it incrementally?
-
-Yes. Start with one content directory and one pipeline. The format does not require a flag day migration.
-
----
-
-Related: [what is a Git based CMS?](/blog/git-based-cms-explained/), [front matter explained](/blog/what-is-front-matter/), and [version control for writers](/blog/lightcms-drafts-and-versioning/).
