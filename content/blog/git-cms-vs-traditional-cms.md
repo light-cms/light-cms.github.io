@@ -7,19 +7,13 @@ description: >-
 serial: 10
 date: '2026-10-14T12:30:00.000Z'
 draft: false
-keywords:
+tags:
   - git based cms
   - git cms
   - headless cms vs git cms
   - traditional cms vs static cms
   - cms without database
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - cms
-    - git
-    - architecture
-    - jamstack
 slug: git-cms-vs-traditional-cms
 ---
 A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
