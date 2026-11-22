@@ -64,7 +64,7 @@ To let LightCMS read your files and automatically commit new articles:
 
 1. Sign in to your LightCMS instance using your GitHub account.
 2. In the dashboard, click **Connect Repository** (or **Install GitHub App**).
-3. GitHub will prompt you to choose the account or organization where you want to install the app.
+3. GitHub, will prompt you to choose the account or organization where you want to install the app.
 4. Choose either **All repositories** or **Only selected repositories** To restrict access to just your blog repo.
 5. After authorizing, your repository will appear in the LightCMS dashboard.
 
