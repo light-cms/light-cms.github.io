@@ -18,24 +18,20 @@ slug: greener-web-static-sites
 ---
 Every page view costs energy. Somewhere a server wakes, a cache misses, a database query runs, and electricity measured in grams of CO2 gets spent delivering a paragraph of text. Commonly cited estimates put the web at roughly 2–4% of global electricity emissions, comparable to the aviation industry. The architecture of your site determines where on that spectrum you land, and **Static sites sit at the clean end**.
 
----
+Dynamic sites do work every time someone visits. They run code, talk to a database, and build the page. The servers have to stay on all the time, even when nobody is there.
 
-### Why Static Sites Emit less Carbon
+Static sites do that work just once, when they are built. The finished HTML files are put on CDN edge servers around the world and served from cache.
 
-A dynamic site does work on every request: execute code, query a database, assemble HTML. That work happens on servers that must stay powered around the clock, even when nobody is visiting.
+- No work for each visit: Serving a stored file uses far less energy than creating a page on the spot.  
+- No always‑on database: Databases and app servers use power all the time; static sites don’t need them.  
+- Already cache‑friendly: If a request hits an edge cache, only a small network hop is needed.  
+- Small files: HTML made from markdown is naturally small, and no extra JavaScript runtime is sent unless you add it.
 
-A static site does the work once, at build time. The finished HTML is copied to CDN edge nodes worldwide and served from cache:
-
-- **No compute per request**: Serving a cached static file uses a tiny fraction of the energy of rendering a page on demand.
-- **No always-on database**: Databases and application servers consume power continuously; static sites have neither.
-- **Cache-friendly by default**: A request that hits an edge cache barely moves electrons beyond the network hop.
-- **Tiny payloads**: Markdown-generated HTML is lean by construction, with no framework runtime shipped to the browser unless needed.
-
-Multiply that across every visitor, every month, for the life of the site, and the difference is not symbolic.
+When you multiply these savings by every visitor, every month, for the whole life of the site, the energy difference is big.
 
 ## The Ripple Effect: Durability Is Sustainability
 
-Static sites also age well. A Hugo or Astro site built in 2026 can still be rebuilt and served in 2036: the content is plain Markdown, the toolchain is open source, and the output is a folder of files. Sites that get abandoned because their platform shut down or their WordPress install became unmaintainable force rebuilds: rewriting the same content on new infrastructure is its own kind of waste.
+Static sites also age well. A Hugo or Astro site built in 2026 can still be rebuilt and served in 2036: the content is plain Markdown, the entire toolchain is open source, and the output is a folder of files. Sites that get abandoned because their platform shut down or their WordPress install became unmaintainable force rebuilds: rewriting the same content on new infrastructure is its own kind of waste.
 
 Owning your content as Markdown in Git is the durable, low-waste option.
 
@@ -43,8 +39,8 @@ Owning your content as Markdown in Git is the durable, low-waste option.
 
 You cannot improve what you do not measure:
 
-- [**Website Carbon Calculator**](https://www.websitecarbon.com/): estimates the grams of CO2 emitted per page view and compares your site to others.
-- [**Ecograder**](https://ecograder.com/) gives a comparable estimate, alongside performance and accessibility scoring.
+- [**Website Carbon Calculator**](https://www.websitecarbon.com/): Estimates the grams of Carbon emitted per page view and compares your site to others.
+- [**Ecograder**](https://ecograder.com/) Gives a comparable estimate, alongside performance and accessibility scoring.
 - Real-user metrics matter too: Largest Contentful Paint and total bytes transferred correlate directly with energy per view.
 
 The [LightCMS](https://lightcms.me) site displays a live carbon rating in its footer, using the same measurement approach this guide recommends.
