@@ -70,7 +70,7 @@ A CMS that stores your content as files (usually Markdown with YAML front matter
 
 ### Is WordPress a Git based CMS?
 
-1. WordPress stores content in MySQL or MariaDB. Plugins can sync WordPress with Git, but the core architecture is database-driven.
+WordPress stores content in MySQL or MariaDB. Plugins can sync WordPress with Git, but the core architecture is database-driven.
 
 ### Do I need to know Git to use a Git based CMS?
 
