@@ -18,8 +18,8 @@ slug: headless-vs-git-based-cms
 ---
 "Headless" and "Git based" get used as if they were rival categories. They are not; they answer different questions:
 
-- **Headless** answers: *how does content reach the frontend?* (Through an API, decoupled from presentation.)
-- **Git based** answers: *where does content live?* (As files in a repository.)
+- **Headless** answers: *How does content reach the frontend?* (Through an API, decoupled from presentation.)
+- **Git based** answers: *Where does content live?* (As files in a repository.)
 
 A tool can be both, either, or neither. Sorting out the two ideas lets you compare architectures instead of feature lists.
 
