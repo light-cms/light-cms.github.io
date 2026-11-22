@@ -2,7 +2,7 @@
 title: What Is a Git Based CMS?
 description: >-
   A Git based CMS stores content as files in a repository and commits edits like
-  code: the architecture, the workflow, and when it beats a database.
+  code the architecture, the workflow, and when it beats a database.
 serial: 43
 date: '2026-10-16T10:50:00.000Z'
 draft: false
