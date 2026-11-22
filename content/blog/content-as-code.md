@@ -101,7 +101,7 @@ Content as code wins on time. Databases need their schema, their server version,
 
 A directory of Markdown files needs a text editor, and it will still open in one in twenty years, regardless of what happens to any tool in the chain. For content meant to outlive the platform it was written on, that is risk management rather than nostalgia.
 
-The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) for the workflow in detail.
+The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) Adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) For the workflow in detail.
 
 #### Frequently Asked Questions
 
