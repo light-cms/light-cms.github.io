@@ -41,21 +41,18 @@ With a traditional hosted CMS, your content lives in someone else's database, an
 
 ## Cost
 
-Traditional CMS hosting requires servers, databases, and often premium plugins. Static sites served from Git deploys fit comfortably in free hosting tiers, and the CMS itself can be open source. [LightCMS](https://lightcms.me) is licensed under Apache 2.0, so the core is free forever.
+Traditional CMS hosting requires servers, databases, and often premium plugins. Static sites served from Git deploys fit comfortably in free hosting tiers, and the CMS itself can be open source. [LightCMS](https://lightcms.me) Is licensed under Apache 2.0, so the core is free forever.
 
 ## The Editing Experience Objection
 
 The historical weakness of "just edit the Markdown files" was the editing experience, and it is a fair objection. Pulling branches at midnight is not writing.
 
-A Git based CMS with a proper visual editor resolves it: writers get drag-and-drop formatting, image uploads, and front matter forms, while Git receives clean, reviewable Markdown underneath. TipTap-based editors like the one in [LightCMS](https://lightcms.me) even handle math, code highlighting, and task lists while preserving semantic Markdown.
-
----
+A Git based CMS with a proper visual editor resolves it: writers get drag-and-drop formatting, image uploads, and front matter forms, while Git receives clean, reviewable Markdown underneath. TipTap based editors like the one in [LightCMS](https://lightcms.me) Even handle math with latex, code highlighting, and task lists while preserving semantic Markdown.
 
 ## When a Traditional CMS Still Makes Sense
 
-- You need non-technical editors working entirely inside a database-driven admin with no Git concept at all
 - Your site is a heavy application (membership portals, e-commerce) rather than a publication
-- Instant, per-character database edits matter more than reviewability
+- Instant, per-character database edits matter more than review ability
 
 For blogs, documentation, marketing sites, and publications, the Git based model now wins on security, cost, and ownership.
 
