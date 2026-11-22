@@ -7,19 +7,13 @@ description: >-
 serial: 44
 date: '2026-10-16T11:00:00.000Z'
 draft: false
-keywords:
+tags:
   - headless cms vs git based cms
   - headless cms
   - git based cms
   - file based cms vs headless
   - cms architecture
 preview: /og-image.webp
-taxonomies:
-  tags:
-    - cms
-    - headless
-    - git
-    - explainers
 slug: headless-vs-git-based-cms
 ---
 "Headless" and "Git based" get used as if they were rival categories. They are not; they answer different questions:
