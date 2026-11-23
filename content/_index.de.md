@@ -1,0 +1,39 @@
++++
+title = "Erste Schritte mit LightCMS"
+description = "A practical journal on Git based CMS, static site generators, and modern publishing workflows: write in Markdown, keep your content in Git, and deploy anywhere."
++++
+
+## [LightCMS](https://www.lightcms.me) is a Git based content management system for static sites
+
+**Deine Beiträge bleiben als Markdown Dateien in deinem Projektarchiv.** Jeder Entwurf und jeder Beitrag lebt als Markdown mit Frontmaske. Git speichert die Versionsübersicht, so dass Sie Änderungen überprüfen und zurücksetzen können und in jedem Editor, den Sie mögen, weiterarbeiten können.
+
+1. A visual editor. [LightCMS](https://www.lightcms.me) uses the [TipTap](https://tiptap.dev) editor for writing and formatting in the browser.
+2. An AI copilot. Use it to revise and improve drafts.
+3. Voice dictation. Speak and let Whisper or [Wit.ai](http://Wit.ai) turn your words into text.
+4. Light and dark themes. Pick the theme that suits you.
+5. Newsletters without a third-party service. [Newsy](https://github.com/light-cms/newsy) turns each newly published post into an announcement on GitHub, so readers can subscribe there.
+
+---
+
+## So funktioniert es
+
+1. **Anmelden** mit deinem GitHub-Konto.
+2. **Wählen Sie ein Repository aus.** Installieren Sie die LightCMS App auf dem Repo, der Ihre Seite enthält. Es funktioniert mit statischen Seitengeneratoren, die Frontmatter in Markdown Dateien verwenden.
+3. **Schreiben.** Der Editor bearbeitet die Formatierung und lädt die Bilder beim Hinzufügen hoch.
+4. **Publish.** [LightCMS](https://www.lightcms.me) commits the change to your repository.
+   Ihre CI/CD-Pipeline baut und verteilt die Seite auf den gewünschten Host, wie z. B. GitHub Pages, Cloudflare Seiten, Netlify, Vercel, [Surge.sh](https://surge.sh) oder S3-kompatible Objektspeicher.
+
+### Nächstes Lesen
+
+- [Warum LightCMS?](/blog/why-this/): das Design Argumentation hinter Git-based Publishing.
+- [Self hosting LightCMS](/blog/selfhost/): run your own instance.
+- [Newsletter automation](/blog/newsletter-email-automation/): how Newsy delivers posts without a third party email service.
+
+### Vergleiche und Erklärungen
+
+- [Statische Sites vs dynamische Sites](/blog/static-vs-dynamic/): warum statische Sites gut für Inhalte funktionieren.
+- [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): Wählen Sie einen statischen Site-Generator.
+- [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): Wählen Sie, wo Sie Host.
+- [Git-based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/): Wie sich die beiden Modelle unterscheiden.
+- [Top Git-unterstützte CMS-Plattformen](/comparison/top-git-cms/): LightCMS verglichen mit Decap, TinaCMS, Keystatic, und andere.
+- [Wie man einen Blog startet](/blog/how-to-start-a-blog/): eine Anleitung zum Bloggen mit Markdown und einer statischen Website.

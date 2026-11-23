@@ -1,0 +1,55 @@
+---
+title: "Zine, The zig based Static Site Generator"
+description: >-
+  Zine is a fast, young static site generator written in Zig, with its own Super templating language and near instant builds a profile of the minimalist SSG.
+draft: false
+tags:
+  - zine static site generator
+  - zine ssg
+  - zig статический генератор сайта
+  - zine ssg против хуго
+  - самый быстрый ссг
+isCJKLanguage: false
+headless: false
+
+slug: zine
+date: "2026-11-22T12:05:23.705Z"
+---
+
+[Zine](https://zine-ssg.io) Новый генератор статического сайта Zine быстрый, воспринимаемый и освежающий нетрадиционный. Это молодой проект, который с легкостью уже обрабатывает персональные сайты и блоги, и он вознаграждает авторов, желающих изучить свой собственный способ делать вещи.
+
+## Что делает Zine по-разному
+
+Zine stands out from other static site generators in several ways:
+
+- \*\*Написано в Zig, с нуля. \* Ни один JavaScript-файловый сервер, ни Ruby, ни стандартная зона комфорта для библиотек не работают: встроенный в Markdown рендерер, механизм шаблонов и оркестра. Время сборки - это мгновенно.
+- **Собственный язык шаблонов.** Zine использует SuperHTML и SuperMD: и скриптовую систему шаблонов, разработанную для проекта, а не заимствованные из экосистемы.
+- **Scripty**, его скриптовый слой, добавляет программируемую логику, в которой шаблоны однажды сокращаются.
+- \*\*Контент как набор файлов и макетов. \* Zine превращает контент-файлы в HTML, применяет макеты и копирует результат в выходной каталог, классическая статическая модель быстро запускается.
+
+## Сделка Чести
+
+Репозиторий Zine прямо гласит: проект молод и еще не в возможности паритета с популярными альтернативами, как Hugo. И потому что Супер является собственным языком шаблонов Zine, есть кривая обучения: темы и знания сообщества меньше, что делает поддержку в основном выясняйте себя.
+
+Для персонального сайта с блогом (объявленная зона комфорта проекта), Zine больше, чем возможный, и опыт автора быстро и приятно, когда Супер клики.
+
+## Совместимость с контентом и CMS
+
+Zine does not consume CommonMark Markdown with front matter the same way most static site generators do, so a typical Git based CMS workflow does not apply directly.
+
+Zine ожидает свои собственные форматы содержимого, включая [SuperMD](https://zine-ssg.io/docs/supermd/), [Scripty](https://zine-ssg.io/docs/scripty/), и [Ziggy](https://ziggy-lang.io/). If you already have Markdown content, [md2smd](https://github.com/light-cms/md2smd) can help convert between [CommonMark](https://commonmark.org/) And Zine's formats.
+
+![Zine build pipeline](https://i.ibb.co/gMQxLRXy/Nov-1-02-26-AM-edited-png.png)
+
+Вам нужны два репозитория: один для фронтенда и один для содержимого.
+
+- [https://github.com/light-cms/zine\_site](https://github.com/light-cms/zine_template), the frontend repository
+- [https://github.com/light-cms/blogs\_md](https://github.com/light-cms/zine_content), the content repository
+
+Запустите диспетчер репозитория, когда новый контент будет загружен в репозиторий содержимого.
+
+## Где он подходит
+
+- Если вы хотите попробовать что-то альфа.
+
+[Попробуйте шаблоны с нашей организации для получения дополнительной информации.](https://github.com/light-cms)
