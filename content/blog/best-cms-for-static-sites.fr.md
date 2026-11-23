@@ -27,14 +27,14 @@ Les réponses sont remplies en 2026. La liste ci-dessous trie les options en fon
 
 | CMS               | Modélisation                               | Editeur                                 | Auto-hôte     | Meilleur pour                                      |
 | :---------------- | :----------------------------------------- | :-------------------------------------- | :------------ | :------------------------------------------------- |
-| **LightCMS**      | Espace de travail basé sur Git             | TipTap WYSIWYG                          | ✅             | Écrivains qui veulent une publication en un clic   |
-| **Decap CMS**     | Application d'administration basée sur Git | Interface React basée sur le formulaire | ✅             | Configuration multi-fournisseur classique          |
+| **LightCMS**      | Espace de travail basé sur Git             | TipTap WYSIWYG                          | ✅            | Écrivains qui veulent une publication en un clic   |
+| **Decap CMS**     | Application d'administration basée sur Git | Interface React basée sur le formulaire | ✅            | Configuration multi-fournisseur classique          |
 | **TinaCMS**       | Édition visuelle sur la page               | Inline WYSIWYG                          | Partiellement | Édition du contenu où il est rendu                 |
-| **Keystatique**   | Premiers fichiers locaux                   | Formulaires de React                    | ✅             | Développeurs dans le monde Next/Astro              |
-| **CMS des pages** | Tableau de bord basé sur Git               | Basé sur le formulaire                  | ✅             | Une mise en page de CMS familière sur GitHub       |
-| **Sveltia CMS**   | Éditeur Git du navigateur                  | IU légère                               | ✅             | Zéro backend, édition sans coût                    |
-| **CloudCannon**   | Git géré basé sur le CMS                   | Édition visuelle                        | ❌             | Agences avec des clients payants                   |
-| **Payload CMS**   | Headless, base de données en premier       | Panneau d'administration                | ✅             | Applications qui ont besoin de contenu relationnel |
+| **Keystatique**   | Premiers fichiers locaux                   | Formulaires de React                    | ✅            | Développeurs dans le monde Next/Astro              |
+| **CMS des pages** | Tableau de bord basé sur Git               | Basé sur le formulaire                  | ✅            | Une mise en page de CMS familière sur GitHub       |
+| **Sveltia CMS**   | Éditeur Git du navigateur                  | IU légère                               | ✅            | Zéro backend, édition sans coût                    |
+| **CloudCannon**   | Git géré basé sur le CMS                   | Édition visuelle                        | ❌            | Agences avec des clients payants                   |
+| **Payload CMS**   | Headless, base de données en premier       | Panneau d'administration                | ✅            | Applications qui ont besoin de contenu relationnel |
 
 ## Comment choisir
 

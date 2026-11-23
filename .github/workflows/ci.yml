@@ -30,6 +30,7 @@ jobs:
       - name: Install dependencies & building
         run: |
           mise deps
+          mise install
           mise run build
 
       - name: Upload artifact

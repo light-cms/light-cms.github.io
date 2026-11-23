@@ -72,14 +72,14 @@ Run the build, and a `public/` Directory appears containing every page of the si
 
 ## The Options in Brief
 
-| 生成器                     | 语言/模板               | 签名强度                              |
-| :---------------------- | :------------------ | :-------------------------------- |
-| **Hugo**                | 转到模板                | 生长速度，巨型主题生态系统                     |
-| **Astro**               | `.astro` 组件         | 岛屿架构、内容收藏                         |
-| **Elventy**             | Nunjucks, Liquid和更多 | 零日本冲锋枪，完全控制                       |
-| **Jekyll**              | 液体                  | GitHub Pages heritage, simplicity |
-| **Zola**                | Tera                | 单个二进制电池包含                         |
-| **SvelteKit / Next.js** | React/Svelte        | 成长为应用程序的站点                        |
+| 生成器                  | 语言/模板              | 签名强度                          |
+| :---------------------- | :--------------------- | :-------------------------------- |
+| **Hugo**                | 转到模板               | 生长速度，巨型主题生态系统        |
+| **Astro**               | `.astro` 组件          | 岛屿架构、内容收藏                |
+| **Elventy**             | Nunjucks, Liquid和更多 | 零日本冲锋枪，完全控制            |
+| **Jekyll**              | 液体                   | GitHub Pages heritage, simplicity |
+| **Zola**                | Tera                   | 单个二进制电池包含                |
+| **SvelteKit / Next.js** | React/Svelte           | 成长为应用程序的站点              |
 
 The full survey is in [best static site generators](/blog/best-static-site-generators/). 所有他们都消耗相同的输入：标记前缀。
 

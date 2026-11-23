@@ -51,7 +51,7 @@ Há um pouco de padrão para isso; a ditadura favorece um pouco a forma. A estru
 - Pare e leia de volta o que você falou estará cheio de repetições que pareciam corretas no momento. Remova antes que fique preso no rascunho.
 - Nomeie a nova seção onde o pensamento mudou. Agora vamos falar sobre implantação. Divulgue para ## título adicionando # antes dele. A transcrição já lhe disse onde estão as seções.
 -
-  > Faça o passe de formatação no final. Listas, links, código e blocos de código são mais rápidos para adicionar depois que a escrita terminar.
+ > Faça o passe de formatação no final. Listas, links, código e blocos de código são mais rápidos para adicionar depois que a escrita terminar.
   > > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---

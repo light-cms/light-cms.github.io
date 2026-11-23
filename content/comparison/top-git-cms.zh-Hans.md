@@ -25,15 +25,15 @@ taxonomies:
 
 ## 比较矩阵表
 
-| CMS                            | 模型             | 编辑器            | 最好的                   |
-| :----------------------------- | :------------- | :------------- | :-------------------- |
-| **Decap CMS** (旧的 Netlify CMS) | 基于 Git 的应用     | React admin UI | 经典的网络/情景设置            |
-| **TinaCMS**                    | 网站上的视觉编辑       | Inline WYSIWYG | 页面中直接编辑的内容            |
-| **Keystatic**                  | 本地-前 Git 文件    | React表单        | Next.js/Astro团队想要本地文件 |
-| **页面CMS**                      | 基于 Git 的仪表板    | 基于表单           | 需要熟悉CMS布局的团队          |
-| **Sveltia CMS**                | 浏览器托管的 Git 编辑器 | 轻量级管理界面        | 快速、免费、零后端编辑           |
-| **CloudCannon**                | 管理 Git CMS     | 视觉编辑           | 各机构管理客户网站             |
-| **LightCMS**                   | 自我托管的 Git 工作区  | TipTap WYSIWYG | 想要一次点击发布的作者           |
+| CMS                              | 模型                    | 编辑器         | 最好的                        |
+| :------------------------------- | :---------------------- | :------------- | :---------------------------- |
+| **Decap CMS** (旧的 Netlify CMS) | 基于 Git 的应用         | React admin UI | 经典的网络/情景设置           |
+| **TinaCMS**                      | 网站上的视觉编辑        | Inline WYSIWYG | 页面中直接编辑的内容          |
+| **Keystatic**                    | 本地-前 Git 文件        | React表单      | Next.js/Astro团队想要本地文件 |
+| **页面CMS**                      | 基于 Git 的仪表板       | 基于表单       | 需要熟悉CMS布局的团队         |
+| **Sveltia CMS**                  | 浏览器托管的 Git 编辑器 | 轻量级管理界面 | 快速、免费、零后端编辑        |
+| **CloudCannon**                  | 管理 Git CMS            | 视觉编辑       | 各机构管理客户网站            |
+| **LightCMS**                     | 自我托管的 Git 工作区   | TipTap WYSIWYG | 想要一次点击发布的作者        |
 
 ---
 

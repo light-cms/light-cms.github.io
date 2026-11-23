@@ -51,7 +51,7 @@ Hier gibt es ein bisschen Muster; Diktation bevorzugt ein bisschen Form. Die pro
 - Halten Sie sich an und lesen Sie es zurück, was Sie gesprochen haben, wird voll von Wiederholung, die zu der Zeit erschienen. Entfernen Sie es, bevor es im Entwurf steckt.
 - Benennen Sie den neuen Abschnitt, in dem sich der Gedanke geändert hat. Lass uns nun über den Einsatz reden. Befördere zur ## Überschrift, indem du # vorher hinzufügst. Das Transkript hat Ihnen bereits mitgeteilt, wo sich die Abschnitte befinden.
 -
-  > Führen Sie die Formatierung am Ende durch. Listen, Links, Code und Codeblöcke sind schneller hinzuzufügen, nachdem das Schreiben beendet ist.
+ > Führen Sie die Formatierung am Ende durch. Listen, Links, Code und Codeblöcke sind schneller hinzuzufügen, nachdem das Schreiben beendet ist.
   > > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---

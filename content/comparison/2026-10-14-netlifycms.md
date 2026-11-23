@@ -27,7 +27,7 @@ taxonomies:
 
 Decap CMS remains free and capable, but it was built for developers configuring collections in `config.yml`. Teams that include non-technical writers often outgrow it quickly: there is no AI assistance, media handling is basic, and the admin UI has changed little in years.
 
-Every alternative below keeps the core promise (**content as Markdown in your own GitHub repository**) while improving some part of the experience.
+Every alternative below keeps the core promise content as Markdown in your own GitHub repository, while improving some part of the experience.
 
 ## The Alternatives at a Glance
 

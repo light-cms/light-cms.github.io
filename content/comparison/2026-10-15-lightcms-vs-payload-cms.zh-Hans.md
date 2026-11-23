@@ -34,15 +34,15 @@ taxonomies:
 
 其后果是结构性的：
 
-| 关注                   | 有效载荷CMS                                  | LightCMS                        |
+| 关注                 | 有效载荷CMS                              | LightCMS                        |
 | :------------------- | :--------------------------------------- | :------------------------------ |
-| **存储**               | Postgres or MongoDB                      | 您的 Git 仓库                       |
-| **服务**               | Node.js 服务器 + 数据库                        | CDN上的静态文件                       |
-| **缩放成本**             | 运行时间 + DB 负载的缩放                          | 使用 CDN 定价的比例(接近零)               |
-| **Security surface** | API，自动，DB，依赖关系                           | 运行时无                            |
-| **Versioning**       | 数据库中的文档版本                                | Git 历史，不同，还原，责怪者                |
-| **Portability**      | 导出和转换                                    | 复制资源库                           |
-| **编辑**               | 已投票的管理面板                                 | 点击文档编辑器                         |
+| **存储**             | Postgres or MongoDB                      | 您的 Git 仓库                   |
+| **服务**             | Node.js 服务器 + 数据库                  | CDN上的静态文件                 |
+| **缩放成本**         | 运行时间 + DB 负载的缩放                 | 使用 CDN 定价的比例(接近零)     |
+| **Security surface** | API，自动，DB，依赖关系                  | 运行时无                        |
+| **Versioning**       | 数据库中的文档版本                       | Git 历史，不同，还原，责怪者    |
+| **Portability**      | 导出和转换                               | 复制资源库                      |
+| **编辑**             | 已投票的管理面板                         | 点击文档编辑器                  |
 | **Extras**           | hooks, jobs, blocks, field level control | AI copilot, voice to text, news |
 
 ---

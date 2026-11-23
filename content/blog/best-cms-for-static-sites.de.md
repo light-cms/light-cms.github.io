@@ -27,14 +27,14 @@ Die Antworten werden 2026 überfüllt. Die folgende Liste sortiert die Optionen 
 
 | CMS             | Modell                        | Redakteur                 | Selbstverwalter | Beste für                                           |
 | :-------------- | :---------------------------- | :------------------------ | :-------------- | :-------------------------------------------------- |
-| **LightCMS**    | Git basierter Arbeitsbereich  | TipTap WYSIWYG            | ✅               | Autoren, die eine One-Click-Veröffentlichung wollen |
-| **Decap CMS**   | Git basierte Admin-App        | Formbasierte Reaktions-UI | ✅               | Klassische Multi-Provider-Setups                    |
+| **LightCMS**    | Git basierter Arbeitsbereich  | TipTap WYSIWYG            | ✅              | Autoren, die eine One-Click-Veröffentlichung wollen |
+| **Decap CMS**   | Git basierte Admin-App        | Formbasierte Reaktions-UI | ✅              | Klassische Multi-Provider-Setups                    |
 | **TinaCMS**     | Visuelle Bearbeitung          | Inline WYSIWYG            | Teilweise       | Inhalt editieren, an dem er wiedergegeben wird      |
-| **Keystatic**   | Lokal-erste Dateien           | Reagiere Formulare        | ✅               | Entwickler in der Nächsten/Astro-Welt               |
-| **Seiten CMS**  | Git-basiertes Dashboard       | Formularbasiert           | ✅               | Ein vertrautes CMS-Layout über GitHub               |
-| **Sveltia CMS** | Browser Git Editor            | Leichte UI                | ✅               | Null-Backend-Bearbeitung                            |
-| **CloudCannon** | Verwaltetes Git-basiertes CMS | Visuelle Bearbeitung      | ❌               | Agenturen mit zahlenden Kunden                      |
-| **Payload CMS** | Headlessess, Datenbank-zuerst | Admin-Panel               | ✅               | Apps, die relationale Inhalte benötigen             |
+| **Keystatic**   | Lokal-erste Dateien           | Reagiere Formulare        | ✅              | Entwickler in der Nächsten/Astro-Welt               |
+| **Seiten CMS**  | Git-basiertes Dashboard       | Formularbasiert           | ✅              | Ein vertrautes CMS-Layout über GitHub               |
+| **Sveltia CMS** | Browser Git Editor            | Leichte UI                | ✅              | Null-Backend-Bearbeitung                            |
+| **CloudCannon** | Verwaltetes Git-basiertes CMS | Visuelle Bearbeitung      | ❌              | Agenturen mit zahlenden Kunden                      |
+| **Payload CMS** | Headlessess, Datenbank-zuerst | Admin-Panel               | ✅              | Apps, die relationale Inhalte benötigen             |
 
 ## Wie wählt man
 

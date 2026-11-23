@@ -1,24 +1,24 @@
 {
-  "scripts": {
-    "build": "cd public && parcel build \"**/*.html\" --dist-dir ."
-  },
-  "devDependencies": {
-    "@parcel/packager-raw-url": "^2.16.4",
-    "@parcel/transformer-jsonld": "^2.16.4",
-    "parcel": "^2.16.4"
-  },
-  "bun": {
-    "allowBuilds": {
-      "@swc/core": true
-    }
-  },
-  "trustedDependencies": [
-    "@parcel/watcher",
-    "@swc/core",
-    "lmdb",
-    "msgpackr-extract"
-  ],
-  "dependencies": {
-    "@swc/core": "^1.16.22"
-  }
+	"scripts": {
+		"build": "cd public && parcel build \"**/*.html\" --dist-dir ."
+	},
+	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.16.4",
+		"@parcel/transformer-jsonld": "^2.16.4",
+		"parcel": "^2.16.4"
+	},
+	"bun": {
+		"allowBuilds": {
+			"@swc/core": true
+		}
+	},
+	"trustedDependencies": [
+		"@parcel/watcher",
+		"@swc/core",
+		"lmdb",
+		"msgpackr-extract"
+	],
+	"dependencies": {
+		"@swc/core": "^1.16.22"
+	}
 }

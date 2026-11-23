@@ -42,17 +42,17 @@ LightCMS是围绕**文档**配置的。您打开了一个帖子并查看帖子�
 
 ## 比较
 
-|                 | LightCMS                             | 去除CMS                                       |
-| :-------------- | :----------------------------------- | :------------------------------------------ |
-| **Model**       | 自托管写作工作区                             | 可部署的React管理应用                               |
-| **内容存储**        | Your GitHub repository               | Your repository (GitHub, GitLab, Bitbucket) |
-| **编辑**          | Tiptap WYSIWYG：表、 数学、 代码高亮、 任务列表、 媒体 | 带有紧凑Markdown工具栏的表单字段                        |
-| **配置**          | 应用程序内，每个仓库                           | `config.yml`集合承诺到repo                       |
-| **AI 拷贝**       | 构建于：大纲、改写、扩展、语法(任意OpenAI兼容的端点)       | 无                                           |
-| **语音对文本**       | 内置(Whisper)                          | 无                                           |
-| **Newsletters** | 通过 Newsy 内置: GitHub-backed, 没有电子邮件服务 | 无 (仅webhooks/hooks)                         |
-| **许可**          | Apache 2.0                           | MIT                                         |
-| **多供应商**        | GitHub聚焦于                            | GitHub, GitLab, Bitbucket                   |
+|                 | LightCMS                                               | 去除CMS                                     |
+| :-------------- | :----------------------------------------------------- | :------------------------------------------ |
+| **Model**       | 自托管写作工作区                                       | 可部署的React管理应用                       |
+| **内容存储**    | Your GitHub repository                                 | Your repository (GitHub, GitLab, Bitbucket) |
+| **编辑**        | Tiptap WYSIWYG：表、 数学、 代码高亮、 任务列表、 媒体 | 带有紧凑Markdown工具栏的表单字段            |
+| **配置**        | 应用程序内，每个仓库                                   | `config.yml`集合承诺到repo                  |
+| **AI 拷贝**     | 构建于：大纲、改写、扩展、语法(任意OpenAI兼容的端点)   | 无                                          |
+| **语音对文本**  | 内置(Whisper)                                          | 无                                          |
+| **Newsletters** | 通过 Newsy 内置: GitHub-backed, 没有电子邮件服务       | 无 (仅webhooks/hooks)                       |
+| **许可**        | Apache 2.0                                             | MIT                                         |
+| **多供应商**    | GitHub聚焦于                                           | GitHub, GitLab, Bitbucket                   |
 
 ---
 

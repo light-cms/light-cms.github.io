@@ -44,17 +44,17 @@ LightCMS的情况正好相反：长式写作需要一个专用的表面，与屏
 
 ## 比较
 
-|                 | LightCMS                             | TinaCMS               |
-| :-------------- | :----------------------------------- | :-------------------- |
-| **编辑模型**        | 独立文件工作区                              | 页面，上下文编辑              |
-| **内容存储**        | Your GitHub repository               | GitHub (或基于 Git 的存储)  |
-| **内容模式**        | 在应用程序中配置；前面事项作为一个表单                  | 用Tina的内容SDK代码定义Schema |
-| **编辑**          | Tip点击WYSIWYG：表、数学、代码、任务列表            | 内容丰富的文本已调整到页面副本       |
-| **AI 拷贝**       | 内置(任意OpenAI兼容端点)                     | 未捆绑的                  |
-| **语音对文本**       | 内置(Whisper)                          | 未捆绑的                  |
-| **Newsletters** | 通过 Newsy 内置: GitHub-backed, 没有电子邮件服务 | 未捆绑的                  |
-| **部署**          | 自我托管的 Node.js 服务                     | 本地工作流程、托管云选项或自主机      |
-| **许可**          | Apache 2.0                           | 开源核心，托管服务可用           |
+|                 | LightCMS                                         | TinaCMS                          |
+| :-------------- | :----------------------------------------------- | :------------------------------- |
+| **编辑模型**    | 独立文件工作区                                   | 页面，上下文编辑                 |
+| **内容存储**    | Your GitHub repository                           | GitHub (或基于 Git 的存储)       |
+| **内容模式**    | 在应用程序中配置；前面事项作为一个表单           | 用Tina的内容SDK代码定义Schema    |
+| **编辑**        | Tip点击WYSIWYG：表、数学、代码、任务列表         | 内容丰富的文本已调整到页面副本   |
+| **AI 拷贝**     | 内置(任意OpenAI兼容端点)                         | 未捆绑的                         |
+| **语音对文本**  | 内置(Whisper)                                    | 未捆绑的                         |
+| **Newsletters** | 通过 Newsy 内置: GitHub-backed, 没有电子邮件服务 | 未捆绑的                         |
+| **部署**        | 自我托管的 Node.js 服务                          | 本地工作流程、托管云选项或自主机 |
+| **许可**        | Apache 2.0                                       | 开源核心，托管服务可用           |
 
 _(Verify current licensing and hosted-tier details against each project's docs before committing; both projects evolve quickly.)_
 

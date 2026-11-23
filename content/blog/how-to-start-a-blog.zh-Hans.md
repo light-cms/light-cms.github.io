@@ -39,11 +39,13 @@ Read the full comparison in [Astro vs Hugo](/blog/astro-vs-hugo-which-static-sit
 
 ```markdown
 ---
+
 title: My First Post
 date: 2026-10-14T10:00:00:00Z
 draft: false
 tags:
-  - blogging
+
+- blogging
 -
 
 Hello world 这是我的第一个帖子。
@@ -80,12 +82,12 @@ Markdown 是纯文本：它不会旋转，不能被困在专利数据库中，�
 
 ## 费用
 
-| 项目                            | 费用                |
-| :---------------------------- | :---------------- |
-| 静态站点生成器                       | 空闲(开源)            |
-| 主机 (Cloudflare 页面、 GitHub 页面) | 免费层               |
-| 基于 Git 的 CMS (LightCMS，自机)    | Free (Apache 2.0) |
-| 自定义域                          | ~10-15 / 年 (可选)   |
+| 项目                                 | 费用               |
+| :----------------------------------- | :----------------- |
+| 静态站点生成器                       | 空闲(开源)         |
+| 主机 (Cloudflare 页面、 GitHub 页面) | 免费层             |
+| 基于 Git 的 CMS (LightCMS，自机)     | Free (Apache 2.0)  |
+| 自定义域                             | ~10-15 / 年 (可选) |
 
 您可以以域名的价格运行一个严肃的出版物。
 

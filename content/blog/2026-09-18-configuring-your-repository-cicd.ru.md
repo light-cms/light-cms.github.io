@@ -115,7 +115,7 @@ jobs:
         with:
           path: . dist
 
-  deployment :
+  deployment:
     environment:
       name: github-pages
       url: ${% raw %}{{ steps.deployment.outputs.page_url }}{% endraw %}

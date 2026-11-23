@@ -28,6 +28,7 @@ taxonomies:
     - documentation
 slug: top-static-site-hosting
 ---
+
 ## Introduction
 
 Publiez votre site statique rapidement et en toute sécurité. Que vous utilisiez Astro, Hugo, SvelteKit, Jekyll ou Next. , les plates-formes d'hébergement modernes offrent une livraison globale de CDN, un déploiement automatique, basé sur Git, et peu ou pas de gestion de serveurs.

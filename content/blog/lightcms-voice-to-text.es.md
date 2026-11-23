@@ -51,7 +51,7 @@ Hay un poco de patrón para esto; la dictación favorece un poco de forma. La es
 - Detener y leer lo que has hablado estará lleno de repetición que parecía correcto en ese momento. Quítelo antes de quedar atascado en el borrador.
 - Nombra la nueva sección donde cambió el pensamiento. Ahora hablemos sobre el despliegue. Promover a ## encabezamiento añadiendo # antes de él. La transcripción ya le ha dicho dónde están las secciones.
 -
-  > Haga la pasada de formato al final. Listas, enlaces, código y bloques de código son más rápidos de añadir después de que la escritura haya terminado.
+ > Haga la pasada de formato al final. Listas, enlaces, código y bloques de código son más rápidos de añadir después de que la escritura haya terminado.
   > > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---

@@ -30,17 +30,17 @@ Strapi是一个带有数据库和API的 Node.js 应用。 LightCMS 是 Node.js �
 
 |                 | LightCMS                   | Strapi                               |
 | :-------------- | :------------------------- | :----------------------------------- |
-| **存储**          | 在你的资源库中标记文件                | SQL database (SQLite/Postgres/MySQL) |
-| **送货**          | 静态build-> CDN              | REST / GraphQL API 在运行时              |
-| **服务器**         | 运行时无                       | Node.js 应用程序，始终开启                    |
-| **内容模型**        | 前台事项字段                     | 管理员定义的内容类型                           |
-| **Versioning**  | Git history, revert, blame | 草稿/发布数据库版本 + 版本                      |
-| **编辑**          | 点击文档编辑器                    | 带有表单字段的管理面板                          |
-| **AI 拷贝**       | 内置于                        | 插件生态系统                               |
-| **语音对文本**       | 内置于                        | 未捆绑的                                 |
-| **Newsletters** | 通过Newsy 嵌入                 | 未捆绑的                                 |
-| **许可证**         | Apache 2.0                 | MIT/EE (选中当前版本)                      |
-| **典型成本**        | 仅主机                        | 主机 + 数据库操作                           |
+| **存储**        | 在你的资源库中标记文件     | SQL database (SQLite/Postgres/MySQL) |
+| **送货**        | 静态build-> CDN            | REST / GraphQL API 在运行时          |
+| **服务器**      | 运行时无                   | Node.js 应用程序，始终开启           |
+| **内容模型**    | 前台事项字段               | 管理员定义的内容类型                 |
+| **Versioning**  | Git history, revert, blame | 草稿/发布数据库版本 + 版本           |
+| **编辑**        | 点击文档编辑器             | 带有表单字段的管理面板               |
+| **AI 拷贝**     | 内置于                     | 插件生态系统                         |
+| **语音对文本**  | 内置于                     | 未捆绑的                             |
+| **Newsletters** | 通过Newsy 嵌入             | 未捆绑的                             |
+| **许可证**      | Apache 2.0                 | MIT/EE (选中当前版本)                |
+| **典型成本**    | 仅主机                     | 主机 + 数据库操作                    |
 
 ---
 

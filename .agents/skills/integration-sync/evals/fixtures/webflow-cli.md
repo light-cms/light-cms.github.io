@@ -102,12 +102,12 @@ files any required Format depends on provider…
 
 {
 "files": [{"id": "5f3c2a1b9d8e7f6a0b1ccfda", "name": "Example Site", "path": "/Example Site"},
-    {"id": "pages", "name": "Pages", "parentId": "5f3c2a1b9d8e7f6a0b1ccfda", "path": "/Example Site/Pages"},
-    {"id": "collections", "name": "Collections", "parentId": "5f3c2a1b9d8e7f6a0b1ccfda", "path": "/Example Site/Collections"},
-    {"id": "{\"type\":\"dom\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd013\",\"name\":\"About\",\"slug\":\"about\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\"}", "name": "About", "tooltip": "About (Last update: Apr 30, 2024, 14:08)", "parentId": "pages", "type": "webxml", "path": "/Example Site/Pages/About", "isNew": false, "notSynced": true, "synced": false, "isUpdated": false},
-    {"id": "{\"type\":\"collection-item\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd02a\",\"name\":\"Blog Posts\",\"slug\":\"post\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\"}", "name": "Blog Posts", "parentId": "collections", "path": "/Example Site/Collections/Blog Posts"},
-    {"id": "{\"type\":\"collection-item\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd060\",\"name\":\"10 Quick Tips About Blogging\",\"slug\":\"10-quick-tips-about-blogging\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\",\"collectionId\":\"5f3c2a1b9d8e7f6a0b1cd02a\",\"collectionName\":\"Blog Posts\",\"collectionSlug\":\"post\"}", "name": "10 Quick Tips About Blogging", "tooltip": "10 Quick Tips About Blogging (Last update: Apr 30, 2024, 14:08)", "parentId": "{...Blog Posts id...}", "type": "webxml", "path": "/Example Site/Collections/Blog Posts/10 Quick Tips About Blogging", "isNew": false, "notSynced": true, "synced": false, "isUpdated": false},
-    {"id": "{\"type\":\"collection-item\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd061\",\"name\":\"5 Principles Of Effective Web Design\",\"slug\":\"5-principles-of-effective-web-design\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\",\"collectionId\":\"5f3c2a1b9d8e7f6a0b1cd02a\",\"collectionName\":\"Blog Posts\",\"collectionSlug\":\"post\"}", "name": "5 Principles Of Effective Web Design", "tooltip": "5 Principles Of Effective Web Design (Last update: Apr 30, 2024, 14:08)", "parentId": "{...Blog Posts id...}", "type": "webxml", "path": "/Example Site/Collections/Blog Posts/5 Principles Of Effective Web Design", "isNew": false, "notSynced": true, "synced": false, "isUpdated": false}],
+{"id": "pages", "name": "Pages", "parentId": "5f3c2a1b9d8e7f6a0b1ccfda", "path": "/Example Site/Pages"},
+{"id": "collections", "name": "Collections", "parentId": "5f3c2a1b9d8e7f6a0b1ccfda", "path": "/Example Site/Collections"},
+{"id": "{\"type\":\"dom\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd013\",\"name\":\"About\",\"slug\":\"about\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\"}", "name": "About", "tooltip": "About (Last update: Apr 30, 2024, 14:08)", "parentId": "pages", "type": "webxml", "path": "/Example Site/Pages/About", "isNew": false, "notSynced": true, "synced": false, "isUpdated": false},
+{"id": "{\"type\":\"collection-item\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd02a\",\"name\":\"Blog Posts\",\"slug\":\"post\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\"}", "name": "Blog Posts", "parentId": "collections", "path": "/Example Site/Collections/Blog Posts"},
+{"id": "{\"type\":\"collection-item\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd060\",\"name\":\"10 Quick Tips About Blogging\",\"slug\":\"10-quick-tips-about-blogging\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\",\"collectionId\":\"5f3c2a1b9d8e7f6a0b1cd02a\",\"collectionName\":\"Blog Posts\",\"collectionSlug\":\"post\"}", "name": "10 Quick Tips About Blogging", "tooltip": "10 Quick Tips About Blogging (Last update: Apr 30, 2024, 14:08)", "parentId": "{...Blog Posts id...}", "type": "webxml", "path": "/Example Site/Collections/Blog Posts/10 Quick Tips About Blogging", "isNew": false, "notSynced": true, "synced": false, "isUpdated": false},
+{"id": "{\"type\":\"collection-item\",\"id\":\"5f3c2a1b9d8e7f6a0b1cd061\",\"name\":\"5 Principles Of Effective Web Design\",\"slug\":\"5-principles-of-effective-web-design\",\"siteId\":\"5f3c2a1b9d8e7f6a0b1ccfda\",\"siteName\":\"Example Site\",\"primaryLocale\":\"5f3c2a1b9d8e7f6a0b1cd020\",\"collectionId\":\"5f3c2a1b9d8e7f6a0b1cd02a\",\"collectionName\":\"Blog Posts\",\"collectionSlug\":\"post\"}", "name": "5 Principles Of Effective Web Design", "tooltip": "5 Principles Of Effective Web Design (Last update: Apr 30, 2024, 14:08)", "parentId": "{...Blog Posts id...}", "type": "webxml", "path": "/Example Site/Collections/Blog Posts/5 Principles Of Effective Web Design", "isNew": false, "notSynced": true, "synced": false, "isUpdated": false}],
 "message": ""
 }
 
@@ -163,9 +163,9 @@ The same record as the job-info call above, printed once its status is finished.
 ## crowdin app api webflow crowdin-files -F projectId=12345 -o json   (abridged)
 
 [{"id": "1018", "name": "Example Site"},
-  {"id": "1020", "parentId": "1018", "name": "Collections"},
-  {"id": "1022", "parentId": "1020", "name": "Blog Posts"},
-  {"id": "1024", "parentId": "1022", "name": "5 Principles Of Effective Web Design", "type": "webxml", "excludedTargetLanguages": null}]
+{"id": "1020", "parentId": "1018", "name": "Collections"},
+{"id": "1022", "parentId": "1020", "name": "Blog Posts"},
+{"id": "1024", "parentId": "1022", "name": "5 Principles Of Effective Web Design", "type": "webxml", "excludedTargetLanguages": null}]
 
 ## crowdin app api webflow file-progress -F projectId=12345 -F fileId=1024   (language object abridged)
 

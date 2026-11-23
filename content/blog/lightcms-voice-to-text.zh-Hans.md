@@ -51,7 +51,7 @@ slug: lightcms-voice-to-text
 - 停止并读回你所说的话将是重复的，当时似乎是正确的。在草案中被卡住之前删除它。
 - 给思维改变的新章节命名。现在让我们谈谈部署问题。通过在前面添加 # 来提升到## 标题。字幕已经告诉您章节在哪里。
 -
-  > 在结尾处执行格式化通行证。 List、链接、代码和代码块在写入完成后添加得更快。
+ > 在结尾处执行格式化通行证。 List、链接、代码和代码块在写入完成后添加得更快。
   > > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---

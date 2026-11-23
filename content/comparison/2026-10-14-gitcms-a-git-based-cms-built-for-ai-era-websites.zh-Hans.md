@@ -44,12 +44,12 @@ GitCMS连接到您的资源库和图层，一个更丰富的编辑器，编辑�
 
 ## 如何Compares
 
-|        | GitCMS    | 页面CMS      | LightCMS                        |
-| :----- | :-------- | :--------- | :------------------------------ |
-| 聚焦点    | AI安全发布    | 简易形式       | 完整写入工作区                         |
-| 编辑器    | 富，AI助的    | 基于表单       | TipTap WYSIWYG                  |
-| Extras | 代理工作流     | 无          | AI copilot, voice to text, news |
-| 许可协议   | 免费级别+付费计划 | Free (MIT) | Free (Apache 2.0)               |
+|          | GitCMS            | 页面CMS    | LightCMS                        |
+| :------- | :---------------- | :--------- | :------------------------------ |
+| 聚焦点   | AI安全发布        | 简易形式   | 完整写入工作区                  |
+| 编辑器   | 富，AI助的        | 基于表单   | TipTap WYSIWYG                  |
+| Extras   | 代理工作流        | 无         | AI copilot, voice to text, news |
+| 许可协议 | 免费级别+付费计划 | Free (MIT) | Free (Apache 2.0)               |
 
 - [CMS vs alternatives](/comparison/pagescms/) 包含该类别的简单结尾。
 - [Top Git based CMS platforms](/comparison/top-git-cms/) is the full survey.

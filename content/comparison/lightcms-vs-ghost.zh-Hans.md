@@ -32,17 +32,17 @@ LightCMS覆盖了编写该文件的一半，而没有一个会员国覆盖一半
 
 **LightCMS** 是一个内容工具：在你的仓库中标记，静态构建，以及CDN。站点以外的分发，例如 [newsletters](/blog/newsletter-email-automation/)，在GitHub 上运行，而不是在会员数据库中。
 
-|                     | LightCMS                  | 幽灵：               |
-| :------------------ | :------------------------ | :---------------- |
-| **存储**              | Git中的Markdown             | MySQL 数据库         |
-| **渲染**              | 预制静态HTML                  | 服务器端/无头API        |
-| **Members & 支付**    | 未建立                       | 本机会员，Stripe       |
-| **Newsletters**     | GitHub 上的 Newsy (无电子邮件服务) | 本机邮件给会员           |
-| **编辑**              | TipTap WYSIWYG → Markdown | 清理基于Markdown的编辑器  |
-| **AI copilot / 语音** | 内置于                       | 未捆绑的              |
-| **操作** 操作           | 运行时无                      | App + DB 来运行和补丁   |
-| **成本**              | 仅主机                       | 主机或 Ghost(Pro) 计划 |
-| **Portability**     | 复制资源库                     | 导出成员 + 内容         |
+|                       | LightCMS                           | 幽灵：                   |
+| :-------------------- | :--------------------------------- | :----------------------- |
+| **存储**              | Git中的Markdown                    | MySQL 数据库             |
+| **渲染**              | 预制静态HTML                       | 服务器端/无头API         |
+| **Members & 支付**    | 未建立                             | 本机会员，Stripe         |
+| **Newsletters**       | GitHub 上的 Newsy (无电子邮件服务) | 本机邮件给会员           |
+| **编辑**              | TipTap WYSIWYG → Markdown          | 清理基于Markdown的编辑器 |
+| **AI copilot / 语音** | 内置于                             | 未捆绑的                 |
+| **操作** 操作         | 运行时无                           | App + DB 来运行和补丁    |
+| **成本**              | 仅主机                             | 主机或 Ghost(Pro) 计划   |
+| **Portability**       | 复制资源库                         | 导出成员 + 内容          |
 
 ---
 

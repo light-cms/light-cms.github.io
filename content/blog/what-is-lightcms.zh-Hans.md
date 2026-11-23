@@ -49,15 +49,15 @@ taxonomies:
 
 有几个基于 Git的 CMS 选项 ([Decap CMS](/comparison/netlifycms), TinaCMS, Keystatic, 页面CMS和 [LightCMS](https://lightcms.me) 在几个领域采取不同的方法：
 
-|                 | [LightCMS](https://lightcms.me)                  |
-| :-------------- | :----------------------------------------------- |
-| **存储**          | 您的 GitHub 仓库(Markdown + YAML 前端事项)               |
-| **编辑**          | 基于 Tapp 的 WYSIWYG 编辑器包含数学(KaTeX)，代码高亮、表格、任务列表和媒体 |
-| **AI**          | 使用任何 OpenAI兼容的提供商，为大纲、重写和语法内置的 copilot           |
-| **语音**          | 编辑器中的由Whisper驱动的口述法                              |
-| **Newsletters** | 发布Markdown 并从GitHub 发送更新信息                       |
-| **托管模型**        | 自托管，Apache 2.0 许可，运行任意Node.js 主机                 |
-| **锁定**          | 无：您的内容留在您自己的文件中                                  |
+|                 | [LightCMS](https://lightcms.me)                                            |
+| :-------------- | :------------------------------------------------------------------------- |
+| **存储**        | 您的 GitHub 仓库(Markdown + YAML 前端事项)                                 |
+| **编辑**        | 基于 Tapp 的 WYSIWYG 编辑器包含数学(KaTeX)，代码高亮、表格、任务列表和媒体 |
+| **AI**          | 使用任何 OpenAI兼容的提供商，为大纲、重写和语法内置的 copilot              |
+| **语音**        | 编辑器中的由Whisper驱动的口述法                                            |
+| **Newsletters** | 发布Markdown 并从GitHub 发送更新信息                                       |
+| **托管模型**    | 自托管，Apache 2.0 许可，运行任意Node.js 主机                              |
+| **锁定**        | 无：您的内容留在您自己的文件中                                             |
 
 [LightCMS](https://lightcms.me) 涵盖起草、编辑、发布和通讯发布，而不添加一个单独的数据库。
 

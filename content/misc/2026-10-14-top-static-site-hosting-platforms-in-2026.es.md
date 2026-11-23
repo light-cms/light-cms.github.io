@@ -28,6 +28,7 @@ taxonomies:
     - documentación
 slug: top-static-site-hosting
 ---
+
 ## Introducción
 
 Publica tu sitio estático de forma rápida y segura. Ya sea que utilice Astro, Hugo, SvelteKit, Jekyll o el siguiente. , las modernas plataformas de alojamiento ofrecen entregas CDN globales, SSL automático, implementación basada en Git y poca o ninguna administración de servidores.

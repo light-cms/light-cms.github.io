@@ -31,16 +31,16 @@ Contentful is a vendor relationship. 内容生活在他们的云端，是在他�
 
 **LightCMS** 是您运行的软件。 Content lives in your repository, is edited in a self-hostable app, and is served as static files by your host. 您可以携带，成本线靠近零，在优先次序发生变化时没有供应商可以谈判。
 
-|                   | LightCMS                          | 有内容                     |
-| :---------------- | :-------------------------------- | :---------------------- |
-| **Model**         | 自我托管的 Git 工作区                     | SaaS 无头平台               |
-| **存储**            | 在你的资源库中Markdown                   | 有内容的云                   |
-| **送货**            | 静态build-> CDN                     | 请求时间的内容 API             |
-| **内容模型**          | 前台事项字段                            | 用户界面中的自定义内容类型           |
-| **定价**            | Free (Apache 2.0)                 | 基于订阅、使用/座位的             |
-| **Enterprise 特性** | Git 审核、分支保护                       | 角色、批准、 工作流              |
-| **锁定**            | 无                                 | 导出离开所需文件                |
-| **Extras**        | AI copilot, voice and newsletters | Ecosystem, SDKs, 应用程序框架 |
+|                     | LightCMS                          | 有内容                        |
+| :------------------ | :-------------------------------- | :---------------------------- |
+| **Model**           | 自我托管的 Git 工作区             | SaaS 无头平台                 |
+| **存储**            | 在你的资源库中Markdown            | 有内容的云                    |
+| **送货**            | 静态build-> CDN                   | 请求时间的内容 API            |
+| **内容模型**        | 前台事项字段                      | 用户界面中的自定义内容类型    |
+| **定价**            | Free (Apache 2.0)                 | 基于订阅、使用/座位的         |
+| **Enterprise 特性** | Git 审核、分支保护                | 角色、批准、 工作流           |
+| **锁定**            | 无                                | 导出离开所需文件              |
+| **Extras**          | AI copilot, voice and newsletters | Ecosystem, SDKs, 应用程序框架 |
 
 ---
 

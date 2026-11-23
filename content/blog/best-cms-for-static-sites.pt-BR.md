@@ -27,14 +27,14 @@ As respostas são lotadas em 2026. A lista abaixo ordena as opções de acordo c
 
 | SGC                     | Modelo                                     | Editores                               | Auto-hospedeiro | Melhor para                                    |
 | :---------------------- | :----------------------------------------- | :------------------------------------- | :-------------- | :--------------------------------------------- |
-| **LightCMS**            | Espaço de trabalho baseado em Git          | TipTap WYSIWYG                         | ✅               | Escritores que querem publicação com um clique |
-| **Decapitar CMS**       | Aplicativo de administrador baseado no Git | Interface React baseada em formulários | ✅               | Configurações multiprovedores clássicas        |
+| **LightCMS**            | Espaço de trabalho baseado em Git          | TipTap WYSIWYG                         | ✅              | Escritores que querem publicação com um clique |
+| **Decapitar CMS**       | Aplicativo de administrador baseado no Git | Interface React baseada em formulários | ✅              | Configurações multiprovedores clássicas        |
 | **TinaCMS**             | Edição visual na página                    | Inline WYSIWYG                         | Parcial         | Editando conteúdo onde ele renderiza           |
-| **Keystatic**           | Arquivos local-first                       | Formulários React                      | ✅               | Desenvolvedores no mundo Próximo/Astro         |
-| **CMS das páginas**     | Painel baseado em Git                      | Formulários                            | ✅               | Um layout CMS familiar sobre o GitHub          |
-| **Sveltia CMS**         | Editor do navegador Git                    | Interface leve                         | ✅               | Zero-backend, edição de custo zero             |
-| **CloudCannon**         | CMS baseado em Git gerenciado              | Edição visual                          | ❌               | Agências com clientes pagantes                 |
-| **CMS de carregamento** | Headless, database-first                   | Painel de administração                | ✅               | Apps que precisam de conteúdo relacional       |
+| **Keystatic**           | Arquivos local-first                       | Formulários React                      | ✅              | Desenvolvedores no mundo Próximo/Astro         |
+| **CMS das páginas**     | Painel baseado em Git                      | Formulários                            | ✅              | Um layout CMS familiar sobre o GitHub          |
+| **Sveltia CMS**         | Editor do navegador Git                    | Interface leve                         | ✅              | Zero-backend, edição de custo zero             |
+| **CloudCannon**         | CMS baseado em Git gerenciado              | Edição visual                          | ❌              | Agências com clientes pagantes                 |
+| **CMS de carregamento** | Headless, database-first                   | Painel de administração                | ✅              | Apps que precisam de conteúdo relacional       |
 
 ## Como escolher
 

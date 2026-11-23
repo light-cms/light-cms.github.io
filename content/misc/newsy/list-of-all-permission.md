@@ -11,7 +11,6 @@ tags:
   - github app permissions
   - newsletter bot
   - github webhooks
-
 ---
 
 The Newsy GitHub App needs the following permissions to watch your content and create

@@ -51,7 +51,7 @@ Il y a un peu de patron à cela; la dictation favorise un peu de forme. La struc
 - Arrêtez et lisez ce que vous avez dit sera plein de répétition qui semblait juste à l'époque. Retirez-le avant qu'il ne soit coincé dans le brouillon.
 - Nommez la nouvelle section où la pensée a changé. Parlons maintenant du déploiement. Promouvoir en ## en-tête en ajoutant # avant lui. La transcription vous a déjà indiqué où se trouvent les sections.
 -
-  > Faites la passe de formatage à la fin. Les listes, liens, codes et blocs de code sont plus rapides à ajouter une fois l'écriture terminée.
+ > Faites la passe de formatage à la fin. Les listes, liens, codes et blocs de code sont plus rapides à ajouter une fois l'écriture terminée.
   > > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---

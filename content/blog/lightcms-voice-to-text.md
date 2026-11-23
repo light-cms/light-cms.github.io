@@ -53,8 +53,8 @@ There is a bit of pattern to this; dictation favors a bit of form. The most prod
 - Stop and read it back What you've spoken will be full of repetition that seemed right at the time. Remove it before it gets stuck in the draft.
 - Name down the new section where the thought changed. Now let's talk about deployment. Promote to ## heading by adding # before it. The transcript has already told you where the sections are.
 -
-  > Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
-  > 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
+> Do the formatting pass at the end. Lists, links, code, and code blocks are faster to add after the writing is finished.
+> 10 minutes of talking, 10 minutes of editing, each of you, routinely produces a much fuller draft than the other person sitting alone at the keyboard for 30 minutes, in silence.
 
 ---
 

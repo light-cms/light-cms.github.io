@@ -27,14 +27,14 @@ Las respuestas se verán coronadas en 2026. La siguiente lista ordena las opcion
 
 | CMS             | Modelo                                     | Editor                           | Autohost | Mejor para                                        |
 | :-------------- | :----------------------------------------- | :------------------------------- | :------- | :------------------------------------------------ |
-| **LightCMS**    | Espacio de trabajo basado en Git           | TipTap WYSIWYG                   | ✅        | Escritores que quieran publicar con un clic       |
-| **Decapar CMS** | Aplicación de administración basada en Git | Interfaz React basada en formato | ✅        | Configuraciones clásicas de múltiples proveedores |
+| **LightCMS**    | Espacio de trabajo basado en Git           | TipTap WYSIWYG                   | ✅       | Escritores que quieran publicar con un clic       |
+| **Decapar CMS** | Aplicación de administración basada en Git | Interfaz React basada en formato | ✅       | Configuraciones clásicas de múltiples proveedores |
 | **TinaCMS**     | Edición visual en la página                | Inline WYSIWYG                   | Parcial  | Editando contenido donde se procesa               |
-| **Keystatic**   | Archivos locales                           | Formas de React                  | ✅        | Desarrolladores en el mundo siguiente/astro       |
-| **Páginas CMS** | Panel basado en Git                        | Basado en formato                | ✅        | Un diseño CMS familiar sobre GitHub               |
-| **Sveltia CMS** | Editor de Git del navegador                | IU ligera                        | ✅        | Cero backend, edición de costo cero               |
-| **CloudCannon** | CMS gestionado basado en Git               | Edición visual                   | ❌        | Agencias con clientes de pago                     |
-| **CMS Payload** | Sin Headless, base de datos primero        | Panel de administración          | ✅        | Aplicaciones que necesitan contenido relacional   |
+| **Keystatic**   | Archivos locales                           | Formas de React                  | ✅       | Desarrolladores en el mundo siguiente/astro       |
+| **Páginas CMS** | Panel basado en Git                        | Basado en formato                | ✅       | Un diseño CMS familiar sobre GitHub               |
+| **Sveltia CMS** | Editor de Git del navegador                | IU ligera                        | ✅       | Cero backend, edición de costo cero               |
+| **CloudCannon** | CMS gestionado basado en Git               | Edición visual                   | ❌       | Agencias con clientes de pago                     |
+| **CMS Payload** | Sin Headless, base de datos primero        | Panel de administración          | ✅       | Aplicaciones que necesitan contenido relacional   |
 
 ## Cómo elegir
 

@@ -40,14 +40,14 @@ taxonomies:
 
 ## 最佳WordPress 替代方法
 
-| 备选办法          | 类型                | 最好的                          | 费用                |
-| :------------ | :---------------- | :--------------------------- | :---------------- |
+| 备选办法      | 类型                   | 最好的                                        | 费用              |
+| :------------ | :--------------------- | :-------------------------------------------- | :---------------- |
 | **LightCMS**  | 基于 Git 的 CMS (自机) | 想要类似于简单的 WordPress-静态下面的作者们。 | Free (Apache 2.0) |
-| **Ghost**     | 传统CMS, Node.js    | 有带薪会员的出版物                    | 付费主机              |
-| **Drupal**    | 传统CMS             | 拥有开发团队的大型组织                  | 免费, 重量可运行         |
-| **Decap CMS** | 基于 Git 的 CMS      | Jamstack veterans            | Free (MIT)        |
-| **页面CMS**     | 基于 Git 的 CMS      | 任何编辑器的简单形式                   | Free (MIT)        |
-| **TinaCMS**   | 基于 Git 的 CMS      | 页面上的视觉编辑                     | 免费层               |
+| **Ghost**     | 传统CMS, Node.js       | 有带薪会员的出版物                            | 付费主机          |
+| **Drupal**    | 传统CMS                | 拥有开发团队的大型组织                        | 免费, 重量可运行  |
+| **Decap CMS** | 基于 Git 的 CMS        | Jamstack veterans                             | Free (MIT)        |
+| **页面CMS**   | 基于 Git 的 CMS        | 任何编辑器的简单形式                          | Free (MIT)        |
+| **TinaCMS**   | 基于 Git 的 CMS        | 页面上的视觉编辑                              | 免费层            |
 
 ---
 
