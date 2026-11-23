@@ -1,77 +1,71 @@
 ---
-title: Newsletter Automation Without a Paid Subscription
-description: >-
-  Run your blog newsletter straight from Git: no mailing list, no SMTP API, no
-  SaaS fees.
+title: "Newsletter Automation Without a Paid Email Platform"
+description: "Use GitHub and Newsy to notify readers about new posts without a separate email marketing platform."
 date: "2026-09-18T01:50:00.000Z"
 draft: false
-keywords:
-  - newsletter automation
-  - github newsletter
+tags:
+  - newsletter
   - newsy
-  - static site newsletter
-
-taxonomies:
-  tags:
-    - newsletter
-    - newsy
-    - github
-    - publishing
+  - github
+  - publishing
 slug: newsletter-email-automation
 ---
 
-Email is one of the most effective ways to build a dedicated audience. The traditional way of doing it, though, has become cumbersome and expensive.
+You can notify readers about new posts from a Git-based blog without running a separate email marketing platform. [Newsy](https://github.com/light-cms/newsy) uses GitHub repository activity and issue subscriptions to deliver post updates through GitHub notifications. [VERIFY: confirm current Newsy behavior, supported triggers, and delivery model in the Newsy repository/docs.]
 
-[LightCMS](https://www.lightcms.me) takes a different route, Git driven newsletters powered by [Newsy](https://github.com/light-cms/newsy), where the repository you already have is The backend, so you can drop the newsletter service entirely.
+## Where traditional newsletter tools add overhead
 
----
+Email newsletter platforms can be useful, but they add operational work for small technical blogs:
 
-## The Traditional Newsletter Problem
+1. **List management:** You maintain subscriber data in a separate system.
+2. **Duplicate publishing:** You often copy a Markdown post into an email editor or template.
+3. **Deliverability operations:** You monitor bounces, spam complaints, sender reputation, and authentication records such as SPF, DKIM, and DMARC.
+4. **Tracking and privacy decisions:** Many platforms include open tracking, click tracking, and unsubscribe management features that you need to configure and disclose.
 
-With conventional platforms like Mailchimp, Substack, or Brevo, your workflow typically requires:
+For a developer-focused blog, those features can be more than the workflow needs. The trade-off is that you give up marketing automation, segmentation, and analytics.
 
-1. Signing up for an external service with rigid subscription tiers.
-2. Managing fragmented mailing lists across third party dashboards.
-3. Manually copying and pasting your blog post into email builders.
-4. Dealing with bloated tracking scripts, cookies, and privacy compliance requirements.
-5. Paying substantial monthly fees as your subscriber count grows.
+## How Newsy uses GitHub notifications
 
-Everyone of those steps exists because an email service sits between you and your readers. Newsy removes that layer rather than improving it.
+Newsy connects publishing events in a GitHub repository to a subscription thread. The workflow below describes the intended model; verify each step against the current Newsy implementation before treating it as product documentation.
 
-## The Git Driven Approach: Newsy
+```text
+Writer publishes in LightCMS
+              │
+              ▼
+   Commit pushed to GitHub repository
+              │
+              ▼
+Newsy detects a new or newly published post
+              │
+              ▼
+Newsy posts a comment to a designated announcement issue
+              │
+              ▼
+GitHub notifies users subscribed to that issue
+```
 
-The **Newsy** philosophy is simple: **your Git repository is the newsletter back end.**
+### Delivery steps
 
-[Newsy](https://github.com/light-cms/newsy) is an open-source newsletter service for static sites, inspired by [utterances](https://utteranc.es), and it deliberately keeps no mailing list, no SMTP relay, and no email vendor in the loop:
+1. **Commit detection:** A publish action creates or updates a Markdown file in the repository. Newsy can watch for a new post or a `draft: false` change. [VERIFY: confirm exact trigger conditions.]
+2. **Announcement thread:** Newsy posts the update to a designated GitHub issue, such as an `announcement` issue with a `newsletter` label. [VERIFY: confirm issue name/label conventions.]
+3. **Reader subscription:** Readers subscribe by watching or subscribing to that GitHub issue. [VERIFY: confirm the exact subscription action and UI text.]
+4. **Notification delivery:** GitHub sends notifications based on each subscriber's GitHub notification settings. [VERIFY: confirm whether delivery is email, web, mobile, or depends on user settings.]
 
-1. **Publish**: You hit Publish in [LightCMS](https://lightcms.me), and the Markdown file is committed to your repository.
-2. **Detect**: Newsy watches push events. A newly added post file (or an existing post flipped from `draft: true` to `false`) triggers an announcement. Routine edits and deletions are ignored, so everyday work never spams your readers.
-3. **Upsert**: Newsy creates or updates a single open issue per repository titled `announcement` with the label `newsletter`. It carries the commit summary, the file list, and the post content; each subsequent post lands as a comment on that issue. Issues can be locked and unlocked like any other.
-4. **Subscribe**: You embed a Subscribe button into your static site; [newsy.lightcms.me](https://newsy.lightcms.me) generates the snippet from your `owner/repo`. It points readers at the issue, where they click **Subscribe** To get GitHub notifications for every new post.
+## Trade-offs to consider
 
-Because delivery runs through GitHub's own notification system, there is no list to export, no per-subscriber pricing, no deliverability debugging, and no third-party email platform to renew.
+This approach fits technical audiences better than general audiences.
 
----
+- **GitHub account requirement:** Readers need a GitHub account to subscribe. That is reasonable for many developer blogs, but it can block non-technical readers.
+- **Plain notification format:** GitHub notifications are not a replacement for branded marketing emails. You have limited control over layout and styling.
+- **Limited analytics:** You do not get typical email marketing metrics such as open rate or click-through rate. You can inspect issue participation, but that is not the same as campaign analytics. [VERIFY: confirm what metrics, if any, Newsy provides.]
 
-## Why This Fits a Static Site
+If you need segmentation, A/B testing, drip campaigns, or detailed engagement analytics, a dedicated email platform is the better tool.
 
-A static site already has a pipeline: content is committed, CI builds, the CDN serves. Newsy slots into the same flow: the commit that publishes the page also announces it. Nothing is duplicated into a proprietary editor, and nothing needs syncing back.
+## Set up checklist
 
-It is also free in the way static hosting is free: open source, self hostable (Go plus a small Postgres table), and it runs happily on server less platforms. There is no monthly plan that scales with your audience.
+1. **Install Newsy:** Add the [Newsy GitHub App](https://github.com/apps/newsletter-newsy/installations/select_target) to the repository that contains your blog. [VERIFY: confirm current installation URL and required permissions.]
+2. **Create the subscription entry point:** Generate or create a subscribe link/button that points readers to the announcement issue. [VERIFY: confirm current setup flow on newsy.lightcms.me or repository docs.]
+3. **Add the link to your site:** Place the subscribe link in your blog layout, footer, or post template.
+4. **Test the flow:** Publish a draft post, confirm the commit, confirm the issue comment, and verify that a subscribed account receives a notification.
 
----
-
-## Getting Started
-
-1. Install the **Newsy GitHub App** on the repository you publish from: [github.com/apps/newsletter-newsy](https://github.com/apps/newsletter-newsy/installations/select_target).
-2. Push a new post, from [LightCMS](https://lightcms.me) or your terminal.
-3. Generate the Subscribe button at [newsy.lightcms.me](https://newsy.lightcms.me) And paste it into your site.
-
-Readers land on the announcement issue and subscribe there; every future post reaches them automatically.
-
-## Further Reading
-
-- [Newsy source and docs](https://github.com/light-cms/newsy)
-- [Self-hosting LightCMS](/blog/selfhost/): the full environment reference
-- [Drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/): how publishing works
-- [Getting started with LightCMS](/getting-started/): the wider workflow
+For related setup details, see [Self-hosting LightCMS](/blog/selfhost/), [Drafts, revisions, and publishing](/blog/lightcms-drafts-and-versioning/), and [Getting started with LightCMS](/getting-started/).

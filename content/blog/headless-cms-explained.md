@@ -1,6 +1,6 @@
 ---
-title: What Is a Headless CMS? (And Why Git Based Ones Matter)
-description: "Headless CMS explained: how decoupled content delivery works, where traditional headless platforms fall short, and why developers favor Git based CMS tools."
+title: "What Is a Headless CMS?"
+description: "A headless CMS stores content separately from presentation and delivers it through APIs or build-time data for websites, apps, and other channels."
 serial: 26
 date: 2026-10-14T15:10:00Z
 draft: false
@@ -19,59 +19,37 @@ taxonomies:
     - jamstack
 ---
 
-A **headless CMS** is a content system with no front end of its own: it stores and structures content, then delivers it through an API to any consumer (a website, an app, a kiosk, a newsletter). The "head" (the website) is severed from the "body" (the content store). It is how most modern content stacks are built. It is also where an important distinction gets lost: **not all headless CMSs store content the same way**.
+A headless CMS separates content management from content presentation. Editors manage content in one system, and developers deliver that content to a website, app, or other frontend through an API or build process. The "headless" part means the CMS does not control the final rendering layer.
 
-## How a Traditional CMS Works
+## How a headless CMS works
 
-WordPress renders pages itself: content in MySQL, templates in PHP, output assembled per request on the same server. Presentation and content are welded together. That is powerful, but the site's performance, security, and uptime all ride on that runtime.
+A traditional CMS often combines content storage, editing, templates, and page rendering in one application. A headless CMS focuses on content storage and delivery.
 
-## How a Headless CMS Works
+1. **Editors create content:** The CMS provides an admin interface and content model.
+2. **Content is stored centrally:** The CMS stores structured content in a database or repository.
+3. **Frontends fetch content:** A website, mobile app, or other client retrieves content through an API or during a build.
+4. **Presentation is separate:** The frontend decides how to render the content.
 
-A headless platform decouples the two:
+| Model | Content storage | Delivery | Typical fit |
+| :--- | :--- | :--- | :--- |
+| **Traditional CMS** | Database | Rendered by CMS runtime | Simple sites managed in one system |
+| **API headless CMS** | Database | REST/GraphQL API | Multi-channel content, apps, complex models |
+| **Git-based CMS** | Files in Git | Build output/static files | Static sites, docs, editorial workflows |
 
-1. Editors write in the platform's admin interface.
-2. Content sits as structured data in the provider's database.
-3. Frontends fetch it via API (REST or GraphQL) at build time or runtime.
-4. The same content can feed a website, a mobile app, and an IoT screen simultaneously.
+## Benefits and trade-offs
 
-This is the model behind Contentful, Sanity, Strapi, and Prismic. For multi-channel, application-heavy organizations, it is the right model.
+Headless CMS platforms are useful when the same content needs to reach multiple frontends or when frontend teams want full control over rendering. They can also introduce operational complexity: you manage a content service, API schema, frontend integration, and deployment pipeline.
 
-## The Trade-offs Developers Discovered
+Common trade-offs include:
 
-Headless solved WordPress's problems but introduced new ones:
+- **Flexibility vs. complexity:** You gain frontend freedom, but you build more of the delivery stack.
+- **Structured content vs. writing flow:** Structured models are powerful, but they can feel rigid for long-form writing.
+- **Vendor/API dependency:** Hosted platforms may create migration work if your content model or API is proprietary. [VERIFY: evaluate specific vendor export/migration capabilities before making portability claims.]
 
-- **Content lock-in**: your articles live in a proprietary database behind an API. Leaving means exporting and reformatting everything.
-- **Per-seat pricing**: costs scale with editors, not value.
-- **A second infrastructure**: the CMS becomes a SaaS dependency between your writers and your site, with outages, plan limits, and schema migrations of its own.
-- **Build-time fetching complexity**: the frontend must model content as API data rather than files.
+## Where Git-based CMS tools fit
 
-## The Git based Headless CMS
+A Git-based CMS can support headless-style delivery when content is stored as files and consumed by a static site generator or build process. The key difference is storage: content lives in a Git repository instead of a managed database API. [VERIFY: confirm whether a specific product describes itself as headless.]
 
-A Git based CMS is headless in delivery: any static site generator can consume its output. But it stores content where developers want it: as Markdown files with YAML front matter in your own repository.
+This model works well for blogs, documentation, and marketing sites where content portability and Git history matter. For multi-channel applications with complex relationships and real-time delivery, an API-first headless CMS may be a better fit.
 
-- No lock-in: the content is a folder of plain-text files you own.
-- No per-seat SaaS bill: self-hosted and open source options like [LightCMS](/getting-started/), [Pages CMS](/comparison/pagescms/), and [Decap CMS](/comparison/netlifycms/).
-- The publishing pipeline is the same everywhere: commit → CI/CD → CDN.
-- Version history, review, and rollback, because it is Git.
-
-For the full field, see [Git based CMS platforms compared](/comparison/top-git-cms/); for the architecture it feeds, [what is the Jamstack](/blog/what-is-jamstack/).
-
----
-
-## Frequently Asked Questions
-
-### Is a headless CMS better than WordPress?
-
-For new projects, usually. Decoupled delivery is faster, safer, and more flexible. The remaining question is where the content itself is stored.
-
-### What is the best headless CMS for developers?
-
-Depends on the trade-off you want: hosted API platforms (Contentful, Sanity) for multi-channel SaaS; Git based CMSs (LightCMS, Pages CMS, TinaCMS) for ownership and zero lock-in.
-
-### Does a headless CMS need an API?
-
-A hosted headless CMS serves content via API. A Git based one serves content as static files from your CDN, often the fastest "API" there is, since it's just a cached HTTP request.
-
-### Can I move from a hosted headless CMS to a Git based one?
-
-Yes. Export to Markdown, commit to a repository, and point your generator at the files. The migration typically removes a monthly bill.
+For a direct comparison, see [Headless CMS vs. Git-Based CMS](/blog/headless-vs-git-based-cms/) and [What Is a Git-Based CMS?](/blog/git-based-cms-explained/).

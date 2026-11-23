@@ -32,4 +32,3 @@ invocation limits may apply.
 
 If Newsy has been useful, starring the [repository](https://github.com/light-cms/newsy) helps.
 
-[![UPI Pay](https://github.com/inulute/upi/raw/main/assets/upi.svg)](https://upi.pratyay.online)

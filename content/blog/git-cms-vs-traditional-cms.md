@@ -1,9 +1,6 @@
 ---
-title: "Git Based CMS vs Traditional CMS: Which Is Right for You?"
-description: >-
-  How Git based CMS platforms compare with WordPress, Ghost, and Contentful on
-  security, ownership, cost, and workflow, and why static publishing is shifting
-  to Git.
+title: "Git-Based CMS vs. Traditional CMS: How to Choose"
+description: "Compare Git-based CMS platforms with traditional CMS platforms on security, ownership, workflow, cost, and runtime capabilities."
 serial: 10
 date: "2026-10-14T12:30:00.000Z"
 draft: false
@@ -17,44 +14,42 @@ tags:
 slug: git-cms-vs-traditional-cms
 ---
 
-A traditional CMS (WordPress, Drupal, Ghost) stores content in a database and renders pages on a server. A **Git based CMS** (also called a file-based CMS) stores content as Markdown files with front matter in a Git repository, and your static site generator turns those files into pages at build time. The architectural difference is small; the practical consequences are not.
+A traditional CMS stores content in a database and usually renders pages through an application server. A Git-based CMS stores content as files in a Git repository and publishes through a build pipeline. The right choice depends on whether your site is primarily content or primarily an application.
 
-## How a Git based CMS Works
+## Core differences
 
-1. An author writes in a visual editor in the browser.
-2. The CMS commits the finished article as a Markdown file with YAML front matter to your GitHub repository.
-3. Your CI/CD pipeline (GitHub Actions, Cloudflare Pages, Vercel) rebuilds the site.
-4. The updated static site deploys globally within minutes.
+| Area | Traditional CMS | Git-based CMS |
+| :--- | :--- | :--- |
+| **Content storage** | Database | Markdown/files in Git |
+| **Runtime** | Application server, database, plugins/themes | Static files served from CDN after build |
+| **Editing workflow** | Admin UI writes to database | Editor creates commits/PRs to repository |
+| **Versioning** | CMS-specific revisions/plugins | Git history, diffs, branches, pull requests |
+| **Portability** | Export/migration depends on platform | Files are portable across generators and hosts |
 
-The repository is the single source of truth: every edit is a commit, every revision is inseparables, and rollback is a Git operation.
+## Security and operational surface
 
-## Security
+Traditional CMS platforms can be secure when maintained well, but they typically expose an admin interface, application runtime, database, and plugin ecosystem. That creates patching and monitoring work. [VERIFY: support security comparisons with current data or narrow the claim to architecture.]
 
-This is the biggest practical difference. A traditional CMS exposes a database, an admin login, and a plugin runtime to the public internet: the attack surface behind most website compromises.
+A Git-based CMS reduces runtime application surface because the published site can be static files. The repository, Git host, and build pipeline still need security controls, including access management, branch protection, and secret handling.
 
-A Git based architecture exposes nothing at runtime. There is no production database, no login panel, no PHP. Content lives in Git; the deployed site is plain files on a CDN.
+## Ownership and portability
 
-## Ownership and Portability
+With a Git-based CMS, content lives as files in your repository. You can move to another static site generator, host, or editor with fewer format conversions when the content is plain Markdown and front matter.
 
-With a traditional hosted CMS, your content lives in someone else's database, and exporting it is a project of its own. With a Git based CMS, your content is a folder of Markdown files in your own repository. You can switch generators, hosts, or editors without a migration.
+With a traditional CMS, portability depends on export tools, database schema, plugins, and shortcodes. Migration is possible, but it often requires cleanup.
 
-## Cost
+## Cost and maintenance trade-offs
 
-Traditional CMS hosting requires servers, databases, and often premium plugins. Static sites served from Git deploys fit comfortably in free hosting tiers, and the CMS itself can be open source. [LightCMS](https://lightcms.me) Is licensed under Apache 2.0, so the core is free forever.
+Traditional CMS setups can include hosting, database management, plugin licenses, backups, and security maintenance. Git-based static sites can reduce runtime infrastructure, but they still require CI/CD, build minutes, repository management, and editorial tooling. [VERIFY: avoid absolute cost claims unless you include specific pricing examples.]
 
-## The Editing Experience Objection
+## When a traditional CMS is the better fit
 
-The historical weakness of "just edit the Markdown files" was the editing experience, and it is a fair objection. Pulling branches at midnight is not writing.
+Choose a traditional or database-backed CMS when you need:
 
-A Git based CMS with a proper visual editor resolves it: writers get drag-and-drop formatting, image uploads, and front matter forms, while Git receives clean, reviewable Markdown underneath. TipTap based editors like the one in [LightCMS](https://lightcms.me) Even handle math with latex, code highlighting, and task lists while preserving semantic Markdown.
+- **Real-time dynamic content:** user accounts, personalized dashboards, or frequent runtime writes.
+- **Complex permissions:** field-level editorial permissions or application-specific roles.
+- **Integrated application behavior:** e-commerce, membership, or custom server-side workflows tightly coupled to content.
 
-## When a Traditional CMS Still Makes Sense
+Choose a Git-based CMS when content portability, reviewable changes, static delivery, and simple hosting matter more than runtime application features.
 
-- Your site is a heavy application (membership portals, e-commerce) rather than a publication
-- Instant, per-character database edits matter more than review ability
-
-For blogs, documentation, marketing sites, and publications, the Git based model now wins on security, cost, and ownership.
-
-- [Why LightCMS exists](/blog/why-this/) Covers the philosophy in depth.
-- [Getting started](/getting-started/) Shows the full workflow.
-- [Git based CMS options compared](/comparison/top-git-cms/) Surveys the platforms in this space.
+For related comparisons, see [What Is a Git-Based CMS?](/blog/git-based-cms-explained/) and [Git-Based vs. Traditional Headless CMS](/blog/headless-vs-git-based-cms/).

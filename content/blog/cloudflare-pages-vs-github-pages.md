@@ -1,6 +1,6 @@
 ---
-title: "Cloudflare Pages vs GitHub Pages: Which Free Host Wins?"
-description: Cloudflare Pages and GitHub Pages compared on bandwidth, custom domains, build limits, and ease of use, with a recommendation for blogs and project sites.
+title: "Cloudflare Pages vs. GitHub Pages for Static Site Hosting"
+description: "Compare Cloudflare Pages and GitHub Pages on bandwidth limits, preview deployments, edge delivery, and workflow trade-offs."
 serial: 19
 date: 2026-10-14T14:00:00Z
 draft: false
@@ -19,60 +19,32 @@ taxonomies:
     - jamstack
 ---
 
-Both will host your static site for free, forever, straight from a Git repository. But [Cloudflare Pages](https://pages.cloudflare.com)
-and [GitHub Pages](https://pages.github.com) are built with different philosophies,
-and the differences show up the moment your blog gets its first taste of traffic.
+Cloudflare Pages and GitHub Pages can both host a static site for free, but they fit different workflows. GitHub Pages is convenient when your site already lives in GitHub and traffic is modest. Cloudflare Pages is a better fit when you need preview deployments, broader edge delivery, or fewer bandwidth concerns. [VERIFY: confirm current pricing, limits, and feature details on official Cloudflare and GitHub docs before publishing.]
 
-## The Core Difference
+## Feature comparison
 
-**GitHub Pages** is a convenience feature of GitHub: push to a branch (or run a workflow), and your project gets a URL. It is tightly integrated with the GitHub experience and needs no separate account.
+| Area | GitHub Pages | Cloudflare Pages |
+| :--- | :--- | :--- |
+| **Primary fit** | Project docs, simple personal sites | Static sites, blogs, marketing sites |
+| **Bandwidth/usage limits** | Published usage limits apply [VERIFY: confirm current 100 GB/month soft limit, 1 GB site size, and 10 builds/hour guidance] | Free tier includes unlimited bandwidth [VERIFY: confirm current Cloudflare Pages plan terms] |
+| **Preview deployments** | Not built in as standard PR previews [VERIFY] | Automatic preview URLs for non-production branches/PRs [VERIFY] |
+| **Edge/network** | CDN-backed delivery [VERIFY] | Cloudflare global edge network [VERIFY] |
+| **Server-side features** | Static only | Pages Functions/Workers integrations available [VERIFY] |
 
-**Cloudflare Pages** is a dedicated hosting product: builds on Cloudflare's global edge network with unlimited free bandwidth, preview deployments for every branch, and an escape hatch into Pages Functions and Workers when you need server-side logic.
+## Bandwidth and traffic risk
 
-## Head-to-Head
+GitHub Pages publishes usage guidelines, including bandwidth, site size, and build frequency limits. [VERIFY: confirm current GitHub Pages limits and enforcement language.] For a small documentation site, those limits may be enough. For an image-heavy blog that can receive sudden traffic spikes, the risk is harder to predict.
 
-|                     | Cloudflare Pages                 | GitHub Pages                      |
-| :------------------ | :------------------------------- | :-------------------------------- |
-| Bandwidth           | Unlimited on free tier           | Metered soft limits (~100 GB/mo)  |
-| Build source        | Git or direct upload             | Git push or Actions               |
-| Custom domains      | Free, automatic SSL              | Free, automatic Let's Encrypt SSL |
-| Preview deployments | Every branch and PR              | No (workflow workarounds exist)   |
-| Edge network        | 300+ cities                      | Fastly-backed, smaller footprint  |
-| Extras              | Workers, Pages Functions, KV, R2 | Native Actions ecosystem          |
+Cloudflare Pages advertises unlimited bandwidth on its free tier. [VERIFY: confirm current Cloudflare Pages terms.] That makes cost and throttling less of a concern for public content sites, though you still need to follow acceptable-use and platform policies.
 
-## Where GitHub Pages Wins
+## Workflow and collaboration
 
-- Zero setup if your project already lives on GitHub: no new account, no dashboard.
-- Perfect for project documentation, portfolios, and README-linked demo sites.
-- Everything stays inside one platform, which is convenient for small projects.
+Cloudflare Pages creates preview deployments for branches and pull requests, which helps reviewers check content and layout before merging. [VERIFY: confirm current preview deployment behavior.] GitHub Pages is simpler when you only need one production branch and do not need review environments.
 
-## Where Cloudflare Pages Wins
+GitHub Pages has an advantage when you want to keep everything inside GitHub. For open-source project docs, the setup is familiar and close to the code.
 
-- **Unlimited bandwidth**: the decisive factor for blogs and content sites. A viral post on GitHub Pages can brush against usage limits; on Cloudflare Pages it is a non-event.
-- Preview URLs for every branch, out of the box.
-- Workers-based dynamic features (forms, redirects, APIs) without leaving the platform.
-- A larger, faster edge network for readers worldwide.
+## When to choose each platform
 
-## The Verdict
+Choose GitHub Pages when you want the simplest GitHub-native deployment for project documentation or a small personal site. Choose Cloudflare Pages when you expect unpredictable traffic, want preview deployments, or may need edge functions later.
 
-For a project page or small demo, GitHub Pages does the job. **For a blog, documentation site, or anything you expect people to read, Cloudflare Pages is the better free host.** Unlimited bandwidth alone decides it. The full field (including Vercel, Netlify, and Deno Deploy) is covered in [top static site hosting platforms](/misc/top-static-site-hosting/) and [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/).
-
-Both integrate with the same Git based workflow: [LightCMS](/getting-started/) commits Markdown, the host rebuilds, the site updates. Setup is covered in [configuring your repository and CI/CD](/blog/configuring-your-repository-cicd/).
-
-## Frequently Asked Questions
-
-### Is GitHub Pages fast?
-
-Yes, for its class, but Cloudflare Pages' larger edge network typically delivers lower global latency.
-
-### Can I use a custom domain on both?
-
-Yes. Both provision free TLS certificates for custom domains; GitHub Pages uses CNAME records, Cloudflare Pages uses DNS on Cloudflare's network.
-
-### Which is better for a blog?
-
-Cloudflare Pages: unlimited bandwidth removes the main anxiety of running a popular blog on a free tier.
-
-### Can I switch hosts later?
-
-Yes. Both build from the same repository; switching is a matter of pointing a new build at your repo. Your content and URLs stay identical.
+The trade-off is operational complexity: Cloudflare adds another platform to manage, while GitHub Pages keeps deployment close to the repository but offers fewer collaboration and edge features. For deployment setup details, see [Configuring Repository CI/CD](/blog/configuring-your-repository-cicd/).

@@ -1,9 +1,6 @@
 ---
-title: What Is Markdown? The Plain Text Format for the Web
-description: >-
-  Discover what Markdown is, how it works, its basic syntax, popular flavours,
-  and why it has become an essential format for modern documentation, blogging,
-  and static site generation.
+title: "What Is Markdown?"
+description: "Markdown is a plain-text markup format that uses simple symbols for headings, lists, links, and code, making it portable for docs, blogs, and static sites."
 date: "2026-10-14T15:00:00.000Z"
 draft: false
 keywords:
@@ -16,84 +13,57 @@ keywords:
 slug: what-is-markdown
 ---
 
-Markdown is plain text with a small set of formatting symbols. John Gruber created it in 2004 as the simplest way to write formatted documents. Two decades later it has become the lingua franca of the web: documentation, README files, notes, newsletters, and millions of sites keep their content in it.
+Markdown is a plain-text markup format for writing structured documents with simple symbols. It is commonly used for documentation, README files, notes, and static site content because the source remains readable as text and can be converted to HTML. [VERIFY: confirm historical attribution/details if you keep the "John Gruber created it in 2004" claim.]
 
-## Why Markdown Won
+## Basic Markdown syntax
 
-- **It does not rot**. A `.md` File from 2004 still opens in any text editor. Proprietary document formats expire; plain text does not.
-- **It diffs beautifully**. Because it is text, Git can track every change, which is why every Git based CMS stores content as Markdown.
-- **It is easy to learn**. The core syntax takes five minutes.
-- **It separates content from presentation**. Write structure; let the theme handle looks.
-- **It is everywhere**. GitHub, Notion exports, static site generators, and AI tools all speak it.
-
-## The Syntax You Need
-
-````markdown
+````md
 # Heading 1
 
 ## Heading 2
 
 A paragraph with **bold** and _italic_ text.
 
-- A bullet point
-- Another one
+- A bullet item
+- Another bullet item
 
-1. A numbered list
-2. And the next item
+1. A numbered item
+2. Another numbered item
 
-> A blockquote for asides.
+[Link text](https://example.com)
+![Alt text](/images/photo.jpg)
 
-[A link](https://example.com)
-![An image](/images/photo.jpg)
-
-`inline code` and fenced code blocks:
+`inline code`
 
 ```js
 console.log("hello, web");
 ```
 ````
 
-````
+Different Markdown flavors add features such as tables, task lists, footnotes, and fenced code attributes. Common flavors include CommonMark and GitHub Flavored Markdown. [VERIFY: confirm flavor names/capabilities you mention.]
 
-That covers the vast majority of real-world writing. Tables, task lists, and footnotes round out the extended syntax that GitHub-flavored Markdown adds.
+## Why Markdown works well for static sites
 
-## The Missing Piece: Front Matter
+| Property | Practical benefit | Trade-off |
+| :--- | :--- | :--- |
+| **Plain text** | Easy to store, diff, and version in Git | Limited layout control without extensions |
+| **Readable source** | Authors can edit without a proprietary editor | Complex documents may need MDX or shortcodes |
+| **HTML conversion** | Static site generators render it to web pages | Output depends on generator and theme |
+| **Portability** | Files can move between tools and platforms | Flavor differences can affect rendering |
 
-Static sites add a small metadata header to each file:
+## Markdown and front matter
 
-```markdown
+Static site generators often pair Markdown with front matter, a metadata block at the top of the file.
+
+```md
 ---
-title: My First Post
+title: "My First Post"
 date: 2026-10-14T10:00:00Z
 tags:
   - blogging
 ---
 
-The article begins here.
-````
+The article body starts here.
+```
 
-This YAML front matter is where the CMS lives: titles, dates, drafts, and taxonomies ride along with the Markdown body.
-
-## Writing Markdown Without the Syntax
-
-**You do not have to write Markdown by hand anymore.** Modern Git based editors, [LightCMS](/getting-started/) among them, give you a full visual editor with images, tables, and formatting shortcuts, then serialize your writing to clean Markdown underneath. You get plain-text durability with a comfortable writing experience.
-
-That combination (visual editing on top of Markdown in Git) is what powers the whole [Git based CMS category](/blog/git-cms-vs-traditional-cms/), and it is how the static sites in [best static site generators](/blog/best-static-site-generators/) get their content.
-
-## Frequently Asked Questions
-
-### Is Markdown dead?
-
-The opposite. After 20+ years it is more central than ever. It is the content format of GitHub, documentation tool chains, and AI-era writing.
-
-### What is the difference between Markdown and HTML?
-
-Markdown is the authoring format (plain text, human-writable); HTML is the rendering format (what browsers display). Generators convert the former into the latter.
-
-### Do I need to learn Markdown to blog?
-
-Not with a visual Git based CMS: you write normally, and the tool produces Markdown for you. Learning the basics still helps for quick edits.
-
-### Where is Markdown stored?
-
-As `.md` files, ideally in a Git repository, which gives you version history, review, and portable ownership of everything you write.
+Front matter stores metadata; Markdown stores content. Together, they form a portable content format for Git-based publishing workflows. For more detail, see [What Is Front Matter in Markdown?](/blog/what-is-front-matter/) and [What Is a Git-Based CMS?](/blog/git-based-cms-explained/).

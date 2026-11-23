@@ -1,6 +1,6 @@
 ---
-title: "Cloudflare Pages vs Vercel: Best for Static Sites?"
-description: Cloudflare Pages and Vercel compared on bandwidth, build minutes, pricing, edge network, and framework support, so you can pick the right free hosting tier.
+title: "Cloudflare Pages vs. Vercel for Static Site Hosting"
+description: "Compare Cloudflare Pages and Vercel for static sites by bandwidth pricing, developer workflow, framework fit, and operational trade-offs."
 serial: 9
 date: 2026-10-14T12:20:00Z
 draft: false
@@ -19,52 +19,32 @@ taxonomies:
     - jamstack
 ---
 
-[Cloudflare Pages](https://pages.cloudflare.com) and [Vercel](https://vercel.com) are the two most common answers to "where do I host my static site for free?" Both deploy from Git, provision free SSL, and serve from a global edge network. The differences show up in **bandwidth policy, framework integration, and what happens when your project grows**.
+Cloudflare Pages and Vercel both deploy static sites from Git, provide preview deployments, and serve assets over global CDN infrastructure. The main difference is focus: Cloudflare emphasizes network and edge infrastructure, while Vercel emphasizes frontend developer workflows and deep Next.js integration. [VERIFY: confirm current plan limits, pricing, and feature details on official Cloudflare and Vercel docs before publishing.]
 
-## What Is Cloudflare Pages?
+## Feature comparison
 
-Cloudflare Pages is a static site hosting platform that deploys from your Git repository to a global edge network. The free tier includes unlimited bandwidth, making it attractive for blogs and documentation sites that may go viral. Beyond static hosting, it offers Pages Functions (serverless functions), KV (key-value storage), and R2 (object storage), all within the same Cloudflare ecosystem.
+| Area | Cloudflare Pages | Vercel |
+| :--- | :--- | :--- |
+| **Best fit** | Static sites, content sites, Cloudflare ecosystem users | Next.js apps, frontend teams needing preview collaboration |
+| **Bandwidth/pricing model** | Unlimited bandwidth on free tier [VERIFY: confirm current plan terms] | Metered bandwidth and plan limits [VERIFY: confirm current Hobby/Pro limits and overage pricing] |
+| **Preview workflow** | Branch/PR previews [VERIFY] | PR previews with collaboration features [VERIFY] |
+| **Framework strength** | Static frameworks and edge functions [VERIFY] | Strong Next.js support [VERIFY] |
+| **Commercial use on free tier** | Permitted [VERIFY] | Hobby tier restrictions may apply [VERIFY] |
 
-## What Is Vercel?
+## Bandwidth and billing risk
 
-Vercel is the company behind Next.js and offers hosting optimized for its framework. It provides zero-configuration deployments for Next.js, SvelteKit, Astro, Nuxt, and Vite projects. The platform is known for polished preview deployments for every pull request, inline comments on deployments, and a developer-friendly dashboard.
+Vercel's pricing model includes bandwidth limits and overage charges on paid plans. [VERIFY: confirm current bandwidth limits, overage rates, and Hobby tier commercial-use policy.] That can be acceptable for predictable application traffic, but it creates cost risk for content sites that may experience sudden spikes.
 
-## Bandwidth: Unlimited vs Metered
+Cloudflare Pages advertises unlimited bandwidth on the free tier. [VERIFY: confirm current terms and acceptable-use policy.] For static blogs, documentation, and marketing sites, this usually reduces operational risk.
 
-- **Cloudflare Pages**: unlimited bandwidth on the free tier, the single biggest differentiator for content-heavy or unexpectedly viral sites.
-- **Vercel**: the hobby tier includes generous but metered bandwidth, with overages a real consideration for high-traffic sites.
+## Developer experience and framework fit
 
-Build limits also differ: Cloudflare offers hundreds of builds per month on the free tier, while Vercel meters build minutes. Both are ample for personal sites and small teams.
+Vercel is often the smoother choice for Next.js projects because its platform features are closely aligned with the framework. [VERIFY: confirm current Next.js feature support on Vercel and Cloudflare/OpenNext.] Preview collaboration features can also help teams that review UI changes before merge.
 
-## Developer Experience
+Cloudflare Pages fits well when the site is mostly static and you want access to Cloudflare Workers, KV, R2, or other Cloudflare services. [VERIFY: confirm current Pages Functions/Workers/KV/R2 integration details.]
 
-Vercel's preview URLs for every pull request, inline comments on deployments, and framework-aware build settings make it a strong fit for team workflows. Cloudflare Pages also provides preview deployments, and its tight integration with Workers, Pages Functions, KV, and R2 gives it an edge for lightweight dynamic features.
+## Which platform to choose
 
-## Lock-in and Portability
+Choose Cloudflare Pages for static content sites where bandwidth predictability, edge delivery, and low operational overhead matter most. Choose Vercel when your project depends on Next.js application features or your team benefits from Vercel's review workflow.
 
-Both platforms build from the same Git repository, so your content and code stay portable. Vercel's framework optimizations and Cloudflare's Workers runtime each create some ecosystem gravity, but because your site is just static output plus a build command, switching hosts is a configuration change, not a rewrite.
-
-## Which Should You Choose?
-
-- Choose **Cloudflare Pages** for blogs, documentation, and content sites where unlimited bandwidth and minimal cost matter most.
-- Choose **Vercel** for application-like projects, team preview workflows, and deep framework integration.
-
-For a full comparison including GitHub Pages, Netlify, and Deno Deploy, see [top static site hosting platforms](/misc/top-static-site-hosting/). And once your host is chosen, [configure your repository and CI/CD](/blog/configuring-your-repository-cicd/) so every published post deploys automatically.
-
-## Frequently Asked Questions
-
-### Is Cloudflare Pages Unlimited?
-
-Yes. The free tier does not meter bandwidth, which makes it the safest default for sites that may go viral.
-
-### Is Vercel Free for Static Sites?
-
-Yes, the hobby tier covers personal static sites generously, though bandwidth and build minutes are metered.
-
-### Which Is Faster?
-
-Both serve from global edge networks with excellent performance. Cloudflare's network is larger; Vercel's framework-aware builds can produce more optimized output for its supported frameworks.
-
-### Can I Move Between Them Later?
-
-Yes. Both deploy from your Git repository with a build command and output directory, so switching is a matter of configuration rather than migration.
+The trade-off is clear: Vercel can reduce framework friction for React application teams, while Cloudflare can reduce cost and traffic anxiety for static publishing. For deployment steps, see [Configuring Repository CI/CD](/blog/configuring-your-repository-cicd/).

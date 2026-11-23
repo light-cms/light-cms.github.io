@@ -1,6 +1,6 @@
 ---
-title: "What Is Front Matter? The Metadata Block at the Top of Your Content"
-description: "Front matter is the YAML or TOML block at the top of a Markdown file that tells your site its title, date, tags, and draft status, with examples."
+title: "What Is Front Matter in Markdown?"
+description: "Front matter is metadata at the top of a Markdown file, usually written in YAML, TOML, or JSON, that static site generators use for titles, dates, tags, and templates."
 serial: 45
 date: 2026-10-16T11:10:00Z
 draft: false
@@ -19,114 +19,41 @@ taxonomies:
     - cms
 ---
 
-**Front matter** is the block of metadata at the top of a content file, fenced off from the article itself. It is where a Markdown file declares what it _is_ (title, date, tags, author, draft status), so that your site generator can render, sort, and filter it.
+Front matter is a metadata block at the top of a content file that describes the page to a static site generator. It typically contains fields such as title, description, date, tags, draft status, and template information.
 
-If Markdown is the body of a post, front matter is its label.
+## Common front matter formats
 
+Most static site generators support YAML front matter, and some also support TOML or JSON. [VERIFY: confirm supported formats for the specific generator you document.]
+
+```md
 ---
-
-## What It Looks Like
-
-```markdown
----
-title: Notes on Static Site Generators
-description: A short summary used for SEO and social cards.
+title: "Notes on Static Site Generators"
+description: "A short summary used in metadata and previews."
 date: 2026-10-16T09:00:00Z
 draft: false
 tags:
   - static-sites
   - tooling
-keywords:
-  - static site generators
-  - ssg comparison
-
 ---
-
-The article body starts here, after the closing `---`.
 ```
 
-Three things are worth noticing:
+The metadata sits between delimiters at the top of the file. The Markdown body follows below it.
 
-1. **The fences.** A line of three dashes opens and closes the block. Everything between belongs to metadata; everything after belongs to the article.
-2. **The format.** That example is YAML, the default for most generators. TOML (`+++`) and JSON (`{...}`) are also used; Zola accepts all three, for instance.
-3. **The fields.** Standard keys like `title` and `date` are understood by generators; custom keys like `keywords` or `preview` are available to your templates.
+## What front matter controls
 
----
+| Field | Common use | Build impact |
+| :--- | :--- | :--- |
+| `title` | Page title and heading | Missing titles can break templates or listings |
+| `date` | Sorting and publishing metadata | Invalid dates can cause build errors |
+| `draft` | Draft/published state | Drafts may be excluded from production builds |
+| `tags` | Taxonomy pages and filters | Invalid structure can break taxonomy generation |
+| `slug` | URL path override | Can change canonical URLs |
+| `description` | Metadata and previews | Affects snippets and social previews |
 
-## What Front Matter Actually Does
+## Common mistakes
 
-Each field drives a concrete behavior in the build:
+Front matter errors are a frequent cause of static site build failures. Common problems include invalid YAML indentation, incorrect date formats, missing quotes around special characters, and inconsistent field names across files.
 
-| Field                 | Effect                                      |
-| :-------------------- | :------------------------------------------ |
-| `title`               | Page `<title>`, headings, and lists         |
-| `description`         | Meta description, cards, list summaries     |
-| `date`                | Sorting, "published on" display, feeds      |
-| `tags` / `categories` | Taxonomy pages and cross-linking            |
-| `draft`               | Excluded from the build when `true`         |
-| `slug`                | Overrides the URL derived from the filename |
-| `template`            | Chooses which layout renders the page       |
-| `weight`              | Manual ordering within a section            |
+A Git-based CMS can reduce these errors by exposing front matter as form fields and validating values before saving. [VERIFY: confirm LightCMS front matter validation behavior.] Even with a visual editor, keep the underlying front matter format consistent across your content repository.
 
-This is why a typo in front matter can break a build: `date: 2026-13-45` or a stray tab under `tags:` is invalid YAML, and the generator fails before it writes a single page.
-
----
-
-## Why Front Matter Exists
-
-Static site generators cannot ask a database "what is this page?" because there is no database. They need metadata to live **with** the content in a form both a machine and a human can read. Front matter solves that:
-
-- **Self-describing files.** A post carries everything needed to render it. Move the file, and its identity moves with it.
-- **Diffable metadata.** Changing a title is a one-line commit you can review and revert like any other change.
-- **Tool-friendly.** Editors, linters, and CI scripts can validate metadata before the build.
-- **Portable.** The same block works across generators, with minor key differences.
-
----
-
-## Common Conventions
-
-Enough conventions exist that consistency is worth more than cleverness:
-
-- **Dates in ISO 8601**: `2026-10-16T09:00:00Z`. Unambiguous across locales, sorts correctly.
-- **Tags as a list**, not a comma-separated string, so a tag containing a space does not split in half.
-- **Slugs lowercase with hyphens.** Filenames become URLs, so `my-great-post` beats `My Great Post.md`.
-- **`draft: true` for unfinished work.** The safe way to save without publishing.
-- **A real `description`.** The one field most often left empty and then regretted when the link gets shared.
-
----
-
-## Where a CMS Fits
-
-Front matter is the part of Markdown that non-technical writers should not have to see. It is syntax with sharp edges: indentation matters, quotes matter, date formats matter.
-
-A Git based CMS handles it as a **form** (fill in the title, pick the date, click tags) and serializes valid YAML on save. Writers never think about the fence; the repository still receives what the generator expects. That single feature eliminates one of the most common failure modes in static-site publishing.
-
-LightCMS, for example, validates front matter as you type and writes it on commit (see [the editor tour](/blog/lightcms-editor-tour/)), so metadata stays correct no matter who is publishing.
-
----
-
-## Frequently Asked Questions
-
-### Is front matter required?
-
-For pages in a date-sorted section, yes: generators expect at least a title and a date. The exact requirements depend on your generator's schema.
-
-### YAML vs TOML vs JSON: which should I use?
-
-Whichever your generator defaults to. Consistency inside a repository matters more than the format itself.
-
-### Can front matter contain lists and objects?
-
-Yes. Nested maps and lists are normal: image galleries, authors with roles, and alternate titles all fit.
-
-### How long should the description be?
-
-Aim for roughly 140–160 characters: long enough to make sense in search results, short enough not to be truncated.
-
-### Does front matter affect SEO?
-
-Directly: it is where the title and meta description come from, so it is one of the most valuable small things in a static site.
-
----
-
-Related: [what is Markdown?](/blog/what-is-markdown/), [the LightCMS editor](/blog/lightcms-editor-tour/), and [what a static site generator does](/blog/what-is-a-static-site-generator/).
+For related reading, see [What Is Markdown?](/blog/what-is-markdown/) and [The LightCMS Editor Tour](/blog/lightcms-editor-tour/).

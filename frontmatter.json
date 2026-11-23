@@ -1,66 +1,125 @@
 {
-	"$schema": "https://frontmatter.codes/frontmatter.schema.json",
-	"frontMatter.taxonomy.contentTypes": [
-		{
-			"name": "default",
-			"pageBundle": false,
-			"previewPath": null,
-			"fields": [
-				{
-					"title": "id",
-					"name": "id",
-					"type": "string"
-				},
-				{
-					"title": "title",
-					"name": "title",
-					"type": "string"
-				},
-				{
-					"title": "description",
-					"name": "description",
-					"type": "string"
-				},
-				{
-					"title": "author",
-					"name": "author",
-					"type": "string"
-				},
-				{
-					"title": "created",
-					"name": "created",
-					"type": "datetime"
-				},
-				{
-					"title": "visibility",
-					"name": "visibility",
-					"type": "string"
-				}
-			]
-		}
-	],
-	"frontMatter.framework.id": "other",
-	"frontMatter.content.publicFolder": "",
-	"frontMatter.content.pageFolders": [
-		{
-			"title": "content",
-			"path": "[[workspace]]/content"
-		},
-		{
-			"title": "misc",
-			"path": "[[workspace]]/content/misc"
-		},
-		{
-			"title": "comparison",
-			"path": "[[workspace]]/content/comparison"
-		},
-		{
-			"title": "blog",
-			"path": "[[workspace]]/content/blog"
-		},
-		{
-			"title": "newsy",
-			"path": "[[workspace]]/content/misc/newsy"
-		}
-	]
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "id",
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "created",
+          "name": "created",
+          "type": "datetime"
+        },
+        {
+          "title": "visibility",
+          "name": "visibility",
+          "type": "string"
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "isCJKLanguage",
+          "name": "isCJKLanguage",
+          "type": "boolean"
+        },
+        {
+          "title": "headless",
+          "name": "headless",
+          "type": "boolean"
+        },
+        {
+          "title": "preview",
+          "name": "preview",
+          "type": "string"
+        },
+        {
+          "title": "keywords",
+          "name": "keywords",
+          "type": "choice",
+          "choices": [
+            "newsy",
+            "newsletter video",
+            "youtube tutorial",
+            "github newsletter",
+            "newsy setup"
+          ]
+        },
+        {
+          "title": "weight",
+          "name": "weight",
+          "type": "number"
+        },
+        {
+          "title": "taxonomies",
+          "name": "taxonomies",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "tags",
+              "name": "tags",
+              "type": "tags"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "other",
+  "frontMatter.content.publicFolder": "",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content"
+    },
+    {
+      "title": "misc",
+      "path": "[[workspace]]/content/misc"
+    },
+    {
+      "title": "comparison",
+      "path": "[[workspace]]/content/comparison"
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/content/blog"
+    },
+    {
+      "title": "newsy",
+      "path": "[[workspace]]/content/misc/newsy"
+    }
+  ]
 }

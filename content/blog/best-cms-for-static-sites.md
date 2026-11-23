@@ -1,6 +1,6 @@
 ---
-title: "Best CMS for Static Sites in 2026: 8 Options Compared"
-description: "The best CMS options for a static site in 2026: Git based and headless platforms compared on editor quality, lock in, price, and setup effort."
+title: "Best CMS Options for Static Sites"
+description: "Compare Git-based, visual, and headless CMS options for static sites by content workflow, portability, and operational trade-offs."
 serial: 36
 date: 2026-10-16T10:00:00Z
 draft: false
@@ -19,98 +19,60 @@ taxonomies:
     - git
 ---
 
-A static site solves delivery: no runtime, no database, no per-request computation, globally cached. It leaves one question open: **authoring**. Someone types the words before the build turns them into HTML.
+The best CMS for a static site depends on where your content lives and who needs to edit it. Git-based CMS tools work well when you want Markdown files in version control; database-backed headless CMS tools work better when you need relational content, runtime APIs, or complex permissions. [VERIFY: confirm current feature details for each CMS before publishing.]
 
-The answers get crowded in 2026. The list below sorts the options by what each one optimizes for.
+## CMS architecture options
 
-## The Shortlist
+| Architecture | Content storage | Good fit | Main trade-off |
+| :--- | :--- | :--- | :--- |
+| **Git-based document editor** | Markdown files in Git | Blogs, docs, marketing sites | Limited runtime querying and relational modeling |
+| **Git-based form admin** | Files in Git, edited through forms | Structured content with fixed fields | Less natural for long-form writing |
+| **Visual/on-page editor** | Git or external storage | Landing pages and layout-heavy content | Higher setup and integration complexity [VERIFY] |
+| **Database headless CMS** | Database with API delivery | Apps, complex schemas, multi-channel delivery | More infrastructure and vendor lock-in risk |
 
-| CMS             | Model                    | Editor              | Self-host | Best for                              |
-| :-------------- | :----------------------- | :------------------ | :-------- | :------------------------------------ |
-| **LightCMS**    | Git based workspace      | TipTap WYSIWYG      | ✅        | Writers who want one-click publishing |
-| **Decap CMS**   | Git based admin app      | Form-based React UI | ✅        | Classic multi-provider setups         |
-| **TinaCMS**     | On-page visual editing   | Inline WYSIWYG      | Partial   | Editing content where it renders      |
-| **Keystatic**   | Local-first files        | React forms         | ✅        | Developers in the Next/Astro world    |
-| **Pages CMS**   | Git based dashboard      | Form-based          | ✅        | A familiar CMS layout over GitHub     |
-| **Sveltia CMS** | Browser Git editor       | Lightweight UI      | ✅        | Zero-backend, zero-cost editing       |
-| **CloudCannon** | Managed Git based CMS    | Visual editing      | ❌        | Agencies with paying clients          |
-| **Payload CMS** | Headless, database-first | Admin panel         | ✅        | Apps that need relational content     |
+## CMS options to evaluate
 
-## How to Choose
+The tools below are common options in static-site workflows. Feature sets change, so treat this as a starting shortlist and verify details in official documentation.
 
-Four questions eliminate most of the field:
+### LightCMS
 
-**1. Do you want content in a database or in files?**
-Database-first tools (Payload, most proprietary headless platforms) give you queries, relationships, and an API. File-based tools give you portability, readable diffs, and free version history. For a publication (blog, docs, marketing site), files win; for an application with relational data, the database does.
+[LightCMS](https://lightcms.me) is a Git-based CMS focused on editing Markdown content in a repository. It is a good fit when you want writers to use a visual editor while developers keep Git-based builds and deployments. [VERIFY: confirm current licensing, editor features, AI/voice features, PR workflow, and supported Git providers.]
 
-**2. Who will write?**
-If it is only you, any option works. Once a non-technical contributor joins, the writing surface becomes the deciding factor. A form full of fields is not a writing experience.
+### Decap CMS
 
-**3. How much setup are you willing to do?**
-Some tools need a config file, a schema, a backend, and an afternoon. Others start at "copy the repository and sign in."
+[Decap CMS](https://decapcms.org/) is a browser-based Git CMS configured through a repository config file. It fits teams that want a simple admin panel over Markdown or structured content files. [VERIFY: confirm current maintenance status, auth options, and editor capabilities.]
 
-**4. What is the exit?**
-Read the storage model, not the pricing page. Content in your repository can be moved by anyone, forever. Content in a vendor's database requires an export, a conversion, and eventually a migration.
+### TinaCMS
 
-## The Picks
+[TinaCMS](https://tina.io/) provides visual editing workflows and Git-backed content for supported frontend setups. It is useful when editors need to preview content in context. [VERIFY: confirm current cloud/self-hosted options, supported frameworks, and schema requirements.]
 
-### Best overall for publishing: [LightCMS](https://lightcms.me)
+### Keystatic
 
-A self-hosted, Apache 2.0 workspace that commits plain Markdown to GitHub, with a TipTap WYSIWYG editor (math, code highlighting, tables, task lists, drag-and-drop media), an [AI copilot](/blog/lightcms-ai-copilot/), [voice dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) through Newsy, with no email service involved. This is the only option here that treats writing, publishing, and distribution as one loop, and storage stays in your repository. See [what LightCMS is](/blog/what-is-lightcms/) for the full picture.
+[Keystatic](https://keystatic.com/) is a Git-based CMS oriented toward developer-defined schemas and local workflows. It can fit Astro and Next.js projects where developers want typed content models. [VERIFY: confirm current framework support and storage modes.]
 
-### Best track record: Decap CMS
+### Pages CMS
 
-The veteran (formerly Netlify CMS): a React admin app configured by YAML, supporting GitHub, GitLab, and Bitbucket. Mature ecosystem, aging interface. Full analysis in [Decap CMS explained](/comparison/netlifycms).
+[Pages CMS](https://pagescms.org/) provides a web interface for editing repository content through configuration. It is useful for simple Git-backed editing without building a custom admin. [VERIFY: confirm current hosting, auth, and feature set.]
 
-### Best for on-page editing: TinaCMS
+### Sveltia CMS
 
-Click the element on the rendered page and edit it there. Excellent for reviewing layout and copy together; a separate dashboard is better for long-form drafting.
+[Sveltia CMS](https://github.com/sveltia/sveltia-cms) aims to provide a modern alternative to Decap CMS-style workflows. It may be attractive for teams migrating from Decap configurations. [VERIFY: confirm compatibility claims, maturity, and production readiness.]
 
-### Best for developers: Keystatic
+### CloudCannon
 
-Local-first files with schema validation and React forms, from the Thinkmill team. Excellent if you live in code and want content to feel like code; less ideal for contributors who do not.
+[CloudCannon](https://cloudcannon.com/) is a commercial CMS and hosting-oriented platform for static and hybrid sites. It can fit agencies or teams that want managed visual editing workflows. [VERIFY: confirm current pricing, Git support, and hosting features.]
 
-### Best familiar dashboard: Pages CMS
+### Payload CMS
 
-A clean form-based view over GitHub that hides Git completely. Good floor, modest ceiling. Compare it in [Pages CMS alternatives](/comparison/pagescms).
+[Payload CMS](https://payloadcms.com/) is a headless CMS with a database backend. It is not a Git-file CMS, but it belongs on this list when a "static site" actually needs dynamic content models, APIs, or application features. [VERIFY: confirm current database support, licensing, and hosting model.]
 
-### Best free lightweight option: Sveltia CMS
+## How to choose
 
-A browser-hosted editor committing through the GitHub API. Fast to adopt, easy to outgrow.
+1. **Start with the content model:** If posts are documents, Git-based Markdown is often enough. If content has complex relationships, evaluate a database-backed CMS.
+2. **Check editor fit:** Writers usually prefer document editors; developers may prefer schema-driven forms.
+3. **Protect portability:** Prefer tools that store content as plain Markdown/front matter in Git when long-term portability matters.
+4. **Account for operations:** Managed SaaS reduces setup work but adds vendor dependency; self-hosted tools give control but require maintenance.
 
-### Best managed service: CloudCannon
+My recommendation is to use a Git-based CMS for blogs, documentation, and marketing sites unless you have a clear requirement for runtime data queries or complex relational content. The counterargument is valid: once your content model becomes application data, forcing it into Markdown files creates its own maintenance cost.
 
-Paid, polished, agency oriented. You are buying someone else's operations.
-
-### Best when you need a database: Payload CMS
-
-A modern headless CMS with real relational content and a powerful admin panel: the right call for application shaped projects and the wrong one for a static publication.
-See [LightCMS vs Payload](/comparison/lightcms-vs-payload-cms).
-
-## One Architectural Note
-
-Every option in the file based half of this table shares one advantage: **the build is the only runtime.** No database listener to patch, no PHP version to upgrade, no plugin supply chain to audit. The CMS produces files; the site remains files. That keeps the category growing. Static sites got cheap and fast, and the tooling for writing them has caught up.
-
-## Frequently Asked Questions
-
-### Can I use a CMS with a static site generator?
-
-Yes. That is what Git based CMS tools do. The CMS writes Markdown into your repository; your SSG builds it; your host serves it.
-
-### What costs money in a free CMS?
-
-Self hosted, open source options like [LightCMS](https://lightcms.me), Decap CMS, and Keystatic cost nothing in license fees. You still pay for hosting, and optionally for an AI or transcription endpoint if you use those features.
-
-### Do I need a database for a blog?
-
-No. A blog is an append mostly collection of documents, which is the best possible case for files.
-
-### Which CMS is easiest for non technical writers?
-
-One with a real editor rather than a field form. Writers should see a document, not a schema.
-
-### Can I switch CMS later?
-
-With file based content, yes: the repository is the interface. Point a different tool at the same content directory and the archive survives.
-
-Related: [top Git based CMS platforms compared](/comparison/top-git-cms), [Git based vs traditional CMS](/blog/git-cms-vs-traditional-cms/), and [content as code](/blog/content-as-code/).
+For a closer comparison, see [Git-Based vs. Traditional Headless CMS](/blog/headless-vs-git-based-cms/) and [Top Git-Based CMS Platforms Compared](/comparison/top-git-cms).

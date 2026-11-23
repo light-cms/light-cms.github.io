@@ -1,6 +1,6 @@
 ---
-title: "How to Start a Blog in 2026: The Markdown & Static Site Guide"
-description: How to start a fast, cheap, durable blog with Markdown, a static site generator, and a Git based CMS, with no hosting bills and no lock-in.
+title: "How to Start a Blog with Markdown and a Static Site Generator"
+description: "A practical guide to starting a blog with Markdown, a static site generator, Git-based editing, and free static hosting."
 serial: 12
 date: 2026-10-14T12:50:00Z
 draft: false
@@ -19,95 +19,56 @@ taxonomies:
     - getting-started
 ---
 
-Starting a blog in 2026 is considerably easier and cheaper than it used to be. You do not need WordPress hosting, a page builder, or a monthly platform fee. The modern recipe is **Markdown files, a static site generator, free hosting, and a Git based CMS for editing**. Total cost: zero dollars. Every page is served from CDN cache, so it loads in milliseconds.
+You can start a blog by writing posts in Markdown, generating a static site, and deploying it to a static host. This setup keeps content portable, keeps hosting simple, and avoids the need for a database-backed CMS for most personal or technical blogs.
 
+## Step 1: Choose a static site generator
+
+Pick a generator that matches your preferred tooling and content size. [VERIFY: confirm current generator features and performance claims before publishing specific comparisons.]
+
+| Generator | Good fit | Trade-off |
+| :--- | :--- | :--- |
+| **Astro** | Component-based sites, modern frontend tooling | Node.js ecosystem and build tooling |
+| **Hugo** | Large content sites, fast builds | Go template syntax has a learning curve |
+| **Zola** | Simple single-binary workflow | Smaller ecosystem than Hugo/Astro |
+| **Eleventy** | Flexible templates, minimal output | More manual setup decisions |
+
+See [Best Static Site Generators in 2026](/blog/best-static-site-generators/) for a broader comparison.
+
+## Step 2: Write posts in Markdown
+
+Store each post as a Markdown file with front matter.
+
+```md
 ---
-
-## Step 1: Pick a Static Site Generator
-
-Your generator turns Markdown files into a fast static website. The three most popular choices for blogs:
-
-- **[Astro](https://astro.build)**: component-driven, typesafe content collections, and the lowest friction on-ramp for new bloggers.
-- **[Hugo](https://gohugo.io)**: thousands of pages built in seconds, ideal for large publications.
-- **[Eleventy](https://www.11ty.dev)**: minimal, flexible, framework-optional.
-
-Read the full comparison in [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/), or start from [static sites vs dynamic sites](/blog/static-vs-dynamic/) if you want to understand why this architecture wins.
-
-## Step 2: Write Content in Markdown
-
-Every post is a `.md` file with a small front matter header:
-
-```markdown
----
-title: My First Post
+title: "My First Post"
 date: 2026-10-14T10:00:00Z
 draft: false
 tags:
   - blogging
 ---
 
-Hello world. This is my first post.
+Write the post body in Markdown.
 ```
 
-Markdown is plain text: it does not rot, cannot get trapped in a proprietary database, and outlives any tool you use to write it. If you already write in Notion or Google Docs, a Git based CMS bridges that gap: you write visually and it produces the Markdown for you.
+Markdown keeps content readable in plain text and portable across tools. It also works well with Git-based review and version history.
 
-## Step 3: Deploy for Free
+## Step 3: Deploy to static hosting
 
-Push your repository to GitHub and connect it to a static host:
+Push the repository to GitHub and connect it to a static hosting platform. Common options include Cloudflare Pages, Vercel, Netlify, and GitHub Pages. [VERIFY: confirm current free-tier limits and pricing before publishing.]
 
-- **[Cloudflare Pages](https://pages.cloudflare.com)**: unlimited free bandwidth.
-- **[Vercel](https://vercel.com)**: the smoothest dashboard and preview deployments.
-- **[GitHub Pages](https://pages.github.com)**: zero additional accounts required.
+A basic deployment flow looks like this:
 
-Every push rebuilds and republishes your blog in under a minute. Compare your options in [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/) and [the full hosting roundup](/misc/top-static-site-hosting/).
+1. Commit content and templates to Git.
+2. Configure the build command and output directory.
+3. Deploy on every push to your main branch.
+4. Add a custom domain if needed.
 
-## Step 4: Edit Without the Command Line
+## Step 4: Add a Git-based CMS if needed
 
-This is the step most guides skip. If publishing requires opening a terminal, you will stop writing.
+If writing in a code editor slows you down, use a Git-based CMS. It can provide a browser editor while still committing Markdown files to your repository. [LightCMS](/getting-started/) is one option in this category. [VERIFY: confirm current LightCMS setup and feature details.]
 
-A **Git based CMS** like [LightCMS](https://lightcms.me) gives you a browser-based visual editor (images, formatting, front matter) and commits each published post to your repository as clean Markdown. Your CI/CD pipeline does the rest. See [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) for why this beats the WordPress route.
+## Step 5: Plan for maintenance
 
-## Step 5: Grow It
+A static blog has fewer runtime components than a database CMS, but it still needs maintenance: dependency updates, broken-link checks, content reviews, and deployment monitoring. The trade-off is favorable for most blogs because the published site has no application database or server-side rendering runtime to maintain.
 
-The work that compounds:
-
-- Publish on a schedule. Search rewards steady output.
-- Write the posts you once searched for yourself; specific problems rank best.
-- Fast pages and good Core Web Vitals (built in with the static setup) are direct ranking factors.
-- Turn posts into a newsletter so readers can follow you without an algorithm in between, which [automated newsletters with Newsy](/blog/newsletter-email-automation/) covers.
-
----
-
-## What It Costs
-
-| Item                                     | Cost                      |
-| :--------------------------------------- | :------------------------ |
-| Static site generator                    | Free (open source)        |
-| Hosting (Cloudflare Pages, GitHub Pages) | Free tier                 |
-| Git based CMS (LightCMS, self-hosted)    | Free (Apache 2.0)         |
-| Custom domain                            | ~$10–15 / year (optional) |
-
-You can run a serious publication for the price of a domain name.
-
-There is a fourth column nobody lists: energy. A static blog served from cached edge nodes emits a fraction of the CO2 of a database driven site, so publishing on a shoestring and publishing sustainably turn out to be the same decision.
-More in [Static Sites and CO2](/blog/greener-web-static-sites/).
-
----
-
-## Frequently Asked Questions
-
-### Is starting a blog still worth it in 2026?
-
-Yes. A blog you own is durable in a way a social profile is not. Static blogs are fast, cheap to run, and decades away from "this platform shut down."
-
-### Do I need to know how to code?
-
-No. The generator is set up once (many one-click starters exist); after that, publishing happens through a visual CMS editor.
-
-### Can I start a blog for free?
-
-Yes. Generator, hosting, and a self-hosted CMS are all free. Only a custom domain costs money, and even that is optional on free subdomains.
-
-### WordPress or static for a new blog?
-
-Static, unless you need plugins and membership features. You get better speed, security, and zero maintenance, and [LightCMS](/getting-started/) provides the friendly editing layer WordPress users expect.
+For a detailed workflow, see [Configuring Your Repository and CI/CD for LightCMS](/blog/configuring-your-repository-cicd/) and [Static Sites vs. Dynamic Sites](/blog/static-vs-dynamic/).

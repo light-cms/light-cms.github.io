@@ -1,22 +1,22 @@
 ---
 title: Newsy Video Walkthrough
-description: "A video walkthrough of setting up Newsy locally: clone the repository, configure the GitHub App, and launch the newsletter bot."
+description: A video walkthrough of setting up Newsy for your own use.
 keywords:
   - newsy
   - newsletter video
   - youtube tutorial
   - github newsletter
   - newsy setup
-date: "2026-09-12T01:07:00Z"
+date: 2026-09-12T01:07:00Z
 draft: false
 weight: 0
-
 taxonomies:
   tags:
     - video
     - youtube
     - newsy
     - newsletter
+created: 2026-11-09T18:30:00.000Z
 ---
 
 Prefer to learn by watching? This walkthrough covers the setup process, from cloning the repository to launching the bot.

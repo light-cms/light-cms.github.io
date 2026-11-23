@@ -1,39 +1,40 @@
 +++
-title = "Getting Started with LightCMS"
-description = "A practical journal on Git based CMS, static site generators, and modern publishing workflows: write in Markdown, keep your content in Git, and deploy anywhere."
+title = "LightCMS: Git-Backed Publishing for Static Sites"
+description = "Guides on Git-based CMS workflows, static site generators, and Markdown publishing with LightCMS."
 +++
 
-## [LightCMS](https://www.lightcms.me) is a Git based content management system for static sites
+[LightCMS](https://www.lightcms.me) is a Git-based content management system for static sites. It keeps content as Markdown files in your Git repository so you can edit in a browser, review changes with Git, and publish through your existing CI/CD pipeline.
 
-**Your posts stay in your repository as Markdown files.** Every draft and post lives as Markdown with front matter. Git keeps the version history, so you can review changes, roll back, and keep working in any editor you like.
+## What you can do with LightCMS
 
-1. A visual editor. [LightCMS](https://www.lightcms.me) uses the [TipTap](https://tiptap.dev) editor for writing and formatting in the browser.
-2. An AI copilot. Use it to revise and improve drafts.
-3. Voice dictation. Speak and let Whisper or [Wit.ai](http://Wit.ai) turn your words into text.
-4. Light and dark themes. Pick the theme that suits you.
-5. Newsletters without a third-party service. [Newsy](https://github.com/light-cms/newsy) turns each newly published post into an announcement on GitHub, so readers can subscribe there.
+| Capability | How it works in a Git-based workflow |
+| :--- | :--- |
+| **Visual editing** | Draft and edit Markdown in a browser-based editor. [VERIFY: confirm current editor implementation and supported formatting features.] |
+| **Git-backed publishing** | Save content as commits in your repository instead of storing posts in a separate CMS database. |
+| **AI drafting assistance** | Use in-editor assistance for drafting or revision tasks. [VERIFY: confirm current AI features and providers.] |
+| **Voice dictation** | Dictate content in the editor. [VERIFY: confirm current voice/transcription feature and implementation.] |
+| **Reader updates** | Send update notifications through GitHub-based workflows with [Newsy](https://github.com/light-cms/newsy). [VERIFY: confirm current Newsy capabilities and setup.] |
 
----
+## How publishing works
 
-## How it works
+1. **Connect GitHub:** Authenticate with your GitHub account.
+2. **Select a repository:** Choose the repository that contains your static site content. [VERIFY: confirm supported Git providers/integrations beyond GitHub, if any.]
+3. **Edit content:** Draft posts and update front matter in the browser.
+4. **Publish to Git:** LightCMS commits Markdown changes to your repository. [VERIFY: confirm branch/PR publishing options.]
+5. **Deploy with CI/CD:** Your existing build pipeline, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, builds and deploys the site.
 
-1. **Sign in** with your GitHub account.
-2. **Choose a repository.** Install the LightCMS app on the repo that holds your site. It works with static site generators that use front matter in Markdown files.
-3. **Write.** The editor handles formatting and uploads images as you add them.
-4. **Publish.** [LightCMS](https://www.lightcms.me) commits the change to your repository.
-   Your CI/CD pipeline builds and deploys the site to the host you choose, such as GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh](https://surge.sh), or any S3-compatible object storage.
+This workflow favors version control and content portability. It is less suited to sites that need runtime content queries, per-user personalization, or complex relational content models.
 
-### Read next
+## Start with these guides
 
-- [Why LightCMS?](/blog/why-this/): the design reasoning behind Git-based publishing.
-- [Self hosting LightCMS](/blog/selfhost/): run your own instance.
-- [Newsletter automation](/blog/newsletter-email-automation/): how Newsy delivers posts without a third party email service.
+- [Why Git-based publishing?](/blog/why-this/) covers trade-offs between Git-backed and database-backed CMSs.
+- [Self-hosting LightCMS](/blog/selfhost/) explains deployment considerations for running your own instance. [VERIFY: confirm current self-hosting support and documentation path.]
+- [How Newsy works](/blog/newsletter-email-automation/) describes GitHub-based update workflows.
 
-### Comparisons and explainers
+## Comparisons and architecture
 
-- [Static sites vs dynamic sites](/blog/static-vs-dynamic/): why static sites work well for content.
-- [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/): choosing a static site generator.
-- [Cloudflare Pages vs Vercel](/blog/cloudflare-pages-vs-vercel/): choosing where to host.
-- [Git-based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/): how the two models differ.
-- [Top Git-backed CMS platforms](/comparison/top-git-cms/): LightCMS compared with Decap, TinaCMS, Keystatic, and others.
-- [How to start a blog](/blog/how-to-start-a-blog/): a guide to blogging with Markdown and a static site.
+- [Git CMS vs. Traditional CMS](/blog/git-cms-vs-traditional-cms/)
+- [Static vs. Dynamic Sites](/blog/static-vs-dynamic/)
+- [Astro vs. Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/)
+- [Cloudflare Pages vs. Vercel](/blog/cloudflare-pages-vs-vercel/)
+- [Top Git-Backed CMS Platforms](/comparison/top-git-cms/)

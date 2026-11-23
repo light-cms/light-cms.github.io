@@ -1,9 +1,6 @@
 ---
-title: What Is a Git Based CMS?
-description: >-
-  A Git based CMS stores content as files in a repository and commits edits like
-  code the architecture, the workflow, and when it beats a database.
-serial: 43
+title: "What Is a Git-Based CMS?"
+description: "A Git-based CMS stores content as files in a Git repository and turns editor actions into commits."
 date: "2026-10-16T10:50:00.000Z"
 draft: false
 tags:
@@ -16,123 +13,75 @@ tags:
 slug: git-based-cms-explained
 ---
 
-A **Git based CMS** Is a content management system that stores content as files in a Git repository instead of rows in a database. Editing happens in a visual interface; saving happens as a commit. The site build reads those files and produces pages.
+A Git-based CMS stores content as files in a Git repository instead of rows in a database. Authors edit content in a visual interface, and the CMS saves those changes as Git commits. A static site generator or build pipeline then reads the files and produces the site.
 
-That single design choice (files, not rows) cascades into everything else about how these tools behave: versioning, portability, cost, security, and who can use them.
+## How a Git-based CMS architecture works
 
-## The Architecture
-
-A Git based CMS sits between a writer and a repository, and touches nothing else:
+In a traditional CMS, content usually lives in a database and the application renders pages at request time. In a Git-based CMS, authoring is separated from delivery.
 
 ```text
-Writer ──> Visual editor ──> commit (.md + front matter)
-                                   │
-                                   ▼
-                          Git repository (source of truth)
-                                   │
-                                   ▼
-                     CI/CD build (Astro, Hugo, Zola, …)
-                                   │
-                                   ▼
-                        Static output ──> CDN ──> Reader
+Writer -> Visual editor -> Git commit (Markdown + front matter)
+                                │
+                                ▼
+                        Git repository
+                                │
+                                ▼
+                   CI/CD build (Astro, Hugo, Zola, etc.)
+                                │
+                                ▼
+                  Static files -> CDN -> Reader
 ```
 
-Three properties define the category:
+| Component | Role in a Git-based CMS |
+| :--- | :--- |
+| **Git repository** | Stores content files, history, and collaboration metadata |
+| **CMS editor** | Provides a writing interface and creates commits or pull requests |
+| **Build pipeline** | Converts source files into deployable static output |
+| **CDN/host** | Serves built files to readers |
 
-1. **The repository is the database.** There is no second copy of the content. If it is not committed, it does not exist; if it is committed, it is backed up by every clone.
-2. **The build is the runtime.** Pages are assembled at build time and served as files. Nothing renders content per request.
-3. **The CMS is a client, not a host.** It writes to the repository and can be replaced without touching the content.
+## What happens when you publish
 
-Contrast that with a traditional CMS: content in MySQL, templates in PHP, assembled on every request, administered through the same application that serves the site. [Git based CMS vs traditional CMS](/blog/git-cms-vs-traditional-cms/) Works through the comparison.
+Publishing in a Git-based CMS usually writes a Markdown file with front matter and commits it to the repository.
 
-## What a Commit Does
-
-When a writer hits publish, the CMS serializes the document to Markdown with YAML front matter and commits it:
-
-```markdown
+```md
 ---
-title: Shipping the New Dashboard
+title: "Shipping the New Dashboard"
 date: 2026-10-16T09:00:00Z
 draft: false
 tags:
   - product
 ---
 
-Body text begins here...
+Our redesigned dashboard is now live for all users.
 ```
 
-That commit is doing several jobs at once:
+That commit can provide content persistence, an audit trail, remote backup through your Git host, and a deployment trigger for CI/CD. The exact behavior depends on the CMS and repository workflow. [VERIFY: confirm commit/PR behavior for the specific CMS being described.]
 
-- **It is the save.** The content is persisted in the repository.
-- **It is the audit entry.** Author, timestamp, and message recorded automatically.
-- **It is the backup.** Every clone contains the full history.
-- **It is the deploy trigger.** CI picks it up, builds, and ships.
+## Benefits of storing content in Git
 
-One write replaces four separate systems in a conventional stack.
+Git gives content workflows features that database CMSs often implement separately:
 
----
+- **Revision history:** Diffs show what changed in a file, who changed it, and when.
+- **Rollback:** You can revert a specific commit or restore a file without rolling back unrelated content.
+- **Review workflows:** Branches and pull requests can support editorial review before publishing.
+- **Portability:** Markdown files can move between static site generators and hosting providers with fewer migration steps than proprietary database exports.
 
-## The Workflow Properties You Get Free
+## Trade-offs and limits
 
-### Version history with real diffs
+Git-based CMSs are a strong fit for blogs, documentation, and marketing sites. They are not a fit for every product.
 
-Markdown diffs are legible. "Who changed this sentence, and when" is a one-line `git log`, not a plugin or a database query.
+- **No runtime content queries:** Static builds do not provide per-request database queries by default. User-specific or highly relational content usually needs an application backend or database-backed CMS.
+- **Build latency:** Publishing requires a build and deploy step. For many sites this is acceptable, but it is slower than editing a live database record.
+- **Merge conflicts:** Two people editing the same file can create conflicts. File-per-post workflows reduce the risk.
+- **Permission granularity:** Git permissions are usually repository- or branch-oriented, not field-level.
 
-### Roll back per file
+My judgment is that Git-based content management is the better default for editorial sites where content should be portable, reviewable, and deployable as static files. The counterargument is operational: teams that need real-time collaboration, complex permissions, or dynamic data may spend more time working around Git than benefiting from it.
 
-Revert one post without touching anything else. Restoring a database backup rolls back the whole site, usually silently.
+## What to evaluate in a Git-based CMS
 
-### Branches and pull requests as editorial review
+1. **Editor quality:** Check whether writers can edit comfortably without touching raw Git commands.
+2. **Front matter handling:** Confirm the CMS preserves your existing fields and formats.
+3. **Publishing model:** Decide whether you need direct commits, pull requests, or draft branches.
+4. **Lock-in risk:** Make sure your content remains usable as plain files if you stop using the CMS.
 
-Write on a branch, submit a PR, take line-level comments on the exact paragraph, merge when approved. GitHub's native review tools become an editorial workflow.
-
-### Portable content
-
-The content is stored as plain text, enabling seamless migration across generators, hosts, and CMS platforms the archive moves with you.
-
-## The TradeOffs (Stated Honestly)
-
-Git based is not a universal win:
-
-- **No queries.** You cannot join content at request time; the build must produce whatever pages are needed. Relational content fits poorly.
-- **Rebuild latency.** A change is live after a build, not after a save. Modern builds are fast, but "instant" is measured in seconds to minutes.
-- **Merge conflicts.** Two people editing the same file create a real conflict. Well-designed CMS tools scope this (one post per file), but it exists.
-- **Coarse access control.** Repository access is not per-field permissions. If you need granular role enforcement, a database-backed admin is the better tool.
-- **Nontechnical onboarding.** Raw Git is hostile to writers, which is the gap a Git based CMS fills: it hides the commits while keeping the benefits.
-
-That last point is where most evaluations land. The architecture is usually right for a publication; the question is which tool makes it usable for the people publishing.
-
-## What to Look For in One
-
-- **Editor quality.** Writers will live in it. Form fields versus a real document editor is the biggest practical difference between tools.
-- **Front matter handling.** Malformed metadata breaks builds; a good tool validates it.
-- **Publish model.** Direct commit, or pull request with review.
-- **Provider support.** GitHub, GitLab, Bitbucket: whichever you use.
-- **Hosting model.** Self hosted (you run it) versus hosted (they run it).
-- **Exit cost.** It should be zero. If the tool disappeared tomorrow, your repository should still build.
-
-[LightCMS](https://lightcms.me) is built around those criteria; see [what LightCMS is](/blog/what-is-lightcms/). The wider field is surveyed in [top Git based CMS platforms](/comparison/top-git-cms).
-
-## Frequently Asked Questions
-
-### Is a Git based CMS the same as a headless CMS?
-
-1. Headless describes _how content reaches a frontend_ (through an API); Git based describes _where content lives_ (files in a repository). The two ideas overlap in practice; see [headless vs Git based CMS](/blog/headless-vs-git-based-cms/).
-
-### Do I need to know Git to use it?
-
-1. You don’t need to be familiar with Git to view history or manage branches; the editor handles all commit operations for you.
-
-### Can a Git based CMS handle a large site?
-
-Yes. Generators build thousands of pages quickly, and the repository handles content volume comfortably. Build time is the practical ceiling, not storage.
-
-### Does it work with my static site generator?
-
-Yes if your generator can read Markdown files with front‑matter, such as Astro, Hugo, Zola, Eleventy, Jekyll, SvelteKit, or Next.js.
-
-### Where does media go?
-
-Typically to a directory in the repository or an asset bucket referenced from front matter. Either way, the reference lives with the content.
-
-Next: [headless vs Git based CMS](/blog/headless-vs-git-based-cms/) if you're still weighing architectures, or [what front matter is](/blog/what-is-front-matter/) If the metadata layer is new to you.
+For product comparisons, see [Top Git-Based CMS Platforms](/comparison/top-git-cms) and [Git-Based vs. Traditional Headless CMS](/blog/headless-vs-git-based-cms/).

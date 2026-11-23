@@ -1,0 +1,1 @@
+- Treat AGENTS.md as a binding guide and follow its rules strictly when performing relevant work. Confidence: 0.95

@@ -1,9 +1,6 @@
 ---
-title: "AI Assisted Blogging: Where AI Helps in a Writing Workflow (and Where It
-  Doesn't)"
-description: "A practical look at using AI in a blogging workflow: outlining,
-  rewriting, transcription, and content transforms, plus the parts of writing
-  that should stay human."
+title: "AI-Assisted Blogging: Where AI Helps and Where It Fails"
+description: "A practical guide to using AI in a blogging workflow for outlining, editing, and transcription while keeping facts, voice, and judgment human."
 serial: 37
 date: 2026-10-16T10:10:00Z
 draft: false
@@ -21,90 +18,39 @@ taxonomies:
     - workflow
 ---
 
-Two years into "AI writing tools," most blogs learned the same lesson: generating a full
-article and pressing publish produces content nobody finishes reading.
-The open question is **where** AI belongs in a writing workflow.
+AI-assisted blogging works best when you use models for bounded tasks such as outlining, rewriting, proofreading, and transcription, while keeping facts, voice, and editorial judgment under human control. Treating AI as a drafting assistant can reduce friction; treating it as the author usually produces generic, untrustworthy content.
 
-Some tasks suit a model and some do not.
+## Tasks where AI can help
 
-## Where AI Helps
+AI is useful when you supply the source material and the point of the post. It is less useful when you ask it to invent experience or authority.
 
-### 1\. Overcoming the Blank Page
+| Task | Good use | Risk to watch |
+| :--- | :--- | :--- |
+| **Outline** | Generate a rough structure you can cut and reorder | Generic sections that miss your actual argument |
+| **Rewrite** | Tighten a paragraph you already wrote | Losing technical nuance or changing meaning |
+| **Proofread** | Catch grammar, consistency, and formatting issues | Accepting incorrect edits without review |
+| **Transcription** | Turn spoken notes into a draft | Misheard names, numbers, or technical terms |
+| **Repurposing** | Draft a meta description or newsletter summary | Introducing claims not present in the post |
 
-An outline is the most useful AI output. Ask for a structure on your topic and you get something to argue with. Disagreement is far easier to write against than emptiness. You will keep four of the eight sections, rewrite two, and delete two. That is a productive ten minutes.
+A simple example: if you dictate 600 words of rough notes, an AI transcript and cleanup pass can give you a draft to edit. You still need to verify every product name, version, quote, and number before publishing.
 
-### 2\. Rewriting What You Already Wrote
+## Tasks that should stay human
 
-Editing a finished paragraph is where models shine, because the meaning already exists and the task is bounded: tighten this, simplify that, make it more formal. The failure modes of generation (invented facts, hollow voice) rarely apply when the content is yours and the model is only reshaping it.
+Language models can produce plausible text without checking whether it is true. That makes them risky for factual claims, code behavior, pricing, legal statements, and product capabilities. [VERIFY: add product-specific or legal review requirements if your publishing workflow has them.]
 
-### 3\. Grammar and Consistency Passes
+Voice also depends on lived experience. A model can imitate tone, but it cannot supply the real trade-off, bug, customer conversation, or decision that makes a post worth reading. My judgment is that the author's direct experience is the main reason a technical blog post earns trust.
 
-The pre-publish check humans do badly at 11 p.m. Spelling, agreement, stray commas, and inconsistent capitalization of a product name are mechanical work, and model does mechanical work well.
+The counterargument is speed: AI can generate a complete draft in minutes. That speed is real, but speed only helps when the draft is accurate and specific. A fast, generic post can cost more editorial time than it saves.
 
-### 4\. Transcription
+## A practical AI blogging workflow
 
-Speech-to-text is the quiet win. Dictating a first draft at 150 words per minute, then editing, outproduces typing for most people, particularly for spoken-thought content like interviews, field notes, and retrospectives. Whisper-quality transcription is good enough that [dictation](/blog/lightcms-voice-to-text/) is now a real writing mode rather than a novelty.
+1. **Define the claim:** Write the central point and the reader you are trying to help.
+2. **Collect evidence:** Gather notes, docs, benchmarks, screenshots, or code you can verify.
+3. **Use AI for structure:** Ask for an outline, then remove anything that does not support the claim.
+4. **Draft the core yourself:** Write the key sections from your own knowledge and sources.
+5. **Use AI for editing passes:** Request grammar, clarity, or formatting help on selected text.
+6. **Verify before publish:** Check facts, links, code, and quotes; then commit the final Markdown.
 
-### 5\. Repetitive Content Transforms
+If you use AI inside a CMS, keep the human approval step explicit. [LightCMS](/blog/what-is-lightcms/) describes AI assistance in-editor; confirm the current feature set and provider model before making specific product claims. [VERIFY]
 
-Turning one long post into a newsletter edition, a thread, a summary paragraph, or a set of metadata descriptions is tedious work with a clear input. Automate the transform; keep editorial control over what ships.
-
-## Where AI Does Not Help
-
-### Facts
-
-Models compress what they have seen; they do not check what is true. Statistics, release versions, pricing, quotes, and claims about your own product remain your responsibility. Every factual sentence needs a human who can verify it.
-
-### Voice
-
-Voice is the residue of specific experience: the bug you personally debugged, the client call that changed your mind, the thing you tried that failed. It is the one part of a post that cannot be prompted into existence, and the only part a reader remembers.
-
-### Taste
-
-Knowing what to leave out, which framing is honest, and where the post should end is editorial judgment. Delegating it produces technically complete articles that say nothing.
-
-### Relationship with Readers
-
-People read a person or a team. A publication that outsources its thinking forfeits the only durable advantage small blogs have overlarge ones.
-
-## A Workflow That Keeps the Balance
-
-A practical division of labor, in order:
-
-1. **You** decide the topic and the claim. (Judgment)
-2. **AI** proposes an outline. You restructure it. (Structure)
-3. **You** write the body, from notes, experience, and evidence. (Voice, facts)
-4. **Dictate or paste** rough sections if typing is the bottleneck. (Throughput)
-5. **AI** tightens and fixes grammar on selection. (Mechanics)
-6. **You** verify every claim, then publish. (Accountability)
-
-The pattern: AI touches structure and mechanics; humans hold facts, voice, and judgment. Every step where AI touches meaning is a step where the post becomes less yours.
-
-## The Practical Infrastructure Question
-
-If AI is going to sit inside your workflow, it should sit inside your tooling rather than in a separate tab you copy between. Two things are worth demanding from any AI-enabled CMS:
-
-- **Bring your own provider.** Your key, your account, your choice of model, including a local endpoint. A tool that routes your unpublished drafts through its own proxy has made a decision about your content on your behalf.
-- **Nothing ships without you.** Generation lands as editable text in the document; publish remains a deliberate action you take.
-
-That is the design [LightCMS](/blog/what-is-lightcms/) ships with: contextual actions inside the editor (outline, rephrase, expand, fix grammar) over any OpenAI compatible endpoint, with commits you approve.
-
-## Frequently Asked Questions
-
-### Will AI Written Content Hurt SEO?
-
-Search engines evaluate helpfulness, not authorship. Mass generated, unedited content fails because it is generic. The risk is publishing without editing, not using assistance.
-
-### Should I Disclose AI Use?
-
-If a piece is substantially machine-drafted, disclosure is honest and increasingly expected. Using AI to fix grammar in something you wrote is not the same act.
-
-### Can AI Write in My Voice?
-
-It can approximate style from samples you provide. It cannot invent the experiences that produce the style.
-
-### Is a Transcription Endpoint Safe for Private Drafts?
-
-Treat any external endpoint as a third party: send what you intend to send, to a provider you have chosen. Prefer self-hosted or bring-your-own-key configurations for sensitive material.
-
-Further reading: [the Lightcms copilot](/blog/lightcms-ai-copilot/), [voice-to-text dictation](/blog/lightcms-voice-to-text/), and [how to start a blog](/blog/how-to-start-a-blog/) if you are setting the whole thing up from scratch.
+For related workflows, see [Voice-to-Text Dictation](/blog/lightcms-voice-to-text/) and [The LightCMS Copilot](/blog/lightcms-ai-copilot/).
