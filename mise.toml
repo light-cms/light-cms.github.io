@@ -8,6 +8,7 @@ biome = "latest"
 harper-cli = "latest"
 superhtml = "latest"
 "npm:parcel" = "latest"
+node = "26"
 
 
 [settings]
