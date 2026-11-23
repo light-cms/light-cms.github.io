@@ -55,7 +55,7 @@ Every clone is a complete copy. Moving platforms is a `git clone` Away from succ
 
 Here’s the honest, no‑free‑lunch list:
 
-- **Non‑technical writers need a friendly interface.** Raw Git feels like a cliff’s edge. “Content as code” works only when the repository is paired with an editing tool that abstracts away commits—precisely the gap that Git‑based CMS platforms fill.  
+- **Non technical writers need a friendly interface.** Raw Git feels like a cliff’s edge. “Content as code” works only when the repository is paired with an editing tool that abstracts away commits—precisely the gap that Git‑based CMS platforms fill.  
 - **Rich media handling is cumbersome.** Images and documents become binary files in the repo, leading to larger clones, awkward diffs, and occasional reliance on Git LFS.  
 - **Structural limitations.** Files don’t naturally join; when content becomes relational, a database’s added complexity is hard to avoid.  
 - **Merge conflicts persist.** They’re rare with per‑document files but can be painful when multiple people edit the same lengthy file.  
