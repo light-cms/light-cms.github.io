@@ -26,4 +26,4 @@ You do not need a complex setup to publish useful notes. For many personal blogs
 
 Writing from real experience also adds useful information to the web. Clear notes about real problems, edge cases, and fixes can help other people find answers faster.
 
-New to this? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) explains the philosophy behind owning your words.
+New to this? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) Explains the philosophy behind owning your words.
