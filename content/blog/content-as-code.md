@@ -86,17 +86,17 @@ The repository stays recognizable to a developer and invisible to a writer. That
 
 ## Why It Lasts
 
-Content as code wins on time. Databases need their schema, their server version, and their vendor. Wikis need their vendor. Proprietary documents need their vendor.
+Content stored as code endures over time. Databases depend on a specific schema, server version, and vendor; wikis rely on their vendor; proprietary documents are locked to their vendor as well.
 
-A directory of Markdown files needs a text editor, and it will still open in one in twenty years, regardless of what happens to any tool in the chain. For content meant to outlive the platform it was written on, that is risk management rather than nostalgia.
+A directory of Markdown files, however, needs only a text editor—and it will still be readable twenty years from now, regardless of what happens to any tools in the chain. When you need content to outlive the platform on which it was created, you’re managing risk, not indulging nostalgia.
 
-The same premise runs through every Git based CMS: [LightCMS](/blog/what-is-lightcms/) Adds the writing surface, and the repository keeps the permanence. See [drafts, revisions, and rollbacks](/blog/lightcms-drafts-and-versioning/) For the workflow in detail.
+The same principle applies to every Git‑based CMS. LightCMS provides the writing surface, while the repository ensures permanence. See “Drafts, Revisions, and Rollbacks” for a detailed workflow.
 
 ### Frequently Asked Questions
 
 ### Is content as code the same as a Git based CMS?
 
-It is the philosophy; a Git based CMS is one implementation. You can practice content as code with nothing but an editor, and a Git based CMS gives non-developers a way in.
+It is the philosophy; a Git based CMS is one implementation. You can practice content as code with nothing but an editor, and a Git based CMS gives non developers a way in.
 
 Should writers be familiar with Git?
 
