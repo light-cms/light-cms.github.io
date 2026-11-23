@@ -19,7 +19,7 @@ tags:
 preview: /og-image.png
 slug: selfhost
 ---
-Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
+Want [LightCMS](https://lightcms.me) Fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) Application so it can be deployed anywhere, backed by a Postgres database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
 
 This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
 PostgreSQL, configuring environment variables, and deploying.
@@ -40,13 +40,13 @@ PostgreSQL, configuring environment variables, and deploying.
 
 ## Prerequisites
 
-- [**mise**](https://mise.jdx.dev): installs and managing tasks dependencies. I will be assuming you have it installed.
-- **PostgreSQL**: a database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
-[Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
-[awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
-- **GitHub account**: needed to register the GitHub App.
+- [**mise**](https://mise.jdx.dev): Installs and managing tasks dependencies. I will be assuming you have it installed.
+- **PostgreSQL**: A database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
+[Supabase](https://supabase.com) or [Nile](https://thenile.dev) Works well. See
+[awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) For free options.
+- **GitHub account**: Needed to register the GitHub App.
 - **SMTP provider** (for magic links): If you have a domain then [Resend](https://resend.com) will be having an awesome experience,
-if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
+if not then [Zoho Mail](https://www.zoho.com/mail) Feels better (Remember to create an app password).
 
 > **TLS is mandatory.** The application connects to PostgreSQL with `ssl: "require"`. A local PostgreSQL instance
 > without TLS enabled will be rejected, so use a hosted database or configure TLS on your own server.
