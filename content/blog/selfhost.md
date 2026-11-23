@@ -3,7 +3,6 @@ title: Self Hosting LightCMS
 description: >-
   self host LightCMS, fork the repository, create the GitHub App, provision
   PostgreSQL, configure environment variables, and deploy.
-serial: 4
 section: Get Started
 badge: Deploy
 date: '2026-09-18T01:45:00.000Z'
