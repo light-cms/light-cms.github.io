@@ -21,13 +21,11 @@ slug: content-as-code
 
 "Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
 
-## The Three Commitments
+## The Commitments
 
-Content as code comes down to three choices:
-
-1. **Plain text is the format.** Markdown or AsciiDoc, YAML or TOML front matter, UTF-8 files. Nothing proprietary, nothing that needs the original tool to open.
-2. **The repository is the system of record.** Not a database, not a wiki, not a shared drive. If it is not in Git, it does not exist.
-3. **The pipeline treats content like a build.** Linters check links and style, previews render every pull request, and merging deploys.
+- **Use plain‑text Markdown files as the universal format.** Store content in Markdown, AsciiDoc, or YAML/TOML front matter, all saved as UTF‑8 files. No proprietary formats and no dependence on a specific editor.  
+- **Treat the Git repository as the single source of truth.** It replaces databases, wikis, and shared drives—if it isn’t in Git, it doesn’t exist.  
+- **Run content through a build‑style pipeline.** Linters verify links and style, previews are generated for every pull request, and merging automatically deploys the updated material.
 
 Once those hold, most of the benefits follow automatically.
 
@@ -55,15 +53,15 @@ Every clone is a complete copy. Moving platforms is a `git clone` Away from succ
 
 ### Where It Gets Hard
 
-The honest list, because this is not free:
+Here’s the honest, no‑free‑lunch list:
 
-- **Nontechnical writers need an interface.** Raw Git is a cliff. Content as code works in practice when you pair the repository with an editing tool that hides commits, which is the gap Git based CMS tools fill.
-- **Rich media is clumsier.** Images and documents mean binary files in the repository: larger clones, awkward diffs, occasional LFS.
-- **Structure is limited.** Files do not join. When content becomes relational, a database earns its complexity.
-- **Merge conflicts still exist.** Rare when files are per-document, painful when two people edit the same long file.
-- **Search and preview need tooling.** A wiki gives you search instantly; a static site needs an index step.
+- **Non‑technical writers need a friendly interface.** Raw Git feels like a cliff’s edge. “Content as code” works only when the repository is paired with an editing tool that abstracts away commits—precisely the gap that Git‑based CMS platforms fill.  
+- **Rich media handling is cumbersome.** Images and documents become binary files in the repo, leading to larger clones, awkward diffs, and occasional reliance on Git LFS.  
+- **Structural limitations.** Files don’t naturally join; when content becomes relational, a database’s added complexity is hard to avoid.  
+- **Merge conflicts persist.** They’re rare with per‑document files but can be painful when multiple people edit the same lengthy file.  
+- **Search and preview require tooling.** A wiki offers instant search; a static site needs an extra indexing step to achieve the same experience.
 
-None of these are disqualifying for a publication. All of them are real for other shapes of work.
+None of these issues are disqualifying for a publication, but they are real considerations for many workflows.
 
 ## The Practical Stack
 
