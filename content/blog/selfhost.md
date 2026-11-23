@@ -230,8 +230,8 @@ CDN_URL="https://freeimage.host/api/1/upload"
 CDN_KEY="<cdn-api-key>"
 ```
 
-`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the
-variables are unset, [LightCMS](https://lightcms.me) falls back to embedding the image in the document as a base64 `data:` URL. This works,
+`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` Already contains one. If the upload fails or the
+variables are unset, [LightCMS](https://lightcms.me) Falls back to embedding the image in the document as a base64 `data:` URL. This works,
 but it makes your Markdown files much larger, so configure a CDN for real use.
 
 ### Local webhook forwarding (development only)
@@ -301,12 +301,12 @@ GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io]
    ```
 
 The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
-labels on `pull_request`, and `installation` logging.
+labels on `pull_request`, and `installation` Logging.
 
 ## 6. Production deployment
 
 The project is configured with sveltekit which is very vendor agnostic, so
-[Vercel](https://vercel.com) [netlify](https://www.netlify.com/) [cloudflare workers](https://www.cloudflare.com/) all are supported deployment targets out of the box.
+[Vercel](https://vercel.com) [Netlify](https://www.netlify.com/) [Cloudflare workers](https://www.cloudflare.com/) All are supported deployment targets out of the box.
 
 1. Import your Git repository into deployment platform.
 2. Add every environment variable from [step 3](#3-configure-environment-variables) in **Project Settings → Environment
