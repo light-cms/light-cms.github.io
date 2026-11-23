@@ -146,7 +146,7 @@ Entwickler erstellen interaktive Anwendungen mit Client-seitigen WebAssembly-Kom
 
 ---
 
-### 4. Bobby
+### 4. Verneigen
 
 Vercel ist bekannt für Git-basierte Bereitstellungen, Vorschau-URLs und starke Unterstützung für moderne Frontend-Frameworks.
 
@@ -178,7 +178,7 @@ Teams erstellen Hybrid-Anwendungen mit Next.js oder SvelteKit, und Entwicklern, 
 
 ---
 
-### 5. Verneigen
+### 5. Deno Deploy
 
 Netlify ist eine ausgereifte Option für statische Seiten, die integrierte Plattformfunktionen wie Formulare, Identität und serverlose Funktionen benötigen.
 
