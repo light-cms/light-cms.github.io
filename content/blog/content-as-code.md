@@ -1,10 +1,10 @@
 ---
-title: "Content as Code: Writing Like Code"
+title: 'Content as Code, Version Control content for Better auditable Workflows'
 description: >-
-  Treat content like code, version it, review changes, and manage it alongside
-  your projects. This post explores the benefits and practicalities of a content
-  as code workflow.
-date: "2026-11-04T19:22:00Z"
+  Learn how a content as code workflow helps you version, review, and manage
+  content alongside your projects, with practical benefits and tips for getting
+  started.
+date: '2026-11-04T19:22:00Z'
 draft: false
 tags:
   - content as code
@@ -14,11 +14,9 @@ tags:
   - version controlled content
 isCJKLanguage: false
 headless: false
-serial: 47
 preview: /og-image.png
 slug: content-as-code
 ---
-
 **Content as code** Is the practice of storing writing the way developers store source: plain text files in a repository, reviewed in pull requests, validated by automated checks, and deployed by a pipeline.
 
 "Docs as code" is the older name. Technical documentation teams started it, and it has spread to blogs, changelogs, marketing copy, and anything else that used to live in a wiki or a CMS database.
