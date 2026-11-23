@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@main
         with:
-          path: ./dist
+          path: ./public
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@main
@@ -49,7 +49,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sitemap=./dist/sitemap.xml
+          sitemap=./public/sitemap.xml
           if [ ! -f "$sitemap" ]; then
             echo "::error::missing $sitemap"
             exit 1
@@ -63,7 +63,7 @@ jobs:
             echo "::error::INDEXNOW_KEY must be 8-128 chars of [A-Za-z0-9-]"
             exit 1
           fi
-          host="pratyay360.github.io"
+          host="blog.lightcms.me"
           urls=()
           while IFS= read -r url; do
             urls+=("$url")
