@@ -72,7 +72,7 @@ mise run install
 
 ## 2. Create the GitHub App
 
-[LightCMS](https://lightcms.me) uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
+[LightCMS](https://lightcms.me) Uses a GitHub App for two things: signing users in with GitHub (OAuth), and acting on your behalf
 through installations. You can create it with the built in Probot setup wizard, or by hand.
 
 ### Option A: Probot setup wizard
@@ -169,7 +169,7 @@ PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
 ### Email: required for magic-link sign-in
 
 Magic links are sent over SMTP with [Nodemailer](https://nodemailer.com). Sending fails with a configuration error when
-`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` or `MAIL_FROM` is missing.
+`MAIL_HOST`, `MAIL_USER`, `MAIL_PASS` or `MAIL_FROM` Is missing.
 
 ```bash
 MAIL_HOST="smtp.resend.com"
@@ -197,7 +197,7 @@ Any provider that exposes an OpenAI-compatible API works, for example [OpenAI](h
 
 ### Optional: speech-to-text dictation
 
-[LightCMS](https://lightcms.me) supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
+[LightCMS](https://lightcms.me) Supports two transcription backends. When both are configured, the OpenAI-compatible backend is used.
 
 **OpenAI-compatible transcription.** It is selected when `SPEECH_API_KEY` is set, and also needs `SPEECH_MODEL`:
 
