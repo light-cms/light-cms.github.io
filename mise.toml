@@ -16,7 +16,7 @@ experimental = true
 SWC_NATIVE_BINDING_CACHE = false
 
 [tasks.build]
-run = "zola build && mise run search && bun install && bun run build"
+run = "zola build && mise run search && bun install && biome format --fix && bun run build"
 description = "Build the site with Zola, index it for search, and optimize all HTML"
 
 [tasks.search]
