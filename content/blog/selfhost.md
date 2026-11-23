@@ -208,8 +208,8 @@ SPEECH_MODEL="whisper-1"
 SPEECH_ENDPOINT="https://api.openai.com/v1"
 ```
 
-Point `SPEECH_ENDPOINT` at any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` to a
-model that provider offers. A trailing `/audio/transcriptions` in the endpoint is stripped automatically.
+Point `SPEECH_ENDPOINT` At any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` To a
+model that provider offers. Trailing `/audio/transcriptions` in the endpoint is stripped automatically.
 
 [**Wit.ai**](https://wit.ai) is used when `SPEECH_API_KEY` is not set:
 
