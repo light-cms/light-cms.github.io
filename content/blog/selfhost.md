@@ -1,35 +1,31 @@
 ---
 title: Self Hosting LightCMS
-description: "How to self-host LightCMS: fork the repository, create the GitHub App, provision PostgreSQL, configure environment variables, and deploy to Vercel, Netlify, or Cloudflare."
+description: >-
+  How to self-host LightCMS: fork the repository, create the GitHub App,
+  provision PostgreSQL, configure environment variables, and deploy to Vercel,
+  Netlify, or Cloudflare.
 serial: 4
 section: Get Started
 badge: Deploy
-date: 2026-09-18T01:45:00Z
+date: '2026-09-18T01:45:00.000Z'
 draft: false
-keywords:
+tags:
   - lightcms
   - probot
   - self-hosting
   - github_app
   - vercel
   - sveltekit
-taxonomies:
-  tags:
-    - selfhost
-    - lightcms
-    - postgresql
-    - deployment
 preview: /og-image.png
-extra:
-  canonical: https://www.lightcms.me/docs
+slug: selfhost
 ---
-
 Want [LightCMS](https://lightcms.me) fully under your control? [LightCMS](https://lightcms.me) is a [SvelteKit](https://svelte.dev) application so it can be deployed anywhere, backed by a postgre database and a GitHub App(octokit). Your content never leaves your own GitHub repositories.
 
 This guide walks you through everything you need to run your own instance: creating the GitHub App, provisioning
 PostgreSQL, configuring environment variables, and deploying.
 
 ## How the Pieces Fit Together
+
 
 | Component             | Purpose                                                                       | Required                     |
 | --------------------- | ----------------------------------------------------------------------------- | ---------------------------- |
@@ -41,15 +37,16 @@ PostgreSQL, configuring environment variables, and deploying.
 | Image CDN             | Hosts images uploaded in the editor                                           | Optional                     |
 | PostHog               | Product analytics and AI observability                                        | Required in development only |
 
+
 ## Prerequisites
 
-- **[mise](https://mise.jdx.dev)**: installs and managing tasks dependencies. I will be assuming you have it installed.
+- [**mise**](https://mise.jdx.dev): installs and managing tasks dependencies. I will be assuming you have it installed.
 - **PostgreSQL**: a database that accepts TLS connections. Cloud providers such as [Neon](https://neon.tech),
-  [Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
-  [awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
+[Supabase](https://supabase.com) or [Nile](https://thenile.dev) works well. See
+[awesome-free-postgres](https://github.com/alexeyfv/awesome-free-postgres) for free options.
 - **GitHub account**: needed to register the GitHub App.
 - **SMTP provider** (for magic links): If you have a domain then [Resend](https://resend.com) will be having an awesome experience,
-  if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
+if not then [Zoho Mail](https://www.zoho.com/mail) remember to create a app password.
 
 > **TLS is mandatory.** The application connects to PostgreSQL with `ssl: "require"`. A local PostgreSQL instance
 > without TLS enabled will be rejected, so use a hosted database or configure TLS on your own server.
@@ -99,6 +96,7 @@ endpoint. Update it in the GitHub App settings before going live (see [Productio
 
 Create the app in **GitHub Settings → Developer settings → GitHub Apps → New GitHub App** with these values:
 
+
 | Setting        | Value                                                           |
 | -------------- | --------------------------------------------------------------- |
 | Homepage URL   | `https://<your-domain>`                                         |
@@ -107,7 +105,9 @@ Create the app in **GitHub Settings → Developer settings → GitHub Apps → N
 | Webhook URL    | `https://<your-domain>/api/github/webhook`                      |
 | Webhook secret | A random secret (see [Generating secrets](#generating-secrets)) |
 
+
 **Repository permissions**
+
 
 | Permission        | Access         | Used for                                    |
 | ----------------- | -------------- | ------------------------------------------- |
@@ -116,6 +116,7 @@ Create the app in **GitHub Settings → Developer settings → GitHub Apps → N
 | `Pull requests`   | Read-only      | Listing the files changed in a pull request |
 | `Commit statuses` | Read and write | Reporting content validation on pushes      |
 | `Metadata`        | Read-only      | Mandatory for every GitHub App              |
+
 
 **Subscribe to events:** `Push` and `Pull request`. Installation events are delivered to GitHub Apps automatically.
 
@@ -210,7 +211,7 @@ SPEECH_ENDPOINT="https://api.openai.com/v1"
 Point `SPEECH_ENDPOINT` at any provider that implements the `/audio/transcriptions` API, and set `SPEECH_MODEL` to a
 model that provider offers. A trailing `/audio/transcriptions` in the endpoint is stripped automatically.
 
-**[Wit.ai](https://wit.ai)** is used when `SPEECH_API_KEY` is not set:
+[**Wit.ai**](https://wit.ai) is used when `SPEECH_API_KEY` is not set:
 
 ```bash
 WIT_AI_TOKEN="<wit-ai-server-access-token>"
@@ -268,10 +269,12 @@ bun run db:push
 
 Other database scripts:
 
+
 | Command               | Description                                   |
 | --------------------- | --------------------------------------------- |
 | `bun run db:generate` | Generate a migration after editing the schema |
 | `bun run db:studio`   | Browse and edit your data in Drizzle Studio   |
+
 
 ## 5. Run locally
 
@@ -293,9 +296,8 @@ GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io]
 2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL.
 3. Set the **Webhook URL** in your GitHub App settings to the same URL.
 4. Run the bot in a second terminal:
-
    ```bash
-   bun run bot:start
+    bun run bot:start
    ```
 
 The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
@@ -308,7 +310,7 @@ The project is configured with sveltekit which is very vendor agnostic, so
 
 1. Import your Git repository into deployment platform.
 2. Add every environment variable from [step 3](#3-configure-environment-variables) in **Project Settings → Environment
-   Variables**. Set `BETTER_AUTH_URL` to your production URL.
+ Variables**. Set `BETTER_AUTH_URL` to your production URL.
 3. Deploy.
 
 To verify the production build locally:
@@ -327,15 +329,15 @@ One can use [groq](https://groq.com/) or [assemblyai](https://assemblyai.com/) o
 
 ## For development purpose you can use the following credentials for posthog
 
-PUBLIC_POSTHOG_KEY = "phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
-PUBLIC_POSTHOG_URL = "https://us.i.posthog.com"
+PUBLIC\_POSTHOG\_KEY = "phc\_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
+PUBLIC\_POSTHOG\_URL = "[https://us.i.posthog.com](https://us.i.posthog.com)"
 
 ```bash
 PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
 PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
-https://wit.ai
+[https://wit.ai](https://wit.ai)
 
 ![wit.ai](https://i.ibb.co/MySskPTt/image.png)
 
