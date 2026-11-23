@@ -1,10 +1,10 @@
 ---
-title: "LightCMS vs Webflow: Visual Building vs Markdown in Git"
+title: LightCMS vs Webflow Visual Building vs Markdown in Git
 description: >-
   Webflow is a visual site builder with a hosted CMS; LightCMS is a Git based
-  editor for developer-owned sites. Where each approach wins for content teams.
+  editor for developer owned sites. Where each approach wins for content teams.
 serial: 57
-date: "2026-10-16T13:10:00.000Z"
+date: '2026-10-16T13:10:00.000Z'
 draft: false
 tags:
   - lightcms vs webflow
@@ -15,7 +15,6 @@ tags:
 preview: /og-image.png
 slug: lightcms-vs-webflow
 ---
-
 [Webflow](https://webflow.com) Is built for a specific promise: design a site visually, host it, and let a team edit content without touching code. For marketing teams without engineers, that can be a strong fit.
 
 [LightCMS](https://lightcms.me) Starts from a different constraint: developers own the code, and writers own the content. It focuses on the content side of that workflow.
@@ -26,8 +25,9 @@ slug: lightcms-vs-webflow
 
 **LightCMS** Assumes the frontend already exists in a repository and is built by your pipeline. It gives writers a visual editor for publishing Markdown without asking them to work in code.
 
+
 |                     | LightCMS                      | Webflow                             |
-| :------------------ | :---------------------------- | :---------------------------------- |
+| :------------------- | :----------------------------- | :----------------------------------- |
 | **Design**          | Your code, your templates     | Visual canvas, exported CSS         |
 | **Content storage** | Markdown in your repository   | Webflow's hosted CMS                |
 | **Output**          | Static files on your host     | Static files on Webflow             |
@@ -36,6 +36,7 @@ slug: lightcms-vs-webflow
 | **Lock-in**         | None: files you own           | Design and content inside Webflow   |
 | **Cost**            | Hosting only                  | Site plans by tier and traffic      |
 | **Code ownership**  | Complete                      | Exportable, but designed in Webflow |
+
 
 ---
 
@@ -70,7 +71,7 @@ A hybrid is common: Webflow for the marketing site, a Git based static blog or d
 
 ## Migration
 
-Webflow exports HTML/CSS for design, and CMS items can be exported to CSV. Moving articles to Markdown is straightforward; moving the _design_ means rebuilding it in templates, the expensive part of any Webflow exit. Content-only moves (design already in code) are quick.
+Webflow exports HTML/CSS for design, and CMS items can be exported to CSV. Moving articles to Markdown is straightforward; moving the *design* means rebuilding it in templates, the expensive part of any Webflow exit. Content-only moves (design already in code) are quick.
 
 ---
 
