@@ -16,7 +16,7 @@ headless: false
 slug: zine
 date: '2026-11-22T12:05:23.705Z'
 ---
-Zine is a static site generator written in Zig. It focuses on fast builds and uses project-specific templating and content formats, which makes it different from mainstream generators such as Hugo, Astro, or Eleventy.
+Zine is a static site generator written in Zig. It focuses on fast builds and uses project specific templating and content formats, which makes it different from mainstream generators such as Hugo, Astro, or Eleventy.
 
 ## What makes Zine different
 
