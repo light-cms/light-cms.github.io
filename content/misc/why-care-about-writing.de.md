@@ -1,16 +1,16 @@
 ---
-title: Why You Should Care About Writing
+title: Warum Sie sich um das Schreiben kümmern sollten
 description: >-
-  Why writing matters even when few people read it: documenting real problems helps the next person, and a static site keeps your notes durable, free, and yours to publish.
+  Warum das Schreiben wichtig ist, auch wenn wenige es lesen: Die Dokumentation realer Probleme hilft der nächsten Person. und eine statische Website hält Ihre Notizen langlebig, frei, und Sie zu veröffentlichen.
 date: '2026-11-01T14:02:00Z'
-draft: false
+draft: falsch
 tags:
-  - why writing matters
-  - start writing
-  - blogging benefits
+  - warum das Schreiben wichtig ist
+  - beginnen zu schreiben
+  - blogging Vorteile
   - statische Website Blog
-  - publish notes
-slug: why-care-about-writing
+  - veröffentliche Notizen
+slug: warum-schreibung
 ---
 
 ## Warum ein Blog starten?
@@ -25,4 +25,4 @@ Sie benötigen kein komplexes Setup, um nützliche Notizen zu veröffentlichen. 
 
 Das Schreiben aus echter Erfahrung fügt auch nützliche Informationen ins Web hinzu. Klare Hinweise zu echten Problemen, Randfällen und Korrekturen können anderen Menschen helfen, schneller Antworten zu finden.
 
-New to this? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) explains the philosophy behind owning your words.
+Neu hier? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) explains the philosophy behind owning your words.
