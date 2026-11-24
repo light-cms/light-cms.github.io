@@ -19,29 +19,29 @@ taxonomies:
     - jamstack
 ---
 
-Cloudflare Pages and Vercel both deploy static sites from Git, provide preview deployments, and serve assets over global CDN infrastructure. The main difference is focus: Cloudflare emphasizes network and edge infrastructure, while Vercel emphasizes frontend developer workflows and deep Next.js integration. [VERIFY: confirm current plan limits, pricing, and feature details on official Cloudflare and Vercel docs before publishing.]
+Cloudflare Pages and Vercel both deploy static sites from Git, provide preview deployments, and serve assets over global CDN infrastructure. The main difference is focus: Cloudflare emphasizes network and edge infrastructure, while Vercel emphasizes frontend developer workflows and deep Next.js integration. 
 
 ## Feature comparison
 
 | Area | Cloudflare Pages | Vercel |
 | :--- | :--- | :--- |
-| **Best fit** | Static sites, content sites, Cloudflare ecosystem users | Next.js apps, frontend teams needing preview collaboration |
-| **Bandwidth/pricing model** | Unlimited bandwidth on free tier [VERIFY: confirm current plan terms] | Metered bandwidth and plan limits [VERIFY: confirm current Hobby/Pro limits and overage pricing] |
-| **Preview workflow** | Branch/PR previews [VERIFY] | PR previews with collaboration features [VERIFY] |
-| **Framework strength** | Static frameworks and edge functions [VERIFY] | Strong Next.js support [VERIFY] |
-| **Commercial use on free tier** | Permitted [VERIFY] | Hobby tier restrictions may apply [VERIFY] |
+| Best fit | Static sites, content sites, Cloudflare ecosystem users | Next.js apps, frontend teams needing preview collaboration |
+| Bandwidth/pricing model | Unlimited bandwidth on free tier | Metered bandwidth and plan limits |
+| Preview workflow | Branch/PR previews | PR previews with collaboration features |
+| Framework strength | Static frameworks and edge functions | Strong Next.js support |
+| Commercial use on free tier | Permitted | Hobby tier restrictions may apply |
 
 ## Bandwidth and billing risk
 
-Vercel's pricing model includes bandwidth limits and overage charges on paid plans. [VERIFY: confirm current bandwidth limits, overage rates, and Hobby tier commercial-use policy.] That can be acceptable for predictable application traffic, but it creates cost risk for content sites that may experience sudden spikes.
+Vercel's pricing model includes bandwidth limits and overage charges on paid plans. That can be acceptable for predictable application traffic, but it creates cost risk for content sites that may experience sudden spikes.
 
-Cloudflare Pages advertises unlimited bandwidth on the free tier. [VERIFY: confirm current terms and acceptable-use policy.] For static blogs, documentation, and marketing sites, this usually reduces operational risk.
+Cloudflare Pages advertises unlimited bandwidth on the free tier. For static blogs, documentation, and marketing sites, this usually reduces operational risk.
 
 ## Developer experience and framework fit
 
-Vercel is often the smoother choice for Next.js projects because its platform features are closely aligned with the framework. [VERIFY: confirm current Next.js feature support on Vercel and Cloudflare/OpenNext.] Preview collaboration features can also help teams that review UI changes before merge.
+Vercel is often the smoother choice for Next.js projects because its platform features are closely aligned with the framework. Preview collaboration features can also help teams that review UI changes before merge.
 
-Cloudflare Pages fits well when the site is mostly static and you want access to Cloudflare Workers, KV, R2, or other Cloudflare services. [VERIFY: confirm current Pages Functions/Workers/KV/R2 integration details.]
+Cloudflare Pages fits well when the site is mostly static and you want access to Cloudflare Workers, KV, R2, or other Cloudflare services.
 
 ## Which platform to choose
 

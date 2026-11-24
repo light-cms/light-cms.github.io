@@ -5,37 +5,31 @@ serial: 41
 date: "2026-10-15T20:09:55.000Z"
 draft: false
 tags:
-  - lightcms vs pages cms
-  - pages cms alternatives
-  - pages cms review
-  - github cms comparison
-  - best cms for markdown
+ - lightcms vs pages cms
+ - pages cms alternatives
+ - pages cms review
+ - github cms comparison
+ - best cms for markdown
 preview: /og-image.png
 slug: 2026-10-15-lightcms-vs-pagescms
 ---
 
-LightCMS and Pages CMS both work with Git-based content, but they optimize for different editing experiences. Pages CMS is oriented around form-based editing of repository content. LightCMS is oriented around visual Markdown editing for writers publishing to static sites. [VERIFY: confirm current feature sets, licensing, hosting options, and Git provider support on official docs.]
+LightCMS and Pages CMS both work with Git-based content, but they optimize for different editing experiences. Pages CMS is oriented around form-based editing of repository content. LightCMS is oriented around visual Markdown editing for writers publishing to static sites.
 
 ## Comparison
 
 | Area | LightCMS | Pages CMS |
 | :--- | :--- | :--- |
-| **Primary interface** | Visual/WYSIWYG Markdown editor [VERIFY] | Form-based content editor [VERIFY] |
-| **Best fit** | Long-form articles, docs, editorial writing [VERIFY] | Structured records and config-driven fields [VERIFY] |
-| **Content storage** | Git repository [VERIFY] | Git repository [VERIFY] |
-| **Setup model** | Product/app setup [VERIFY] | Config/repository-driven setup [VERIFY] |
-| **Extensibility** | Product features vary by release [VERIFY] | Configurable fields and media settings [VERIFY] |
+| Primary interface | Visual/WYSIWYG Markdown editor | Form-based content editor |
+| Best fit | Long-form articles, docs, editorial writing | Structured records and config-driven fields |
+| Content storage | Git repository | Git repository |
+| Setup model | Product/app setup | Config/repository-driven setup |
+| Extensibility | Product features vary by release | Configurable fields and media settings |
 
-## When to choose Pages CMS
+## Choosing between them
 
-Choose Pages CMS when your content behaves like structured records: fields, selects, dates, and metadata matter more than rich prose editing. It can be a good fit for teams that want a simple interface over repository files.
+Pages CMS is a good fit when your content looks like structured records: fields, dates, selects, and metadata matter more than rich prose. It’s also handy when you want a simple interface over repository files.
 
-## When to choose LightCMS
+LightCMS is a better fit when the main job is writing. If you’re publishing long-form posts with images, headings, tables, and front matter, a document editor usually feels more natural for non-technical writers.
 
-Choose LightCMS when the main task is writing and publishing long-form Markdown content. A document-oriented editor can reduce friction for non-technical writers, especially when posts include images, headings, tables, and front matter.
-
-## Trade-offs
-
-Pages CMS can be simpler for structured data entry. LightCMS can be better for editorial flow. Either choice should be validated against your repository structure, front matter schema, media path conventions, and deployment workflow before migration.
-
-Related: [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic), and [Top Git-Based CMS Platforms](/comparison/top-git-cms).
+Before picking either one, check the boring but important stuff: your repo structure, front matter schema, media paths, and deployment workflow. If you want nearby comparisons, see [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms) and [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic).

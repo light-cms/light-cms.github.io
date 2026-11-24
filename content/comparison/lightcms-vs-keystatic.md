@@ -1,117 +1,60 @@
 ---
-title: "LightCMS vs Keystatic: Code First Schema vs a Writer First Workspace"
-description: "Keystatic keeps content as files with schemas defined in code; LightCMS keeps content as files with an editor anyone can use. Which one fits your team."
+title: "LightCMS vs Keystatic: Schema in Code vs Editor for Writers"
+description: "Compare LightCMS and Keystatic for Git-based content editing: schema-as-code forms versus a document editor for writers."
 serial: 40
 date: 2026-10-16T10:40:00Z
 draft: false
 keywords:
-  - lightcms vs keystatic
-  - keystatic alternatives
-  - keystatic cms
-  - file based cms comparison
-  - local first cms
+ - lightcms vs keystatic
+ - keystatic alternatives
+ - keystatic cms
+ - file based cms comparison
+ - local first cms
 
 taxonomies:
-  tags:
-    - lightcms
-    - keystatic
-    - cms
-    - comparison
+ tags:
+ - lightcms
+ - keystatic
+ - cms
+ - comparison
+slug: lightcms-vs-keystatic
 ---
 
-[Keystatic](https://keystatic.com), from the Thinkmill team, is the most developer-respectful tool in the Git based CMS category: content is files, the schema is code, and the forms are generated from that schema. It fits Astro and Next.js projects and takes the local-first promise seriously.
+Keystatic and LightCMS both keep your content as Markdown files in Git. The difference is who they are built for: Keystatic lets developers define content schemas in code, while LightCMS gives writers a document editor they can use without touching the codebase.
 
-LightCMS shares the storage model (files in your repository) and inverts the audience. Keystatic is built so developers can define content well; LightCMS is built so writers can use it without developers at all.
+If your content lives in a repository and you publish with a static site generator, both tools will technically work. The choice comes down to whether the person writing is also the person maintaining the schema.
 
----
+## What they share
 
-## The Same Foundation
-
-Both tools agree on the fundamentals that matter most:
-
-- **Content is Markdown and front matter in your repository.** No database, no export, no lock-in.
-- **Git history is the version history.** Diffs, blame, revert, and pull request review all work.
-- **The SSG is untouched.** Hugo, Astro, Eleventy, or any generator reading your content directory keeps working.
-- **Open source.** You can read, fork, and self-host both.
-
-If your evaluation starts and ends with "does it keep my content in Git," both pass, and the differences below are what you are actually choosing between.
-
----
+Both store Markdown and YAML front matter in your repository, so there is no database, no export trap, and no vendor lock-in. Git history handles diffs, blame, revert, and pull request review. Your static site generator keeps working unchanged, and both projects are open source you can read, fork, and self-host.
 
 ## Comparison
 
-|                             | LightCMS                                            | Keystatic                                     |
-| :-------------------------- | :-------------------------------------------------- | :-------------------------------------------- |
-| **Model**                   | Self-hosted writing workspace                       | Local-first files with generated forms        |
-| **Content schema**          | Managed in the app                                  | Defined in code (TypeScript/JSX config)       |
-| **Primary surface**         | Document editor (TipTap WYSIWYG)                    | Form views generated from your schema         |
-| **Runs where?**             | Hosted by you; writers use a browser                | Locally via CLI, or with cloud offering       |
-| **Non-developer usability** | Designed for it                                     | Requires the project and tooling set up first |
-| **AI copilot**              | Built in (any OpenAI-compatible endpoint)           | Not bundled                                   |
-| **Voice-to-text**           | Built in (Whisper)                                  | Not bundled                                   |
-| **Newsletters**             | Built in via Newsy: GitHub-backed, no email service | Not bundled                                   |
-| **MDX / rich content**      | Markdown pass-through                               | Strong MDX support                            |
-| **Licensing**               | Apache 2.0                                          | Open source (MIT)                             |
+| | LightCMS | Keystatic |
+|---|---|---|
+| Schema | Managed in the app | Defined in code (TypeScript/JSX config) |
+| Editing surface | Document editor (TipTap WYSIWYG) | Forms generated from your schema |
+| Who sets it up | You host it; writers use a browser | Developers set up locally or via cloud |
+| AI drafting | Built in | Not bundled |
+| Voice dictation | Built in | Not bundled |
+| Newsletters | Built in via Newsy | Not bundled |
+| MDX support | Markdown pass-through | Native MDX |
+| License | Apache 2.0 | MIT |
 
----
+## When Keystatic makes more sense
 
-## Where Keystatic Wins
+Keystatic feels natural when developers own the content model. Schemas live in code, so content types get versioned, typed, and reviewed in pull requests like anything else. It also handles MDX well, which matters if your posts embed components instead of plain prose. For teams already deep in Astro or Next.js, that workflow fits right in.
 
-- **Schema as code.** Content structure lives in version control, reviewed in pull requests and typed at build time. For engineering teams this is the right call.
-- **Local-first workflow.** Writing can happen offline against the working tree, with Git as the sync mechanism, a real advantage for developers who think in repositories.
-- **Framework fit.** First-class positioning inside Astro and Next.js projects, with field types that map cleanly onto component props.
-- **MDX.** If your content carries components rather than plain prose, Keystatic handles that natively.
+## When LightCMS makes more sense
 
-## Where LightCMS Wins
+LightCMS is easier on writers. Someone can sign in with GitHub, open a repository, and start writing without cloning anything or matching a local Node setup. The editor treats a post like a document, not a form. If you need to add a front matter field, you can do it in the app instead of waiting for a code change and deploy.
 
-- **Zero setup for contributors.** A writer signs in with GitHub, opens a repository, and starts writing. No CLI, no local checkout, no Node version to match.
-- **Writing, not form-filling.** Articles are documents. Keystatic's generated forms are excellent for structured records and heavier for a 2,000-word essay.
-- **Structure without a deploy.** New front matter fields are configured in the tool rather than committed as code, so metadata changes do not wait on a developer.
-- **The bundled extras.** [AI drafting](/blog/lightcms-ai-copilot/), [dictation](/blog/lightcms-voice-to-text/), and [newsletter dispatch](/blog/newsletter-email-automation/) are part of the product.
+## Choosing between them
 
----
+If your team is mostly developers and you care about typed schemas and MDX, Keystatic is probably the better match. If you’re publishing articles and want non-technical contributors to work comfortably on their own, LightCMS is the easier day-to-day choice. You give up some compile-time strictness, but you gain a smoother writing workflow.
 
-## The Real Question: Who Is the User?
+## Moving content
 
-Almost every LightCMS-vs-Keystatic decision resolves to a single question about your team:
+Both tools write Markdown with YAML front matter, so there’s no painful conversion. Moving from Keystatic usually means pointing LightCMS at the repo and recreating fields in the app. Going the other way means moving those fields into Keystatic config. Either way, your content and media paths can stay put.
 
-**Is the person entering content a developer?**
-
-- **Yes, mostly.** Keystatic feels like a natural extension of your stack. Schemas are typed, forms are derived, and everything happens where your code already is.
-- **No, or not only.** LightCMS removes the prerequisite. Contributors do not clone, install, or run anything; they open a browser. The repository stays the source of truth, but the entry point stops being a terminal.
-
-Hybrid teams often land on LightCMS because it lets engineers keep their conventions while non-engineers get a real editor, without either side operating inside the other's tooling.
-
----
-
-## Migration
-
-Straightforward in both directions: the artifacts are identical Markdown files with YAML front matter. Moving from Keystatic means pointing LightCMS at the repository and recreating the schema as in-app fields; moving the other way means transcribing those fields into a Keystatic config. Content and media paths are unchanged either way.
-
----
-
-## Frequently Asked Questions
-
-### Does LightCMS require a developer to set up?
-
-Someone has to connect the repository and confirm the build: minutes of work, not an integration project. After that, writers work entirely on their own.
-
-### Can Keystatic run without local tooling?
-
-Local mode assumes a checkout and a running dev process. Keystatic's cloud offering changes that equation; check its current documentation for the latest shape.
-
-### Do both support Markdown?
-
-Yes. Both write Markdown with YAML front matter into your repository.
-
-### Which is better for MDX?
-
-Keystatic: it models component-bearing content deliberately. If your content is prose with occasional embedded media, LightCMS's Markdown output is simpler.
-
-### Is either a hosted vendor that could hold my content hostage?
-
-No. Content lives in your repository in both cases, which is the whole point of the category.
-
----
-
-More: [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms), [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms), and the [Git based CMS overview](/comparison/top-git-cms).
+A sensible first step is to try one content type, confirm the build still works, and only then move the rest. You might also want to compare [LightCMS vs Pages CMS](/comparison/lightcms-vs-pagescms) or [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms).

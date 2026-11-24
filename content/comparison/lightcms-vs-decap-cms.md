@@ -1,46 +1,35 @@
 ---
-title: "LightCMS vs. Decap CMS: Document Editing vs. Configured Collections"
-description: "Compare LightCMS and Decap CMS for Git-based static site editing, including editor experience, configuration model, Git provider support, and workflow trade-offs."
+title: "LightCMS vs. Decap CMS: Editing Model Compared"
+description: "Compare LightCMS and Decap CMS for Git-based static site editing, editor experience, configuration, Git providers, and workflow trade-offs."
 serial: 38
 date: 2026-10-16T10:20:00Z
 draft: false
-keywords:
-  - lightcms vs decap
-  - decap cms alternatives
-  - netlify cms alternative
-  - decap cms editor
-  - git cms comparison
+keywords: "github newsletter"
 
 taxonomies:
-  tags:
-    - lightcms
-    - decap
-    - cms
-    - comparison
+ tags:
+ - lightcms
+ - decap
+ - cms
+ - comparison
 ---
 
-LightCMS and Decap CMS both store content in Git, usually as Markdown with front matter. The main difference is how they model editing: Decap CMS is configured around collections and fields in a repository config file, while LightCMS is oriented around visual document editing. [VERIFY: confirm current Decap CMS and LightCMS features, supported Git providers, and licensing on official docs.]
+LightCMS and Decap CMS both store content in Git, usually as Markdown with front matter. The main difference is how they model editing: Decap CMS is configured around collections and fields in a repository config file, while LightCMS is oriented around visual document editing.
 
 ## Comparison
 
 | Area | LightCMS | Decap CMS |
 | :--- | :--- | :--- |
-| **Editing model** | Visual document editor [VERIFY] | Form-based collections/widgets [VERIFY] |
-| **Configuration** | Product/app configuration [VERIFY] | `config.yml` in repository [VERIFY] |
-| **Git providers** | Confirm current support [VERIFY] | GitHub, GitLab, Bitbucket historically supported [VERIFY] |
-| **Best fit** | Long-form writing and publishing | Structured collections and field-based content |
-| **Extensibility** | Product features vary [VERIFY] | Widgets/config patterns/community ecosystem [VERIFY] |
+| Editing model | Visual document editor | Form-based collections/widgets |
+| Configuration | Product/app configuration | `config.yml` in repository |
+| Git providers | Confirm current support | GitHub, GitLab, Bitbucket historically supported |
+| Best fit | Long-form writing and publishing | Structured collections and field-based content |
+| Extensibility | Product features vary | Widgets/config patterns/community ecosystem |
 
-## When to choose Decap CMS
+## Choosing between them
 
-Choose Decap CMS when you need configurable collections, field-shaped content, or established Git-provider workflows. It fits well when developers are comfortable maintaining a CMS config file in the repository.
+Decap CMS is a good pick when your content is field-shaped and you want config-driven collections in the repo. It works well for teams where developers are comfortable owning a CMS config file.
 
-## When to choose LightCMS
+LightCMS is a better pick when the day-to-day job is writing articles, docs, or marketing pages. For non-technical writers, a visual document editor is usually easier than filling out forms and tweaking config.
 
-Choose LightCMS when the primary workflow is writing articles, documentation, or marketing content in a visual editor. It can reduce friction for non-technical writers who do not want to manage CMS configuration.
-
-## Trade-off
-
-Decap CMS gives strong schema/config control but can feel form-heavy for long-form writing. LightCMS can improve writing flow but should be evaluated for provider support, configuration needs, and team workflow fit.
-
-Related: [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms/), [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/), and [Netlify CMS Alternatives](/comparison/2026-10-14-netlifycms).
+Decap gives you solid schema control, but it can feel heavy for long-form writing. LightCMS makes writing smoother, but you should still check whether its workflow and provider support match your setup. You can also compare [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms/) and [LightCMS vs Keystatic](/comparison/lightcms-vs-keystatic/).

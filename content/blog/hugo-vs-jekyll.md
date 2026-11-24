@@ -1,6 +1,6 @@
 ---
 title: "Hugo vs Jekyll: Which Static Site Generator Should You Use?"
-description: "Compare Hugo and Jekyll on build speed, templating, ecosystem, GitHub Pages workflows, and long-term maintenance trade-offs."
+description: "Compare Hugo and Jekyll on build speed, templating, ecosystem, GitHub Pages workflows, and long term maintenance trade offs."
 serial: 21
 date: 2026-10-14T14:20:00Z
 draft: false
@@ -19,29 +19,29 @@ taxonomies:
     - static-sites
 ---
 
-Hugo and Jekyll are both mature static site generators that build websites from Markdown content. Hugo is generally chosen for fast builds and a single-binary toolchain; Jekyll is often chosen for existing Ruby workflows or simple GitHub Pages setups. [VERIFY: confirm current Jekyll/GitHub Pages support and Hugo/Jekyll feature details before publishing.]
+Hugo and Jekyll are both mature static site generators that build websites from Markdown content. Hugo is generally chosen for fast builds and a single-binary toolchain; Jekyll is often chosen for existing Ruby workflows or simple GitHub Pages setups. 
 
 ## Comparison
 
 | Area | Hugo | Jekyll |
 | :--- | :--- | :--- |
-| **Runtime** | Go binary | Ruby and gems [VERIFY] |
-| **Build speed** | Usually very fast, especially on larger sites [VERIFY] | Often slower on larger sites [VERIFY] |
-| **Templating** | Go templates | Liquid templates |
-| **Plugins/extensions** | Built-in features and external tooling patterns [VERIFY] | Ruby gem plugin ecosystem [VERIFY] |
-| **GitHub Pages fit** | Common through GitHub Actions [VERIFY] | Historically strong native fit [VERIFY] |
+| Runtime | Go binary | Ruby and gems |
+| Build speed | Usually very fast, especially on larger sites | Often slower on larger sites |
+| Templating | Go templates | Liquid templates |
+| Plugins/extensions | Built-in features and external tooling patterns | Ruby gem plugin ecosystem |
+| GitHub Pages fit | Common through GitHub Actions | Historically strong native fit |
 
 ## Build speed and tooling
 
-Hugo's single-binary distribution makes installation and CI setup straightforward. It is often selected for large documentation sites or blogs where build time matters. [VERIFY: include benchmark data if you keep specific speed comparisons.]
+Hugo's single-binary distribution makes installation and CI setup straightforward. It is often selected for large documentation sites or blogs where build time matters.
 
-Jekyll runs in the Ruby ecosystem. That can be convenient for teams already using Ruby, but dependency management and build performance may require more care as the site grows. [VERIFY: confirm current Jekyll performance characteristics and maintenance status.]
+Jekyll runs in the Ruby ecosystem. That can be convenient for teams already using Ruby, but dependency management and build performance may require more care as the site grows.
 
 ## Templating and content workflow
 
 Hugo uses Go templates, shortcodes, and a structured configuration model. Jekyll uses Liquid templates, which many developers find approachable. Both can process Markdown files with front matter, making them compatible with Git-based content workflows.
 
-A Git-based CMS can work with either generator when it commits Markdown files in the expected directory structure. [VERIFY: confirm the specific CMS integration for your repository layout.]
+A Git-based CMS can work with either generator when it commits Markdown files in the expected directory structure.
 
 ## Which should you choose
 

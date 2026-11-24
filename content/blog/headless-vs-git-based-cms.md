@@ -1,6 +1,6 @@
 ---
-title: "Headless CMS vs. Git-Based CMS: How They Differ"
-description: "Compare headless CMS and Git-based CMS architectures by content storage, delivery model, workflow, portability, and operational trade-offs."
+title: "Headless CMS vs. Git Based CMS How They Differ"
+description: "Compare headless CMS and Git based CMS architectures by content storage, delivery model, workflow, portability, and operational trade offs."
 serial: 44
 date: "2026-10-16T11:00:00.000Z"
 draft: false
@@ -20,16 +20,16 @@ Headless CMS and Git-based CMS describe different parts of a content architectur
 
 | Area | Headless CMS | Git-based CMS |
 | :--- | :--- | :--- |
-| **Primary question** | How is content delivered? | Where is content stored? |
-| **Storage** | Database or managed content store | Files in a Git repository |
-| **Delivery** | API at request/build time | Static build output, usually from CI/CD |
-| **Change latency** | Often immediate after publish [VERIFY] | After build and deploy |
-| **Versioning** | Platform revisions/workflows [VERIFY] | Native Git history |
-| **Best fit** | Multi-channel apps, structured content | Blogs, docs, marketing sites |
+| Primary question | How is content delivered? | Where is content stored? |
+| Storage | Database or managed content store | Files in a Git repository |
+| Delivery | API at request/build time | Static build output, usually from CI/CD |
+| Change latency | Often immediate after publish | After build and deploy |
+| Versioning | Platform revisions/workflows | Native Git history |
+| Best fit | Multi-channel apps, structured content | Blogs, docs, marketing sites |
 
 ## When a headless CMS fits
 
-A headless CMS is a good fit when the same content must feed multiple frontends, such as a website, mobile app, and internal tool. It also fits when content has complex relationships, needs real-time updates, or requires granular editorial permissions. [VERIFY: confirm permission/workflow capabilities for the specific platform.]
+A headless CMS is a good fit when the same content must feed multiple frontends, such as a website, mobile app, and internal tool. It also fits when content has complex relationships, needs real-time updates, or requires granular editorial permissions.
 
 The trade-off is operational overhead. You manage a content service, API access, schema changes, and frontend integration.
 

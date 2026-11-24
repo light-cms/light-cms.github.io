@@ -47,7 +47,7 @@ internal_level = "warn"
 [extra]
 author = "light-cms"
 brand = "LightCMS Journal"
-accent_color = "#983d25"
+accent_color = "#81321c8a"
 accent_color_dark = "#e28b65"
 styles = ["css/style.css"]
 source_url = "https://github.com/light-cms/lightcms"

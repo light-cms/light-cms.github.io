@@ -4,12 +4,7 @@ description: "How Git-based content workflows handle drafts, commit history, pul
 serial: 34
 date: 2026-10-16T09:40:00Z
 draft: false
-keywords:
-  - git versioning content
-  - cms draft workflow
-  - content rollback
-  - markdown version history
-  - lightcms drafts
+keywords: newsy
 
 taxonomies:
   tags:
@@ -19,11 +14,11 @@ taxonomies:
     - collaboration
 ---
 
-A Git-based CMS can handle drafts, revisions, and rollbacks by storing content as files in a repository and using Git history as the audit trail. The practical value is simple: you can save work without publishing it, inspect what changed, and revert a bad edit without restoring an entire database. [VERIFY: confirm current LightCMS draft/publish/PR/rollback behavior against product documentation.]
+A Git-based CMS can handle drafts, revisions, and rollbacks by storing content as files in a repository and using Git history as the audit trail. The practical value is simple: you can save work without publishing it, inspect what changed, and revert a bad edit without restoring an entire database.
 
 ## Drafts as file state
 
-In many static site workflows, a draft is represented by front matter such as `draft: true`. The file can exist in the repository while the static site generator skips it during production builds. [VERIFY: confirm how LightCMS and your target SSG handle draft flags.]
+In many static site workflows, a draft is represented by front matter such as `draft: true`. The file can exist in the repository while the static site generator skips it during production builds.
 
 ```yaml
 ---
@@ -41,16 +36,16 @@ Each saved or published change can create a Git commit. That gives you a readabl
 
 | Need | Git-based workflow | Trade-off |
 | :--- | :--- | :--- |
-| **See changes** | `git diff` or pull request diff | Requires clear commit messages to be useful |
-| **Audit history** | Commit log and blame | Repository access model controls who can inspect it |
-| **Recover content** | Revert commit or restore file version | Reverting may require conflict resolution |
-| **Review before publish** | Branch and pull request | Adds process overhead for small edits |
+| See changes | `git diff` or pull request diff | Requires clear commit messages to be useful |
+| Audit history | Commit log and blame | Repository access model controls who can inspect it |
+| Recover content | Revert commit or restore file version | Reverting may require conflict resolution |
+| Review before publish | Branch and pull request | Adds process overhead for small edits |
 
 For teams, pull requests provide an editorial review gate. For solo writers, direct commits to a main branch may be faster, but they remove the review step.
 
 ## Rollback as a normal Git operation
 
-When a published post has an error, Git allows you to revert the commit that introduced it or restore a previous version of the file. After the fix is committed, your CI/CD pipeline rebuilds and deploys the site. [VERIFY: confirm typical deployment time for your hosting/CI setup before stating specific timings.]
+When a published post has an error, Git allows you to revert the commit that introduced it or restore a previous version of the file. After the fix is committed, your CI/CD pipeline rebuilds and deploys the site.
 
 A file-level rollback is narrower than a database restore. It can undo one post while leaving other recent changes intact.
 

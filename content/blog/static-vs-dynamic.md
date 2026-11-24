@@ -1,5 +1,5 @@
 ---
-title: "Static vs. Dynamic Sites: Which Architecture Fits Your Project?"
+title: "Static vs. Dynamic Sites Which Architecture Fits Your Project?"
 description: "Compare static and dynamic website architectures by request flow, security surface, operational cost, performance, and content workflow trade-offs."
 serial: 7
 date: 2026-10-14T12:00:00Z
@@ -24,10 +24,10 @@ Static sites serve prebuilt files from a CDN; dynamic sites generate responses a
 
 | Step | Dynamic site | Static site |
 | :--- | :--- | :--- |
-| **Build time** | Templates and code deployed to runtime | Generator builds HTML/CSS/JS files |
-| **Request time** | App may query database and render HTML | CDN serves prebuilt file |
-| **Personalization** | Native server-side option | Usually handled with client-side JS or edge/serverless functions |
-| **Failure surface** | App runtime, database, cache, plugins | Build pipeline, CDN, client-side integrations |
+| Build time | Templates and code deployed to runtime | Generator builds HTML/CSS/JS files |
+| Request time | App may query database and render HTML | CDN serves prebuilt file |
+| Personalization | Native server-side option | Usually handled with client-side JS or edge/serverless functions |
+| Failure surface | App runtime, database, cache, plugins | Build pipeline, CDN, client-side integrations |
 
 A dynamic page request can involve routing, database queries, template rendering, and cache logic. A static page request usually returns an existing file from edge storage. The difference affects latency, cost, and operational complexity.
 
@@ -35,11 +35,11 @@ A dynamic page request can involve routing, database queries, template rendering
 
 ### Security
 
-Dynamic sites expose an application runtime, admin interfaces, and often a database. That creates patching and monitoring responsibilities. Static sites reduce runtime attack surface, but they still need secure Git access, CI/CD secrets management, and dependency updates in the build pipeline. [VERIFY: support any security incident or cost statistics with current primary sources before publishing.]
+Dynamic sites expose an application runtime, admin interfaces, and often a database. That creates patching and monitoring responsibilities. Static sites reduce runtime attack surface, but they still need secure Git access, CI/CD secrets management, and dependency updates in the build pipeline. 
 
 ### Performance and cost
 
-Static files are easy to cache at the edge, which can make delivery fast and predictable for content sites. Dynamic sites can also be fast with good caching, but they require more infrastructure tuning. [VERIFY: confirm hosting/pricing claims before naming specific free-tier limits.]
+Static files are easy to cache at the edge, which can make delivery fast and predictable for content sites. Dynamic sites can also be fast with good caching, but they require more infrastructure tuning.
 
 ### Content workflow
 

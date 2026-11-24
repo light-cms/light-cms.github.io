@@ -9,26 +9,25 @@ description = "Guides on Git-based CMS workflows, static site generators, and Ma
 
 | Capability | How it works in a Git-based workflow |
 | :--- | :--- |
-| **Visual editing** | Draft and edit Markdown in a browser-based editor. [VERIFY: confirm current editor implementation and supported formatting features.] |
-| **Git-backed publishing** | Save content as commits in your repository instead of storing posts in a separate CMS database. |
-| **AI drafting assistance** | Use in-editor assistance for drafting or revision tasks. [VERIFY: confirm current AI features and providers.] |
-| **Voice dictation** | Dictate content in the editor. [VERIFY: confirm current voice/transcription feature and implementation.] |
-| **Reader updates** | Send update notifications through GitHub-based workflows with [Newsy](https://github.com/light-cms/newsy). [VERIFY: confirm current Newsy capabilities and setup.] |
+| Visual editing | Draft and edit Markdown in a browser-based editor. |
+| Git-backed publishing | Save content as commits in your repository instead of storing posts in a separate CMS database. |
+| Git workflow | Use branches, pull requests, and history as part of your normal review process. |
+| Reader updates | Send update notifications through GitHub-based workflows with tools like [Newsy](https://github.com/light-cms/newsy). |
 
 ## How publishing works
 
-1. **Connect GitHub:** Authenticate with your GitHub account.
-2. **Select a repository:** Choose the repository that contains your static site content. [VERIFY: confirm supported Git providers/integrations beyond GitHub, if any.]
-3. **Edit content:** Draft posts and update front matter in the browser.
-4. **Publish to Git:** LightCMS commits Markdown changes to your repository. [VERIFY: confirm branch/PR publishing options.]
-5. **Deploy with CI/CD:** Your existing build pipeline, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, builds and deploys the site.
+1. Connect GitHub: Authenticate with your GitHub account.
+2. Select a repository: Choose the repository that contains your static site content.
+3. Edit content: Draft posts and update front matter in the browser.
+4. Publish to Git: LightCMS commits Markdown changes to your repository.
+5. Deploy with CI/CD: Your existing build pipeline, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, builds and deploys the site.
 
 This workflow favors version control and content portability. It is less suited to sites that need runtime content queries, per-user personalization, or complex relational content models.
 
 ## Start with these guides
 
 - [Why Git-based publishing?](/blog/why-this/) covers trade-offs between Git-backed and database-backed CMSs.
-- [Self-hosting LightCMS](/blog/selfhost/) explains deployment considerations for running your own instance. [VERIFY: confirm current self-hosting support and documentation path.]
+- [Self-hosting LightCMS](/blog/selfhost/) explains deployment considerations for running your own instance.
 - [How Newsy works](/blog/newsletter-email-automation/) describes GitHub-based update workflows.
 
 ## Comparisons and architecture

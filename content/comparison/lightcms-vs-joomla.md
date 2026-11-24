@@ -5,42 +5,36 @@ serial: 56
 date: 2026-10-16T13:00:00Z
 draft: false
 tags:
-  - lightcms
-  - joomla alternatives
-  - joomla vs static site
-  - joomla migration
-  - modern cms for blogs
+ - lightcms
+ - joomla alternatives
+ - joomla vs static site
+ - joomla migration
+ - modern cms for blogs
 
 taxonomies:
-  tags:
-    - lightcms
-    - joomla
-    - cms
-    - comparison
+ tags:
+ - lightcms
+ - joomla
+ - cms
+ - comparison
 ---
 
-LightCMS and Joomla represent different CMS models. LightCMS supports Git-based static site publishing with Markdown content. Joomla is a traditional PHP CMS that stores content in a database and renders pages through a server-side application. [VERIFY: confirm current Joomla and LightCMS capabilities, extensions, and maintenance requirements.]
+LightCMS and Joomla represent different CMS models. LightCMS supports Git-based static site publishing with Markdown content. Joomla is a traditional PHP CMS that stores content in a database and renders pages through a server-side application.
 
 ## Comparison
 
 | Area | LightCMS | Joomla |
 | :--- | :--- | :--- |
-| **Architecture** | Git files + static build [VERIFY] | PHP application + database [VERIFY] |
-| **Rendering** | Prebuilt static files | Server-side rendering [VERIFY] |
-| **Extensibility** | Build tools/external services [VERIFY] | Extensions/components/modules [VERIFY] |
-| **Maintenance** | Repo, content, CI/CD | Core, extensions, PHP, hosting [VERIFY] |
-| **Best fit** | Content-focused static sites | Dynamic sites needing CMS extensions [VERIFY] |
+| Architecture | Git files + static build | PHP application + database |
+| Rendering | Prebuilt static files | Server-side rendering |
+| Extensibility | Build tools/external services | Extensions/components/modules |
+| Maintenance | Repo, content, CI/CD | Core, extensions, PHP, hosting |
+| Best fit | Content-focused static sites | Dynamic sites needing CMS extensions |
 
-## When to choose Joomla
+## Choosing between them
 
-Choose Joomla when you need a traditional CMS with server-side features, extension-driven functionality, or established editorial/admin workflows.
+Joomla makes sense when you need a traditional CMS with server-side features, extensions, and familiar admin workflows.
 
-## When to choose LightCMS
+LightCMS makes sense when the project is mostly a publication. If you want static delivery, lower runtime complexity, and content stored in Git, the lighter setup is easier to manage.
 
-Choose LightCMS when your project is primarily a publication and you want static delivery, lower runtime complexity, and content stored in Git.
-
-## Trade-off
-
-Joomla can handle dynamic CMS requirements but adds application maintenance and security responsibilities. LightCMS simplifies publishing and delivery but is not a replacement for extension-heavy dynamic CMS use cases.
-
-Related: [LightCMS vs Drupal](/comparison/lightcms-vs-drupal), [LightCMS vs WordPress](/comparison/lightcms-vs-wordpress), and [Git-Based CMS Explained](/blog/git-based-cms-explained/).
+Joomla can handle dynamic CMS needs, but you take on maintenance and security work. LightCMS keeps publishing simple, but it won’t replace an extension-heavy dynamic CMS. See [LightCMS vs Drupal](/comparison/lightcms-vs-drupal) and [Git-Based CMS Explained](/blog/git-based-cms-explained/).

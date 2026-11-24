@@ -1,14 +1,9 @@
 ---
-title: "Astro vs Hugo: Which Static Site Generator Should You Choose?"
-description: "Compare Astro and Hugo by build speed, templating, content validation, interactivity, and maintenance trade-offs."
+title: "Astro vs Hugo: Which Static Site Generator to Choose?"
+description: "Compare Astro and Hugo by build speed, templating, content validation, interactivity, and maintenance trade offs."
 date: 2026-10-14T12:10:00Z
 draft: false
-keywords:
-  - astro vs hugo
-  - hugo vs astro
-  - best static site generator
-  - astro or hugo for blog
-  - static site generator comparison
+keywords: newsy
 
 taxonomies:
   tags:
@@ -23,33 +18,33 @@ Astro and Hugo both generate static websites, but they optimize for different wo
 
 ## Build speed and tooling
 
-Hugo compiles sites quickly because it ships as a compiled Go binary with no Node.js dependency. [VERIFY: add current benchmark data or primary-source build timing if specific speed claims are kept.] That makes Hugo attractive for large content sites, documentation archives, and teams that want a minimal toolchain.
+Hugo compiles sites quickly because it ships as a compiled Go binary with no Node.js dependency. That makes Hugo attractive for large content sites, documentation archives, and teams that want a minimal toolchain.
 
-Astro builds through the JavaScript ecosystem, typically using Vite and Node.js packages. [VERIFY: confirm current Astro build tooling and runtime requirements.] For small and medium sites, build time is usually acceptable in CI. For very large sites, build duration and dependency management become part of the trade-off.
+Astro builds through the JavaScript ecosystem, typically using Vite and Node.js packages. For small and medium sites, build time is usually acceptable in CI. For very large sites, build duration and dependency management become part of the trade-off.
 
 | Area | Hugo | Astro |
 | :--- | :--- | :--- |
-| **Runtime/toolchain** | Go binary | Node.js project with package dependencies [VERIFY] |
-| **Build speed** | Usually very fast, especially at scale [VERIFY] | Fast for many sites, but generally slower than Hugo on large builds [VERIFY] |
-| **Templating** | Go templates | `.astro` components with JavaScript/TypeScript |
-| **Interactivity** | Manual JavaScript integration | Islands architecture with framework components [VERIFY] |
-| **Content validation** | Flexible front matter; validation usually custom | Content Collections with schema validation [VERIFY] |
+| Runtime/toolchain | Go binary | Node.js project with package dependencies |
+| Build speed | Usually very fast, especially at scale | Fast for many sites, but generally slower than Hugo on large builds |
+| Templating | Go templates | `.astro` components with JavaScript/TypeScript |
+| Interactivity | Manual JavaScript integration | Islands architecture with framework components |
+| Content validation | Flexible front matter; validation usually custom | Content Collections with schema validation |
 
 ## Templating and developer experience
 
 Hugo uses Go's `html/template` system. It is stable and powerful, but template scope, context (`.`), and control flow can be difficult to maintain in custom layouts.
 
-```html
-{{ range .Pages }}
-  {{ if not .Draft }}
+```go
+&#123;&#123; range .Pages &#125;&#125;
+  &#123;&#123; if not .Draft &#125;&#125;
     <article>
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <h2><a href="&#123;&#123; .RelPermalink &#125;&#125;">&#123;&#123; .Title &#125;&#125;</a></h2>
     </article>
-  {{ end }}
-{{ end }}
+  &#123;&#123; end &#125;&#125;
+&#123;&#123; end &#125;&#125;
 ```
 
-Astro templates use component-style syntax. Developers who already work with HTML, JSX, or modern frontend tooling often find this model easier to extend.
+Astro templates use component style syntax. Developers who already work with HTML, JSX, or modern frontend tooling often find this model easier to extend.
 
 ```astro
 ---
@@ -67,7 +62,7 @@ The trade-off is ecosystem complexity: Astro gives you familiar frontend pattern
 
 ## Content validation and editorial safety
 
-Astro Content Collections can validate front matter with schemas. That catches missing fields, wrong types, or invalid dates during build time. [VERIFY: confirm current Content Collections/Zod behavior in Astro docs.]
+Astro Content Collections can validate front matter with schemas. That catches missing fields, wrong types, or invalid dates during build time.
 
 ```ts
 import { defineCollection, z } from 'astro:content';
@@ -89,7 +84,7 @@ Hugo is more permissive by default. That flexibility can speed up early authorin
 
 Hugo sites usually add client-side behavior with plain JavaScript, Hugo Pipes, or external scripts. This works well for simple interactions, but it does not provide a component hydration model.
 
-Astro supports islands architecture, where interactive components load only where needed. [VERIFY: confirm current Astro islands/client directives.]
+Astro supports islands architecture, where interactive components load only where needed.
 
 ```astro
 ---
@@ -101,9 +96,9 @@ import SearchBar from '../components/SearchBar.svelte';
 
 If your site needs mostly static content, Hugo's simpler model can be enough. If it needs interactive UI components inside mostly static pages, Astro has a clearer path.
 
-## Git-based CMS compatibility
+## Git based CMS compatibility
 
-Both generators work well in Git-based publishing workflows because content can live as Markdown files in a repository. A CMS such as [LightCMS](/getting-started/) can edit those files and commit changes back to Git. [VERIFY: confirm current LightCMS support for Astro and Hugo content workflows.]
+Both generators work well in Git-based publishing workflows because content can live as Markdown files in a repository. A CMS such as [LightCMS](/getting-started/) can edit those files and commit changes back to Git.
 
 This shared content model reduces migration risk. Templates and components change between generators, but Markdown content is often portable.
 

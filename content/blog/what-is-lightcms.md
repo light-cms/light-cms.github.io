@@ -29,11 +29,11 @@ LightCMS keeps content in Git while giving authors a visual editing interface. T
 
 ## How LightCMS publishes content
 
-1. **Sign in with GitHub:** Authenticate with your GitHub account. [VERIFY: confirm whether GitHub is the only supported authentication provider in the current product.]
-2. **Connect a repository:** Point LightCMS to a repository that contains Markdown files, such as a site built with Astro, Hugo, Zola, 11ty, Jekyll, or Next.js. [VERIFY: confirm the full list of supported/static-site-generator integrations in current product docs.]
-3. **Draft in the visual editor:** The editor supports headings, links, tables, checklists, code blocks, and media. [VERIFY: confirm current editor feature set, including KaTeX math, syntax highlighting, and drag-and-drop image handling.]
-4. **Publish changes:** LightCMS formats the Markdown document, updates front matter, and commits to your branch or opens a pull request for review. [VERIFY: confirm current publish/PR workflow behavior.]
-5. **Deploy automatically:** Your existing CI/CD workflow, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, detects the commit, builds the site, and deploys it.
+1. Sign in with GitHub: Authenticate with your GitHub account. 
+2. Connect a repository: Point LightCMS to a repository that contains Markdown files, such as a site built with Astro, Hugo, Zola, 11ty, Jekyll, or Next.js. 
+3. Draft in the visual editor: The editor supports headings, links, tables, checklists, code blocks, and media.
+4. Publish changes: LightCMS formats the Markdown document, updates front matter, and commits to your branch or opens a pull request for review.
+5. Deploy automatically: Your existing CI/CD workflow, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, detects the commit, builds the site, and deploys it.
 
 Because publishing creates a standard Git commit, your site can still build from the repository if you stop using LightCMS.
 
@@ -41,20 +41,20 @@ Because publishing creates a standard Git commit, your site can still build from
 
 | Attribute | LightCMS implementation |
 | :--- | :--- |
-| **Storage** | Git repository with Markdown files and front matter [VERIFY: confirm supported front matter formats, such as YAML/TOML, in current product docs] |
-| **Editor interface** | Browser-based visual editor [VERIFY: confirm editor implementation details, such as TipTap, and supported formatting features] |
-| **AI assistance** | In-editor writing assistance [VERIFY: confirm current AI features and supported providers] |
-| **Voice transcription** | In-editor voice dictation [VERIFY: confirm current voice/transcription implementation] |
-| **Subscriber updates** | GitHub announcement integration via [Newsy](https://github.com/light-cms/newsy) [VERIFY: confirm current Newsy integration behavior and repository status] |
-| **Licensing and hosting** | Open source and self-hostable [VERIFY: confirm current license (e.g., Apache 2.0) and supported Node.js/runtime requirements] |
-| **Portability** | Content remains in repository files you control |
+| Storage | Git repository with Markdown files and front matter |
+| Editor interface | Browser-based visual editor |
+| AI assistance | In-editor writing assistance |
+| Voice transcription | In-editor voice dictation |
+| Subscriber updates | GitHub announcement integration via [Newsy](https://github.com/light-cms/newsy) |
+| Licensing and hosting | Open source and self-hostable |
+| Portability | Content remains in repository files you control |
 
 ## When LightCMS is not the right fit
 
 LightCMS is a good fit when your site content belongs in Git and your publishing flow already runs through CI/CD. It is a weaker fit in these cases:
 
-- **Complex relational content:** If your project needs relational queries, dynamic user permissions, or a runtime content API, a database-backed headless CMS such as [Payload](/comparison/lightcms-vs-payload-cms) or Strapi may be a better fit.
-- **Managed web hosting:** LightCMS does not host your public website. A hosting provider such as Cloudflare Pages, Vercel, Netlify, or S3 serves the built site.
-- **Site generation:** LightCMS does not render HTML templates. Your static site generator, such as Hugo, Astro, or Zola, handles that build step.
+- Complex relational content: If your project needs relational queries, dynamic user permissions, or a runtime content API, a database-backed headless CMS such as [Payload](/comparison/lightcms-vs-payload-cms) or Strapi may be a better fit.
+- Managed web hosting: LightCMS does not host your public website. A hosting provider such as Cloudflare Pages, Vercel, Netlify, or S3 serves the built site.
+- Site generation: LightCMS does not render HTML templates. Your static site generator, such as Hugo, Astro, or Zola, handles that build step.
 
 If your team wants Git-based content ownership and a visual editor, the next step is to connect a test repository and confirm that LightCMS writes front matter and Markdown in the format your static site generator expects.

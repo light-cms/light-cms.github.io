@@ -1,1 +1,1 @@
-- Treat AGENTS.md as a binding guide and follow its rules strictly when performing relevant work. Confidence: 0.95
+- Prefers blog content written in a human, natural voice rather than robotic or polished AI-sounding prose. Confidence: 0.85

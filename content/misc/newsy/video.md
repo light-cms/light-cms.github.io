@@ -1,6 +1,6 @@
 ---
 title: Newsy Video Walkthrough
-description: A video walkthrough of setting up Newsy for your own use.
+description: A short video walkthrough for setting up Newsy, from cloning the repository to running the bot.
 keywords:
   - newsy
   - newsletter video
@@ -19,14 +19,14 @@ taxonomies:
 created: 2026-11-09T18:30:00.000Z
 ---
 
-Prefer to learn by watching? This walkthrough covers the setup process, from cloning the repository to launching the bot.
+If you’d rather watch the setup than read through it, this video walks through the Newsy setup from cloning the repository to running the bot.
 
-## New method with multitenancy support
+## Current setup walkthrough
 
 [![Newsy setup walkthrough](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
 
 ## Earlier walkthrough
 
-The previous video is still available for reference:
+The older video is still here if you want it for reference:
 
 [![Earlier Newsy walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)

@@ -88,8 +88,8 @@ ssh -R 80:localhost:3000 localhost.run
 
 _(If you run into issues, refer to the [video guide](/misc/newsy/video/) or try another tunnel provider.)_
 
-1. Choose an **App name** (use a unique one).
-2. Paste the tunnel URL into the **Webhook URL** field and submit.
+1. Choose an App name (use a unique one).
+2. Paste the tunnel URL into the Webhook URL field and submit.
 3. A `.env` file with your app's secrets will be created in your project root. Keep this file safe.
 
 The generated `.env` should look like this:
@@ -102,7 +102,7 @@ DATABASE_URL=""
 ```
 
 > \[!IMPORTANT\]
-> Install the GitHub App on **selected repositories only**, rather than on "All repositories".
+> Install the GitHub App on selected repositories only, rather than on "All repositories".
 
 You can share each Newsy copy across several repositories or users.
 
@@ -130,13 +130,13 @@ Vercel and many other cloud providers offer free tiers for serverless workloads.
 
 As a Go binary:
 
-- **Low memory use**, staying well within serverless memory and run limits.
+- Low memory use, staying well within serverless memory and run limits.
 
 ## Subscribe to the Newsletter
 
 Subscribe to see Newsy in action:
 
-👉 [**Subscribe on GitHub**](https://github.com/Pratyay360/blogs_md/issues/1)
+👉 [Subscribe on GitHub](https://github.com/Pratyay360/blogs_md/issues/1)
 
 ## Create Your Subscription Button
 
@@ -145,7 +145,7 @@ Create an inline subscription button for your account at [newsy.lightcms.me](htt
 You can change and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
 
 > \[!TIP\]
-> **Security tip:** After the bot posts its first newsletter message, lock the chat to stop unwanted actions.
+> Security tip: After the bot posts its first newsletter message, lock the chat to stop unwanted actions.
 
 ![locked convo](https://i.ibb.co/nsjMkY9v/screenshot-2026-10-24-160830-png.png)
 

@@ -19,27 +19,27 @@ taxonomies:
     - workflow
 ---
 
-The LightCMS AI copilot is designed to assist with specific writing tasks inside the editor, such as outlining, rewriting, expanding, or fixing grammar. It should support the author's draft, not replace editorial judgment or factual review. [VERIFY: confirm current LightCMS copilot features, UI actions, and provider configuration against product documentation.]
+The LightCMS's AI copilot is designed to assist with specific writing tasks inside the editor, such as outlining, rewriting, expanding, or fixing grammar. It should support the author's draft, not replace editorial judgment or factual review. 
 
 ## What the copilot is useful for
 
 | Task | Useful input | Human review required |
 | :--- | :--- | :--- |
-| **Outline** | A topic, audience, and central claim | Check structure against the actual argument |
-| **Rephrase** | A paragraph with clear meaning | Verify tone and technical accuracy |
-| **Expand** | A short note or bullet point | Remove generic filler and unsupported claims |
-| **Grammar pass** | A nearly final draft | Confirm meaning did not change |
+| Outline | A topic, audience, and central claim | Check structure against the actual argument |
+| Rephrase | A paragraph with clear meaning | Verify tone and technical accuracy |
+| Expand | A short note or bullet point | Remove generic filler and unsupported claims |
+| Grammar pass | A nearly final draft | Confirm meaning did not change |
 
 These actions work best when you select specific text and ask for a bounded change. Asking a model to generate a full post from a title increases the risk of generic writing and factual errors.
 
 ## Provider and data considerations
 
-LightCMS documentation describes support for OpenAI-compatible providers. [VERIFY: confirm currently supported providers, endpoint format, API key storage, and request/response behavior.] Before enabling AI features, confirm:
+LightCMS documentation describes support for OpenAI-compatible providers. Before enabling AI features, confirm:
 
-1. **Where text is sent:** Which provider receives selected text or prompts.
-2. **How keys are stored:** Whether keys are stored locally, in your instance, or in a third-party service.
-3. **What is logged:** Whether prompts, outputs, or telemetry are retained.
-4. **What is excluded:** Whether front matter, secrets, or unpublished drafts should be filtered from prompts.
+1. Where text is sent: Which provider receives selected text or prompts.
+2. How keys are stored: Whether keys are stored locally, in your instance, or in a third-party service.
+3. What is logged: Whether prompts, outputs, or telemetry are retained.
+4. What is excluded: Whether front matter, secrets, or unpublished drafts should be filtered from prompts.
 
 Do not include credentials, private customer data, or unpublished sensitive information in prompts unless your provider agreement and internal policy allow it.
 

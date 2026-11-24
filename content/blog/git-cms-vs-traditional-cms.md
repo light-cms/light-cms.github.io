@@ -20,17 +20,17 @@ A traditional CMS stores content in a database and usually renders pages through
 
 | Area | Traditional CMS | Git-based CMS |
 | :--- | :--- | :--- |
-| **Content storage** | Database | Markdown/files in Git |
-| **Runtime** | Application server, database, plugins/themes | Static files served from CDN after build |
-| **Editing workflow** | Admin UI writes to database | Editor creates commits/PRs to repository |
-| **Versioning** | CMS-specific revisions/plugins | Git history, diffs, branches, pull requests |
-| **Portability** | Export/migration depends on platform | Files are portable across generators and hosts |
+| Content storage | Database | Markdown/files in Git |
+| Runtime | Application server, database, plugins/themes | Static files served from CDN after build |
+| Editing workflow | Admin UI writes to database | Editor creates commits/PRs to repository |
+| Versioning | CMS-specific revisions/plugins | Git history, diffs, branches, pull requests |
+| Portability | Export/migration depends on platform | Files are portable across generators and hosts |
 
 ## Security and operational surface
 
-Traditional CMS platforms can be secure when maintained well, but they typically expose an admin interface, application runtime, database, and plugin ecosystem. That creates patching and monitoring work. [VERIFY: support security comparisons with current data or narrow the claim to architecture.]
+Traditional CMS platforms can be secure when maintained well, but they typically expose an admin interface, application runtime, database, and plugin ecosystem. That creates patching and monitoring work.
 
-A Git-based CMS reduces runtime application surface because the published site can be static files. The repository, Git host, and build pipeline still need security controls, including access management, branch protection, and secret handling.
+A Git based CMS reduces runtime application surface because the published site can be static files. The repository, Git host, and build pipeline still need security controls, including access management, branch protection, and secret handling.
 
 ## Ownership and portability
 
@@ -40,16 +40,12 @@ With a traditional CMS, portability depends on export tools, database schema, pl
 
 ## Cost and maintenance trade-offs
 
-Traditional CMS setups can include hosting, database management, plugin licenses, backups, and security maintenance. Git-based static sites can reduce runtime infrastructure, but they still require CI/CD, build minutes, repository management, and editorial tooling. [VERIFY: avoid absolute cost claims unless you include specific pricing examples.]
+Traditional CMS setups can include hosting, database management, plugin licenses, backups, and security maintenance. Git-based static sites can reduce runtime infrastructure, but they still require CI/CD, build minutes, repository management, and editorial tooling. 
 
-## When a traditional CMS is the better fit
+## Which one should you pick?
 
-Choose a traditional or database-backed CMS when you need:
+A traditional or database-backed CMS is usually the right call when you need things like user accounts, personalized dashboards, frequent runtime writes, field-level permissions, or app behavior that’s tightly tied to content.
 
-- **Real-time dynamic content:** user accounts, personalized dashboards, or frequent runtime writes.
-- **Complex permissions:** field-level editorial permissions or application-specific roles.
-- **Integrated application behavior:** e-commerce, membership, or custom server-side workflows tightly coupled to content.
+A Git-based CMS makes more sense when the site is mostly content and you care about portability, reviewable changes, static delivery, and simple hosting.
 
-Choose a Git-based CMS when content portability, reviewable changes, static delivery, and simple hosting matter more than runtime application features.
-
-For related comparisons, see [What Is a Git-Based CMS?](/blog/git-based-cms-explained/) and [Git-Based vs. Traditional Headless CMS](/blog/headless-vs-git-based-cms/).
+If you want to go deeper, see [What Is a Git-Based CMS?](/blog/git-based-cms-explained/) and [Git-Based vs. Traditional Headless CMS](/blog/headless-vs-git-based-cms/).

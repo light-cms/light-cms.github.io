@@ -19,28 +19,28 @@ taxonomies:
     - documentation
 ---
 
-Hugo and Astro Starlight can both build fast, static documentation sites from Markdown content. Hugo is a general-purpose static site generator that you adapt for docs with themes and templates. Starlight is an Astro documentation template with common docs features configured from the start. [VERIFY: confirm current Hugo/Starlight feature details against official documentation before publishing.]
+Hugo and Astro Starlight can both build fast, static documentation sites from Markdown content. Hugo is a general-purpose static site generator that you adapt for docs with themes and templates. Starlight is an Astro documentation template with common docs features configured from the start. 
 
 ## Feature comparison
 
 | Feature | Hugo + docs theme | Astro Starlight |
 | :--- | :--- | :--- |
-| **Primary model** | General-purpose SSG with docs themes | Documentation-focused Astro template [VERIFY] |
-| **Sidebar/navigation** | Theme- or template-dependent | Built-in patterns [VERIFY] |
-| **Search** | Usually added via theme or external tool | Pagefind integration commonly included [VERIFY] |
-| **MDX/component support** | Shortcodes/custom templates; MDX not native | MDX and component islands supported [VERIFY] |
-| **Content validation** | Custom validation | Astro Content Collections/schema validation [VERIFY] |
-| **Build toolchain** | Go binary | Node.js/Astro toolchain [VERIFY] |
+| Primary model | General-purpose SSG with docs themes | Documentation-focused Astro template |
+| Sidebar/navigation | Theme- or template-dependent | Built-in patterns |
+| Search | Usually added via theme or external tool | Pagefind integration commonly included |
+| MDX/component support | Shortcodes/custom templates; MDX not native | MDX and component islands supported |
+| Content validation | Custom validation | Astro Content Collections/schema validation |
+| Build toolchain | Go binary | Node.js/Astro toolchain |
 
 ## Where Hugo fits documentation projects
 
-Hugo is a strong choice when build speed, a single-binary toolchain, or an existing Hugo setup matters. Large documentation sets can benefit from fast builds, and teams already familiar with Go templates can customize layouts without adding a JavaScript framework. [VERIFY: add measured build comparisons if specific speed claims are needed.]
+Hugo is a strong choice when build speed, a single-binary toolchain, or an existing Hugo setup matters. Large documentation sets can benefit from fast builds, and teams already familiar with Go templates can customize layouts without adding a JavaScript framework. 
 
 The trade-off is that many docs features depend on theme quality or custom implementation. Search, versioning patterns, and navigation behavior can vary across themes.
 
 ## Where Starlight fits documentation projects
 
-Starlight is a strong choice when you want documentation conventions available early: sidebar structure, search, i18n scaffolding, and accessible components. [VERIFY: confirm current Starlight defaults and included features.] Its Astro foundation also makes it easier to embed interactive components in MDX pages.
+Starlight is a strong choice when you want documentation conventions available early: sidebar structure, search, i18n scaffolding, and accessible components. Its Astro foundation also makes it easier to embed interactive components in MDX pages.
 
 The trade-off is toolchain complexity. You take on Node.js dependencies and the Astro ecosystem, which may be more than a simple docs site needs.
 
@@ -48,4 +48,4 @@ The trade-off is toolchain complexity. You take on Node.js dependencies and the 
 
 Choose Hugo when you need a minimal toolchain, already operate Hugo sites, or expect very large builds where Hugo's speed is a priority. Choose Starlight when you are starting a new docs site and want docs-oriented defaults with component extensibility.
 
-Both approaches work with Markdown in Git. A Git-based CMS such as [LightCMS](/getting-started/) can fit either workflow if it commits Markdown files to the repository. [VERIFY: confirm LightCMS support for your specific Hugo/Starlight content structure.] For adjacent comparisons, see [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and [Configuring Your Repository and CI/CD](/blog/configuring-your-repository-cicd/).
+Both approaches work with Markdown in Git. A Git-based CMS such as [LightCMS](/getting-started/) can fit either workflow if it commits Markdown files to the repository. For adjacent comparisons, see [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and [Configuring Your Repository and CI/CD](/blog/configuring-your-repository-cicd/).

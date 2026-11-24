@@ -4,42 +4,37 @@ description: "Compare WordPress alternatives by architecture, maintenance, hosti
 serial: 17
 date: 2026-10-14T13:40:00Z
 draft: false
-keywords:
-  - wordpress alternatives
-  - best cms besides wordpress
-  - wordpress vs static site
-  - cms without database
-  - open source cms 2026
+keywords: newsy
 
 taxonomies:
-  tags:
-    - cms
-    - wordpress
-    - comparison
-    - git
+ tags:
+ - cms
+ - wordpress
+ - comparison
+ - git
 ---
 
 WordPress alternatives make sense when you want lower maintenance, a smaller runtime attack surface, or a publishing workflow that does not depend on a database-backed application. The right replacement depends on whether you need a content website, a publication with memberships, or a full application.
 
 ## Why teams look beyond WordPress
 
-WordPress is flexible, but its common architecture includes an application runtime, database, plugins, themes, and an admin surface that require ongoing maintenance. [VERIFY: support security/market-share claims with current primary sources before publishing.]
+WordPress is flexible, but its common architecture includes an application runtime, database, plugins, themes, and an admin surface that require ongoing maintenance.
 
 Common reasons to evaluate alternatives include:
 
-- **Maintenance overhead:** Core, plugin, theme, and PHP updates.
-- **Security surface:** Public admin endpoints and plugin vulnerabilities.
-- **Performance work:** Caching, database tuning, and plugin audits.
-- **Portability concerns:** Content and presentation can be tightly coupled.
+- Maintenance overhead: Core, plugin, theme, and PHP updates.
+- Security surface: Public admin endpoints and plugin vulnerabilities.
+- Performance work: Caching, database tuning, and plugin audits.
+- Portability concerns: Content and presentation can be tightly coupled.
 
 ## Alternatives by architecture
 
 | Option type | Examples | Good fit | Trade-off |
 | :--- | :--- | :--- | :--- |
-| **Git-based CMS + static site** | LightCMS, Decap CMS, Pages CMS, TinaCMS [VERIFY] | Blogs, docs, marketing sites | Build step; limited runtime dynamic behavior |
-| **Hosted publishing platform** | Ghost [VERIFY] | Newsletters, memberships, editorial publishing | Platform/database dependency and pricing |
-| **Traditional enterprise CMS** | Drupal [VERIFY] | Complex organizational sites with dev teams | Higher implementation and maintenance cost |
-| **Headless CMS** | Contentful, Sanity, Strapi [VERIFY] | Structured multi-channel content | API/infrastructure complexity |
+| Git-based CMS + static site | LightCMS, Decap CMS, Pages CMS, TinaCMS | Blogs, docs, marketing sites | Build step; limited runtime dynamic behavior |
+| Hosted publishing platform | Ghost | Newsletters, memberships, editorial publishing | Platform/database dependency and pricing |
+| Traditional enterprise CMS | Drupal | Complex organizational sites with dev teams | Higher implementation and maintenance cost |
+| Headless CMS | Contentful, Sanity, Strapi | Structured multi-channel content | API/infrastructure complexity |
 
 ## Choosing a WordPress alternative
 

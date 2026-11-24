@@ -5,14 +5,14 @@ serial: 3
 date: "2026-09-18T01:42:00.000Z"
 draft: false
 tags:
-  - repository
-  - configuration
-  - github
-  - static
-  - site
-  - generator
-  - astro
-  - hugo
+ - repository
+ - configuration
+ - github
+ - static
+ - site
+ - generator
+ - astro
+ - hugo
 preview: og-image.png
 slug: configuring-your-repository-cicd
 ---
@@ -21,21 +21,21 @@ To publish with LightCMS, you need a Git repository that contains your Markdown 
 
 ## Repository structure LightCMS expects
 
-LightCMS works with static site generators that read Markdown files with front matter, such as Astro, Hugo, Zola, Jekyll, or Eleventy. [VERIFY: confirm the current list of supported generators/integrations in LightCMS product documentation.]
+LightCMS works with static site generators that read Markdown files with front matter, such as Astro, Hugo, Zola, Jekyll, or Eleventy.
 
 ```text
 my-blog-repo/
-├── content/               # or src/content/blog/ in Astro
-│   ├── hello-world.md
-│   └── my-second-post.md
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # Build and deploy pipeline
-├── package.json           # For Node-based tools like Astro
-└── hugo.toml              # Or astro.config.mjs, zola.toml
+├── content/ # or src/content/blog/ in Astro
+│ ├── hello-world.md
+│ └── my-second-post.md
+├──.github/
+│ └── workflows/
+│ └── deploy.yml # Build and deploy pipeline
+├── package.json # For Node-based tools like Astro
+└── hugo.toml # Or astro.config.mjs, zola.toml
 ```
 
-The exact content directory depends on your generator. For example, many Hugo sites use `content/`, while Astro content collections commonly use `src/content/`. [VERIFY: confirm the exact directories LightCMS detects or requires during repository setup.]
+The exact content directory depends on your generator. For example, many Hugo sites use `content/`, while Astro content collections commonly use `src/content/`.
 
 ## Front matter format
 
@@ -48,18 +48,18 @@ description: "A short summary of the article for preview cards and search result
 date: 2026-10-14T10:00:00Z
 draft: false
 tags:
-  - technology
-  - engineering
+ - technology
+ - engineering
 ---
 ```
 
-If your site uses TOML or another front matter format, confirm that LightCMS supports it before connecting the repository. [VERIFY: confirm supported front matter formats.]
+If your site uses TOML or another front matter format, confirm that LightCMS supports it before connecting the repository.
 
 ## Connect the GitHub repository
 
 Use a scoped GitHub App installation instead of a long-lived personal access token when possible. A scoped installation limits repository access and is easier to audit.
 
-1. Sign in to the [LightCMS dashboard](https://www.lightcms.me). [VERIFY: confirm current sign-in flow and dashboard URL.]
+1. Sign in to the [LightCMS dashboard](https://www.lightcms.me).
 2. Select the option to connect a repository.
 3. Choose the GitHub account or organization that owns the repository.
 4. Grant access only to the repository you want LightCMS to edit.
@@ -77,57 +77,53 @@ This example shows an Astro-style build deployed to GitHub Pages. Adjust the ins
 name: Deploy Website
 
 on:
-  push:
-    branches:
-      - main
+ push:
+ branches:
+ - main
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+ contents: read
+ pages: write
+ id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+ group: "pages"
+ cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+ build:
+ runs-on: ubuntu-latest
+ steps:
+ - name: Checkout repository
+ uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+ - name: Setup Node.js
+ uses: actions/setup-node@v4
+ with:
+ node-version: 20
 
-      - name: Install dependencies
-        run: npm ci
+ - name: Install dependencies
+ run: npm ci
 
-      - name: Build static site
-        run: npm run build
+ - name: Build static site
+ run: npm run build
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+ - name: Upload Pages artifact
+ uses: actions/upload-pages-artifact@v3
+ with:
+ path:./dist
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+ deploy:
+ environment:
+ name: github-pages
+ url: $&#123;&#123; steps.deployment.outputs.page_url &#125;&#125;
+ runs-on: ubuntu-latest
+ needs: build
+ steps:
+ - name: Deploy to GitHub Pages
+ id: deployment
+ uses: actions/deploy-pages@main
 ```
-
-[VERIFY: confirm these GitHub Actions versions and Node version are current and appropriate for your supported examples before publishing.]
-
-In your GitHub repository settings, set **Pages > Source** to **GitHub Actions**. [VERIFY: confirm current GitHub Pages UI labels.]
 
 ### Option: managed edge hosting
 
@@ -135,11 +131,9 @@ Cloudflare Pages, Vercel, and Netlify can also build from repository commits. Ty
 
 | Platform | Example build command | Example output directory |
 | :--- | :--- | :--- |
-| **Hugo** | `hugo --minify` | `public` |
-| **Astro** | `npm run build` | `dist` |
-| **Zola** | `zola build` | `public` |
-
-[VERIFY: confirm these commands/output directories against current platform and generator defaults.]
+| Hugo | `hugo --minify` | `public` |
+| Astro | `npm run build` | `dist` |
+| Zola | `zola build` | `public` |
 
 Managed platforms reduce CI configuration, but they add another service to your publishing path. GitHub Actions keeps the build definition in your repository, which can make audits and migrations easier.
 
