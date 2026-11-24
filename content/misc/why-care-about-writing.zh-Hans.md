@@ -1,16 +1,16 @@
 ---
-title: Why You Should Care About Writing
+title: 为什么你应该关心如何写入
 description: >-
-  Why writing matters even when few people read it: documenting real problems helps the next person, and a static site keeps your notes durable, free, and yours to publish.
-date: '2026-11-01T14:02:00Z'
+  为什么撰写事项，即使很少人阅读：记录真正的问题有助于下一个人， 并且一个静态站点保持您的笔记的耐久、免费和您的笔记。
+date: '2026-11-01T14：02:00Z'
 draft: false
 tags:
-  - why writing matters
-  - start writing
-  - blogging benefits
+  - 为什么写入事项
+  - 开始写入
+  - 博客福利
   - 静态网站博客
-  - publish notes
-slug: why-care-about-writing
+  - 发布笔记
+slug: 为什么要写入关爱？
 ---
 
 ## 为什么要开始一个博客？
@@ -25,4 +25,4 @@ slug: why-care-about-writing
 
 从实际经验中撰写也为网上增添了有用的信息。清除真正问题的笔记，边缘案例和修复可以帮助其他人更快地找到答案。
 
-New to this? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) explains the philosophy behind owning your words.
+这是新的吗？[如何在2026](/blog/how-to-start-a-blog/) 覆盖完整的设置， 和 [为什么存在LightCMS](/blog/why-this/) 解释了拥有您的语言背后的理念。
