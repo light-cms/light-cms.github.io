@@ -5,18 +5,18 @@ serial: 40
 date: 2026-10-16T10:40:00Z
 draft: false
 keywords:
- - lightcms vs keystatic
- - keystatic alternatives
- - keystatic cms
- - file based cms comparison
- - local first cms
+  - lightcms vs keystatic
+  - keystatic alternatives
+  - keystatic cms
+  - file based cms comparison
+  - local first cms
 
 taxonomies:
- tags:
- - lightcms
- - keystatic
- - cms
- - comparison
+  tags:
+    - lightcms
+    - keystatic
+    - cms
+    - comparison
 slug: lightcms-vs-keystatic
 ---
 
@@ -26,20 +26,20 @@ If your content lives in a repository and you publish with a static site generat
 
 ## What they share
 
-Both store Markdown and YAML front matter in your repository, so there is no database, no export trap, and no vendor lock-in. Git history handles diffs, blame, revert, and pull request review. Your static site generator keeps working unchanged, and both projects are open source you can read, fork, and self-host.
+Both store Markdown and YAML front matter in your repository, so there is no database, no export trap, and no vendor lock in. Git history handles diffs, blame, revert, and pull request review. Your static site generator keeps working unchanged, and both projects are open source you can read, fork, and self-host.
 
 ## Comparison
 
-| | LightCMS | Keystatic |
-|---|---|---|
-| Schema | Managed in the app | Defined in code (TypeScript/JSX config) |
-| Editing surface | Document editor (TipTap WYSIWYG) | Forms generated from your schema |
-| Who sets it up | You host it; writers use a browser | Developers set up locally or via cloud |
-| AI drafting | Built in | Not bundled |
-| Voice dictation | Built in | Not bundled |
-| Newsletters | Built in via Newsy | Not bundled |
-| MDX support | Markdown pass-through | Native MDX |
-| License | Apache 2.0 | MIT |
+|                 | LightCMS                           | Keystatic                               |
+| --------------- | ---------------------------------- | --------------------------------------- |
+| Schema          | Managed in the app                 | Defined in code (TypeScript/JSX config) |
+| Editing surface | Document editor (TipTap WYSIWYG)   | Forms generated from your schema        |
+| Who sets it up  | You host it; writers use a browser | Developers set up locally or via cloud  |
+| AI drafting     | Built in                           | Not bundled                             |
+| Voice dictation | Built in                           | Not bundled                             |
+| Newsletters     | Built in via Newsy                 | Not bundled                             |
+| MDX support     | Markdown pass-through              | Native MDX                              |
+| License         | Apache 2.0                         | MIT                                     |
 
 ## When Keystatic makes more sense
 

@@ -19,7 +19,7 @@ taxonomies:
     - ssg
 ---
 
-Astro and Next.js can both build fast websites, but they are optimized for different jobs. Astro is designed for content-heavy sites that should ship mostly HTML and minimal client-side JavaScript. Next.js is designed for React applications that need routing, server rendering, data mutations, and interactive application behavior. 
+Astro and Next.js can both build fast websites, but they are optimized for different jobs. Astro is designed for content heavy sites that should ship mostly HTML and minimal client-side JavaScript. Next.js is designed for React applications that need routing, server rendering, data mutations, and interactive application behavior.
 
 ## Rendering model differences
 
@@ -39,13 +39,13 @@ import NewsletterSignup from '../components/NewsletterSignup.tsx';
 
 Next.js uses React and supports static rendering, server rendering, and hybrid patterns in the App Router.
 
-| Area | Astro | Next.js |
-| :--- | :--- | :--- |
-| Primary fit | Content sites, docs, blogs, marketing pages | Web applications, dashboards, authenticated products |
-| Default client JS | Minimal by default | React application runtime depends on architecture |
-| Interactivity | Islands for selected components | React client components across the app |
-| Content workflow | Content Collections and Markdown support | Markdown/MDX possible, often with additional setup |
-| Deployment model | Static or SSR adapters | Static export or server/edge runtimes |
+| Area              | Astro                                       | Next.js                                              |
+| :---------------- | :------------------------------------------ | :--------------------------------------------------- |
+| Primary fit       | Content sites, docs, blogs, marketing pages | Web applications, dashboards, authenticated products |
+| Default client JS | Minimal by default                          | React application runtime depends on architecture    |
+| Interactivity     | Islands for selected components             | React client components across the app               |
+| Content workflow  | Content Collections and Markdown support    | Markdown/MDX possible, often with additional setup   |
+| Deployment model  | Static or SSR adapters                      | Static export or server/edge runtimes                |
 
 ## Performance trade-offs
 
@@ -55,17 +55,17 @@ Next.js can also perform well, but content-heavy sites need careful decisions ab
 
 ## Content authoring workflow
 
-Astro includes Content Collections, which can validate front matter with schemas during builds. 
+Astro includes Content Collections, which can validate front matter with schemas during builds.
 
 ```ts
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    publishDate: z.date(),
-    draft: z.boolean().default(false),
-  }),
+ schema: z.object({
+  title: z.string(),
+  publishDate: z.date(),
+  draft: z.boolean().default(false),
+ }),
 });
 
 export const collections = { blog };
@@ -75,7 +75,7 @@ Next.js can work well with Markdown and MDX, but teams often assemble the conten
 
 ## Git-based CMS compatibility
 
-Both frameworks can read Markdown files from a Git repository. A Git-based CMS such as [LightCMS](/getting-started/) can commit content changes, and your CI/CD pipeline can build the site on Vercel, Cloudflare Pages, Netlify, or another host. 
+Both frameworks can read Markdown files from a Git repository. A Git-based CMS such as [LightCMS](/getting-started/) can commit content changes, and your CI/CD pipeline can build the site on Vercel, Cloudflare Pages, Netlify, or another host.
 
 Because content stays in Git, migrating between Astro and Next.js usually means changing templates and build configuration, not rewriting every article.
 

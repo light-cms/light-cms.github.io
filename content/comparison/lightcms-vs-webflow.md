@@ -2,14 +2,14 @@
 title: "LightCMS vs Webflow: Code You Own vs a Visual Builder"
 description: "Compare LightCMS and Webflow: Git-based Markdown content for developer-owned sites versus a hosted visual website builder and CMS."
 serial: 57
-date: '2026-10-16T13:10:00.000Z'
+date: "2026-10-16T13:10:00.000Z"
 draft: false
 tags:
- - lightcms vs webflow
- - webflow
- - webflow limitations
- - webflow vs static site generator
- - webflow pricing alternatives
+  - lightcms vs webflow
+  - webflow
+  - webflow limitations
+  - webflow vs static site generator
+  - webflow pricing alternatives
 preview: /og-image.png
 slug: lightcms-vs-webflow
 ---
@@ -22,14 +22,14 @@ Webflow gives you a visual canvas for designing pages, managing CMS collections,
 
 LightCMS assumes the frontend exists already. Developers own the templates and build pipeline; writers use LightCMS to edit Markdown and front matter, then commit changes to Git.
 
-| | LightCMS | Webflow |
-|---|---|---|
-| Design | Your code and templates | Visual design canvas |
-| Content storage | Markdown in Git | Hosted CMS collections |
-| Publishing | Your CI/CD and host | Webflow hosting/publish |
-| Editing | Document editor for Markdown | CMS fields tied to designs |
-| Version control | Git history | Platform versioning, not Git |
-| Best for | Developer-owned static sites | Teams wanting design + CMS in one tool |
+|                 | LightCMS                     | Webflow                                |
+| --------------- | ---------------------------- | -------------------------------------- |
+| Design          | Your code and templates      | Visual design canvas                   |
+| Content storage | Markdown in Git              | Hosted CMS collections                 |
+| Publishing      | Your CI/CD and host          | Webflow hosting/publish                |
+| Editing         | Document editor for Markdown | CMS fields tied to designs             |
+| Version control | Git history                  | Platform versioning, not Git           |
+| Best for        | Developer-owned static sites | Teams wanting design + CMS in one tool |
 
 ## When Webflow makes more sense
 

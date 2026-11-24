@@ -1,14 +1,15 @@
 ---
 title: Why Writing Is Worth the Effort
-description: "Writing helps you turn hard-won problem solving into notes other people can use, and a static site makes publishing those notes simple."
-date: '2026-11-01T14:02:00Z'
+description: "Writing helps you turn known problem solving into notes other people can use, and a static site makes thepublishing step simple."
+date: "2026-11-01T14:02:00Z"
 draft: false
 tags:
   - why writing matters
-  - start writing
-  - blogging benefits
-  - static site blog
-  - publish notes
+  - start-writing
+  - blog
+  - static-site
+  - blogging
+  - publish-notes
 slug: why-care-about-writing
 ---
 

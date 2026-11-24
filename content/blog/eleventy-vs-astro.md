@@ -18,13 +18,13 @@ Eleventy and Astro both can generate static sites with little or no client-side 
 
 ## Core comparison
 
-| Area | Eleventy | Astro |
-| :--- | :--- | :--- |
-| Primary model | Template-driven static site generator | Component-driven web framework with static output |
-| Templating | Multiple template languages | `.astro` components and framework integrations |
-| Client JavaScript | None by default; add manually | Minimal by default; islands for interactivity |
-| Content validation | Convention/custom validation | Content Collections/schema validation |
-| Best fit | Simple, content-focused static sites | Content sites that may need interactive components |
+| Area               | Eleventy                              | Astro                                              |
+| :----------------- | :------------------------------------ | :------------------------------------------------- |
+| Primary model      | Template-driven static site generator | Component-driven web framework with static output  |
+| Templating         | Multiple template languages           | `.astro` components and framework integrations     |
+| Client JavaScript  | None by default; add manually         | Minimal by default; islands for interactivity      |
+| Content validation | Convention/custom validation          | Content Collections/schema validation              |
+| Best fit           | Simple, content-focused static sites  | Content sites that may need interactive components |
 
 ## Templating and project structure
 

@@ -5,37 +5,37 @@ serial: 52
 date: 2026-10-16T12:20:00Z
 draft: false
 keywords:
- - lightcms vs wordpress
- - wordpress alternative
- - wordpress without database
- - static site vs wordpress
- - switch from wordpress
+  - lightcms vs wordpress
+  - wordpress alternative
+  - wordpress without database
+  - static site vs wordpress
+  - switch from wordpress
 
 taxonomies:
- tags:
- - lightcms
- - wordpress
- - cms
- - comparison
- - static-sites
+  tags:
+    - lightcms
+    - wordpress
+    - cms
+    - comparison
+    - static-sites
 slug: lightcms-vs-wordpress
 ---
 
-WordPress and LightCMS can both publish a website, but they come with very different baggage. WordPress is a PHP application with a database, themes, plugins, and an admin panel. LightCMS is 
+WordPress and LightCMS can both publish a website, but they come with very different baggage. WordPress is a PHP application with a database, themes, plugins, and an admin panel. LightCMS is
 a Git based editor for static sites: content lives as Markdown files, and your build pipeline publishes static HTML.
 
 If you need a website that behaves like an application, WordPress still has real advantages. If you need a publication that loads fast and stays simple to maintain, the static route is easier to live with.
 
 ## How they differ
 
-| | LightCMS | WordPress |
-|---|---|---|
-| Content storage | Markdown files in Git | MySQL database |
-| Rendering | Prebuilt static HTML | PHP renders pages at runtime |
-| Runtime | No CMS runtime on the live site | Web server, PHP, database |
-| Extensibility | Build tools and external services | Plugins and themes |
-| Versioning | Git history | WordPress revisions/plugins |
-| Best for | Blogs, docs, marketing sites | Sites needing plugins, dynamic features, admin workflows |
+|                 | LightCMS                          | WordPress                                                |
+| --------------- | --------------------------------- | -------------------------------------------------------- |
+| Content storage | Markdown files in Git             | MySQL database                                           |
+| Rendering       | Prebuilt static HTML              | PHP renders pages at runtime                             |
+| Runtime         | No CMS runtime on the live site   | Web server, PHP, database                                |
+| Extensibility   | Build tools and external services | Plugins and themes                                       |
+| Versioning      | Git history                       | WordPress revisions/plugins                              |
+| Best for        | Blogs, docs, marketing sites      | Sites needing plugins, dynamic features, admin workflows |
 
 ## When WordPress makes more sense
 

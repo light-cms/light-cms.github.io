@@ -22,12 +22,12 @@ Static sites serve prebuilt files from a CDN; dynamic sites generate responses a
 
 ## Request flow comparison
 
-| Step | Dynamic site | Static site |
-| :--- | :--- | :--- |
-| Build time | Templates and code deployed to runtime | Generator builds HTML/CSS/JS files |
-| Request time | App may query database and render HTML | CDN serves prebuilt file |
-| Personalization | Native server-side option | Usually handled with client-side JS or edge/serverless functions |
-| Failure surface | App runtime, database, cache, plugins | Build pipeline, CDN, client-side integrations |
+| Step            | Dynamic site                           | Static site                                                      |
+| :-------------- | :------------------------------------- | :--------------------------------------------------------------- |
+| Build time      | Templates and code deployed to runtime | Generator builds HTML/CSS/JS files                               |
+| Request time    | App may query database and render HTML | CDN serves prebuilt file                                         |
+| Personalization | Native server-side option              | Usually handled with client-side JS or edge/serverless functions |
+| Failure surface | App runtime, database, cache, plugins  | Build pipeline, CDN, client-side integrations                    |
 
 A dynamic page request can involve routing, database queries, template rendering, and cache logic. A static page request usually returns an existing file from edge storage. The difference affects latency, cost, and operational complexity.
 
@@ -35,7 +35,7 @@ A dynamic page request can involve routing, database queries, template rendering
 
 ### Security
 
-Dynamic sites expose an application runtime, admin interfaces, and often a database. That creates patching and monitoring responsibilities. Static sites reduce runtime attack surface, but they still need secure Git access, CI/CD secrets management, and dependency updates in the build pipeline. 
+Dynamic sites expose an application runtime, admin interfaces, and often a database. That creates patching and monitoring responsibilities. Static sites reduce runtime attack surface, but they still need secure Git access, CI/CD secrets management, and dependency updates in the build pipeline.
 
 ### Performance and cost
 

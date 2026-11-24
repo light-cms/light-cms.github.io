@@ -6,22 +6,22 @@ date: 2026-10-14T13:20:00Z
 draft: false
 
 tags:
- - cms
- - gitcms
- - ai
- - git
+  - cms
+  - gitcms
+  - ai
+  - git
 ---
 
-[GitCMS](https://gitcms.dev) is a Git-based CMS positioned around human and AI assisted website editing. Like other Git-based CMS tools, it keeps content in a repository and uses commits as the publishing mechanism. Its differentiator is an emphasis on reviewable workflows for agent-generated changes.
+[GitCMS](https://gitcms.dev) is a Git based CMS positioned around human and AI assisted website editing. Like other Git-based CMS tools, it keeps content in a repository and uses commits as the publishing mechanism. Its differentiator is an emphasis on reviewable workflows for agent-generated changes.
 
 ## Where GitCMS fits
 
-| Area | GitCMS focus | Trade-off |
-| :--- | :--- | :--- |
-| Content storage | Git repository as source of truth | Still requires Git/CI/CD setup |
-| Editing workflow | Visual/editorial layer over repository files | Younger ecosystem than established CMS options |
-| AI workflows | Designed for human review of agent changes | May be unnecessary for solo writers |
-| Pricing/licensing | Free tier plus paid plans | Not the same as fully open-source self-hosted tools |
+| Area              | GitCMS focus                                 | Trade off                                           |
+| :---------------- | :------------------------------------------- | :-------------------------------------------------- |
+| Content storage   | Git repository as source of truth            | Still requires Git/CI/CD setup                      |
+| Editing workflow  | Visual/editorial layer over repository files | Younger ecosystem than established CMS options      |
+| AI workflows      | Designed for human review of agent changes   | May be unnecessary for solo writers                 |
+| Pricing/licensing | Free tier plus paid plans                    | Not the same as fully open-source self-hosted tools |
 
 ## When to consider GitCMS
 

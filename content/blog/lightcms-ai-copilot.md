@@ -19,16 +19,16 @@ taxonomies:
     - workflow
 ---
 
-The LightCMS's AI copilot is designed to assist with specific writing tasks inside the editor, such as outlining, rewriting, expanding, or fixing grammar. It should support the author's draft, not replace editorial judgment or factual review. 
+LightCMS includes an AI copilot for specific writing tasks inside the editor, such as outlining, rewriting, expanding, or fixing grammar. It supports the author's draft rather than replacing editorial judgment or factual review.
 
 ## What the copilot is useful for
 
-| Task | Useful input | Human review required |
-| :--- | :--- | :--- |
-| Outline | A topic, audience, and central claim | Check structure against the actual argument |
-| Rephrase | A paragraph with clear meaning | Verify tone and technical accuracy |
-| Expand | A short note or bullet point | Remove generic filler and unsupported claims |
-| Grammar pass | A nearly final draft | Confirm meaning did not change |
+| Task         | Useful input                         | Human review required                        |
+| :----------- | :----------------------------------- | :------------------------------------------- |
+| Outline      | A topic, audience, and central claim | Check structure against the actual argument  |
+| Rephrase     | A paragraph with clear meaning       | Verify tone and technical accuracy           |
+| Expand       | A short note or bullet point         | Remove generic filler and unsupported claims |
+| Grammar pass | A nearly final draft                 | Confirm meaning did not change               |
 
 These actions work best when you select specific text and ask for a bounded change. Asking a model to generate a full post from a title increases the risk of generic writing and factual errors.
 

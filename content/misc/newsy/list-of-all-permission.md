@@ -1,11 +1,8 @@
 ---
-id: IXGd7-xioQc
 title: Required Permissions
 description: The GitHub App permissions Newsy asks for, and why each one is needed.
 author: light-cms
 created: 2026-08-22T07:28:38+00:00
-visibility: public
-fmContentType: default
 tags:
   - newsy
   - github app permissions

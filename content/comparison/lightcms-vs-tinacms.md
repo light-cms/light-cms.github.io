@@ -5,18 +5,18 @@ serial: 39
 date: 2026-10-16T10:30:00Z
 draft: false
 keywords:
- - lightcms vs tinacms
- - tinacms alternatives
- - tinacms self hosted
- - on-page editing vs dashboard
- - markdown cms comparison
+  - lightcms vs tinacms
+  - tinacms alternatives
+  - tinacms self hosted
+  - on-page editing vs dashboard
+  - markdown cms comparison
 
 taxonomies:
- tags:
- - lightcms
- - tinacms
- - cms
- - comparison
+  tags:
+    - lightcms
+    - tinacms
+    - cms
+    - comparison
 slug: lightcms-vs-tinacms
 ---
 
@@ -30,14 +30,14 @@ With TinaCMS, you edit on the page itself. That’s great when layout matters: y
 
 With LightCMS, you edit in a document workspace. That’s calmer for long-form writing because you’re not scrolling past hero images and layout blocks to reach paragraph fourteen. You write, format, add images, and publish.
 
-| | LightCMS | TinaCMS |
-|---|---|---|
-| Editing model | Standalone document editor | On-page/contextual editing |
-| Content storage | Git repository | Git repository |
-| Schema | Managed in the app | Defined in code/config |
-| Best for | Articles, docs, changelogs | Landing pages, page copy, component-driven sites |
-| AI drafting | Built in | Not bundled |
-| Voice dictation | Built in | Not bundled |
+|                 | LightCMS                   | TinaCMS                                          |
+| --------------- | -------------------------- | ------------------------------------------------ |
+| Editing model   | Standalone document editor | On-page/contextual editing                       |
+| Content storage | Git repository             | Git repository                                   |
+| Schema          | Managed in the app         | Defined in code/config                           |
+| Best for        | Articles, docs, changelogs | Landing pages, page copy, component-driven sites |
+| AI drafting     | Built in                   | Not bundled                                      |
+| Voice dictation | Built in                   | Not bundled                                      |
 
 ## When TinaCMS makes more sense
 

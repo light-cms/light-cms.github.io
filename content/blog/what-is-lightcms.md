@@ -29,8 +29,8 @@ LightCMS keeps content in Git while giving authors a visual editing interface. T
 
 ## How LightCMS publishes content
 
-1. Sign in with GitHub: Authenticate with your GitHub account. 
-2. Connect a repository: Point LightCMS to a repository that contains Markdown files, such as a site built with Astro, Hugo, Zola, 11ty, Jekyll, or Next.js. 
+1. Sign in with GitHub: Authenticate with your GitHub account.
+2. Connect a repository: Point LightCMS to a repository that contains Markdown files, such as a site built with Astro, Hugo, Zola, 11ty, Jekyll, or Next.js.
 3. Draft in the visual editor: The editor supports headings, links, tables, checklists, code blocks, and media.
 4. Publish changes: LightCMS formats the Markdown document, updates front matter, and commits to your branch or opens a pull request for review.
 5. Deploy automatically: Your existing CI/CD workflow, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, detects the commit, builds the site, and deploys it.
@@ -39,15 +39,15 @@ Because publishing creates a standard Git commit, your site can still build from
 
 ## Technical profile
 
-| Attribute | LightCMS implementation |
-| :--- | :--- |
-| Storage | Git repository with Markdown files and front matter |
-| Editor interface | Browser-based visual editor |
-| AI assistance | In-editor writing assistance |
-| Voice transcription | In-editor voice dictation |
-| Subscriber updates | GitHub announcement integration via [Newsy](https://github.com/light-cms/newsy) |
-| Licensing and hosting | Open source and self-hostable |
-| Portability | Content remains in repository files you control |
+| Attribute             | LightCMS implementation                                                         |
+| :-------------------- | :------------------------------------------------------------------------------ |
+| Storage               | Git repository with Markdown files and front matter                             |
+| Editor interface      | Browser-based visual editor                                                     |
+| AI assistance         | In-editor writing assistance                                                    |
+| Voice transcription   | In-editor voice dictation                                                       |
+| Subscriber updates    | GitHub announcement integration via [Newsy](https://github.com/light-cms/newsy) |
+| Licensing and hosting | Open source and self-hostable                                                   |
+| Portability           | Content remains in repository files you control                                 |
 
 ## When LightCMS is not the right fit
 

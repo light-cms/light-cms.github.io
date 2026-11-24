@@ -1,56 +1,59 @@
 ---
-title: "Self-Hosting LightCMS"
-description: "How to self-host LightCMS with a GitHub App, PostgreSQL, environment variables, and a deployment target for SvelteKit."
+title: Self-Hosting LightCMS
+description: "Self-host LightCMS with SvelteKit, PostgreSQL, and a GitHub App: setup steps, environment variables, database migrations, and deployment."
 section: Get Started
 badge: Deploy
-date: "2026-09-18T01:45:00.000Z"
+date: 2026-09-18T01:45:00.000Z
 draft: false
 tags:
-  - lightcms
-  - self-hosting
-  - github_app
-  - vercel
-  - sveltekit
+   - lightcms
+   - self-hosting
+   - github_app
+   - vercel
+   - sveltekit
 preview: /og-image.png
 slug: selfhost
+fmContentType: default
 ---
 
-You can self-host LightCMS by running the SvelteKit application, connecting a PostgreSQL database, and configuring a GitHub App for repository access. The steps below describe the expected setup; verify each command, environment variable, and permission against the current LightCMS repository before using it in production. 
+Self-hosting LightCMS requires running a SvelteKit application, connecting a PostgreSQL database, and configuring a GitHub App for repository access. Self-hosting gives you full control over your infrastructure and data flow, but it also makes you responsible for updates, backups, secrets, and uptime.
+
+Verify each command and environment variable against the current [LightCMS repository](https://github.com/light-cms/lightcms) before deploying to production.
 
 ## Components you need
 
-| Component | Purpose | Required |
-| :--- | :--- | :--- |
-| PostgreSQL | Stores application data such as users, sessions, and installations | Yes |
-| GitHub App | Handles GitHub authentication and repository access | Yes |
-| SMTP provider | Sends magic-link sign-in emails | Depends on auth setup |
-| OpenAI-compatible API | Powers AI copilot features | No |
-| Speech-to-text API | Powers voice dictation | No |
-| Image/CDN storage | Stores uploaded media | Depends on media setup |
+| Component             | Purpose                                                            | Required               |
+| :-------------------- | :----------------------------------------------------------------- | :--------------------- |
+| PostgreSQL            | Stores application data such as users, sessions, and installations | Yes                    |
+| GitHub App            | Handles GitHub authentication and repository access                | Yes                    |
+| SMTP provider         | Sends magic-link sign-in emails                                    | Depends on auth setup  |
+| OpenAI-compatible API | Powers AI copilot features                                         | No                     |
+| Speech-to-text API    | Powers voice dictation                                             | No                     |
+| Image/CDN storage     | Stores uploaded media                                              | Depends on media setup |
 
-## Prerequisites
+## 1. Prerequisites
 
-- Node.js/Bun/runtime tools: Use the versions required by the current LightCMS repository.
-- PostgreSQL with TLS: The app expects a TLS-capable database connection.
-- GitHub account: Needed to create and install a GitHub App.
-- SMTP credentials: Needed if you enable magic-link email sign-in.
+- **Runtime:** Node.js or Bun matching the versions required by the LightCMS repository.
+- **PostgreSQL with TLS:** A TLS-capable PostgreSQL connection.
+- **GitHub account:** Needed to create and install your GitHub App.
+- **SMTP credentials:** Optional, required only if you enable magic-link email sign-in.
 
-## Create and configure the GitHub App
+## 2. Create and configure the GitHub App
 
-Create a GitHub App in your GitHub account or organization settings. Configure the callback, setup, and webhook URLs to match your deployed domain.
+Create a GitHub App in your GitHub account or organization settings. Configure the callback, setup, and webhook URLs to match your deployed domain:
 
-| Setting | Example value |
-| :--- | :--- |
-| Homepage URL | `https://<your-domain>` |
+| Setting      | Example value                                    |
+| :----------- | :----------------------------------------------- |
+| Homepage URL | `https://<your-domain>`                          |
 | Callback URL | `https://<your-domain>/api/auth/callback/github` |
-| Setup URL | `https://<your-domain>/github/setup` |
-| Webhook URL | `https://<your-domain>/api/github/webhook` |
+| Setup URL    | `https://<your-domain>/github/setup`             |
+| Webhook URL  | `https://<your-domain>/api/github/webhook`       |
 
 Grant only the repository permissions LightCMS needs. After creation, record the App ID, client ID, client secret, webhook secret, and private key.
 
-## Configure environment variables
+## 3. Configure environment variables
 
-Create a `.env` file or configure environment variables in your hosting platform. The exact variable names can change, so use the repository's current configuration reference as the source of truth.
+Create a `.env` file locally or configure environment variables in your hosting platform:
 
 ```bash
 # Authentication
@@ -70,42 +73,9 @@ GITHUB_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
 -----END PRIVATE KEY-----"
 ```
 
-Add optional variables only for features you enable, such as SMTP, AI providers, speech-to-text, analytics, or image storage. 
-
-## Deploy and verify
-
-1. Install dependencies: Use the repository's documented package manager and install command. 
-2. Run database migrations: Apply the current schema/migration command before first launch. 
-3. Start the app locally: Confirm sign-in, repository access, and content editing work.
-4. Deploy to a host: Use a SvelteKit compatible deployment target. 
-5. Test the full flow: Sign in, connect a repository, edit a file, commit a change, and confirm your site build runs.
-
-Self-hosting gives you control over infrastructure and data flow, but it also makes you responsible for updates, backups, secrets, and uptime. If you only need to evaluate LightCMS, start with a local or staging deployment before exposing it to production users.
-
-Images pasted or uploaded in the editor are sent to a [Chevereto](https://chevereto.com)-compatible upload API.
-Hosted options include [FreeImage.host](https://freeimage.host) and [ImgBB](https://imgbb.com), or you can run
-your own Chevereto instance.
-
-```bash
-CDN_URL="https://freeimage.host/api/1/upload"
-CDN_KEY="<cdn-api-key>"
-```
-
-`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` Already contains one. If the upload fails or the
-variables are unset, [LightCMS](https://lightcms.me) Falls back to embedding the image in the document as a base64 `data:` URL. This works,
-but it makes your Markdown files much larger, so configure a CDN for real use.
-
-### Local webhook forwarding (development only)
-
-```bash
-WEBHOOK_PROXY_URL="https://smee.io/<your-channel>"
-```
-
-This is read by Probot, not by the SvelteKit app. See [Testing webhooks locally](#testing-webhooks-locally).
-
 ### Generating secrets
 
-Use any of these to generate `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET`:
+Generate `BETTER_AUTH_SECRET` and `GITHUB_WEBHOOK_SECRET` using either OpenSSL or Node.js:
 
 ```bash
 openssl rand -hex 32
@@ -113,16 +83,48 @@ openssl rand -hex 32
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
+### Image and CDN uploads
+
+Images pasted or uploaded in the editor are sent to a Chevereto-compatible upload API. Hosted options include [FreeImage.host](https://freeimage.host) and [ImgBB](https://imgbb.com), or you can run your own Chevereto instance.
+
+```bash
+CDN_URL="https://freeimage.host/api/1/upload"
+CDN_KEY="<cdn-api-key>"
+```
+
+`CDN_KEY` is sent as the `key` query parameter unless `CDN_URL` already contains one. If the upload fails or the variables are unset, LightCMS falls back to embedding the image in the document as a base64 `data:` URL. This works for quick testing, but it bloats your Markdown files, so configure a CDN for real use.
+
+### Optional: Voice-to-text, AI, and analytics
+
+You can enable voice dictation using [Wit.ai](https://wit.ai/) or any OpenAI-compatible transcription API (such as [Groq](https://groq.com/), [AssemblyAI](https://assemblyai.com/), [ElevenLabs](https://elevenlabs.io/), [Deepgram](https://deepgram.com/), or [Sarvam](https://sarvam.ai/)).
+
+```bash
+# Wit.ai
+WIT_AI_TOKEN="<server-access-token>"
+WIT_AI_CLIENT_TOKEN="<client-access-token>"
+
+# OpenAI-compatible AI & Speech
+OPEN_AI_ENDPOINT=""
+OPEN_AI_MODEL=""
+OPEN_AI_APIKEY=""
+SPEECH_ENDPOINT=""
+SPEECH_MODEL=""
+SPEECH_API_KEY=""
+
+# PostHog Analytics (optional)
+PUBLIC_POSTHOG_KEY="<your-posthog-project-key>"
+PUBLIC_POSTHOG_HOST="<your-posthog-host>"
+```
+
 ## 4. Set up the database
 
-[LightCMS](https://lightcms.me) uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations
-are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
+LightCMS uses [Drizzle ORM](https://orm.drizzle.team). The schema lives in `src/lib/server/db/schema.ts`, and migrations are generated into the `drizzle` directory. With `DATABASE_URL` set, apply the migrations:
 
 ```bash
 bun run db:migrate
 ```
 
-During local development you can instead push the schema straight to the database, without migration files:
+During local development you can push the schema straight to the database without migration files:
 
 ```bash
 bun run db:push
@@ -130,12 +132,10 @@ bun run db:push
 
 Other database scripts:
 
-
 | Command               | Description                                   |
-| --------------------- | --------------------------------------------- |
+| :-------------------- | :-------------------------------------------- |
 | `bun run db:generate` | Generate a migration after editing the schema |
 | `bun run db:studio`   | Browse and edit your data in Drizzle Studio   |
-
 
 ## 5. Run locally
 
@@ -143,102 +143,38 @@ Other database scripts:
 bun run dev
 ```
 
-![imagebot](https://i.ibb.co/Jw1bjLrr/image.png)
+![LightCMS GitHub App permissions](https://i.ibb.co/Jw1bjLrr/image.png)
 
-![permissions detailed](https://i.ibb.co/0p7tk88V/image.png)
+![Detailed repository permissions](https://i.ibb.co/0p7tk88V/image.png)
 
-[LightCMS](https://lightcms.me) is now available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address, and sign in with GitHub for the first time.
+LightCMS will be available at `http://localhost:5173`. Set `BETTER_AUTH_URL` to this address and sign in with GitHub for the first time.
 
 ### Testing webhooks locally
 
 GitHub cannot deliver webhooks to `localhost`, so forward them through [smee.io](https://smee.io):
 
 1. Create a channel at [smee.io](https://smee.io) and copy its URL.
-2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL.
+2. Set `WEBHOOK_PROXY_URL` in `.env` to that URL (`WEBHOOK_PROXY_URL="https://smee.io/<your-channel>"`).
 3. Set the Webhook URL in your GitHub App settings to the same URL.
 4. Run the bot in a second terminal:
+
    ```bash
-    bun run bot:start
+   bun run bot:start
    ```
 
-The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and
-labels on `pull_request`, and `installation` Logging.
+The bot registers the same handlers as the production endpoint: content validation on `push`, review comments and labels on `pull_request`, and `installation` logging.
 
 ## 6. Production deployment
 
-The project is configured with sveltekit which is very vendor agnostic, so
-[Vercel](https://vercel.com) [Netlify](https://www.netlify.com/) [Cloudflare workers](https://www.cloudflare.com/) All are supported deployment targets out of the box.
+LightCMS is built with SvelteKit, so [Vercel](https://vercel.com), [Netlify](https://www.netlify.com/), and [Cloudflare Workers](https://www.cloudflare.com/) are supported deployment targets:
 
-1. Import your Git repository into deployment platform.
-2. Add every environment variable from [step 3](#3-configure-environment-variables) in Project Settings → Environment
- Variables. Set `BETTER_AUTH_URL` to your production URL.
-3. Deploy.
+1. Import your Git repository into your deployment platform.
+2. Add every required environment variable from [step 3](#3-configure-environment-variables) in your project settings, and set `BETTER_AUTH_URL` to your production URL.
+3. Deploy and test the full flow: sign in, connect a repository, edit a file, commit a change, and confirm your static site build runs.
 
-To verify the production build locally:
+To verify the production build locally before deploying:
 
 ```bash
 bun run build
 bun run preview
 ```
-
-## Troubleshooting
-
-Make a account with [Wit.ai](https://wit.ai/) it's a free service by meta |
-And any openai compatible API for transcription. |
-One can use [groq](https://groq.com/) or [assemblyai](https://assemblyai.com/) or |
-[elevenlabs](https://elevenlabs.io/) or [deepgram](https://deepgram.com/) or [sarvam](https://sarvam.ai/). |
-
-## For development purpose you can use the following credentials for posthog
-
-PUBLIC\_POSTHOG\_KEY = "phc\_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg"
-PUBLIC\_POSTHOG\_URL = "[https://us.i.posthog.com](https://us.i.posthog.com)"
-
-```bash
-PUBLIC_POSTHOG_KEY=phc_AS2JXQsqEwNNreH5kra5Eefd5TijExE5eiLfwdzXLhPg
-PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
-```
-
-[https://wit.ai](https://wit.ai)
-
-![wit.ai](https://i.ibb.co/MySskPTt/image.png)
-
-```bash
-WIT_AI_TOKEN="Server access token"
-WIT_AI_CLIENT_TOKEN="Client access token"
-```
-
-```bash
-APP_ID=
-BETTER_AUTH_SECRET=
-BETTER_AUTH_URL=
-CDN_KEY=
-CDN_URL=
-DATABASE_URL=
-GITHUB_APP_ID=
-GITHUB_APP_NAME=
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
-GITHUB_PRIVATE_KEY=
-GITHUB_WEBHOOK_SECRET=
-MAIL_FROM=
-MAIL_HOST=
-MAIL_PASS=
-MAIL_PORT=
-MAIL_SECURE=
-MAIL_USER=
-OPEN_AI_ENDPOINT=
-OPEN_AI_MODEL=
-OPEN_AI_APIKEY=
-ORIGIN=
-PRIVATE_KEY=
-PUBLIC_POSTHOG_HOST=
-PUBLIC_POSTHOG_KEY=
-SPEECH_API_KEY=
-SPEECH_ENDPOINT=
-SPEECH_MODEL=
-WEBHOOK_SECRET=
-WIT_AI_CLIENT_TOKEN=
-WIT_AI_TOKEN=
-```
-
-![configuration for the bot](https://i.ibb.co/jP5tgcJH/image.png)

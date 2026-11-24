@@ -69,14 +69,7 @@
         {
           "title": "keywords",
           "name": "keywords",
-          "type": "choice",
-          "choices": [
-            "newsy",
-            "newsletter video",
-            "youtube tutorial",
-            "github newsletter",
-            "newsy setup"
-          ]
+          "type": "tags"
         },
         {
           "title": "weight",
@@ -94,6 +87,11 @@
               "type": "tags"
             }
           ]
+        },
+        {
+          "title": "serial",
+          "name": "serial",
+          "type": "number"
         }
       ]
     }

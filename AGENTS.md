@@ -71,16 +71,16 @@ An unlogged override is a Major violation. An attempted override of a non-overri
 
 ### A.5 Normative Definitions (Audit Reference Only)
 
-| Term | Definition |
-| --- | --- |
-| **Word** | Whitespace-delimited token. Hyphenated compounds count as one. Code blocks are excluded from all word counts. |
-| **Sentence** | Sequence ending in `.`, `?`, or `!`, or a Markdown heading. Abbreviations ("e.g.", "Dr.") do not terminate a sentence. |
-| **Paragraph** | One or more sentences separated from adjacent text by a blank line. Headings and list items are not paragraphs. |
-| **Section** | A heading plus all content up to the next heading of equal or higher level. |
-| **Central claim** | One falsifiable statement of the post's thesis, recorded in the plan (§B.4). |
-| **Factual sentence** | Any sentence containing a number, date, name, version, quotation, causal verb, comparison, superlative, or capability claim. |
-| **Concrete element** | An example, number, code sample, comparison, named tool with version, or stated trade-off. Vague gestures ("many teams", "a lot faster") do not qualify. |
-| **Verified** | Checked against a primary or official source during this session, or supplied by the author with identifiable provenance. Memory, plausibility, and general knowledge are not verification. |
+| Term                 | Definition                                                                                                                                                                                  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Word**             | Whitespace-delimited token. Hyphenated compounds count as one. Code blocks are excluded from all word counts.                                                                               |
+| **Sentence**         | Sequence ending in `.`, `?`, or `!`, or a Markdown heading. Abbreviations ("e.g.", "Dr.") do not terminate a sentence.                                                                      |
+| **Paragraph**        | One or more sentences separated from adjacent text by a blank line. Headings and list items are not paragraphs.                                                                             |
+| **Section**          | A heading plus all content up to the next heading of equal or higher level.                                                                                                                 |
+| **Central claim**    | One falsifiable statement of the post's thesis, recorded in the plan (§B.4).                                                                                                                |
+| **Factual sentence** | Any sentence containing a number, date, name, version, quotation, causal verb, comparison, superlative, or capability claim.                                                                |
+| **Concrete element** | An example, number, code sample, comparison, named tool with version, or stated trade-off. Vague gestures ("many teams", "a lot faster") do not qualify.                                    |
+| **Verified**         | Checked against a primary or official source during this session, or supplied by the author with identifiable provenance. Memory, plausibility, and general knowledge are not verification. |
 
 ### A.6 Anti-Circumvention
 
@@ -107,18 +107,18 @@ The following are **Blockers** regardless of local rule compliance:
 
 ### B.2 Intake Form
 
-| Field | Requirement | If Missing |
-| --- | --- | --- |
-| **Topic** | One sentence | `I-1` |
-| **Intended reader** | Plus stated prior knowledge | `I-1` |
-| **Central claim** | Falsifiable, one sentence | `I-1` |
-| **Voice owner** | Named individual, named organization, or neutral | `I-1` |
-| **Evidence inventory** | Documents, links, data, or explicit "author-supplied only" | `I-3` |
-| **Format** | Default: explanatory | Default applied |
-| **Length target** | Integer word count | `S-12` fallback |
-| **Date context** | Required if anything is time-sensitive | `I-6` |
-| **Primary keyword** | Optional | Omitted |
-| **Affiliation / sponsorship** | Required answer if a product is named or recommended | `I-7` |
+| Field                         | Requirement                                                | If Missing      |
+| ----------------------------- | ---------------------------------------------------------- | --------------- |
+| **Topic**                     | One sentence                                               | `I-1`           |
+| **Intended reader**           | Plus stated prior knowledge                                | `I-1`           |
+| **Central claim**             | Falsifiable, one sentence                                  | `I-1`           |
+| **Voice owner**               | Named individual, named organization, or neutral           | `I-1`           |
+| **Evidence inventory**        | Documents, links, data, or explicit "author-supplied only" | `I-3`           |
+| **Format**                    | Default: explanatory                                       | Default applied |
+| **Length target**             | Integer word count                                         | `S-12` fallback |
+| **Date context**              | Required if anything is time-sensitive                     | `I-6`           |
+| **Primary keyword**           | Optional                                                   | Omitted         |
+| **Affiliation / sponsorship** | Required answer if a product is named or recommended       | `I-7`           |
 
 ### B.3 Intake Rules
 
@@ -158,13 +158,13 @@ Record internally before drafting:
 
 Every factual claim receives exactly one status:
 
-| Status | Definition | Allowed in body as plain fact? |
-| --- | --- | --- |
-| **U** | Supplied by author with identifiable provenance | Yes |
-| **S** | Sourced and verified this session (record title, publisher, date, URL) | Yes |
-| **C** | Stable, uncontested common knowledge, unchanged for ≥10 years | Yes, maximum 3 per post |
-| **J** | Author's judgment, framed as judgment with stated reasons | Yes, if explicitly framed |
-| **X** | Unverified | No — cut or tag `[VERIFY]` |
+| Status | Definition                                                             | Allowed in body as plain fact? |
+| ------ | ---------------------------------------------------------------------- | ------------------------------ |
+| **U**  | Supplied by author with identifiable provenance                        | Yes                            |
+| **S**  | Sourced and verified this session (record title, publisher, date, URL) | Yes                            |
+| **C**  | Stable, uncontested common knowledge, unchanged for ≥10 years          | Yes, maximum 3 per post        |
+| **J**  | Author's judgment, framed as judgment with stated reasons              | Yes, if explicitly framed      |
+| **X**  | Unverified                                                             | No — cut or tag `[VERIFY]`     |
 
 ### C.2 Evidence Rules
 
@@ -232,22 +232,22 @@ No status assignment is left implicit.
   Furthermore, Moreover, Additionally, Importantly, Notably, Ultimately, Indeed, In fact, That said.
 - **L-4 [M]:** **Pattern caps per post.** Zero means zero.
 
-| Pattern | Cap |
-| --- | --- |
-| "Not X, but Y" / "It's not X, it's Y" reframes | 0 |
-| Rhetorical questions, including in headings | 0 |
-| Em dashes | 0 |
-| Exclamation marks | 0 |
-| Emojis | 0 |
-| Bold-label bullets ("**Term:** text") | 0 |
-| Bold text anywhere | 2 instances (first-definition or critical warning only) |
-| Three-item runs used for rhythm | 0 |
-| Same sentence opener three times in a row | 0 |
-| Hedges on a factual claim | 0 — commit or `[VERIFY]` |
-| Unsupported superlatives | 0 |
-| Sentences over 35 words | 0 |
-| Semicolons per paragraph | 2 |
-| Parenthetical asides per 500 words | 2 |
+| Pattern                                        | Cap                                                     |
+| ---------------------------------------------- | ------------------------------------------------------- |
+| "Not X, but Y" / "It's not X, it's Y" reframes | 0                                                       |
+| Rhetorical questions, including in headings    | 0                                                       |
+| Em dashes                                      | 0                                                       |
+| Exclamation marks                              | 0                                                       |
+| Emojis                                         | 0                                                       |
+| Bold-label bullets ("**Term:** text")          | 0                                                       |
+| Bold text anywhere                             | 2 instances (first-definition or critical warning only) |
+| Three-item runs used for rhythm                | 0                                                       |
+| Same sentence opener three times in a row      | 0                                                       |
+| Hedges on a factual claim                      | 0 — commit or `[VERIFY]`                                |
+| Unsupported superlatives                       | 0                                                       |
+| Sentences over 35 words                        | 0                                                       |
+| Semicolons per paragraph                       | 2                                                       |
+| Parenthetical asides per 500 words             | 2                                                       |
 
 - **L-5 [M]:** Clear, direct prose. Contractions allowed. Active voice by default. Familiar words over inflated ones. One person and one tense throughout.
 - **L-6 [B]:** No slang, jokes, anecdotes, or deliberate imperfections to seem human. No optimization for AI-detection scores. Never describe content as "undetectable."

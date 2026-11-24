@@ -1,29 +1,29 @@
 ---
 title: "What Is Front Matter in Markdown?"
-description: "Front matter is metadata at the top of a Markdown file, usually written in YAML, TOML, or JSON, that static site generators use for titles, dates, tags, and templates."
+description: "Front matter is YAML, TOML, or JSON metadata at the top of a Markdown file that static site generators use for titles, dates, tags, and templates."
 serial: 45
 date: 2026-10-16T11:10:00Z
 draft: false
 keywords:
- - what is front matter
- - front matter markdown
- - yaml front matter
- - static site metadata
- - markdown metadata
+  - what is front matter
+  - front matter markdown
+  - yaml front matter
+  - static site metadata
+  - markdown metadata
 
 taxonomies:
- tags:
- - markdown
- - explainers
- - static-sites
- - cms
+  tags:
+    - markdown
+    - explainers
+    - static-sites
+    - cms
 ---
 
 Front matter is a metadata block at the top of a content file that describes the page to a static site generator. It typically contains fields such as title, description, date, tags, draft status, and template information.
 
 ## Common front matter formats
 
-Most static site generators support YAML front matter, and some also support TOML or JSON. 
+Most static site generators support YAML front matter, and some also support TOML or JSON.
 
 ```md
 ---
@@ -41,14 +41,14 @@ The metadata sits between delimiters at the top of the file. The Markdown body f
 
 ## What front matter controls
 
-| Field | Common use | Build impact |
-| :--- | :--- | :--- |
-| `title` | Page title and heading | Missing titles can break templates or listings |
-| `date` | Sorting and publishing metadata | Invalid dates can cause build errors |
-| `draft` | Draft/published state | Drafts may be excluded from production builds |
-| `tags` | Taxonomy pages and filters | Invalid structure can break taxonomy generation |
-| `slug` | URL path override | Can change canonical URLs |
-| `description` | Metadata and previews | Affects snippets and social previews |
+| Field         | Common use                      | Build impact                                    |
+| :------------ | :------------------------------ | :---------------------------------------------- |
+| `title`       | Page title and heading          | Missing titles can break templates or listings  |
+| `date`        | Sorting and publishing metadata | Invalid dates can cause build errors            |
+| `draft`       | Draft/published state           | Drafts may be excluded from production builds   |
+| `tags`        | Taxonomy pages and filters      | Invalid structure can break taxonomy generation |
+| `slug`        | URL path override               | Can change canonical URLs                       |
+| `description` | Metadata and previews           | Affects snippets and social previews            |
 
 ## Common mistakes
 

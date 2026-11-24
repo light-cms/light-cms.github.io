@@ -5,19 +5,19 @@ serial: 48
 date: 2026-10-16T11:40:00Z
 draft: false
 keywords:
- - lightcms vs sanity
- - sanity alternatives
- - sanity cms pricing alternatives
- - git based cms vs sanity
- - sanity for blogs
+  - lightcms vs sanity
+  - sanity alternatives
+  - sanity cms pricing alternatives
+  - git based cms vs sanity
+  - sanity for blogs
 
 taxonomies:
- tags:
- - lightcms
- - sanity
- - cms
- - comparison
- - headless
+  tags:
+    - lightcms
+    - sanity
+    - cms
+    - comparison
+    - headless
 slug: lightcms-vs-sanity
 ---
 
@@ -31,14 +31,14 @@ With Sanity, content is structured data in a hosted service. You query it with G
 
 With LightCMS, content is a file in your repo. You edit it, commit it, and your build pipeline publishes it. There is no runtime content API to keep running. That makes sense when the output is a static site and you want the content history to live in Git.
 
-| | LightCMS | Sanity |
-|---|---|---|
-| Content storage | Markdown files in your Git repository | Hosted Content Lake |
-| Delivery | Static build to CDN | API at request time |
-| Content modeling | Front matter fields | Custom schemas in code |
-| Real-time collaboration | Git review workflow | Real-time Studio collaboration |
-| Pricing | Self-hosted, no license fee | Usage/seat-based plans |
-| Portability | Clone the repository | Export and convert |
+|                         | LightCMS                              | Sanity                         |
+| ----------------------- | ------------------------------------- | ------------------------------ |
+| Content storage         | Markdown files in your Git repository | Hosted Content Lake            |
+| Delivery                | Static build to CDN                   | API at request time            |
+| Content modeling        | Front matter fields                   | Custom schemas in code         |
+| Real-time collaboration | Git review workflow                   | Real-time Studio collaboration |
+| Pricing                 | Self-hosted, no license fee           | Usage/seat-based plans         |
+| Portability             | Clone the repository                  | Export and convert             |
 
 ## When Sanity makes more sense
 
@@ -52,6 +52,6 @@ For writers, that difference is felt every day. LightCMS is set up for drafting 
 
 ## Choosing between them
 
-If your content needs to behave like product data—structured, queried, reused, updated in real time—Sanity is the stronger choice. If most of your work is articles and pages, LightCMS is simpler to live with: files in Git, static delivery, fewer moving parts.
+If your content needs to behave like product data (structured, queried, reused, and updated in real time), Sanity is the stronger choice. If most of your work is articles and pages, LightCMS is simpler to live with: files in Git, static delivery, fewer moving parts.
 
 A good way to decide is to look at your content. If it’s mostly long-form posts with front matter, start with the Git-based path. If you keep running into relationships, live queries, or multiple frontends, that’s when a headless platform like Sanity starts to earn its complexity. See also [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/) and [Headless vs Git-Based CMS](/blog/headless-vs-git-based-cms/).

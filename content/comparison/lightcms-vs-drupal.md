@@ -5,31 +5,31 @@ serial: 55
 date: 2026-10-16T12:50:00Z
 draft: false
 keywords:
- - lightcms vs drupal
- - drupal alternatives
- - drupal vs static site
- - drupal for small sites
- - modern cms alternatives
+  - lightcms vs drupal
+  - drupal alternatives
+  - drupal vs static site
+  - drupal for small sites
+  - modern cms alternatives
 
 taxonomies:
- tags:
- - lightcms
- - drupal
- - cms
- - comparison
+  tags:
+    - lightcms
+    - drupal
+    - cms
+    - comparison
 ---
 
-LightCMS and Drupal serve different scales of content management. LightCMS is a Git-based workflow for static site content, typically Markdown in a repository. Drupal is a PHP-based CMS framework designed for complex content models, permissions, and extensibility.
+LightCMS and Drupal serve different scales of content management. LightCMS is a Git based workflow for static site content, typically Markdown in a repository. Drupal is a PHP based CMS framework designed for complex content models, permissions, and extensibility.
 
 ## Comparison
 
-| Area | LightCMS | Drupal |
-| :--- | :--- | :--- |
-| Architecture | Git files + static site build | PHP application + database |
-| Content model | Document/front matter oriented | Entities, fields, taxonomies, modules |
-| Governance | Git/repo workflows | Granular roles, workflows, permissions |
-| Maintenance | Content and build pipeline | Core, module, security, hosting maintenance |
-| Best fit | Blogs, docs, marketing sites | Complex organizational or enterprise sites |
+| Area          | LightCMS                       | Drupal                                      |
+| :------------ | :----------------------------- | :------------------------------------------ |
+| Architecture  | Git files + static site build  | PHP application + database                  |
+| Content model | Document/front matter oriented | Entities, fields, taxonomies, modules       |
+| Governance    | Git/repo workflows             | Granular roles, workflows, permissions      |
+| Maintenance   | Content and build pipeline     | Core, module, security, hosting maintenance |
+| Best fit      | Blogs, docs, marketing sites   | Complex organizational or enterprise sites  |
 
 ## Choosing between them
 

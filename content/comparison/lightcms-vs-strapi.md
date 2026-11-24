@@ -5,19 +5,19 @@ serial: 50
 date: 2026-10-16T12:00:00Z
 draft: false
 keywords:
- - lightcms vs strapi
- - strapi alternatives
- - strapi vs git cms
- - open source cms comparison
- - strapi for blog
+  - lightcms vs strapi
+  - strapi alternatives
+  - strapi vs git cms
+  - open source cms comparison
+  - strapi for blog
 
 taxonomies:
- tags:
- - lightcms
- - strapi
- - cms
- - comparison
- - headless
+  tags:
+    - lightcms
+    - strapi
+    - cms
+    - comparison
+    - headless
 slug: lightcms-vs-strapi
 ---
 
@@ -27,15 +27,15 @@ That one difference drives most of the others: runtime, cost, versioning, and ho
 
 ## Side by side
 
-| | LightCMS | Strapi |
-|---|---|---|
+|                 | LightCMS              | Strapi                           |
+| --------------- | --------------------- | -------------------------------- |
 | Content storage | Markdown files in Git | Database (SQLite/Postgres/MySQL) |
-| Delivery | Static build to CDN | REST/GraphQL API at runtime |
-| Runtime | None at request time | Node.js app and database |
-| Content model | Front matter fields | Content types in admin |
-| Versioning | Git history | Draft/publish and revisions |
-| Best for | Static publications | Apps needing content APIs |
-| License | Apache 2.0 | MIT/Enterprise editions |
+| Delivery        | Static build to CDN   | REST/GraphQL API at runtime      |
+| Runtime         | None at request time  | Node.js app and database         |
+| Content model   | Front matter fields   | Content types in admin           |
+| Versioning      | Git history           | Draft/publish and revisions      |
+| Best for        | Static publications   | Apps needing content APIs        |
+| License         | Apache 2.0            | MIT/Enterprise editions          |
 
 ## When Strapi makes more sense
 
@@ -53,4 +53,4 @@ The writing experience is simpler too: open a document, write, publish. You don�
 
 Pick Strapi if you need a content API and structured, relational content. Pick LightCMS if you want a simple publishing workflow for a static site. Strapi gives you flexibility, but you pay for it in operations. LightCMS gives you simplicity and portability, but it’s not the right tool when your content needs to be queried like data.
 
-If you’re building a blog or docs site, I’d start simple. You can always move to a headless CMS later if you truly need an API. Going the other way—pulling a database-shaped content model back into files—is usually harder. See [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms) or [Git-Based CMS Explained](/blog/git-based-cms-explained/).
+If you’re building a blog or docs site, I’d start simple. You can always move to a headless CMS later if you truly need an API. Going the other way, pulling a database-shaped content model back into files, is usually harder. See [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms) or [Git-Based CMS Explained](/blog/git-based-cms-explained/).

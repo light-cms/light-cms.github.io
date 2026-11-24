@@ -34,12 +34,12 @@ This approach keeps draft state close to the content. The trade-off is visibilit
 
 Each saved or published change can create a Git commit. That gives you a readable history for Markdown files, including diffs, author metadata, and timestamps.
 
-| Need | Git-based workflow | Trade-off |
-| :--- | :--- | :--- |
-| See changes | `git diff` or pull request diff | Requires clear commit messages to be useful |
-| Audit history | Commit log and blame | Repository access model controls who can inspect it |
-| Recover content | Revert commit or restore file version | Reverting may require conflict resolution |
-| Review before publish | Branch and pull request | Adds process overhead for small edits |
+| Need                  | Git-based workflow                    | Trade-off                                           |
+| :-------------------- | :------------------------------------ | :-------------------------------------------------- |
+| See changes           | `git diff` or pull request diff       | Requires clear commit messages to be useful         |
+| Audit history         | Commit log and blame                  | Repository access model controls who can inspect it |
+| Recover content       | Revert commit or restore file version | Reverting may require conflict resolution           |
+| Review before publish | Branch and pull request               | Adds process overhead for small edits               |
 
 For teams, pull requests provide an editorial review gate. For solo writers, direct commits to a main branch may be faster, but they remove the review step.
 

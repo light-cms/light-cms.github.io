@@ -32,12 +32,12 @@ Writer -> Visual editor -> Git commit (Markdown + front matter)
                   Static files -> CDN -> Reader
 ```
 
-| Component | Role in a Git-based CMS |
-| :--- | :--- |
-| Git repository | Stores content files, history, and collaboration metadata |
-| CMS editor | Provides a writing interface and creates commits or pull requests |
-| Build pipeline | Converts source files into deployable static output |
-| CDN/host | Serves built files to readers |
+| Component      | Role in a Git-based CMS                                           |
+| :------------- | :---------------------------------------------------------------- |
+| Git repository | Stores content files, history, and collaboration metadata         |
+| CMS editor     | Provides a writing interface and creates commits or pull requests |
+| Build pipeline | Converts source files into deployable static output               |
+| CDN/host       | Serves built files to readers                                     |
 
 ## What happens when you publish
 

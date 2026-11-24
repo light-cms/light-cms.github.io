@@ -1,17 +1,15 @@
 ---
-title: "WordPress Alternatives for Static and Git-Based Publishing"
+title: "WordPress Alternatives for Static and Git Based Publishing"
 description: "Compare WordPress alternatives by architecture, maintenance, hosting model, and editorial workflow, including Git-based CMS and static site options."
 serial: 17
 date: 2026-10-14T13:40:00Z
 draft: false
 keywords: newsy
-
-taxonomies:
- tags:
- - cms
- - wordpress
- - comparison
- - git
+tags:
+  - cms
+  - wordpress
+  - comparison
+  - git
 ---
 
 WordPress alternatives make sense when you want lower maintenance, a smaller runtime attack surface, or a publishing workflow that does not depend on a database-backed application. The right replacement depends on whether you need a content website, a publication with memberships, or a full application.
@@ -29,12 +27,12 @@ Common reasons to evaluate alternatives include:
 
 ## Alternatives by architecture
 
-| Option type | Examples | Good fit | Trade-off |
-| :--- | :--- | :--- | :--- |
-| Git-based CMS + static site | LightCMS, Decap CMS, Pages CMS, TinaCMS | Blogs, docs, marketing sites | Build step; limited runtime dynamic behavior |
-| Hosted publishing platform | Ghost | Newsletters, memberships, editorial publishing | Platform/database dependency and pricing |
-| Traditional enterprise CMS | Drupal | Complex organizational sites with dev teams | Higher implementation and maintenance cost |
-| Headless CMS | Contentful, Sanity, Strapi | Structured multi-channel content | API/infrastructure complexity |
+| Option type                 | Examples                                | Good fit                                       | Trade-off                                    |
+| :-------------------------- | :-------------------------------------- | :--------------------------------------------- | :------------------------------------------- |
+| Git-based CMS + static site | LightCMS, Decap CMS, Pages CMS, TinaCMS | Blogs, docs, marketing sites                   | Build step; limited runtime dynamic behavior |
+| Hosted publishing platform  | Ghost                                   | Newsletters, memberships, editorial publishing | Platform/database dependency and pricing     |
+| Traditional enterprise CMS  | Drupal                                  | Complex organizational sites with dev teams    | Higher implementation and maintenance cost   |
+| Headless CMS                | Contentful, Sanity, Strapi              | Structured multi-channel content               | API/infrastructure complexity                |
 
 ## Choosing a WordPress alternative
 

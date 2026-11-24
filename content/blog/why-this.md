@@ -7,10 +7,10 @@ draft: false
 keywords: "github newsletter"
 
 taxonomies:
- tags:
- - cms
- - philosophy
- - lightcms
+  tags:
+    - cms
+    - philosophy
+    - lightcms
 ---
 
 LightCMS exists to make publishing to a static site as straightforward as writing in a browser editor, while keeping content in Git as Markdown files. The goal is to preserve the operational benefits of static sites without requiring every author to work through a developer workflow.

@@ -22,27 +22,17 @@ Hugo compiles sites quickly because it ships as a compiled Go binary with no Nod
 
 Astro builds through the JavaScript ecosystem, typically using Vite and Node.js packages. For small and medium sites, build time is usually acceptable in CI. For very large sites, build duration and dependency management become part of the trade-off.
 
-| Area | Hugo | Astro |
-| :--- | :--- | :--- |
-| Runtime/toolchain | Go binary | Node.js project with package dependencies |
-| Build speed | Usually very fast, especially at scale | Fast for many sites, but generally slower than Hugo on large builds |
-| Templating | Go templates | `.astro` components with JavaScript/TypeScript |
-| Interactivity | Manual JavaScript integration | Islands architecture with framework components |
-| Content validation | Flexible front matter; validation usually custom | Content Collections with schema validation |
+| Area               | Hugo                                             | Astro                                                               |
+| :----------------- | :----------------------------------------------- | :------------------------------------------------------------------ |
+| Runtime/toolchain  | Go binary                                        | Node.js project with package dependencies                           |
+| Build speed        | Usually very fast, especially at scale           | Fast for many sites, but generally slower than Hugo on large builds |
+| Templating         | Go templates                                     | `.astro` components with JavaScript/TypeScript                      |
+| Interactivity      | Manual JavaScript integration                    | Islands architecture with framework components                      |
+| Content validation | Flexible front matter; validation usually custom | Content Collections with schema validation                          |
 
 ## Templating and developer experience
 
 Hugo uses Go's `html/template` system. It is stable and powerful, but template scope, context (`.`), and control flow can be difficult to maintain in custom layouts.
-
-```go
-&#123;&#123; range .Pages &#125;&#125;
-  &#123;&#123; if not .Draft &#125;&#125;
-    <article>
-      <h2><a href="&#123;&#123; .RelPermalink &#125;&#125;">&#123;&#123; .Title &#125;&#125;</a></h2>
-    </article>
-  &#123;&#123; end &#125;&#125;
-&#123;&#123; end &#125;&#125;
-```
 
 Astro templates use component style syntax. Developers who already work with HTML, JSX, or modern frontend tooling often find this model easier to extend.
 
@@ -65,14 +55,14 @@ The trade-off is ecosystem complexity: Astro gives you familiar frontend pattern
 Astro Content Collections can validate front matter with schemas. That catches missing fields, wrong types, or invalid dates during build time.
 
 ```ts
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    draft: z.boolean().default(false),
-  }),
+ schema: z.object({
+  title: z.string(),
+  description: z.string(),
+  draft: z.boolean().default(false),
+ }),
 });
 
 export const collections = { blog };

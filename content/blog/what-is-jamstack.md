@@ -5,29 +5,29 @@ serial: 20
 date: 2026-10-14T14:10:00Z
 draft: false
 keywords:
- - what is jamstack
- - jamstack explained
- - jamstack vs traditional
- - jamstack 2026
- - headless architecture
+  - what is jamstack
+  - jamstack explained
+  - jamstack vs traditional
+  - jamstack 2026
+  - headless architecture
 
 taxonomies:
- tags:
- - jamstack
- - architecture
- - static-sites
- - api
+  tags:
+    - jamstack
+    - architecture
+    - static-sites
+    - api
 ---
 
 Jamstack is a web architecture that combines prebuilt markup, APIs, and JavaScript. Instead of rendering every page from an application server on each request, a Jamstack site serves prebuilt files from a CDN and uses APIs or client-side JavaScript for dynamic features.
 
 ## The three Jamstack components
 
-| Component | Role | Example |
-| :--- | :--- | :--- |
-| Markup | Prebuilt HTML generated during a build | Static site generator output |
-| APIs | Dynamic capabilities outside the page render | Forms, search, payments, auth |
-| JavaScript | Client-side interactivity | Search UI, comments, personalization |
+| Component  | Role                                         | Example                              |
+| :--------- | :------------------------------------------- | :----------------------------------- |
+| Markup     | Prebuilt HTML generated during a build       | Static site generator output         |
+| APIs       | Dynamic capabilities outside the page render | Forms, search, payments, auth        |
+| JavaScript | Client-side interactivity                    | Search UI, comments, personalization |
 
 The architecture is not the same as "no JavaScript" or "no dynamic behavior." It means the default delivery path is prebuilt and cached, while dynamic behavior is added deliberately.
 

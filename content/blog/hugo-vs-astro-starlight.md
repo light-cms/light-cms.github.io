@@ -19,22 +19,22 @@ taxonomies:
     - documentation
 ---
 
-Hugo and Astro Starlight can both build fast, static documentation sites from Markdown content. Hugo is a general-purpose static site generator that you adapt for docs with themes and templates. Starlight is an Astro documentation template with common docs features configured from the start. 
+Hugo and Astro Starlight can both build fast, static documentation sites from Markdown content. Hugo is a general-purpose static site generator that you adapt for docs with themes and templates. Starlight is an Astro documentation template with common docs features configured from the start.
 
 ## Feature comparison
 
-| Feature | Hugo + docs theme | Astro Starlight |
-| :--- | :--- | :--- |
-| Primary model | General-purpose SSG with docs themes | Documentation-focused Astro template |
-| Sidebar/navigation | Theme- or template-dependent | Built-in patterns |
-| Search | Usually added via theme or external tool | Pagefind integration commonly included |
-| MDX/component support | Shortcodes/custom templates; MDX not native | MDX and component islands supported |
-| Content validation | Custom validation | Astro Content Collections/schema validation |
-| Build toolchain | Go binary | Node.js/Astro toolchain |
+| Feature               | Hugo + docs theme                           | Astro Starlight                             |
+| :-------------------- | :------------------------------------------ | :------------------------------------------ |
+| Primary model         | General-purpose SSG with docs themes        | Documentation-focused Astro template        |
+| Sidebar/navigation    | Theme- or template-dependent                | Built-in patterns                           |
+| Search                | Usually added via theme or external tool    | Pagefind integration commonly included      |
+| MDX/component support | Shortcodes/custom templates; MDX not native | MDX and component islands supported         |
+| Content validation    | Custom validation                           | Astro Content Collections/schema validation |
+| Build toolchain       | Go binary                                   | Node.js/Astro toolchain                     |
 
 ## Where Hugo fits documentation projects
 
-Hugo is a strong choice when build speed, a single-binary toolchain, or an existing Hugo setup matters. Large documentation sets can benefit from fast builds, and teams already familiar with Go templates can customize layouts without adding a JavaScript framework. 
+Hugo is a strong choice when build speed, a single-binary toolchain, or an existing Hugo setup matters. Large documentation sets can benefit from fast builds, and teams already familiar with Go templates can customize layouts without adding a JavaScript framework.
 
 The trade-off is that many docs features depend on theme quality or custom implementation. Search, versioning patterns, and navigation behavior can vary across themes.
 

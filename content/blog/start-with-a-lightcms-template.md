@@ -19,13 +19,13 @@ LightCMS starter templates give you a preconfigured static site repository so yo
 
 ## What a starter template should include
 
-| Component | Why it matters | What to verify |
-| :--- | :--- | :--- |
-| Static site generator config | Defines build command, content directories, and output paths | Generator version and config file format |
-| Example content | Shows front matter fields and Markdown structure | Required fields such as title, date, draft, tags |
-| Theme/layout | Renders posts before you customize design | License and customization constraints |
-| CI/CD workflow | Builds and deploys on commits | Default host, branch, and secrets |
-| README/setup notes | Explains local development and deployment | Accuracy against current tooling |
+| Component                    | Why it matters                                               | What to verify                                   |
+| :--------------------------- | :----------------------------------------------------------- | :----------------------------------------------- |
+| Static site generator config | Defines build command, content directories, and output paths | Generator version and config file format         |
+| Example content              | Shows front matter fields and Markdown structure             | Required fields such as title, date, draft, tags |
+| Theme/layout                 | Renders posts before you customize design                    | License and customization constraints            |
+| CI/CD workflow               | Builds and deploys on commits                                | Default host, branch, and secrets                |
+| README/setup notes           | Explains local development and deployment                    | Accuracy against current tooling                 |
 
 ## How to use a template
 

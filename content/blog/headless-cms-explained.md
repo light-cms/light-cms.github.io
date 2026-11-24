@@ -30,11 +30,11 @@ A traditional CMS often combines content storage, editing, templates, and page r
 3. Frontends fetch content: A website, mobile app, or other client retrieves content through an API or during a build.
 4. Presentation is separate: The frontend decides how to render the content.
 
-| Model | Content storage | Delivery | Typical fit |
-| :--- | :--- | :--- | :--- |
-| Traditional CMS | Database | Rendered by CMS runtime | Simple sites managed in one system |
-| API headless CMS | Database | REST/GraphQL API | Multi-channel content, apps, complex models |
-| Git-based CMS | Files in Git | Build output/static files | Static sites, docs, editorial workflows |
+| Model            | Content storage | Delivery                  | Typical fit                                 |
+| :--------------- | :-------------- | :------------------------ | :------------------------------------------ |
+| Traditional CMS  | Database        | Rendered by CMS runtime   | Simple sites managed in one system          |
+| API headless CMS | Database        | REST/GraphQL API          | Multi-channel content, apps, complex models |
+| Git-based CMS    | Files in Git    | Build output/static files | Static sites, docs, editorial workflows     |
 
 ## Benefits and trade-offs
 
@@ -44,11 +44,11 @@ Common trade-offs include:
 
 - Flexibility vs. complexity: You gain frontend freedom, but you build more of the delivery stack.
 - Structured content vs. writing flow: Structured models are powerful, but they can feel rigid for long form writing.
-- Vendor/API dependency: Hosted platforms may create migration work if your content model or API is proprietary. 
+- Vendor/API dependency: Hosted platforms may create migration work if your content model or API is proprietary.
 
 ## Where Git-based CMS tools fit
 
-A Git-based CMS can support headless-style delivery when content is stored as files and consumed by a static site generator or build process. The key difference is storage: content lives in a Git repository instead of a managed database API. 
+A Git-based CMS can support headless-style delivery when content is stored as files and consumed by a static site generator or build process. The key difference is storage: content lives in a Git repository instead of a managed database API.
 
 This model works well for blogs, documentation, and marketing sites where content portability and Git history matter. For multi channel applications with complex relationships and real-time delivery, an API-first headless CMS may be a better fit.
 

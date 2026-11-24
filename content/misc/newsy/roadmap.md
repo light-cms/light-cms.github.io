@@ -30,4 +30,3 @@ If you want more control, deploy your own copy on Vercel:
 The hosted instance runs on Vercel’s hobby tier, so availability and usage limits can apply.
 
 If Newsy is useful to you, starring the [Newsy repository](https://github.com/light-cms/newsy) is a nice way to support it.
-

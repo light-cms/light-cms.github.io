@@ -1,6 +1,6 @@
 ---
-title: "Best CMS Options for Static Sites"
-description: "Compare Git-based, visual, and headless CMS options for static sites by content workflow, portability, and operational trade-offs."
+title: Best CMS Options for Static Sites
+description: Compare Git based, visual, and headless CMS options for static sites by content workflow, portability, and operational trade-offs.
 serial: 36
 date: 2026-10-16T10:00:00Z
 draft: false
@@ -10,25 +10,26 @@ keywords:
   - cms for static site generator
   - git based cms comparison
   - cms without database
-
 taxonomies:
   tags:
     - cms
     - static-sites
     - comparison
     - git
+tags:
+  - lightcms
 ---
 
-The best CMS for a static site depends on where your content lives and who needs to edit it. Git based CMS tools work well when you want Markdown files in version control; database-backed headless CMS tools work better when you need relational content, runtime APIs, or complex permissions. 
+The best CMS for a static site depends on where your content lives and who needs to edit it. Git based CMS tools work well when you want Markdown files in version control; database-backed headless CMS tools work better when you need relational content, runtime APIs, or complex permissions.
 
 ## CMS architecture options
 
-| Architecture | Content storage | Good fit | Main trade-off |
-| :--- | :--- | :--- | :--- |
-| Git-based document editor | Markdown files in Git | Blogs, docs, marketing sites | Limited runtime querying and relational modeling |
-| Git-based form admin | Files in Git, edited through forms | Structured content with fixed fields | Less natural for long-form writing |
-| Visual/on-page editor | Git or external storage | Landing pages and layout-heavy content | Higher setup and integration complexity |
-| Database headless CMS | Database with API delivery | Apps, complex schemas, multi channel delivery | More infrastructure and vendor lock-in risk |
+| Architecture              | Content storage                    | Good fit                                      | Main trade-off                                   |
+| :------------------------ | :--------------------------------- | :-------------------------------------------- | :----------------------------------------------- |
+| Git-based document editor | Markdown files in Git              | Blogs, docs, marketing sites                  | Limited runtime querying and relational modeling |
+| Git-based form admin      | Files in Git, edited through forms | Structured content with fixed fields          | Less natural for long-form writing               |
+| Visual/on-page editor     | Git or external storage            | Landing pages and layout-heavy content        | Higher setup and integration complexity          |
+| Database headless CMS     | Database with API delivery         | Apps, complex schemas, multi channel delivery | More infrastructure and vendor lock-in risk      |
 
 ## CMS options to evaluate
 
@@ -36,35 +37,35 @@ The tools below are common options in static-site workflows. Feature sets change
 
 ### LightCMS
 
-[LightCMS](https://lightcms.me) is a Git-based CMS focused on editing Markdown content in a repository. It is a good fit when you want writers to use a visual editor while developers keep Git-based builds and deployments. 
+[LightCMS](https://lightcms.me) is a Git-based CMS focused on editing Markdown content in a repository. It is a good fit when you want writers to use a visual editor while developers keep Git-based builds and deployments.
 
 ### Decap CMS
 
-[Decap CMS](https://decapcms.org/) is a browser-based Git CMS configured through a repository config file. It fits teams that want a simple admin panel over Markdown or structured content files. 
+[Decap CMS](https://decapcms.org/) is a browser-based Git CMS configured through a repository config file. It fits teams that want a simple admin panel over Markdown or structured content files.
 
 ### TinaCMS
 
-[TinaCMS](https://tina.io/) provides visual editing workflows and Git-backed content for supported frontend setups. It is useful when editors need to preview content in context. 
+[TinaCMS](https://tina.io/) provides visual editing workflows and Git-backed content for supported frontend setups. It is useful when editors need to preview content in context.
 
 ### Keystatic
 
-[Keystatic](https://keystatic.com/) is a Git-based CMS oriented toward developer-defined schemas and local workflows. It can fit Astro and Next.js projects where developers want typed content models. 
+[Keystatic](https://keystatic.com/) is a Git-based CMS oriented toward developer-defined schemas and local workflows. It can fit Astro and Next.js projects where developers want typed content models.
 
 ### Pages CMS
 
-[Pages CMS](https://pagescms.org/) provides a web interface for editing repository content through configuration. It is useful for simple Git-backed editing without building a custom admin. 
+[Pages CMS](https://pagescms.org/) provides a web interface for editing repository content through configuration. It is useful for simple Git-backed editing without building a custom admin.
 
 ### Sveltia CMS
 
-[Sveltia CMS](https://github.com/sveltia/sveltia-cms) aims to provide a modern alternative to Decap CMS-style workflows. It may be attractive for teams migrating from Decap configurations. 
+[Sveltia CMS](https://github.com/sveltia/sveltia-cms) aims to provide a modern alternative to Decap CMS-style workflows. It may be attractive for teams migrating from Decap configurations.
 
 ### CloudCannon
 
-[CloudCannon](https://cloudcannon.com/) is a commercial CMS and hosting-oriented platform for static and hybrid sites. It can fit agencies or teams that want managed visual editing workflows. 
+[CloudCannon](https://cloudcannon.com/) is a commercial CMS and hosting-oriented platform for static and hybrid sites. It can fit agencies or teams that want managed visual editing workflows.
 
 ### Payload CMS
 
-[Payload CMS](https://payloadcms.com/) is a headless CMS with a database backend. It is not a Git file CMS, but it belongs on this list when a "static site" actually needs dynamic content models, APIs, or application features. 
+[Payload CMS](https://payloadcms.com/) is a headless CMS with a database backend. It is not a Git file CMS, but it belongs on this list when a "static site" actually needs dynamic content models, APIs, or application features.
 
 ## How to choose
 

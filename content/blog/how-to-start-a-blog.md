@@ -1,5 +1,5 @@
 ---
-title: "How to Start a Blog with Markdown and a Static Site Generator"
+title: "How to Start a Blog with a Static Site Generator"
 description: "A practical guide to starting a blog with Markdown, a static site generator, Git based editing, and free static hosting."
 serial: 12
 date: 2026-10-14T12:50:00Z
@@ -23,14 +23,14 @@ You can start a blog by writing posts in Markdown, generating a static site, and
 
 ## Step 1: Choose a static site generator
 
-Pick a generator that matches your preferred tooling and content size. 
+Pick a generator that matches your preferred tooling and content size.
 
-| Generator | Good fit | Trade-off |
-| :--- | :--- | :--- |
-| Astro | Component-based sites, modern frontend tooling | Node.js ecosystem and build tooling |
-| Hugo | Large content sites, fast builds | Go template syntax has a learning curve |
-| Zola | Simple single-binary workflow | Smaller ecosystem than Hugo/Astro |
-| Eleventy | Flexible templates, minimal output | More manual setup decisions |
+| Generator | Good fit                                       | Trade-off                               |
+| :-------- | :--------------------------------------------- | :-------------------------------------- |
+| Astro     | Component-based sites, modern frontend tooling | Node.js ecosystem and build tooling     |
+| Hugo      | Large content sites, fast builds               | Go template syntax has a learning curve |
+| Zola      | Simple single-binary workflow                  | Smaller ecosystem than Hugo/Astro       |
+| Eleventy  | Flexible templates, minimal output             | More manual setup decisions             |
 
 See [Best Static Site Generators in 2026](/blog/best-static-site-generators/) for a broader comparison.
 
@@ -54,7 +54,7 @@ Markdown keeps content readable in plain text and portable across tools. It also
 
 ## Step 3: Deploy to static hosting
 
-Push the repository to GitHub and connect it to a static hosting platform. Common options include Cloudflare Pages, Vercel, Netlify, and GitHub Pages. 
+Push the repository to GitHub and connect it to a static hosting platform. Common options include Cloudflare Pages, Vercel, Netlify, and GitHub Pages.
 
 A basic deployment flow looks like this:
 
@@ -65,7 +65,7 @@ A basic deployment flow looks like this:
 
 ## Step 4: Add a Git-based CMS if needed
 
-If writing in a code editor slows you down, use a Git-based CMS. It can provide a browser editor while still committing Markdown files to your repository. [LightCMS](/getting-started/) is one option in this category. 
+If writing in a code editor slows you down, use a Git-based CMS. It can provide a browser editor while still committing Markdown files to your repository. [LightCMS](/getting-started/) is one option in this category.
 
 ## Step 5: Plan for maintenance
 

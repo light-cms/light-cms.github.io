@@ -19,17 +19,17 @@ taxonomies:
     - jamstack
 ---
 
-Cloudflare Pages and Vercel both deploy static sites from Git, provide preview deployments, and serve assets over global CDN infrastructure. The main difference is focus: Cloudflare emphasizes network and edge infrastructure, while Vercel emphasizes frontend developer workflows and deep Next.js integration. 
+Cloudflare Pages and Vercel both deploy static sites from Git, provide preview deployments, and serve assets over global CDN infrastructure. The main difference is focus: Cloudflare emphasizes network and edge infrastructure, while Vercel emphasizes frontend developer workflows and deep Next.js integration.
 
 ## Feature comparison
 
-| Area | Cloudflare Pages | Vercel |
-| :--- | :--- | :--- |
-| Best fit | Static sites, content sites, Cloudflare ecosystem users | Next.js apps, frontend teams needing preview collaboration |
-| Bandwidth/pricing model | Unlimited bandwidth on free tier | Metered bandwidth and plan limits |
-| Preview workflow | Branch/PR previews | PR previews with collaboration features |
-| Framework strength | Static frameworks and edge functions | Strong Next.js support |
-| Commercial use on free tier | Permitted | Hobby tier restrictions may apply |
+| Area                        | Cloudflare Pages                                        | Vercel                                                     |
+| :-------------------------- | :------------------------------------------------------ | :--------------------------------------------------------- |
+| Best fit                    | Static sites, content sites, Cloudflare ecosystem users | Next.js apps, frontend teams needing preview collaboration |
+| Bandwidth/pricing model     | Unlimited bandwidth on free tier                        | Metered bandwidth and plan limits                          |
+| Preview workflow            | Branch/PR previews                                      | PR previews with collaboration features                    |
+| Framework strength          | Static frameworks and edge functions                    | Strong Next.js support                                     |
+| Commercial use on free tier | Permitted                                               | Hobby tier restrictions may apply                          |
 
 ## Bandwidth and billing risk
 

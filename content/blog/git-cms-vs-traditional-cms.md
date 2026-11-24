@@ -18,13 +18,13 @@ A traditional CMS stores content in a database and usually renders pages through
 
 ## Core differences
 
-| Area | Traditional CMS | Git-based CMS |
-| :--- | :--- | :--- |
-| Content storage | Database | Markdown/files in Git |
-| Runtime | Application server, database, plugins/themes | Static files served from CDN after build |
-| Editing workflow | Admin UI writes to database | Editor creates commits/PRs to repository |
-| Versioning | CMS-specific revisions/plugins | Git history, diffs, branches, pull requests |
-| Portability | Export/migration depends on platform | Files are portable across generators and hosts |
+| Area             | Traditional CMS                              | Git-based CMS                                  |
+| :--------------- | :------------------------------------------- | :--------------------------------------------- |
+| Content storage  | Database                                     | Markdown/files in Git                          |
+| Runtime          | Application server, database, plugins/themes | Static files served from CDN after build       |
+| Editing workflow | Admin UI writes to database                  | Editor creates commits/PRs to repository       |
+| Versioning       | CMS-specific revisions/plugins               | Git history, diffs, branches, pull requests    |
+| Portability      | Export/migration depends on platform         | Files are portable across generators and hosts |
 
 ## Security and operational surface
 
@@ -40,9 +40,9 @@ With a traditional CMS, portability depends on export tools, database schema, pl
 
 ## Cost and maintenance trade-offs
 
-Traditional CMS setups can include hosting, database management, plugin licenses, backups, and security maintenance. Git-based static sites can reduce runtime infrastructure, but they still require CI/CD, build minutes, repository management, and editorial tooling. 
+Traditional CMS setups can include hosting, database management, plugin licenses, backups, and security maintenance. Git-based static sites can reduce runtime infrastructure, but they still require CI/CD, build minutes, repository management, and editorial tooling.
 
-## Which one should you pick?
+## Choosing between a Git-based CMS and a traditional CMS
 
 A traditional or database-backed CMS is usually the right call when you need things like user accounts, personalized dashboards, frequent runtime writes, field-level permissions, or app behavior that’s tightly tied to content.
 

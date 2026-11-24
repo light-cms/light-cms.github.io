@@ -7,24 +7,24 @@ draft: false
 keywords: "github newsletter"
 
 taxonomies:
- tags:
- - lightcms
- - decap
- - cms
- - comparison
+  tags:
+    - lightcms
+    - decap
+    - cms
+    - comparison
 ---
 
 LightCMS and Decap CMS both store content in Git, usually as Markdown with front matter. The main difference is how they model editing: Decap CMS is configured around collections and fields in a repository config file, while LightCMS is oriented around visual document editing.
 
 ## Comparison
 
-| Area | LightCMS | Decap CMS |
-| :--- | :--- | :--- |
-| Editing model | Visual document editor | Form-based collections/widgets |
-| Configuration | Product/app configuration | `config.yml` in repository |
-| Git providers | Confirm current support | GitHub, GitLab, Bitbucket historically supported |
-| Best fit | Long-form writing and publishing | Structured collections and field-based content |
-| Extensibility | Product features vary | Widgets/config patterns/community ecosystem |
+| Area          | LightCMS                         | Decap CMS                                        |
+| :------------ | :------------------------------- | :----------------------------------------------- |
+| Editing model | Visual document editor           | Form-based collections/widgets                   |
+| Configuration | Product/app configuration        | `config.yml` in repository                       |
+| Git providers | Confirm current support          | GitHub, GitLab, Bitbucket historically supported |
+| Best fit      | Long-form writing and publishing | Structured collections and field-based content   |
+| Extensibility | Product features vary            | Widgets/config patterns/community ecosystem      |
 
 ## Choosing between them
 

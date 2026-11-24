@@ -19,17 +19,17 @@ taxonomies:
     - jamstack
 ---
 
-Vercel and Netlify both deploy frontend projects from Git, provide preview deployments, and support static sites and serverless functions. Vercel is often the stronger fit for Next.js-heavy teams, while Netlify is attractive for teams that want built-in platform features such as forms, identity, or broad framework support. 
+Vercel and Netlify both deploy frontend projects from Git, provide preview deployments, and support static sites and serverless functions. Vercel is often the stronger fit for Next.js-heavy teams, while Netlify is attractive for teams that want built-in platform features such as forms, identity, or broad framework support.
 
 ## Comparison
 
-| Area | Vercel | Netlify |
-| :--- | :--- | :--- |
-| Best fit | Next.js and frontend app workflows | Static/Jamstack sites with platform add-ons |
-| Preview deployments | Yes | Yes |
-| Serverless/edge features | Functions, middleware, edge features | Functions, edge features, forms, identity |
-| Free-tier constraints | Plan limits and usage restrictions apply | Plan limits apply |
-| Framework ergonomics | Strong Next.js integration | Broad framework support |
+| Area                     | Vercel                                   | Netlify                                     |
+| :----------------------- | :--------------------------------------- | :------------------------------------------ |
+| Best fit                 | Next.js and frontend app workflows       | Static/Jamstack sites with platform add-ons |
+| Preview deployments      | Yes                                      | Yes                                         |
+| Serverless/edge features | Functions, middleware, edge features     | Functions, edge features, forms, identity   |
+| Free-tier constraints    | Plan limits and usage restrictions apply | Plan limits apply                           |
+| Framework ergonomics     | Strong Next.js integration               | Broad framework support                     |
 
 ## Framework and workflow fit
 

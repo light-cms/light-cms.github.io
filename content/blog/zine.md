@@ -3,11 +3,11 @@ title: "Zine: A Zig-Based Static Site Generator"
 description: "Zine is a static site generator written in Zig with its own templating and content formats, offering fast builds and a different workflow from mainstream SSGs."
 draft: false
 tags:
- - zine static site generator
- - zine ssg
- - zig static site generator
- - zine ssg vs hugo
- - fastest ssg zig
+  - zine static site generator
+  - zine ssg
+  - zig static site generator
+  - zine ssg vs hugo
+  - fastest ssg zig
 isCJKLanguage: false
 headless: false
 
@@ -15,16 +15,16 @@ slug: zine
 date: "2026-11-22T12:05:23.705Z"
 ---
 
-[Zine](https://zine-ssg.io) is a static site generator written in Zig. It focuses on fast builds and uses project-specific templating and content formats, which makes it different from mainstream generators such as Hugo, Astro, or Eleventy.
+Zine is a static site generator written in Zig. It focuses on fast builds and uses project-specific templating and content formats, which makes it different from mainstream generators such as Hugo, Astro, or Eleventy.
 
 ## What makes Zine different
 
-| Area | Zine approach | Trade-off |
-| :--- | :--- | :--- |
-| Runtime/implementation | Written in Zig | Smaller ecosystem than established SSGs |
-| Templating/content | Uses Zine-specific formats such as SuperHTML/SuperMD/Scripty | Learning curve and limited portability |
-| Build model | Static output from content and layouts | Fewer off-the-shelf themes and integrations |
-| CMS compatibility | Not a standard CommonMark + front matter workflow | Typical Git-based CMS setups may need adaptation |
+| Area                   | Zine approach                                                | Trade-off                                        |
+| :--------------------- | :----------------------------------------------------------- | :----------------------------------------------- |
+| Runtime/implementation | Written in Zig                                               | Smaller ecosystem than established SSGs          |
+| Templating/content     | Uses Zine-specific formats such as SuperHTML/SuperMD/Scripty | Learning curve and limited portability           |
+| Build model            | Static output from content and layouts                       | Fewer off-the-shelf themes and integrations      |
+| CMS compatibility      | Not a standard CommonMark + front matter workflow            | Typical Git-based CMS setups may need adaptation |
 
 ## Content workflow considerations
 

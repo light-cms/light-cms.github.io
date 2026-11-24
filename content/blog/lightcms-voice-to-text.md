@@ -25,12 +25,12 @@ A practical dictation workflow separates capture from editing:
 3. Edit for structure: Add headings, lists, links, and code blocks after the ideas are captured.
 4. Verify details: Check names, numbers, product terms, and quotes before publishing.
 
-| Stage | Benefit | Risk |
-| :--- | :--- | :--- |
-| Dictation | Faster idea capture | Rambling or repeated phrasing |
-| Transcription | Converts speech to editable text | Homophones, names, and technical terms may be wrong |
-| Editing | Turns transcript into publishable content | Skipping review can publish errors |
-| Publishing | Commits final Markdown to Git | Sensitive audio/data handling depends on provider |
+| Stage         | Benefit                                   | Risk                                                |
+| :------------ | :---------------------------------------- | :-------------------------------------------------- |
+| Dictation     | Faster idea capture                       | Rambling or repeated phrasing                       |
+| Transcription | Converts speech to editable text          | Homophones, names, and technical terms may be wrong |
+| Editing       | Turns transcript into publishable content | Skipping review can publish errors                  |
+| Publishing    | Commits final Markdown to Git             | Sensitive audio/data handling depends on provider   |
 
 ## Accuracy and privacy checks
 

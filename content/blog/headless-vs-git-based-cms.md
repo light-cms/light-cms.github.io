@@ -18,14 +18,14 @@ Headless CMS and Git-based CMS describe different parts of a content architectur
 
 ## Architecture comparison
 
-| Area | Headless CMS | Git-based CMS |
-| :--- | :--- | :--- |
-| Primary question | How is content delivered? | Where is content stored? |
-| Storage | Database or managed content store | Files in a Git repository |
-| Delivery | API at request/build time | Static build output, usually from CI/CD |
-| Change latency | Often immediate after publish | After build and deploy |
-| Versioning | Platform revisions/workflows | Native Git history |
-| Best fit | Multi-channel apps, structured content | Blogs, docs, marketing sites |
+| Area             | Headless CMS                           | Git-based CMS                           |
+| :--------------- | :------------------------------------- | :-------------------------------------- |
+| Primary question | How is content delivered?              | Where is content stored?                |
+| Storage          | Database or managed content store      | Files in a Git repository               |
+| Delivery         | API at request/build time              | Static build output, usually from CI/CD |
+| Change latency   | Often immediate after publish          | After build and deploy                  |
+| Versioning       | Platform revisions/workflows           | Native Git history                      |
+| Best fit         | Multi-channel apps, structured content | Blogs, docs, marketing sites            |
 
 ## When a headless CMS fits
 

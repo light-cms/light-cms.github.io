@@ -13,7 +13,7 @@ keywords:
 slug: what-is-markdown
 ---
 
-Markdown is a plain-text markup format for writing structured documents with simple symbols. It is commonly used for documentation, README files, notes, and static site content because the source remains readable as text and can be converted to HTML. 
+Markdown is a plain-text markup format for writing structured documents with simple symbols. It is commonly used for documentation, README files, notes, and static site content because the source remains readable as text and can be converted to HTML.
 
 ## Basic Markdown syntax
 
@@ -44,12 +44,12 @@ Different Markdown flavors add features such as tables, task lists, footnotes, a
 
 ## Why Markdown works well for static sites
 
-| Property | Practical benefit | Trade-off |
-| :--- | :--- | :--- |
-| Plain text | Easy to store, diff, and version in Git | Limited layout control without extensions |
+| Property        | Practical benefit                             | Trade-off                                    |
+| :-------------- | :-------------------------------------------- | :------------------------------------------- |
+| Plain text      | Easy to store, diff, and version in Git       | Limited layout control without extensions    |
 | Readable source | Authors can edit without a proprietary editor | Complex documents may need MDX or shortcodes |
-| HTML conversion | Static site generators render it to web pages | Output depends on generator and theme |
-| Portability | Files can move between tools and platforms | Flavor differences can affect rendering |
+| HTML conversion | Static site generators render it to web pages | Output depends on generator and theme        |
+| Portability     | Files can move between tools and platforms    | Flavor differences can affect rendering      |
 
 ## Markdown and front matter
 

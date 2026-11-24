@@ -5,19 +5,19 @@ serial: 51
 date: 2026-10-16T12:10:00Z
 draft: false
 keywords:
- - lightcms vs storyblok
- - storyblok alternatives
- - visual editor cms
- - storyblok pricing alternative
- - component based cms
+  - lightcms vs storyblok
+  - storyblok alternatives
+  - visual editor cms
+  - storyblok pricing alternative
+  - component based cms
 
 taxonomies:
- tags:
- - lightcms
- - storyblok
- - cms
- - comparison
- - headless
+  tags:
+    - lightcms
+    - storyblok
+    - cms
+    - comparison
+    - headless
 slug: lightcms-vs-storyblok
 ---
 
@@ -31,14 +31,14 @@ Storyblok is a hosted headless CMS. Content is modeled as blocks, edited in a vi
 
 LightCMS is a Git-based writing workspace. Content is stored as Markdown files with front matter in your repository. You write in a document editor, commit the changes, and your static site generator builds the site.
 
-| | LightCMS | Storyblok |
-|---|---|---|
-| Content storage | Files in your Git repository | Hosted CMS |
-| Delivery | Static build to CDN | Content API |
-| Editing style | Document-first writing | Block-based visual page editing |
-| Best for | Articles, docs, changelogs | Landing pages, component-driven sites |
-| Preview | After build/site preview | Live visual preview |
-| Pricing | Self-hosted, no license fee | Plan-based SaaS |
+|                 | LightCMS                     | Storyblok                             |
+| --------------- | ---------------------------- | ------------------------------------- |
+| Content storage | Files in your Git repository | Hosted CMS                            |
+| Delivery        | Static build to CDN          | Content API                           |
+| Editing style   | Document first writing       | Block-based visual page editing       |
+| Best for        | Articles, docs, changelogs   | Landing pages, component-driven sites |
+| Preview         | After build/site preview     | Live visual preview                   |
+| Pricing         | Self-hosted, no license fee  | Plan-based SaaS                       |
 
 ## When Storyblok makes more sense
 

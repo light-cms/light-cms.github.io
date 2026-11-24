@@ -19,17 +19,17 @@ taxonomies:
     - static-sites
 ---
 
-Hugo and Jekyll are both mature static site generators that build websites from Markdown content. Hugo is generally chosen for fast builds and a single-binary toolchain; Jekyll is often chosen for existing Ruby workflows or simple GitHub Pages setups. 
+Hugo and Jekyll are both mature static site generators that build websites from Markdown content. Hugo is generally chosen for fast builds and a single-binary toolchain; Jekyll is often chosen for existing Ruby workflows or simple GitHub Pages setups.
 
 ## Comparison
 
-| Area | Hugo | Jekyll |
-| :--- | :--- | :--- |
-| Runtime | Go binary | Ruby and gems |
-| Build speed | Usually very fast, especially on larger sites | Often slower on larger sites |
-| Templating | Go templates | Liquid templates |
-| Plugins/extensions | Built-in features and external tooling patterns | Ruby gem plugin ecosystem |
-| GitHub Pages fit | Common through GitHub Actions | Historically strong native fit |
+| Area               | Hugo                                            | Jekyll                         |
+| :----------------- | :---------------------------------------------- | :----------------------------- |
+| Runtime            | Go binary                                       | Ruby and gems                  |
+| Build speed        | Usually very fast, especially on larger sites   | Often slower on larger sites   |
+| Templating         | Go templates                                    | Liquid templates               |
+| Plugins/extensions | Built-in features and external tooling patterns | Ruby gem plugin ecosystem      |
+| GitHub Pages fit   | Common through GitHub Actions                   | Historically strong native fit |
 
 ## Build speed and tooling
 

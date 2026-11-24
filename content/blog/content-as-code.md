@@ -39,19 +39,23 @@ To practice content as code effectively, a publication commits to three foundati
 When content lives in Git, teams inherit capabilities that traditionally require expensive enterprise CMS plugins or clunky third-party add ons:
 
 ### Legible, Line-by-Line Revision Diffs
-In a traditional database-driven CMS, finding out who changed a sentence or when a disclaimer was updated requires combing through opaque database revision tables. 
+
+In a traditional database-driven CMS, finding out who changed a sentence or when a disclaimer was updated requires combing through opaque database revision tables.
 
 With Git, diffs are readable plain text. Running `git log -p filename.md` or opening the commit on GitHub highlights the exact words added or removed, alongside the author's name, timestamp, and explanation.
 
 ### Pull Requests as Editorial Collaboration
-In many organizations, editorial review is a chaotic mess of shared document links, conflicting suggestions, and email threads with attachments. 
+
+In many organizations, editorial review is a chaotic mess of shared document links, conflicting suggestions, and email threads with attachments.
 
 Content as code consolidates review into a pull request. Editors leave line-level comments on specific sentences, suggest changes, debate structure, and explicitly approve the final draft. Merging the pull request into the main branch automatically deploys the article to production.
 
 ### Independent, Surgical Rollbacks
+
 If a major error is discovered in a published post, rolling back is one commit. Restoring a database backup typically also rolls back everything published since that backup was taken. With Git, you can revert a single commit on a single file and leave the rest of the site alone.
 
 ### Permanent Portability and Disaster Recovery
+
 Proprietary content management platforms shut down, change pricing tiers, or get acquired, and each of those events puts a migration on your calendar.
 
 A directory of Markdown files in a Git repository needs only a text editor to read. That does not make the site independent of everything: the repository host, the static site generator, and the deploy pipeline are still dependencies with their own migration costs. What changes is the exit, because the content moves without an export tool.
@@ -60,7 +64,7 @@ A directory of Markdown files in a Git repository needs only a text editor to re
 
 Treating content like code works well, but it’s not free:
 
-- Git is rough for non-technical writers. Most people don’t want to learn branches, merge conflicts, or local dev setup just to publish a post. That’s why a visual editor like [LightCMS](/getting-started/) helps—it hides the Git mechanics.
+- Git is rough for non-technical writers. Most people don’t want to learn branches, merge conflicts, or local dev setup just to publish a post. That’s why a visual editor like [LightCMS](/getting-started/) helps, because it hides the Git mechanics.
 - Large media files don’t belong in Git. Images, video, and PDFs can bloat a repo fast. It’s usually better to keep big files in object storage and reference them from Markdown.
 - Markdown isn’t a database. If you need relational content, complex queries, or live inventory, a database-backed CMS is a better fit.
 

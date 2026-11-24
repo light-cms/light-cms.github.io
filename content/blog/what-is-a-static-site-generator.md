@@ -40,12 +40,12 @@ A typical build does four things:
 
 ## Benefits and trade-offs
 
-| Benefit | Why it matters | Trade-off |
-| :--- | :--- | :--- |
-| Fast delivery | Prebuilt files can be served from edge caches | Build step required before changes go live |
+| Benefit                 | Why it matters                                                    | Trade-off                                            |
+| :---------------------- | :---------------------------------------------------------------- | :--------------------------------------------------- |
+| Fast delivery           | Prebuilt files can be served from edge caches                     | Build step required before changes go live           |
 | Smaller runtime surface | No per-request app runtime or database required for content pages | Dynamic features need APIs or client-side JavaScript |
-| Portability | Content often lives as plain Markdown files | Template and plugin ecosystems vary by generator |
-| Version control fit | Content and code can live in Git | Editorial workflows may need a CMS layer |
+| Portability             | Content often lives as plain Markdown files                       | Template and plugin ecosystems vary by generator     |
+| Version control fit     | Content and code can live in Git                                  | Editorial workflows may need a CMS layer             |
 
 Static site generators work well for blogs, documentation, marketing sites, and portfolios. They are less suitable when every request needs personalized server-side rendering or real-time database queries.
 

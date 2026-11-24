@@ -19,17 +19,17 @@ taxonomies:
     - jamstack
 ---
 
-Cloudflare Pages and GitHub Pages can both host a static site for free, but they fit different workflows. GitHub Pages is convenient when your site already lives in GitHub and traffic is modest. Cloudflare Pages is a better fit when you need preview deployments, broader edge delivery, or fewer bandwidth concerns. 
+Cloudflare Pages and GitHub Pages can both host a static site for free, but they fit different workflows. GitHub Pages is convenient when your site already lives in GitHub and traffic is modest. Cloudflare Pages is a better fit when you need preview deployments, broader edge delivery, or fewer bandwidth concerns.
 
 ## Feature comparison
 
-| Area | GitHub Pages | Cloudflare Pages |
-| :--- | :--- | :--- |
-| Primary fit | Project docs, simple personal sites | Static sites, blogs, marketing sites |
-| Bandwidth/usage limits | Published usage limits apply | Free tier includes unlimited bandwidth |
-| Preview deployments | Not built in as standard PR previews | Automatic preview URLs for non-production branches/PRs |
-| Edge/network | CDN-backed delivery | Cloudflare global edge network |
-| Server-side features | Static only | Pages Functions/Workers integrations available |
+| Area                   | GitHub Pages                         | Cloudflare Pages                                       |
+| :--------------------- | :----------------------------------- | :----------------------------------------------------- |
+| Primary fit            | Project docs, simple personal sites  | Static sites, blogs, marketing sites                   |
+| Bandwidth/usage limits | Published usage limits apply         | Free tier includes unlimited bandwidth                 |
+| Preview deployments    | Not built in as standard PR previews | Automatic preview URLs for non-production branches/PRs |
+| Edge/network           | CDN-backed delivery                  | Cloudflare global edge network                         |
+| Server-side features   | Static only                          | Pages Functions/Workers integrations available         |
 
 ## Bandwidth and traffic risk
 

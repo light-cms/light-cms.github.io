@@ -5,32 +5,32 @@ serial: 13
 date: 2026-10-14T13:00:00Z
 draft: false
 keywords:
- - netlify cms alternatives
- - decap cms alternatives
- - netlify cms vs
- - best git cms 2026
- - decap cms replacement
+  - netlify cms alternatives
+  - decap cms alternatives
+  - netlify cms vs
+  - best git cms 2026
+  - decap cms replacement
 
 taxonomies:
- tags:
- - cms
- - decap
- - netlify-cms
- - git
+  tags:
+    - cms
+    - decap
+    - netlify-cms
+    - git
 ---
 
 Decap CMS (formerly Netlify CMS) remains a Git-based CMS option, but teams often evaluate alternatives when they need a different editing experience, simpler setup, visual editing, or specific workflow features. The alternatives below keep content in Git but differ in interface, hosting model, and operational complexity.
 
 ## Alternatives at a glance
 
-| Alternative | Best fit | Hosting model | Trade-off |
-| :--- | :--- | :--- | :--- |
-| LightCMS | Visual Markdown editing for static sites | Self-hosted or hosted product options | Smaller ecosystem than older CMS tools |
-| Pages CMS | Simple form-based GitHub editing | Hosted or self-hosted | Less suited to long-form WYSIWYG writing |
-| TinaCMS | Visual/on-page editing workflows | Hosted and/or self-hosted options | Setup and schema model can be more involved |
-| Keystatic | Typed, local-first content schemas | Self-hosted/local-first | More developer-oriented |
-| Sveltia CMS | Lightweight browser-based editing | Static/admin UI deployment | Younger project; verify feature parity |
-| GitCMS | AI-assisted review workflows | Product/service | Pricing and governance model differ from OSS tools |
+| Alternative | Best fit                                 | Hosting model                         | Trade-off                                          |
+| :---------- | :--------------------------------------- | :------------------------------------ | :------------------------------------------------- |
+| LightCMS    | Visual Markdown editing for static sites | Self-hosted or hosted product options | Smaller ecosystem than older CMS tools             |
+| Pages CMS   | Simple form-based GitHub editing         | Hosted or self-hosted                 | Less suited to long-form WYSIWYG writing           |
+| TinaCMS     | Visual/on-page editing workflows         | Hosted and/or self-hosted options     | Setup and schema model can be more involved        |
+| Keystatic   | Typed, local-first content schemas       | Self-hosted/local-first               | More developer-oriented                            |
+| Sveltia CMS | Lightweight browser-based editing        | Static/admin UI deployment            | Younger project; verify feature parity             |
+| GitCMS      | AI-assisted review workflows             | Product/service                       | Pricing and governance model differ from OSS tools |
 
 ## How to choose
 

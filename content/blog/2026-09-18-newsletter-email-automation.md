@@ -4,10 +4,10 @@ description: "Use GitHub and Newsy to notify readers about new posts without a s
 date: "2026-09-18T01:50:00.000Z"
 draft: false
 tags:
- - newsletter
- - newsy
- - github
- - publishing
+  - newsletter
+  - newsy
+  - github
+  - publishing
 slug: newsletter-email-automation
 ---
 
@@ -22,7 +22,7 @@ Email newsletter platforms can be useful, but they add operational work for smal
 3. Deliverability operations: You monitor bounces, spam complaints, sender reputation, and authentication records such as SPF, DKIM, and DMARC.
 4. Tracking and privacy decisions: Many platforms include open tracking, click tracking, and unsubscribe management features that you need to configure and disclose.
 
-For a developer-focused blog, those features can be more than the workflow needs. The trade-off is that you give up marketing automation, segmentation, and analytics.
+For a developer focused blog, those features can be more than the workflow needs. The trade-off is that you give up marketing automation, segmentation, and analytics.
 
 ## How Newsy uses GitHub notifications
 
@@ -55,16 +55,14 @@ GitHub notifies users subscribed to that issue
 
 This approach fits technical audiences better than general audiences.
 
-- GitHub account requirement: Readers need a GitHub account to subscribe. That is reasonable for many developer blogs, but it can block non-technical readers.
+- GitHub account requirement: Readers need a GitHub account to subscribe. That is reasonable for many developer blogs, but it can block non technical readers.
 - Plain notification format: GitHub notifications are not a replacement for branded marketing emails. You have limited control over layout and styling.
 - Limited analytics: You do not get typical email marketing metrics such as open rate or click-through rate. You can inspect issue participation, but that is not the same as campaign analytics.
 
-If you need segmentation, A/B testing, drip campaigns, or detailed engagement analytics, a dedicated email platform is the better tool.
-
 ## Set up checklist
 
-1. Install Newsy: Add the [Newsy GitHub App](https://github.com/apps/newsletter-newsy/installations/select_target) to the repository that contains your blog. 
-2. Create the subscription entry point: Generate or create a subscribe link/button that points readers to the announcement issue. 
+1. Install Newsy: Add the [Newsy GitHub App](https://github.com/apps/newsletter-newsy/installations/select_target) to the repository that contains your blog.
+2. Create the subscription entry point: Generate or create a subscribe link/button that points readers to the announcement issue.
 3. Add the link to your site: Place the subscribe link in your blog layout, footer, or post template.
 4. Test the flow: Publish a draft post, confirm the commit, confirm the issue comment, and verify that a subscribed account receives a notification.
 

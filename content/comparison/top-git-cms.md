@@ -5,20 +5,20 @@ serial: 11
 date: 2026-10-14T12:40:00Z
 draft: false
 keywords:
- - git based cms
- - git cms comparison
- - decap cms
- - tinacms
- - keystatic
- - pages cms
- - lightcms
+  - git based cms
+  - git cms comparison
+  - decap cms
+  - tinacms
+  - keystatic
+  - pages cms
+  - lightcms
 
 taxonomies:
- tags:
- - cms
- - comparison
- - git
- - jamstack
+  tags:
+    - cms
+    - comparison
+    - git
+    - jamstack
 slug: top-git-cms
 ---
 
@@ -28,15 +28,15 @@ Some are form-based, some edit on the page, some are built for developers, and s
 
 ## Quick comparison
 
-| CMS | Best for | Editing style | Things to check |
-|---|---|---|---|
-| Decap CMS | Configured collections and established Git workflows | Form-based admin UI | Current maintenance, Git providers, auth setup |
-| TinaCMS | Visual/contextual editing | On-page or structured editing | Current pricing, self-hosting, schema workflow |
-| Keystatic | Developer-defined schemas | Forms generated from code | Current framework support, cloud/local modes |
-| Pages CMS | Simple GitHub editing | Form-based dashboard | Current Git provider support, licensing |
-| Sveltia CMS | Lightweight browser editing | Admin UI over Git | Current feature parity and maturity |
-| CloudCannon | Agency/client managed sites | Visual/editorial workflows | Current pricing and hosting model |
-| LightCMS | Writers publishing static-site content | Document editor | Current features, hosting, Git provider support |
+| CMS         | Best for                                             | Editing style                 | Things to check                                 |
+| ----------- | ---------------------------------------------------- | ----------------------------- | ----------------------------------------------- |
+| Decap CMS   | Configured collections and established Git workflows | Form-based admin UI           | Current maintenance, Git providers, auth setup  |
+| TinaCMS     | Visual/contextual editing                            | On-page or structured editing | Current pricing, self-hosting, schema workflow  |
+| Keystatic   | Developer-defined schemas                            | Forms generated from code     | Current framework support, cloud/local modes    |
+| Pages CMS   | Simple GitHub editing                                | Form-based dashboard          | Current Git provider support, licensing         |
+| Sveltia CMS | Lightweight browser editing                          | Admin UI over Git             | Current feature parity and maturity             |
+| CloudCannon | Agency/client managed sites                          | Visual/editorial workflows    | Current pricing and hosting model               |
+| LightCMS    | Writers publishing static-site content               | Document editor               | Current features, hosting, Git provider support |
 
 ## How to choose
 

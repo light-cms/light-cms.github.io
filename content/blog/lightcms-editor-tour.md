@@ -14,17 +14,17 @@ taxonomies:
     - writing
 ---
 
-The LightCMS editor is designed to give writers a visual editing interface while saving content as Markdown and front matter in a Git repository. The main goal is to reduce formatting errors without taking content out of a file based workflow.
+The LightCMS editor gives writers a visual editing interface while saving content as Markdown and front matter in a Git repository. The main goal is to reduce formatting errors without taking content out of a file-based workflow.
 
 ## What the editor handles
 
-| Editor task | What to check | Why it matters |
-| :--- | :--- | :--- |
-| Rich text formatting | Headings, lists, links, quotes, code blocks | Writers should not need to debug Markdown syntax |
-| Front matter | Title, date, tags, description, draft status | Invalid metadata can break static site builds |
-| Media | Image upload, paths, alt text | Asset handling often causes broken links in static sites |
-| Structured content | Tables, task lists, embeds, math | Feature support varies by editor and SSG |
-| Markdown output | Clean, diffable Markdown in Git | Output quality affects long-term portability |
+| Editor task          | What to check                                | Why it matters                                           |
+| :------------------- | :------------------------------------------- | :------------------------------------------------------- |
+| Rich text formatting | Headings, lists, links, quotes, code blocks  | Writers should not need to debug Markdown syntax         |
+| Front matter         | Title, date, tags, description, draft status | Invalid metadata can break static site builds            |
+| Media                | Image upload, paths, alt text                | Asset handling often causes broken links in static sites |
+| Structured content   | Tables, task lists, embeds, math             | Feature support varies by editor and SSG                 |
+| Markdown output      | Clean, diffable Markdown in Git              | Output quality affects long-term portability             |
 
 A good WYSIWYG Markdown editor should make common writing tasks easier while preserving predictable file output. If the editor produces noisy Markdown or rewrites front matter unexpectedly, it creates friction for developers reviewing diffs.
 
