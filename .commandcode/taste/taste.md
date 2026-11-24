@@ -1,1 +1,0 @@
-- Prefers blog content written in a human, natural voice rather than robotic or polished AI-sounding prose. Confidence: 0.85
