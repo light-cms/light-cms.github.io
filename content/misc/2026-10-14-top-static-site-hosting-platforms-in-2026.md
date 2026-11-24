@@ -63,7 +63,7 @@ Wasmer Edge focuses on WebAssembly and multi-runtime deployments. For a standard
 
 ## Deno Deploy
 
-Deno Deploy has been used for JavaScript and TypeScript workloads at the edge. Before starting a new long-term project there, verify Deno's current platform status and migration guidance.
+Deno Deploy has been used for JavaScript and TypeScript workloads at the edge. Before starting a new long term project there, verify Deno's current platform status and migration guidance.
 
 ## Matching a host to your site
 
