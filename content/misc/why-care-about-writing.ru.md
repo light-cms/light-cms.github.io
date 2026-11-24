@@ -1,16 +1,16 @@
 ---
-title: Why You Should Care About Writing
+title: Почему вы должны заботиться о написании
 description: >-
-  Why writing matters even when few people read it: documenting real problems helps the next person, and a static site keeps your notes durable, free, and yours to publish.
+  Почему написание имеет значение, даже когда мало кто его читает: документирование реальных проблем помогает следующему человеку, и статический сайт сохраняет ваши заметки прочными, свободными и вашими для публикации.
 date: '2026-11-01T14:02:00Z'
-draft: false
+draft: ложь
 tags:
-  - why writing matters
-  - start writing
-  - blogging benefits
+  - почему бы написать вопросы
+  - начать запись
+  - блогинги
   - статический блог сайта
-  - publish notes
-slug: why-care-about-writing
+  - опубликовать заметки
+slug: почему-опекун-написание
 ---
 
 ## Зачем начинать блог?
@@ -25,4 +25,4 @@ slug: why-care-about-writing
 
 Написание из реального опыта также добавляет полезную информацию в интернет. Уточнение заметок о реальных проблемах, краеугольных кейсах и исправлениях может помочь другим людям быстрее найти ответы.
 
-New to this? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) explains the philosophy behind owning your words.
+Новый для этого? [How to start a blog in 2026](/blog/how-to-start-a-blog/) covers the full setup, and [why LightCMS exists](/blog/why-this/) explains the philosophy behind owning your words.
