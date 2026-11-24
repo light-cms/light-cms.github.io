@@ -1,12 +1,12 @@
 ---
 title: Comenzando con LightCMS
-description: "Get started with LightCMS in minutes: sign in with GitHub, connect a repository, write in the visual editor, and publish clean Markdown to your own Git repo."
+description: "Comienza con LightCMS en minutos: inicia sesión con GitHub, conecta un repositorio, escribe en el editor visual y publica Markdown limpio en tu propio repositorio de Git."
 keywords:
-  - getting started with lightcms
-  - lightcms setup
-  - connect github repository cms
-  - publish markdown to git
-  - visual markdown editor
+  - comenzar con luces
+  - configuración de faros
+  - conectar cms del repositorio github
+  - publicar markdown a git
+  - editor de markdown visual
 preview: /og-image.webp
 taxonomies:
   tags:
@@ -16,29 +16,29 @@ taxonomies:
     - markdown
 ---
 
-[LightCMS](https://www.lightcms.me) is a Git based content management system for static sites. You edit Markdown in a visual editor, and LightCMS commits the files to your repository.
+[LightCMS](https://www.lightcms.me) es un sistema de gestión de contenido basado en Git para sitios estáticos. Usted edita Markdown en un editor visual, y LightCMS envía los archivos a su repositorio.
 
-## What you get
+## Lo que obtienes
 
-- **A writer-first editor.** LightCMS uses the [TipTap](https://tiptap.dev) WYSIWYG editor, so formatting feels like a document app instead of a code editor.
-- **An AI copilot.** Draft, rewrite, and fix grammar without leaving the editor.
-- **Voice dictation.** Speak a draft and transcription turns it into Markdown.
-- **Light and dark themes.** Read and write in the theme you prefer.
-- **Newsletters without a third-party service.** [Newsy](https://github.com/light-cms/newsy) turns each newly published post into a GitHub announcement your readers can subscribe to.
+- **Un editor de primer escritor.** LightCMS utiliza el editor [TipTap](https://tiptap.dev) WYSIWYG, por lo que el formato se siente como una aplicación de documento en lugar de un editor de código.
+- **un cobilota IA.** Borrar, reescribir y arreglar gramática sin salir del editor.
+- **dicción por voz.** Habla un borrador y transcripción lo convierte en Markdown.
+- **Temas claros y oscuros.** Lee y escribe en el tema que prefieras.
+- **Boletines sin servicio de terceros.** [Newsy](https://github.com/light-cms/newsy) convierte cada publicación recién publicada en un anuncio de GitHub al que sus lectores pueden suscribirse.
 
-Your content stays in your repository as Markdown with front matter. Git keeps the history, so every change is reviewable, auditable, and reversible.
+Su contenido permanece en su repositorio como Markdown con asunto inicial. Git mantiene la historia, por lo que cada cambio es revisable, auditable y reversible.
 
 ## Cómo funciona
 
 1. **Sign in** with your GitHub account.
-2. **Choose a repository.** Install the LightCMS app on the repo that holds your site. Funciona con generadores estáticos de sitios que utilizan materia frontal en archivos Markdown.
-3. **Write.** The editor handles formatting and uploads images as you add them.
-4. **Publish.** LightCMS commits the change to your repository. Your CI/CD pipeline builds and deploys to the host you choose: GitHub Pages, Cloudflare Pages, Netlify, Vercel, [Surge.sh](https://surge.sh), or any S3-compatible object storage.
+2. **Elija un repositorio.** Instale la aplicación LightCMS en el repositorio que contiene su sitio. Funciona con generadores estáticos de sitios que utilizan materia frontal en archivos Markdown.
+3. **Escribir.** El editor maneja el formato y carga imágenes a medida que las agregas.
+4. **Publicar.** LightCMS confirma el cambio en su repositorio. Su pipeline de CI/CD construye e implementa en el host que escoge: páginas de GitHub, páginas de la barra de nubes, Netlify, Vercel, [. h](https://surge.sh), o cualquier almacenamiento de objetos compatible con S3.
 
 ## Leer siguiente
 
-- [Why LightCMS?](/blog/why-this/): the design reasoning behind Git based publishing.
-- [How to start a blog in 2026](/blog/how-to-start-a-blog/): the full Markdown and static site guide.
-- [Start from a template](/blog/start-with-a-lightcms-template/): starter repositories with the build already configured.
+- [¿Por qué LightCMS?](/blog/why-this/): el razonamiento de diseño detrás de la publicación basada en Git.
+- [Cómo iniciar un blog en 2026](/blog/how-to-start-a-blog/): la guía completa de Markdown y sitio estático.
+- [Iniciar desde una plantilla](/blog/start-with-a-lightcms-template/): repositorios de inicio con la compilación ya configurada.
 - [Self hosting LightCMS](/blog/selfhost/): run your own instance.
-- [Newsletter automation](/blog/newsletter-email-automation/): how Newsy delivers posts without a third-party email service.
+- [Automatización de boletines](/blog/newsletter-email-automation/): cómo Newsy entrega publicaciones sin un servicio de correo de terceros.
