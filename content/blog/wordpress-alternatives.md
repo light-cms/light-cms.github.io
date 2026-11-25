@@ -1,10 +1,10 @@
 ---
 title: "WordPress Alternatives for Static and Git Based Publishing"
-description: "Compare WordPress alternatives by architecture, maintenance, hosting model, and editorial workflow, including Git-based CMS and static site options."
+description: "Compare WordPress alternatives by architecture, maintenance, hosting model, and editorial workflow, including Git based CMS and static site options."
 serial: 17
 date: 2026-10-14T13:40:00Z
 draft: false
-keywords: newsy
+
 tags:
   - cms
   - wordpress
@@ -29,15 +29,15 @@ Common reasons to evaluate alternatives include:
 
 | Option type                 | Examples                                | Good fit                                       | Trade-off                                    |
 | :-------------------------- | :-------------------------------------- | :--------------------------------------------- | :------------------------------------------- |
-| Git-based CMS + static site | LightCMS, Decap CMS, Pages CMS, TinaCMS | Blogs, docs, marketing sites                   | Build step; limited runtime dynamic behavior |
+| Git based CMS + static site | LightCMS, Decap CMS, Pages CMS, TinaCMS | Blogs, docs, marketing sites                   | Build step; limited runtime dynamic behavior |
 | Hosted publishing platform  | Ghost                                   | Newsletters, memberships, editorial publishing | Platform/database dependency and pricing     |
 | Traditional enterprise CMS  | Drupal                                  | Complex organizational sites with dev teams    | Higher implementation and maintenance cost   |
 | Headless CMS                | Contentful, Sanity, Strapi              | Structured multi-channel content               | API/infrastructure complexity                |
 
 ## Choosing a WordPress alternative
 
-Choose a Git-based static workflow when your site is primarily content and you want Markdown files in version control. Choose a database-backed platform when you need memberships, complex permissions, real-time personalization, or application features.
+Choose a Git based static workflow when your site is primarily content and you want Markdown files in version control. Choose a database-backed platform when you need memberships, complex permissions, real-time personalization, or application features.
 
-My judgment is that static Git-based publishing is a better default for most blogs and documentation sites because it reduces runtime complexity. The counterargument is real: WordPress's plugin ecosystem and familiar admin experience can be faster for teams that need dynamic features immediately.
+My judgment is that static Git based publishing is a better default for most blogs and documentation sites because it reduces runtime complexity. The counterargument is real: WordPress's plugin ecosystem and familiar admin experience can be faster for teams that need dynamic features immediately.
 
-For migration planning, see [Static vs. Dynamic Sites](/blog/static-vs-dynamic/), [Git-Based CMS vs. Traditional CMS](/blog/git-cms-vs-traditional-cms/), and [Top Git-Based CMS Platforms](/comparison/top-git-cms).
+For migration planning, see [Static vs. Dynamic Sites](/blog/static-vs-dynamic/), [Git based CMS vs. Traditional CMS](/blog/git-cms-vs-traditional-cms/), and [Top Git Based CMS Platforms](/comparison/top-git-cms).

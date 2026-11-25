@@ -1,8 +1,7 @@
 ---
 title: LightCMS vs. Pages CMS Visual Writing vs. Form Based Editing
-description: >-
-  Compare LightCMS and Pages CMS for Git-based publishing: visual Markdown
-  editing versus config-driven form fields in your repository.
+description: "Compare LightCMS and Pages CMS for Git based publishing visual Markdown
+  editing versus config driven form fields in your repository."
 serial: 41
 date: '2026-10-15T20:09:55.000Z'
 draft: false
@@ -43,4 +42,4 @@ It is also lighter to adopt if you do not want to run an application database fo
 
 LightCMS fits better when the main job is writing and editing articles. If you or your writers spend most of the day drafting 1,000-word posts with headings, code blocks, tables, and inline images, a browser-based document editor gets out of the way faster than a stack of form inputs.
 
-Before choosing either tool, test both against your actual repository layout, front matter format, and image folder conventions. For nearby Git-based options, see [LightCMS vs. Decap CMS](/comparison/lightcms-vs-decap-cms/) and [LightCMS vs. Keystatic](/comparison/lightcms-vs-keystatic/).
+Before choosing either tool, test both against your actual repository layout, front matter format, and image folder conventions. For nearby Git based options, see [LightCMS vs. Decap CMS](/comparison/lightcms-vs-decap-cms/) and [LightCMS vs. Keystatic](/comparison/lightcms-vs-keystatic/).

@@ -1,39 +1,31 @@
 ---
 title: "What Is LightCMS?"
-description: "LightCMS is a Git-based CMS with a visual editor. It commits plain Markdown to your repository and triggers deployment through your existing CI/CD."
+description: "LightCMS is a Git based CMS with a visual editor. It commits plain Markdown to your repository and triggers deployment through your existing CI/CD."
 serial: 30
 date: 2026-10-16T09:00:00Z
 draft: false
-keywords:
-  - what is lightcms
+tags:
   - lightcms
-  - Git based cms
-  - markdown cms
-  - visual editor for markdown
-
-taxonomies:
-  tags:
-    - lightcms
-    - cms
-    - git
-    - markdown
+  - cms
+  - git
+  - markdown
 ---
 
-[LightCMS](https://lightcms.me) is a Git-based content management system that stores content as Markdown files in a Git repository. You write in a browser-based visual editor, and LightCMS commits the file and front matter directly to your repository so your existing CI/CD pipeline can build and deploy the site.
+[LightCMS](https://lightcms.me) is a content management system for publishing Markdown from Git. You write in a visual editor in your browser, and [LightCMS](https://lightcms.me) commits the Markdown file and its front matter to your repository. Your existing CI/CD pipeline can then build and deploy the site.
 
 ## The problem LightCMS addresses
 
-Static site generators produce fast, secure websites, but the writing workflow can slow teams down. Editing raw Markdown in a code editor, formatting front matter by hand, and resolving Git conflicts adds friction for writers who do not work in Git every day.
+Static site generators can make it easy to build and deploy a site. Writing for one is less convenient if you have to edit raw Markdown, format front matter, or sort out Git conflicts by hand.
 
-LightCMS keeps content in Git while giving authors a visual editing interface. That trade-off favors Git-based ownership and review workflows over the real-time collaboration features found in database-backed CMS platforms.
+[LightCMS](https://lightcms.me) gives authors a visual editor, while keeping the content in Git. That suits teams that want Git ownership and review. It is a different choice from a database backed CMS with real time collaboration.
 
 ## How LightCMS publishes content
 
-1. Sign in with GitHub: Authenticate with your GitHub account.
-2. Connect a repository: Point LightCMS to a repository that contains Markdown files, such as a site built with Astro, Hugo, Zola, 11ty, Jekyll, or Next.js.
-3. Draft in the visual editor: The editor supports headings, links, tables, checklists, code blocks, and media.
-4. Publish changes: LightCMS formats the Markdown document, updates front matter, and commits to your branch or opens a pull request for review.
-5. Deploy automatically: Your existing CI/CD workflow, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, detects the commit, builds the site, and deploys it.
+1. Sign in with GitHub.
+2. Connect a repository with Markdown content. It can be a site built with Astro, Hugo, Zola, 11ty, Jekyll, or Next.js.
+3. Write in the editor, which supports headings, links, tables, checklists, code blocks, and media.
+4. Publish the change. [LightCMS](https://lightcms.me) formats the Markdown, updates front matter, and either commits to your branch or opens a pull request for review.
+5. Your existing CI/CD workflow, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, can then build and deploy the site.
 
 Because publishing creates a standard Git commit, your site can still build from the repository if you stop using LightCMS.
 
@@ -42,7 +34,7 @@ Because publishing creates a standard Git commit, your site can still build from
 | Attribute             | LightCMS implementation                                                         |
 | :-------------------- | :------------------------------------------------------------------------------ |
 | Storage               | Git repository with Markdown files and front matter                             |
-| Editor interface      | Browser-based visual editor                                                     |
+| Editor interface      | Visual editor in your browser                                                  |
 | AI assistance         | In-editor writing assistance                                                    |
 | Voice transcription   | In-editor voice dictation                                                       |
 | Subscriber updates    | GitHub announcement integration via [Newsy](https://github.com/light-cms/newsy) |
@@ -51,10 +43,10 @@ Because publishing creates a standard Git commit, your site can still build from
 
 ## When LightCMS is not the right fit
 
-LightCMS is a good fit when your site content belongs in Git and your publishing flow already runs through CI/CD. It is a weaker fit in these cases:
+LightCMS fits sites that keep their content in Git and already use CI/CD to publish. Consider a different tool if:
 
-- Complex relational content: If your project needs relational queries, dynamic user permissions, or a runtime content API, a database-backed headless CMS such as [Payload](/comparison/lightcms-vs-payload-cms) or Strapi may be a better fit.
-- Managed web hosting: LightCMS does not host your public website. A hosting provider such as Cloudflare Pages, Vercel, Netlify, or S3 serves the built site.
-- Site generation: LightCMS does not render HTML templates. Your static site generator, such as Hugo, Astro, or Zola, handles that build step.
+- You need relational queries, user permissions, or a content API at runtime. A database backed headless CMS such as [Payload](/comparison/lightcms-vs-payload-cms) or Strapi may fit better.
+- You want one service to host the public site. LightCMS does not host it. Cloudflare Pages, Vercel, Netlify, or S3 can serve the built site.
+- You need a tool to render your HTML templates. LightCMS does not do that; your static site generator, such as Hugo, Astro, or Zola, handles the build.
 
-If your team wants Git-based content ownership and a visual editor, the next step is to connect a test repository and confirm that LightCMS writes front matter and Markdown in the format your static site generator expects.
+If you need Git based content management and a visual editor, the next step is to connect a test repository and confirm that LightCMS writes front matter and Markdown in the format your static site generator expects.

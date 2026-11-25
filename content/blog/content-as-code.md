@@ -4,11 +4,10 @@ description: How storing documents as plain text in Git brings software engineer
 date: 2026-11-04T19:22:00Z
 draft: false
 tags:
-  - content as code
-  - docs as code
-  - content in git
-  - markdown workflow
-  - version controlled content
+  - content
+  - frontmatter
+  - git
+  - markdown
 isCJKLanguage: false
 headless: false
 preview: /og-image.png
@@ -94,6 +93,6 @@ my-publication/
 
 ## Further Reading
 
-- [What Is a Git-Based CMS?](/blog/git-based-cms-explained/): Understanding repository-backed publishing
+- [What Is a Git based CMS?](/blog/Git based-cms-explained/): Understanding repository-backed publishing
 - [Drafts, Revisions, and Rollbacks](/blog/lightcms-drafts-and-versioning/): Managing publishing states in Git
-- [Why Git-Based Publishing Works](/blog/why-this/): The philosophy of sustainable content architecture
+- [Why Git based Publishing Works](/blog/why-this/): The philosophy of sustainable content architecture

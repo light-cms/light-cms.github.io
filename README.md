@@ -1,4 +1,4 @@
-### zola based blogs by lightcms team
+# zola based blogs by lightcms team
 
 [![Crowdin](https://badges.crowdin.net/lightcms-blogs/localized.svg)](https://crowdin.com/project/lightcms-blogs)
 

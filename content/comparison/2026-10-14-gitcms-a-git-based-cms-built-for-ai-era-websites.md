@@ -1,6 +1,6 @@
 ---
-title: "GitCMS: A Git-Based CMS for AI-Assisted Website Workflows"
-description: "An overview of GitCMS, its Git-based editing model, and the trade-offs of using it for human and AI-assisted content workflows."
+title: "GitCMS: A Git based CMS for AI-Assisted Website Workflows"
+description: "An overview of GitCMS, its Git based editing model, and the trade-offs of using it for human and AI-assisted content workflows."
 serial: 15
 date: 2026-10-14T13:20:00Z
 draft: false
@@ -12,7 +12,7 @@ tags:
   - git
 ---
 
-[GitCMS](https://gitcms.dev) is a Git based CMS positioned around human and AI assisted website editing. Like other Git-based CMS tools, it keeps content in a repository and uses commits as the publishing mechanism. Its differentiator is an emphasis on reviewable workflows for agent-generated changes.
+[GitCMS](https://gitcms.dev) is a Git based CMS positioned around human and AI assisted website editing. Like other Git based CMS tools, it keeps content in a repository and uses commits as the publishing mechanism. Its differentiator is an emphasis on reviewable workflows for agent-generated changes.
 
 ## Where GitCMS fits
 
@@ -29,4 +29,4 @@ GitCMS is worth evaluating if AI agents or automated tools regularly propose cha
 
 ## Comparison context
 
-Choose GitCMS when AI-assisted governance is part of your workflow. Choose a simpler Git-based CMS when you only need straightforward content editing and Git commits. For broader comparisons, see [Top Git-Based CMS Platforms](/comparison/top-git-cms) and [Pages CMS Alternatives](/comparison/pagescms).
+Choose GitCMS when AI-assisted governance is part of your workflow. Choose a simpler Git based CMS when you only need straightforward content editing and Git commits. For broader comparisons, see [Top Git based CMS Platforms](/comparison/top-git-cms) and [Pages CMS Alternatives](/comparison/pagescms).

@@ -31,7 +31,7 @@ my-blog-repo/
 ├──.github/
 │ └── workflows/
 │ └── deploy.yml # Build and deploy pipeline
-├── package.json # For Node-based tools like Astro
+├── package.json # For Node tools like Astro
 └── hugo.toml # Or astro.config.mjs, zola.toml
 ```
 
@@ -57,7 +57,7 @@ If your site uses TOML or another front matter format, confirm that LightCMS sup
 
 ## Connect the GitHub repository
 
-Use a scoped GitHub App installation instead of a long-lived personal access token when possible. A scoped installation limits repository access and is easier to audit.
+When possible, use a scoped GitHub App installation instead of a long lived personal access token. A scoped installation limits repository access and is easier to audit.
 
 1. Sign in to the [LightCMS dashboard](https://www.lightcms.me).
 2. Select the option to connect a repository.
@@ -71,7 +71,7 @@ When you publish in LightCMS, the change becomes a Git commit. Your deployment p
 
 ### Example: GitHub Actions for GitHub Pages
 
-This example shows an Astro-style build deployed to GitHub Pages. Adjust the install/build commands and output directory for your generator.
+This example shows an Astro build deployed to GitHub Pages. Adjust the install/build commands and output directory for your generator.
 
 ```yaml
 name: Deploy Website
@@ -138,7 +138,7 @@ Managed platforms reduce CI configuration, but they add another service to your 
 
 ## Verify the publishing loop
 
-After connecting LightCMS and configuring deployment, test the full path:
+Once LightCMS is connected and deployment is configured, test the whole publishing path:
 
 1. Create a draft post in LightCMS.
 2. Publish the post.

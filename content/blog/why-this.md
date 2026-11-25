@@ -1,37 +1,34 @@
 ---
 title: "Why LightCMS Exists"
-description: "Why LightCMS uses Git-backed Markdown and a visual editor to make static site publishing easier without giving up version control."
+description: "Why LightCMS uses Git based Markdown and a visual editor to make static site publishing easier without giving up version control."
 serial: 2
 date: 2026-09-18T00:41:00Z
 draft: false
-keywords: "github newsletter"
-
-taxonomies:
-  tags:
-    - cms
-    - philosophy
-    - lightcms
+tags:
+  - cms
+  - philosophy
+  - lightcms
 ---
 
-LightCMS exists to make publishing to a static site as straightforward as writing in a browser editor, while keeping content in Git as Markdown files. The goal is to preserve the operational benefits of static sites without requiring every author to work through a developer workflow.
+We are building [LightCMS](https://lightcms.me) because publishing to a static site should not require every writer to follow a developer workflow. You can write in a browser editor, while your content stays in Git as Markdown files.
 
 ## The problem with static publishing workflows
 
-Static site generators are effective at building fast, deployable websites, but the authoring workflow can be difficult for non-developers. Writing a post often means cloning a repository, editing Markdown, managing front matter, creating commits, and waiting for CI/CD.
+Static site generators make it straightforward to build and deploy a site. Writing for one can still mean cloning a repository, editing Markdown, managing front matter, committing, and waiting for CI/CD.
 
-That workflow is acceptable for developers. It becomes a barrier for writers, editors, and teams who want to publish content without learning Git internals.
+That is familiar territory for developers. For writers and editors, it can get in the way of publishing.
 
-## Why Git-backed content still matters
+## Why Git based content still matters
 
-Keeping content in Git has practical advantages:
+Keeping content in Git gives you a few practical things:
 
-- Version history: Every change can be reviewed, diffed, and reverted.
-- Portability: Markdown files can move between generators, hosts, and editors.
-- Deployment fit: Static hosting and CI/CD workflows already work well with Git repositories.
-- Ownership: Content lives in your repository, not in a proprietary CMS database.
+- A history of changes you can review, compare, or revert.
+- Markdown files you can move between generators, hosts, and editors.
+- A direct path into the Git based build and deployment workflows many static sites already use.
+- A copy of your content in your own repository, rather than a proprietary CMS database.
 
 ## What LightCMS gives up
 
-LightCMS leans into Git-backed publishing, not real-time app features. That’s great for blogs, docs, and marketing sites. It’s not the right tool if you need personalization, complex relational content, or runtime database queries.
+LightCMS is built around publishing from Git, not real time app features. That works well for blogs, documentation, and marketing sites. If you need personalization, complex relationships between content, or database queries at runtime, another kind of CMS may suit you better.
 
-The idea is simple: let people write in a visual editor, but keep the source of truth in Markdown files and Git history. For the product overview, see [What Is LightCMS?](/blog/what-is-lightcms/).
+You write in a visual editor, while Markdown files and Git history remain the source of truth. For more about the product, see [What Is LightCMS?](/blog/what-is-lightcms/).

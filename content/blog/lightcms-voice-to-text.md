@@ -4,13 +4,11 @@ description: "How voice dictation can fit into a Markdown blogging workflow, wit
 serial: 33
 date: "2026-10-16T09:30:00.000Z"
 draft: false
-keywords:
-  - voice to text markdown
-  - dictation blogging
-  - whisper transcription cms
-  - speech to text writing
-  - lightcms voice
-
+tags:
+  - lightcms
+  - voice
+  - dictation
+  - markdown
 slug: lightcms-voice-to-text
 ---
 

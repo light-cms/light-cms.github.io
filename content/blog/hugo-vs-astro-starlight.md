@@ -4,19 +4,11 @@ description: "Compare Hugo and Astro Starlight for documentation sites by setup,
 serial: 22
 date: 2026-10-14T14:30:00Z
 draft: false
-keywords:
-  - hugo vs starlight
-  - astro starlight vs hugo
-  - best docs site generator
-  - starlight documentation
-  - documentation site framework
-
-taxonomies:
-  tags:
-    - hugo
-    - astro
-    - starlight
-    - documentation
+tags:
+  - hugo
+  - astro
+  - starlight
+  - documentation
 ---
 
 Hugo and Astro Starlight can both build fast, static documentation sites from Markdown content. Hugo is a general-purpose static site generator that you adapt for docs with themes and templates. Starlight is an Astro documentation template with common docs features configured from the start.
@@ -48,4 +40,4 @@ The trade-off is toolchain complexity. You take on Node.js dependencies and the 
 
 Choose Hugo when you need a minimal toolchain, already operate Hugo sites, or expect very large builds where Hugo's speed is a priority. Choose Starlight when you are starting a new docs site and want docs-oriented defaults with component extensibility.
 
-Both approaches work with Markdown in Git. A Git-based CMS such as [LightCMS](/getting-started/) can fit either workflow if it commits Markdown files to the repository. For adjacent comparisons, see [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and [Configuring Your Repository and CI/CD](/blog/configuring-your-repository-cicd/).
+Both approaches work with Markdown in Git. A Git based CMS such as [LightCMS](/getting-started/) can fit either workflow if it commits Markdown files to the repository. For adjacent comparisons, see [Astro vs Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/) and [Configuring Your Repository and CI/CD](/blog/configuring-your-repository-cicd/).

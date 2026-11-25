@@ -4,22 +4,14 @@ description: "A practical guide to starting a blog with Markdown, a static site 
 serial: 12
 date: 2026-10-14T12:50:00Z
 draft: false
-keywords:
-  - how to start a blog
-  - start a blog for free
-  - markdown blog
-  - static site blog
-  - best way to start a blog 2026
-
-taxonomies:
-  tags:
-    - blogging
-    - static-sites
-    - markdown
-    - getting-started
+tags:
+  - blogging
+  - static-sites
+  - markdown
+  - getting-started
 ---
 
-You can start a blog by writing posts in Markdown, generating a static site, and deploying it to a static host. This setup keeps content portable, keeps hosting simple, and avoids the need for a database-backed CMS for most personal or technical blogs.
+You can start a blog by writing posts in Markdown, generating a static site, and deploying it to a static host. This setup keeps content portable, keeps hosting simple, and avoids the need for a database based CMS for most personal blogs and documentation sites.
 
 ## Step 1: Choose a static site generator
 
@@ -50,7 +42,7 @@ tags:
 Write the post body in Markdown.
 ```
 
-Markdown keeps content readable in plain text and portable across tools. It also works well with Git-based review and version history.
+Markdown keeps content readable in plain text and portable across tools. It also works well with Git based review and version history.
 
 ## Step 3: Deploy to static hosting
 
@@ -63,9 +55,9 @@ A basic deployment flow looks like this:
 3. Deploy on every push to your main branch.
 4. Add a custom domain if needed.
 
-## Step 4: Add a Git-based CMS if needed
+## Step 4: Add a Git based CMS if needed
 
-If writing in a code editor slows you down, use a Git-based CMS. It can provide a browser editor while still committing Markdown files to your repository. [LightCMS](/getting-started/) is one option in this category.
+If writing in a code editor slows you down, use a Git based CMS. It can provide a browser editor while still committing Markdown files to your repository. [LightCMS](/getting-started/) is one option in this category.
 
 ## Step 5: Plan for maintenance
 

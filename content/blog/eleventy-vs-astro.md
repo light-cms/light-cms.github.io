@@ -4,14 +4,11 @@ description: "Compare Eleventy and Astro on templating, JavaScript output, conte
 serial: 27
 date: 2026-10-14T15:20:00Z
 draft: false
-keywords: "newsy"
-
-taxonomies:
-  tags:
-    - eleventy
-    - astro
-    - ssg
-    - static-sites
+tags:
+  - eleventy
+  - astro
+  - ssg
+  - static-sites
 ---
 
 Eleventy and Astro both can generate static sites with little or no client-side JavaScript by default. The difference is scope: Eleventy is a flexible static site generator centered on templates and content files, while Astro is a component-oriented framework that can add interactive islands when needed.
@@ -42,7 +39,7 @@ Astro also ships static HTML by default, but it has a built-in path for interact
 
 Both tools work well with Markdown files in Git. Astro's Content Collections can validate front matter during builds, which helps catch metadata errors before deployment. Eleventy can support similar checks, but you may need to add conventions or custom validation.
 
-For Git-based publishing, either generator can work with a CMS that commits Markdown to your repository. See [Best Static Site Generators in 2026](/blog/best-static-site-generators/) for broader context.
+For Git based publishing, either generator can work with a CMS that commits Markdown to your repository. See [Best Static Site Generators in 2026](/blog/best-static-site-generators/) for broader context.
 
 ## Which one to choose
 

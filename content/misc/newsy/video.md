@@ -1,16 +1,14 @@
 ---
 title: Newsy Video Walkthrough
-description: A short video walkthrough for setting up Newsy, from cloning the repository to running the bot.
-keywords: newsy
+description: "A short video walkthrough for setting up Newsy, from cloning the repository to running the bot."
 date: 2026-09-12T01:07:00Z
 draft: false
 weight: 0
-taxonomies:
-  tags:
-    - video
-    - youtube
-    - newsy
-    - newsletter
+tags:
+  - video
+  - youtube
+  - newsy
+  - newsletter
 created: 2026-11-09T18:30:00.000Z
 ---
 

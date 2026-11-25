@@ -1,31 +1,31 @@
 +++
-title = "LightCMS: Git-Backed Publishing for Static Sites"
-description = "Guides on Git-based CMS workflows, static site generators, and Markdown publishing with LightCMS."
+title = "LightCMS: Git based Publishing for Static Sites"
+description = "Guides on Git based CMS workflows, static site generators, and Markdown publishing with LightCMS."
 +++
 
-[LightCMS](https://www.lightcms.me) is a Git based content management system for static site generators. It stores content as Markdown files in your Git repository so one can edit in a browser, review changes with version controlled git, and publish websites through your existing CI/CD pipeline.
+[LightCMS](https://www.lightcms.me) is a content management system for static site generators. It keeps your content as Markdown in Git, where you can edit it in a browser, review changes, and publish through the CI/CD pipeline you already use.
 
 ## What you can do with LightCMS
 
-| Capability            | How it works in a Git based workflow                                                                                  |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| Visual editing        | Draft and edit Markdown in a browser based editor.                                                                    |
-| Git-backed publishing | Save content as commits in your repository instead of storing posts in a separate CMS database.                       |
-| Git workflow          | Use branches, pull requests, and history as part of your normal review process.                                       |
-| Reader updates        | Send update notifications through GitHub based workflows with tools like [Newsy](https://github.com/light-cms/newsy). |
+| Capability            | How it works                                                                                                      |
+| :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| Visual editing        | Write and edit Markdown in your browser.                                                                        |
+| Git publishing        | Save changes as commits in your repository rather than in a separate CMS database.                               |
+| Review                | Use branches, pull requests, and Git history to review changes.                                                  |
+| Reader updates        | Send updates through GitHub workflows with tools like [Newsy](https://github.com/light-cms/newsy).               |
 
 ## How publishing works
 
-1. Connect GitHub: Authenticate with your GitHub account.
-2. Select a repository: Choose the repository that contains your static site content.
-3. Edit content: Draft posts and update front matter in the browser.
-4. Publish to Git: LightCMS commits Markdown changes to your repository.
-5. Deploy with CI/CD: Your existing build pipeline, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, builds and deploys the site.
+1. Sign in with GitHub.
+2. Choose the repository that holds your site content.
+3. Write or edit a post in the browser, including any front matter your site needs.
+4. Publish the change to Git.
+5. Let your existing pipeline, such as GitHub Actions, Cloudflare Pages, Vercel, or Netlify, build and deploy the site.
 
 ## Start with these guides
 
-- [Why Git-based publishing?](/blog/why-this/) covers trade offs between Git based and database based dynamic CMSs.
-- [Self-hosting LightCMS](/blog/selfhost/) explains how to deploy your own instance of [lightcms](https://github.com/light-cms/lightcms).
+- [Why Git based publishing?](/blog/why-this/) covers trade offs between Git based and database based dynamic CMSs.
+- [Self hosting LightCMS](/blog/selfhost/) explains how to deploy your own instance of [lightcms](https://github.com/light-cms/lightcms).
 - [How Newsy works](/blog/newsletter-automation/) describes git based workflows.
 
 ## Comparisons and architecture
@@ -34,4 +34,4 @@ description = "Guides on Git-based CMS workflows, static site generators, and Ma
 - [Static vs. Dynamic Sites](/blog/static-vs-dynamic/)
 - [Astro vs. Hugo](/blog/astro-vs-hugo-which-static-site-generator-should-you-use-in-2026/)
 - [Cloudflare Pages vs. Vercel](/blog/cloudflare-pages-vs-vercel/)
-- [Top Git-Backed CMS Platforms](/comparison/top-git-cms/)
+- [Top Git based CMS Platforms](/comparison/top-git-cms/)

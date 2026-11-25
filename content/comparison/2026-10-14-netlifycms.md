@@ -4,22 +4,15 @@ description: "A comparison of Decap CMS alternatives, including LightCMS, Pages 
 serial: 13
 date: 2026-10-14T13:00:00Z
 draft: false
-keywords:
-  - netlify cms alternatives
-  - decap cms alternatives
-  - netlify cms vs
-  - best git cms 2026
-  - decap cms replacement
 
-taxonomies:
-  tags:
-    - cms
-    - decap
-    - netlify-cms
-    - git
+tags:
+  - cms
+  - decap
+  - netlify-cms
+  - git
 ---
 
-Decap CMS (formerly Netlify CMS) remains a Git-based CMS option, but teams often evaluate alternatives when they need a different editing experience, simpler setup, visual editing, or specific workflow features. The alternatives below keep content in Git but differ in interface, hosting model, and operational complexity.
+Decap CMS (formerly Netlify CMS) remains a Git based CMS option, but teams often evaluate alternatives when they need a different editing experience, simpler setup, visual editing, or specific workflow features. The alternatives below keep content in Git but differ in interface, hosting model, and operational complexity.
 
 ## Alternatives at a glance
 
@@ -41,6 +34,6 @@ Choose based on your content workflow, not feature count:
 - Teams want minimal setup: evaluate Pages CMS or Sveltia CMS.
 - AI-generated changes need review: evaluate GitCMS.
 
-Before migrating, confirm front matter compatibility, media paths, authentication model, and build pipeline behavior. Most Git-based CMS migrations are configuration changes, but field names and media handling often need adjustment.
+Before migrating, confirm front matter compatibility, media paths, authentication model, and build pipeline behavior. Most Git based CMS migrations are configuration changes, but field names and media handling often need adjustment.
 
-For related comparisons, see [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms) and [Top Git-Based CMS Platforms](/comparison/top-git-cms).
+For related comparisons, see [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms) and [Top Git based CMS Platforms](/comparison/top-git-cms).

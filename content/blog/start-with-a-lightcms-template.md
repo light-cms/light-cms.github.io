@@ -4,14 +4,11 @@ description: "How LightCMS starter templates provide preconfigured static site r
 serial: 35
 date: "2026-10-16T09:50:00.000Z"
 draft: false
-keywords: newsy setup
-
-taxonomies:
-  tags:
-    - lightcms
-    - templates
-    - github
-    - static-sites
+tags:
+  - lightcms
+  - templates
+  - github
+  - static-sites
 slug: start-with-a-lightcms-template
 ---
 

@@ -1,22 +1,14 @@
 ---
 title: "LightCMS vs Keystatic: Schema in Code vs Editor for Writers"
-description: "Compare LightCMS and Keystatic for Git-based content editing: schema-as-code forms versus a document editor for writers."
+description: "Compare LightCMS and Keystatic for Git based content editing schema as code forms versus a document editor for writers."
 serial: 40
 date: 2026-10-16T10:40:00Z
 draft: false
-keywords:
-  - lightcms vs keystatic
-  - keystatic alternatives
-  - keystatic cms
-  - file based cms comparison
-  - local first cms
-
-taxonomies:
-  tags:
-    - lightcms
-    - keystatic
-    - cms
-    - comparison
+tags:
+  - lightcms
+  - keystatic
+  - cms
+  - comparison
 slug: lightcms-vs-keystatic
 ---
 

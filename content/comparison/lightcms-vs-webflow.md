@@ -1,6 +1,6 @@
 ---
 title: "LightCMS vs Webflow: Code You Own vs a Visual Builder"
-description: "Compare LightCMS and Webflow: Git-based Markdown content for developer-owned sites versus a hosted visual website builder and CMS."
+description: "Compare LightCMS and Webflow: Git based Markdown content for developer owned sites versus a hosted visual website builder and CMS."
 serial: 57
 date: "2026-10-16T13:10:00.000Z"
 draft: false
@@ -29,7 +29,7 @@ LightCMS assumes the frontend exists already. Developers own the templates and b
 | Publishing      | Your CI/CD and host          | Webflow hosting/publish                |
 | Editing         | Document editor for Markdown | CMS fields tied to designs             |
 | Version control | Git history                  | Platform versioning, not Git           |
-| Best for        | Developer-owned static sites | Teams wanting design + CMS in one tool |
+| Best for        | Developer owned static sites | Teams wanting design + CMS in one tool |
 
 ## When Webflow makes more sense
 

@@ -1,18 +1,10 @@
 ---
 title: Newsy Roadmap
-description: "What Newsy supports today: a hosted instance, self-hosting on Vercel, and the current GitHub-based newsletter workflow."
-keywords:
-  - newsy
-  - newsletter roadmap
-  - github newsletter
-  - self hosted newsletter
+description: "What Newsy the GitHub based newsletter platform."
 draft: false
-weight: 0
-
-taxonomies:
-  tags:
-    - newsy
-    - newsletter
+tags:
+  - newsy
+  - newsletter
 ---
 
 Newsy already has a hosted option and a self-host path. The goal is simple: make GitHub-based newsletter updates easy to try and easy to run yourself.

@@ -3,15 +3,12 @@ title: "Astro vs Hugo: Which Static Site Generator to Choose?"
 description: "Compare Astro and Hugo by build speed, templating, content validation, interactivity, and maintenance trade offs."
 date: 2026-10-14T12:10:00Z
 draft: false
-keywords: newsy
-
-taxonomies:
-  tags:
-    - astro
-    - hugo
-    - static
-    - sites
-    - ssg
+tags:
+  - astro
+  - hugo
+  - static
+  - sites
+  - ssg
 ---
 
 Astro and Hugo both generate static websites, but they optimize for different workflows. Hugo is a single Go binary built for fast builds and simple deployment. Astro is a Node.js-based framework that uses component syntax, TypeScript, and an islands architecture for interactive UI.
@@ -88,7 +85,7 @@ If your site needs mostly static content, Hugo's simpler model can be enough. If
 
 ## Git based CMS compatibility
 
-Both generators work well in Git-based publishing workflows because content can live as Markdown files in a repository. A CMS such as [LightCMS](/getting-started/) can edit those files and commit changes back to Git.
+Both generators work well in Git based publishing workflows because content can live as Markdown files in a repository. A CMS such as [LightCMS](/getting-started/) can edit those files and commit changes back to Git.
 
 This shared content model reduces migration risk. Templates and components change between generators, but Markdown content is often portable.
 

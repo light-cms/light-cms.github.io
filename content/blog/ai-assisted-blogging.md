@@ -4,18 +4,11 @@ description: "A practical guide to using AI in a blogging workflow for outlining
 serial: 37
 date: 2026-10-16T10:10:00Z
 draft: false
-keywords:
-  - ai assisted blogging
-  - ai writing workflow
-  - ai for content creation
-  - writing with ai
-  - ai blog tool
-taxonomies:
-  tags:
-    - ai
-    - writing
-    - blogging
-    - workflow
+tags:
+  - ai
+  - writing
+  - blogging
+  - workflow
 ---
 
 AI copilot for blogging works best when you use models for bounded tasks such as outlining, rewriting, proofreading, and transcription, while keeping facts, voice, and editorial judgment under human control. Treating AI as a drafting assistant can reduce friction; treating it as the author usually produces generic, untrustworthy content.
@@ -51,6 +44,6 @@ The counterargument is speed: AI can generate a complete draft in minutes. That 
 5. Use AI for editing passes: Request grammar, clarity, or formatting help on selected text.
 6. Verify before publish: Check facts, links, code, and quotes; then commit the final Markdown.
 
-If you use AI inside a CMS, keep the human approval step explicit. [LightCMS](/blog/what-is-lightcms/) describes AI assistance in-editor; confirm the current feature set and provider model before making specific product claims.
+If you use AI inside a CMS, keep the human approval step explicit. [LightCMS](/blog/what-is-lightcms/) describes AI assistance in editor; confirm the current feature set and provider model before making specific product claims.
 
 For related workflows, see [Voice-to-Text Dictation](/blog/lightcms-voice-to-text/) and [The LightCMS Copilot](/blog/lightcms-ai-copilot/).

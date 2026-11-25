@@ -4,19 +4,12 @@ description: "Compare Cloudflare Pages and Vercel for static sites by bandwidth 
 serial: 9
 date: 2026-10-14T12:20:00Z
 draft: false
-keywords:
-  - cloudflare pages vs vercel
-  - vercel vs cloudflare pages
-  - best free static site hosting
-  - cloudflare pages pricing
-  - vercel free tier
-
-taxonomies:
-  tags:
-    - hosting
-    - cloudflare
-    - vercel
-    - jamstack
+tags:
+  - cloudflare
+  - vercel
+  - pages
+  - static-sites
+  - hosting
 ---
 
 Cloudflare Pages and Vercel both deploy static sites from Git, provide preview deployments, and serve assets over global CDN infrastructure. The main difference is focus: Cloudflare emphasizes network and edge infrastructure, while Vercel emphasizes frontend developer workflows and deep Next.js integration.

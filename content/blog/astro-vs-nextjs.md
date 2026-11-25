@@ -4,19 +4,11 @@ description: "Compare Astro and Next.js for content sites and web applications, 
 serial: 24
 date: 2026-10-14T14:50:00Z
 draft: false
-keywords:
-  - astro vs nextjs
-  - nextjs vs astro
-  - astro or next for blog
-  - astro vs nextjs for content site
-  - which react framework 2026
-
-taxonomies:
-  tags:
-    - astro
-    - nextjs
-    - react
-    - ssg
+tags:
+  - astro
+  - nextjs
+  - react
+  - ssg
 ---
 
 Astro and Next.js can both build fast websites, but they are optimized for different jobs. Astro is designed for content heavy sites that should ship mostly HTML and minimal client-side JavaScript. Next.js is designed for React applications that need routing, server rendering, data mutations, and interactive application behavior.
@@ -73,9 +65,9 @@ export const collections = { blog };
 
 Next.js can work well with Markdown and MDX, but teams often assemble the content pipeline from multiple tools. That flexibility is useful for custom applications, but it adds setup and maintenance work for editorial sites.
 
-## Git-based CMS compatibility
+## Git based CMS compatibility
 
-Both frameworks can read Markdown files from a Git repository. A Git-based CMS such as [LightCMS](/getting-started/) can commit content changes, and your CI/CD pipeline can build the site on Vercel, Cloudflare Pages, Netlify, or another host.
+Both frameworks can read Markdown files from a Git repository. A Git based CMS such as [LightCMS](/getting-started/) can commit content changes, and your CI/CD pipeline can build the site on Vercel, Cloudflare Pages, Netlify, or another host.
 
 Because content stays in Git, migrating between Astro and Next.js usually means changing templates and build configuration, not rewriting every article.
 

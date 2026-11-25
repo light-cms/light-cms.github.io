@@ -1,20 +1,13 @@
 ---
-title: "Newsy: A GitHub-Powered Newsletter Platform"
-description: "Newsy is a serverless, GitHub-powered newsletter platform where subscribers and issues live in your repository, without mailing lists, SMTP, or a database."
-keywords:
-  - newsy
-  - github newsletter
-  - serverless newsletter
-  - newsletter platform
-  - github issues newsletter
+title: "Newsy: A GitHub Powered Newsletter Platform"
+description: "Newsy is a serverless, GitHub powered newsletter platform where subscribers and issues live in your repository, without mailing lists, SMTP, or a database."
 
-taxonomies:
-  tags:
-    - newsy
-    - newsletter
-    - github
-    - golang
-    - webassembly
+tags:
+  - newsy
+  - newsletter
+  - github
+  - golang
+  - webassembly
 slug: getstarted
 date: "2026-11-19T10:59:17.693Z"
 ---

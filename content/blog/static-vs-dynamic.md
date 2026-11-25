@@ -1,21 +1,13 @@
 ---
-title: "Static vs. Dynamic Sites Which Architecture Fits Your Project?"
+title: "Static vs. Dynamic Sites: Which Fits Your Project?"
 description: "Compare static and dynamic website architectures by request flow, security surface, operational cost, performance, and content workflow trade-offs."
 serial: 7
 date: 2026-10-14T12:00:00Z
 draft: false
-keywords:
-  - static site vs dynamic site
-  - static website vs dynamic website
-  - static site advantages
-  - jamstack vs dynamic
-  - static site cms
-preview: /og-image.png
-taxonomies:
-  tags:
-    - static-sites
-    - architecture
-    - jamstack
+tags:
+  - static-sites
+  - architecture
+  - jamstack
 ---
 
 Static sites serve prebuilt files from a CDN; dynamic sites generate responses at request time using application code and often a database. For blogs, documentation, marketing pages, and most publication sites, static delivery is usually simpler and cheaper to operate. Dynamic delivery is the better fit when each request depends on user state or frequently changing data.
@@ -43,7 +35,7 @@ Static files are easy to cache at the edge, which can make delivery fast and pre
 
 ### Content workflow
 
-Static sites historically required developer workflows for publishing. Git-based CMS tools reduce that barrier by giving editors a browser interface while keeping content in Git. Dynamic CMS platforms often provide mature editorial workflows out of the box, especially for complex permissions and structured content.
+Static sites historically required developer workflows for publishing. Git based CMS tools reduce that barrier by giving editors a browser interface while keeping content in Git. Dynamic CMS platforms often provide mature editorial workflows out of the box, especially for complex permissions and structured content.
 
 ## When to choose each model
 
@@ -61,4 +53,4 @@ Choose a dynamic site when:
 - You need complex relational queries at request time.
 - Application behavior is the product, not just the publishing layer.
 
-A hybrid approach is common: static pages for content, plus serverless functions or APIs for forms, search, comments, or authenticated features. For implementation details, see [What Is a Git-Based CMS?](/blog/git-based-cms-explained/) and [Static Sites and Carbon Emissions](/blog/greener-web-static-sites/).
+A hybrid approach is common: static pages for content, plus serverless functions or APIs for forms, search, comments, or authenticated features. For implementation details, see [What Is a Git based CMS?](/blog/Git based-cms-explained/) and [Static Sites and Carbon Emissions](/blog/greener-web-static-sites/).

@@ -4,7 +4,6 @@ description: "Writing helps you turn known problem solving into notes other peop
 date: "2026-11-01T14:02:00Z"
 draft: false
 tags:
-  - why writing matters
   - start-writing
   - blog
   - static-site

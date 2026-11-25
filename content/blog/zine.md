@@ -26,7 +26,7 @@ Zine is a static site generator written in Zig. It focuses on fast builds and us
 | Runtime/implementation | Written in Zig                                               | Smaller ecosystem than established SSGs          |
 | Templating/content     | Uses Zine-specific formats such as SuperHTML/SuperMD/Scripty | Learning curve and limited portability           |
 | Build model            | Static output from content and layouts                       | Fewer off-the-shelf themes and integrations      |
-| CMS compatibility      | Not a standard CommonMark + front matter workflow            | Typical Git-based CMS setups may need adaptation |
+| CMS compatibility      | Not a standard CommonMark + front matter workflow            | Typical Git based CMS setups may need adaptation |
 
 
 ## Content workflow considerations

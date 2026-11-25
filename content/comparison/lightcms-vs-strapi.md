@@ -4,24 +4,17 @@ description: "Compare LightCMS and Strapi: Markdown in Git for static sites vers
 serial: 50
 date: 2026-10-16T12:00:00Z
 draft: false
-keywords:
-  - lightcms vs strapi
-  - strapi alternatives
-  - strapi vs git cms
-  - open source cms comparison
-  - strapi for blog
 
-taxonomies:
-  tags:
-    - lightcms
-    - strapi
-    - cms
-    - comparison
-    - headless
+tags:
+  - lightcms
+  - strapi
+  - cms
+  - comparison
+  - headless
 slug: lightcms-vs-strapi
 ---
 
-Strapi and LightCMS are both open-source and self-hostable, but they store content in very different places. Strapi is a headless CMS: content goes into a database and comes out through REST or GraphQL APIs. LightCMS is a Git-based editor: content goes into Markdown files in your repository and gets built into a static site.
+Strapi and LightCMS are both open-source and self-hostable, but they store content in very different places. Strapi is a headless CMS: content goes into a database and comes out through REST or GraphQL APIs. LightCMS is a Git based editor: content goes into Markdown files in your repository and gets built into a static site.
 
 That one difference drives most of the others: runtime, cost, versioning, and how much infrastructure you need to keep healthy.
 
@@ -53,4 +46,4 @@ The writing experience is simpler too: open a document, write, publish. You don�
 
 Pick Strapi if you need a content API and structured, relational content. Pick LightCMS if you want a simple publishing workflow for a static site. Strapi gives you flexibility, but you pay for it in operations. LightCMS gives you simplicity and portability, but it’s not the right tool when your content needs to be queried like data.
 
-If you’re building a blog or docs site, I’d start simple. You can always move to a headless CMS later if you truly need an API. Going the other way, pulling a database-shaped content model back into files, is usually harder. See [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms) or [Git-Based CMS Explained](/blog/git-based-cms-explained/).
+If you’re building a blog or docs site, I’d start simple. You can always move to a headless CMS later if you truly need an API. Going the other way, pulling a database-shaped content model back into files, is usually harder. See [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms) or [Git based CMS Explained](/blog/Git based-cms-explained/).

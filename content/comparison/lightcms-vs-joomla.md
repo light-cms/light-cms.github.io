@@ -15,7 +15,7 @@ tags:
   - modern cms for blogs
 slug: lightcms-vs-joomla
 ---
-LightCMS and Joomla represent different CMS models. LightCMS supports Git-based static site publishing with Markdown content. Joomla is a traditional PHP CMS that stores content in a database and renders pages through a server-side application.
+LightCMS and Joomla represent different CMS models. LightCMS supports Git based static site publishing with Markdown content. Joomla is a traditional PHP CMS that stores content in a database and renders pages through a server-side application.
 
 ## Comparison
 
@@ -35,4 +35,4 @@ Joomla makes sense when you need a traditional CMS with server-side features, ex
 
 LightCMS makes sense when the project is mostly a publication. If you want static delivery, lower runtime complexity, and content stored in Git, the lighter setup is easier to manage.
 
-Joomla can handle dynamic CMS needs, but you take on maintenance and security work. LightCMS keeps publishing simple, but it won’t replace an extension-heavy dynamic CMS. See [LightCMS vs Drupal](/comparison/lightcms-vs-drupal) and [Git-Based CMS Explained](/blog/git-based-cms-explained/).
+Joomla can handle dynamic CMS needs, but you take on maintenance and security work. LightCMS keeps publishing simple, but it won’t replace an extension-heavy dynamic CMS. See [LightCMS vs Drupal](/comparison/lightcms-vs-drupal) and [Git based CMS Explained](/blog/Git based-cms-explained/).

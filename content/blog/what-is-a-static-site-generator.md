@@ -55,4 +55,4 @@ Popular SSGs include Astro, Hugo, Zola, Eleventy, Jekyll, and SvelteKit in stati
 
 ## Where a Git based CMS fits
 
-An SSG handles rendering. A Git-based CMS handles authoring by giving editors a browser interface that commits Markdown to the repository. That combination keeps the delivery architecture static while making content editing accessible to non-developers. See [What Is a Git-Based CMS?](/blog/git-based-cms-explained/).
+An SSG handles rendering. A Git based CMS handles authoring by giving editors a browser interface that commits Markdown to the repository. That combination keeps the delivery architecture static while making content editing accessible to non-developers. See [What Is a Git based CMS?](/blog/Git based-cms-explained/).

@@ -1,14 +1,8 @@
 ---
 title: "What Is Markdown?"
-description: "Markdown is a plain-text markup format that uses simple symbols for headings, lists, links, and code, making it portable for docs, blogs, and static sites."
+description: "Markdown is a markup format that uses simple symbols for formatting text."
 date: "2026-10-14T15:00:00.000Z"
 draft: false
-keywords:
-  - what is markdown
-  - markdown tutorial
-  - markdown syntax guide
-  - why use markdown
-  - markdown for writers
 
 slug: what-is-markdown
 ---
@@ -66,4 +60,4 @@ tags:
 The article body starts here.
 ```
 
-Front matter stores metadata; Markdown stores content. Together, they form a portable content format for Git-based publishing workflows. For more detail, see [What Is Front Matter in Markdown?](/blog/what-is-front-matter/) and [What Is a Git-Based CMS?](/blog/git-based-cms-explained/).
+Front matter stores metadata; Markdown stores content. Together, they form a portable content format for Git based publishing workflows. For more detail, see [What Is Front Matter in Markdown?](/blog/what-is-front-matter/) and [What Is a Git based CMS?](/blog/Git based-cms-explained/).

@@ -1,17 +1,17 @@
 ---
 title: Getting Started with LightCMS
 description: Connect a GitHub repository to LightCMS, edit Markdown content in a browser, and publish through your existing Git based deployment workflow.
-slug: started-lightcms
+slug: getting-started-with-lightcms
 date: 2026-11-22T11:47:03.315Z
-taxonomies:
-  tags:
-    - lightcms
-    - git
-keywords:
+tags:
   - lightcms
+  - git
+  - github
+  - static-sites
+draft: false
 ---
 
-LightCMS is a Git based CMS for static sites. It lets you edit Markdown content in a browser and commit changes to a GitHub repository, so your existing static site build and deployment pipeline can publish the site.
+[LightCMS](https://lightcms.me) is a CMS for static sites. Edit Markdown in your browser and commit it to GitHub. Your existing build and deployment pipeline takes it from there.
 
 ## Before you start
 
@@ -23,11 +23,11 @@ You need:
 
 ## Setup steps
 
-1. Sign in: Authenticate with the Git provider supported by LightCMS.
-2. Install/grant access: Authorize LightCMS to access the repository that contains your site content.
-3. Select content paths: Identify where posts, pages, and assets live in the repository.
-4. Edit content: Create or update a post, including front matter fields required by your static site generator.
-5. Publish: Commit the change and confirm your CI/CD pipeline builds and deploys the site.
+1. Sign in with a provider LightCMS supports.
+2. Give [LightCMS](https://lightcms.me) access to the repository that holds your site content.
+3. Choose where your posts, pages, and assets live.
+4. Create or edit a post, including the front matter your site generator needs.
+5. Publish the change, then check that your CI/CD pipeline builds and deploys the site.
 
 ## What to verify after setup
 
@@ -43,5 +43,5 @@ You need:
 
 - [Why LightCMS Exists](/blog/why-this/)
 - [Start with a LightCMS Template](/blog/start-with-a-lightcms-template/)
-- [Self-Hosting LightCMS](/blog/selfhost/)
+- [Self Hosting LightCMS](/blog/selfhost/)
 - [Configuring Your Repository and CI/CD](/blog/configuring-your-repository-cicd/)

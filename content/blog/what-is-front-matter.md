@@ -4,19 +4,12 @@ description: "Front matter is YAML, TOML, or JSON metadata at the top of a Markd
 serial: 45
 date: 2026-10-16T11:10:00Z
 draft: false
-keywords:
-  - what is front matter
-  - front matter markdown
-  - yaml front matter
-  - static site metadata
-  - markdown metadata
 
-taxonomies:
-  tags:
-    - markdown
-    - explainers
-    - static-sites
-    - cms
+tags:
+  - markdown
+  - explainers
+  - static-sites
+  - cms
 ---
 
 Front matter is a metadata block at the top of a content file that describes the page to a static site generator. It typically contains fields such as title, description, date, tags, draft status, and template information.
@@ -54,6 +47,6 @@ The metadata sits between delimiters at the top of the file. The Markdown body f
 
 Front matter errors are a frequent cause of static site build failures. Common problems include invalid YAML indentation, incorrect date formats, missing quotes around special characters, and inconsistent field names across files.
 
-A Git-based CMS can reduce these errors by exposing front matter as form fields and validating values before saving. Even with a visual editor, keep the underlying front matter format consistent across your content repository.
+A Git based CMS can reduce these errors by exposing front matter as form fields and validating values before saving. Even with a visual editor, keep the underlying front matter format consistent across your content repository.
 
 For related reading, see [What Is Markdown?](/blog/what-is-markdown/) and [The LightCMS Editor Tour](/blog/lightcms-editor-tour/).

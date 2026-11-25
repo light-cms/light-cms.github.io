@@ -1,10 +1,10 @@
 +++
 title = "Comparisons"
-description = "Side-by-side comparisons of LightCMS with headless CMS platforms, Git-based editors, traditional CMS platforms, and site builders."
+description = "Side by side comparisons of LightCMS with headless CMS platforms, Git based editors, traditional CMS platforms, and site builders."
 page_template = "article.html"
 +++
 
-These comparisons evaluate LightCMS against other content management systems by architecture, content storage, editing workflow, hosting model, and operational trade-offs. Each page is intended to help you choose the tool that fits your content model and team workflow.
+These comparisons evaluate LightCMS against other content management systems by architecture, content storage, editing workflow, hosting model, and operational trade offs. Each page is intended to help you choose the tool that fits your content model and team workflow.
 
 ## Headless platforms
 
@@ -14,7 +14,7 @@ These comparisons evaluate LightCMS against other content management systems by 
 - [LightCMS vs Strapi](/comparison/lightcms-vs-strapi)
 - [LightCMS vs Payload CMS](/comparison/lightcms-vs-payload-cms)
 
-## Git-based editors
+## Git based editors
 
 - [LightCMS vs Decap CMS](/comparison/lightcms-vs-decap-cms)
 - [LightCMS vs TinaCMS](/comparison/lightcms-vs-tinacms)
@@ -31,7 +31,7 @@ These comparisons evaluate LightCMS against other content management systems by 
 
 ## Overview guides
 
-- [Top Git-Based CMS Platforms](/comparison/top-git-cms)
+- [Top Git based CMS Platforms](/comparison/top-git-cms)
 - [Decap CMS Alternatives](/comparison/netlifycms)
 - [Pages CMS Alternatives](/comparison/pagescms)
 - [GitCMS Overview](/comparison/gitcms-a-git-based-cms-built-for-ai-era-websites)

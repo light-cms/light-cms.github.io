@@ -4,19 +4,11 @@ description: "Compare LightCMS and Drupal by architecture, content modeling, gov
 serial: 55
 date: 2026-10-16T12:50:00Z
 draft: false
-keywords:
-  - lightcms vs drupal
-  - drupal alternatives
-  - drupal vs static site
-  - drupal for small sites
-  - modern cms alternatives
-
-taxonomies:
-  tags:
-    - lightcms
-    - drupal
-    - cms
-    - comparison
+tags:
+  - lightcms
+  - drupal
+  - cms
+  - comparison
 ---
 
 LightCMS and Drupal serve different scales of content management. LightCMS is a Git based workflow for static site content, typically Markdown in a repository. Drupal is a PHP based CMS framework designed for complex content models, permissions, and extensibility.

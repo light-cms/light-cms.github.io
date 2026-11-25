@@ -4,15 +4,7 @@ description: "Compare Vercel and Netlify for static and Jamstack sites by framew
 serial: 23
 date: 2026-10-14T14:40:00Z
 draft: false
-keywords:
-  - vercel vs netlify
-  - netlify vs vercel
-  - vercel or netlify for react
-  - jamstack hosting comparison
-  - vercel pricing vs netlify
-
-taxonomies:
-  tags:
+tags:
     - hosting
     - vercel
     - netlify

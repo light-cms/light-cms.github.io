@@ -4,14 +4,11 @@ description: "A practical look at the LightCMS editor, including visual editing,
 serial: 31
 date: 2026-10-16T09:10:00Z
 draft: false
-keywords: "newsy setup"
-
-taxonomies:
-  tags:
-    - lightcms
-    - editor
-    - markdown
-    - writing
+tags:
+  - lightcms
+  - editor
+  - markdown
+  - writing
 ---
 
 The LightCMS editor gives writers a visual editing interface while saving content as Markdown and front matter in a Git repository. The main goal is to reduce formatting errors without taking content out of a file-based workflow.

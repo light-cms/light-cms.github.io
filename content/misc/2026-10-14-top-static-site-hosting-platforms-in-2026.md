@@ -6,17 +6,16 @@ draft: false
 weight: 1
 serial: 6
 
-taxonomies:
-  tags:
-    - static-sites
-    - hosting
-    - lightcms
-    - cloudflare-pages
-    - vercel
-    - netlify
-    - opensource
-    - blogging
-    - documentation
+tags:
+  - static-sites
+  - hosting
+  - lightcms
+  - cloudflare-pages
+  - vercel
+  - netlify
+  - opensource
+  - blogging
+  - documentation
     - surge
 slug: top-static-site-hosting
 ---
@@ -43,7 +42,7 @@ GitHub Pages is the simplest choice when your repository already lives on GitHub
 
 ## Cloudflare Pages
 
-Cloudflare Pages works well for static sites that need global CDN delivery and Git-based deploys without worrying about static asset bandwidth spikes. If you expect to add server-side features later, check Cloudflare's current guidance on Pages, Functions, and Workers before locking in your setup.
+Cloudflare Pages works well for static sites that need global CDN delivery and Git based deploys without worrying about static asset bandwidth spikes. If you expect to add server-side features later, check Cloudflare's current guidance on Pages, Functions, and Workers before locking in your setup.
 
 ## Vercel
 
@@ -65,7 +64,7 @@ Wasmer Edge focuses on WebAssembly and multi-runtime deployments. For a standard
 
 Deno Deploy has been used for JavaScript and TypeScript workloads at the edge. Before starting a new long term project there, verify Deno's current platform status and migration guidance.
 
-## Matching a host to your site
+### Matching a host to your site
 
 - Simple public documentation or a personal blog: GitHub Pages, Cloudflare Pages, or Surge.sh.
 - A frontend app with preview-heavy pull requests and serverless functions: Vercel or Netlify.

@@ -4,20 +4,13 @@ description: "Compare LightCMS and WordPress: Markdown in Git with static builds
 serial: 52
 date: 2026-10-16T12:20:00Z
 draft: false
-keywords:
-  - lightcms vs wordpress
-  - wordpress alternative
-  - wordpress without database
-  - static site vs wordpress
-  - switch from wordpress
 
-taxonomies:
-  tags:
-    - lightcms
-    - wordpress
-    - cms
-    - comparison
-    - static-sites
+tags:
+  - lightcms
+  - wordpress
+  - cms
+  - comparison
+  - static-sites
 slug: lightcms-vs-wordpress
 ---
 
@@ -49,6 +42,6 @@ The writing experience is simpler too. Writers edit in a browser; developers kee
 
 ## Choosing between them
 
-Pick WordPress if you need dynamic features and a big plugin ecosystem. Pick LightCMS if you want a fast, low-maintenance publication and you’re comfortable with the static-site model. WordPress gives you flexibility through plugins; LightCMS gives you simplicity through files and builds.
+Pick WordPress if you need dynamic features and a big plugin ecosystem. Pick LightCMS if you want a fast, low-maintenance publication and you're comfortable with the static site model. WordPress gives you flexibility through plugins; LightCMS gives you simplicity through files and builds.
 
 If you’re on WordPress today, try a small migration test: export a few posts to Markdown and see how much of your site is really content versus plugin behavior. The content usually moves easily. The plugin behavior is where the real decisions are. See [WordPress Alternatives in 2026](/blog/wordpress-alternatives/) and [Static vs Dynamic Sites](/blog/static-vs-dynamic/).

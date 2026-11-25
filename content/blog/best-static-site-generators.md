@@ -4,19 +4,11 @@ description: "Compare Astro, Hugo, Zola, Eleventy, SvelteKit, and Jekyll by buil
 serial: 18
 date: 2026-10-14T13:50:00Z
 draft: false
-keywords:
-  - best static site generator
-  - static site generators 2026
-  - astro vs hugo vs eleventy
-  - ssg comparison
-  - fastest static site generator
-
-taxonomies:
-  tags:
-    - ssg
-    - static-sites
-    - astro
-    - hugo
+tags:
+  - ssg
+  - static-sites
+  - astro
+  - hugo
 ---
 
 The best static site generator depends on what you need to optimize: build speed, developer experience, template ergonomics, or long term flexibility. Astro, Hugo, Zola, Eleventy, SvelteKit, and Jekyll can all produce static sites, but they make different trade offs.
@@ -70,6 +62,6 @@ Use Jekyll when you need compatibility with an existing Jekyll site. For new pro
 
 ## A shared advantage: Markdown in Git
 
-Most static site generators in this list can read Markdown files with front matter from a Git repository. That makes content portable and keeps your CMS and hosting choices separate. A Git-based CMS like [LightCMS](/getting-started/) can edit content while your generator handles builds.
+Most static site generators in this list can read Markdown files with front matter from a Git repository. That makes content portable and keeps your CMS and hosting choices separate. A Git based CMS like [LightCMS](/getting-started/) can edit content while your generator handles builds.
 
 If you are choosing a generator, prototype the same small site in two candidates. Measure build time, evaluate template ergonomics, and test how your content model fits before committing.

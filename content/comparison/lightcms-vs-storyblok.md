@@ -1,23 +1,16 @@
 ---
 title: "LightCMS vs Storyblok: Writing Documents vs Building Pages"
-description: "Compare LightCMS and Storyblok: a Git-based document editor for static sites versus a hosted visual CMS for component-driven pages."
+description: "Compare LightCMS and Storyblok: a Git based document editor for static sites versus a hosted visual CMS for component-driven pages."
 serial: 51
 date: 2026-10-16T12:10:00Z
 draft: false
-keywords:
-  - lightcms vs storyblok
-  - storyblok alternatives
-  - visual editor cms
-  - storyblok pricing alternative
-  - component based cms
 
-taxonomies:
-  tags:
-    - lightcms
-    - storyblok
-    - cms
-    - comparison
-    - headless
+tags:
+  - lightcms
+  - storyblok
+  - cms
+  - comparison
+  - headless
 slug: lightcms-vs-storyblok
 ---
 
@@ -29,7 +22,7 @@ The right choice depends on what you're making. A landing page built from reusab
 
 Storyblok is a hosted headless CMS. Content is modeled as blocks, edited in a visual preview, and delivered through an API. Your frontend fetches that content and renders it.
 
-LightCMS is a Git-based writing workspace. Content is stored as Markdown files with front matter in your repository. You write in a document editor, commit the changes, and your static site generator builds the site.
+LightCMS is a Git based writing workspace. Content is stored as Markdown files with front matter in your repository. You write in a document editor, commit the changes, and your static site generator builds the site.
 
 |                 | LightCMS                     | Storyblok                             |
 | --------------- | ---------------------------- | ------------------------------------- |

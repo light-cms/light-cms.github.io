@@ -4,19 +4,11 @@ description: "Compare Hugo and Jekyll on build speed, templating, ecosystem, Git
 serial: 21
 date: 2026-10-14T14:20:00Z
 draft: false
-keywords:
-  - hugo vs jekyll
-  - jekyll vs hugo
-  - hugo or jekyll for blog
-  - static site generator comparison
-  - fastest ssg
-
-taxonomies:
-  tags:
-    - hugo
-    - jekyll
-    - ssg
-    - static-sites
+tags:
+  - hugo
+  - jekyll
+  - ssg
+  - static-sites
 ---
 
 Hugo and Jekyll are both mature static site generators that build websites from Markdown content. Hugo is generally chosen for fast builds and a single-binary toolchain; Jekyll is often chosen for existing Ruby workflows or simple GitHub Pages setups.
@@ -39,9 +31,9 @@ Jekyll runs in the Ruby ecosystem. That can be convenient for teams already usin
 
 ## Templating and content workflow
 
-Hugo uses Go templates, shortcodes, and a structured configuration model. Jekyll uses Liquid templates, which many developers find approachable. Both can process Markdown files with front matter, making them compatible with Git-based content workflows.
+Hugo uses Go templates, shortcodes, and a structured configuration model. Jekyll uses Liquid templates, which many developers find approachable. Both can process Markdown files with front matter, making them compatible with Git based content workflows.
 
-A Git-based CMS can work with either generator when it commits Markdown files in the expected directory structure.
+A Git based CMS can work with either generator when it commits Markdown files in the expected directory structure.
 
 ## Which should you choose
 

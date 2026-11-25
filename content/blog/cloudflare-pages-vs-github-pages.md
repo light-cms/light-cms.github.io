@@ -1,22 +1,15 @@
 ---
 title: "Cloudflare Pages vs. GitHub Pages for Static Site Hosting"
-description: "Compare Cloudflare Pages and GitHub Pages on bandwidth limits, preview deployments, edge delivery, and workflow trade-offs."
+description: "Compare Cloudflare Pages and GitHub Pages on bandwidth limits, preview deployments, edge delivery, and workflow trade offs."
 serial: 19
 date: 2026-10-14T14:00:00Z
 draft: false
-keywords:
-  - cloudflare pages vs github pages
-  - github pages vs cloudflare
-  - free static site hosting
-  - github pages custom domain
-  - cloudflare pages free tier
-
-taxonomies:
-  tags:
-    - hosting
-    - cloudflare
-    - github
-    - jamstack
+tags:
+  - cloudflare
+  - github
+  - pages
+  - static-sites
+  - hosting
 ---
 
 Cloudflare Pages and GitHub Pages can both host a static site for free, but they fit different workflows. GitHub Pages is convenient when your site already lives in GitHub and traffic is modest. Cloudflare Pages is a better fit when you need preview deployments, broader edge delivery, or fewer bandwidth concerns.
@@ -45,6 +38,6 @@ GitHub Pages has an advantage when you want to keep everything inside GitHub. Fo
 
 ## When to choose each platform
 
-Choose GitHub Pages when you want the simplest GitHub-native deployment for project documentation or a small personal site. Choose Cloudflare Pages when you expect unpredictable traffic, want preview deployments, or may need edge functions later.
+Choose GitHub Pages when you want the simplest GitHub native deployment for project documentation or a small personal site. Choose Cloudflare Pages when you expect unpredictable traffic, want preview deployments, or may need edge functions later.
 
 The trade-off is operational complexity: Cloudflare adds another platform to manage, while GitHub Pages keeps deployment close to the repository but offers fewer collaboration and edge features. For deployment setup details, see [Configuring Repository CI/CD](/blog/configuring-your-repository-cicd/).

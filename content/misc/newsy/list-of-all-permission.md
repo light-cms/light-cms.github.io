@@ -5,8 +5,10 @@ author: light-cms
 created: 2026-08-22T07:28:38+00:00
 tags:
   - newsy
-  - github app permissions
-  - newsletter bot
+  - github
+  - app
+  - permissions
+  - newsletter-bot
   - github webhooks
 ---
 

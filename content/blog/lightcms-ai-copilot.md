@@ -4,19 +4,12 @@ description: "How the LightCMS AI copilot can assist with outlining, rewriting, 
 serial: 32
 date: 2026-10-16T09:20:00Z
 draft: false
-keywords:
-  - ai cms
-  - ai writing assistant markdown
-  - lightcms ai copilot
-  - openai compatible cms
-  - ai content workflow
 
-taxonomies:
-  tags:
-    - lightcms
-    - ai
-    - writing
-    - workflow
+tags:
+  - lightcms
+  - ai
+  - writing
+  - workflow
 ---
 
 LightCMS includes an AI copilot for specific writing tasks inside the editor, such as outlining, rewriting, expanding, or fixing grammar. It supports the author's draft rather than replacing editorial judgment or factual review.
@@ -47,6 +40,6 @@ Do not include credentials, private customer data, or unpublished sensitive info
 
 AI output should be treated as draft text. Verify technical claims, product behavior, pricing, dates, and quotes before publishing. Keep the author's voice by rewriting generated text where it sounds generic or overconfident.
 
-The trade-off is speed versus trust. AI can shorten drafting time, but unreviewed AI output can damage credibility. A Git-based workflow helps here because edits remain visible in diffs and can be reviewed before merge or deploy.
+The trade-off is speed versus trust. AI can shorten drafting time, but unreviewed AI output can damage credibility. A Git based workflow helps here because edits remain visible in diffs and can be reviewed before merge or deploy.
 
 For related guidance, see [AI-Assisted Blogging: Where AI Helps and Where It Fails](/blog/ai-assisted-blogging/) and [Voice-to-Text Dictation in LightCMS](/blog/lightcms-voice-to-text/).

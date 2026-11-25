@@ -1,22 +1,15 @@
 ---
 title: "Lume: A Static Site Generator for Deno"
-description: "An overview of Lume, a Deno-based static site generator, including its plugin model, templating options, and trade-offs for content sites."
+description: "An overview of Lume, a static site generator built for Deno."
 serial: 29
 date: 2026-10-14T15:40:00Z
 draft: false
-keywords:
-  - lume static site generator
-  - deno ssg
-  - lume vs eleventy
-  - lume deno cms
-  - lume land
 
-taxonomies:
-  tags:
-    - ssg
-    - lume
-    - deno
-    - static-sites
+tags:
+  - ssg
+  - lume
+  - deno
+  - static-sites
 ---
 
 [Lume](https://lume.land) is a static site generator built for the Deno ecosystem. It generates static HTML from content files, templates, and data, making it suitable for blogs, documentation, and other content sites that can be deployed to a CDN.
@@ -36,6 +29,6 @@ Lume is a reasonable choice if your team already uses Deno and wants a static si
 
 ## Lume and content editing
 
-Lume handles site generation, not content editing. If writers need a browser-based interface, pair Lume with a Git-based CMS that commits Markdown or compatible content files to the repository.
+Lume handles site generation, not content editing. If writers need a browser-based interface, pair Lume with a Git based CMS that commits Markdown or compatible content files to the repository.
 
 For broader SSG comparisons, see [Best Static Site Generators in 2026](/blog/best-static-site-generators/) and [Eleventy vs. Astro](/blog/eleventy-vs-astro/).

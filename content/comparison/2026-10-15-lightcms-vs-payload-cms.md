@@ -4,23 +4,16 @@ description: "Compare LightCMS and Payload CMS by architecture, editing workflow
 serial: 42
 date: 2026-10-15T20:10:16Z
 draft: false
-keywords:
-  - lightcms vs payload
-  - payload cms alternatives
-  - headless cms vs git based cms
-  - cms without database
-  - static site cms
 
-taxonomies:
-  tags:
-    - lightcms
-    - payload
-    - cms
-    - comparison
-    - headless
+tags:
+  - lightcms
+  - payload
+  - cms
+  - comparison
+  - headless
 ---
 
-LightCMS and Payload CMS solve different problems. LightCMS is a Git-based editor for static site content stored as Markdown in a repository. Payload CMS is a headless CMS that stores content in a database and exposes it through application APIs and an admin interface.
+LightCMS and Payload CMS solve different problems. LightCMS is a Git based editor for static site content stored as Markdown in a repository. Payload CMS is a headless CMS that stores content in a database and exposes it through application APIs and an admin interface.
 
 ## Architecture comparison
 

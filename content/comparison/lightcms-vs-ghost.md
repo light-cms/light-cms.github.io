@@ -4,29 +4,22 @@ description: "Compare LightCMS and Ghost on architecture, publishing workflow, m
 serial: 54
 date: 2026-10-16T12:40:00Z
 draft: false
-keywords:
-  - lightcms vs ghost
-  - ghost alternatives
-  - ghost vs static site
-  - self hosted blogging platform
-  - ghost pricing alternative
 
-taxonomies:
-  tags:
-    - lightcms
-    - ghost
-    - cms
-    - comparison
-    - publishing
+tags:
+  - lightcms
+  - ghost
+  - cms
+  - comparison
+  - publishing
 ---
 
-LightCMS and Ghost both support publishing, but they are built for different outcomes. LightCMS is a Git-based workflow for static site content. Ghost is a publishing platform with built-in membership, subscription, and newsletter capabilities.
+LightCMS and Ghost both support publishing, but they are built for different outcomes. LightCMS is a Git based workflow for static site content. Ghost is a publishing platform with built-in membership, subscription, and newsletter capabilities.
 
 ## Comparison
 
 | Area                 | LightCMS                                 | Ghost                            |
 | :------------------- | :--------------------------------------- | :------------------------------- |
-| Architecture         | Git-based content + static build         | Application + database platform  |
+| Architecture         | Git based content + static build         | Application + database platform  |
 | Primary strength     | Static site content workflow             | Publishing business features     |
 | Memberships/payments | Not a core CMS feature                   | Native memberships/subscriptions |
 | Newsletters          | Depends on external workflow/integration | Native newsletter features       |

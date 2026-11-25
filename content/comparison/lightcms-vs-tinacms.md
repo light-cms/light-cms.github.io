@@ -1,22 +1,15 @@
 ---
 title: "LightCMS vs TinaCMS: A Writing Desk vs On-Page Editing"
-description: "Compare LightCMS and TinaCMS for Git-based content: a focused document editor versus editing content directly on the rendered page."
+description: "Compare LightCMS and TinaCMS for Git based content: a focused document editor versus editing content directly on the rendered page."
 serial: 39
 date: 2026-10-16T10:30:00Z
 draft: false
-keywords:
-  - lightcms vs tinacms
-  - tinacms alternatives
-  - tinacms self hosted
-  - on-page editing vs dashboard
-  - markdown cms comparison
 
-taxonomies:
-  tags:
-    - lightcms
-    - tinacms
-    - cms
-    - comparison
+tags:
+  - lightcms
+  - tinacms
+  - cms
+  - comparison
 slug: lightcms-vs-tinacms
 ---
 
