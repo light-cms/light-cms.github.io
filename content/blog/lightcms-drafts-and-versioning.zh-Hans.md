@@ -1,0 +1,53 @@
+---
+title: "Drafts, Revisions, and Rollbacks in a Git Based CMS"
+description: "How Git based content workflows handle drafts, commit history, pull request review, and rollbacks for static site publishing."
+serial: 34
+date: 2026-10-16T09:40:00Z
+draft: false
+tags:
+  - 闪光
+  - git
+  - 工作流
+  - 协作
+---
+
+A Git based CMS can handle drafts, revisions, and rollbacks by storing content as files in a repository and using Git history as the audit trail. 实用值很简单：您可以在不发布它的情况下保存工作，检查更改的内容，并且在不恢复整个数据库的情况下还原错误的编辑。
+
+## 作为文件状态的草稿
+
+在许多静态站点工作流中，草稿由前面的事物代表，如“草稿：true”。该文件可以存在于仓库中，而静态站点生成器在生产构建过程中跳过它。
+
+```yaml
+---
+title: "Draft post"
+date: 2026-10-16T09:40:00Z
+draft: true
+---
+```
+
+这种方法使草稿状态与内容接近。交易是可见性：任何拥有资源库访问权限的人都可以看到草案文件，即使公共网站没有渲染。
+
+## 通过提交修改
+
+每次保存或发布的更改都可以创建 Git 提交。这给您一个可读的 Markdown 文件的历史，包括差异、作者元数据和时间戳。
+
+| A. 需要 | Git based workflow | 折叠式...         |
+| :---- | :----------------- | :------------- |
+| 查看更改  | `git diff`或拉取请求差异  | 需要清除提交消息才可使用   |
+| 审计历史  | 提交日志和指控            | 可以检查的仓库存存取模型控制 |
+| 恢复内容  | 还原提交或恢复文件版本        | 逆转可能需要解决冲突     |
+| 发布前审核 | 分支和拉取请求            | 为小编辑添加过程管理成本   |
+
+对于团队，拉取请求提供编辑审核门。对于独家作家来说，直接向一个主要分支的承诺可能更快，但它们取消了审查步骤。
+
+## 回滚为正常的 Git 操作
+
+当发布的帖子出现错误时，Git允许您还原引入它的提交或还原文件的上一个版本。修复完成后，您的 CI/CD 管道重建并部署了网站。
+
+文件级别回滚比数据库还要窄。它可以撤消一个帖子，但保留其他最近的更改不变。
+
+## 选择工作流
+
+当速度事项和发生错误的风险较低时，使用直接提交。当内容需要审查、合法批准或协调发布时间时，使用分支和拉取请求。最好的工作流程是最轻松的流程，它仍然为您的团队提供它所需的审查和恢复控制。
+
+For related reading, see [The LightCMS Editor Tour](/blog/lightcms-editor-tour/) and [What Is a Git based CMS?](/blog/Git based-cms-explained/).

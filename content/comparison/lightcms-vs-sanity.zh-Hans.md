@@ -1,0 +1,50 @@
+---
+title: "LightCMS vs Sanity: Git 文件与托管的内容平台"
+description: "比较LightCMS和智能以发布: Git中的Markdown 与静态构建对比, 与 API 中的托管内容平台和实时合作。"
+serial: 48
+date: 2026-10-16T11:40:00Z
+draft: false
+
+tags:
+  - 闪光
+  - 清理度
+  - 厘米
+  - 比较
+  - 头像
+slug: lightcms-vs-sanity
+---
+
+智能和 LightCMS 都帮助您发布内容，但它们从不同的地方开始。智能是一个托管的内容平台：您的内容生活在Sanity的内容湖中，您的模式是方案型的，您的前端通过API获取。 LightCMS is a Git based editor: your content lives as Markdown files in your repository, and your static site generator builds HTML from those files.
+
+如果您正在创建博客、文档网站或营销网站， 真正的问题很简单：您需要一个内容 API，还是需要一个好的地方来写和发布？
+
+## 存储模型如何改变内容
+
+有了体验，内容在托管服务中是结构化数据。您用GROQ查询它，更改可以通过API立即获得。当相同的内容为网站、应用程序和其他客户端时，这样做是有意义的。
+
+使用 LightCMS，内容是您仓库中的一个文件。你编辑它，提交它，你的构建管道发布它。没有要运行的运行时内容 API 。当输出是静态站点并且你想要内容历史生活在Git中时，这一点是有意义的。
+
+|                  | LightCMS        | 圣洁度        |
+| ---------------- | --------------- | ---------- |
+| 内容存储             | 标记你的 Git 仓库中的文件 | 托管内容莱克     |
+| 发货               | 静态构建到 CDN       | 请求时间的 API  |
+| Content modeling | 前台事项字段          | 代码中的自定义方案  |
+| 实时协作             | Git 审核工作流程      | 实时工作室协作    |
+| 定价               | 自托管，无许可证费       | 基于使用/座位的计划 |
+| 可携带性             | 复制资源库           | 导出和转换      |
+
+## 当理智更加有意义时
+
+当内容多于页面时，善意就能赚到它的存活。如果相同的内容需要在网站上显示, 那么一个应用程序和其他地方, Sanity的结构化模型和 API是有用的。它还处理编辑器中的自定义方案、引用和实时合作。
+
+## 当LightCMS更有意义时
+
+LightCMS 适合您主要发布文件到静态站点。您在编辑器中写入，内容生活在您的仓库中，站点被设置为静态文件。没有可以在每个请求上运行的内容API，中间没有托管的内容存储。
+
+对作者来说，这种差异每天都感受到。为撰写和发表文章设置了 LightCMS。神奇工作室是强大的，但它是先围绕建模内容构建的。
+
+## 二者之间的选择
+
+如果您的内容需要像产品数据一样的行为(有结构、查询、重新使用和实时更新)，善良是更强大的选择。如果您的大部分工作都是文章和页面，LightCMS就更容易与Git文件静态递送，较少移动零件共存。
+
+决定的一个好方法是查看您的内容。 If it’s mostly long-form posts with front matter, start with the Git based path. 如果您继续在关系中运行，现场查询或多个前端，那就是当一个像圣心这样的无头的平台开始获得其复杂性时。 See also [LightCMS vs Contentful](/comparison/lightcms-vs-contentful/) and [Headless vs Git based CMS](/blog/headless-vs-Git based-cms/).

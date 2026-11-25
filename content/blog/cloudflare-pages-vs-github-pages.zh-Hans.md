@@ -1,0 +1,43 @@
+---
+title: "云端页面与静态站点主机的GitHub 页面"
+description: "Compare Cloudflare Pages and GitHub Pages on bandwidth limits, preview deployments, edge delivery, and workflow trade offs."
+serial: 19
+date: 2026-10-14T14:00:00Z
+draft: false
+tags:
+  - 云板
+  - github
+  - pages
+  - 静态站点
+  - 主机
+---
+
+Cloudflare页面和 GitHub 页面都可以免费托管一个静态站点，但它们适合不同的工作流。当您的网站已经在 GitHub 中生活且流量不大，GitHub 页面便捷。当您需要预览部署、更广泛的边缘传送或较少的带宽关注时，云面页面更适合。
+
+## 特征比较
+
+| 区域      | GitHub Pages | 云端页面                |
+| :------ | :----------- | :------------------ |
+| 主要适配性   | 项目文档，简单的个人网站 | 静态站点，博客，营销网站        |
+| 带宽/使用限制 | 应用已发布的使用限制   | 免费等级包括无限带宽          |
+| 预览部署    | 不作为标准的 PR 预览 | 自动预览非生产分支/PRs 的 URL |
+| 边缘/网络   | CDN支持的交付     | 云面全局边缘网络            |
+| 服务器端功能  | 仅静态的         | 页面功能/工人集成可用         |
+
+## 带宽和流量风险
+
+GitHub 页面发布使用指南，包括带宽、网站大小和建立频率限制。对于一个小的文件网站来说，这些限制可能就够了。如果一个图像繁重的博客会突然出现交通飞跃，风险就更难预测。
+
+云层页面在其免费层上刊登无限带宽广告。这就减少了对公共内容站点的关注，尽管你仍然需要遵循可接受的使用和平台政策。
+
+## 工作流程与合作
+
+Cloudflare页面为分支和拉取请求创建预览部署，帮助审核者在合并前检查内容和布局。 GitHub 页面比较简单，您只需要一个生产分支，而不需要审核环境。
+
+GitHub 页面具有优势，您想要将所有内容都保存在GitHub 中。对于开源项目文档，安装程序很熟悉，接近代码。
+
+## 何时选择每个平台
+
+Choose GitHub Pages when you want the simplest GitHub native deployment for project documentation or a small personal site. 当您需要不可预测的流量时，选择Cloudflare页面、想要预览部署或稍后可能需要边缘功能。
+
+折衷是操作上的复杂性：云雾增加了另一个管理平台， GitHub 页面在仓库附近部署，但提供的协作和边缘功能较少。关于部署设置详情，请参阅[配置存储库CI/CD](/blog/configuring-your-repository-cicd/)。
