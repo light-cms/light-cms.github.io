@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blogs.lightcms.me/sitemap.xml
+Sitemap: https://blogs.lightcms.me/atom.xml
+Sitemap: https://blogs.lightcms.me/rss.xml
+Sitemap: https://www.lightcms.me/sitemap.xml

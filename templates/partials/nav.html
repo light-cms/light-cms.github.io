@@ -1,0 +1,63 @@
+<header id="site-nav" data-pagefind-ignore>
+	<nav class="nav-shell" aria-label="Primary navigation">
+		<a class="skip-link" href="#main-content">
+			{{ <translate key="skip_to_content" default="Skip to Main Content" language_strings /> }}
+		</a>
+		<div class="nav-row">
+			<a class="site-brand" href="{{ get_url(path='/', lang=lang) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path='/', lang=lang) | trim_end(pat='/') | safe %} aria-current="page"{% endif %}>
+				<span>LightCMS</span>
+				<small>Journal</small>
+			</a>
+
+			<ul class="nav-links">
+				{%- for link in config.extra.nav?.links %}
+					{%- if link.menu and link.menu | length > 0 %}
+					<li>
+						<details class="nav-dropdown closable">
+							<summary>{{ <translate key={link.name} default={link.name} language_strings /> }}</summary>
+							<ul>
+								{%- for item in link.menu %}
+								<li>
+									{%- if item.url is matching(pat='^https?://') %}
+									<a href="{{ item.url }}" rel="{{ rel_attributes }}" class="external">{{ <translate key={item.name} default={item.name} language_strings /> }}</a>
+									{%- else %}
+									<a href="{{ get_url(path=item.url, lang=config.default_language) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=item.url, lang=config.default_language) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={item.name} default={item.name} language_strings /> }}</a>
+									{%- endif %}
+								</li>
+								{%- endfor %}
+							</ul>
+						</details>
+					</li>
+					{%- elif link.url is matching(pat='^https?://') %}
+					<li><a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">{{ <translate key={link.name} default={link.name} language_strings /> }}</a></li>
+					{%- else %}
+					<li><a href="{{ get_url(path=link.url, lang=config.default_language) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=link.url, lang=config.default_language) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={link.name} default={link.name} language_strings /> }}</a></li>
+					{%- endif %}
+				{%- endfor %}
+			</ul>
+
+			<ul class="nav-actions" aria-label="Site tools">
+				<li id="search">
+					<a href="{{ get_url(path='@/search.md', lang=config.default_language) }}" class="circle{% if current_url | default(value='/') | safe == get_url(path='@/search.md', lang=config.default_language) | safe %} active{% endif %}" aria-label="{{ <translate key='search' default='Search' language_strings /> }}" title="{{ <translate key='search' default='Search' language_strings /> }}">
+						<i class="icon" aria-hidden="true"></i>
+					</a>
+				</li>
+				{%- if config.extra?.default_theme and config.extra.nav?.show_theme_switcher != false or config.extra.nav?.show_theme_switcher %}
+				<li id="theme-switcher">
+					<details class="closable">
+						<summary class="circle" aria-label="{{ <translate key='theme' default='Theme' language_strings /> }}" title="{{ <translate key='theme' default='Theme' language_strings /> }}">
+							<i class="icon" aria-hidden="true"></i>
+						</summary>
+						<ul>
+							<li><button type="button" class="circle" id="theme-light" aria-label="{{ <translate key='theme_light' default='Switch to Light Theme' language_strings /> }}" title="{{ <translate key='theme_light' default='Switch to Light Theme' language_strings /> }}"><i class="icon" aria-hidden="true"></i></button></li>
+							<li><button type="button" class="circle" id="theme-dark" aria-label="{{ <translate key='theme_dark' default='Switch to Dark Theme' language_strings /> }}" title="{{ <translate key='theme_dark' default='Switch to Dark Theme' language_strings /> }}"><i class="icon" aria-hidden="true"></i></button></li>
+							<li><button type="button" class="circle" id="theme-system" aria-label="{{ <translate key='theme_system' default='Use System Theme' language_strings /> }}" title="{{ <translate key='theme_system' default='Use System Theme' language_strings /> }}"><i class="icon" aria-hidden="true"></i></button></li>
+						</ul>
+					</details>
+					</li>
+				{%- endif %}
+				{%- include "partials/language_switcher.html" %}
+			</ul>
+		</div>
+	</nav>
+</header>

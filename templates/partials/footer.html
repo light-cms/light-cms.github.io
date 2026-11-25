@@ -1,0 +1,49 @@
+<footer id="site-footer" data-pagefind-ignore>
+	<div class="footer-shell">
+		<div class="footer-intro">
+			<a class="footer-brand" href="{{ get_url(path='/', lang=lang) }}">{{ config.extra.brand | default(value="LightCMS Journal") }}</a>
+			<p>{{ config.description }}</p>
+			<button id="product-tour" type="button" class="tour-button" disabled onclick="Supademo.open('cmvvdyema01exqmwtg0adiw7p')">Take the product tour</button>
+		</div>
+
+		{%- if config.extra.footer?.links %}
+		<nav aria-label="Footer navigation">
+			<ul class="footer-links">
+				{%- for link in config.extra.footer?.links %}
+				<li>
+					{%- if link.url is matching(pat='^https?://') %}
+					<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">{{ <translate key={link.name} default={link.name} language_strings /> }}</a>
+					{%- else %}
+					<a href="{{ get_url(path=link.url, lang=config.default_language) }}"{% if current_url | default(value='/') | trim_end(pat='/') | safe == get_url(path=link.url, lang=config.default_language) | trim_end(pat='/') | safe %} class="active" aria-current="page"{% endif %}>{{ <translate key={link.name} default={link.name} language_strings /> }}</a>
+					{%- endif %}
+				</li>
+				{%- endfor %}
+			</ul>
+		</nav>
+		{%- endif %}
+
+		{%- if config.extra.footer?.socials %}
+		<ul id="external-links" aria-label="LightCMS elsewhere">
+			{%- for link in config.extra.footer?.socials %}
+			<li>
+				<a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me">
+					<i class="icon" aria-hidden="true" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+					<span>{{ link.name }}</span>
+				</a>
+			</li>
+			{%- endfor %}
+		</ul>
+		{%- endif %}
+
+		<div class="footer-meta">
+			{%- if config.extra.footer?.show_copyright %}
+			<p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.brand | default(value="LightCMS Journal") }}</p>
+			{%- endif %}
+			{%- if config.extra.footer?.show_powered_by %}
+			<p><small>Built with <a href="https://www.getzola.org" rel="{{ rel_attributes }}" class="external">Zola</a> and <a href="https://duckquill.daudix.one" rel="{{ rel_attributes }}" class="external">Duckquill</a>.</small></p>
+			{%- endif %}
+		</div>
+	</div>
+</footer>
+<script src="https://script.supademo.com/supademo.js" defer onload="document.getElementById('product-tour').disabled = false"></script>
+<!--<script src="{{ get_url(path='js/image-proxy.js') }}" defer></script>-->

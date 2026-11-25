@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{%- set date_format = <translate key="date_format" default="%B %d, %Y" language_strings /> -%}
+<header class="page-header archive-header">
+	<h1>{{ section.title }}</h1>
+	{%- if section.description %}<p>{{ section.description }}</p>{% endif %}
+	<div class="archive-tools">
+		{%- if config.taxonomies | length > 0 %}
+		<a href="{{ get_url(path='tags', lang=lang) }}">Browse by tag</a>
+		{%- endif %}
+		{%- if section?.pages %}<span>{{ section.pages | length }} articles</span>{% endif %}
+	</div>
+</header>
+
+{% include "partials/articles.html" %}
+
+{%- if paginator?.pages %}
+<nav id="paginator" aria-label="Pagination">
+	{%- if paginator.previous %}<a href="{{ paginator.previous }}">Previous page</a>{% endif %}
+	<span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+	{%- if paginator.next %}<a href="{{ paginator.next }}">Next page</a>{% endif %}
+</nav>
+{%- endif %}
+{% endblock content %}

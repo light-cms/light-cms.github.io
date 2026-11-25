@@ -1,0 +1,33 @@
+[tools]
+zola = "latest"
+bun = "latest"
+biome = "latest"
+"npm:pagefind" = "latest"
+"npm:@crowdin/cli" = "latest"
+"npm:@posthog/cli" = "latest"
+harper-cli = "latest"
+superhtml = "latest"
+"npm:parcel" = "latest"
+node = "26"
+
+
+[settings]
+experimental = true
+[env]
+SWC_NATIVE_BINDING_CACHE = false
+
+[tasks.build]
+run = "zola build && mise run search && bun install && biome format --fix && bun run build"
+description = "Build the site with Zola, index it for search, and optimize all HTML"
+
+[tasks.search]
+run = "zola build && pagefind --site ./public"
+description = "Build, index and preview the site with search at http://localhost:1414"
+
+[tasks.serve]
+run = "zola serve"
+description = "Serve the site locally"
+
+[tasks.check]
+run = "zola check"
+description = "Check the site"

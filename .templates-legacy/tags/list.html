@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Tags | {{ config.title }}{% endblock title %}
+{% block description %}Blogs by light-cms team, LightCMS a cms for managing contents for static site generators.{%
+endblock description %}
+{% block og_title %}Tags | {{ config.title }}{% endblock og_title %}
+{% block og_description %}Every LightCMS post on static sites, Git based content, Markdown publishing, and hosting
+comparisons, grouped by topic.{% endblock og_description %}
+
+{% block jsonld_extra %}
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		"name": {{ config.title | json_encode() | safe }},
+		"description": "Every LightCMS post on static site, Git based content, Markdown publishing, and hosting comparisons, grouped by topic.",
+		"url": {{ config.base_url | json_encode() | safe }},
+		"inLanguage": "en",
+		"isPartOf": { "@type": "WebSite", "name": {{ config.title | json_encode() | safe }}, "url": {{ config.base_url | json_encode() | safe }} }
+	}
+</script>
+{% endblock jsonld_extra %}
+
+{% block content %}
+<h1 data-pagefind-meta="title">Tags</h1>
+<p class="muted">Everything on the blog.</p>
+<ul class="post-list">
+	{% for term in terms %}
+	<li>
+		<span class="post-date">{{ term.page_count }} post{% if term.page_count != 1 %}s{% endif %}</span>
+		<div><a href="{{ term.permalink }}">#{{ term.name }}</a></div>
+	</li>
+	{% endfor %}
+</ul>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="gallery-page">
+	<header class="page-header gallery-header">
+		<h1>{{ section.title }}</h1>
+		{%- if section.description %}<p>{{ section.description }}</p>{% endif %}
+	</header>
+
+	<div class="gallery-content" id="gallery-content">
+		{{ section.content | safe }}
+	</div>
+	<p class="empty-state" id="gallery-empty" hidden>No gallery images are available yet.</p>
+
+	<dialog id="gallery-lightbox" class="gallery-lightbox" aria-labelledby="lightbox-caption">
+		<div class="lightbox-content">
+			<button type="button" class="lightbox-close" aria-label="Close image"><span aria-hidden="true">×</span></button>
+			<img id="lightbox-img" alt="" width="1200" height="750" />
+			<p id="lightbox-caption" class="lightbox-caption"></p>
+		</div>
+	</dialog>
+</section>
+<script src="{{ get_url(path='js/gallery.js') }}" defer></script>
+{% endblock content %}

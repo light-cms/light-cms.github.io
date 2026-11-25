@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header search-header">
+	<h1>{{ page.title }}</h1>
+	{%- if page.description %}<p>{{ page.description }}</p>{% endif %}
+</header>
+
+<section id="search-container" aria-label="Site search">
+	<pagefind-input
+		placeholder="{{ <translate key='search_for' default='Search for' language_strings /> }}…"></pagefind-input>
+	<pagefind-summary aria-live="polite"></pagefind-summary>
+	<pagefind-results></pagefind-results>
+	<noscript>
+		<p class="error-state">Search needs JavaScript. Use the Blog or Comparisons pages to browse the archive.</p>
+	</noscript>
+</section>
+{% endblock content %}

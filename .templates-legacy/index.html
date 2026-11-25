@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}[LightCMS](https://lightcms.me) Blog: Static Sites, Git Backed CMS, and Markdown Publishing{% endblock title %}
+{% block description %}Practical writing on static sites, Git based content, and Markdown publishing, from the team behind [LightCMS](https://lightcms.me).{% endblock description %}
+{% block og_title %}LightCMS Blog: Static Sites, Git Backed CMS, and Markdown Publishing{% endblock og_title %}
+{% block og_description %}Practical writing on static sites, Git based content, and Markdown publishing, from the team behind LightCMS.{% endblock og_description %}
+{% block tw_title %}LightCMS Blog: Static Sites, Git Backed CMS, and Markdown Publishing{% endblock tw_title %}
+{% block tw_description %}Practical writing on static sites, Git based content, and Markdown publishing, from the team behind LightCMS.{% endblock tw_description %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Git based CMS for static sites</p>
+  <h1 data-pagefind-meta="title:LightCMS">Write in a real editor, publish to your own repository.</h1>
+  <p>LightCMS is a visual workspace in front of a repository you own. Write Markdown, publish with one click, and let your existing pipeline ship it. No database, no vendor, no lock-in.</p>
+  <p>
+    <a class="button" href="https://www.lightcms.me/">LightCMS</a>
+    <a class="button secondary" href="https://www.lightcms.me/docs">Read the docs</a>
+    <a class="button secondary" href="{{ get_url(path="@/blog/_index.md") }}">Read the blog</a>
+  </p>
+</section>
+
+<section class="feature-grid" aria-label="What LightCMS does">
+  <div class="feature-card">
+    <span class="feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="6" cy="5" r="2.4"/><circle cx="6" cy="19" r="2.4"/><circle cx="18" cy="9" r="2.4"/>
+        <path d="M6 7.4v9.2"/><path d="M8.4 5H15a3 3 0 0 1 3 3v0"/>
+      </svg>
+    </span>
+    <h2>Git based by default</h2>
+    <p>Every post is a Markdown file with front matter in your own repository. You get full history, review, and rollback, with no vendor lock-in.</p>
+  </div>
+  <div class="feature-card">
+    <span class="feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M14.5 5.5l4 4"/>
+      </svg>
+    </span>
+    <h2>A beautiful editor</h2>
+    <p>A distraction free writing experience designed to help you focus on your ideas.</p>
+  </div>
+  <div class="feature-card">
+    <span class="feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21.5 3.5 2.5 10.2l7.2 2.6 2.6 7.2 9.2-16.5z"/><path d="M9.7 12.8 17 5.5"/>
+      </svg>
+    </span>
+    <h2>Publish and distribute</h2>
+    <p>Draft with AI copilot, dictate with Whisper(openai compatible model) or wit.ai, and send newsletters through <a href="https://newsy.lightcms.me">Newsy</a>, which turns GitHub issues into a mailing list.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Latest posts</h2>
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% set_global latest = blog.pages %}
+  {% for extra_section_path in blog.extra.include_sections | default(value=[]) %}
+    {% set extra_section = get_section(path=extra_section_path) %}
+    {% set_global latest = [...latest, ...extra_section.pages] %}
+  {% endfor %}
+  {% set latest = latest | sort(attribute="date") | reverse %}
+  <ul class="post-list" data-pagefind-ignore>
+    {% for post in latest %}{% if loop.index <= 8 %}
+    <li>
+      <time class="post-date" datetime="{{ post.date }}">{{ post.date | date(format="%b %-d, %Y") }}</time>
+      <div>
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+        {% if post.description %}<p class="post-desc">{{ post.description }}</p>{% endif %}
+      </div>
+    </li>
+    {% endif %}{% endfor %}
+  </ul>
+  <p style="margin-top:1.25rem"><a href="{{ get_url(path="@/blog/_index.md") }}">All posts →</a></p>
+</section>
+
+<section class="cta-band">
+  <h2>Choosing a CMS?</h2>
+  <p>Honest, side-by-side comparisons of LightCMS against the platforms people evaluate.</p>
+  <p><a class="button" href='{{ get_url(path="@/comparison/_index.md") }}'>See all comparisons</a></p>
+</section>
+{% endblock content %}

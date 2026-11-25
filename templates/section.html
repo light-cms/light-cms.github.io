@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+	<h1>{{ section.title }}</h1>
+	{%- if section.description %}<p>{{ section.description }}</p>{% endif %}
+</header>
+{%- include "partials/statements.html" -%}
+{%- if section?.extra?.toc and not section?.extra?.toc_sidebar %}
+	{%- include "partials/toc.html" -%}
+{%- endif %}
+<div class="page-content">
+	{{ section.content | safe }}
+</div>
+{% endblock content %}

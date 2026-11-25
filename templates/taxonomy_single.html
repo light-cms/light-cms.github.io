@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{%- set date_format = <translate key="date_format" default="%B %d, %Y" language_strings /> -%}
+<header class="page-header taxonomy-header">
+	<p><a href="{{ get_url(path=taxonomy.name, lang=lang) | lower }}">All {{ taxonomy.name }}</a></p>
+	<h1>{{ term.name }}</h1>
+	<p>{{ term.pages | length }} posts</p>
+</header>
+{% include "partials/articles.html" %}
+{% endblock content %}

@@ -1,0 +1,47 @@
+project_id: "945769"
+api_token_env: "CROWDIN_PERSONAL_TOKEN"
+base_path: "."
+base_url: "https://api.crowdin.com"
+preserve_hierarchy: true
+
+export_languages:
+  - de
+  - es-ES
+  - fr
+  - pt-BR
+  - ru
+  - zh-CN
+
+files:
+  - source: "/content/**/*.md"
+    translation: "/%original_path%/%file_name%.%locale%.%file_extension%"
+    type: fm_md
+    ignore:
+      - "/content/**/*.*.md"
+    excluded_front_matter_elements:
+      - sort_by
+      - template
+      - page_template
+      - in_search_index
+      - draft
+      - date
+      - created
+      - slug
+      - canonical
+      - preview
+      - headless
+      - id
+      - isCJKLanguage
+      - serial
+      - weight
+      - visibility
+      - fmContentType
+      - extra
+    languages_mapping:
+      locale:
+        de: "de"
+        es-ES: "es"
+        fr: "fr"
+        ru: "ru"
+        zh-CN: "zh-Hans"
+        pt-BR: "pt-BR"

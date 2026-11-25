@@ -1,0 +1,222 @@
+<head>
+	<!-- {{ now() | date(format='%F %a %R') }} -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	{%- set meta_description = config.description -%}
+	{%- if page is defined and page.description -%}{%- set meta_description = page.description -%}
+	{%- elif section is defined and section.description -%}{%- set meta_description = section.description -%}{%- endif -%}
+	{%- set meta_description = meta_description | striptags | trim -%}
+	{%- set meta_url = config.base_url ~ "/" -%}
+	{%- if current_url is defined and current_url -%}{%- set meta_url = current_url -%}{%- endif %}
+	{%- if page is defined and page.extra?.canonical -%}{%- set meta_url = page.extra.canonical -%}{%- endif %}
+	{%- set og_type = "website" -%}
+	{%- if page is defined and page.date -%}{%- set og_type = "article" -%}{%- endif %}
+	<meta name="description" content="{{ meta_description }}" />
+	{%- if page is defined and page.extra?.noindex -%}
+	<meta name="robots" content="noindex, follow" />
+	{%- else -%}
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+	{%- endif %}
+	<meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
+	{%- if config.extra.accent_color_dark is defined %}
+	<meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />
+	{%- endif %}
+	{%- if config.extra.csp is defined %}
+		{%- include "partials/csp.html" %}
+	{%- endif %}
+	<title>{% include "partials/title.html" %}</title>
+	<link rel="canonical" href="{{ meta_url | safe }}" />
+
+	{#- hreflang alternates for every available translation of this page/section -#}
+	{%- if page is defined -%}
+		{%- set _translations = page.translations -%}
+	{%- elif section is defined -%}
+		{%- set _translations = section.translations -%}
+	{%- else -%}
+		{%- set _translations = [] -%}
+	{%- endif -%}
+	{%- if _translations | length == 0 and (page is defined or section is defined) -%}
+		{%- if page is defined -%}
+			{%- set _translations = [{"lang": page.lang, "permalink": page.permalink}] -%}
+		{%- else -%}
+			{%- set _translations = [{"lang": section.lang, "permalink": section.permalink}] -%}
+		{%- endif -%}
+	{%- endif -%}
+	{%- for t in _translations -%}
+		{%- set _lcode = t.lang | default(value=config.default_language) -%}
+		{%- if _lcode == "" -%}{%- set _lcode = config.default_language -%}{%- endif -%}
+		<link rel="alternate" hreflang="{{ _lcode }}" href="{{ t.permalink | safe }}" />
+	{%- endfor -%}
+	{%- set _default_href = meta_url -%}
+	{%- for t in _translations -%}
+		{%- if t.lang == "" or t.lang == config.default_language -%}
+			{%- set_global _default_href = t.permalink -%}
+		{%- endif -%}
+	{%- endfor -%}
+	<link rel="alternate" hreflang="x-default" href="{{ _default_href | safe }}" />
+
+	{%- if config.extra.comments is defined %}
+		<link rel="me" href="https://{{ config.extra.comments.host }}/@{{ config.extra.comments.user }}" />
+		<meta name="fediverse:creator" content="@{{ config.extra.comments.user }}@{{ config.extra.comments.host }}" />
+	{%- endif %}
+
+	{%- include "partials/favicon.html" %}
+
+	{%- if config.generate_feeds and config.feed_filenames %}
+		{%- for feed in config.feed_filenames %}
+			{%- set feed_path = feed -%}
+			{%- if lang != config.default_language -%}{%- set feed_path = lang ~ "/" ~ feed -%}{%- endif -%}
+			{%- if feed == "atom.xml" %}
+	<link rel="alternate" type="application/atom+xml" title="{{ config.title }} - Atom Feed" href="{{ get_url(path=feed_path) | safe }}" />
+			{%- elif feed == "rss.xml" %}
+	<link rel="alternate" type="application/rss+xml" title="{{ config.title }} - RSS Feed" href="{{ get_url(path=feed_path) | safe }}" />
+			{%- else %}
+	<link rel="alternate" href="{{ get_url(path=feed_path) | safe }}" />
+			{%- endif %}
+		{%- endfor %}
+	{%- endif %}
+
+	{%- include "partials/variables.html" %}
+
+	{%- set styles = [ "style.css", "icons.css" ] %}
+	{%- if config.extra.bundled_fonts is defined and config.extra.bundled_fonts %}{%- set styles = styles -%}{%- endif %}
+
+	{%- if not (config.extra.debug is defined and config.extra.debug.no_styles is defined and config.extra.debug.no_styles) %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='style.css') | safe }}" />
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='icons.css') | safe }}" />
+	{%- if config.extra.bundled_fonts is defined and config.extra.bundled_fonts %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='fonts.css') | safe }}" />
+	{%- endif %}
+	{%- if (page is defined and page.extra.katex is defined and page.extra.katex) or (section is defined and section.extra.katex is defined and section.extra.katex) or (config.extra.katex is defined and config.extra.katex) %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='katex.css') | safe }}" />
+	{%- endif %}
+	{%- if config.extra.styles is defined %}
+		{%- for style in config.extra.styles %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}" />
+		{%- endfor %}
+	{%- endif %}
+	{%- if page is defined and page.extra.styles is defined %}
+		{%- for style in page.extra.styles %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}" />
+		{%- endfor %}
+	{%- elif section is defined and section.extra.styles is defined %}
+		{%- for style in section.extra.styles %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}" />
+		{%- endfor %}
+	{%- endif %}
+		{%- if config.markdown.highlighting is defined and config.markdown.highlighting.light_theme is defined and config.markdown.highlighting.dark_theme is defined %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='giallo-light.css') }}" media="(prefers-color-scheme: light)" />
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='giallo-dark.css') }}" media="(prefers-color-scheme: dark)" />
+		{%- elif config.markdown.highlighting is defined and config.markdown.highlighting.theme is defined %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='giallo.css') }}" />
+		{%- endif %}
+	{%- endif %}
+
+	<script type="text/javascript" defer src="{{ get_url(path='closable.js') | safe }}"></script>
+	{%- if config.extra.show_copy_button is defined and config.extra.show_copy_button %}
+	<script type="text/javascript" defer src="{{ get_url(path='copy-button.js') | safe }}"></script>
+	{%- endif %}
+	{%- if config.extra.goatcounter is defined %}
+	<script type="text/javascript" defer data-goatcounter="https://{{ config.extra.goatcounter.user }}.{{ config.extra.goatcounter.host | default(value='goatcounter.com') }}/count" src="{{ get_url(path='count.js') | safe }}"></script>
+	<script type="text/javascript" defer src="{{ get_url(path='js/views.js') | safe }}"></script>
+	{%- endif %}
+	{%- if (page is defined and page.extra.katex is defined and page.extra.katex) or (section is defined and section.extra.katex is defined and section.extra.katex) or (config.extra.katex is defined and config.extra.katex) %}
+	<script type="text/javascript" defer src="{{ get_url(path='katex.min.js') | safe }}"></script>
+	<script type="text/javascript" defer src="{{ get_url(path='auto-render.min.js') | safe }}"></script>
+	<script type="text/javascript" defer src="{{ get_url(path='katex-init.js') | safe }}"></script>
+	{%- endif %}
+	{%- if config.build_search_index %}
+		{%- if config.search.index_format == "elasticlunr_json" -%}
+	<script type="text/javascript" defer src="{{ get_url(path='elasticlunr.min.js') | safe }}"></script>
+	<script type="text/javascript" defer src="{{ get_url(path='search-elasticlunr.js') | safe }}"></script>
+		{%- elif config.search.index_format == "fuse_json" -%}
+	<script type="text/javascript" defer src="{{ get_url(path='fuse.js') | safe }}"></script>
+	<script type="text/javascript" defer src="{{ get_url(path='search-fuse.js') | safe }}"></script>
+		{%- endif -%}
+	{%- endif %}
+	{%- if config.extra.nav is defined and config.extra.nav.show_theme_switcher is defined and config.extra.nav.show_theme_switcher %}
+	<script type="text/javascript" defer src="{{ get_url(path='theme-switcher.js') | safe }}"></script>
+	{%- endif %}
+	{%- if page is defined and page.extra.comments is defined and page.extra.comments.id is defined %}
+	<script type="text/javascript" defer src="{{ get_url(path='comments.js') | safe }}"></script>
+	{%- endif %}
+
+	<link rel="stylesheet" href="{{ get_url(path='pagefind/pagefind-component-ui.css') | safe }}" />
+	<script src="{{ get_url(path='pagefind/pagefind-component-ui.js') }}" type="module"></script>
+
+	{%- if config.extra.scripts is defined %}
+		{%- for script in config.extra.scripts %}
+	<script type="text/javascript" defer src="{{ get_url(path=script) | safe }}"></script>
+		{%- endfor %}
+	{%- endif %}
+	{%- if page is defined and page.extra.scripts is defined %}
+		{%- for script in page.extra.scripts %}
+	<script type="text/javascript" defer src="{{ get_url(path=script) | safe }}"></script>
+		{%- endfor %}
+	{%- elif section is defined and section.extra.scripts is defined %}
+		{%- for script in section.extra.scripts %}
+	<script type="text/javascript" defer src="{{ get_url(path=script) | safe }}"></script>
+		{%- endfor %}
+	{%- endif %}
+
+	{%- set meta_title %}{% include 'partials/title.html' %}{% endset -%}
+	{%- set meta_image %}{% include 'partials/card.html' %}{% endset -%}
+	<meta property="og:site_name" content="{{ config.title }}" />
+	<meta property="og:type" content="{{ og_type }}" />
+	<meta property="og:title" content="{{ meta_title | trim }}" />
+	<meta property="og:url" content="{{ meta_url | safe }}" />
+	<meta property="og:description" content="{{ meta_description }}" />
+	{%- if config.extra.card is not defined or config.extra.card != false %}
+	<meta property="og:image" content="{{ meta_image | trim | safe }}" />
+	<meta property="og:image:alt" content="{{ meta_title | trim }}" />
+	{%- endif %}
+	<meta property="og:locale" content="{{ lang | replace(from='-', to='_') }}" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="{{ meta_title | trim }}" />
+	<meta name="twitter:description" content="{{ meta_description }}" />
+	{%- if config.extra.card is not defined or config.extra.card != false %}
+	<meta name="twitter:image" content="{{ meta_image | trim | safe }}" />
+	{%- endif %}
+
+	{%- if og_type == "article" and page is defined and page.date %}
+	<meta property="article:published_time" content="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}" />
+	{%- if page.updated %}<meta property="article:modified_time" content="{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S%:z') }}" />{% endif %}
+	{%- if page.taxonomies is defined and page.taxonomies.tags is defined %}{% for tag in page.taxonomies.tags %}<meta property="article:tag" content="{{ tag }}" />{% endfor %}{% endif %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": {{ page.title | json_encode() | safe }},
+		"description": {{ meta_description | json_encode() | safe }},
+		"url": {{ meta_url | json_encode() | safe }},
+		"mainEntityOfPage": { "@type": "WebPage", "@id": {{ meta_url | json_encode() | safe }} },
+		{%- if page.date %}"datePublished": {{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') | json_encode() | safe }},{% endif %}
+		{%- if page.updated %}"dateModified": {{ page.updated | date(format='%Y-%m-%dT%H:%M:%S%:z') | json_encode() | safe }},{% endif %}
+		{%- if config.extra.card is not defined or config.extra.card != false %}"image": [{{ meta_image | trim | json_encode() | safe }}],{% endif %}
+		"inLanguage": {{ lang | json_encode() | safe }},
+		"author": { "@type": "Organization", "name": "LightCMS", "url": "https://www.lightcms.me/" },
+		"publisher": { "@type": "Organization", "name": "LightCMS", "url": "https://www.lightcms.me/", "logo": { "@type": "ImageObject", "url": {{ get_url(path="favicon.png") | json_encode() | safe }} } }
+	}
+	</script>
+	{%- elif current_path is defined and (current_path == "/" or current_path == "/" ~ lang ~ "/") %}
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": {{ config.title | json_encode() | safe }},
+		"url": {{ get_url(path="/", lang=lang) | json_encode() | safe }},
+		"description": {{ config.description | json_encode() | safe }},
+		"inLanguage": {{ lang | json_encode() | safe }}
+	}
+	</script>
+	{%- endif %}
+	<script>
+    !((t,e)=> {var o,n,p,r;e.__SV||(window.posthog?.__loaded)||(window.posthog=e,e._i=[],e.init=(i,s,a)=> {function g(t,e){var o=e.split(".");2===o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=`${s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")}/static/array.js`,p.onerror=()=> {p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:(t)=> {var e="posthog";return"posthog"!==a&&(e+=`.${a}`),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:()=> `${u.toString(1)}.people (stub)`}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)})(document,window.posthog||[]);
+    posthog.init('phc_ycdiTXyyrog9G7MiS3GgxwybcLF2ZZddYzxKQfbanqkT', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-08-30',
+    })
+	</script>
+</head>
