@@ -1,9 +1,9 @@
 ---
-title: LightCMS vs. Pages CMS Visual Writing vs. Form Based Editing
+title: LightCMS vs. Pages CMS Visual Writing vs. Form based editing
 description: >-
   比较基于 Git 发布的 LightCMS 和 Pages CMS ：视觉Markdown 编辑还是配置驱动的表单域。
 serial: 41
-date: '2026-10-15T20:09:55.000Z'
+date: '2026-10-15T20：09：55.000Z'
 draft: false
 tags:
   - lightcms vs pages cms
@@ -43,4 +43,4 @@ LightCMS 和 Pages CMS 都在 Git 中将您的内容存储为文件，因此您�
 
 当主要任务是撰写和编辑文章时，LightCMS会更适合。如果您或您的作者在当天大部分时间内草拟了标题、代码块、表格等1,000字帖子， 和内联图像，基于浏览器的文档编辑器比一堆表单输入更快。
 
-在选择任一工具之前，根据您的资源库的实际布局、前事项格式和图像文件夹协议进行测试。 For nearby Git-based options, see [LightCMS vs. Decap CMS](/comparison/lightcms-vs-decap-cms/) and [LightCMS vs. Keystatic](/comparison/lightcms-vs-keystatic/).
+在选择任一工具之前，根据您的资源库的实际布局、前事项格式和图像文件夹协议进行测试。关于附近基于Git的选项，请参阅 [LightCMS vs. Decap CMS](/comparison/lightcms-vs-decap-cms/) and [LightCMS vs. Key](/comparison/lightcms-vs-keystatic/)。
