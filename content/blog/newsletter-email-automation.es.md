@@ -1,5 +1,5 @@
 ---
-title: 'Newsletter Automation Without a Paid subscription'
+title: 'Automatización de boletines sin suscripción de pago'
 description: >-
   Utilice GitHub y Newsy para notificar a los lectores sobre nuevos mensajes sin una plataforma de marketing por correo electrónico.
 date: '2026-09-18T01:50:00.000Z'
@@ -9,10 +9,10 @@ tags:
   - nuevo
   - github
   - publicando
-slug: newsletter-email-automation
+slug: newsletter-e-automatización
 ---
 
-Usted puede notificar a los lectores sobre los nuevos mensajes de un blog basado en Git sin tener una plataforma de marketing por correo electrónico. [Newsy](https://github.com/light-cms/newsy) Uses GitHub repository activity and issue subscriptions to deliver post updates through GitHub notifications.
+Usted puede notificar a los lectores sobre los nuevos mensajes de un blog basado en Git sin tener una plataforma de marketing por correo electrónico. [Newsy](https://github.com/light-cms/newsy) Utiliza la actividad del repositorio de GitHub y las suscripciones para enviar actualizaciones de publicaciones a través de las notificaciones de GitHub.
 
 ## Donde las herramientas tradicionales del boletín de noticias añaden sobrecarga
 
@@ -56,15 +56,15 @@ GitHub notifies users subscribed to that issue
 
 Este enfoque se adapta mejor al público técnico que al público general.
 
-- Requisitos de cuenta de GitHub: Los lectores necesitan una cuenta de GitHub para suscribirse. That is reasonable for many developer blogs, but it can block nontechnical readers.
+- Requisitos de cuenta de GitHub: Los lectores necesitan una cuenta de GitHub para suscribirse. Eso es razonable para muchos blogs de desarrolladores, pero puede bloquear lectores no técnicos.
 - Formato de notificación simple: las notificaciones de GitHub no reemplazan los correos electrónicos de marketing de marca. Usted tiene control limitado sobre el diseño y el estilo.
 - Análisis limitados: Usted no obtiene métricas típicas de marketing por correo electrónico, como la tasa de apertura o la tasa de clics. Usted puede inspeccionar la participación en el tema, pero eso no es lo mismo que análisis de campaña.
 
 ## Configurar lista
 
-1. Install Newsy: Add the [Newsy GitHub App](https://github.com/apps/newsletter-newsy/installations/select_target) To the repository that contains your blog.
+1. Instalar Newsy: Agregue la [Aplicación Newsy de GitHub](https://github.com/apps/newsletter-newsy/installations/select_target) al repositorio que contiene su blog.
 2. Crear el punto de entrada de suscripción: Generar o crear un enlace/botón de suscripción que apunte a los lectores a la edición de anuncios.
 3. Añadir el enlace a su sitio: Coloque el enlace de suscripción en el diseño de su blog, pie de página o plantilla de correo.
 4. Prueba el flujo: Publica un borrador de mensajes, confirma el commit, confirma el comentario del incidente y verifica que una cuenta suscrita reciba una notificación.
 
-For related setup details, see [Self-hosting LightCMS](/blog/selfhost/), [Drafts, revisions, and publishing](/blog/lightcms-drafts-and-versioning/), and [Getting started with LightCMS](/getting-started/).
+Para los detalles de configuración relacionados, consulte [LightCMS Auto-hosting](/blog/selfhost/), [Borradores, revisiones y publicación](/blog/lightcms-drafts-and-versioning/)y [Comenzando con LightCMS](/getting-started/).
