@@ -1,27 +1,31 @@
 ---
-title: "LightCMS AI Copilot: In-Editor Drafting Assistance"
-description: "How the LightCMS AI copilot can assist with outlining, rewriting, and grammar while keeping content review and publishing under human control."
-serial: 32
-date: 2026-10-16T09:20:00Z
+title: LightCMS Copilot the in Editor writing Assistant
+description: >-
+  LightCMS Copilot helps you outline, rewrite, and polish content while keeping
+  review and publishing in human hands.
+date: '2026-10-16T09:20:00.000Z'
 draft: false
-
 tags:
   - lightcms
   - ai
   - writing
   - workflow
+  - cms
+  - opensource
+slug: lightcms-ai-copilot
 ---
-
 LightCMS includes an AI copilot for specific writing tasks inside the editor, such as outlining, rewriting, expanding, or fixing grammar. It supports the author's draft rather than replacing editorial judgment or factual review.
 
 ## What the copilot is useful for
 
+
 | Task         | Useful input                         | Human review required                        |
-| :----------- | :----------------------------------- | :------------------------------------------- |
+| :------------ | :------------------------------------ | :-------------------------------------------- |
 | Outline      | A topic, audience, and central claim | Check structure against the actual argument  |
 | Rephrase     | A paragraph with clear meaning       | Verify tone and technical accuracy           |
 | Expand       | A short note or bullet point         | Remove generic filler and unsupported claims |
 | Grammar pass | A nearly final draft                 | Confirm meaning did not change               |
+
 
 These actions work best when you select specific text and ask for a bounded change. Asking a model to generate a full post from a title increases the risk of generic writing and factual errors.
 
