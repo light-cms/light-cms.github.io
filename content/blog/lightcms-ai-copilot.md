@@ -44,6 +44,6 @@ Do not include credentials, private customer data, or unpublished sensitive info
 
 AI output should be treated as draft text. Verify technical claims, product behavior, pricing, dates, and quotes before publishing. Keep the author's voice by rewriting generated text where it sounds generic or overconfident.
 
-The trade-off is speed versus trust. AI can shorten drafting time, but unreviewed AI output can damage credibility. A Git based workflow helps here because edits remain visible in diffs and can be reviewed before merge or deploy.
+The trade-off is speed versus trust. AI can shorten drafting time, but un reviewed AI output can damage credibility. A Git based workflow helps here because edits remain visible in diffs and can be reviewed before merge or deploy.
 
 For related guidance, see [AI-Assisted Blogging: Where AI Helps and Where It Fails](/blog/ai-assisted-blogging/) and [Voice-to-Text Dictation in LightCMS](/blog/lightcms-voice-to-text/).
