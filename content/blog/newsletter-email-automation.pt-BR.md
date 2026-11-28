@@ -1,5 +1,5 @@
 ---
-title: 'Newsletter Automation Without a Paid subscription'
+title: 'Sem assinatura paga da Newsletter Automation'
 description: >-
   Use GitHub e Newsy para notificar os leitores sobre as novas postagens sem uma plataforma de e-mail de marketing separada.
 date: '2026-09-18T01:50:00.000Z'
@@ -9,10 +9,10 @@ tags:
   - noticiário
   - github
   - publicação
-slug: newsletter-email-automation
+slug: informativa-de-email-automação
 ---
 
-Você pode notificar os leitores sobre novas postagens a partir de um blog com Git--based sem executar uma plataforma de e-mail de marketing separada. [Newsy](https://github.com/light-cms/newsy) Uses GitHub repository activity and issue subscriptions to deliver post updates through GitHub notifications.
+Você pode notificar os leitores sobre novas postagens a partir de um blog com Git--based sem executar uma plataforma de e-mail de marketing separada. [Newsy](https://github.com/light-cms/newsy) Usa a atividade do repositório GitHub e as assinaturas de issues para entregar atualizações de postagens através de notificações do GitHub.
 
 ## Onde as ferramentas tradicionais da newsletter adicionam despesas gerais
 
@@ -48,7 +48,7 @@ GitHub notifies users subscribed to that issue
 ### Etapas de entrega
 
 1. Detecção de commit: uma ação de publicação cria ou atualiza um arquivo Markdown no repositório. Newsy can watch for a new post or a `draft: false` Change.
-2. Announcement thread: Newsy posts the update to a designated GitHub issue, such as an `announcement` issue with a `newsletter` Label.
+2. Tópico de anúncio: Posts novos para um assunto do GitHub designado, como um problema do Anúncio `` com um Rótulo `newsletter`.
 3. Inscrição de leitores: Os leitores assinam assistindo ou subscrevendo-se ao problema do GitHub.
 4. Envio de notificação: o GitHub envia notificações com base nas configurações de notificação de cada cliente do GitHub.
 
@@ -56,15 +56,15 @@ GitHub notifies users subscribed to that issue
 
 Esta abordagem adequa-se melhor ao público técnico do que ao público geral.
 
-- Requisito conta GitHub: Os leitores precisam de uma conta no GitHub para se inscrever. That is reasonable for many developer blogs, but it can block nontechnical readers.
+- Requisito conta GitHub: Os leitores precisam de uma conta no GitHub para se inscrever. Isso é razoável para muitos blogs de desenvolvedor, mas pode bloquear leitores não técnicos.
 - Formato de notificação simples: as notificações do GitHub não substituem e-mails de marketing marcados. Você tem controle limitado sobre layout e estilo.
 - Análise limitada: Você não recebe típicas métricas de marketing por e-mail, como taxa aberta ou taxa de clique. Você pode inspecionar a participação de issues, mas isso não é o mesmo que a análise da campanha.
 
 ## Configurar checklist
 
-1. Install Newsy: Add the [Newsy GitHub App](https://github.com/apps/newsletter-newsy/installations/select_target) To the repository that contains your blog.
+1. Instalar Novo: Adicionar o [Novo-App GitHub](https://github.com/apps/newsletter-newsy/installations/select_target) Para o repositório que contém o seu blog.
 2. Criar um ponto de entrada de inscrição: Gerar ou criar um link/botão de subscrição que aponte os leitores para a issue de anúncio.
 3. Adicione o link ao seu site: Coloque o link de inscrição no layout do seu blog, rodapé ou modelo de postagem.
 4. Teste o fluxo: Publique um rascunho da publicação, confirme o commit, confirme o comentário da issue e verifique se uma conta inscrita recebe uma notificação.
 
-For related setup details, see [Self-hosting LightCMS](/blog/selfhost/), [Drafts, revisions, and publishing](/blog/lightcms-drafts-and-versioning/), and [Getting started with LightCMS](/getting-started/).
+Para detalhes de configuração relacionados, consulte [Auto hospedagem LightCMS](/blog/selfhost/), [Rascunhos, revisões e publicação](/blog/lightcms-drafts-and-versioning/)e [Começando com o LightCMS](/getting-started/).
