@@ -37,12 +37,8 @@ dark_theme = "solarized-dark"
 style = "class"
 error_on_missing_language = true
 
-# Translated pages can link to anchors from the English source while their
-# headings have been translated. Keep those mismatches visible as warnings
-# instead of failing the whole build.
 [link_checker]
 internal_level = "warn"
-
 
 [extra]
 author = "light-cms"
