@@ -13,10 +13,13 @@ const translatedNamePattern = /^(.*)\.([A-Za-z]{2}(?:-[A-Za-z]{2,4})?)\.md$/;
 
 // Keep in sync with `excluded_front_matter_elements` in crowdin.yml.
 const structuralKeys = new Set([
+	"author",
 	"canonical",
+	"comments",
 	"created",
 	"date",
 	"draft",
+	"extra",
 	"fmContentType",
 	"headless",
 	"id",
@@ -27,6 +30,7 @@ const structuralKeys = new Set([
 	"serial",
 	"slug",
 	"sort_by",
+	"tags",
 	"template",
 	"visibility",
 	"weight",
@@ -38,6 +42,10 @@ type FrontMatter = {
 	start: number;
 	end: number;
 };
+
+// A top-level `key:` / `key =` line (no indentation, not a list item).
+const keyPattern = /^([A-Za-z_][\w.-]*)\s*[:=]\s*(.*)$/;
+const listItemPattern = /^\s*-\s+/;
 
 function parseFrontMatter(text: string): FrontMatter | null {
 	const lines = text.split("\n");
@@ -53,27 +61,54 @@ function parseFrontMatter(text: string): FrontMatter | null {
 	return null;
 }
 
-function splitKeyValue(
-	line: string,
-): { key: string; prefix: string; value: string } | null {
-	const match = line.match(/^([A-Za-z_][\w.-]*)(\s*[:=]\s*)(.*)$/);
-	if (!match) return null;
-	return { key: match[1], prefix: `${match[1]}${match[2]}`, value: match[3] };
+function isTopLevelKey(line: string): boolean {
+	if (line.startsWith(" ") || line.startsWith("\t")) return false;
+	if (listItemPattern.test(line)) return false;
+	return keyPattern.test(line);
 }
 
-function sourceStructuralValues(source: string): Map<string, string> {
-	const values = new Map<string, string>();
-	const frontMatter = parseFrontMatter(source);
-	if (!frontMatter) return values;
+function keyOf(line: string): string | null {
+	const match = line.match(keyPattern);
+	return match ? match[1] : null;
+}
 
-	for (const line of frontMatter.lines) {
-		const parsed = splitKeyValue(line);
-		if (parsed && structuralKeys.has(parsed.key)) {
-			values.set(parsed.key, parsed.value.trimEnd());
+// End index (exclusive) of a key's block: nested lines and list items that
+// belong to `start`, stopping at the next top-level key or end of front matter.
+function blockEnd(lines: string[], start: number): number {
+	let end = start + 1;
+	while (end < lines.length) {
+		const line = lines[end];
+		if (line.trim() === "") {
+			end += 1;
+			continue;
 		}
+		if (isTopLevelKey(line)) break;
+		end += 1;
+	}
+	// Drop trailing blank lines from the block.
+	while (end - 1 > start && lines[end - 1].trim() === "") end -= 1;
+	return end;
+}
+
+// Collect the full block (key line + nested/list lines) for every top-level
+// structural key. Nested keys such as `extra.comments` are not structural.
+function structuralBlocks(lines: string[]): Map<string, string[]> {
+	const blocks = new Map<string, string[]>();
+
+	for (let index = 0; index < lines.length; ) {
+		const key = isTopLevelKey(lines[index]) ? keyOf(lines[index]) : null;
+
+		if (key && structuralKeys.has(key)) {
+			const end = blockEnd(lines, index);
+			blocks.set(key, lines.slice(index, end));
+			index = end;
+			continue;
+		}
+
+		index += 1;
 	}
 
-	return values;
+	return blocks;
 }
 
 async function walk(dir: string): Promise<string[]> {
@@ -85,6 +120,43 @@ async function walk(dir: string): Promise<string[]> {
 		}),
 	);
 	return files.flat();
+}
+
+// Re-emit front matter, restoring structural keys from the source page in
+// place and dropping translated variants; source-only keys are appended.
+function rebuildFrontMatter(
+	frontMatter: FrontMatter,
+	sourceBlocks: Map<string, string[]>,
+): string[] {
+	const output: string[] = [];
+	const restored = new Set<string>();
+	const lines = frontMatter.lines;
+
+	for (let index = 0; index < lines.length; ) {
+		const key = isTopLevelKey(lines[index]) ? keyOf(lines[index]) : null;
+
+		if (key && structuralKeys.has(key)) {
+			const end = blockEnd(lines, index);
+			const source = sourceBlocks.get(key);
+			if (source) {
+				output.push(...source);
+				restored.add(key);
+			}
+			// If the source lacks this key, drop the translated one.
+			index = end;
+			continue;
+		}
+
+		output.push(lines[index]);
+		index += 1;
+	}
+
+	for (const [key, block] of sourceBlocks) {
+		if (restored.has(key)) continue;
+		output.push(...block);
+	}
+
+	return output;
 }
 
 let updated = 0;
@@ -100,43 +172,22 @@ for (const translatedPath of await walk(contentDir)) {
 	const source = await readFile(sourcePath, "utf8").catch(() => null);
 	if (!source) continue;
 
-	const values = sourceStructuralValues(source);
-	if (values.size === 0) continue;
+	const sourceFrontMatter = parseFrontMatter(source);
+	if (!sourceFrontMatter) continue;
+
+	const sourceBlocks = structuralBlocks(sourceFrontMatter.lines);
+	if (sourceBlocks.size === 0) continue;
 
 	const translated = await readFile(translatedPath, "utf8");
 	const frontMatter = parseFrontMatter(translated);
 	if (!frontMatter) continue;
 
-	const lines: (string | null)[] = [...frontMatter.lines];
-	const seen = new Set<string>();
-
-	for (let index = 0; index < lines.length; index += 1) {
-		const line = lines[index];
-		if (line === null) continue;
-
-		const parsed = splitKeyValue(line);
-		if (!parsed || !structuralKeys.has(parsed.key)) continue;
-
-		seen.add(parsed.key);
-		const value = values.get(parsed.key);
-		if (value === undefined) {
-			lines[index] = null;
-			continue;
-		}
-		lines[index] = `${parsed.prefix}${value}`;
-	}
-
-	// Add structural keys that Crowdin dropped entirely.
-	for (const [key, value] of values) {
-		if (seen.has(key)) continue;
-		const separator = frontMatter.delimiter === "+++" ? " = " : ": ";
-		lines.push(`${key}${separator}${value}`);
-	}
+	const output = rebuildFrontMatter(frontMatter, sourceBlocks);
 
 	const body = translated.split("\n");
 	const next = [
 		frontMatter.delimiter,
-		...lines.filter((line): line is string => line !== null),
+		...output,
 		frontMatter.delimiter,
 		...body.slice(frontMatter.end + 1),
 	].join("\n");

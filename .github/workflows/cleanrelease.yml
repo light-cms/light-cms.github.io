@@ -2,18 +2,18 @@ name: Clean Workflow Runs
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
   workflow_dispatch:
     inputs:
       retain_days:
-        description: 'Number of days to keep runs (0 to delete all)'
+        description: "Number of days to keep runs (0 to delete all)"
         required: false
-        default: '0'
+        default: "0"
         type: string
       keep_minimum_runs:
-        description: 'Minimum number of runs to keep per workflow'
+        description: "Minimum number of runs to keep per workflow"
         required: false
-        default: '0'
+        default: "0"
         type: string
 
 permissions:
