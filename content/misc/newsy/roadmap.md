@@ -1,12 +1,14 @@
 ---
 title: Newsy Roadmap
-description: "What Newsy the GitHub based newsletter platform."
+description: What Newsy the GitHub based newsletter platform.
 draft: false
 tags:
   - newsy
   - newsletter
+  - lightcms
+slug: roadmap
+date: '2026-11-28T14:45:59.899Z'
 ---
-
 Newsy already has a hosted option and a self-host path. The goal is simple: make GitHub-based newsletter updates easy to try and easy to run yourself.
 
 ## Use the hosted instance
@@ -21,4 +23,4 @@ If you want more control, deploy your own copy on Vercel:
 
 The hosted instance runs on Vercel’s hobby tier, so availability and usage limits can apply.
 
-If Newsy is useful to you, starring the [Newsy repository](https://github.com/light-cms/newsy) is a nice way to support it.
+If Newsy is useful to you, starring the [Newsy repository](https://github.com/light-cms/newsy) Is a nice way to support it.
