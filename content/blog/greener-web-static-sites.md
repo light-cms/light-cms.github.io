@@ -1,28 +1,39 @@
 ---
-title: "Static Sites and Carbon Emissions: Building a Lower-Impact Web"
-description: How static sites, CDN caching, and efficient assets can reduce
-  website energy use, with practical ways to measure and improve page emissions.
-date: 2026-10-14T13:30:00.000Z
+title: Static Sites and ecofriendly web building a less polluting web
+description: >-
+  How static sites, and efficient asset handling can reduce energy use and
+  carbon emissions.
+date: '2026-10-14T13:30:00.000Z'
 draft: false
 tags:
-  - low carbon website
-  - static site co2
-  - greener web
-  - sustainable web design
-  - website carbon footprint
+  - co2
+  - carbon
+  - oxide
+  - energy
+  - website
+  - carbon
+  - footprint
+  - sharing
 slug: greener-web-static-sites
 ---
-
 Static sites can reduce the energy required to serve web pages by moving work from every request to build time and by serving cached files from a CDN. They are not automatically low-carbon, but for content-heavy sites they often avoid unnecessary server-side computation.
 
 ## Why static delivery can use less energy
 
-Dynamic sites often run application code, query a database, and assemble HTML for each request. Static sites generate HTML during a build and serve the resulting files repeatedly.| Factor | Dynamic request path | Static cached path |
-| :--- | :--- | :--- |
-| Per-request work | Application logic and database queries may run | File can be served from cache |
-| Always-on infrastructure | App server/database often required | Build runs on demand; hosting can be file/CDN based |
-| Caching | Possible, but often more complex | Natural fit for immutable/static assets |
-| Payload control | Depends on app and client bundle | Depends on build output and asset choices |
+Dynamic websites typically execute application code, query a database, and generate HTML for each request.
+
+Static sites generate HTML during a build and serve the resulting files repeatedly.
+
+
+| **Factor**               | **Dynamic request path**                       | **Static cached path**                                  |
+| :------------------------ | :---------------------------------------------- | :------------------------------------------------------- |
+| Per-request work         | Application logic and database queries may run | A file can be served from cache                         |
+| Always-on infrastructure | An app server and database are often required  | Builds run on demand; hosting can be file- or CDN-based |
+| Caching                  | Possible, but often more complex               | A natural fit for immutable or static assets            |
+| Payload control          | Depends on the app and client bundle           | Depends on build output and asset choices               |
+
+
+
 
 The actual impact depends on traffic, cache hit rate, hosting energy sources, page weight, and client-side JavaScript.
 
