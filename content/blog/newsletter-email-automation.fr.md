@@ -1,5 +1,5 @@
 ---
-title: 'Newsletter Automation Without a Paid subscription'
+title: 'Automatisation de la newsletter sans abonnement payant'
 description: >-
   Utilisez GitHub et Newsy pour informer les lecteurs des nouveaux messages sans plateforme de marketing par e-mail.
 date: '2026-09-18T01:50:00.000Z'
@@ -12,7 +12,7 @@ tags:
 slug: newsletter-email-automation
 ---
 
-Vous pouvez informer les lecteurs de nouveaux messages à partir d'un blog basé sur Git sans avoir à utiliser une plate-forme de marketing électronique distincte. [Newsy](https://github.com/light-cms/newsy) Uses GitHub repository activity and issue subscriptions to deliver post updates through GitHub notifications.
+Vous pouvez informer les lecteurs de nouveaux messages à partir d'un blog basé sur Git sans avoir à utiliser une plate-forme de marketing électronique distincte. [Newsy](https://github.com/light-cms/newsy) Utilise l'activité du dépôt GitHub et les souscriptions pour fournir des mises à jour de publication via les notifications GitHub.
 
 ## Là où les outils traditionnels de newsletter ajoutent des frais généraux
 
@@ -47,8 +47,8 @@ GitHub informe les utilisateurs inscrits à ce ticket
 
 ### Étapes de livraison
 
-1. Détection de commit : Une action de publication crée ou met à jour un fichier Markdown dans le référentiel. Newsy can watch for a new post or a `draft: false` Change.
-2. Announcement thread: Newsy posts the update to a designated GitHub issue, such as an `announcement` issue with a `newsletter` Label.
+1. Détection de commit : Une action de publication crée ou met à jour un fichier Markdown dans le référentiel. Les Newsy peuvent regarder un nouveau message ou un `brouillon : faux` Changement.
+2. Fil d'annonce : Newsy publie la mise à jour d'un problème GitHub désigné, comme un problème d'annonce `` avec un label `newsletter`.
 3. Abonnement à un lecteur : les lecteurs s'abonnent en regardant ou en s'abonnant à ce problème GitHub.
 4. Livraison des notifications : GitHub envoie des notifications en fonction des paramètres de notification GitHub de chaque abonné.
 
@@ -56,15 +56,15 @@ GitHub informe les utilisateurs inscrits à ce ticket
 
 Cette approche convient mieux aux publics techniques qu'aux publics généraux.
 
-- Exigences de compte GitHub : les lecteurs ont besoin d’un compte GitHub pour s’abonner. That is reasonable for many developer blogs, but it can block nontechnical readers.
+- Exigences de compte GitHub : les lecteurs ont besoin d’un compte GitHub pour s’abonner. C'est raisonnable pour de nombreux blogs de développeurs, mais il peut bloquer des lecteurs non techniques.
 - Format de notification simple : les notifications GitHub ne remplacent pas les e-mails de marketing de marque. Vous avez un contrôle limité sur la mise en page et le style.
 - Analyses limitées: Vous ne recevez pas de métriques typiques de marketing par courriel telles que le taux d'ouverture ou le taux de clic. Vous pouvez inspecter la participation aux émissions, mais ce n'est pas la même chose que les analyses de campagne.
 
 ## Configurer la liste de contrôle
 
-1. Install Newsy: Add the [Newsy GitHub App](https://github.com/apps/newsletter-newsy/installations/select_target) To the repository that contains your blog.
+1. Installez Newsy: Ajoutez l'App [Newsy GitHub](https://github.com/apps/newsletter-newsy/installations/select_target) au dépôt qui contient votre blog.
 2. Créez le point d’entrée d’abonnement: Générez ou créez un lien/bouton d’abonnement qui pointe les lecteurs vers le numéro d’annonce.
 3. Ajoutez le lien vers votre site : placez le lien d'inscription dans la mise en page de votre blog, pied de page, ou modèle de poste.
 4. Tester le flux : Publier un brouillon de message, confirmer la livraison, confirmer le commentaire du problème, et vérifier qu'un compte abonné reçoit une notification.
 
-For related setup details, see [Self-hosting LightCMS](/blog/selfhost/), [Drafts, revisions, and publishing](/blog/lightcms-drafts-and-versioning/), and [Getting started with LightCMS](/getting-started/).
+Pour plus de détails sur la configuration, voir [Self-hosting LightCMS](/blog/selfhost/), [Brouillons, révisions et publication](/blog/lightcms-drafts-and-versioning/), et [Commencer avec LightCMS](/getting-started/).
