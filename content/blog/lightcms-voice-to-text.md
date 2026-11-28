@@ -1,8 +1,10 @@
 ---
-title: "Voice-to-Text Dictation in LightCMS"
-description: "How voice dictation can fit into a Markdown blogging workflow, with review steps for accuracy, privacy, and editing."
+title: Voice to Text Dictation in LightCMS
+description: >-
+  How voice dictation can fit into a Markdown blogging workflow, with review
+  steps for accuracy, privacy, and editing.
 serial: 33
-date: "2026-10-16T09:30:00.000Z"
+date: '2026-10-16T09:30:00.000Z'
 draft: false
 tags:
   - lightcms
@@ -11,7 +13,6 @@ tags:
   - markdown
 slug: lightcms-voice-to-text
 ---
-
 Voice dictation can speed up drafting by turning spoken notes into editable text inside your CMS. In a Markdown workflow, the transcript should be treated as a first draft: useful for capturing ideas quickly, but still requiring human editing for accuracy, structure, and tone.
 
 ## How dictation fits a blogging workflow
@@ -23,12 +24,14 @@ A practical dictation workflow separates capture from editing:
 3. Edit for structure: Add headings, lists, links, and code blocks after the ideas are captured.
 4. Verify details: Check names, numbers, product terms, and quotes before publishing.
 
+
 | Stage         | Benefit                                   | Risk                                                |
-| :------------ | :---------------------------------------- | :-------------------------------------------------- |
+| :------------- | :----------------------------------------- | :--------------------------------------------------- |
 | Dictation     | Faster idea capture                       | Rambling or repeated phrasing                       |
 | Transcription | Converts speech to editable text          | Homophones, names, and technical terms may be wrong |
 | Editing       | Turns transcript into publishable content | Skipping review can publish errors                  |
 | Publishing    | Commits final Markdown to Git             | Sensitive audio/data handling depends on provider   |
+
 
 ## Accuracy and privacy checks
 
