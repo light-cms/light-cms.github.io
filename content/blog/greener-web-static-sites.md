@@ -41,8 +41,8 @@ The actual impact depends on traffic, cache hit rate, hosting energy sources, pa
 
 Estimates are useful for direction, not precise accounting. Use multiple tools and track changes over time.
 
-- [Website Carbon Calculator](https://www.websitecarbon.com/) estimates emissions per page view.
-- [Ecograder](https://ecograder.com/) provides sustainability-oriented scoring and recommendations.
+- [Website Carbon Calculator](https://www.websitecarbon.com/) Estimates emissions per page view.
+- [Ecograder](https://ecograder.com/) Provides sustainability oriented scoring and recommendations.
 - Browser performance metrics such as Largest Contentful Paint, total transfer size, and JavaScript execution cost help identify technical drivers of page weight.
 
 A practical baseline is to measure your top landing pages, record transfer size and key performance metrics, then repeat after optimizations.
