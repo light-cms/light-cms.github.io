@@ -1,5 +1,5 @@
 ---
-title: LightCMS vs. Pages CMS Visual Writing vs. Form Based Editing
+title: LightCMS vs. Seiten CMS Visual Writing vs. Formular-basiertes Bearbeiten
 description: >-
   Vergleichen Sie LightCMS und Pages CMS für Git-basiertes Publishing: visuelle Markdown Bearbeitung versus config-gesteuerte Formularfelder in Ihrem Projektarchiv.
 serial: 41
@@ -43,4 +43,4 @@ Es ist auch leichter anzunehmen, wenn Sie keine Anwendungsdatenbank für das CMS
 
 LightCMS passt besser, wenn der Hauptauftrag Artikel verfasst und editiert. Wenn Sie oder Ihre Schriftsteller den größten Teil des Tages verbringen, schreiben Sie 1000 Wörter mit Überschriften, Codeblöcken, Tabellen, und Inline-Images wird ein browserbasierter Dokumenten-Editor schneller aus als ein Stapel von Formulareingaben.
 
-Bevor Sie ein Werkzeug wählen, testen Sie sowohl gegen Ihr aktuelles Projektarchiv-Layout, das Frontmatter Format als auch die Konventionen für den Bildordner. For nearby Git-based options, see [LightCMS vs. Decap CMS](/comparison/lightcms-vs-decap-cms/) and [LightCMS vs. Keystatic](/comparison/lightcms-vs-keystatic/).
+Bevor Sie ein Werkzeug wählen, testen Sie sowohl gegen Ihr aktuelles Projektarchiv-Layout, das Frontmatter Format als auch die Konventionen für den Bildordner. Für Optionen auf nahe gelegene Gitter siehe [LightCMS vs. Decap CMS](/comparison/lightcms-vs-decap-cms/) und [LightCMS vs. Keystatic](/comparison/lightcms-vs-keystatic/).
