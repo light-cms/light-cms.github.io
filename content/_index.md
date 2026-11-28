@@ -7,12 +7,12 @@ description = "Guides on Git based CMS workflows, static site generators, and Ma
 
 ## What you can do with LightCMS
 
-| Capability            | How it works                                                                                                      |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
-| Visual editing        | Write and edit Markdown in your browser.                                                                        |
-| Git publishing        | Save changes as commits in your repository rather than in a separate CMS database.                               |
-| Review                | Use branches, pull requests, and Git history to review changes.                                                  |
-| Reader updates        | Send updates through GitHub workflows with tools like [Newsy](https://github.com/light-cms/newsy).               |
+| Capability     | How it works                                                                                       |
+| :------------- | :------------------------------------------------------------------------------------------------- |
+| Visual editing | Write and edit Markdown in your browser.                                                           |
+| Git publishing | Save changes as commits in your repository rather than in a separate CMS database.                 |
+| Review         | Use branches, pull requests, and Git history to review changes.                                    |
+| Reader updates | Send updates through GitHub workflows with tools like [Newsy](https://github.com/light-cms/newsy). |
 
 ## How publishing works
 

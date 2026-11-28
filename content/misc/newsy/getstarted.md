@@ -1,7 +1,6 @@
 ---
 title: "Newsy: A GitHub Powered Newsletter Platform"
 description: "Newsy is a serverless, GitHub powered newsletter platform where subscribers and issues live in your repository, without mailing lists, SMTP, or a database."
-
 tags:
   - newsy
   - newsletter

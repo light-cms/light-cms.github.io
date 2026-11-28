@@ -6,11 +6,11 @@ badge: Deploy
 date: 2026-09-18T01:45:00.000Z
 draft: false
 tags:
-   - lightcms
-   - self-hosting
-   - github_app
-   - vercel
-   - sveltekit
+  - lightcms
+  - self-hosting
+  - github_app
+  - vercel
+  - sveltekit
 preview: /og-image.png
 slug: selfhost
 fmContentType: default

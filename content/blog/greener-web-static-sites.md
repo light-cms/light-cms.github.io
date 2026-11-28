@@ -12,6 +12,7 @@ tags:
   - website carbon footprint
 slug: greener-web-static-sites
 ---
+
 Static sites can reduce the energy required to serve web pages by moving work from every request to build time and by serving cached files from a CDN. They are not automatically low-carbon, but for content-heavy sites they often avoid unnecessary server-side computation.
 
 ## Why static delivery can use less energy

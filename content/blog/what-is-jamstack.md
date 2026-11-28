@@ -10,6 +10,7 @@ tags:
   - static-sites
   - api
 ---
+
 Jamstack is a web architecture that combines prebuilt markup, APIs, and JavaScript. Instead of rendering every page from an application server on each request, a Jamstack site serves prebuilt files from a CDN and uses APIs or client-side JavaScript for dynamic features.
 
 ## The three Jamstack components| Component | Role | Example |

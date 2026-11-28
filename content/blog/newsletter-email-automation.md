@@ -1,7 +1,7 @@
 ---
-title: 'Newsletter Automation Without a Paid subscription '
+title: "Newsletter Automation Without a Paid subscription "
 description: "Use GitHub and Newsy to notify readers about new posts without a separate email marketing platform."
-date: '2026-09-18T01:50:00.000Z'
+date: "2026-09-18T01:50:00.000Z"
 draft: false
 tags:
   - newsletter
@@ -10,6 +10,7 @@ tags:
   - publishing
 slug: newsletter-email-automation
 ---
+
 You can notify readers about new posts from a Git based blog without running a separate email marketing platform. [Newsy](https://github.com/light-cms/newsy) Uses GitHub repository activity and issue subscriptions to deliver post updates through GitHub notifications.
 
 ## Where traditional newsletter tools add overhead

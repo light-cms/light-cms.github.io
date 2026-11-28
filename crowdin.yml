@@ -31,7 +31,12 @@ files:
       - preview
       - headless
       - id
+      - tags
+      - author
+      - slug
       - isCJKLanguage
+      - extra
+      - comments
       - serial
       - weight
       - visibility

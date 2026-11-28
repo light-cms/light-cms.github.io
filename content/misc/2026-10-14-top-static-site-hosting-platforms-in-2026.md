@@ -3,9 +3,6 @@ title: "Top Static Site Hosting Platforms in 2026"
 description: "Compare static site hosts in 2026: GitHub Pages, Cloudflare Pages, Vercel, Netlify, Surge.sh, Wasmer Edge, and Deno Deploy on limits and trade-offs."
 date: "2026-10-14T10:00:00.000Z"
 draft: false
-weight: 1
-serial: 6
-
 tags:
   - static-sites
   - hosting
@@ -24,15 +21,15 @@ Most static site hosts can deploy an Astro, Hugo, Jekyll, Eleventy, or Zola site
 
 ## How the static hosts compare
 
-| Host | Good fit | Main trade-off |
-| :--- | :--- | :--- |
-| GitHub Pages | Public project sites already on GitHub | Limited platform features and usage constraints |
-| Cloudflare Pages | Static sites with variable traffic | Overlap and feature split with Cloudflare Workers |
-| Vercel | Frontend apps needing previews and framework integration | Plan limits and commercial-use rules require attention |
-| Netlify | Jamstack sites needing forms, functions, and previews | Credit and usage pricing can be harder to forecast |
-| Surge.sh | CLI-first static deployments and quick demos | Fewer team workflow and CI/CD dashboard features |
-| Wasmer Edge | Experiments needing WebAssembly or custom runtimes | Smaller static-site ecosystem |
-| Deno Deploy | Existing JavaScript/TypeScript edge deployments | Platform status and migration guidance should be checked first |
+| Host             | Good fit                                                 | Main trade-off                                                 |
+| :--------------- | :------------------------------------------------------- | :------------------------------------------------------------- |
+| GitHub Pages     | Public project sites already on GitHub                   | Limited platform features and usage constraints                |
+| Cloudflare Pages | Static sites with variable traffic                       | Overlap and feature split with Cloudflare Workers              |
+| Vercel           | Frontend apps needing previews and framework integration | Plan limits and commercial-use rules require attention         |
+| Netlify          | Jamstack sites needing forms, functions, and previews    | Credit and usage pricing can be harder to forecast             |
+| Surge.sh         | CLI-first static deployments and quick demos             | Fewer team workflow and CI/CD dashboard features               |
+| Wasmer Edge      | Experiments needing WebAssembly or custom runtimes       | Smaller static-site ecosystem                                  |
+| Deno Deploy      | Existing JavaScript/TypeScript edge deployments          | Platform status and migration guidance should be checked first |
 
 Every option above serves plain HTML and CSS reliably, so your choice usually comes down to billing predictability and how much server-side behavior you plan to add later.
 

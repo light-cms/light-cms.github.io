@@ -55,11 +55,11 @@ Astro Content Collections can validate front matter with schemas. That catches m
 import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
- schema: z.object({
-  title: z.string(),
-  description: z.string(),
-  draft: z.boolean().default(false),
- }),
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		draft: z.boolean().default(false),
+	}),
 });
 
 export const collections = { blog };

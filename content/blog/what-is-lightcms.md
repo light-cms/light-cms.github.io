@@ -34,7 +34,7 @@ Because publishing creates a standard Git commit, your site can still build from
 | Attribute             | LightCMS implementation                                                         |
 | :-------------------- | :------------------------------------------------------------------------------ |
 | Storage               | Git repository with Markdown files and front matter                             |
-| Editor interface      | Visual editor in your browser                                                  |
+| Editor interface      | Visual editor in your browser                                                   |
 | AI assistance         | In-editor writing assistance                                                    |
 | Voice transcription   | In-editor voice dictation                                                       |
 | Subscriber updates    | GitHub announcement integration via [Newsy](https://github.com/light-cms/newsy) |

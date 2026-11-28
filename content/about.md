@@ -3,7 +3,6 @@ title: About
 description: "Who builds LightCMS, what we write about here, and how you can contribute."
 draft: false
 weight: 0
-preview: /og-image.png
 tags:
   - about
   - lightcms

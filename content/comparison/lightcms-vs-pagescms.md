@@ -1,9 +1,10 @@
 ---
 title: LightCMS vs. Pages CMS Visual Writing vs. Form Based Editing
-description: "Compare LightCMS and Pages CMS for Git based publishing visual Markdown
+description:
+  "Compare LightCMS and Pages CMS for Git based publishing visual Markdown
   editing versus config driven form fields in your repository."
 serial: 41
-date: '2026-10-15T20:09:55.000Z'
+date: "2026-10-15T20:09:55.000Z"
 draft: false
 tags:
   - lightcms vs pages cms
@@ -14,21 +15,20 @@ tags:
 preview: /og-image.png
 slug: lightcms-vs-pagescms
 ---
+
 Both LightCMS and Pages CMS store your content as files in Git, so you never lose ownership of your repository. The real split is in what you spend most of your time editing: long-form Markdown articles or structured front matter fields.
 
 Pages CMS puts form fields and collection schemas first, while LightCMS puts a visual document editor first.
 
 ## How the editing models compare
 
-
 | Area              | LightCMS                                                      | Pages CMS                                                |
-| :----------------- | :------------------------------------------------------------- | :-------------------------------------------------------- |
+| :---------------- | :------------------------------------------------------------ | :------------------------------------------------------- |
 | Primary interface | TipTap visual Markdown editor                                 | Config-driven form editor                                |
 | Best fit          | Long-form articles, docs, and essays                          | Structured records, catalogs, and metadata-heavy entries |
 | Content storage   | Markdown with front matter in GitHub                          | Files and media in GitHub                                |
 | Configuration     | GitHub App connection (PostgreSQL required if self-hosted)    | Repository config file defining collections and fields   |
 | Writing workflow  | Drafts, formatting, image paste, AI drafting, voice dictation | Field validation, selects, dates, and rich-text inputs   |
-
 
 That difference shows up the moment you open a post: LightCMS feels like a writing desk, whereas Pages CMS feels like an admin form over your repository.
 

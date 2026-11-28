@@ -5,10 +5,10 @@ serial: 23
 date: 2026-10-14T14:40:00Z
 draft: false
 tags:
-    - hosting
-    - vercel
-    - netlify
-    - jamstack
+  - hosting
+  - vercel
+  - netlify
+  - jamstack
 ---
 
 Vercel and Netlify both deploy frontend projects from Git, provide preview deployments, and support static sites and serverless functions. Vercel is often the stronger fit for Next.js-heavy teams, while Netlify is attractive for teams that want built-in platform features such as forms, identity, or broad framework support.

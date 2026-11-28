@@ -5,7 +5,7 @@ description: >-
   security surface, and suitability for static publishing versus dynamic CMS
   sites.
 serial: 56
-date: '2026-10-16T13:00:00.000Z'
+date: "2026-10-16T13:00:00.000Z"
 draft: false
 tags:
   - lightcms
@@ -15,19 +15,18 @@ tags:
   - modern cms for blogs
 slug: lightcms-vs-joomla
 ---
+
 LightCMS and Joomla represent different CMS models. LightCMS supports Git based static site publishing with Markdown content. Joomla is a traditional PHP CMS that stores content in a database and renders pages through a server-side application.
 
 ## Comparison
 
-
 | Area          | LightCMS                      | Joomla                               |
-| :------------- | :----------------------------- | :------------------------------------ |
+| :------------ | :---------------------------- | :----------------------------------- |
 | Architecture  | Git files + static build      | PHP application + database           |
 | Rendering     | Prebuilt static files         | Server-side rendering                |
 | Extensibility | Build tools/external services | Extensions/components/modules        |
 | Maintenance   | Repo, content, CI/CD          | Core, extensions, PHP, hosting       |
 | Best fit      | Content-focused static sites  | Dynamic sites needing CMS extensions |
-
 
 ## Choosing between them
 
